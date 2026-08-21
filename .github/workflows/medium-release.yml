@@ -1,0 +1,60 @@
+name: Medium Release Bundle
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: Exact GitHub Pages story slug to prepare for Medium
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install --requirement requirements.txt
+      - name: Build and validate source pages
+        run: |
+          python scripts/build_site.py
+          python scripts/validate_site.py
+      - name: Prepare approval-gated Medium release
+        env:
+          STORY_SLUG: ${{ inputs.slug }}
+        run: python scripts/prepare_medium_release.py --slug "$STORY_SLUG" --strict --output-dir medium-release-bundle
+      - name: Upload release bundle
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: medium-release-${{ inputs.slug }}-${{ github.run_number }}
+          path: medium-release-bundle/${{ inputs.slug }}
+          retention-days: 30
+      - name: Open one approval issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STORY_SLUG: ${{ inputs.slug }}
+        run: |
+          release_path="medium-release-bundle/$STORY_SLUG/release.json"
+          issue_body="medium-release-bundle/$STORY_SLUG/release.md"
+          story_title="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["story"]["title"])' "$release_path")"
+          short_sha="${GITHUB_SHA:0:7}"
+          issue_title="Medium draft approval: $story_title ($short_sha)"
+          {
+            printf '\n## Workflow provenance\n\n'
+            printf -- '- Run: %s/%s/actions/runs/%s\n' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID"
+            printf -- '- Source commit: `%s`\n' "$GITHUB_SHA"
+          } >> "$issue_body"
+          existing="$(gh issue list --state all --search "$issue_title in:title" --json title --limit 100 | jq --arg title "$issue_title" 'map(select(.title == $title)) | length')"
+          if [[ "$existing" == "0" ]]; then
+            gh issue create --title "$issue_title" --body-file "$issue_body"
+          fi
