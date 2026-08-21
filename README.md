@@ -15,6 +15,7 @@ A static publishing and distribution system for Aditya Singh’s essays on enter
 - Snapshot data in `data/` and a repeatable static-site builder
 - Review-only distribution packs, weekly editorial briefs, live health checks, Lighthouse budgets, and a source-backed engagement dashboard
 - An approval-gated Medium release bridge for importing eligible GitHub-original stories into private Medium drafts
+- A signed-in execution continuation layer with credential-free receipts, historical snapshots, and individually approved response tracking
 
 ## Build locally
 
@@ -41,6 +42,7 @@ The repository supports a deliberate weekly loop without automating Medium or so
 3. The author reviews claims, disclosure, canonical settings, and channel-specific wording before manually publishing or submitting anything.
 4. `metrics-report.yml` packages the latest reviewed Medium snapshot and opens a monthly manual-refresh issue.
 5. `medium-release.yml` validates an exact story against the reviewed Medium publication registry, rejects duplicate imports, packages the Medium settings, and opens a draft-import approval issue.
+6. After a user-initiated signed-in Medium action, `medium-continuation.yml` validates its receipt, updates the originating issue, and resumes analytics and engagement reporting.
 
 Generate the same assets locally:
 
@@ -67,6 +69,8 @@ GitHub Actions improves discoverability, quality, measurement, and editorial con
 
 Medium publishing uses the approval-gated bridge in [`medium/`](medium/README.md). GitHub prepares the exact import bundle; the signed-in Medium UI performs the private draft import after a direct request. Final Publish or Schedule always requires confirmation of topics, publication, subscriber email, paywall, canonical URL, and timing.
 
+GitHub-hosted runners cannot access the user's local Chrome profile. The continuation event is therefore a verified, credential-free receipt committed after the signed-in action—not a browser session exported to GitHub. See [`medium/SIGNED_IN_BRIDGE.md`](medium/SIGNED_IN_BRIDGE.md).
+
 ## Publishing
 
 GitHub Actions rebuilds, validates, stages, and deploys the repository on every push to `main`. Action dependencies are pinned to full commit SHAs. The deployment publishes `_site/`, not the repository root, so source data, scripts, reports, and workflow files are not served as website pages.
@@ -77,6 +81,8 @@ Quality workflows:
 - `site-health.yml`: verifies the generated archive and live GitHub Pages URLs every Wednesday
 - `performance.yml`: enforces Lighthouse thresholds after deployment and every Friday
 - `metrics-report.yml`: validates the checked-in engagement snapshot and packages the dashboard monthly or on demand
+- `medium-continuation.yml`: resumes issue tracking and reports after a verified signed-in execution receipt is merged
+- `medium-engagement-review.yml`: opens a weekly signed-in review request and packages the credential-free engagement queue
 
 ## Content rights
 

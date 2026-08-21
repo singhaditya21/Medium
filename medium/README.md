@@ -2,6 +2,8 @@
 
 This directory defines the repository-to-Medium release contract. It automates preparation, validation, duplicate prevention, release packaging, and approval tracking. It does not run an unattended Medium publisher.
 
+The resumable Chrome-to-GitHub lifecycle is documented in [`SIGNED_IN_BRIDGE.md`](SIGNED_IN_BRIDGE.md).
+
 ## Why the boundary exists
 
 Medium is not issuing new API integration tokens, and its current rules prohibit automatic, systematic, or programmatic posting and interactions. Medium's supported cross-posting route is its signed-in import tool, which backdates the story and sets the source canonical URL.
@@ -53,6 +55,8 @@ No request is sent to Medium by GitHub Actions.
 ## Signed-in execution
 
 After reviewing the issue, ask Codex to import the named bundle into your signed-in Medium account. Draft import and final publication are separate actions. The first may leave a private saved draft; the second always requires confirmation of the exact target and distribution settings.
+
+After the visible Medium result is verified, Codex records a credential-free receipt in `medium/executions/`. Merging that receipt triggers **Medium Signed-In Continuation**, which validates the result, updates the originating issue, and regenerates tracking artifacts. The receipt is the event that lets GitHub Actions continue; Chrome credentials are never transferred to the runner.
 
 Official references:
 

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://singhaditya21.github.io/Medium/medium/execution.schema.json",
+  "title": "Signed-in Medium execution receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "operationId",
+    "action",
+    "recordedAt",
+    "executionSurface",
+    "initiatedBy",
+    "githubIssueNumber",
+    "userConfirmation",
+    "result",
+    "secretsStored",
+    "githubActionsPerformedMediumAction"
+  ],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"const": 1},
+    "operationId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
+    "action": {
+      "enum": ["draft_imported", "story_published", "stats_captured", "response_posted"]
+    },
+    "recordedAt": {"type": "string", "format": "date-time"},
+    "executionSurface": {"const": "user_initiated_signed_in_medium_ui"},
+    "initiatedBy": {"const": "user"},
+    "githubIssueNumber": {"type": "integer", "minimum": 1},
+    "userConfirmation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["obtained", "confirmedAt", "scope"],
+      "properties": {
+        "obtained": {"const": true},
+        "confirmedAt": {"type": "string", "format": "date-time"},
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["status", "verifiedAt", "verification"],
+      "properties": {
+        "status": {
+          "enum": ["draft_saved", "published", "stats_captured", "response_posted"]
+        },
+        "verifiedAt": {"type": "string", "format": "date-time"},
+        "verification": {"type": "string", "minLength": 1}
+      }
+    },
+    "secretsStored": {"const": false},
+    "githubActionsPerformedMediumAction": {"const": false}
+  }
+}

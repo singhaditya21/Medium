@@ -16,6 +16,7 @@ from build_site import ROOT, SITE_URL, first_figure_alt, load_stories, story_sum
 
 CONFIG_DIR = ROOT / "medium" / "releases"
 PUBLICATION_REGISTRY_PATH = ROOT / "medium" / "publications.json"
+EXECUTIONS_DIR = ROOT / "medium" / "executions"
 DEFAULT_OUTPUT_DIR = ROOT / "medium-release-bundles"
 POLICY_REFERENCES = {
     "api": "https://help.medium.com/hc/en-us/articles/213480228-API-Importing",
@@ -114,6 +115,31 @@ def load_publication_registry(stories: list[dict[str, Any]]) -> dict[str, dict[s
     return registry
 
 
+def load_signed_in_story_states() -> dict[str, str]:
+    """Return the latest verified signed-in state without exposing private draft URLs."""
+    states: dict[str, tuple[str, str]] = {}
+    for path in sorted(EXECUTIONS_DIR.glob("*.json")):
+        try:
+            receipt = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        action = receipt.get("action")
+        result = receipt.get("result", {})
+        story_slug = result.get("storySlug")
+        recorded_at = receipt.get("recordedAt", "")
+        if not isinstance(story_slug, str):
+            continue
+        if action == "draft_imported" and result.get("status") == "draft_saved":
+            state = "draft_saved"
+        elif action == "story_published" and result.get("status") == "published":
+            state = "published"
+        else:
+            continue
+        if story_slug not in states or recorded_at > states[story_slug][0]:
+            states[story_slug] = (recorded_at, state)
+    return {slug: state for slug, (_, state) in states.items()}
+
+
 def load_config(story: dict[str, Any]) -> tuple[dict[str, Any] | None, list[str]]:
     path = CONFIG_DIR / f"{story['slug']}.json"
     if not path.exists():
@@ -155,11 +181,16 @@ def load_config(story: dict[str, Any]) -> tuple[dict[str, Any] | None, list[str]
     return config, errors
 
 
-def build_bundle(story: dict[str, Any], publication_record: dict[str, Any]) -> tuple[dict[str, Any], list[str]]:
+def build_bundle(
+    story: dict[str, Any],
+    publication_record: dict[str, Any],
+    signed_in_state: str | None,
+) -> tuple[dict[str, Any], list[str]]:
     canonical_host = urlsplit(story.get("canonical", "")).netloc.casefold()
     canonical_on_medium = canonical_host.endswith("medium.com")
     registry_on_medium = publication_record["status"] == "published"
     already_on_medium = canonical_on_medium or registry_on_medium
+    existing_medium_draft = signed_in_state == "draft_saved" and not already_on_medium
     existing_medium_url = publication_record.get("mediumUrl")
     if not existing_medium_url and canonical_on_medium:
         existing_medium_url = story.get("canonical")
@@ -173,6 +204,8 @@ def build_bundle(story: dict[str, Any], publication_record: dict[str, Any]) -> t
     issues = list(config_errors)
     if already_on_medium:
         issues.append("story is already recorded as published on Medium; importing it again would create a duplicate")
+    elif existing_medium_draft:
+        issues.append("story already has a verified saved Medium draft; importing it again would create a duplicate draft")
     if not page_path.exists():
         issues.append("generated GitHub Pages story is missing")
     if not disclosure_found:
@@ -183,6 +216,8 @@ def build_bundle(story: dict[str, Any], publication_record: dict[str, Any]) -> t
     status = "blocked"
     if already_on_medium:
         status = "blocked_existing_medium_story"
+    elif existing_medium_draft:
+        status = "blocked_existing_medium_draft"
     elif not issues:
         status = "ready_for_private_draft_import"
 
@@ -233,6 +268,7 @@ def build_bundle(story: dict[str, Any], publication_record: dict[str, Any]) -> t
             "aiAssistanceLabeledFigureCount": figures["aiAssistanceLabeledCount"],
             "generatedPageExists": page_path.exists(),
             "alreadyPublishedOnMedium": already_on_medium,
+            "existingSavedMediumDraft": existing_medium_draft,
             "publicationRegistryStatus": publication_record["status"],
         },
         "approvalGates": {
@@ -287,6 +323,7 @@ This is an approval-gated release handoff. GitHub Actions does not sign in to Me
 - All figures have captions: {checks['allFiguresHaveCaptions']}
 - Figures explicitly labeled AI-assisted: {checks['aiAssistanceLabeledFigureCount']}
 - Existing Medium publication detected: {checks['alreadyPublishedOnMedium']}
+- Existing saved Medium draft detected: {checks['existingSavedMediumDraft']}
 - Existing Medium URL: {story['existingMediumUrl'] or 'None'}
 - Publication registry status: {checks['publicationRegistryStatus']}
 
@@ -330,6 +367,7 @@ def main() -> None:
     parser.add_argument("--strict", action="store_true", help="fail when an eligible GitHub-original story has a blocking issue")
     args = parser.parse_args()
     stories = load_stories()
+    signed_in_story_states = load_signed_in_story_states()
     try:
         publication_registry = load_publication_registry(stories)
     except ValueError as exc:
@@ -341,10 +379,17 @@ def main() -> None:
 
     failures: list[str] = []
     for story in stories:
-        bundle, issues = build_bundle(story, publication_registry[story["slug"]])
+        bundle, issues = build_bundle(
+            story,
+            publication_registry[story["slug"]],
+            signed_in_story_states.get(story["slug"]),
+        )
         json_path, _ = write_bundle(bundle, args.output_dir)
         print(f"{bundle['status']}: {json_path}")
-        eligible_for_import = not bundle["contentChecks"]["alreadyPublishedOnMedium"]
+        eligible_for_import = not (
+            bundle["contentChecks"]["alreadyPublishedOnMedium"]
+            or bundle["contentChecks"]["existingSavedMediumDraft"]
+        )
         if args.strict and eligible_for_import and issues:
             failures.append(f"{story['slug']}: {'; '.join(issues)}")
         if args.slug and bundle["status"].startswith("blocked"):

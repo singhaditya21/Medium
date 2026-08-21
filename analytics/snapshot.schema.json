@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://singhaditya21.github.io/Medium/analytics/snapshot.schema.json",
+  "title": "Medium aggregate analytics snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "capturedAt", "captureMethod", "profile", "scopes", "notes"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"const": 1},
+    "capturedAt": {"type": "string", "format": "date-time"},
+    "captureMethod": {"const": "user_initiated_signed_in_medium_ui_read_only"},
+    "profile": {"type": "string", "minLength": 1},
+    "scopes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["currentMonth", "audienceLifetime", "storyLifetime"],
+      "properties": {
+        "currentMonth": {"type": "object"},
+        "audienceLifetime": {"type": "object"},
+        "storyLifetime": {"type": "array"}
+      }
+    },
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
