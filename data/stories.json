@@ -1,5 +1,21 @@
 [
   {
+    "slug": "a-2-4m-account-is-escalating",
+    "title": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+    "description": "A practical production architecture for governing consequential CRM agent actions with evidence, action-level risk, human approval, leased permissions, verification, and recovery.",
+    "publishedAt": "2026-08-21T10:20:00.000Z",
+    "readTime": "20 min read",
+    "tags": [
+      "AI agents",
+      "Agentic CRM",
+      "AI governance",
+      "Enterprise architecture",
+      "Cybersecurity"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/"
+  },
+  {
     "slug": "ai-agent-identity-is-not-enough",
     "title": "AI Agent Identity Is Not Enough",
     "description": "Learn how to control AI agent access with delegated authority, scoped credentials, policy decisions, and audit receipts across five enterprise use cases.",
