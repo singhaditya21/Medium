@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "your-ai-agent-should-not-have-a-standing-role",
+  "operation": "import_to_private_draft",
+  "topics": [
+    "AI Agents",
+    "Cybersecurity",
+    "Zero Trust",
+    "Enterprise Architecture",
+    "Identity Management"
+  ],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

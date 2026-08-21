@@ -36,6 +36,8 @@ jobs:
           python scripts/stage_pages.py
       - name: Generate review-only distribution packs
         run: python scripts/generate_distribution_pack.py --all --output-dir distribution-packs
+      - name: Validate Medium release configurations
+        run: python scripts/prepare_medium_release.py --all --strict --output-dir medium-release-bundles
       - name: Upload distribution packs
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
