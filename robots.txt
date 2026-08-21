@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://singhaditya21.github.io/Medium/sitemap.xml

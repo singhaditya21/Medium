@@ -1,0 +1,660 @@
+{
+  "author": "Aditya Singh",
+  "blocks": [
+    {
+      "html": "<em class=\"mz\">A practical blueprint for turning customer data into governed, measurable and safely executable workflows</em>",
+      "tag": "p",
+      "text": "A practical blueprint for turning customer data into governed, measurable and safely executable workflows",
+      "type": "html"
+    },
+    {
+      "html": "A strategic customer submits a critical support case at 4:47 p.m. The issue affects production. The contract includes a two-hour response commitment. Product telemetry shows a wider incident, the renewal is 60 days away, and the account has an unresolved billing dispute.",
+      "tag": "p",
+      "text": "A strategic customer submits a critical support case at 4:47 p.m. The issue affects production. The contract includes a two-hour response commitment. Product telemetry shows a wider incident, the renewal is 60 days away, and the account has an unresolved billing dispute.",
+      "type": "html"
+    },
+    {
+      "html": "In most companies, the CRM records only part of that story. A support manager becomes the integration layer: checking the contract, messaging engineering, asking the account team about renewal risk, finding someone who can approve an escalation, drafting a customer update and then trying to keep the record current.",
+      "tag": "p",
+      "text": "In most companies, the CRM records only part of that story. A support manager becomes the integration layer: checking the contract, messaging engineering, asking the account team about renewal risk, finding someone who can approve an escalation, drafting a customer update and then trying to keep the record current.",
+      "type": "html"
+    },
+    {
+      "html": "An agentic CRM should handle that coordination differently. It should assemble the evidence, propose a plan, enforce policy, request judgment where the risk is high, execute permitted actions and verify that each",
+      "tag": "p",
+      "text": "An agentic CRM should handle that coordination differently. It should assemble the evidence, propose a plan, enforce policy, request judgment where the risk is high, execute permitted actions and verify that each",
+      "type": "html"
+    },
+    {
+      "html": "system actually changed. The human should own the consequential decision — not spend the first hour collecting context.",
+      "tag": "p",
+      "text": "system actually changed. The human should own the consequential decision — not spend the first hour collecting context.",
+      "type": "html"
+    },
+    {
+      "html": "That is the architectural shift. In <a class=\"as na\" rel=\"noopener\" href=\"/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4\" data-discover=\"true\">my previous article</a>, I argued that the system-of-record role is no longer enough for modern customer operations. This article answers the harder question: what has to exist underneath an agent that is trusted to act?",
+      "tag": "p",
+      "text": "That is the architectural shift. In my previous article, I argued that the system-of-record role is no longer enough for modern customer operations. This article answers the harder question: what has to exist underneath an agent that is trusted to act?",
+      "type": "html"
+    },
+    {
+      "alt": "Wide hand-drawn Agentic CRM flow from Data and Events through Context, Planning, Durable Orchestration and Capability Execution, with Identity, Policy, Security, Evaluations, Observability and Approval governed by runtime and lifecycle control.",
+      "caption": "Agentic CRM: five operating planes governed by runtime enforcement and lifecycle control.",
+      "src": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*03ZX7WIVM7eUm53ynDNZ5g.png",
+      "type": "figure"
+    },
+    {
+      "html": "Agentic CRM is no longer a speculative product category. <a class=\"as na\" href=\"https://help.salesforce.com/s/articleView?id=000373008&amp;language=en_US&amp;type=3\" rel=\"noopener ugc nofollow\" target=\"_blank\">Salesforce describes</a> its Atlas Reasoning Engine as the component that classifies requests into topics with defined scope, rules and permitted actions. <a class=\"as na\" href=\"https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2024/10/21/transform-work-with-autonomous-agents-across-your-business-processes/\" rel=\"noopener ugc nofollow\" target=\"_blank\">Microsoft announced</a> autonomous-agent capability in Copilot Studio and ten Dynamics 365 agents across sales, service, finance and supply chain in 2024, calling agents “the new apps for an AI-powered world.”",
+      "tag": "p",
+      "text": "Agentic CRM is no longer a speculative product category. Salesforce describes its Atlas Reasoning Engine as the component that classifies requests into topics with defined scope, rules and permitted actions. Microsoft announced autonomous-agent capability in Copilot Studio and ten Dynamics 365 agents across sales, service, finance and supply chain in 2024, calling agents “the new apps for an AI-powered world.”",
+      "type": "html"
+    },
+    {
+      "html": "The enthusiasm is real; so is the gap between demos and dependable operations. <a class=\"as na\" href=\"https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027\" rel=\"noopener ugc nofollow\" target=\"_blank\">Gartner expects</a> more than 40% of agentic-AI projects to be cancelled by the end of 2027 because of rising costs, unclear business value or inadequate risk controls. The same release forecasts agentic AI in 33% of enterprise applications by 2028, up from less than 1% in 2024.",
+      "tag": "p",
+      "text": "The enthusiasm is real; so is the gap between demos and dependable operations. Gartner expects more than 40% of agentic-AI projects to be cancelled by the end of 2027 because of rising costs, unclear business value or inadequate risk controls. The same release forecasts agentic AI in 33% of enterprise applications by 2028, up from less than 1% in 2024.",
+      "type": "html"
+    },
+    {
+      "html": "<a class=\"as na\" href=\"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/\" rel=\"noopener ugc nofollow\" target=\"_blank\">McKinsey’s 2025 survey</a> tells a similar story from a different angle. Although 88% of respondents reported regular AI use in at least one function, only 39% reported any enterprise-level EBIT impact. The companies seeing the most value are not merely installing tools; they are redesigning workflows, establishing leadership ownership and investing across data, technology, talent, adoption and the operating model.",
+      "tag": "p",
+      "text": "McKinsey’s 2025 survey tells a similar story from a different angle. Although 88% of respondents reported regular AI use in at least one function, only 39% reported any enterprise-level EBIT impact. The companies seeing the most value are not merely installing tools; they are redesigning workflows, establishing leadership ownership and investing across data, technology, talent, adoption and the operating model.",
+      "type": "html"
+    },
+    {
+      "html": "This is why “add a chatbot to CRM” is the wrong brief. A chatbot can answer a question. An agent can change a record, send a message, route a case or initiate a financial workflow. The moment software is allowed to act, permissions, failure recovery and accountability become part of the product.",
+      "tag": "p",
+      "text": "This is why “add a chatbot to CRM” is the wrong brief. A chatbot can answer a question. An agent can change a record, send a message, route a case or initiate a financial workflow. The moment software is allowed to act, permissions, failure recovery and accountability become part of the product.",
+      "type": "html"
+    },
+    {
+      "html": "A reference architecture built around five planes and one control layer",
+      "tag": "h2",
+      "text": "A reference architecture built around five planes and one control layer",
+      "type": "html"
+    },
+    {
+      "html": "I find it more useful to think in planes than in a linear stack. The five-plane model remains a good operating view, but a production deployment needs two clarifications: events are not the same thing as stored data, and governance is not one service through which work passes once.",
+      "tag": "p",
+      "text": "I find it more useful to think in planes than in a linear stack. The five-plane model remains a good operating view, but a production deployment needs two clarifications: events are not the same thing as stored data, and governance is not one service through which work passes once.",
+      "type": "html"
+    },
+    {
+      "html": "The operating architecture has five planes:",
+      "tag": "p",
+      "text": "The operating architecture has five planes:",
+      "type": "html"
+    },
+    {
+      "html": "Two cross-cutting rails surround all five. Runtime enforcement covers identity, authorisation, secrets, isolation, data protection, action limits and budgets. Lifecycle governance covers registries, versioning, evaluation, observability, audit, release management and incident response.",
+      "tag": "p",
+      "text": "Two cross-cutting rails surround all five. Runtime enforcement covers identity, authorisation, secrets, isolation, data protection, action limits and budgets. Lifecycle governance covers registries, versioning, evaluation, observability, audit, release management and incident response.",
+      "type": "html"
+    },
+    {
+      "html": "At deployment level, seven services make the boundaries real: an Event Gateway, Context Builder, Agent and Model Gateway, Durable Orchestrator, Policy Decision Point, Human Task Service and Tool Gateway. The model may propose a plan; only policy and the execution boundary may permit an action. Some work belongs in deterministic code, some in a workflow engine, some in a model, and some with a person.",
+      "tag": "p",
+      "text": "At deployment level, seven services make the boundaries real: an Event Gateway, Context Builder, Agent and Model Gateway, Durable Orchestrator, Policy Decision Point, Human Task Service and Tool Gateway. The model may propose a plan; only policy and the execution boundary may permit an action. Some work belongs in deterministic code, some in a workflow engine, some in a model, and some with a person.",
+      "type": "html"
+    },
+    {
+      "html": "<a class=\"as na\" href=\"https://www.anthropic.com/engineering/building-effective-agents\" rel=\"noopener ugc nofollow\" target=\"_blank\">Anthropic’s engineering guidance</a> draws the useful distinction. Workflows follow predefined code paths; agents dynamically choose their steps and tools. Its broader recommendation is even more important: use the simplest design that meets the need, because additional agentic flexibility brings cost and latency.",
+      "tag": "p",
+      "text": "Anthropic’s engineering guidance draws the useful distinction. Workflows follow predefined code paths; agents dynamically choose their steps and tools. Its broader recommendation is even more important: use the simplest design that meets the need, because additional agentic flexibility brings cost and latency.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn production deployment topology: channels feed an authenticated Event Gateway and Durable Orchestrator; a Context Builder, Agent and Model Gateway, workflow state, human tasks, Policy Decision and Tool Gateway surround the runtime. CRM, ERP, email and service systems return ACK or CDC events for verification and reconciliation. Runtime-enforcement and lifecycle-governance rails span the architecture.",
+      "caption": "Production topology: events enter through a gateway; planning, policy and execution remain separate; acknowledgements close the loop.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*wmI5il9Ge-Egn2gBkoyxAA.png",
+      "type": "figure"
+    },
+    {
+      "html": "Plane 1: Data and event fabric — the state and signals the enterprise trusts",
+      "tag": "h3",
+      "text": "Plane 1: Data and event fabric — the state and signals the enterprise trusts",
+      "type": "html"
+    },
+    {
+      "html": "In a dashboard, poor data creates a misleading chart. In an execution system, poor data can create the wrong action. An outdated SLA can trigger an unnecessary escalation. A duplicate account can split customer history. A stale entitlement can produce a promise the company is not allowed to make.",
+      "tag": "p",
+      "text": "In a dashboard, poor data creates a misleading chart. In an execution system, poor data can create the wrong action. An outdated SLA can trigger an unnecessary escalation. A duplicate account can split customer history. A stale entitlement can produce a promise the company is not allowed to make.",
+      "type": "html"
+    },
+    {
+      "html": "The entry point should be an Event Gateway rather than a direct model integration. It authenticates the producer, validates a versioned schema, assigns a correlation key, removes duplicates, preserves ordering where the workflow requires it and places malformed events in quarantine. Durable storage and replay let the system recover without asking a model to reconstruct history.",
+      "tag": "p",
+      "text": "The entry point should be an Event Gateway rather than a direct model integration. It authenticates the producer, validates a versioned schema, assigns a correlation key, removes duplicates, preserves ordering where the workflow requires it and places malformed events in quarantine. Durable storage and replay let the system recover without asking a model to reconstruct history.",
+      "type": "html"
+    },
+    {
+      "html": "Behind it, identity resolution and a source-of-truth registry establish which system owns each field. Contract terms may come from a contract repository, billing status from ERP, product behaviour from telemetry and account ownership from CRM. Important fields need source, schema version, valid time, update cadence, acceptable staleness and owner. When that contract cannot be met, the workflow should lower confidence or stop — not quietly guess.",
+      "tag": "p",
+      "text": "Behind it, identity resolution and a source-of-truth registry establish which system owns each field. Contract terms may come from a contract repository, billing status from ERP, product behaviour from telemetry and account ownership from CRM. Important fields need source, schema version, valid time, update cadence, acceptable staleness and owner. When that contract cannot be met, the workflow should lower confidence or stop — not quietly guess.",
+      "type": "html"
+    },
+    {
+      "html": "Plane 2: Context assembly and memory — evidence, not folklore",
+      "tag": "h3",
+      "text": "Plane 2: Context assembly and memory — evidence, not folklore",
+      "type": "html"
+    },
+    {
+      "html": "A customer is not an account ID. The useful context includes commitments, escalations, product adoption, commercial negotiations, open cases, executive relationships and the reasons behind earlier decisions. That history is often scattered across email, support, meeting notes, call transcripts and internal chat.",
+      "tag": "p",
+      "text": "A customer is not an account ID. The useful context includes commitments, escalations, product adoption, commercial negotiations, open cases, executive relationships and the reasons behind earlier decisions. That history is often scattered across email, support, meeting notes, call transcripts and internal chat.",
+      "type": "html"
+    },
+    {
+      "html": "A Context Builder — not the agent itself — should construct the evidence pack. It applies user and workload identity to retrieval, enforces row- and field-level permissions, classifies and redacts sensitive data, ranks evidence, checks freshness and fits the result to a declared context budget. Retrieval, semantic search, knowledge graphs and vector stores can help, but they do not automatically create trustworthy memory. The architecture should still distinguish four things:",
+      "tag": "p",
+      "text": "A Context Builder — not the agent itself — should construct the evidence pack. It applies user and workload identity to retrieval, enforces row- and field-level permissions, classifies and redacts sensitive data, ranks evidence, checks freshness and fits the result to a declared context budget. Retrieval, semantic search, knowledge graphs and vector stores can help, but they do not automatically create trustworthy memory. The architecture should still distinguish four things:",
+      "type": "html"
+    },
+    {
+      "html": "Every derived memory should carry provenance: source, timestamp, relevant permissions, confidence and a retention or expiry rule. A model’s summary of a call should not silently become a contractual commitment. A deleted or corrected source should be removable from future retrieval. Consent, data residency and retention policies have to follow the memory, not merely the database in which it lands.",
+      "tag": "p",
+      "text": "Every derived memory should carry provenance: source, timestamp, relevant permissions, confidence and a retention or expiry rule. A model’s summary of a call should not silently become a contractual commitment. A deleted or corrected source should be removable from future retrieval. Consent, data residency and retention policies have to follow the memory, not merely the database in which it lands.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn architecture: CRM, ERP, contracts and email pass through identity and ingestion into authoritative state, retrieval index and task memory. Provenance metadata — source, time, TTL and consent — travels into a context pack for the agent; task memory is promoted only after verification.",
+      "caption": "Memory is not one store: authoritative state, retrieval index and task memory carry provenance, permissions and expiry into every context pack.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*zJQ5rpFijS_bzXVtTuBblQ.png",
+      "type": "figure"
+    },
+    {
+      "html": "Plane 3: Planning and reasoning — specialised agents with clear contracts",
+      "tag": "h3",
+      "text": "Plane 3: Planning and reasoning — specialised agents with clear contracts",
+      "type": "html"
+    },
+    {
+      "html": "The reasoning plane turns an objective and an evidence pack into a typed plan. The plan is a first-class artifact: objective, proposed steps, evidence references, confidence, risk tier, expected side effects, required approvals and stopping conditions. It is a proposal, never permission to act.",
+      "tag": "p",
+      "text": "The reasoning plane turns an objective and an evidence pack into a typed plan. The plan is a first-class artifact: objective, proposed steps, evidence references, confidence, risk tier, expected side effects, required approvals and stopping conditions. It is a proposal, never permission to act.",
+      "type": "html"
+    },
+    {
+      "html": "Specialised agents sit behind an Agent and Model Gateway. The gateway owns model and prompt registries, routing, caching, fallbacks, version pinning, latency ceilings and cost budgets. Agents do not hold credentials or chat freely with one another; the orchestrator invokes them through typed contracts and records every version used.",
+      "tag": "p",
+      "text": "Specialised agents sit behind an Agent and Model Gateway. The gateway owns model and prompt registries, routing, caching, fallbacks, version pinning, latency ceilings and cost budgets. Agents do not hold credentials or chat freely with one another; the orchestrator invokes them through typed contracts and records every version used.",
+      "type": "html"
+    },
+    {
+      "html": "A service agent may classify severity, an account agent may interpret renewal signals and a compliance service may evaluate relevant policy. Each contract defines allowed inputs, output schema, tools it may request, confidence thresholds and escalation conditions. That contract matters more than an agent’s personality or name: it makes the component testable and replaceable and prevents agent sprawl from becoming the next SaaS sprawl.",
+      "tag": "p",
+      "text": "A service agent may classify severity, an account agent may interpret renewal signals and a compliance service may evaluate relevant policy. Each contract defines allowed inputs, output schema, tools it may request, confidence thresholds and escalation conditions. That contract matters more than an agent’s personality or name: it makes the component testable and replaceable and prevents agent sprawl from becoming the next SaaS sprawl.",
+      "type": "html"
+    },
+    {
+      "html": "A small, fast model may be sufficient for classification; a more capable model may be justified for an ambiguous case plan. Routing by task lets the enterprise manage quality, latency and cost instead of sending every decision to the most expensive model.",
+      "tag": "p",
+      "text": "A small, fast model may be sufficient for classification; a more capable model may be justified for an ambiguous case plan. Routing by task lets the enterprise manage quality, latency and cost instead of sending every decision to the most expensive model.",
+      "type": "html"
+    },
+    {
+      "html": "Plane 4: Durable orchestration — the runtime, not a magical “brain”",
+      "tag": "h3",
+      "text": "Plane 4: Durable orchestration — the runtime, not a magical “brain”",
+      "type": "html"
+    },
+    {
+      "html": "The orchestrator — not a model — owns the workflow. A durable state store, append-only event log, scheduler, dead-letter queue and human-task queue let work survive restarts, hours-long approvals and dependency outages. Agents remain stateless or re-entrant; the runtime decides what happens after success, timeout, contradiction or failure.",
+      "tag": "p",
+      "text": "The orchestrator — not a model — owns the workflow. A durable state store, append-only event log, scheduler, dead-letter queue and human-task queue let work survive restarts, hours-long approvals and dependency outages. Agents remain stateless or re-entrant; the runtime decides what happens after success, timeout, contradiction or failure.",
+      "type": "html"
+    },
+    {
+      "html": "Production orchestration needs unglamorous safeguards:",
+      "tag": "p",
+      "text": "Production orchestration needs unglamorous safeguards:",
+      "type": "html"
+    },
+    {
+      "html": "“Rollback” is useful language but can be misleading. A record update may be reversible; a customer email cannot be unsent. For irreversible actions, the runtime needs a compensating action — send a correction, freeze the workflow, notify an owner — and a route into incident management.",
+      "tag": "p",
+      "text": "“Rollback” is useful language but can be misleading. A record update may be reversible; a customer email cannot be unsent. For irreversible actions, the runtime needs a compensating action — send a correction, freeze the workflow, notify an owner — and a route into incident management.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn orchestration state machine: Receive, Dedupe, Plan, Execute, Verify and Commit form the happy path. Verify retries Execute; Dedupe can dead-letter, Execute can compensate and Verify can hand off to a human. Trace ID, prompt and policy versions, model, tool, cost and latency are recorded across the flow.",
+      "caption": "Orchestration is a durable state machine: dedupe, retry, dead-letter handling, compensation and human takeover all share one trace.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*TKQ33RGS4weWr-Lbhu8vCA.png",
+      "type": "figure"
+    },
+    {
+      "html": "Plane 5: Capability execution — where AI meets consequences",
+      "tag": "h3",
+      "text": "Plane 5: Capability execution — where AI meets consequences",
+      "type": "html"
+    },
+    {
+      "html": "The only path to CRM, email, service management, billing, ERP or a customer portal should be a Tool Gateway. The reasoning environment receives no general credentials. A Policy Decision Point evaluates the plan, identity, risk, data classifications and current state; enforcement points at retrieval, approval and execution apply that decision.",
+      "tag": "p",
+      "text": "The only path to CRM, email, service management, billing, ERP or a customer portal should be a Tool Gateway. The reasoning environment receives no general credentials. A Policy Decision Point evaluates the plan, identity, risk, data classifications and current state; enforcement points at retrieval, approval and execution apply that decision.",
+      "type": "html"
+    },
+    {
+      "html": "Each tool is a narrow, typed capability rather than broad access. “Create an internal escalation task with these fields” is safer than “write to CRM.” Every command carries the actor, trace ID, policy version, idempotency key, expiry, risk tier and expected postcondition. The gateway validates parameters, allowlists destinations, applies rate and value limits and records an immutable receipt.",
+      "tag": "p",
+      "text": "Each tool is a narrow, typed capability rather than broad access. “Create an internal escalation task with these fields” is safer than “write to CRM.” Every command carries the actor, trace ID, policy version, idempotency key, expiry, risk tier and expected postcondition. The gateway validates parameters, allowlists destinations, applies rate and value limits and records an immutable receipt.",
+      "type": "html"
+    },
+    {
+      "html": "Execution is incomplete until the runtime observes a trusted acknowledgement, read-after-write result or CDC event and compares it with the expected postcondition. A transactional outbox prevents a committed state change from losing its event. Timeouts trigger bounded retry; partial failures trigger reconciliation; irreversible failures trigger a compensating action or human takeover. A model saying “done” is never proof.",
+      "tag": "p",
+      "text": "Execution is incomplete until the runtime observes a trusted acknowledgement, read-after-write result or CDC event and compares it with the expected postcondition. A transactional outbox prevents a committed state change from losing its event. Timeouts trigger bounded retry; partial failures trigger reconciliation; irreversible failures trigger a compensating action or human takeover. A model saying “done” is never proof.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn command lifecycle sequence across Orchestrator, Policy PDP, Tool Gateway and PEP, target system, event bus and state store. A typed, versioned command is authorised, recorded with an outbox intent, written idempotently, resumed by a correlated ACK or CDC event, verified against the expected postcondition and committed as verified state. Timeouts branch to same-key retry, reconciliation, compensation or a human task.",
+      "caption": "Every side effect travels as a versioned command and is complete only after the expected postcondition is verified.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*lPIuwV3PYcwPXdP9LVmjlQ.png",
+      "type": "figure"
+    },
+    {
+      "html": "The control plane: governance that follows every action",
+      "tag": "h2",
+      "text": "The control plane: governance that follows every action",
+      "type": "html"
+    },
+    {
+      "html": "The control plane is the architecture’s spine, but it contains two different responsibilities. Runtime enforcement answers, for every request: who or what is acting, which data it may retrieve, which tool it may invoke, what limits apply and whether a person must approve. Lifecycle governance controls registries and owners; prompt, model, policy and workflow versions; evaluations and release gates; observability, audit, incident review and periodic reauthorisation.",
+      "tag": "p",
+      "text": "The control plane is the architecture’s spine, but it contains two different responsibilities. Runtime enforcement answers, for every request: who or what is acting, which data it may retrieve, which tool it may invoke, what limits apply and whether a person must approve. Lifecycle governance controls registries and owners; prompt, model, policy and workflow versions; evaluations and release gates; observability, audit, incident review and periodic reauthorisation.",
+      "type": "html"
+    },
+    {
+      "html": "<a class=\"as na\" href=\"https://airc.nist.gov/airmf-resources/airmf/5-sec-core/\" rel=\"noopener ugc nofollow\" target=\"_blank\">NIST AI RMF 1.0</a> organises AI risk work around Govern, Map, Measure and Manage, with governance explicitly cross-cutting. <a class=\"as na\" href=\"https://www.iso.org/standard/42001\" rel=\"noopener ugc nofollow\" target=\"_blank\">ISO/IEC 42001</a> provides requirements for establishing and continually improving an AI management system. Neither document is a plug-and-play CRM design, but both reinforce an essential point: risk management is a lifecycle, not a review meeting before launch.",
+      "tag": "p",
+      "text": "NIST AI RMF 1.0 organises AI risk work around Govern, Map, Measure and Manage, with governance explicitly cross-cutting. ISO/IEC 42001 provides requirements for establishing and continually improving an AI management system. Neither document is a plug-and-play CRM design, but both reinforce an essential point: risk management is a lifecycle, not a review meeting before launch.",
+      "type": "html"
+    },
+    {
+      "html": "My design test is simple:",
+      "tag": "p",
+      "text": "My design test is simple:",
+      "type": "html"
+    },
+    {
+      "html": "<em class=\"gp\">Every agent action should be attributable, bounded, observable and reversible — or containable when it cannot be reversed.</em>",
+      "tag": "p",
+      "text": "Every agent action should be attributable, bounded, observable and reversible — or containable when it cannot be reversed.",
+      "type": "html"
+    },
+    {
+      "html": "<strong class=\"md gq\">Attributable</strong> means the trace identifies the agent, model, prompt, policy version, data sources, business owner and user or service on whose behalf it acted.",
+      "tag": "p",
+      "text": "Attributable means the trace identifies the agent, model, prompt, policy version, data sources, business owner and user or service on whose behalf it acted.",
+      "type": "html"
+    },
+    {
+      "html": "<strong class=\"md gq\">Bounded</strong> means least-privilege access, approved tools, allowlisted destinations, action limits and explicit separation of duties. Credentials should be short-lived where possible; an agent that reads a case does not automatically need the ability to edit billing.",
+      "tag": "p",
+      "text": "Bounded means least-privilege access, approved tools, allowlisted destinations, action limits and explicit separation of duties. Credentials should be short-lived where possible; an agent that reads a case does not automatically need the ability to edit billing.",
+      "type": "html"
+    },
+    {
+      "html": "<strong class=\"md gq\">Observable</strong> means teams can see the plan, tool calls, outcomes, cost, latency, confidence and exceptions. Observability is useful only when someone owns the alert and knows what to do next.",
+      "tag": "p",
+      "text": "Observable means teams can see the plan, tool calls, outcomes, cost, latency, confidence and exceptions. Observability is useful only when someone owns the alert and knows what to do next.",
+      "type": "html"
+    },
+    {
+      "html": "<strong class=\"md gq\">Reversible or containable</strong> means the workflow can undo a safe change, compensate for an irreversible one, stop further actions and hand control to an accountable person.",
+      "tag": "p",
+      "text": "Reversible or containable means the workflow can undo a safe change, compensate for an irreversible one, stop further actions and hand control to an accountable person.",
+      "type": "html"
+    },
+    {
+      "html": "Security must assume that customer content is untrusted",
+      "tag": "h3",
+      "text": "Security must assume that customer content is untrusted",
+      "type": "html"
+    },
+    {
+      "html": "Tickets, email, attachments, webpages and knowledge documents can contain malicious or simply misleading instructions. An indirect prompt injection hidden in a customer message can try to make an agent reveal information or misuse a connected tool. <a class=\"as na\" href=\"https://genai.owasp.org/llmrisk/llm062025-excessive-agency/\" rel=\"noopener ugc nofollow\" target=\"_blank\">OWASP calls out excessive agency</a> as a distinct risk: broad permissions turn a model error or manipulated output into real damage.",
+      "tag": "p",
+      "text": "Tickets, email, attachments, webpages and knowledge documents can contain malicious or simply misleading instructions. An indirect prompt injection hidden in a customer message can try to make an agent reveal information or misuse a connected tool. OWASP calls out excessive agency as a distinct risk: broad permissions turn a model error or manipulated output into real damage.",
+      "type": "html"
+    },
+    {
+      "html": "Use explicit trust zones. Untrusted email, documents and webpages cross an ingress boundary for malware scanning, type validation, active-content removal and instruction/evidence separation. Identity-aware retrieval and redaction protect the context zone. The reasoning zone receives evidence but no credentials. Only a schema-valid plan may cross into privileged execution after the Policy Decision Point returns a permit; the Tool Gateway and Policy Enforcement Point then constrain destination, token scope and egress.",
+      "tag": "p",
+      "text": "Use explicit trust zones. Untrusted email, documents and webpages cross an ingress boundary for malware scanning, type validation, active-content removal and instruction/evidence separation. Identity-aware retrieval and redaction protect the context zone. The reasoning zone receives evidence but no credentials. Only a schema-valid plan may cross into privileged execution after the Policy Decision Point returns a permit; the Tool Gateway and Policy Enforcement Point then constrain destination, token scope and egress.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn security architecture divided into untrusted input, context, reasoning, privileged execution and enterprise-system zones. Ingress scanning and sanitisation precede a Context Builder with identity, ACL, redaction and provenance. The Agent and Model Gateway has no credentials and emits a typed plan. PDP risk checks and approval precede a Tool Gateway and PEP with scoped tokens and egress filtering. Direct bypasses to tools or enterprise systems are blocked; ACK and CDC events return thr",
+      "caption": "Trust boundaries prevent untrusted content and the reasoning environment from crossing directly into privileged execution.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*OIHr0-x06xFXc13tTWKFsg.png",
+      "type": "figure"
+    },
+    {
+      "html": "Human approval belongs in a Human Task Service, not a generic pop-up. A task contains the evidence, proposed action, alternatives, policy result, deadline, delegation path and escalation rule. Financial exposure, customer impact, confidence, reversibility and regulation determine when it appears. Too many approvals create fatigue; too few create silent automation.",
+      "tag": "p",
+      "text": "Human approval belongs in a Human Task Service, not a generic pop-up. A task contains the evidence, proposed action, alternatives, policy result, deadline, delegation path and escalation rule. Financial exposure, customer impact, confidence, reversibility and regulation determine when it appears. Too many approvals create fatigue; too few create silent automation.",
+      "type": "html"
+    },
+    {
+      "html": "The operating model matters as much as the controls. Every production workflow needs a named business owner accountable for the outcome, a technical owner accountable for reliability and a risk owner accountable for the action boundary. Those responsibilities may sit in different teams, but they cannot be left to a generic “AI council.” The people closest to the customer process should decide what good looks like; platform and security teams should make that decision enforceable.",
+      "tag": "p",
+      "text": "The operating model matters as much as the controls. Every production workflow needs a named business owner accountable for the outcome, a technical owner accountable for reliability and a risk owner accountable for the action boundary. Those responsibilities may sit in different teams, but they cannot be left to a generic “AI council.” The people closest to the customer process should decide what good looks like; platform and security teams should make that decision enforceable.",
+      "type": "html"
+    },
+    {
+      "html": "The same clarity is required when an incident occurs. Who can suspend an agent? Who tells affected customers? Who decides whether a model or prompt change is safe to release? Who reviews override patterns? A control plane without an operating cadence becomes a collection of dashboards. Establish release reviews, incident reviews and periodic reauthorisation of tools and data access before the first agent goes live.",
+      "tag": "p",
+      "text": "The same clarity is required when an incident occurs. Who can suspend an agent? Who tells affected customers? Who decides whether a model or prompt change is safe to release? Who reviews override patterns? A control plane without an operating cadence becomes a collection of dashboards. Establish release reviews, incident reviews and periodic reauthorisation of tools and data access before the first agent goes live.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn governed support escalation flow from event, context, plan, policy, and approval through action, verification, and logging, with a failure branch to stop, compensate, and involve a human.",
+      "caption": "A governed escalation path verifies every action and routes failures to containment and human judgment.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*R7mFeQ9qJNKvcYLgslWcPA.png",
+      "type": "figure"
+    },
+    {
+      "html": "The support escalation, end to end",
+      "tag": "h2",
+      "text": "The support escalation, end to end",
+      "type": "html"
+    },
+    {
+      "html": "Return to the case that arrived at 4:47 p.m. Here is what a governed execution path looks like.",
+      "tag": "p",
+      "text": "Return to the case that arrived at 4:47 p.m. Here is what a governed execution path looks like.",
+      "type": "html"
+    },
+    {
+      "html": "First, the case event enters through an authenticated service channel. The Event Gateway validates its schema, assigns a correlation key and removes duplicates before the durable orchestrator starts a workflow. The Context Builder resolves the account, checks the SLA from the authoritative contract source and assembles current incident, entitlement and communication evidence with permissions, sources and timestamps attached.",
+      "tag": "p",
+      "text": "First, the case event enters through an authenticated service channel. The Event Gateway validates its schema, assigns a correlation key and removes duplicates before the durable orchestrator starts a workflow. The Context Builder resolves the account, checks the SLA from the authoritative contract source and assembles current incident, entitlement and communication evidence with permissions, sources and timestamps attached.",
+      "type": "html"
+    },
+    {
+      "html": "The Agent and Model Gateway routes classification to the service agent and relationship analysis to the account agent. The orchestrator combines their typed outputs into a plan artifact: route the case, alert the owner, draft a status update and schedule the next check, with risk, evidence and expected postconditions recorded.",
+      "tag": "p",
+      "text": "The Agent and Model Gateway routes classification to the service agent and relationship analysis to the account agent. The orchestrator combines their typed outputs into a plan artifact: route the case, alert the owner, draft a status update and schedule the next check, with risk, evidence and expected postconditions recorded.",
+      "type": "html"
+    },
+    {
+      "html": "Before anything changes, the control plane evaluates the plan. Can this agent view the contract? Is it permitted to route a priority-one case? Does customer communication require approval? Are the sources fresh enough? Is the confidence above the threshold?",
+      "tag": "p",
+      "text": "Before anything changes, the control plane evaluates the plan. Can this agent view the contract? Is it permitted to route a priority-one case? Does customer communication require approval? Are the sources fresh enough? Is the confidence above the threshold?",
+      "type": "html"
+    },
+    {
+      "html": "Suppose internal routing is low risk but external messaging is not. The Policy Decision Point permits the first command and sends the second to the Human Task Service. The Tool Gateway creates the escalation task with a command envelope and idempotency key, while the reviewer receives the SLA, incident state, commitments, proposed wording, alternatives and expiry together.",
+      "tag": "p",
+      "text": "Suppose internal routing is low risk but external messaging is not. The Policy Decision Point permits the first command and sends the second to the Human Task Service. The Tool Gateway creates the escalation task with a command envelope and idempotency key, while the reviewer receives the SLA, incident state, commitments, proposed wording, alternatives and expiry together.",
+      "type": "html"
+    },
+    {
+      "html": "The queue acknowledgement or CDC event returns through the Event Gateway and is compared with the expected postcondition. If the CRM write times out, the runtime retries within a limit. If the queue accepts the case but CRM remains unavailable, the workflow records a partial failure, reconciles later and alerts the owner. If new telemetry contradicts the plan, it stops before sending the update. Every plan, permit, command, receipt and verification is written to the trace.",
+      "tag": "p",
+      "text": "The queue acknowledgement or CDC event returns through the Event Gateway and is compared with the expected postcondition. If the CRM write times out, the runtime retries within a limit. If the queue accepts the case but CRM remains unavailable, the workflow records a partial failure, reconciles later and alerts the owner. If new telemetry contradicts the plan, it stops before sending the update. Every plan, permit, command, receipt and verification is written to the trace.",
+      "type": "html"
+    },
+    {
+      "html": "The human is still accountable. What changes is where that judgment is spent: on the customer promise and the exception, not on copying data among six systems.",
+      "tag": "p",
+      "text": "The human is still accountable. What changes is where that judgment is spent: on the customer promise and the exception, not on copying data among six systems.",
+      "type": "html"
+    },
+    {
+      "html": "Evaluation is part of the architecture",
+      "tag": "h2",
+      "text": "Evaluation is part of the architecture",
+      "type": "html"
+    },
+    {
+      "html": "An agent that produces a polished answer can still take a poor action. Response quality is not enough; evaluation has to follow the workflow from evidence to business outcome.",
+      "tag": "p",
+      "text": "An agent that produces a polished answer can still take a poor action. Response quality is not enough; evaluation has to follow the workflow from evidence to business outcome.",
+      "type": "html"
+    },
+    {
+      "html": "Before release, build an offline test set from real, de-identified cases. Include normal paths, ambiguous cases, missing data, conflicting sources, policy boundaries and adversarial content. Test permissions and tool schemas as rigorously as model output. Then run the workflow in shadow mode: let it propose what it would do while people continue the real process.",
+      "tag": "p",
+      "text": "Before release, build an offline test set from real, de-identified cases. Include normal paths, ambiguous cases, missing data, conflicting sources, policy boundaries and adversarial content. Test permissions and tool schemas as rigorously as model output. Then run the workflow in shadow mode: let it propose what it would do while people continue the real process.",
+      "type": "html"
+    },
+    {
+      "html": "Move to a small canary only after the shadow results meet a declared gate. Start with low-risk actions and retain approval for external or irreversible steps. Any change to a model, prompt, policy, retrieval source or tool should trigger regression evaluation.",
+      "tag": "p",
+      "text": "Move to a small canary only after the shadow results meet a declared gate. Start with low-risk actions and retain approval for external or irreversible steps. Any change to a model, prompt, policy, retrieval source or tool should trigger regression evaluation.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn evaluation pipeline: Offline Set passes Policy Tests and Adversarial testing before Shadow, Canary and Production. Production incidents and overrides feed a Regression Set that returns to Offline Set. Business, Quality, Reliability and Safety metrics span the full pipeline.",
+      "caption": "Release is gated by evidence: offline, policy and adversarial tests progress through shadow and canary, while incidents and overrides become regression cases.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*EbR92qFkdVQtWWXihTno-A.png",
+      "type": "figure"
+    },
+    {
+      "html": "Track four kinds of measures:",
+      "tag": "p",
+      "text": "Track four kinds of measures:",
+      "type": "html"
+    },
+    {
+      "html": "Usage is not a success metric. If the workflow is popular but does not improve the baseline — or improves speed while increasing customer corrections — it is not ready to scale.",
+      "tag": "p",
+      "text": "Usage is not a success metric. If the workflow is popular but does not improve the baseline — or improves speed while increasing customer corrections — it is not ready to scale.",
+      "type": "html"
+    },
+    {
+      "html": "Maturity means the right autonomy for the risk",
+      "tag": "h2",
+      "text": "Maturity means the right autonomy for the risk",
+      "type": "html"
+    },
+    {
+      "html": "The usual maturity ladder ends with “fully autonomous.” That is the wrong destination. A mature financial or regulated workflow may always reserve final approval for a person. The goal is not maximum autonomy; it is the most useful autonomy the evidence and controls can support.",
+      "tag": "p",
+      "text": "The usual maturity ladder ends with “fully autonomous.” That is the wrong destination. A mature financial or regulated workflow may always reserve final approval for a person. The goal is not maximum autonomy; it is the most useful autonomy the evidence and controls can support.",
+      "type": "html"
+    },
+    {
+      "html": "I use five operating stages:",
+      "tag": "p",
+      "text": "I use five operating stages:",
+      "type": "html"
+    },
+    {
+      "html": "Promotion between stages should require evidence: evaluation pass rate, data quality, override rate, incident rate, latency, cost and business impact. Teams should be able to move a workflow backward when risk changes. A maturity model that only moves forward will eventually conceal failure.",
+      "tag": "p",
+      "text": "Promotion between stages should require evidence: evaluation pass rate, data quality, override rate, incident rate, latency, cost and business impact. Teams should be able to move a workflow backward when risk changes. A maturity model that only moves forward will eventually conceal failure.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn five-stage autonomy model from assist and recommend through approval, bounded execution, and optimised risk fit, captioned: The right autonomy for the risk.",
+      "caption": "Maturity means matching autonomy to risk — not removing people from every decision.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*jPx-Zbg4fZIfbUrmBsA8GQ.png",
+      "type": "figure"
+    },
+    {
+      "html": "Where to start — and where not to",
+      "tag": "h2",
+      "text": "Where to start — and where not to",
+      "type": "html"
+    },
+    {
+      "html": "The first workflow should have clear value, reliable data, repeatable decisions, measurable outcomes and manageable consequences. It should also be narrow enough that the team can build a credible test set.",
+      "tag": "p",
+      "text": "The first workflow should have clear value, reliable data, repeatable decisions, measurable outcomes and manageable consequences. It should also be narrow enough that the team can build a credible test set.",
+      "type": "html"
+    },
+    {
+      "html": "Good early candidates include CRM data-quality recommendations, case classification and internal routing, SLA-risk alerts, lead enrichment and renewal-risk detection. These workflows can create value before the organisation grants broad write access. Even here, the initial mode should usually be recommendation or shadow operation.",
+      "tag": "p",
+      "text": "Good early candidates include CRM data-quality recommendations, case classification and internal routing, SLA-risk alerts, lead enrichment and renewal-risk detection. These workflows can create value before the organisation grants broad write access. Even here, the initial mode should usually be recommendation or shadow operation.",
+      "type": "html"
+    },
+    {
+      "html": "Avoid autonomous pricing changes, contract amendments, large refunds, regulated communication, account termination or binding customer commitments as a first deployment. High value does not make a workflow a good pilot. Irreversibility, weak data or difficult-to-measure quality can outweigh the potential return.",
+      "tag": "p",
+      "text": "Avoid autonomous pricing changes, contract amendments, large refunds, regulated communication, account termination or binding customer commitments as a first deployment. High value does not make a workflow a good pilot. Irreversibility, weak data or difficult-to-measure quality can outweigh the potential return.",
+      "type": "html"
+    },
+    {
+      "html": "A simple prioritisation conversation is often more useful than a long use-case catalogue. Score the candidate on business value, data readiness, decision repeatability, reversibility and customer or regulatory risk. Then choose the workflow with the best evidence-to-consequence ratio — not the one that looks most impressive in a demo.",
+      "tag": "p",
+      "text": "A simple prioritisation conversation is often more useful than a long use-case catalogue. Score the candidate on business value, data readiness, decision repeatability, reversibility and customer or regulatory risk. Then choose the workflow with the best evidence-to-consequence ratio — not the one that looks most impressive in a demo.",
+      "type": "html"
+    },
+    {
+      "html": "Why promising programmes still fail",
+      "tag": "h2",
+      "text": "Why promising programmes still fail",
+      "type": "html"
+    },
+    {
+      "html": "Most failures will not begin with a spectacular model error. They will begin with an ordinary organisational shortcut.",
+      "tag": "p",
+      "text": "Most failures will not begin with a spectacular model error. They will begin with an ordinary organisational shortcut.",
+      "type": "html"
+    },
+    {
+      "html": "One team will launch without a measurable baseline, making success impossible to prove. Another will connect an agent to stale data and spend months tuning prompts for what is actually a source-quality problem. A third will let every function buy or build its own agent, producing overlapping permissions, conflicting customer messages and no shared incident owner.",
+      "tag": "p",
+      "text": "One team will launch without a measurable baseline, making success impossible to prove. Another will connect an agent to stale data and spend months tuning prompts for what is actually a source-quality problem. A third will let every function buy or build its own agent, producing overlapping permissions, conflicting customer messages and no shared incident owner.",
+      "type": "html"
+    },
+    {
+      "html": "The countermeasures are equally practical. Tie the first workflow to a business measure that already exists. Put data freshness and ownership into the architecture, not a cleanup backlog. Maintain an inventory of agents, tools, owners, models and action boundaries. Require a common trace format so a cross-functional workflow can be investigated end to end.",
+      "tag": "p",
+      "text": "The countermeasures are equally practical. Tie the first workflow to a business measure that already exists. Put data freshness and ownership into the architecture, not a cleanup backlog. Maintain an inventory of agents, tools, owners, models and action boundaries. Require a common trace format so a cross-functional workflow can be investigated end to end.",
+      "type": "html"
+    },
+    {
+      "html": "Treating an agent as a chatbot creates another failure mode. A chatbot can be evaluated on whether its response is helpful. An agent must also be evaluated on whether it chose the correct tool, respected policy, changed the intended record exactly once and produced the expected business outcome. The polished explanation is not the work; the verified state change is the work.",
+      "tag": "p",
+      "text": "Treating an agent as a chatbot creates another failure mode. A chatbot can be evaluated on whether its response is helpful. An agent must also be evaluated on whether it chose the correct tool, respected policy, changed the intended record exactly once and produced the expected business outcome. The polished explanation is not the work; the verified state change is the work.",
+      "type": "html"
+    },
+    {
+      "html": "Human-in-the-loop design can fail in both directions. If every decision requires approval, the “agent” becomes an expensive drafting interface. If approvals disappear before the evidence supports that change, the organisation creates invisible automation. Review override and approval data regularly. A high override rate may indicate poor instructions, bad retrieval, the wrong threshold or a task that should never have been delegated.",
+      "tag": "p",
+      "text": "Human-in-the-loop design can fail in both directions. If every decision requires approval, the “agent” becomes an expensive drafting interface. If approvals disappear before the evidence supports that change, the organisation creates invisible automation. Review override and approval data regularly. A high override rate may indicate poor instructions, bad retrieval, the wrong threshold or a task that should never have been delegated.",
+      "type": "html"
+    },
+    {
+      "html": "Finally, avoid measuring progress by the number of agents deployed. That metric rewards complexity. A single well-instrumented workflow that reduces SLA breaches is more valuable than twenty agents generating activity. Scale only when the system improves a business outcome without degrading safety, reliability or customer trust.",
+      "tag": "p",
+      "text": "Finally, avoid measuring progress by the number of agents deployed. That metric rewards complexity. A single well-instrumented workflow that reduces SLA breaches is more valuable than twenty agents generating activity. Scale only when the system improves a business outcome without degrading safety, reliability or customer trust.",
+      "type": "html"
+    },
+    {
+      "html": "A practical 90-day path",
+      "tag": "h2",
+      "text": "A practical 90-day path",
+      "type": "html"
+    },
+    {
+      "html": "Agentic CRM should enter the business as a measured operating change, not a software installation.",
+      "tag": "p",
+      "text": "Agentic CRM should enter the business as a measured operating change, not a software installation.",
+      "type": "html"
+    },
+    {
+      "html": "Days 0–30: map the work",
+      "tag": "h3",
+      "text": "Days 0–30: map the work",
+      "type": "html"
+    },
+    {
+      "html": "Choose one workflow and establish its baseline. Map the events, systems, decisions, approvals, failure modes and manual handoffs. Identify authoritative data sources. Assign a business owner, technical owner and risk owner. Build the first evaluation set from real cases and decide what would count as a material improvement.",
+      "tag": "p",
+      "text": "Choose one workflow and establish its baseline. Map the events, systems, decisions, approvals, failure modes and manual handoffs. Identify authoritative data sources. Assign a business owner, technical owner and risk owner. Build the first evaluation set from real cases and decide what would count as a material improvement.",
+      "type": "html"
+    },
+    {
+      "html": "This phase should end with a documented action boundary: what the system may read, what it may propose, what it may change, which actions require approval and which actions are prohibited.",
+      "tag": "p",
+      "text": "This phase should end with a documented action boundary: what the system may read, what it may propose, what it may change, which actions require approval and which actions are prohibited.",
+      "type": "html"
+    },
+    {
+      "html": "Days 31–60: build in shadow mode",
+      "tag": "h3",
+      "text": "Days 31–60: build in shadow mode",
+      "type": "html"
+    },
+    {
+      "html": "Implement narrow tool contracts, retrieval with provenance, policy checks, tracing and a deterministic fallback. Run the workflow beside the existing process without allowing it to change customer-facing state. Compare its decisions with human outcomes and test prompt injection, missing data, system outages and duplicate events.",
+      "tag": "p",
+      "text": "Implement narrow tool contracts, retrieval with provenance, policy checks, tracing and a deterministic fallback. Run the workflow beside the existing process without allowing it to change customer-facing state. Compare its decisions with human outcomes and test prompt injection, missing data, system outages and duplicate events.",
+      "type": "html"
+    },
+    {
+      "html": "Review the disagreements. Some will expose model limitations; others will reveal that the human process was inconsistent. Both are useful. Turn each material failure into a regression test.",
+      "tag": "p",
+      "text": "Review the disagreements. Some will expose model limitations; others will reveal that the human process was inconsistent. Both are useful. Turn each material failure into a regression test.",
+      "type": "html"
+    },
+    {
+      "html": "Days 61–90: release a bounded canary",
+      "tag": "h3",
+      "text": "Days 61–90: release a bounded canary",
+      "type": "html"
+    },
+    {
+      "html": "Allow a small segment of low-risk actions, keep approval for consequential steps and monitor the four measure groups. Publish an incident runbook and make it easy for users to stop or override the workflow. At the end of the canary, decide whether to expand, redesign or stop.",
+      "tag": "p",
+      "text": "Allow a small segment of low-risk actions, keep approval for consequential steps and monitor the four measure groups. Publish an incident runbook and make it easy for users to stop or override the workflow. At the end of the canary, decide whether to expand, redesign or stop.",
+      "type": "html"
+    },
+    {
+      "alt": "Hand-drawn 90-day rollout showing days 0–30 to map, 31–60 to run in shadow mode, and 61–90 to release a canary, with a continuous measure-and-decide loop.",
+      "caption": "A 90-day path: map the workflow, validate in shadow mode, then release a bounded canary.",
+      "src": "https://miro.medium.com/v2/resize:fit:700/1*tBJEk2rXMCcOBsCTMJhDlA.png",
+      "type": "figure"
+    },
+    {
+      "html": "Only after one workflow is reliable should the enterprise add another agent or broaden autonomy. This discipline feels slower than launching a “constellation of agents,” but it prevents the expensive cycle of pilots that never become dependable operations.",
+      "tag": "p",
+      "text": "Only after one workflow is reliable should the enterprise add another agent or broaden autonomy. This discipline feels slower than launching a “constellation of agents,” but it prevents the expensive cycle of pilots that never become dependable operations.",
+      "type": "html"
+    },
+    {
+      "html": "The principle that matters",
+      "tag": "h2",
+      "text": "The principle that matters",
+      "type": "html"
+    },
+    {
+      "html": "Agentic CRM is not defined by how many agents appear in the architecture or how little human involvement remains. It is defined by whether the system can turn trusted evidence into a useful action — and whether the enterprise can explain, constrain and recover from that action.",
+      "tag": "p",
+      "text": "Agentic CRM is not defined by how many agents appear in the architecture or how little human involvement remains. It is defined by whether the system can turn trusted evidence into a useful action — and whether the enterprise can explain, constrain and recover from that action.",
+      "type": "html"
+    },
+    {
+      "html": "The system-of-record role is not disappearing. It is becoming the foundation for a more demanding role: governed execution across customer operations.",
+      "tag": "p",
+      "text": "The system-of-record role is not disappearing. It is becoming the foundation for a more demanding role: governed execution across customer operations.",
+      "type": "html"
+    },
+    {
+      "html": "If you were to give one CRM workflow bounded autonomy tomorrow, which workflow would you choose — and what control would you insist on before switching it on?",
+      "tag": "p",
+      "text": "If you were to give one CRM workflow bounded autonomy tomorrow, which workflow would you choose — and what control would you insist on before switching it on?",
+      "type": "html"
+    }
+  ],
+  "canonical": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+  "description": "A practical reference architecture for agentic CRM, covering trusted context, durable orchestration, policy controls, human approval, and evaluation.",
+  "heroAlt": "Wide hand-drawn Agentic CRM flow from Data and Events through Context, Planning, Durable Orchestration and Capability Execution, with Identity, Policy, Security, Evaluations, Observability and Approval governed by runtime and lifecycle control.",
+  "heroImage": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*03ZX7WIVM7eUm53ynDNZ5g.png",
+  "id": "7485b5da8cae",
+  "modifiedAt": "",
+  "publishedAt": "2026-08-18T05:56:14.313Z",
+  "readTime": "16 min read",
+  "slug": "agentic-crm-reference-architecture",
+  "sourceUrl": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+  "subtitle": "",
+  "tags": [],
+  "title": "How to Build an Agentic CRM: A Reference Architecture"
+}
