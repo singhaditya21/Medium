@@ -300,7 +300,9 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
         elif tag == "blockquote":
             rendered.append(f"<blockquote>{inner}</blockquote>")
         elif tag == "pre":
-            rendered.append(f"<pre><code>{escape(text)}</code></pre>")
+            language = re.sub(r"[^a-z0-9_+-]", "", block.get("language", "").lower())
+            class_attr = f' class="language-{language}"' if language else ""
+            rendered.append(f"<pre><code{class_attr}>{escape(text)}</code></pre>")
         else:
             class_name = "disclosure" if text.lower().startswith("this story was written with") else ""
             class_attr = f' class="{class_name}"' if class_name else ""

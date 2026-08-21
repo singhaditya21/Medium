@@ -73,6 +73,20 @@ def markdown_blocks(body: str) -> list[dict[str, str]]:
             flush_paragraph()
             index += 1
             continue
+        if stripped.startswith("```"):
+            flush_paragraph()
+            language = stripped[3:].strip()
+            index += 1
+            code_lines: list[str] = []
+            while index < len(lines) and lines[index].strip() != "```":
+                code_lines.append(lines[index].rstrip("\n"))
+                index += 1
+            if index >= len(lines):
+                raise ValueError("Unclosed fenced code block")
+            index += 1
+            code = "\n".join(code_lines)
+            blocks.append({"type": "html", "tag": "pre", "html": "", "text": code, "language": language})
+            continue
         figure = re.fullmatch(r'!\[(.*?)\]\((\S+)(?:\s+"(.*)")?\)', stripped)
         if figure:
             flush_paragraph()
