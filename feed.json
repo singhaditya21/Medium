@@ -1,0 +1,109 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Aditya Singh essays",
+  "home_page_url": "https://singhaditya21.github.io/Medium/",
+  "feed_url": "https://singhaditya21.github.io/Medium/feed.json",
+  "authors": [
+    {
+      "name": "Aditya Singh",
+      "url": "https://medium.com/@singhaditya21_89007"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
+      "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
+      "title": "Your AI Agent Should Not Have a Standing Role",
+      "summary": "A technical production blueprint for replacing standing AI-agent privileges with transaction-bound, short-lived, sender-constrained, and verifiable permission leases.",
+      "date_published": "2026-08-21T13:43:02.000Z",
+      "tags": [
+        "AI agents",
+        "Identity and access management",
+        "Zero trust",
+        "Cybersecurity",
+        "Enterprise architecture"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/",
+      "url": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/",
+      "title": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+      "summary": "A practical production architecture for governing consequential CRM agent actions with evidence, action-level risk, human approval, leased permissions, verification, and recovery.",
+      "date_published": "2026-08-21T10:20:00.000Z",
+      "tags": [
+        "AI agents",
+        "Agentic CRM",
+        "AI governance",
+        "Enterprise architecture",
+        "Cybersecurity"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/",
+      "url": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/",
+      "external_url": "https://medium.com/@singhaditya21_89007/ai-agent-identity-is-not-enough-59992dc9e155",
+      "title": "AI Agent Identity Is Not Enough",
+      "summary": "Learn how to control AI agent access with delegated authority, scoped credentials, policy decisions, and audit receipts across five enterprise use cases.",
+      "date_published": "2026-08-20T09:12:06.607Z",
+      "tags": [
+        "AI agents",
+        "Authorization",
+        "Cybersecurity"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/",
+      "url": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/",
+      "external_url": "https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5",
+      "title": "What an Agent Actually Costs",
+      "summary": "Model inference is only part of the bill. See where production AI agent costs accumulate across governance, integration, people, and operations.",
+      "date_published": "2026-08-19T08:09:33.542Z",
+      "tags": [
+        "AI economics",
+        "FinOps",
+        "Enterprise AI"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/",
+      "url": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/",
+      "external_url": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438",
+      "title": "The Enterprise Agent Control Tower: A Production Architecture",
+      "summary": "A production blueprint for governing enterprise AI agents across identity, policy, verified outcomes, risk accounting, audit, and containment at scale.",
+      "date_published": "2026-08-19T04:59:40.266Z",
+      "tags": [
+        "Agent governance",
+        "Architecture",
+        "Risk"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/",
+      "url": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/",
+      "external_url": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+      "title": "How to Build an Agentic CRM: A Reference Architecture",
+      "summary": "A practical reference architecture for agentic CRM, covering trusted context, durable orchestration, policy controls, human approval, and evaluation.",
+      "date_published": "2026-08-18T05:56:14.313Z",
+      "tags": [
+        "Agentic CRM",
+        "Architecture",
+        "Enterprise AI"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/",
+      "url": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/",
+      "external_url": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4",
+      "title": "Why Traditional CRM Will Die Without Agentic AI",
+      "summary": "Static CRM records customer activity but rarely coordinates action. Learn how agentic AI turns it into a governed execution system for modern operations.",
+      "date_published": "2026-05-16T16:21:16.647Z",
+      "tags": [
+        "Agentic CRM",
+        "Strategy",
+        "Transformation"
+      ]
+    }
+  ]
+}

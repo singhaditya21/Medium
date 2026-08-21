@@ -5,9 +5,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import time
 from datetime import datetime, timezone
+from email.utils import format_datetime
 from html import escape
 from pathlib import Path
 from typing import Any
@@ -25,14 +27,48 @@ IMAGE_DIR = ROOT / "assets" / "images"
 SITE_URL = "https://singhaditya21.github.io/Medium/"
 MEDIUM_PROFILE = "https://medium.com/@singhaditya21_89007"
 AUTHOR = "Aditya Singh"
+REPOSITORY_URL = "https://github.com/singhaditya21/Medium"
+DISCUSSIONS_URL = f"{REPOSITORY_URL}/discussions"
 
 TOPIC_MAP = {
+    "a-2-4m-account-is-escalating": ["AI agents", "CRM", "Risk management", "Human-in-the-loop", "Enterprise AI"],
     "ai-agent-identity-is-not-enough": ["AI agents", "Authorization", "Cybersecurity"],
     "what-an-agent-actually-costs": ["AI economics", "FinOps", "Enterprise AI"],
     "enterprise-agent-control-tower": ["Agent governance", "Architecture", "Risk"],
     "agentic-crm-reference-architecture": ["Agentic CRM", "Architecture", "Enterprise AI"],
     "traditional-crm-agentic-ai": ["Agentic CRM", "Strategy", "Transformation"],
+    "your-ai-agent-should-not-have-a-standing-role": ["AI agents", "Zero trust", "Authorization", "Cybersecurity", "Enterprise AI"],
 }
+
+SERIES = [
+    {
+        "slug": "production-grade-ai-agents",
+        "title": "Production-Grade AI Agents",
+        "description": "Identity, authority, evidence, approval, verification, and recovery patterns for agents that act in consequential systems.",
+        "stories": [
+            "ai-agent-identity-is-not-enough",
+            "your-ai-agent-should-not-have-a-standing-role",
+            "enterprise-agent-control-tower",
+            "a-2-4m-account-is-escalating",
+        ],
+    },
+    {
+        "slug": "agentic-crm",
+        "title": "Agentic CRM",
+        "description": "Reference architectures and operating models for evolving CRM from a passive system of record into a governed system of action.",
+        "stories": [
+            "traditional-crm-agentic-ai",
+            "agentic-crm-reference-architecture",
+            "a-2-4m-account-is-escalating",
+        ],
+    },
+    {
+        "slug": "ai-unit-economics",
+        "title": "AI Unit Economics",
+        "description": "Cost models that connect inference, control planes, human review, verification, and business outcomes.",
+        "stories": ["what-an-agent-actually-costs"],
+    },
+]
 
 ALLOWED_INLINE_TAGS = {"a", "strong", "b", "em", "i", "code", "br", "sup", "sub", "s", "mark"}
 TRACKING_PARAMS = {"source", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"}
@@ -176,14 +212,32 @@ def tag_chips(tags: list[str]) -> str:
     return "".join(f'<span class="topic-chip">{escape(tag)}</span>' for tag in tags)
 
 
+def tracked_story_url(story: dict[str, Any], *, campaign: str = "evergreen_archive") -> str:
+    base = f"{SITE_URL}articles/{story['slug']}/"
+    return f"{base}?{urlencode({'utm_source': 'github_pages', 'utm_medium': 'referral', 'utm_campaign': campaign, 'utm_content': story['slug']})}"
+
+
+def series_for_story(slug: str) -> list[dict[str, Any]]:
+    return [series for series in SERIES if slug in series["stories"]]
+
+
+def first_figure_alt(story: dict[str, Any]) -> str:
+    for block in story.get("blocks", []):
+        if block.get("type") == "figure" and block.get("alt"):
+            return block["alt"]
+    return f"Visual for {story['title']}"
+
+
 def header(prefix: str = "") -> str:
     return f"""
 <header class="site-header">
-  <a class="brand" href="{prefix}index.html" aria-label="Aditya Singh essays home">
+  <a class="brand" href="{prefix}index.html" aria-label="AS — Aditya Singh essays home">
     <span class="brand-mark">AS</span><span class="brand-name">Aditya Singh</span>
   </a>
   <nav class="site-nav" aria-label="Primary navigation">
     <a href="{prefix}index.html#stories">Stories</a>
+    <a href="{prefix}series/">Series</a>
+    <a href="{prefix}rss.xml">RSS</a>
     <a href="{MEDIUM_PROFILE}" target="_blank" rel="noopener noreferrer">Medium ↗</a>
     <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle>
       <span aria-hidden="true">◐</span>
@@ -209,6 +263,7 @@ def document(
     prefix: str = "",
     image: str = "",
     article_meta: dict[str, str] | None = None,
+    structured_data: list[dict[str, Any]] | None = None,
 ) -> str:
     image_meta = f'<meta property="og:image" content="{escape(image, quote=True)}">' if image else ""
     article_tags = ""
@@ -220,6 +275,16 @@ def document(
         )
     else:
         article_tags = '<meta property="og:type" content="website">'
+    serialized_schema = [json.dumps(item, ensure_ascii=False).replace("</", "<\\/") for item in (structured_data or [])]
+    json_ld = "\n".join(f'<script type="application/ld+json">{item}</script>' for item in serialized_schema)
+    analytics_script_url = os.environ.get("SITE_ANALYTICS_SCRIPT_URL", "").strip()
+    analytics_website_id = os.environ.get("SITE_ANALYTICS_WEBSITE_ID", "").strip()
+    analytics = ""
+    if analytics_script_url.startswith("https://") and analytics_website_id:
+        analytics = (
+            f'<script defer src="{escape(analytics_script_url, quote=True)}" '
+            f'data-website-id="{escape(analytics_website_id, quote=True)}"></script>'
+        )
     page = f"""<!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -235,8 +300,13 @@ def document(
   {image_meta}
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="{escape(canonical, quote=True)}">
+  <link rel="alternate" type="application/atom+xml" title="Aditya Singh essays" href="{prefix}feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Aditya Singh essays" href="{prefix}rss.xml">
+  <link rel="alternate" type="application/feed+json" title="Aditya Singh essays" href="{prefix}feed.json">
   <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{prefix}assets/styles.css">
+  {json_ld}
+  {analytics}
   <script>try{{document.documentElement.dataset.theme=localStorage.getItem('as-theme')||'light'}}catch(e){{}}</script>
   <title>{escape(title)}</title>
 </head>
@@ -254,6 +324,21 @@ def document(
     return "\n".join(line.rstrip() for line in page.splitlines()) + "\n"
 
 
+def related_stories(story: dict[str, Any], stories: list[dict[str, Any]], limit: int = 3) -> list[dict[str, Any]]:
+    story_series = {item["slug"] for item in series_for_story(story["slug"])}
+    story_tags = {tag.casefold() for tag in story.get("tags", [])}
+    ranked: list[tuple[int, str, dict[str, Any]]] = []
+    for candidate in stories:
+        if candidate["slug"] == story["slug"]:
+            continue
+        candidate_series = {item["slug"] for item in series_for_story(candidate["slug"])}
+        candidate_tags = {tag.casefold() for tag in candidate.get("tags", [])}
+        score = 10 * len(story_series & candidate_series) + 2 * len(story_tags & candidate_tags)
+        ranked.append((score, candidate.get("publishedAt", ""), candidate))
+    ranked.sort(key=lambda item: (item[0], item[1]), reverse=True)
+    return [candidate for _, _, candidate in ranked[:limit]]
+
+
 def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session: requests.Session) -> None:
     slug = story["slug"]
     article_dir = ARTICLES_DIR / slug
@@ -263,6 +348,7 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
     rendered: list[str] = []
     figure_index = 0
     local_hero = ""
+    page_url = f"{SITE_URL}articles/{slug}/"
 
     for block in story["blocks"]:
         if block["type"] == "figure":
@@ -341,6 +427,41 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
           <a href="{escape(story['canonical'], quote=True)}">Canonical URL</a>
         </aside>"""
 
+    related_cards = "".join(
+        f'<a class="related-card" href="../{candidate["slug"]}/">'
+        f'<span>{escape(" · ".join(candidate.get("tags", [])[:2]))}</span>'
+        f'<strong>{escape(candidate["title"])}</strong>'
+        f'<small>{escape(candidate.get("readTime", ""))}</small></a>'
+        for candidate in related_stories(story, stories)
+    )
+    series_links = "".join(
+        f'<a class="series-pill" href="../../series/{series["slug"]}/">{escape(series["title"])}</a>'
+        for series in series_for_story(slug)
+    )
+    share_url = tracked_story_url(story)
+    linkedin_url = f"https://www.linkedin.com/sharing/share-offsite/?{urlencode({'url': share_url})}"
+    x_url = f"https://twitter.com/intent/tweet?{urlencode({'url': share_url, 'text': story['title']})}"
+    email_url = f"mailto:?{urlencode({'subject': story['title'], 'body': share_url})}"
+    engagement = f"""
+  <section class="engagement-panel" aria-labelledby="continue-conversation">
+    <div>
+      <p class="eyebrow">Continue the conversation</p>
+      <h2 id="continue-conversation">Share the architecture, or challenge it.</h2>
+      <p>The links below include campaign parameters so referrals can be measured. Every share and discussion remains a human action.</p>
+    </div>
+    <div class="share-actions" aria-label="Share this story">
+      <a href="{escape(linkedin_url, quote=True)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="{escape(x_url, quote=True)}" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="{escape(email_url, quote=True)}">Email</a>
+      <button type="button" data-copy-url="{escape(share_url, quote=True)}">Copy tracked link</button>
+      <a href="{DISCUSSIONS_URL}" target="_blank" rel="noopener noreferrer">Discuss on GitHub ↗</a>
+    </div>
+  </section>
+  <section class="related-section" aria-labelledby="related-stories">
+    <div class="related-heading"><div><p class="eyebrow">Read next</p><h2 id="related-stories">Related stories</h2></div><div class="series-links">{series_links}</div></div>
+    <div class="related-grid">{related_cards}</div>
+  </section>"""
+
     body = f"""
 <div class="reading-progress" aria-hidden="true"><span data-progress></span></div>
 <main id="main" class="article-page">
@@ -366,10 +487,26 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
     </div>
   </article>
   <div class="canonical-handoff">{source_note}</div>
+  {engagement}
   <nav class="story-nav" aria-label="More stories">{''.join(neighbors)}</nav>
 </main>"""
 
-    page_url = f"{SITE_URL}articles/{slug}/"
+    schema: dict[str, Any] = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": story["title"],
+        "description": story_summary(story),
+        "datePublished": story.get("publishedAt", ""),
+        "dateModified": story.get("publishedAt", ""),
+        "author": {"@type": "Person", "name": AUTHOR, "url": MEDIUM_PROFILE},
+        "publisher": {"@type": "Person", "name": AUTHOR, "url": SITE_URL},
+        "image": local_hero or story.get("heroImage", ""),
+        "keywords": story.get("tags", []),
+        "mainEntityOfPage": {"@type": "WebPage", "@id": page_url},
+        "url": page_url,
+    }
+    if clean_url(story.get("canonical", "")) != page_url:
+        schema["isBasedOn"] = clean_url(story["canonical"])
     page = document(
         title=f"{story['title']} — {AUTHOR}",
         description=story_summary(story),
@@ -378,10 +515,12 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
         prefix="../../",
         image=local_hero or story.get("heroImage", ""),
         article_meta={"published": story.get("publishedAt", "")},
+        structured_data=[schema],
     )
     (article_dir / "index.html").write_text(page, encoding="utf-8")
     story["pageUrl"] = page_url
     story["localHero"] = local_hero
+    story["heroAlt"] = first_figure_alt(story)
 
 
 def render_index(stories: list[dict[str, Any]]) -> None:
@@ -405,6 +544,17 @@ def render_index(stories: list[dict[str, Any]]) -> None:
   </div>
 </article>""")
 
+    series_cards = "".join(
+        f"""
+<a class="series-card" href="series/{series['slug']}/">
+  <span>{len(series['stories'])} {"story" if len(series['stories']) == 1 else "stories"}</span>
+  <h3>{escape(series['title'])}</h3>
+  <p>{escape(series['description'])}</p>
+  <strong>Explore series →</strong>
+</a>"""
+        for series in SERIES
+    )
+
     body = f"""
 <main id="main">
   <section class="hero">
@@ -422,6 +572,10 @@ def render_index(stories: list[dict[str, Any]]) -> None:
       <p>“The hard part of agentic AI is not making a model act. It is deciding what authority that action should carry.”</p>
       <span>Aditya Singh</span>
     </aside>
+  </section>
+  <section class="series-preview" aria-labelledby="series-heading">
+    <div class="section-heading"><div><p class="eyebrow">Guided reading</p><h2 id="series-heading">Story series</h2></div><a class="section-link" href="series/">View all series →</a></div>
+    <div class="series-grid">{series_cards}</div>
   </section>
   <section id="stories" class="stories-section">
     <div class="section-heading">
@@ -442,18 +596,174 @@ def render_index(stories: list[dict[str, Any]]) -> None:
         canonical=SITE_URL,
         body=body,
         image=stories[0].get("localHero") or stories[0].get("heroImage", ""),
+        structured_data=[{
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Aditya Singh — Enterprise AI & Agent Architecture",
+            "description": "Essays on enterprise AI, agent architecture, governance, identity, economics, and production systems.",
+            "url": SITE_URL,
+            "author": {"@type": "Person", "name": AUTHOR, "url": MEDIUM_PROFILE},
+            "blogPost": [{"@type": "BlogPosting", "headline": story["title"], "url": story["pageUrl"]} for story in stories],
+        }],
     )
     (ROOT / "index.html").write_text(page, encoding="utf-8")
 
 
+def render_series(stories: list[dict[str, Any]]) -> None:
+    series_root = ROOT / "series"
+    series_root.mkdir(parents=True, exist_ok=True)
+    by_slug = {story["slug"]: story for story in stories}
+    overview_cards: list[str] = []
+
+    for series in SERIES:
+        members = [by_slug[slug] for slug in series["stories"] if slug in by_slug]
+        overview_cards.append(f"""
+<a class="series-card expanded" href="{series['slug']}/">
+  <span>{len(members)} {"story" if len(members) == 1 else "stories"}</span>
+  <h2>{escape(series['title'])}</h2>
+  <p>{escape(series['description'])}</p>
+  <ol>{''.join(f'<li>{escape(story["title"])}</li>' for story in members)}</ol>
+  <strong>Read the series →</strong>
+</a>""")
+
+        member_cards = "".join(
+            f"""
+<article class="series-story">
+  <span class="series-number">{index:02d}</span>
+  <div><p class="card-meta">{date_label(story.get('publishedAt', ''))} · {escape(story.get('readTime', ''))}</p>
+  <h2><a href="../../articles/{story['slug']}/">{escape(story['title'])}</a></h2>
+  <p>{escape(story_summary(story))}</p>
+  <a class="read-link" href="../../articles/{story['slug']}/">Read essay <span>→</span></a></div>
+</article>"""
+            for index, story in enumerate(members, 1)
+        )
+        detail_url = f"{SITE_URL}series/{series['slug']}/"
+        detail_body = f"""
+<main id="main" class="series-page">
+  <a class="back-link" href="../">← All series</a>
+  <header class="series-hero"><p class="eyebrow">Reading series · {len(members)} {"story" if len(members) == 1 else "stories"}</p><h1>{escape(series['title'])}</h1><p>{escape(series['description'])}</p></header>
+  <section class="series-story-list" aria-label="Stories in reading order">{member_cards}</section>
+</main>"""
+        detail_schema = {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": series["title"],
+            "description": series["description"],
+            "url": detail_url,
+            "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": index, "url": story["pageUrl"], "name": story["title"]}
+                    for index, story in enumerate(members, 1)
+                ],
+            },
+        }
+        detail_dir = series_root / series["slug"]
+        detail_dir.mkdir(parents=True, exist_ok=True)
+        (detail_dir / "index.html").write_text(
+            document(
+                title=f"{series['title']} — {AUTHOR}",
+                description=series["description"],
+                canonical=detail_url,
+                body=detail_body,
+                prefix="../../",
+                image=members[0].get("localHero", "") if members else "",
+                structured_data=[detail_schema],
+            ),
+            encoding="utf-8",
+        )
+
+    overview_body = f"""
+<main id="main" class="series-page">
+  <header class="series-hero"><p class="eyebrow">Guided reading</p><h1>Story series</h1><p>Follow the architecture from foundational controls to production operating models. Each sequence is arranged as a deliberate reading path.</p></header>
+  <section class="series-grid overview" aria-label="Available story series">{''.join(overview_cards)}</section>
+</main>"""
+    overview_url = f"{SITE_URL}series/"
+    (series_root / "index.html").write_text(
+        document(
+            title=f"Story Series — {AUTHOR}",
+            description="Guided reading paths through Aditya Singh's essays on production AI agents, agentic CRM, and AI economics.",
+            canonical=overview_url,
+            body=overview_body,
+            prefix="../",
+            structured_data=[{
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "name": "Story series",
+                "url": overview_url,
+                "hasPart": [{"@type": "CollectionPage", "name": item["title"], "url": f"{overview_url}{item['slug']}/"} for item in SERIES],
+            }],
+        ),
+        encoding="utf-8",
+    )
+
+
 def render_supporting_files(stories: list[dict[str, Any]]) -> None:
-    sitemap_urls = [SITE_URL] + [f"{SITE_URL}articles/{story['slug']}/" for story in stories]
+    series_urls = [f"{SITE_URL}series/", *[f"{SITE_URL}series/{series['slug']}/" for series in SERIES]]
+    sitemap_urls = [SITE_URL, *series_urls, *[f"{SITE_URL}articles/{story['slug']}/" for story in stories]]
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for url in sitemap_urls:
         sitemap.append(f"  <url><loc>{escape(url)}</loc></url>")
     sitemap.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}sitemap.xml\n", encoding="utf-8")
+
+    updated = stories[0].get("publishedAt") or datetime.now(timezone.utc).isoformat()
+    atom_entries = []
+    rss_items = []
+    json_items = []
+    for story in stories:
+        page_url = story["pageUrl"]
+        summary = story_summary(story)
+        published = story.get("publishedAt", "")
+        published_dt = datetime.fromisoformat(published.replace("Z", "+00:00")) if published else datetime.now(timezone.utc)
+        atom_entries.append(
+            "  <entry>"
+            f"<title>{escape(story['title'])}</title>"
+            f"<link href=\"{escape(page_url, quote=True)}\"/>"
+            f"<id>{escape(page_url)}</id><published>{escape(published)}</published><updated>{escape(published)}</updated>"
+            f"<summary>{escape(summary)}</summary></entry>"
+        )
+        rss_items.append(
+            "    <item>"
+            f"<title>{escape(story['title'])}</title><link>{escape(page_url)}</link><guid>{escape(page_url)}</guid>"
+            f"<pubDate>{format_datetime(published_dt)}</pubDate><description>{escape(summary)}</description></item>"
+        )
+        json_items.append({
+            "id": page_url,
+            "url": page_url,
+            "external_url": clean_url(story.get("canonical", "")),
+            "title": story["title"],
+            "summary": summary,
+            "date_published": published,
+            "tags": story.get("tags", []),
+        })
+
+    atom = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<feed xmlns="http://www.w3.org/2005/Atom">\n'
+        f"  <title>Aditya Singh essays</title><id>{SITE_URL}</id><link href=\"{SITE_URL}feed.xml\" rel=\"self\"/>"
+        f"<link href=\"{SITE_URL}\"/><updated>{escape(updated)}</updated><author><name>{AUTHOR}</name></author>\n"
+        + "\n".join(atom_entries)
+        + "\n</feed>\n"
+    )
+    (ROOT / "feed.xml").write_text(atom, encoding="utf-8")
+    rss = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>'
+        f"<title>Aditya Singh essays</title><link>{SITE_URL}</link><description>Enterprise AI and agent architecture essays.</description>\n"
+        + "\n".join(rss_items)
+        + "\n</channel></rss>\n"
+    )
+    (ROOT / "rss.xml").write_text(rss, encoding="utf-8")
+    json_feed = {
+        "version": "https://jsonfeed.org/version/1.1",
+        "title": "Aditya Singh essays",
+        "home_page_url": SITE_URL,
+        "feed_url": f"{SITE_URL}feed.json",
+        "authors": [{"name": AUTHOR, "url": MEDIUM_PROFILE}],
+        "items": json_items,
+    }
+    (ROOT / "feed.json").write_text(json.dumps(json_feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     manifest = [
         {
             "slug": story["slug"],
@@ -464,6 +774,8 @@ def render_supporting_files(stories: list[dict[str, Any]]) -> None:
             "tags": story["tags"],
             "canonical": story["canonical"],
             "pageUrl": f"{SITE_URL}articles/{story['slug']}/",
+            "trackedUrl": tracked_story_url(story),
+            "series": [series["slug"] for series in series_for_story(story["slug"])],
         }
         for story in stories
     ]
@@ -480,6 +792,7 @@ def main() -> None:
         print(f"building: {story['title']}")
         render_article(story, stories, session)
     render_index(stories)
+    render_series(stories)
     render_supporting_files(stories)
     digest = hashlib.sha256("".join(story["id"] for story in stories).encode()).hexdigest()[:12]
     print(f"built {len(stories)} stories ({digest})")

@@ -104,8 +104,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Four-stage evolution of CRM from a system of record through workflow automation and AI copilots to agentic execution.",
+      "caption": "The CRM operating model shifts from recording and assisting work to executing bounded outcomes.",
       "src": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*V78FtfsgEX7LjkY0zHBRVA.png",
       "type": "figure"
     },
@@ -152,14 +152,14 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Detailed CRM 1.0 architecture showing channels, an operational database, the data model, CRUD lifecycle, security controls, limitations, and KPIs.",
+      "caption": "A system-of-record architecture centralizes customer data but remains dependent on human-driven workflows.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*fptb6dxLa_nu0N8ehY0VNg.png",
       "type": "figure"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Layer-by-layer comparison of traditional, workflow, AI copilot, and autonomous agentic CRM architectures.",
+      "caption": "Each CRM generation adds orchestration and intelligence while preserving enterprise integration and governance layers.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*NIUn33kFYHo4FgDLbSiy0g.png",
       "type": "figure"
     },
@@ -278,8 +278,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Multi-agent CRM reference architecture with sales, service, revenue, delivery, compliance, and escalation agents.",
+      "caption": "Specialized agents coordinate through orchestration, memory, tools, events, governance, and human approval.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*s7av2fK5Dte-IL5MqVD5Jw.png",
       "type": "figure"
     },
@@ -374,8 +374,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "AI control tower dashboard showing agent telemetry, execution status, policy violations, approvals, recovery, audit, cost, and system health.",
+      "caption": "A control tower joins operational telemetry with policy, approval, audit, cost, and recovery signals.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*ipvqAxUOVx-pSiH2nXXEIw.png",
       "type": "figure"
     },
@@ -476,8 +476,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Side-by-side comparison of rigid workflow automation and adaptive agentic AI orchestration.",
+      "caption": "Agentic orchestration adds reasoning, memory, dynamic tools, and outcome evaluation to a governed execution path.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*sq_lZYRWQpmA3jl0eOkTLw.png",
       "type": "figure"
     },
@@ -626,8 +626,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Ten-layer autonomous enterprise stack from user channels and AI agents through orchestration, models, memory, events, APIs, enterprise systems, and infrastructure.",
+      "caption": "An autonomous enterprise stack requires agent, orchestration, model, memory, data, event, integration, application, and infrastructure layers under shared governance.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*GtEnnuAU_R9wIpRufof5Pw.png",
       "type": "figure"
     },
