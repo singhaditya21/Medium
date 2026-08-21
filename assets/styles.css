@@ -337,6 +337,7 @@ button, input { font: inherit; }
 .article-body strong { font-weight: 700; }
 .article-body code { padding: 0.13em 0.3em; background: var(--surface-strong); border-radius: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.84em; }
 .article-body pre { overflow: auto; margin: 2em 0; padding: 22px; color: #d8e9e7; background: #0d2425; border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; line-height: 1.65; }
+.article-body pre code { padding: 0; color: inherit; background: transparent; border-radius: 0; font-size: inherit; }
 .article-body blockquote { margin: 2em 0; padding: 4px 0 4px 26px; color: var(--ink); border-left: 3px solid var(--gold); font-size: 25px; font-style: italic; }
 .article-body .disclosure { padding: 16px 18px; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font-family: var(--sans); font-size: 13px; line-height: 1.55; }
 

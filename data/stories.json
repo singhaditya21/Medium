@@ -1,5 +1,21 @@
 [
   {
+    "slug": "your-ai-agent-should-not-have-a-standing-role",
+    "title": "Your AI Agent Should Not Have a Standing Role",
+    "description": "A technical production blueprint for replacing standing AI-agent privileges with transaction-bound, short-lived, sender-constrained, and verifiable permission leases.",
+    "publishedAt": "2026-08-21T13:43:02.000Z",
+    "readTime": "20 min read",
+    "tags": [
+      "AI agents",
+      "Identity and access management",
+      "Zero trust",
+      "Cybersecurity",
+      "Enterprise architecture"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/"
+  },
+  {
     "slug": "a-2-4m-account-is-escalating",
     "title": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
     "description": "A practical production architecture for governing consequential CRM agent actions with evidence, action-level risk, human approval, leased permissions, verification, and recovery.",
