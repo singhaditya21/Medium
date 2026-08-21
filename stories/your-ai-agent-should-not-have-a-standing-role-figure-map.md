@@ -32,4 +32,4 @@ Palette policy: hard two-root cap per chart, using teal/blue for bounded authori
 | 24 | Supplemental | Lease control-plane objectives | Target-versus-actual scorecard | Every operating objective needs a target, actual result, and visible pass or breach state. | Synthetic 30-day targets and actuals; one deliberate verification-mismatch breach. |
 | 25 | Core | Permission-lease rollout | Maturity roadmap | Teams should remove standing privilege action class by action class behind promotion gates. | Reference design; no observed production data. |
 
-Renderer: reproducible Matplotlib PNG, 1600×900. Final QA surface: responsive GitHub Pages article and Medium import page.
+Renderer: reproducible Matplotlib PNG, 2800×1750. Every plate includes a control-domain header, architectural highlights rail, control contract, assumptions, and semantic legend. Final QA surface: responsive GitHub Pages article and Medium import page.
