@@ -105,82 +105,124 @@ FIGURE_SIDECARS = {
     25: ("ROLLOUT", ["Migration proceeds by action class rather than a platform-wide flag day.", "Each phase has an observable promotion gate and rollback condition.", "A missed error budget returns the action class to the previous phase."], [("START", "inventory standing authority"), ("PROMOTE", "shadow → internal → approved"), ("END", "bounded autonomy")]),
 }
 
+SHORT_FORMS = {
+    "Scorecard": "COMPARISON",
+    "Architecture diagram": "ARCHITECTURE",
+    "Stage progression": "PROGRESSION",
+    "Structured schema": "SCHEMA",
+    "State machine": "STATE MODEL",
+    "Sequence diagram": "SEQUENCE",
+    "PEP/PDP diagram": "POLICY ARCHITECTURE",
+    "Field map": "FIELD MAPPING",
+    "Formula decomposition": "FORMULA",
+    "Heatmap": "HEATMAP",
+    "Multi-series line": "SCENARIO CURVES",
+    "Grouped bar": "GROUPED BAR",
+    "Distribution": "DISTRIBUTION",
+    "Reachability graph": "REACHABILITY",
+    "Decision tree": "DECISION TREE",
+    "Cryptographic binding diagram": "DIGEST CHAIN",
+    "Timeline": "TIMELINE",
+    "Structured lineage": "LINEAGE",
+    "Stage bars with cumulative line": "LATENCY MODEL",
+    "Target-versus-actual scorecard": "OPERATING SCORECARD",
+    "Maturity roadmap": "ROADMAP",
+}
+
 
 def wrap(value: str, width: int = 22) -> str:
     return "\n".join(textwrap.wrap(value, width=width))
 
 
 def _figure_chip(fig, x: float, y: float, width: float, label: str, value: str, color: str) -> None:
-    fig.add_artist(FancyBboxPatch((x, y), width, .028, transform=fig.transFigure, boxstyle="round,pad=.002,rounding_size=.004", facecolor=WHITE, edgecolor=color, linewidth=.8))
-    fig.text(x + .006, y + .014, f"{label}  {value}", va="center", color=color, fontsize=6.6, fontweight="bold")
+    fig.add_artist(FancyBboxPatch((x, y), width, .022, transform=fig.transFigure, boxstyle="round,pad=.0015,rounding_size=.003", facecolor=WHITE, edgecolor=color, linewidth=.65))
+    fig.text(x + .005, y + .011, f"{label}  {value}", va="center", color=color, fontsize=5.7, fontweight="bold")
 
 
 def _draw_sidecar(fig, number: int) -> None:
     domain, highlights, contract = FIGURE_SIDECARS[number]
-    rail = fig.add_axes([.755, .105, .21, .675])
+    takeaway = next(meta[3] for meta in FIGURE_META if meta[0] == number)
+    assumption = FIGURE_ASSUMPTIONS.get(number, "Reference design; no observed production data.")
+    rail = fig.add_axes([.765, .075, .21, .755])
     rail.set_xlim(0, 100)
     rail.set_ylim(0, 100)
     rail.axis("off")
-    rail.add_patch(FancyBboxPatch((0, 0), 100, 100, boxstyle="round,pad=.35,rounding_size=2.2", facecolor=WHITE, edgecolor=BLUE, linewidth=1.0))
-    rail.text(7, 94, domain, color=BLUE, fontsize=7.4, fontweight="bold", va="center")
-    rail.text(7, 88, "ARCHITECTURAL HIGHLIGHTS", color=INK, fontsize=9.2, fontweight="bold", va="center")
-    rail.plot([7, 93], [84, 84], color=LINE, lw=.8)
+    rail.text(3, 97, domain, color=BLUE, fontsize=7.6, fontweight="bold", va="center")
+    rail.plot([3, 97], [94, 94], color=BLUE, lw=1.0)
+
+    def panel(y: float, height: float, title: str, edge: str, fill: str) -> None:
+        rail.add_patch(FancyBboxPatch((1, y), 98, height, boxstyle="round,pad=.22,rounding_size=1.5", facecolor=fill, edgecolor=edge, linewidth=.75))
+        rail.add_patch(Rectangle((1, y + height - 5), 98, 5, facecolor=edge, edgecolor=edge, alpha=.11))
+        rail.text(5, y + height - 2.5, title, color=edge, fontsize=6.4, fontweight="bold", va="center")
+
+    panel(76, 16, "KEY TAKEAWAY", BLUE, "#F7FAFE")
+    rail.text(5, 83, wrap(takeaway, 42), color=INK, fontsize=6.6, va="center", linespacing=1.18)
+
+    panel(43, 31, "MECHANISM", TEAL, "#F6FBFA")
     for index, highlight in enumerate(highlights, start=1):
-        y = 77 - (index - 1) * 15
-        rail.add_patch(Circle((11, y), 3.5, facecolor="#EAF1FB", edgecolor=BLUE, linewidth=.8))
-        rail.text(11, y, str(index), ha="center", va="center", color=BLUE, fontsize=6.5, fontweight="bold")
-        rail.text(18, y + 1.7, wrap(highlight, 34), color=INK, fontsize=6.4, va="center", linespacing=1.28)
-    rail.text(7, 35, "CONTROL CONTRACT", color=INK, fontsize=8.5, fontweight="bold")
-    rail.plot([7, 93], [32, 32], color=LINE, lw=.8)
+        y = 66 - (index - 1) * 8.5
+        rail.add_patch(Circle((7, y), 2.1, facecolor=WHITE, edgecolor=TEAL, linewidth=.75))
+        rail.text(7, y, str(index), ha="center", va="center", color=TEAL, fontsize=5.5, fontweight="bold")
+        rail.text(12, y, wrap(highlight, 38), color=INK, fontsize=6.15, va="center", linespacing=1.12)
+
+    panel(18, 23, "CONTROL CONTRACT", GOLD, "#FFFBF4")
     for index, (label, value) in enumerate(contract):
-        y = 23 - index * 9
-        rail.add_patch(FancyBboxPatch((7, y), 86, 7, boxstyle="round,pad=.18,rounding_size=1.0", facecolor="#F7FAFE", edgecolor=LINE, linewidth=.65))
-        rail.text(10, y + 3.5, label, color=MUTED, fontsize=5.8, fontweight="bold", va="center")
-        rail.text(91, y + 3.5, value, color=INK, fontsize=6.1, ha="right", va="center")
+        y = 32.5 - index * 6.5
+        rail.text(5, y, label, color=GOLD, fontsize=5.7, fontweight="bold", va="center")
+        rail.text(96, y, value, color=INK, fontsize=5.9, ha="right", va="center")
+        if index < 2:
+            rail.plot([5, 96], [y - 3.1, y - 3.1], color=LINE, lw=.45)
+
+    panel(1, 15, "INPUTS / ASSUMPTIONS", PURPLE, "#FAF8FE")
+    rail.text(5, 7.3, wrap(assumption, 43), color=INK, fontsize=5.95, va="center", linespacing=1.12)
 
 
 def setup(number: int, title: str, subtitle: str, plot: bool = False):
-    fig, ax = plt.subplots(figsize=(14, 8.75), dpi=200)
+    fig, ax = plt.subplots(figsize=(12, 8), dpi=160)
     fig.patch.set_facecolor(PAPER)
     ax.set_facecolor(SURFACE)
-    fig.subplots_adjust(left=.065, right=.735, top=.775, bottom=.12)
-    fig.add_artist(FancyBboxPatch((.045, .095), .70, .695, transform=fig.transFigure, boxstyle="round,pad=.004,rounding_size=.008", facecolor=SURFACE, edgecolor=LINE, linewidth=.8, zorder=-10))
+    fig.subplots_adjust(left=.055, right=.745, top=.82, bottom=.10)
     domain, _, _ = FIGURE_SIDECARS[number]
     tier = "CORE" if number in CORE_FIGURES else "SUPPLEMENTAL"
     form = next(meta[2] for meta in FIGURE_META if meta[0] == number)
-    fig.text(.055, .957, f"FIGURE {number:02d}", color=BLUE, fontsize=8.4, fontweight="bold")
-    fig.text(.055, .905, title, color=INK, fontsize=22, fontweight="bold")
-    fig.text(.055, .865, subtitle, color=MUTED, fontsize=9.2)
-    _figure_chip(fig, .055, .812, .150, "DOMAIN", domain, BLUE)
-    _figure_chip(fig, .212, .812, .105, "TIER", tier, TEAL)
-    _figure_chip(fig, .324, .812, .225, "FORM", form.upper(), PURPLE)
-    _figure_chip(fig, .556, .812, .178, "EVIDENCE", "SYNTHETIC / REFERENCE", GOLD)
+    fig.text(.035, .968, f"FIGURE {number:02d}", color=BLUE, fontsize=7.2, fontweight="bold")
+    fig.text(.035, .925, title, color=INK, fontsize=18.5, fontweight="bold")
+    fig.text(.035, .889, subtitle, color=MUTED, fontsize=7.8)
+    _figure_chip(fig, .035, .846, .160, "DOMAIN", domain, BLUE)
+    _figure_chip(fig, .201, .846, .095, "TIER", tier, TEAL)
+    _figure_chip(fig, .302, .846, .170, "FORM", SHORT_FORMS[form], PURPLE)
+    _figure_chip(fig, .478, .846, .185, "EVIDENCE", "SYNTHETIC / REFERENCE", GOLD)
     _draw_sidecar(fig, number)
     legend = [(BLUE, "identity / evidence"), (GOLD, "decision / approval"), (TEAL, "authority / verification"), (RUST, "risk / failure")]
     x = .055
-    fig.text(x, .042, "LEGEND", color=INK, fontsize=6.3, fontweight="bold", va="center")
+    fig.text(x, .032, "LEGEND", color=INK, fontsize=5.8, fontweight="bold", va="center")
     x += .045
     for color, label in legend:
-        fig.add_artist(Circle((x, .042), .0035, transform=fig.transFigure, facecolor=color, edgecolor=color))
-        fig.text(x + .007, .042, label, color=MUTED, fontsize=6.1, va="center")
-        x += .112
-    fig.text(.965, .042, "Illustrative reference design · synthetic values · not production data", ha="right", color=MUTED, fontsize=6.1, va="center")
+        fig.add_artist(Circle((x, .032), .0032, transform=fig.transFigure, facecolor=color, edgecolor=color))
+        fig.text(x + .006, .032, label, color=MUTED, fontsize=5.5, va="center")
+        x += .105
+    fig.text(.975, .032, "Illustrative reference design · synthetic values · not production data", ha="right", color=MUTED, fontsize=5.4, va="center")
     if not plot:
         ax.set_xlim(0, 100)
-        ax.set_ylim(0, 100)
+        # Most diagrams occupy the 5–86 range. A tighter domain makes the
+        # technical surface read like a compact poster instead of floating in
+        # a large presentation-style canvas.
+        ax.set_ylim(0, 90)
         ax.axis("off")
     return fig, ax
 
 
 def save(fig, number: int) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUT / f"figure-{number:02d}.png", facecolor=PAPER, dpi=200)
+    fig.savefig(OUT / f"figure-{number:02d}.png", facecolor=PAPER, dpi=160)
     plt.close(fig)
 
 
 def box(ax, x, y, w, h, title, body="", color=SURFACE, edge=LINE, title_color=INK, lw=1.1):
     patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=.22,rounding_size=.8", facecolor=color, edgecolor=edge, linewidth=lw)
     ax.add_patch(patch)
+    if h >= 12:
+        ax.add_patch(Rectangle((x, y + h - 1.4), w, 1.4, facecolor=edge, edgecolor="none", alpha=.13))
     ax.text(x + w * .06, y + h * .66, title, color=title_color, fontsize=9.2, fontweight="bold", va="center")
     if body:
         ax.text(x + w * .06, y + h * .30, body, color=MUTED, fontsize=7, va="center", linespacing=1.35)
@@ -193,17 +235,27 @@ def arrow(ax, start, end, color=MUTED, lw=1.35, style="-|>", connectionstyle="ar
 
 def f01():
     fig, ax = setup(1, "Permission model comparison", "Same agent and action; different authority persistence")
-    dimensions = ["LIFETIME", "RESOURCE", "ACTION", "USES"]
-    columns = [(4, "STANDING ROLE", RUST, ["valid for 8 hours", "all enterprise accounts", "quote + contact + export", "unbounded repetitions"]),
-               (52, "PERMISSION LEASE", TEAL, ["valid for 90 seconds", "one account + quote", "one approved field delta", "one consumable use"])]
-    for x, title, color, rows in columns:
-        box(ax, x, 14, 44, 69, title, "", color=SURFACE, edge=color, title_color=color, lw=1.5)
+    dimensions = ["AUTHORITY", "LIFETIME", "RESOURCE", "ACTION", "USES", "TERMINAL"]
+    columns = [
+        (4, "STANDING ROLE", "Always-on delegation", RUST, RUST_LIGHT,
+         ["ROLE", "8H", "ALL", "3×", "∞", "LIVE"],
+         ["inherited from runtime", "valid for 8 hours", "all enterprise accounts", "quote + contact + export", "unbounded repetitions", "credential remains reusable"]),
+        (52, "PERMISSION LEASE", "Transaction-bound capability", TEAL, TEAL_LIGHT,
+         ["PDP", "90S", "1", "1Δ", "1", "DONE"],
+         ["issued after policy decision", "valid for 90 seconds", "one account + quote", "one approved field delta", "one consumable use", "verified or recovered"]),
+    ]
+    for x, title, strapline, color, fill, codes, rows in columns:
+        ax.add_patch(FancyBboxPatch((x, 10), 44, 73, boxstyle="round,pad=.22,rounding_size=.8", facecolor=SURFACE, edgecolor=color, linewidth=1.5))
+        ax.add_patch(Rectangle((x, 74), 44, 9, facecolor=fill, edgecolor="none", alpha=.42))
+        ax.text(x + 3, 79, title, color=color, fontsize=8.8, fontweight="bold", va="center")
+        ax.text(x + 3, 75.6, strapline, color=MUTED, fontsize=5.9, va="center")
         for i, row in enumerate(rows):
-            y = 50 - i * 11
-            ax.add_patch(Circle((x + 6, y), 2.2, facecolor=color if x > 50 else RUST_LIGHT, edgecolor=color, lw=1))
-            ax.text(x + 11, y + 2.1, dimensions[i], va="center", fontsize=5.8, color=MUTED, fontweight="bold")
-            ax.text(x + 11, y - 1.2, row, va="center", fontsize=7.6, color=INK)
-    ax.text(50, 5, "Authority should be created by the decision—not inherited from the runtime.", ha="center", fontsize=8, color=INK, fontweight="bold")
+            y = 66 - i * 9.2
+            ax.add_patch(FancyBboxPatch((x + 3, y - 2.5), 7, 5, boxstyle="round,pad=.05,rounding_size=1.8", facecolor=fill, edgecolor=color, linewidth=.8))
+            ax.text(x + 6.5, y, codes[i], ha="center", va="center", fontsize=5.2, color=color, fontweight="bold")
+            ax.text(x + 12, y + 1.5, dimensions[i], va="center", fontsize=5.5, color=MUTED, fontweight="bold")
+            ax.text(x + 12, y - 1.2, row, va="center", fontsize=6.8, color=INK)
+    ax.text(50, 4, "Authority should be created by the decision—not inherited from the runtime.", ha="center", fontsize=7.8, color=INK, fontweight="bold")
     save(fig, 1)
 
 
@@ -239,7 +291,7 @@ def f03():
 
 def f04():
     fig, ax = setup(4, "Authority narrowing path", "Illustrative reachable authority after each independent restriction", plot=True)
-    fig.subplots_adjust(left=.16, right=.735, top=.775, bottom=.14)
+    fig.subplots_adjust(left=.15, right=.745, top=.82, bottom=.12)
     stages = ["employee role", "agent action class", "one resource server", "one account", "one quote", "field + value bound", "90s + one use"]
     reachable = np.array([100, 52, 31, 12, 5.5, 1.6, .35])
     y = np.arange(len(stages))
@@ -355,7 +407,7 @@ def f10():
 
 def f11():
     fig, ax = setup(11, "TTL and scope exposure", "Declared sensitivity index; 60m × 100 records is normalized to 100", plot=True)
-    fig.subplots_adjust(left=.14,right=.735,top=.775,bottom=.15)
+    fig.subplots_adjust(left=.12,right=.745,top=.82,bottom=.12)
     ttls=np.array([30,60,90,300,900,3600])
     scopes=np.array([1,5,25,100])
     raw=np.outer(np.sqrt(scopes), (ttls/30)**.55)
@@ -470,12 +522,12 @@ def f17():
 def f18():
     fig, ax = setup(18, "Executor validation gates", "Every gate is mandatory; no synthetic pass-rate claim")
     gates=[
-        ("CRYPTO","alg allowlist · iss · kid\nsignature · nbf · exp",BLUE),
-        ("SENDER","proof signature · htm · htu\niat · jti · ath · nonce",BLUE),
-        ("AUTHORITY","aud · type · action\nresource · field · limits",GOLD),
-        ("FRESHNESS","policy · approval eligibility\ndigests · record version",GOLD),
-        ("ONE USE","atomic reserve jti\naction_id · idempotency",TEAL),
-        ("EFFECT","If-Match write · readback\npostcondition · receipt",TEAL),
+        ("CRYPTO","alg allowlist · iss\nkid · signature\nnbf · exp",BLUE),
+        ("SENDER","proof sig · htm · htu\niat · jti · ath\nnonce",BLUE),
+        ("AUTHORITY","aud · type · action\nresource · field\nlimits",GOLD),
+        ("FRESHNESS","policy · approval\ndigests · version\neligibility",GOLD),
+        ("ONE USE","atomic reserve jti\naction_id\nidempotency",TEAL),
+        ("EFFECT","If-Match write\nreadback · receipt\npostcondition",TEAL),
     ]
     for i,(title,body,color) in enumerate(gates):
         x=2+i*16
@@ -532,7 +584,7 @@ def f21():
 
 def f22():
     fig, ax = setup(22, "Failure-mode control matrix", "Declared ordinal coverage: 0 none · 1 support · 2 strong · 3 primary", plot=True)
-    fig.subplots_adjust(left=.17,right=.735,top=.775,bottom=.17)
+    fig.subplots_adjust(left=.15,right=.745,top=.82,bottom=.14)
     rows=["token theft","replay","over-broad scope","stale approval","concurrent edit","duplicate retry","wrong downstream state"]
     cols=["TTL","audience","DPoP","one use","policy","version","verify"]
     data=np.array([[2,1,3,1,1,0,0],[1,1,3,3,0,0,0],[1,3,0,1,3,0,0],[2,0,0,1,3,2,1],[0,0,0,0,1,3,2],[0,0,1,3,0,1,2],[0,1,0,0,1,1,3]])
@@ -622,7 +674,7 @@ def write_chart_map() -> None:
         tier = "Core" if number in CORE_FIGURES else "Supplemental"
         assumptions = FIGURE_ASSUMPTIONS.get(number, "Reference design; no observed production data.")
         lines.append(f"| {number} | {tier} | {title} | {form} | {takeaway} | {assumptions} |")
-    lines += ["", "Renderer: reproducible Matplotlib PNG, 2800×1750. Every plate includes a control-domain header, architectural highlights rail, control contract, assumptions, and semantic legend. Final QA surface: responsive GitHub Pages article and Medium import page.", ""]
+    lines += ["", "Renderer: reproducible Matplotlib PNG, 1920×1280. Every plate uses a compact deep-dive header, a figure-specific technical analysis rail, a control contract, declared assumptions, and a semantic legend. Final QA surface: responsive GitHub Pages article and Medium import page.", ""]
     MAP_PATH.write_text("\n".join(lines), encoding="utf-8")
 
 
