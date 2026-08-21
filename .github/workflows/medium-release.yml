@@ -44,6 +44,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           STORY_SLUG: ${{ inputs.slug }}
         run: |
+          gh label create medium-release --color 1D76DB --description "Medium release orchestration" --force
+          gh label create awaiting-signed-in-execution --color FBCA04 --description "Waiting for a user-initiated signed-in Medium step" --force
           release_path="medium-release-bundle/$STORY_SLUG/release.json"
           issue_body="medium-release-bundle/$STORY_SLUG/release.md"
           story_title="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["story"]["title"])' "$release_path")"
@@ -56,5 +58,5 @@ jobs:
           } >> "$issue_body"
           existing="$(gh issue list --state all --search "$issue_title in:title" --json title --limit 100 | jq --arg title "$issue_title" 'map(select(.title == $title)) | length')"
           if [[ "$existing" == "0" ]]; then
-            gh issue create --title "$issue_title" --body-file "$issue_body"
+            gh issue create --title "$issue_title" --body-file "$issue_body" --label medium-release --label awaiting-signed-in-execution
           fi

@@ -1,0 +1,75 @@
+{
+  "$schema": "../snapshot.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-21T15:36:30Z",
+  "captureMethod": "user_initiated_signed_in_medium_ui_read_only",
+  "profile": "@singhaditya21_89007",
+  "scopes": {
+    "currentMonth": {
+      "label": "August 2026",
+      "presentations": 34,
+      "views": 21,
+      "reads": 9
+    },
+    "audienceLifetime": {
+      "followers": 2,
+      "emailSubscribers": 2
+    },
+    "storyLifetime": [
+      {
+        "story": "A $2.4M Account Is Escalating",
+        "slug": "a-2-4m-account-is-escalating",
+        "presentations": 4,
+        "views": 0,
+        "reads": 0,
+        "readRatio": 0.0
+      },
+      {
+        "story": "AI Agent Identity Is Not Enough",
+        "slug": "ai-agent-identity-is-not-enough",
+        "presentations": 7,
+        "views": 5,
+        "reads": 0,
+        "readRatio": 0.0
+      },
+      {
+        "story": "What an Agent Actually Costs",
+        "slug": "what-an-agent-actually-costs",
+        "presentations": 7,
+        "views": 2,
+        "reads": 1,
+        "readRatio": 0.5
+      },
+      {
+        "story": "Enterprise Agent Control Tower",
+        "slug": "enterprise-agent-control-tower",
+        "presentations": 4,
+        "views": 8,
+        "reads": 4,
+        "readRatio": 0.5
+      },
+      {
+        "story": "Agentic CRM Reference Architecture",
+        "slug": "agentic-crm-reference-architecture",
+        "presentations": 8,
+        "views": 6,
+        "reads": 4,
+        "readRatio": 0.67
+      },
+      {
+        "story": "Traditional CRM vs Agentic AI",
+        "slug": "traditional-crm-agentic-ai",
+        "presentations": 4,
+        "views": 6,
+        "reads": 5,
+        "readRatio": 0.83
+      }
+    ]
+  },
+  "notes": [
+    "Current-month account totals and lifetime story totals have different scopes and must not be summed or reconciled.",
+    "Medium displays rounded read ratios; the captured ratios preserve the displayed values.",
+    "The GitHub-only permission-lease story was not yet present in Medium story stats at capture time.",
+    "All six Medium stories showed zero clappers, highlighters, responders, and reposters at capture time."
+  ]
+}

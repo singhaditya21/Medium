@@ -1,0 +1,12 @@
+{
+  "$schema": "./queue.schema.json",
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-21T00:00:00Z",
+  "maxBatchSize": 5,
+  "policy": {
+    "requiresExactActionTimeConfirmation": true,
+    "allowUnattendedPosting": false,
+    "allowBulkEngagement": false
+  },
+  "candidates": []
+}
