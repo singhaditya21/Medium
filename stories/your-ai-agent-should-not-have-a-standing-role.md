@@ -1,7 +1,7 @@
 ---
 title: "Your AI Agent Should Not Have a Standing Role"
 subtitle: "How just-in-time permission leases reduce the blast radius of compromised agents."
-description: "A technical production blueprint for replacing standing AI-agent privileges with transaction-bound, short-lived, sender-constrained, and verifiable permission leases."
+description: "Replace standing AI-agent authority with transaction-bound permission leases using proof-bound tokens, one-use execution, verification, and recovery."
 slug: "your-ai-agent-should-not-have-a-standing-role"
 canonical: "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/"
 published_at: "2026-08-21T13:43:02.000Z"
@@ -11,25 +11,25 @@ hero_image: "assets/images/your-ai-agent-should-not-have-a-standing-role/figure-
 hero_alt: "Comparison between a broad standing AI-agent role and a narrow just-in-time permission lease."
 ---
 
-This story was written with AI writing and visualization assistance. All organizations, actions, operating metrics, loss values, simulations, and service-level results are synthetic; the architecture is a reference design, not a claim about a deployed production system.
-
 Imagine a sales agent that can read every enterprise account, change quotes, edit contact records, export notes, and send customer messages. Its OAuth token lasts eight hours because that is how the human-facing integration was designed. At 09:12, an attacker succeeds with an indirect prompt injection hidden in a support attachment. The attacker did not compromise the identity provider. It did not need to. It compromised a process that already possessed durable authority.
+
+This story was written with AI writing and visualization assistance. All organizations, actions, operating metrics, loss values, simulations, and service-level results are synthetic; the architecture is a reference design, not a claim about a deployed production system.
 
 The usual response is to improve the model’s instructions, add a classifier, shorten the access token, or place the agent in a smaller role. Those controls are useful, but they preserve the dangerous premise: the runtime has authority while no approved business action is in progress.
 
-The stronger design is to give the agent no reusable business permission at all. Let it authenticate as a workload. Let it gather evidence and propose an action. Then, only after policy and any required human approval agree on the exact mutation, mint a **permission lease** that is narrow in resource, action, value, audience, time, actor, proof key, precondition, and number of uses. Consume it at the enforcement point, verify the resulting state, and make it terminal.
+The stronger design is to give the agent no standing authority for consequential actions. Let it authenticate as a workload. Let it gather evidence through explicitly bounded discovery access and propose an action. Then, only after policy and any required human approval agree on the exact mutation, mint a **permission lease** that is narrow in resource, action, value, audience, time, actor, proof key, precondition, and number of uses. High-risk reads, exports, messages, and mutations should cross the same transaction-aware boundary. Consume the lease at the enforcement point, verify the resulting state, and make it terminal.
+
+This article provides a lease schema, issuance sequence, enforcement algorithm, failure model, operational objectives, and phased migration plan. The core visual path is Figures 1, 3, 5–7, 11, 15, 18, 20–23, and 25; sections labeled **Supplemental** provide implementation depth and can be skipped on a first read.
 
 > The agent should not carry tomorrow’s authority into today’s compromise.
 
 ![Side-by-side comparison of a standing role and a permission lease.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-01.png "Figure 1. A role preserves broad authority between decisions; a permission lease exists for one bounded action. AI-assisted design visualization; synthetic values; not production data.")
 
-This is not an argument against identity. An agent still needs a cryptographically verifiable workload identity. It is an argument against treating identity, authentication, and business authorization as the same thing. A workload identity answers **which process is calling**. A permission lease answers **what this process may do now, to which object, within which limits, because of which decision**.
+This is not an argument against identity or every form of baseline access. An agent still needs a cryptographically verifiable workload identity, and some systems may permit narrowly bounded discovery access. It is an argument against treating identity, authentication, and consequential business authorization as the same thing. A workload identity answers **which process is calling**. A permission lease answers **what this process may do now, to which object, within which limits, because of which decision**.
 
 ## A standing role is pre-positioned blast radius
 
 Suppose the compromised process holds `crm.enterprise.write`. That label may resolve to dozens of endpoints and hundreds of business mutations. An attacker can search horizontally across accounts, vertically across related resources, and repeatedly across the token lifetime. The role was probably granted for integration convenience, not because every action is simultaneously necessary.
-
-![Attack graph showing one compromised standing token reaching multiple CRM resource families.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-02.png "Figure 2. A single reusable credential crosses several resource families because its role describes an integration, not a transaction. AI-assisted design visualization; illustrative reference design; not a production system.")
 
 Prompt injection is only one entry point. The same authority can be exercised after runtime exploitation, malicious tool output, poisoned memory, dependency compromise, operator error, leaked logs, or a confused-deputy flow. The security property should therefore survive model failure. “The model will refuse” is not a control boundary when the downstream API will accept the request.
 
@@ -46,8 +46,6 @@ The architectural question is not “Which role should this agent have?” It is
 The agent begins with workload identity and read access appropriate to evidence gathering. It sends a proposed business action—not an arbitrary API call—to a policy enforcement point. The request is normalized, enriched with current context, and evaluated by a policy decision point. High-risk actions are presented to an eligible human as exact, structured deltas. An issuer then creates authority from the policy result and approval, while the target service independently enforces the lease.
 
 The narrowing path should be explicit. A human might be entitled to edit all enterprise accounts. The agent is allowed to propose only a class of quote changes. The resource indicator selects the CRM API. Rich authorization selects one account and one quote. Constraints select one field transition. The lease lifetime limits time. A consumption record limits repetitions.
-
-![Progressive reduction of reachable authority from employee role to a 90-second one-use lease.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-04.png "Figure 4. Each independent restriction removes unnecessary resources, actions, values, time, or repetitions. AI-assisted visualization; synthetic values; not production data.")
 
 A useful lease can be modeled as the tuple below:
 
@@ -87,9 +85,9 @@ Here is an illustrative signed payload. Names under `authorization_details`, `ev
 }
 ```
 
-The lifecycle is deliberately asymmetric. Issuance can move to consumed, expired, or revoked; it cannot silently return to active. A failed attempt does not automatically make the same lease reusable. Whether a safe retry receives a replacement lease depends on the idempotency record and observed downstream state.
+The lifecycle is deliberately asymmetric. An issued lease can expire, be revoked, or be atomically reserved for execution. A reservation then becomes effect-observed, failed-before-effect, or ambiguous. An observed effect can be verified; an ambiguous outcome must be reconciled and may require recovery. None of those states silently returns the lease to active. Whether a safe retry returns a recorded result or receives replacement authority depends on the durable idempotency record and independently observed downstream state.
 
-![State machine for a permission lease from request through terminal states.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-06.png "Figure 6. Requested authority becomes evaluated, approved, issued, consumed, verified, expired, or revoked—never silently reusable. AI-assisted design visualization; illustrative reference design; not a production system.")
+![State machine for a permission lease from request through reservation, effect observation, verification, ambiguity, and recovery.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-06.png "Figure 6. Issued authority becomes expired, revoked, reserved, failed-before-effect, ambiguous, effect-observed, verified, or recovered—never silently reusable. AI-assisted design visualization; illustrative reference design; not a production system.")
 
 ## Build from standards, not from a magic JWT
 
@@ -100,6 +98,8 @@ The pattern can be assembled from established identity and authorization mechani
 [OAuth 2.0 Token Exchange, RFC 8693](https://datatracker.ietf.org/doc/html/rfc8693), supplies a vocabulary for exchanging a subject token and, when appropriate, an actor token for a different security token. Its delegation semantics and `act` claim can preserve who is acting for whom. [OAuth Resource Indicators, RFC 8707](https://datatracker.ietf.org/doc/html/rfc8707), let a client identify the intended protected resource. [Rich Authorization Requests, RFC 9396](https://datatracker.ietf.org/doc/html/rfc9396), provide structured `authorization_details` when a flat scope string cannot express the transaction.
 
 ![Sequence diagram for policy evaluation, approval, token exchange, and lease presentation.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-07.png "Figure 7. The executor receives transaction authority only after current policy and approval checks succeed. AI-assisted design visualization; illustrative reference design; not a production system.")
+
+### Supplemental: protocol composition details
 
 An illustrative token exchange request could look like this:
 
@@ -118,11 +118,9 @@ resource=https%3A%2F%2Fcrm-api.example&
 authorization_details=%5B%7B%22type%22%3A%22crm_quote_change%22%2C...%7D%5D
 ```
 
-The authorization server must not merely copy requested details into a token. It should verify the subject and actor relationship, authorize the requested resource, re-evaluate policy, cap every constraint, bind the proof key, and set a lifetime derived from risk. The response may be an access token, but its acceptance at the CRM must depend on the full contract.
+The authorization server must not merely copy requested details into a token. It should verify the subject and actor relationship, authorize the requested resource, re-evaluate policy, cap every constraint, bind the proof key, and set a lifetime derived from risk. The response may be an access token, but its acceptance at the CRM must depend on the full contract. Combining Token Exchange, Resource Indicators, Rich Authorization Requests, sender constraint, custom approval claims, and one-use state requires a documented deployment profile; the RFCs do not collectively define a turnkey “permission lease” protocol.
 
-The [AuthZEN Authorization API 1.0](https://openid.net/specs/authorization-api-1_0.html) offers a standard request/response shape for asking an external authorization service about subject, action, resource, and context. The policy decision point can return a decision plus application obligations that the enforcement point must implement.
-
-![Policy enforcement point and policy decision point boundary with returned obligations.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-08.png "Figure 8. Externalized authorization keeps policy outside the model and returns limits the enforcement point must enforce. AI-assisted design visualization; illustrative reference design; not a production system.")
+The [AuthZEN Authorization API 1.0](https://openid.net/specs/authorization-api-1_0.html) offers a standard request/response shape for asking an external authorization service about subject, action, resource, and context. The policy decision point can return a decision plus application obligations that the enforcement point must implement. The obligation names and semantics below are application-specific and require their own schema, versioning, and fail-closed handling.
 
 ```json
 {
@@ -164,8 +162,6 @@ The [AuthZEN Authorization API 1.0](https://openid.net/specs/authorization-api-1
 }
 ```
 
-![Mapping from a business field delta to structured rich authorization details.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-09.png "Figure 9. Business intent becomes structured authorization details instead of an ambiguous integration scope. AI-assisted design visualization; synthetic example; not production data.")
-
 For sender constraint, [DPoP, RFC 9449](https://datatracker.ietf.org/doc/html/rfc9449), binds an access token to a client-held asymmetric key and proves possession on requests. Mutual TLS is another established option. The [OAuth 2.0 Security Best Current Practice, RFC 9700](https://datatracker.ietf.org/doc/html/rfc9700), recommends sender-constrained access tokens when feasible. Sender constraint means a copied token is insufficient without the corresponding private key; it does not make an authorized but malicious process safe.
 
 Two transaction-token documents are relevant but must be described accurately. The [IETF OAuth working-group transaction token draft](https://datatracker.ietf.org/doc/draft-ietf-oauth-transaction-tokens/) is ongoing standards work. The separate [Transaction Tokens for Agents draft](https://datatracker.ietf.org/doc/html/draft-araut-oauth-transaction-tokens-for-agents) is an individual Internet-Draft with no formal IETF standing. Both are informative for design discussion; neither should be represented as a final standard.
@@ -184,13 +180,28 @@ P = downstream propagation multiplier
 C = combined effectiveness of independent controls, bounded [0, 1]
 ```
 
-![Formula decomposition for the modeled blast radius of a compromised credential.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-10.png "Figure 10. Reachable value, scope, uses, propagation, and independent controls jointly shape modeled exposure. AI-assisted visualization; synthetic model; not production data.")
-
 This is not an actuarial truth. The factors are correlated, `U` may be capped by API rate and business logic, and control effectiveness is not directly observable. Use the model to reveal design assumptions and compare architectures—not to print a precise loss forecast.
 
-The heatmap below varies only lifetime and resource breadth while keeping other synthetic assumptions fixed. The interaction matters: a broad token with a long lifetime creates more search time, more reachable objects, and more repeatable mutations. Shortening lifetime from an hour to five minutes helps; narrowing from 100 records to one helps; doing both helps substantially more.
+The quantitative figures are reproducible thought experiments, not breach measurements. Their declared parameter manifest is:
 
-![Heatmap of synthetic reachable loss by credential lifetime and resource scope.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-11.png "Figure 11. Modeled exposure rises when lifetime and resource breadth expand together. AI-assisted visualization; synthetic values; not production data.")
+```text
+Figure 11  exposure index = sqrt(record_count) × (TTL / 30s)^0.55;
+           normalized so 100 records at 60 minutes = 100
+Figure 12  Poisson opportunity rates λ = 1/7200s, 1/1800s, 1/450s
+Figure 13  reachable-call indexes are fixed scenario inputs, not observations
+Figure 14  20,000 seeded draws per model; lognormal (μ, σ):
+           standing (5.05, .82), scoped (4.15, .62), leased (3.15, .48)
+```
+
+The complete generator and seed are available in the [reproducible figure source](https://github.com/singhaditya21/Medium/blob/main/scripts/generate_permission_lease_figures.py). Change the inputs and inspect sensitivity before using any model in an architecture decision.
+
+### Core sensitivity model
+
+The heatmap below varies only lifetime and resource breadth while keeping the declared synthetic assumptions fixed. The interaction matters: a broad token with a long lifetime creates more search time, more reachable objects, and more repeatable mutations. Shortening lifetime from an hour to five minutes helps; narrowing from 100 records to one helps; doing both helps substantially more.
+
+![Heatmap of a normalized synthetic exposure index by credential lifetime and resource scope.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-11.png "Figure 11. The declared exposure index rises when lifetime and resource breadth expand together; 100 is the broadest, longest-lived scenario shown. AI-assisted visualization; synthetic sensitivity model; not breach data.")
+
+### Supplemental: overlap, replay, and loss-tail models
 
 Lifetime also changes the chance that a compromise overlaps valid authority. If compromise opportunities arrive as a Poisson process with rate `λ`, a simple illustrative overlap probability over lifetime `T` is:
 
@@ -200,15 +211,9 @@ P(overlap during valid authority) = 1 − exp(−λT)
 
 The model is intentionally crude. Real attacks are clustered, adversaries wait for valuable moments, and compromise probability changes with workload behavior. The useful result is directional: when no action is pending, `T = 0` for business authority and the overlap opportunity for that authority disappears.
 
-![Curves showing synthetic compromise-overlap probability across token lifetimes.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-12.png "Figure 12. Short validity windows reduce the modeled chance that a compromise coincides with usable business authority. AI-assisted visualization; synthetic values; not production data.")
-
 Replay needs its own dimensions. Audience binding rejects a CRM token at billing. Resource binding rejects it against another quote. Sender constraint rejects presentation without the agent’s proof key. One-use consumption rejects a second accepted request. Idempotency prevents an ambiguous retry from creating a second business effect. Each control closes a different replay path.
 
-![Grouped bars comparing replay reach for bearer, audience-bound, proof-bound, and one-use credentials.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-13.png "Figure 13. Audience binding, sender constraint, and one-use consumption progressively reduce replay reach. AI-assisted visualization; synthetic values; not production data.")
-
-The tail matters more than the average. The following Monte Carlo result uses 20,000 synthetic compromises per permission model. The distributions and parameters are illustrative; they are not empirical breach data. The standing role produces a long loss tail because one compromise can reach many resources repeatedly. A scoped but long-lived token improves the median but retains reuse. The one-use lease compresses both scope and repetitions.
-
-![Synthetic distribution of modeled losses for standing roles, scoped tokens, and one-use leases.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-14.png "Figure 14. Transaction-bound authority compresses the modeled loss tail in a synthetic compromise simulation. AI-assisted visualization; synthetic values; not production data.")
+The tail matters more than the average. Supplemental Figure 14 uses 20,000 synthetic compromises per permission model. The distributions and parameters are illustrative; they are not empirical breach data. The standing role produces a long loss tail because one compromise can reach many resources repeatedly. A scoped but long-lived token improves the median but retains reuse. The one-use lease compresses both scope and repetitions.
 
 ## Bind the lease to where, what, why, and who
 
@@ -218,7 +223,7 @@ An API should reject a validly signed token that was minted for another audience
 
 The lease issuer should construct claims from an authorization decision, not from free-form model output. The policy must deny unknown action types, unknown resources, missing values, unrecognized schema versions, stale evidence, ineligible approvers, and constraints that exceed server-side limits. Default denial is especially important during schema evolution: a new field must not inherit permission because an old policy ignored it.
 
-![Decision tree for evidence, approval, value-limit, and lease-issuance checks.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-16.png "Figure 16. Consequential mutations receive a lease only when action eligibility, evidence, approval, and server-side limits agree. AI-assisted design visualization; illustrative reference design; not a production system.")
+### Supplemental: policy and digest binding
 
 One possible policy in [Open Policy Agent’s Rego language](https://www.openpolicyagent.org/docs/policy-language) is shown below. Production policy would also verify organization boundaries, approver separation, evidence source requirements, incident state, data classification, and emergency modes.
 
@@ -256,15 +261,13 @@ obligations := {
 
 Approval is not a boolean floating beside the action. Canonicalize the proposal, hash it, hash the evidence manifest, and have the approval bind both digests plus the applicable limits and policy version. At issuance and execution, recompute the digests. If the agent changes 8 percent to 12 percent after approval, the proposal hash no longer matches. If a new quote version appears, the precondition no longer matches.
 
-![Cryptographic digest chain binding proposal and evidence to approval and lease.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-17.png "Figure 17. Digest binding prevents a proposal or evidence set from being silently changed after approval. AI-assisted design visualization; synthetic example; not production data.")
-
 Canonicalization itself must be specified. Different JSON key order, number representation, Unicode normalization, or omitted defaults cannot be allowed to create accidental mismatches—or worse, inconsistent interpretations. Use a defined canonical representation and sign or hash the exact bytes that the executor will interpret.
 
 ## Enforce at the last responsible moment
 
 The issuer is not the final authority. The protected API is. Its policy enforcement point must validate every security and business condition before changing state. A library that checks only signature and expiry is insufficient.
 
-![Cumulative validation gates before a protected business mutation.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-18.png "Figure 18. Signature, time, audience, proof, consumption, policy, and precondition failures stop execution before mutation. AI-assisted visualization; synthetic values; not production data.")
+![Mandatory cryptographic, sender, authority, freshness, consumption, and effect validation gates before a protected business mutation.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-18.png "Figure 18. Cryptographic, sender, authority, freshness, consumption, and effect gates are independently mandatory; a failure stops or reconciles execution. AI-assisted design visualization; illustrative reference design; not a production system.")
 
 An executor should perform at least these checks: trusted algorithm and issuer; exact audience; not-before and expiry with bounded clock skew; sender proof and HTTP request binding; unique lease identifier; one-use reservation; recognized authorization schema; exact method, action, object, and delta; current policy; current resource version; approval and evidence digests; business invariants; idempotency state; and postcondition verification.
 
@@ -277,7 +280,15 @@ def execute_quote_change(http_request, lease_token, dpop_proof):
     )
     require_time_window(lease["nbf"], lease["exp"], max_ttl=90, skew=5)
     require_exact_audience(lease["aud"], CRM_API_AUDIENCE)
-    verify_dpop(dpop_proof, http_request, lease["cnf"]["jkt"])
+    verify_dpop(
+        proof=dpop_proof,
+        request=http_request,
+        access_token=lease_token,
+        expected_jkt=lease["cnf"]["jkt"],
+        replay_store=dpop_replay_store,
+        max_age_seconds=5,
+        required_nonce=http_request.context.dpop_nonce,
+    )
 
     authz = parse_known_authorization_details(lease, "crm_quote_change", version=1)
     require_exact_action(authz, "discount.apply")
@@ -291,10 +302,16 @@ def execute_quote_change(http_request, lease_token, dpop_proof):
         action_id=http_request.headers["Idempotency-Key"],
     )
 
-    current = crm.read_quote(authz.quote_id)
-    require_equal(current.version, authz.expected_version)
-    require_policy_still_allows(lease, authz, current)
-    require_bound_digests(lease, authz)
+    # Every exit after reservation must persist an explicit terminal or
+    # reconcilable state. A reserved lease is never silently reusable.
+    try:
+        current = crm.read_quote(authz.quote_id)
+        require_equal(current.version, authz.expected_version)
+        require_policy_still_allows(lease, authz, current)
+        require_bound_digests(lease, authz)
+    except Exception as error:
+        consumption_store.mark_failed_before_effect(reservation, error)
+        raise
 
     try:
         result = crm.conditional_update(
@@ -303,19 +320,30 @@ def execute_quote_change(http_request, lease_token, dpop_proof):
             patch={authz.field: authz.to_value},
             idempotency_key=reservation.action_id,
         )
-        observed = crm.read_quote(authz.quote_id, consistency="strong")
-        require_equal(observed.discount_pct, authz.to_value)
-        return receipts.commit_success(lease, authz, result, observed)
     except Exception as error:
-        observed = crm.read_quote(authz.quote_id, consistency="strong")
-        return reconcile_or_recover(reservation, lease, authz, observed, error)
+        consumption_store.mark_ambiguous(reservation, error)
+        return reconcile_or_recover(reservation, lease, authz, error)
+
+    consumption_store.mark_effect_observed(reservation, result.state_hash)
+    observed = crm.read_quote(authz.quote_id, consistency="strong")
+    verification = verify_exact_postcondition(observed, authz)
+    if not verification.matched:
+        return freeze_and_recover(reservation, lease, authz, observed, verification)
+
+    receipt = receipts.commit_success(lease, authz, result, observed)
+    consumption_store.mark_verified(reservation, receipt.id)
+    return receipt
 ```
+
+In this pseudocode, `verify_dpop` is a protocol verifier, not a key comparison. It validates the proof signature, `htm`, `htu`, `iat`, proof `jti` replay state, access-token hash `ath`, and the server nonce when one is required. The consumption ledger separately enforces the lease `jti`; the two replay domains must not be conflated.
 
 The consumption reservation must be atomic and durable. A local in-memory cache is not sufficient when executors scale horizontally. The store should treat `jti` plus action identity as a state machine: unseen, reserved, effect-observed, verified, failed-before-effect, ambiguous, or recovered. An outage should fail closed for new high-risk mutations while still allowing reconciliation of already-reserved actions.
 
+### Supplemental: concurrent-state failure
+
 Time bounds do not solve concurrent state. An approval may be 20 seconds old and still stale because a human edited the quote one second ago. Bind an expected version or entity tag and use conditional mutation. A version mismatch is not a retryable transport error; it invalidates the decision context.
 
-![Timeline showing a human edit invalidating an otherwise valid permission lease.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-19.png "Figure 19. Optimistic concurrency prevents a valid lease from overwriting a newer human change. AI-assisted design visualization; synthetic example; not production data.")
+### Core retry protocol
 
 Exactly-once business execution is usually unattainable across a network boundary. Design for **at-most-one intended effect plus deterministic reconciliation**. Give the action a stable idempotency key before the first attempt. Have the downstream system store the key with the mutation. If the caller loses the response, a retry returns the previous result or enters reconciliation rather than applying the delta again.
 
@@ -377,13 +405,13 @@ Recovery must be designed before autonomy. Some effects can be reversed with a c
 
 A permission system that adds seconds to every action will be bypassed. Build an explicit latency budget. The illustrative path below allocates 307 milliseconds at p95 across normalization, policy, approval lookup, token exchange, proof signing, CRM mutation, verification, and receipt persistence, under a 350-millisecond control-path objective. The values are synthetic and exclude human review time.
 
-![Stacked bar showing a synthetic p95 latency budget for the lease execution path.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-23.png "Figure 23. Explicit service budgets make a permission-lease control path measurable and optimizable. AI-assisted visualization; synthetic values; not production data.")
+![Bars showing synthetic p95 latency by control-path stage with a cumulative line and 350-millisecond objective.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-23.png "Figure 23. Direct stage labels and a cumulative path show where the synthetic 307-millisecond p95 budget is spent against a 350-millisecond objective. AI-assisted visualization; synthetic values; not production data.")
 
 Precompute what is safe to precompute: compiled policy bundles, approver eligibility, schema validators, resource metadata, and workload trust chains. Do not precompute the authorization decision when it depends on mutable evidence, object version, approval, or action value. Cache inputs with clear freshness rules; never turn a cache into a hidden standing grant.
 
-Availability is only half of the operating picture. A control plane can be available while issuing overly broad leases, accepting replay, or missing downstream divergence. Track issuance and enforcement semantics together.
+Availability is only half of the operating picture. A control plane can be available while issuing overly broad leases, accepting replay, or missing downstream divergence. Track issuance and enforcement semantics together. A metric becomes an operating objective only when it has a defined measurement window, target, actual result, and pass-or-breach state. Figure 24 uses synthetic 30-day values to make that contract explicit; it is not a benchmark for another system.
 
-![Synthetic scorecard of availability, exchange latency, denials, expiries, blocked replays, and verification mismatch.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-24.png "Figure 24. Security and reliability need joint SLOs for issuance, denial, expiry, replay, and verification behavior. AI-assisted visualization; synthetic values; not production data.")
+### Supplemental: objective-versus-actual scorecard
 
 Useful signals include issued leases by action class; requested versus granted TTL and scope; policy allow, deny, and error rates; approval age at execution; unused expiry rate; DPoP failure; audience mismatch; duplicate `jti`; idempotent replay; precondition conflict; verification mismatch; recovery time; and break-glass use. Alert on distribution shifts, not only hard failures. A sudden fall in denials may indicate a broken policy as readily as a sudden rise.
 
@@ -433,6 +461,44 @@ Ask one question during architecture review: **If the agent is fully compromised
 If the answer is “an eight-hour token that can edit enterprise CRM records,” the blast radius was pre-positioned. If the answer is “workload identity, proposal rights, and no current mutation authority,” the attacker must also defeat a current policy decision, any required human approval, transaction binding, the proof key, the resource server’s preconditions, one-use consumption, and verification.
 
 That is the point of just-in-time permission leases. They do not assume the model will always reason correctly. They make the surrounding system safe enough to reject, contain, observe, and recover when it does not.
+
+Start with one consequential mutation. Run its semantic action mapping and policy decision in shadow mode, then remove the standing permission only after wrong-audience, wrong-resource, expired-lease, DPoP replay, duplicate-use, stale-version, changed-proposal, ambiguous-outcome, and recovery tests pass. The companion essays [AI Agent Identity Is Not Enough](https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/), [A $2.4M Account Is Escalating. Should the AI Agent Act?](https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/), and [The Enterprise Agent Control Tower](https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/) place the lease inside the broader identity, approval, verification, and operating architecture.
+
+## Technical figure appendix
+
+The main argument is complete above. The figures below retain their original stable numbers so captions, source code, review notes, and future revisions do not drift. They provide additional threat, protocol, sensitivity, concurrency, and operations detail for implementation teams.
+
+### Threat and authority scope
+
+![Attack graph showing one compromised standing token reaching multiple CRM resource families.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-02.png "Figure 2. A single reusable credential crosses several resource families because its role describes an integration, not a transaction. AI-assisted design visualization; illustrative reference design; not a production system.")
+
+![Progressive reduction of reachable authority from employee role to a 90-second one-use lease.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-04.png "Figure 4. Each independent restriction removes unused resources, actions, values, time, or repetitions. AI-assisted visualization; synthetic sensitivity index; not production data.")
+
+### Protocol and policy detail
+
+![Policy enforcement point and policy decision point boundary with returned obligations.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-08.png "Figure 8. Externalized authorization keeps policy outside the model and returns application-specific limits the enforcement point must enforce. AI-assisted design visualization; illustrative reference design; not a production system.")
+
+![Mapping from a business field delta to structured rich authorization details.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-09.png "Figure 9. Business intent becomes structured authorization details instead of an ambiguous integration scope. AI-assisted design visualization; synthetic example; not production data.")
+
+![Decision tree for evidence, approval, value-limit, and lease-issuance checks.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-16.png "Figure 16. Consequential mutations receive a lease only when action eligibility, evidence, approval, and server-side limits agree. AI-assisted design visualization; illustrative reference design; not a production system.")
+
+![Cryptographic digest chain binding proposal and evidence to approval and lease.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-17.png "Figure 17. Digest binding prevents a proposal or evidence set from being silently changed after approval. AI-assisted design visualization; synthetic example; not production data.")
+
+### Quantitative sensitivity detail
+
+![Formula decomposition for the modeled blast radius of a compromised credential.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-10.png "Figure 10. Reachable value, scope, uses, propagation, and explicitly assumed containment shape an illustrative exposure bound. AI-assisted visualization; synthetic model; not breach data.")
+
+![Curves showing synthetic compromise-overlap probability across token lifetimes.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-12.png "Figure 12. Short validity windows reduce the modeled chance that a Poisson compromise opportunity coincides with usable business authority. AI-assisted visualization; declared synthetic rates; not breach data.")
+
+![Grouped bars comparing replay reach for bearer, audience-bound, proof-bound, and one-use credentials.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-13.png "Figure 13. Audience binding, sender constraint, and one-use consumption progressively reduce a declared replay-reach index. AI-assisted visualization; fixed synthetic scenario inputs; not observed calls.")
+
+![Synthetic distribution of modeled losses for standing roles, scoped tokens, and one-use leases.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-14.png "Figure 14. Transaction-bound authority compresses the modeled loss tail under the declared seeded distributions. AI-assisted visualization; synthetic sensitivity model; not breach data.")
+
+### Concurrency and operations detail
+
+![Timeline showing a human edit invalidating an otherwise valid permission lease.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-19.png "Figure 19. Optimistic concurrency prevents a valid lease from overwriting a newer human change and records the no-effect outcome. AI-assisted design visualization; synthetic example; not production data.")
+
+![Synthetic scorecard comparing targets with actual availability, latency, error, expiry, replay-blocking, and verification results.](assets/images/your-ai-agent-should-not-have-a-standing-role/figure-24.png "Figure 24. An operating scorecard needs a target, an actual value, and a visible pass or breach state for every objective. AI-assisted visualization; synthetic values; not production data.")
 
 ## Primary technical references
 
