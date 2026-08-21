@@ -18,19 +18,21 @@ SLUG = "your-ai-agent-should-not-have-a-standing-role"
 OUT = ROOT / "assets" / "images" / SLUG
 MAP_PATH = ROOT / "stories" / f"{SLUG}-figure-map.md"
 
-PAPER = "#F7F4EC"
-SURFACE = "#FFFDF8"
-INK = "#102526"
-MUTED = "#667875"
-LINE = "#D8D4C8"
-TEAL = "#0B6B65"
-TEAL_LIGHT = "#9FD2CB"
-BLUE = "#2C6E9B"
-BLUE_LIGHT = "#A9C9DD"
-GOLD = "#B4842B"
-GOLD_LIGHT = "#E8C77A"
-RUST = "#B95C43"
-RUST_LIGHT = "#E6B3A5"
+PAPER = "#F7F9FC"
+SURFACE = "#FFFFFF"
+INK = "#0B1736"
+MUTED = "#5D6B82"
+LINE = "#CBD5E1"
+TEAL = "#08766E"
+TEAL_LIGHT = "#B9E3DE"
+BLUE = "#174EA6"
+BLUE_LIGHT = "#C7DBF5"
+GOLD = "#A96F13"
+GOLD_LIGHT = "#F3D89C"
+RUST = "#B44B3A"
+RUST_LIGHT = "#F2C8BE"
+PURPLE = "#6941C6"
+PURPLE_LIGHT = "#DDD0F4"
 WHITE = "#FFFFFF"
 
 
@@ -75,20 +77,94 @@ FIGURE_ASSUMPTIONS = {
     24: "Synthetic 30-day targets and actuals; one deliberate verification-mismatch breach.",
 }
 
+FIGURE_SIDECARS = {
+    1: ("AUTHORITY MODEL", ["Workload identity remains stable while business authority becomes ephemeral.", "The lease binds one resource, one approved delta, and one proof key.", "Consumption makes the authorization terminal instead of reusable."], [("INPUT", "approved action delta"), ("LEASE", "90 s · one resource · one use"), ("EXIT", "verified or recovered")]),
+    2: ("THREAT GRAPH", ["Prompt, tool, and runtime compromise converge on the same reusable credential.", "Broad audience and scope fan one foothold into multiple mutation families.", "A lease-aware PEP breaks the path before the business API."], [("FOOTHOLD", "compromised agent runtime"), ("AMPLIFIER", "8 h standing write token"), ("BREAKPOINT", "audience + resource + one use")]),
+    3: ("CONTROL PLANE", ["Evidence, policy, risk, and approval are separate decision inputs.", "The issuer signs governed claims; it does not execute the mutation.", "The PEP reserves authority before effect and verifies state afterward."], [("DECIDE", "evidence → policy → approval"), ("AUTHORIZE", "bound lease + atomic ledger"), ("EXECUTE", "conditional write + recovery")]),
+    4: ("SCOPE ATTENUATION", ["Independent restrictions remove unused authority dimension by dimension.", "Time and use-count constraints compound resource and value narrowing.", "The index is illustrative and exposes assumptions rather than hiding them."], [("START", "standing role = 100%"), ("FILTERS", "resource · value · time · uses"), ("END", "modeled surface = 0.35%")]),
+    5: ("TOKEN CONTRACT", ["Subject and actor remain distinct throughout the authorization chain.", "Business intent is encoded as exact action, resource, limits, and precondition.", "Audience, proof key, expiry, and use count constrain presentation."], [("IDENTITY", "iss · sub · act"), ("AUTHORITY", "authorization_details"), ("REPLAY", "aud · cnf · jti · uses")]),
+    6: ("STATE MACHINE", ["Reservation creates a durable point of no silent reuse.", "Ambiguous effect is an explicit state that requires reconciliation.", "Verified and recovered are terminal; neither reactivates authority."], [("ACTIVE", "issued → reserved"), ("UNCERTAIN", "ambiguous → reconcile"), ("TERMINAL", "verified · recovered · failed")]),
+    7: ("ISSUANCE TRACE", ["The principal approves a digest, not a vague natural-language request.", "The agent supplies its proof-key binding before authority is minted.", "The executor receives a short-lived lease only after policy obligations hold."], [("SUBJECT", "human principal"), ("ACTOR", "agent workload"), ("ARTIFACT", "90 s sender-bound lease")]),
+    8: ("POLICY BOUNDARY", ["The PDP decides; the PEP normalizes, asks, and enforces.", "The PIP supplies current roles, limits, resource state, and risk context.", "Obligations carry enforceable limits rather than advisory prose."], [("REQUEST", "subject · action · resource"), ("DECISION", "allow / deny + reason"), ("OBLIGATION", "TTL · cap · use · verify")]),
+    9: ("RAR MAPPING", ["Canonical business intent is translated into structured authorization details.", "Exact locations and actions replace a coarse CRM write scope.", "Value limits and expected version become machine-enforced constraints."], [("SOURCE", "canonical action proposal"), ("ENCODING", "authorization_details"), ("PRECONDITION", "expected_version = 19")]),
+    10: ("RISK ROUTING", ["The formula is a conservative routing bound, not an actuarial prediction.", "Reachable value, scope, uses, and propagation increase modeled exposure.", "Containment effectiveness reduces—not eliminates—the upper bound."], [("MODEL", "B = V × S × U × P × (1−C)"), ("EXAMPLE", "USD 43.2k bound"), ("CALIBRATE", "replace every synthetic term")]),
+    11: ("SENSITIVITY SURFACE", ["TTL and record breadth interact nonlinearly in the declared index.", "The highest cell is normalized to 100; cells are not dollars or incidents.", "Teams can substitute measured scope and lifetime distributions."], [("ROWS", "1 · 5 · 25 · 100 records"), ("COLUMNS", "30 s → 60 min"), ("NORMALIZE", "100 records × 60 min = 100")]),
+    12: ("OVERLAP MODEL", ["Poisson arrival pressure is a scenario assumption, not observed attacker data.", "Shorter validity windows reduce overlap under every pressure curve.", "The model makes the TTL tradeoff inspectable and reproducible."], [("LOW", "λ = 1 / 7200 s"), ("ELEVATED", "λ = 1 / 1800 s"), ("ACTIVE", "λ = 1 / 450 s")]),
+    13: ("REPLAY MODEL", ["Audience binding contains presentation at adjacent resource servers.", "DPoP makes a copied token insufficient without the private key.", "Atomic one-use consumption contains repeated calls by the same actor."], [("BASELINE", "broad bearer = 100"), ("BIND", "audience + sender key"), ("TERMINATE", "atomic one-use ledger")]),
+    14: ("LOSS-TAIL MODEL", ["Each permission model uses 20,000 seeded synthetic compromise draws.", "The comparison is about relative tail compression, not forecast loss.", "Parameters are declared so readers can reproduce or replace the model."], [("SEED", "21"), ("DRAWS", "20,000 per model"), ("OUTPUT", "density + p95 marker")]),
+    15: ("REACHABILITY", ["The intended CRM resource is the only allow path in the graph.", "Adjacent APIs fail audience validation before business logic.", "A different quote at the same API fails resource binding."], [("LEASE", "aud = crm-api"), ("RESOURCE", "quote / 771"), ("EXPECTED", "1 allow · 3 denies")]),
+    16: ("POLICY TREE", ["Every branch fails closed when action, evidence, approval, or limit is invalid.", "Freshness failure triggers re-evaluation rather than silent continuation.", "Lease issuance is reachable only after all decision gates pass."], [("ORDER", "action → evidence → approval"), ("LIMIT", "value + version constraints"), ("RESULT", "issue or terminal deny")]),
+    17: ("DIGEST BINDING", ["Proposal and evidence are canonicalized before approval.", "The approval signs proposal, evidence, and policy identifiers together.", "The executor recomputes digests and rejects post-approval mutation."], [("PROPOSAL", "SHA-256 P"), ("EVIDENCE", "SHA-256 E"), ("APPROVAL", "sign(P ∥ E ∥ policy)")]),
+    18: ("EXECUTOR CONTRACT", ["Cryptographic, sender, authority, freshness, consumption, and effect gates are mandatory.", "Every pre-effect rejection persists a terminal ledger state.", "Uncertain effect enters reconciliation instead of blind retry."], [("PRE-EFFECT", "reject + persist"), ("ATOMIC", "reserve one-use jti"), ("UNCERTAIN", "ambiguous → reconcile")]),
+    19: ("CONCURRENCY", ["The lease binds the state version read during proposal generation.", "A newer human edit changes the record from v19 to v20.", "Conditional mutation returns conflict and preserves human work."], [("READ", "quote v19"), ("INTERVENE", "human commits v20"), ("WRITE", "If-Match v19 → 409")]),
+    20: ("RETRY PROTOCOL", ["The action identifier is reserved before the business mutation.", "The first successful result is committed beside the reservation.", "A retry returns the cached receipt without repeating the effect."], [("KEY", "action_id = A7"), ("FIRST CALL", "reserve → mutate → commit"), ("RETRY", "return recorded result")]),
+    21: ("AUDIT LINEAGE", ["The receipt joins intent, evidence, decision, approval, lease, and request.", "Outcome and recovery remain linked to the same immutable trace.", "Schema version and timestamps make the lineage independently reviewable."], [("CORRELATE", "receipt_id · trace_id · jti"), ("PROVE", "digests + state hash"), ("RECOVER", "pointer + terminal status")]),
+    22: ("CONTROL COVERAGE", ["Coverage is ordinal and declared: none, support, strong, primary.", "No control is primary for every failure mode in the matrix.", "Containment depends on composition across identity, policy, state, and verification."], [("ROWS", "7 failure modes"), ("COLUMNS", "7 independent controls"), ("READ", "layer controls; do not substitute")]),
+    23: ("LATENCY BUDGET", ["Bars show p95 stage contribution; the line shows cumulative path.", "CRM write and verification dominate the synthetic 307 ms total.", "A 350 ms objective leaves 43 ms of modeled headroom."], [("WINDOW", "synthetic p95"), ("TOTAL", "307 ms"), ("OBJECTIVE", "≤ 350 ms")]),
+    24: ("OPERATIONS", ["Every objective pairs target, actual, window, and pass/breach state.", "The deliberate verification-mismatch breach is visible, not averaged away.", "Breach handling must freeze affected actions and trigger investigation."], [("WINDOW", "synthetic rolling 30 days"), ("SCORE", "5 pass · 1 breach"), ("ESCALATE", "verification mismatch")]),
+    25: ("ROLLOUT", ["Migration proceeds by action class rather than a platform-wide flag day.", "Each phase has an observable promotion gate and rollback condition.", "A missed error budget returns the action class to the previous phase."], [("START", "inventory standing authority"), ("PROMOTE", "shadow → internal → approved"), ("END", "bounded autonomy")]),
+}
+
 
 def wrap(value: str, width: int = 22) -> str:
     return "\n".join(textwrap.wrap(value, width=width))
 
 
+def _figure_chip(fig, x: float, y: float, width: float, label: str, value: str, color: str) -> None:
+    fig.add_artist(FancyBboxPatch((x, y), width, .028, transform=fig.transFigure, boxstyle="round,pad=.002,rounding_size=.004", facecolor=WHITE, edgecolor=color, linewidth=.8))
+    fig.text(x + .006, y + .014, f"{label}  {value}", va="center", color=color, fontsize=6.6, fontweight="bold")
+
+
+def _draw_sidecar(fig, number: int) -> None:
+    domain, highlights, contract = FIGURE_SIDECARS[number]
+    rail = fig.add_axes([.755, .105, .21, .675])
+    rail.set_xlim(0, 100)
+    rail.set_ylim(0, 100)
+    rail.axis("off")
+    rail.add_patch(FancyBboxPatch((0, 0), 100, 100, boxstyle="round,pad=.35,rounding_size=2.2", facecolor=WHITE, edgecolor=BLUE, linewidth=1.0))
+    rail.text(7, 94, domain, color=BLUE, fontsize=7.4, fontweight="bold", va="center")
+    rail.text(7, 88, "ARCHITECTURAL HIGHLIGHTS", color=INK, fontsize=9.2, fontweight="bold", va="center")
+    rail.plot([7, 93], [84, 84], color=LINE, lw=.8)
+    for index, highlight in enumerate(highlights, start=1):
+        y = 77 - (index - 1) * 15
+        rail.add_patch(Circle((11, y), 3.5, facecolor="#EAF1FB", edgecolor=BLUE, linewidth=.8))
+        rail.text(11, y, str(index), ha="center", va="center", color=BLUE, fontsize=6.5, fontweight="bold")
+        rail.text(18, y + 1.7, wrap(highlight, 34), color=INK, fontsize=6.4, va="center", linespacing=1.28)
+    rail.text(7, 35, "CONTROL CONTRACT", color=INK, fontsize=8.5, fontweight="bold")
+    rail.plot([7, 93], [32, 32], color=LINE, lw=.8)
+    for index, (label, value) in enumerate(contract):
+        y = 23 - index * 9
+        rail.add_patch(FancyBboxPatch((7, y), 86, 7, boxstyle="round,pad=.18,rounding_size=1.0", facecolor="#F7FAFE", edgecolor=LINE, linewidth=.65))
+        rail.text(10, y + 3.5, label, color=MUTED, fontsize=5.8, fontweight="bold", va="center")
+        rail.text(91, y + 3.5, value, color=INK, fontsize=6.1, ha="right", va="center")
+
+
 def setup(number: int, title: str, subtitle: str, plot: bool = False):
-    fig, ax = plt.subplots(figsize=(10, 5.625), dpi=160)
+    fig, ax = plt.subplots(figsize=(14, 8.75), dpi=200)
     fig.patch.set_facecolor(PAPER)
-    ax.set_facecolor(PAPER)
-    fig.subplots_adjust(left=0.08, right=0.96, top=0.78, bottom=0.13)
-    fig.text(0.08, 0.935, f"FIGURE {number:02d}", color=TEAL, fontsize=8, fontweight="bold")
-    fig.text(0.08, 0.87, title, color=INK, fontsize=20, fontweight="bold")
-    fig.text(0.08, 0.82, subtitle, color=MUTED, fontsize=9)
-    fig.text(0.96, 0.035, "Illustrative reference design · synthetic values · not production data", ha="right", color=MUTED, fontsize=6.8)
+    ax.set_facecolor(SURFACE)
+    fig.subplots_adjust(left=.065, right=.735, top=.775, bottom=.12)
+    fig.add_artist(FancyBboxPatch((.045, .095), .70, .695, transform=fig.transFigure, boxstyle="round,pad=.004,rounding_size=.008", facecolor=SURFACE, edgecolor=LINE, linewidth=.8, zorder=-10))
+    domain, _, _ = FIGURE_SIDECARS[number]
+    tier = "CORE" if number in CORE_FIGURES else "SUPPLEMENTAL"
+    form = next(meta[2] for meta in FIGURE_META if meta[0] == number)
+    fig.text(.055, .957, f"FIGURE {number:02d}", color=BLUE, fontsize=8.4, fontweight="bold")
+    fig.text(.055, .905, title, color=INK, fontsize=22, fontweight="bold")
+    fig.text(.055, .865, subtitle, color=MUTED, fontsize=9.2)
+    _figure_chip(fig, .055, .812, .150, "DOMAIN", domain, BLUE)
+    _figure_chip(fig, .212, .812, .105, "TIER", tier, TEAL)
+    _figure_chip(fig, .324, .812, .225, "FORM", form.upper(), PURPLE)
+    _figure_chip(fig, .556, .812, .178, "EVIDENCE", "SYNTHETIC / REFERENCE", GOLD)
+    _draw_sidecar(fig, number)
+    legend = [(BLUE, "identity / evidence"), (GOLD, "decision / approval"), (TEAL, "authority / verification"), (RUST, "risk / failure")]
+    x = .055
+    fig.text(x, .042, "LEGEND", color=INK, fontsize=6.3, fontweight="bold", va="center")
+    x += .045
+    for color, label in legend:
+        fig.add_artist(Circle((x, .042), .0035, transform=fig.transFigure, facecolor=color, edgecolor=color))
+        fig.text(x + .007, .042, label, color=MUTED, fontsize=6.1, va="center")
+        x += .112
+    fig.text(.965, .042, "Illustrative reference design · synthetic values · not production data", ha="right", color=MUTED, fontsize=6.1, va="center")
     if not plot:
         ax.set_xlim(0, 100)
         ax.set_ylim(0, 100)
@@ -98,12 +174,12 @@ def setup(number: int, title: str, subtitle: str, plot: bool = False):
 
 def save(fig, number: int) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUT / f"figure-{number:02d}.png", facecolor=PAPER, dpi=160)
+    fig.savefig(OUT / f"figure-{number:02d}.png", facecolor=PAPER, dpi=200)
     plt.close(fig)
 
 
 def box(ax, x, y, w, h, title, body="", color=SURFACE, edge=LINE, title_color=INK, lw=1.1):
-    patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=.015,rounding_size=.02", facecolor=color, edgecolor=edge, linewidth=lw)
+    patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=.22,rounding_size=.8", facecolor=color, edgecolor=edge, linewidth=lw)
     ax.add_patch(patch)
     ax.text(x + w * .06, y + h * .66, title, color=title_color, fontsize=9.2, fontweight="bold", va="center")
     if body:
@@ -117,6 +193,7 @@ def arrow(ax, start, end, color=MUTED, lw=1.35, style="-|>", connectionstyle="ar
 
 def f01():
     fig, ax = setup(1, "Permission model comparison", "Same agent and action; different authority persistence")
+    dimensions = ["LIFETIME", "RESOURCE", "ACTION", "USES"]
     columns = [(4, "STANDING ROLE", RUST, ["valid for 8 hours", "all enterprise accounts", "quote + contact + export", "unbounded repetitions"]),
                (52, "PERMISSION LEASE", TEAL, ["valid for 90 seconds", "one account + quote", "one approved field delta", "one consumable use"])]
     for x, title, color, rows in columns:
@@ -124,7 +201,8 @@ def f01():
         for i, row in enumerate(rows):
             y = 50 - i * 11
             ax.add_patch(Circle((x + 6, y), 2.2, facecolor=color if x > 50 else RUST_LIGHT, edgecolor=color, lw=1))
-            ax.text(x + 11, y, row, va="center", fontsize=8, color=INK)
+            ax.text(x + 11, y + 2.1, dimensions[i], va="center", fontsize=5.8, color=MUTED, fontweight="bold")
+            ax.text(x + 11, y - 1.2, row, va="center", fontsize=7.6, color=INK)
     ax.text(50, 5, "Authority should be created by the decision—not inherited from the runtime.", ha="center", fontsize=8, color=INK, fontweight="bold")
     save(fig, 1)
 
@@ -161,7 +239,7 @@ def f03():
 
 def f04():
     fig, ax = setup(4, "Authority narrowing path", "Illustrative reachable authority after each independent restriction", plot=True)
-    fig.subplots_adjust(left=.20, right=.96, top=.78, bottom=.15)
+    fig.subplots_adjust(left=.16, right=.735, top=.775, bottom=.14)
     stages = ["employee role", "agent action class", "one resource server", "one account", "one quote", "field + value bound", "90s + one use"]
     reachable = np.array([100, 52, 31, 12, 5.5, 1.6, .35])
     y = np.arange(len(stages))
@@ -201,6 +279,9 @@ def f06():
         state(x, 57, 12, label, color)
     for x in [14, 28, 42, 56, 70, 84]:
         arrow(ax, (x, 62.5), (x + 2, 62.5), color=MUTED, lw=1)
+    transition_labels = [(15, "normalize"), (29, "policy"), (43, "approve"), (57, "reserve"), (71, "mutate"), (85, "verify")]
+    for x, label in transition_labels:
+        ax.text(x, 69.5, label, ha="center", fontsize=5.6, color=MUTED, fontweight="bold")
 
     state(31, 28, 13, "EXPIRED", MUTED)
     state(45, 28, 13, "REVOKED", RUST)
@@ -274,7 +355,7 @@ def f10():
 
 def f11():
     fig, ax = setup(11, "TTL and scope exposure", "Declared sensitivity index; 60m × 100 records is normalized to 100", plot=True)
-    fig.subplots_adjust(left=.18,right=.96,top=.78,bottom=.16)
+    fig.subplots_adjust(left=.14,right=.735,top=.775,bottom=.15)
     ttls=np.array([30,60,90,300,900,3600])
     scopes=np.array([1,5,25,100])
     raw=np.outer(np.sqrt(scopes), (ttls/30)**.55)
@@ -340,6 +421,12 @@ def f15():
     for x,y,title,result,color in targets:
         box(ax,x,y,24,18,title,result,edge=color,title_color=color)
         arrow(ax,(22,52),(x,y+9),color=color,connectionstyle="arc3,rad=.08")
+    checks = [("01 SIGNATURE", "valid", BLUE), ("02 EXPIRY", "valid", BLUE), ("03 AUDIENCE", "match / deny", GOLD), ("04 RESOURCE", "match / deny", TEAL)]
+    for i, (label, result, color) in enumerate(checks):
+        x = 5 + i * 23
+        ax.add_patch(FancyBboxPatch((x, 5), 20, 9, boxstyle="round,pad=.18,rounding_size=.8", facecolor="#F7FAFE", edgecolor=color, linewidth=.8))
+        ax.text(x + 1.2, 10.5, label, color=color, fontsize=5.8, fontweight="bold")
+        ax.text(x + 18.8, 7.2, result, color=INK, fontsize=5.8, ha="right")
     save(fig, 15)
 
 
@@ -383,16 +470,17 @@ def f17():
 def f18():
     fig, ax = setup(18, "Executor validation gates", "Every gate is mandatory; no synthetic pass-rate claim")
     gates=[
-        ("CRYPTO","algorithm · issuer\ntime window",BLUE),
-        ("SENDER","DPoP htm · htu\niat · jti · ath",BLUE),
-        ("AUTHORITY","audience · type\nresource · delta",GOLD),
-        ("FRESHNESS","policy · approval\ndigests · version",GOLD),
-        ("ONE USE","atomic reserve\nidempotency state",TEAL),
-        ("EFFECT","conditional write\nverify · receipt",TEAL),
+        ("CRYPTO","alg allowlist · iss · kid\nsignature · nbf · exp",BLUE),
+        ("SENDER","proof signature · htm · htu\niat · jti · ath · nonce",BLUE),
+        ("AUTHORITY","aud · type · action\nresource · field · limits",GOLD),
+        ("FRESHNESS","policy · approval eligibility\ndigests · record version",GOLD),
+        ("ONE USE","atomic reserve jti\naction_id · idempotency",TEAL),
+        ("EFFECT","If-Match write · readback\npostcondition · receipt",TEAL),
     ]
     for i,(title,body,color) in enumerate(gates):
         x=2+i*16
         box(ax,x,38,14,32,title,body,edge=color,title_color=color)
+        ax.text(x + 12, 66, f"{i + 1:02d}", ha="right", fontsize=6.2, color=color, fontweight="bold")
         if i < len(gates)-1:
             arrow(ax,(x+14,54),(x+16,54),color=MUTED,lw=1)
     ax.text(50,25,"any failure before effect → reject and persist terminal state",ha="center",fontsize=7.5,color=RUST,fontweight="bold")
@@ -444,7 +532,7 @@ def f21():
 
 def f22():
     fig, ax = setup(22, "Failure-mode control matrix", "Declared ordinal coverage: 0 none · 1 support · 2 strong · 3 primary", plot=True)
-    fig.subplots_adjust(left=.22,right=.96,top=.78,bottom=.18)
+    fig.subplots_adjust(left=.17,right=.735,top=.775,bottom=.17)
     rows=["token theft","replay","over-broad scope","stale approval","concurrent edit","duplicate retry","wrong downstream state"]
     cols=["TTL","audience","DPoP","one use","policy","version","verify"]
     data=np.array([[2,1,3,1,1,0,0],[1,1,3,3,0,0,0],[1,3,0,1,3,0,0],[2,0,0,1,3,2,1],[0,0,0,0,1,3,2],[0,0,1,3,0,1,2],[0,1,0,0,1,1,3]])
@@ -505,7 +593,7 @@ def f24():
 
 def f25():
     fig, ax = setup(25, "Permission-lease rollout", "Remove standing privilege one action class at a time")
-    phases=[(2,"1 · OBSERVE","inventory tokens\nmap actions","100% token census",BLUE),(22,"2 · SHADOW","evaluate policy\nissue no lease","decision parity ≥99%",BLUE),(42,"3 · INTERNAL","tasks + notes\none-use leases","verification ≥99.9%",GOLD),(62,"4 · APPROVED","commercial deltas\nhuman bound","recovery drill passes",GOLD),(82,"5 · BOUNDED","selected autonomy\ndynamic limits","error budget healthy",TEAL)]
+    phases=[(2,"1 · OBSERVE","inventory tokens\nmap action classes\nbaseline SLOs","100% token census",BLUE),(22,"2 · SHADOW","evaluate policy\nissue no lease\ncompare decisions","decision parity ≥99%",BLUE),(42,"3 · INTERNAL","tasks + notes\none-use leases\nverify every effect","verification ≥99.9%",GOLD),(62,"4 · APPROVED","commercial deltas\nhuman approvals\nrecovery drills","recovery drill passes",GOLD),(82,"5 · BOUNDED","selected autonomy\ndynamic limits\ncontinuous budgets","error budget healthy",TEAL)]
     for x,title,scope,gate,color in phases:
         box(ax,x,35,16,44,title,scope,edge=color,title_color=color)
         ax.add_patch(FancyBboxPatch((x+1,16),14,12,boxstyle="round,pad=.01",facecolor="#EEF4F2",edgecolor=LINE))
@@ -534,7 +622,7 @@ def write_chart_map() -> None:
         tier = "Core" if number in CORE_FIGURES else "Supplemental"
         assumptions = FIGURE_ASSUMPTIONS.get(number, "Reference design; no observed production data.")
         lines.append(f"| {number} | {tier} | {title} | {form} | {takeaway} | {assumptions} |")
-    lines += ["", "Renderer: reproducible Matplotlib PNG, 1600×900. Final QA surface: responsive GitHub Pages article and Medium import page.", ""]
+    lines += ["", "Renderer: reproducible Matplotlib PNG, 2800×1750. Every plate includes a control-domain header, architectural highlights rail, control contract, assumptions, and semantic legend. Final QA surface: responsive GitHub Pages article and Medium import page.", ""]
     MAP_PATH.write_text("\n".join(lines), encoding="utf-8")
 
 
