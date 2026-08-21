@@ -196,7 +196,7 @@ def footer(prefix: str = "") -> str:
     return f"""
 <footer class="site-footer">
   <div><span class="brand-mark small">AS</span><p>Enterprise AI, agent architecture, and responsible systems.</p></div>
-  <p>© <span data-year></span> {AUTHOR}. Originally published on <a href="{MEDIUM_PROFILE}" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+  <p>© <span data-year></span> {AUTHOR}. Independent essays, also available on <a href="{MEDIUM_PROFILE}" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
 </footer>"""
 
 
@@ -220,7 +220,7 @@ def document(
         )
     else:
         article_tags = '<meta property="og:type" content="website">'
-    return f"""<!doctype html>
+    page = f"""<!doctype html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
@@ -251,6 +251,7 @@ def document(
 </body>
 </html>
 """
+    return "\n".join(line.rstrip() for line in page.splitlines()) + "\n"
 
 
 def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session: requests.Session) -> None:
@@ -266,7 +267,12 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
     for block in story["blocks"]:
         if block["type"] == "figure":
             figure_index += 1
-            local = download_image(session, block["src"], slug, figure_index)
+            source = block["src"]
+            local_candidate = (ROOT / source).resolve() if not source.startswith(("http://", "https://")) else None
+            if local_candidate and local_candidate.is_relative_to(ROOT) and local_candidate.exists():
+                local = local_candidate
+            else:
+                local = download_image(session, source, slug, figure_index)
             src = f"../../{local.relative_to(ROOT).as_posix()}" if local else block["src"]
             if figure_index == 1 and local:
                 local_hero = f"{SITE_URL}{local.relative_to(ROOT).as_posix()}"
@@ -296,7 +302,7 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
         elif tag == "pre":
             rendered.append(f"<pre><code>{escape(text)}</code></pre>")
         else:
-            class_name = "disclosure" if text.lower().startswith("this story was written with the assistance") else ""
+            class_name = "disclosure" if text.lower().startswith("this story was written with") else ""
             class_attr = f' class="{class_name}"' if class_name else ""
             rendered.append(f"<p{class_attr}>{inner}</p>")
 
@@ -316,6 +322,22 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
         neighbors.append(
             f'<a class="story-nav-card align-right" href="../{older["slug"]}/"><span>Older</span><strong>{escape(older["title"])}</strong></a>'
         )
+
+    canonical_host = urlsplit(story["canonical"]).netloc.lower()
+    if canonical_host.endswith("medium.com"):
+        source_note = f"""
+        <aside class="source-note">
+          <span>Original publication</span>
+          <p>This archive preserves the article as published. Read the canonical version on Medium for responses and updates.</p>
+          <a href="{escape(story['canonical'], quote=True)}" target="_blank" rel="noopener noreferrer">Open on Medium ↗</a>
+        </aside>"""
+    else:
+        source_note = f"""
+        <aside class="source-note">
+          <span>Canonical original</span>
+          <p>This page is the original publication. Syndicated copies should retain this URL as their canonical source.</p>
+          <a href="{escape(story['canonical'], quote=True)}">Canonical URL</a>
+        </aside>"""
 
     body = f"""
 <div class="reading-progress" aria-hidden="true"><span data-progress></span></div>
@@ -338,14 +360,10 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
       </aside>
       <div class="article-body" data-article-body>
         {''.join(rendered)}
-        <aside class="source-note">
-          <span>Original publication</span>
-          <p>This archive preserves the article as published. Read the canonical version on Medium for responses and updates.</p>
-          <a href="{escape(story['canonical'], quote=True)}" target="_blank" rel="noopener noreferrer">Open on Medium ↗</a>
-        </aside>
       </div>
     </div>
   </article>
+  <div class="canonical-handoff">{source_note}</div>
   <nav class="story-nav" aria-label="More stories">{''.join(neighbors)}</nav>
 </main>"""
 
@@ -398,7 +416,7 @@ def render_index(stories: list[dict[str, Any]]) -> None:
       </div>
     </div>
     <aside class="hero-note">
-      <span class="note-index">01 — 05</span>
+      <span class="note-index">01 — {len(stories):02d}</span>
       <p>“The hard part of agentic AI is not making a model act. It is deciding what authority that action should carry.”</p>
       <span>Aditya Singh</span>
     </aside>

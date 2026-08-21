@@ -348,6 +348,7 @@ button, input { font: inherit; }
 .source-note span { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
 .source-note p { margin: 10px 0 14px; color: var(--ink-soft); font-size: 14px; line-height: 1.65; }
 .source-note a { font-size: 13px; font-weight: 800; text-decoration: none; }
+.canonical-handoff { max-width: 720px; margin-left: 274px; }
 
 .story-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 90px 0 20px 274px; }
 .story-nav-card { min-height: 132px; display: flex; flex-direction: column; justify-content: center; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
@@ -369,6 +370,7 @@ button, input { font: inherit; }
   .article-rail { display: none; }
   .article-body { margin: 0 auto; }
   .story-nav { margin-left: 0; }
+  .canonical-handoff { margin-left: 0; }
   .story-figure { width: 100%; }
   .about-strip, .about-strip > div { grid-template-columns: 1fr; }
 }
