@@ -32,7 +32,7 @@ jobs:
       - name: Include source-backed dashboard
         run: cp analytics/engagement-dashboard.html metrics-report/engagement-dashboard.html
       - name: Upload metrics review
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: metrics-report-${{ github.run_number }}
           path: metrics-report
