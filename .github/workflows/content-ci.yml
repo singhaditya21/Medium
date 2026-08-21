@@ -3,6 +3,7 @@ name: Content CI
 on:
   pull_request:
   push:
+    branches: [main]
     paths:
       - "assets/**"
       - "data/**"
