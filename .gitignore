@@ -2,3 +2,8 @@
 *.part
 __pycache__/
 .venv/
+_site/
+distribution-packs/
+editorial-brief/
+lighthouse-reports/
+metrics-report/

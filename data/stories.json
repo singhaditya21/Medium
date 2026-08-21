@@ -13,7 +13,11 @@
       "Enterprise architecture"
     ],
     "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
-    "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/"
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-ai-agent-should-not-have-a-standing-role",
+    "series": [
+      "production-grade-ai-agents"
+    ]
   },
   {
     "slug": "a-2-4m-account-is-escalating",
@@ -29,7 +33,12 @@
       "Cybersecurity"
     ],
     "canonical": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/",
-    "pageUrl": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/"
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=a-2-4m-account-is-escalating",
+    "series": [
+      "production-grade-ai-agents",
+      "agentic-crm"
+    ]
   },
   {
     "slug": "ai-agent-identity-is-not-enough",
@@ -43,7 +52,11 @@
       "Cybersecurity"
     ],
     "canonical": "https://medium.com/@singhaditya21_89007/ai-agent-identity-is-not-enough-59992dc9e155",
-    "pageUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/"
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=ai-agent-identity-is-not-enough",
+    "series": [
+      "production-grade-ai-agents"
+    ]
   },
   {
     "slug": "what-an-agent-actually-costs",
@@ -57,7 +70,11 @@
       "Enterprise AI"
     ],
     "canonical": "https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5",
-    "pageUrl": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/"
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=what-an-agent-actually-costs",
+    "series": [
+      "ai-unit-economics"
+    ]
   },
   {
     "slug": "enterprise-agent-control-tower",
@@ -71,7 +88,11 @@
       "Risk"
     ],
     "canonical": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438",
-    "pageUrl": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/"
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=enterprise-agent-control-tower",
+    "series": [
+      "production-grade-ai-agents"
+    ]
   },
   {
     "slug": "agentic-crm-reference-architecture",
@@ -85,7 +106,11 @@
       "Enterprise AI"
     ],
     "canonical": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
-    "pageUrl": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/"
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=agentic-crm-reference-architecture",
+    "series": [
+      "agentic-crm"
+    ]
   },
   {
     "slug": "traditional-crm-agentic-ai",
@@ -99,6 +124,10 @@
       "Transformation"
     ],
     "canonical": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4",
-    "pageUrl": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/"
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=traditional-crm-agentic-ai",
+    "series": [
+      "agentic-crm"
+    ]
   }
 ]

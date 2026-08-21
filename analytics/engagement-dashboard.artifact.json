@@ -1,0 +1,234 @@
+{
+  "surface": "dashboard",
+  "manifest": {
+    "version": 1,
+    "surface": "dashboard",
+    "title": "Medium Engagement Baseline",
+    "description": "A source-backed snapshot of audience reach, reading depth, and story-level retention for Aditya Singh's Medium catalog.",
+    "generatedAt": "2026-08-21T15:36:30Z",
+    "cards": [
+      {
+        "id": "presentations",
+        "description": "Times Medium presented the catalog during August 2026.",
+        "dataset": "account_summary",
+        "sourceId": "medium_august_summary",
+        "metrics": [{"label": "Presentations · Aug", "field": "presentations", "format": "number"}]
+      },
+      {
+        "id": "views",
+        "description": "Story views recorded by Medium during August 2026.",
+        "dataset": "account_summary",
+        "sourceId": "medium_august_summary",
+        "metrics": [{"label": "Views · Aug", "field": "views", "format": "number"}]
+      },
+      {
+        "id": "reads",
+        "description": "Reads recorded by Medium during August 2026.",
+        "dataset": "account_summary",
+        "sourceId": "medium_august_summary",
+        "metrics": [{"label": "Reads · Aug", "field": "reads", "format": "number"}]
+      },
+      {
+        "id": "followers",
+        "description": "Lifetime Medium followers at snapshot time.",
+        "dataset": "account_summary",
+        "sourceId": "medium_audience_lifetime",
+        "metrics": [{"label": "Followers · lifetime", "field": "followers", "format": "number"}]
+      },
+      {
+        "id": "subscribers",
+        "description": "Lifetime Medium email subscribers at snapshot time.",
+        "dataset": "account_summary",
+        "sourceId": "medium_audience_lifetime",
+        "metrics": [{"label": "Subscribers · lifetime", "field": "email_subscribers", "format": "number"}]
+      }
+    ],
+    "charts": [
+      {
+        "id": "august_funnel",
+        "title": "Reach is leaking before a story becomes a read",
+        "subtitle": "August 2026 account totals; stages are ordered, not additive.",
+        "intent": "funnel",
+        "question": "Where does the current-month audience funnel narrow?",
+        "rationale": "An ordered bar chart preserves exact counts while making stage loss visible.",
+        "comparisonContext": {
+          "denominator": "Medium account activity in August 2026",
+          "grain": "funnel stage",
+          "unit": "events"
+        },
+        "type": "bar",
+        "dataset": "august_funnel",
+        "sourceId": "medium_august_summary",
+        "encodings": {
+          "x": {"field": "stage", "type": "ordinal", "label": "Stage"},
+          "y": {"field": "count", "type": "quantitative", "label": "Count", "format": "number"},
+          "tooltip": [
+            {"field": "count", "type": "quantitative", "label": "Count", "format": "number"},
+            {"field": "share_of_presentations", "type": "quantitative", "label": "Share of presentations", "format": "percent"}
+          ]
+        },
+        "valueFormat": "number",
+        "layout": "half",
+        "labels": {"values": "all"},
+        "palette": {"kind": "sequential", "name": "blue"},
+        "settings": {"sort": "custom", "showValues": true}
+      },
+      {
+        "id": "story_retention",
+        "title": "CRM architecture stories retain the largest share of viewers",
+        "subtitle": "Lifetime story read ratios as displayed by Medium; small samples limit inference.",
+        "intent": "comparison",
+        "question": "Which published stories convert views into reads most consistently?",
+        "rationale": "A sorted horizontal bar chart keeps six long story labels readable.",
+        "comparisonContext": {
+          "denominator": "Views for each story over its Medium lifetime",
+          "grain": "story",
+          "unit": "read ratio"
+        },
+        "type": "horizontalBar",
+        "dataset": "story_lifetime",
+        "sourceId": "medium_story_lifetime",
+        "encodings": {
+          "x": {"field": "story", "type": "nominal", "label": "Story"},
+          "y": {"field": "read_ratio", "type": "quantitative", "label": "Read ratio", "format": "percent"},
+          "tooltip": [
+            {"field": "views", "type": "quantitative", "label": "Views", "format": "number"},
+            {"field": "reads", "type": "quantitative", "label": "Reads", "format": "number"}
+          ]
+        },
+        "valueFormat": "percent",
+        "layout": "half",
+        "labels": {"values": "all"},
+        "palette": {"kind": "sequential", "name": "blue"},
+        "settings": {"sort": "descending", "showValues": true}
+      }
+    ],
+    "tables": [
+      {
+        "id": "story_detail",
+        "title": "Lifetime story detail",
+        "subtitle": "Exact captured values from the Medium story statistics table.",
+        "dataset": "story_lifetime",
+        "sourceId": "medium_story_lifetime",
+        "defaultSort": {"field": "read_ratio", "direction": "desc"},
+        "density": "dense",
+        "layout": "full",
+        "columns": [
+          {"field": "story", "label": "Story", "type": "text"},
+          {"field": "presentations", "label": "Presentations", "format": "number"},
+          {"field": "views", "label": "Views", "format": "number"},
+          {"field": "reads", "label": "Reads", "format": "number"},
+          {"field": "read_ratio", "label": "Read ratio", "format": "percent"}
+        ]
+      }
+    ],
+    "sources": [
+      {"id": "medium_august_summary", "label": "Medium Stats · August summary", "path": "analytics/engagement-baseline.json"},
+      {"id": "medium_audience_lifetime", "label": "Medium Audience · lifetime", "path": "analytics/engagement-baseline.json"},
+      {"id": "medium_story_lifetime", "label": "Medium Stats · story lifetime", "path": "analytics/engagement-baseline.json"}
+    ],
+    "blocks": [
+      {
+        "id": "decision_readout",
+        "type": "markdown",
+        "sourceId": "medium_story_lifetime",
+        "body": "## Decision readout\n\nReach is still sparse, so the immediate growth constraint is discovery rather than catalog depth. The strongest retention appears in the two CRM architecture stories, but every story has a very small sample. Treat the ranking as a direction for testing—not causal proof."
+      },
+      {"id": "headline_metrics", "type": "metric-strip", "cardIds": ["presentations", "views", "reads", "followers", "subscribers"]},
+      {"id": "funnel_chart", "type": "chart", "chartId": "august_funnel", "layout": "half"},
+      {"id": "retention_chart", "type": "chart", "chartId": "story_retention", "layout": "half"},
+      {"id": "detail_table", "type": "table", "tableId": "story_detail", "layout": "full"},
+      {
+        "id": "methodology",
+        "type": "markdown",
+        "sourceId": "medium_story_lifetime",
+        "body": "## Scope and caveats\n\n- **August funnel:** account totals for August 2026.\n- **Story table:** lifetime totals per story, not an August subset.\n- **Read ratio:** Medium's displayed reads divided by views, preserved at the displayed rounding.\n- **Interactions:** all six Medium stories showed zero clappers, highlighters, responders, and reposters at capture time.\n- **Decision rule:** do not interpret ranking changes until each story has a materially larger view denominator."
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-08-21T15:36:30Z",
+    "status": "ready",
+    "datasets": {
+      "account_summary": [
+        {"period": "August 2026", "presentations": 34, "views": 21, "reads": 9, "followers": 2, "email_subscribers": 2}
+      ],
+      "august_funnel": [
+        {"stage": "Presentations", "count": 34, "share_of_presentations": 1.0, "stage_order": 1},
+        {"stage": "Views", "count": 21, "share_of_presentations": 0.6176, "stage_order": 2},
+        {"stage": "Reads", "count": 9, "share_of_presentations": 0.2647, "stage_order": 3}
+      ],
+      "story_lifetime": [
+        {"story": "Traditional CRM vs Agentic AI", "slug": "traditional-crm-agentic-ai", "presentations": 4, "views": 6, "reads": 5, "read_ratio": 0.83},
+        {"story": "Agentic CRM Reference Architecture", "slug": "agentic-crm-reference-architecture", "presentations": 8, "views": 6, "reads": 4, "read_ratio": 0.67},
+        {"story": "Enterprise Agent Control Tower", "slug": "enterprise-agent-control-tower", "presentations": 4, "views": 8, "reads": 4, "read_ratio": 0.5},
+        {"story": "What an Agent Actually Costs", "slug": "what-an-agent-actually-costs", "presentations": 7, "views": 2, "reads": 1, "read_ratio": 0.5},
+        {"story": "AI Agent Identity Is Not Enough", "slug": "ai-agent-identity-is-not-enough", "presentations": 7, "views": 5, "reads": 0, "read_ratio": 0.0},
+        {"story": "A $2.4M Account Is Escalating", "slug": "a-2-4m-account-is-escalating", "presentations": 4, "views": 0, "reads": 0, "read_ratio": 0.0}
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "medium_august_summary",
+      "label": "Medium Stats · August summary",
+      "path": "analytics/engagement-baseline.json",
+      "query": {
+        "engine": "duckdb",
+        "language": "sql",
+        "sql": "SELECT scopes.currentMonth.presentations AS presentations, scopes.currentMonth.views AS views, scopes.currentMonth.reads AS reads FROM read_json_auto('analytics/engagement-baseline.json')",
+        "description": "Read-only capture of the signed-in Medium account summary for August 2026.",
+        "executed_at": "2026-08-21T15:36:30Z",
+        "tables_used": ["Medium Stats > August summary"],
+        "filters": ["Account: @singhaditya21_89007", "Period: August 2026"],
+        "metric_definitions": [
+          "Presentations = Medium's displayed count of story presentations during August 2026.",
+          "Views = Medium's displayed count of story views during August 2026.",
+          "Reads = Medium's displayed count of reads during August 2026."
+        ]
+      }
+    },
+    {
+      "id": "medium_audience_lifetime",
+      "label": "Medium Audience · lifetime",
+      "path": "analytics/engagement-baseline.json",
+      "query": {
+        "engine": "duckdb",
+        "language": "sql",
+        "sql": "SELECT scopes.audienceLifetime.followers AS followers, scopes.audienceLifetime.emailSubscribers AS email_subscribers FROM read_json_auto('analytics/engagement-baseline.json')",
+        "description": "Read-only capture of the signed-in Medium audience totals.",
+        "executed_at": "2026-08-21T15:36:30Z",
+        "tables_used": ["Medium Stats > Audience"],
+        "filters": ["Account: @singhaditya21_89007", "Scope: lifetime"],
+        "metric_definitions": [
+          "Followers = current lifetime Medium followers at capture time.",
+          "Subscribers = current lifetime Medium email subscribers at capture time."
+        ]
+      }
+    },
+    {
+      "id": "medium_story_lifetime",
+      "label": "Medium Stats · story lifetime",
+      "path": "analytics/engagement-baseline.json",
+      "query": {
+        "engine": "duckdb",
+        "language": "sql",
+        "sql": "SELECT item.story, item.slug, item.presentations, item.views, item.reads, item.readRatio AS read_ratio FROM read_json_auto('analytics/engagement-baseline.json') AS source, UNNEST(source.scopes.storyLifetime) AS rows(item)",
+        "description": "Read-only capture of lifetime presentations, views, reads, and read ratios for the six Medium-published stories.",
+        "executed_at": "2026-08-21T15:36:30Z",
+        "tables_used": ["Medium Stats > Stories"],
+        "filters": ["Account: @singhaditya21_89007", "Scope: lifetime", "Stories: published on Medium at capture time"],
+        "metric_definitions": [
+          "Read ratio = reads divided by views for a story, preserved at Medium's displayed rounding.",
+          "Story presentations, views, and reads are lifetime values and are not reconciled to the August account totals."
+        ]
+      }
+    }
+  ],
+  "package_info": {
+    "root": "analytics",
+    "manifestPath": "analytics/engagement-dashboard.artifact.json",
+    "snapshotPath": "analytics/engagement-dashboard.artifact.json"
+  }
+}

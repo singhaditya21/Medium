@@ -74,8 +74,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Horizontal bar chart of eight agent cost lines per attempted business objective, led by human review and the Tier-0 control plane.",
+      "caption": "Human approval and the idle control plane contribute 68.4% of the modeled cost per attempt.",
       "src": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*sFL8L_Y1KhyIySLGvBqTUQ.png",
       "type": "figure"
     },
@@ -158,8 +158,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Waterfall chart from one model-call price through operating costs to the cost of a verified outcome.",
+      "caption": "The modeled unit cost rises from $0.066 per model call to $1.135 per verified outcome after all cost lines and the verification denominator.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*YDyw7OEMw2uxYVpztj3qdA.png",
       "type": "figure"
     },
@@ -194,8 +194,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Sensitivity chart showing how a 30% change in eight inputs affects the cost per verified outcome.",
+      "caption": "Verification rate has the largest modeled effect on unit cost; model output price ranks seventh of eight variables.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*d6lVSZX6xym4Uled9TREyg.png",
       "type": "figure"
     },
@@ -230,8 +230,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Line chart comparing model inference price and total verified-outcome cost across four model tiers.",
+      "caption": "A cheaper model can increase total cost when lower verification and higher retry or escalation rates outweigh inference savings.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*-K_r4ZH3dk_HntllK6jiVw.png",
       "type": "figure"
     },
@@ -296,8 +296,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Stacked bars comparing machine, human review, evaluation, and control-plane cost across five autonomy tiers.",
+      "caption": "In the model, execute-with-approval costs $3.15 per verified outcome while bounded execution costs $1.13.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*WZUt6p2YZIJFK0Eje-QHJQ.png",
       "type": "figure"
     },
@@ -338,8 +338,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Architecture diagram locating run, token, tool, side-effect, and payroll budget enforcement across four system components.",
+      "caption": "Each budget is bound to an enforcement point and a defined response at soft or hard breach.",
       "src": "https://miro.medium.com/v2/resize:fit:700/1*HMyhLu3lhFd6eXIw6P8WSg.png",
       "type": "figure"
     },
@@ -374,8 +374,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Funnel from 1,000 attempted objectives through schema validation, policy, authorization, application, and verification.",
+      "caption": "The model verifies 837 of 1,000 attempts; the remaining 163 still consume operating cost.",
       "src": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*WFbDqCnzRAqCTc2ZSveACQ.png",
       "type": "figure"
     },
@@ -410,8 +410,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Cost curve comparing manual work with agent cost per verified outcome as monthly objective volume rises.",
+      "caption": "The modeled agent crosses the $10.50 manual baseline near 1,176 objectives per month, after which fixed-cost amortization matters less.",
       "src": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*_2jJBhRLj_dC7SkAF-GDXQ.png",
       "type": "figure"
     },
@@ -446,8 +446,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Cost ownership table listing eight agent cost lines, their share of the bill, accountable owner, and primary optimization lever.",
+      "caption": "A fully costed workflow assigns every line to an accountable business, risk, technical, or platform owner.",
       "src": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*n2YWQxhtg7rsgezLFhqhyg.png",
       "type": "figure"
     },
@@ -476,8 +476,8 @@
       "type": "html"
     },
     {
-      "alt": "",
-      "caption": "",
+      "alt": "Four-layer operational scorecard covering outcome, reliability, safety and control, cost denominators, and review ownership.",
+      "caption": "The scorecard makes every rate auditable by naming its denominator, invariant, recovery owner, or cost share.",
       "src": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*WM6r1BR08JIM99G9VlRsMw.png",
       "type": "figure"
     },

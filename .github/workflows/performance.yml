@@ -1,0 +1,38 @@
+name: Pages Performance
+
+on:
+  workflow_run:
+    workflows: ["Deploy GitHub Pages"]
+    types: [completed]
+  schedule:
+    - cron: "41 3 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Run Lighthouse on home and newest story
+        run: |
+          mkdir -p lighthouse-reports
+          npx --yes lighthouse@13.4.1 "https://singhaditya21.github.io/Medium/" --chrome-flags="--headless --no-sandbox" --output=json --output-path=lighthouse-reports/home.json --quiet
+          npx --yes lighthouse@13.4.1 "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/" --chrome-flags="--headless --no-sandbox" --output=json --output-path=lighthouse-reports/latest.json --quiet
+      - name: Enforce quality thresholds
+        run: python scripts/check_lighthouse.py lighthouse-reports/home.json lighthouse-reports/latest.json
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: lighthouse-${{ github.run_number }}
+          path: lighthouse-reports
+          retention-days: 30

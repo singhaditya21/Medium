@@ -1,0 +1,71 @@
+name: Distribution Pack
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/*.json"
+      - "scripts/generate_distribution_pack.py"
+      - "scripts/build_site.py"
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: Story slug; leave blank for the newest story
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 2
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install --requirement requirements.txt
+      - name: Build current story manifest
+        run: python scripts/build_site.py
+      - name: Generate review assets
+        env:
+          STORY_SLUG: ${{ inputs.slug }}
+        run: |
+          if [[ -n "$STORY_SLUG" ]]; then
+            python scripts/generate_distribution_pack.py --slug "$STORY_SLUG" --output-dir distribution-packs
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            python scripts/generate_distribution_pack.py --all --output-dir distribution-packs
+          else
+            python scripts/generate_distribution_pack.py --output-dir distribution-packs
+          fi
+      - name: Upload distribution packs
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: distribution-packs-${{ github.run_number }}
+          path: distribution-packs
+          retention-days: 30
+      - name: Open review issues for newly added stories
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          while IFS= read -r path; do
+            [[ -z "$path" || "$path" == "data/stories.json" ]] && continue
+            slug="$(basename "$path" .json)"
+            title="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["title"])' "$path")"
+            issue_title="Distribution review: $title"
+            existing="$(gh issue list --state open --search "$issue_title in:title" --json title --limit 100 | jq --arg title "$issue_title" 'map(select(.title == $title)) | length')"
+            if [[ "$existing" == "0" ]]; then
+              gh issue create --title "$issue_title" --body-file "distribution-packs/$slug.md"
+            fi
+          done < <(git diff --diff-filter=A --name-only "$BEFORE_SHA" "$CURRENT_SHA" -- 'data/*.json')
