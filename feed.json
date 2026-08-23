@@ -11,6 +11,21 @@
   ],
   "items": [
     {
+      "id": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
+      "url": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
+      "title": "Your Multi-Agent System Is a Distributed System",
+      "summary": "A production blueprint for coordinating AI agents with durable workflows, invariants, message contracts, idempotency, fencing, causal ordering, sagas, chaos tests, and business-effect SLOs.",
+      "date_published": "2026-08-23T12:30:00.000Z",
+      "tags": [
+        "AI agents",
+        "Distributed systems",
+        "Multi-agent systems",
+        "Enterprise architecture",
+        "Reliability"
+      ]
+    },
+    {
       "id": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
       "url": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
       "external_url": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",

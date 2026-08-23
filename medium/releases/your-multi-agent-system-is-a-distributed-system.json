@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "your-multi-agent-system-is-a-distributed-system",
+  "operation": "import_to_private_draft",
+  "topics": [
+    "AI Agents",
+    "Distributed Systems",
+    "Multi Agent Systems",
+    "Enterprise Architecture",
+    "Reliability"
+  ],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}
