@@ -11,6 +11,21 @@
   ],
   "items": [
     {
+      "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+      "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+      "title": "Your AI Agent Needs a Real Kill Switch",
+      "summary": "A technical and operating blueprint for reliably stopping an enterprise AI agent's authority and effects across identity, workers, networks, tools, queues, ambiguous transactions, incident evidence, and governed recovery.",
+      "date_published": "2026-08-23T14:20:00.000Z",
+      "tags": [
+        "AI agents",
+        "AI security",
+        "Incident response",
+        "Enterprise architecture",
+        "Reliability"
+      ]
+    },
+    {
       "id": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
       "url": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
       "external_url": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",

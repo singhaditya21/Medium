@@ -1,5 +1,23 @@
 [
   {
+    "slug": "your-ai-agent-needs-a-real-kill-switch",
+    "title": "Your AI Agent Needs a Real Kill Switch",
+    "description": "A technical and operating blueprint for reliably stopping an enterprise AI agent's authority and effects across identity, workers, networks, tools, queues, ambiguous transactions, incident evidence, and governed recovery.",
+    "publishedAt": "2026-08-23T14:20:00.000Z",
+    "readTime": "33 min read",
+    "tags": [
+      "AI agents",
+      "AI security",
+      "Incident response",
+      "Enterprise architecture",
+      "Reliability"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-ai-agent-needs-a-real-kill-switch",
+    "series": []
+  },
+  {
     "slug": "model-routing-is-capital-allocation",
     "title": "Model Routing Is Capital Allocation",
     "description": "A production blueprint for routing enterprise AI actions across model, context, tool, retry, and verification portfolios using constrained utility, calibration, novelty controls, counterfactual evaluation, and business-effect SLOs.",

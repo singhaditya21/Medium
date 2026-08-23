@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "your-ai-agent-needs-a-real-kill-switch",
+  "operation": "import_to_private_draft",
+  "topics": [
+    "AI Agents",
+    "AI Security",
+    "Incident Response",
+    "Enterprise Architecture",
+    "Reliability"
+  ],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}
