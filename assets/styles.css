@@ -365,7 +365,8 @@ button, input { font: inherit; }
 .article-body blockquote { margin: 2em 0; padding: 4px 0 4px 26px; color: var(--ink); border-left: 3px solid var(--gold); font-size: 25px; font-style: italic; }
 .article-body .disclosure { padding: 16px 18px; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font-family: var(--sans); font-size: 13px; line-height: 1.55; }
 
-.story-figure { width: min(100vw - 48px, 960px); margin: 2.7em 0 2.8em; }
+/* Keep wide technical figures inside the viewport while allowing them to extend beyond the reading column. */
+.story-figure { width: min(960px, calc(100vw - max(24px, calc(50vw - 550px)) - 298px)); margin: 2.7em 0 2.8em; }
 .story-figure img { width: 100%; height: auto; background: var(--surface-strong); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 14px 44px rgba(20, 38, 38, 0.08); }
 .story-figure figcaption { margin-top: 12px; color: var(--ink-soft); font-family: var(--sans); font-size: 11px; line-height: 1.55; }
 
