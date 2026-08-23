@@ -11,6 +11,21 @@
   ],
   "items": [
     {
+      "id": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+      "url": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+      "title": "Human Approval Is a Queueing System",
+      "summary": "Treat human-in-the-loop approval as a risk-priced decision service with queueing models, skilled routing, evidence packets, separation of duties, calibration, and operating SLOs.",
+      "date_published": "2026-08-23T12:20:00.000Z",
+      "tags": [
+        "AI agents",
+        "Human in the loop",
+        "Operations research",
+        "Risk management",
+        "Enterprise AI"
+      ]
+    },
+    {
       "id": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
       "url": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
       "external_url": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",

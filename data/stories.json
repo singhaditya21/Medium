@@ -1,5 +1,23 @@
 [
   {
+    "slug": "human-approval-is-a-queueing-system",
+    "title": "Human Approval Is a Queueing System",
+    "description": "Treat human-in-the-loop approval as a risk-priced decision service with queueing models, skilled routing, evidence packets, separation of duties, calibration, and operating SLOs.",
+    "publishedAt": "2026-08-23T12:20:00.000Z",
+    "readTime": "31 min read",
+    "tags": [
+      "AI agents",
+      "Human in the loop",
+      "Operations research",
+      "Risk management",
+      "Enterprise AI"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=human-approval-is-a-queueing-system",
+    "series": []
+  },
+  {
     "slug": "every-ai-agent-action-needs-a-receipt",
     "title": "Every AI Agent Action Needs a Receipt",
     "description": "A production architecture for canonical, signed, idempotent, independently verified AI-agent action receipts with lineage, selective disclosure, and recovery.",

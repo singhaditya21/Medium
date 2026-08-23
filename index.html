@@ -10,7 +10,7 @@
   <meta property="og:description" content="Essays by Aditya Singh on enterprise AI, agent architecture, governance, identity, economics, and production systems.">
   <meta property="og:url" content="https://singhaditya21.github.io/Medium/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://singhaditya21.github.io/Medium/assets/images/every-ai-agent-action-needs-a-receipt/figure-01.png">
+  <meta property="og:image" content="https://singhaditya21.github.io/Medium/assets/images/human-approval-is-a-queueing-system/figure-01.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://singhaditya21.github.io/Medium/">
   <link rel="alternate" type="application/atom+xml" title="Aditya Singh essays" href="feed.xml">
@@ -18,7 +18,7 @@
   <link rel="alternate" type="application/feed+json" title="Aditya Singh essays" href="feed.json">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "Aditya Singh — Enterprise AI & Agent Architecture", "description": "Essays on enterprise AI, agent architecture, governance, identity, economics, and production systems.", "url": "https://singhaditya21.github.io/Medium/", "author": {"@type": "Person", "name": "Aditya Singh", "url": "https://medium.com/@singhaditya21_89007"}, "blogPost": [{"@type": "BlogPosting", "headline": "Every AI Agent Action Needs a Receipt", "url": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/"}, {"@type": "BlogPosting", "headline": "Your AI Agent's Memory Is a Database, Not a Prompt", "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/"}, {"@type": "BlogPosting", "headline": "Your AI Agent Should Not Have a Standing Role", "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/"}, {"@type": "BlogPosting", "headline": "A $2.4M Account Is Escalating. Should the AI Agent Act?", "url": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/"}, {"@type": "BlogPosting", "headline": "AI Agent Identity Is Not Enough", "url": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/"}, {"@type": "BlogPosting", "headline": "What an Agent Actually Costs", "url": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/"}, {"@type": "BlogPosting", "headline": "The Enterprise Agent Control Tower: A Production Architecture", "url": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/"}, {"@type": "BlogPosting", "headline": "How to Build an Agentic CRM: A Reference Architecture", "url": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/"}, {"@type": "BlogPosting", "headline": "Why Traditional CRM Will Die Without Agentic AI", "url": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "Aditya Singh — Enterprise AI & Agent Architecture", "description": "Essays on enterprise AI, agent architecture, governance, identity, economics, and production systems.", "url": "https://singhaditya21.github.io/Medium/", "author": {"@type": "Person", "name": "Aditya Singh", "url": "https://medium.com/@singhaditya21_89007"}, "blogPost": [{"@type": "BlogPosting", "headline": "Human Approval Is a Queueing System", "url": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/"}, {"@type": "BlogPosting", "headline": "Every AI Agent Action Needs a Receipt", "url": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/"}, {"@type": "BlogPosting", "headline": "Your AI Agent's Memory Is a Database, Not a Prompt", "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/"}, {"@type": "BlogPosting", "headline": "Your AI Agent Should Not Have a Standing Role", "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/"}, {"@type": "BlogPosting", "headline": "A $2.4M Account Is Escalating. Should the AI Agent Act?", "url": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/"}, {"@type": "BlogPosting", "headline": "AI Agent Identity Is Not Enough", "url": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/"}, {"@type": "BlogPosting", "headline": "What an Agent Actually Costs", "url": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/"}, {"@type": "BlogPosting", "headline": "The Enterprise Agent Control Tower: A Production Architecture", "url": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/"}, {"@type": "BlogPosting", "headline": "How to Build an Agentic CRM: A Reference Architecture", "url": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/"}, {"@type": "BlogPosting", "headline": "Why Traditional CRM Will Die Without Agentic AI", "url": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/"}]}</script>
 
   <script>try{document.documentElement.dataset.theme=localStorage.getItem('as-theme')||'light'}catch(e){}</script>
   <title>Aditya Singh — Enterprise AI &amp; Agent Architecture</title>
@@ -54,7 +54,7 @@
       </div>
     </div>
     <aside class="hero-note">
-      <span class="note-index">01 — 09</span>
+      <span class="note-index">01 — 10</span>
       <p>“The hard part of agentic AI is not making a model act. It is deciding what authority that action should carry.”</p>
       <span>Aditya Singh</span>
     </aside>
@@ -87,7 +87,19 @@
       <label class="story-search"><span class="sr-only">Search stories</span><input type="search" placeholder="Search the archive" data-story-search><span aria-hidden="true">⌕</span></label>
     </div>
     <div class="stories-grid" data-story-grid>
-<article class="story-card featured" data-story-card data-search="every ai agent action needs a receipt a production architecture for canonical, signed, idempotent, independently verified ai-agent action receipts with lineage, selective disclosure, and recovery. ai agents auditability distributed systems enterprise architecture ai governance">
+<article class="story-card featured" data-story-card data-search="human approval is a queueing system treat human-in-the-loop approval as a risk-priced decision service with queueing models, skilled routing, evidence packets, separation of duties, calibration, and operating slos. ai agents human in the loop operations research risk management enterprise ai">
+  <a class="story-card-image" href="articles/human-approval-is-a-queueing-system/" tabindex="-1" aria-hidden="true">
+    <img src="assets/images/human-approval-is-a-queueing-system/figure-01.png" alt="Comparison of uniform checkbox review and a risk-priced approval decision service." loading="lazy" decoding="async">
+  </a>
+  <div class="story-card-copy">
+    <div class="card-meta"><time datetime="2026-08-23">23 Aug 2026</time><span>·</span><span>31 min read</span></div>
+    <h2><a href="articles/human-approval-is-a-queueing-system/">Human Approval Is a Queueing System</a></h2>
+    <p>Treat human-in-the-loop approval as a risk-priced decision service with queueing models, skilled routing, evidence packets, separation of duties, calibration, and operating SLOs.</p>
+    <div class="topic-row"><span class="topic-chip">AI agents</span><span class="topic-chip">Human in the loop</span><span class="topic-chip">Operations research</span><span class="topic-chip">Risk management</span><span class="topic-chip">Enterprise AI</span></div>
+    <a class="read-link" href="articles/human-approval-is-a-queueing-system/">Read essay <span>→</span></a>
+  </div>
+</article>
+<article class="story-card" data-story-card data-search="every ai agent action needs a receipt a production architecture for canonical, signed, idempotent, independently verified ai-agent action receipts with lineage, selective disclosure, and recovery. ai agents auditability distributed systems enterprise architecture ai governance">
   <a class="story-card-image" href="articles/every-ai-agent-action-needs-a-receipt/" tabindex="-1" aria-hidden="true">
     <img src="assets/images/every-ai-agent-action-needs-a-receipt/figure-01.png" alt="Comparison of traces, logs, events, and action receipts across the questions they answer." loading="lazy" decoding="async">
   </a>
