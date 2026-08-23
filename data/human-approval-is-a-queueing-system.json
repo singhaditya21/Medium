@@ -1,0 +1,1453 @@
+{
+  "author": "Aditya Singh",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An enterprise deploys an AI agent across sales, support, billing, and account operations. It produces 12,000 proposals a day: address cleanup, contract-language changes, refunds, pricing exceptions, data exports, customer messages, and account termination. Governance requires a human “in the loop,” so every proposal enters one approval inbox. By 11:00, 1,900 items are waiting. Reviewers learn that most are harmless, open less evidence, and approve faster. A routine cleanup submitted at 08:42 sits ahead of a time-sensitive containment action. The dashboard celebrates a 97% approval rate. No one can say whether review prevented loss, whether qualified people saw the right actions, or how much unresolved risk is aging in the queue.",
+      "text": "An enterprise deploys an AI agent across sales, support, billing, and account operations. It produces 12,000 proposals a day: address cleanup, contract-language changes, refunds, pricing exceptions, data exports, customer messages, and account termination. Governance requires a human “in the loop,” so every proposal enters one approval inbox. By 11:00, 1,900 items are waiting. Reviewers learn that most are harmless, open less evidence, and approve faster. A routine cleanup submitted at 08:42 sits ahead of a time-sensitive containment action. The dashboard celebrates a 97% approval rate. No one can say whether review prevented loss, whether qualified people saw the right actions, or how much unresolved risk is aging in the queue."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This story was written with AI writing and visualization assistance. All organizations, action volumes, probabilities, losses, thresholds, reviewer behavior, staffing, service levels, simulations, and costs are synthetic; the architecture and quantitative models are reference designs, not observations about a deployed workforce. The fatigue figures are illustrative scenarios, not findings from human-subject research.",
+      "text": "This story was written with AI writing and visualization assistance. All organizations, action volumes, probabilities, losses, thresholds, reviewer behavior, staffing, service levels, simulations, and costs are synthetic; the architecture and quantitative models are reference designs, not observations about a deployed workforce. The fatigue figures are illustrative scenarios, not findings from human-subject research."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "“Human in the loop” is often treated as a boolean product feature. Either the agent needs approval or it does not. That framing hides the actual system: proposals arrive over time; reviewers have different skills and limits; service times vary; deadlines expire; evidence quality changes decision value; queues compete for capacity; fatigue and habituation affect performance; and every delay has a business cost.",
+      "text": "“Human in the loop” is often treated as a boolean product feature. Either the agent needs approval or it does not. That framing hides the actual system: proposals arrive over time; reviewers have different skills and limits; service times vary; deadlines expire; evidence quality changes decision value; queues compete for capacity; fatigue and habituation affect performance; and every delay has a business cost."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Human approval is therefore a <strong>capacity-constrained decision service</strong>. It needs admission control, service classes, risk-aware priority, eligibility routing, separation of duties, queue models, evidence packets, calibration, error budgets, and recovery. A click is only the final event in a much larger operating system.",
+      "text": "Human approval is therefore a capacity-constrained decision service. It needs admission control, service classes, risk-aware priority, eligibility routing, separation of duties, queue models, evidence packets, calibration, error budgets, and recovery. A click is only the final event in a much larger operating system."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Approval does not add safety when the right reviewer cannot make the right decision before the decision expires.",
+      "text": "Approval does not add safety when the right reviewer cannot make the right decision before the decision expires."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-01.png",
+      "alt": "Comparison of uniform checkbox review and a risk-priced approval decision service.",
+      "caption": "Figure 1. A single FIFO inbox hides risk, skills, evidence, expiry, and learning; a decision service makes each control explicit. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Technical summary",
+      "text": "Technical summary"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The reference design classifies every proposed action by expected impact, likelihood, reversibility, novelty, evidence quality, propagation, and independent controls. Policy maps the result into one of four service classes: no synchronous review, asynchronous review, priority review, or incident command. A queue router selects only eligible reviewers and optimizes deadline risk, not raw FIFO wait. The reviewer receives a signed packet containing the exact delta, sources, contradictions, uncertainty, policy reason, alternatives, expiry, and recovery plan. The choice binds that packet digest and cannot authorize later mutation.",
+      "text": "The reference design classifies every proposed action by expected impact, likelihood, reversibility, novelty, evidence quality, propagation, and independent controls. Policy maps the result into one of four service classes: no synchronous review, asynchronous review, priority review, or incident command. A queue router selects only eligible reviewers and optimizes deadline risk, not raw FIFO wait. The reviewer receives a signed packet containing the exact delta, sources, contradictions, uncertainty, policy reason, alternatives, expiry, and recovery plan. The choice binds that packet digest and cannot authorize later mutation."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Queueing and decision theory answer different parts of the problem:",
+      "text": "Queueing and decision theory answer different parts of the problem:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> <strong>Expected-loss analysis</strong> asks whether qualified review is likely to reduce loss enough to justify labor, delay, residual reviewer error, and tail constraints.<br><strong>•</strong> <strong>Queueing analysis</strong> asks whether arrival volume, service-time distribution, reviewer pools, and priority rules can deliver that review before the action expires.<br><strong>•</strong> <strong>Value-of-information analysis</strong> asks whether one more evidence step is worth its time and cost.<br><strong>•</strong> <strong>Calibration</strong> asks whether automated routes, reviewer decisions, and adjudicated outcomes support narrower or broader autonomy.",
+      "text": "• Expected-loss analysis asks whether qualified review is likely to reduce loss enough to justify labor, delay, residual reviewer error, and tail constraints.\n• Queueing analysis asks whether arrival volume, service-time distribution, reviewer pools, and priority rules can deliver that review before the action expires.\n• Value-of-information analysis asks whether one more evidence step is worth its time and cost.\n• Calibration asks whether automated routes, reviewer decisions, and adjudicated outcomes support narrower or broader autonomy."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The design is deliberately action-level. A “high-confidence model” can propose an irreversible account closure. A “low-confidence model” can propose a harmless tag cleanup. Confidence is one input; it is not the review policy.",
+      "text": "The design is deliberately action-level. A “high-confidence model” can propose an irreversible account closure. A “low-confidence model” can propose a harmless tag cleanup. Confidence is one input; it is not the review policy."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Scope, scenario, and evidence boundary",
+      "text": "Scope, scenario, and evidence boundary"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The synthetic operating scenario contains 12,000 proposals per day. Eighty percent are low-impact, reversible data maintenance. Fifteen percent are customer-visible or financially bounded. Four percent are high-value pricing, refund, contract, or export actions. One percent are containment, termination, or other urgent and difficult-to-reverse actions. Arrivals are bursty around business events, batch jobs, and regional working hours.",
+      "text": "The synthetic operating scenario contains 12,000 proposals per day. Eighty percent are low-impact, reversible data maintenance. Fifteen percent are customer-visible or financially bounded. Four percent are high-value pricing, refund, contract, or export actions. One percent are containment, termination, or other urgent and difficult-to-reverse actions. Arrivals are bursty around business events, batch jobs, and regional working hours."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Reviewers belong to distinct pools: frontline operations, senior pricing, finance level 2, risk, privacy, legal, and incident command. Eligibility includes product, jurisdiction, business-unit scope, value limit, training, recency of certification, conflict of interest, and whether the reviewer participated in proposal creation.",
+      "text": "Reviewers belong to distinct pools: frontline operations, senior pricing, finance level 2, risk, privacy, legal, and incident command. Eligibility includes product, jurisdiction, business-unit scope, value limit, training, recency of certification, conflict of interest, and whether the reviewer participated in proposal creation."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The article uses these definitions:",
+      "text": "The article uses these definitions:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Proposal</strong> is an immutable typed action candidate with exact resource, delta, evidence, precondition, expiry, and recovery specification. <strong>Review task</strong> is one routed decision request for that proposal. <strong>Approval packet</strong> is the reviewer-visible, digest-bound representation. <strong>Decision</strong> is approve, deny, edit-and-repropose, abstain, or expire. <strong>Adjudicated outcome</strong> is a later qualified determination used for calibration; it is not assumed to equal the first reviewer click.",
+      "text": "Proposal is an immutable typed action candidate with exact resource, delta, evidence, precondition, expiry, and recovery specification. Review task is one routed decision request for that proposal. Approval packet is the reviewer-visible, digest-bound representation. Decision is approve, deny, edit-and-repropose, abstain, or expire. Adjudicated outcome is a later qualified determination used for calibration; it is not assumed to equal the first reviewer click."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Arrival rate <code>λ</code></strong> measures eligible review tasks entering a queue per unit time. <strong>Service rate <code>μ</code></strong> is the rate at which one qualified reviewer completes tasks under a declared service-time model. <strong>Offered load <code>a = λ/μ</code></strong> is measured in Erlangs. <strong>Utilization <code>ρ = λ/(cμ)</code></strong> compares offered load with <code>c</code> parallel reviewers. When <code>ρ ≥ 1</code> in a stationary model, the queue has no stable steady state.",
+      "text": "Arrival rate λ measures eligible review tasks entering a queue per unit time. Service rate μ is the rate at which one qualified reviewer completes tasks under a declared service-time model. Offered load a = λ/μ is measured in Erlangs. Utilization ρ = λ/(cμ) compares offered load with c parallel reviewers. When ρ ≥ 1 in a stationary model, the queue has no stable steady state."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "All queues, probabilities, handling times, and cost models here are synthetic. The Erlang-C equations are mathematical derivations under M/M/c assumptions; they are not claims that real approval arrivals or reviewer service times are exponential. Production decisions require empirical distribution fitting, simulation, sensitivity, and workforce review.",
+      "text": "All queues, probabilities, handling times, and cost models here are synthetic. The Erlang-C equations are mathematical derivations under M/M/c assumptions; they are not claims that real approval arrivals or reviewer service times are exponential. Production decisions require empirical distribution fitting, simulation, sensitivity, and workforce review."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Build an approval decision service",
+      "text": "Build an approval decision service"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The approval layer should be a shared service with typed APIs and durable state, not a callback embedded in each agent framework. The agent proposes; the service decides how human judgment is acquired and bound.",
+      "text": "The approval layer should be a shared service with typed APIs and durable state, not a callback embedded in each agent framework. The agent proposes; the service decides how human judgment is acquired and bound."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-02.png",
+      "alt": "Approval architecture connecting proposal, risk engine, policy, queue router, review UI, eligibility, outcome ledger, calibration, and execution boundary.",
+      "caption": "Figure 2. Risk scoring, policy, reviewer eligibility, queueing, human decision, execution, and calibration are separate control responsibilities. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The <strong>proposal gateway</strong> validates a governed action schema. It rejects vague intent such as “handle this account” and requires a field-level delta, expected resource version, evidence manifest, expiration, and postcondition.",
+      "text": "The proposal gateway validates a governed action schema. It rejects vague intent such as “handle this account” and requires a field-level delta, expected resource version, evidence manifest, expiration, and postcondition."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The <strong>risk engine</strong> computes transparent features and categorical flags. It does not make the final authorization decision. The <strong>policy decision point</strong> maps action type, features, organizational risk tolerance, and legal or duty requirements to a review class and obligations.",
+      "text": "The risk engine computes transparent features and categorical flags. It does not make the final authorization decision. The policy decision point maps action type, features, organizational risk tolerance, and legal or duty requirements to a review class and obligations."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The <strong>identity and eligibility service</strong> determines which human principals can review this exact action now. Eligibility can change after task creation, so the router and decision endpoint re-evaluate it. The <strong>queue router</strong> assigns priority and candidate pool. It can defer low-risk work, invoke surge capacity, or reject admission when safe service is impossible.",
+      "text": "The identity and eligibility service determines which human principals can review this exact action now. Eligibility can change after task creation, so the router and decision endpoint re-evaluate it. The queue router assigns priority and candidate pool. It can defer low-risk work, invoke surge capacity, or reject admission when safe service is impossible."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The <strong>review interface</strong> renders an approval packet from structured fields and governed evidence. Approve signs or otherwise integrity-binds the packet digest, decision, reviewer identity, policy, timestamp, and expiry. “Edit” creates a new proposal; it does not mutate the approved one.",
+      "text": "The review interface renders an approval packet from structured fields and governed evidence. Approve signs or otherwise integrity-binds the packet digest, decision, reviewer identity, policy, timestamp, and expiry. “Edit” creates a new proposal; it does not mutate the approved one."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The <strong>outcome ledger</strong> records arrival, classification, assignment attempts, open, evidence navigation, decision, expiry, execution, verification, appeal, and adjudication. It supports operations and evaluation while minimizing sensitive behavioral surveillance.",
+      "text": "The outcome ledger records arrival, classification, assignment attempts, open, evidence navigation, decision, expiry, execution, verification, appeal, and adjudication. It supports operations and evaluation while minimizing sensitive behavioral surveillance."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The <strong>calibration service</strong> analyzes disagreement, outcome quality, review value, and subgroup effects. It proposes threshold or policy changes through governance; it does not change production rules automatically.",
+      "text": "The calibration service analyzes disagreement, outcome quality, review value, and subgroup effects. It proposes threshold or policy changes through governance; it does not change production rules automatically."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This architecture aligns with the <a href=\"https://airc.nist.gov/airmf-resources/airmf/5-sec-core/\">NIST AI RMF Core</a>, which describes governance, documented roles, risk tolerance, human oversight, measurement, independent review, and ongoing monitoring as lifecycle activities. The framework does not prescribe this queue design or its thresholds. It supports the principle that human oversight must be defined, assessed, resourced, and documented in context.",
+      "text": "This architecture aligns with the NIST AI RMF Core, which describes governance, documented roles, risk tolerance, human oversight, measurement, independent review, and ongoing monitoring as lifecycle activities. The framework does not prescribe this queue design or its thresholds. It supports the principle that human oversight must be defined, assessed, resourced, and documented in context."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Decompose action-level risk",
+      "text": "Decompose action-level risk"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Review policy should evaluate the action, not merely the model output. A useful feature vector is:",
+      "text": "Review policy should evaluate the action, not merely the model output. A useful feature vector is:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "x(a) = [impact, error_likelihood, irreversibility, novelty,\n        evidence_weakness, propagation, control_gap]",
+      "language": "text"
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-03.png",
+      "alt": "Seven-factor action-risk model covering impact, likelihood, reversibility, novelty, evidence, propagation, and controls.",
+      "caption": "Figure 3. Seven explicit factors determine action risk, while categorical policy floors prevent one favorable factor from cancelling a mandatory control. AI-assisted design visualization; synthetic factors; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Impact</strong> includes reachable money, customer commitments, rights, safety, privacy, operational continuity, and reputational consequence. Use distributions or bands when value is uncertain; do not collapse every effect into dollars.",
+      "text": "Impact includes reachable money, customer commitments, rights, safety, privacy, operational continuity, and reputational consequence. Use distributions or bands when value is uncertain; do not collapse every effect into dollars."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Error likelihood</strong> conditions on action type, model route, tool chain, evidence pattern, and deployment context. Offline model accuracy is not the same probability that this particular action is harmful.",
+      "text": "Error likelihood conditions on action type, model route, tool chain, evidence pattern, and deployment context. Offline model accuracy is not the same probability that this particular action is harmful."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Irreversibility</strong> measures more than API rollback. A sent message can be corrected but not unseen. A refunded payment can be recharged but still create customer harm. A data export can be deleted internally but may already have left the boundary.",
+      "text": "Irreversibility measures more than API rollback. A sent message can be corrected but not unseen. A refunded payment can be recharged but still create customer harm. A data export can be deleted internally but may already have left the boundary."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Novelty</strong> captures out-of-distribution features: unseen product, jurisdiction, account structure, attachment type, policy combination, tool sequence, or value range. Novelty increases uncertainty even when predicted error remains low.",
+      "text": "Novelty captures out-of-distribution features: unseen product, jurisdiction, account structure, attachment type, policy combination, tool sequence, or value range. Novelty increases uncertainty even when predicted error remains low."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Evidence weakness</strong> covers missing required sources, staleness, provenance gaps, contradictions, transformation loss, and model uncertainty. <strong>Propagation</strong> measures how many downstream systems and people can act on the effect. <strong>Control gap</strong> describes missing independent verification, compensation, leased authority, receipt, or containment.",
+      "text": "Evidence weakness covers missing required sources, staleness, provenance gaps, contradictions, transformation loss, and model uncertainty. Propagation measures how many downstream systems and people can act on the effect. Control gap describes missing independent verification, compensation, leased authority, receipt, or containment."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A transparent risk index may support routing:",
+      "text": "A transparent risk index may support routing:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "R = σ(β0 + βI I + βL L + βV V + βN N + βE E + βP P − βC C)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<code>σ</code> bounds the score. But categorical rules remain necessary: customer data export requires privacy eligibility; an irreversible termination requires senior review; a pricing change above an approved limit requires separation of duties. A low aggregate score cannot override those floors.",
+      "text": "σ bounds the score. But categorical rules remain necessary: customer data export requires privacy eligibility; an irreversible termination requires senior review; a pricing change above an approved limit requires separation of duties. A low aggregate score cannot override those floors."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Store every feature value, source, transformation, model or rules version, uncertainty, and policy result with the task. If the risk engine changes, replay historical tasks under the old and proposed version before modifying routes.",
+      "text": "Store every feature value, source, transformation, model or rules version, uncertainty, and policy result with the task. If the risk engine changes, replay historical tasks under the old and proposed version before modifying routes."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Review only when it changes the constrained decision",
+      "text": "Review only when it changes the constrained decision"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Human review has positive value when it reduces expected decision loss enough to exceed review cost, delay cost, reviewer residual error, and any opportunity cost. It also has mandatory value when law, policy, contractual duty, or organizational risk tolerance requires it regardless of average economics.",
+      "text": "Human review has positive value when it reduces expected decision loss enough to exceed review cost, delay cost, reviewer residual error, and any opportunity cost. It also has mandatory value when law, policy, contractual duty, or organizational risk tolerance requires it regardless of average economics."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-04.png",
+      "alt": "Expected-loss comparison for no review and qualified review with an illustrative $505 value of review.",
+      "caption": "Figure 4. Synthetic probabilities and costs show how expected avoided loss can exceed review and delay cost while a policy floor still constrains the choice. AI-assisted visualization; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For an action class:",
+      "text": "For an action class:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "EL(no review) = p_agent_error × L_error\n\nEL(review)    = C_review + C_delay\n              + p_reviewer_error × L_error\n              + p_review_harm × L_review_harm\n\nValue(review) = EL(no review) − EL(review)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Figure 4 uses <code>p_agent_error = .018</code>, <code>p_reviewer_error = .004</code>, conditional loss <code>$42,000</code>, review labor <code>$18</code>, and delay cost <code>$65</code>. It produces illustrative expected costs of <code>$756</code> without review and <code>$251</code> with review, or <code>$505</code> in value. These are not measured probabilities.",
+      "text": "Figure 4 uses pagenterror = .018, previewererror = .004, conditional loss $42,000, review labor $18, and delay cost $65. It produces illustrative expected costs of $756 without review and $251 with review, or $505 in value. These are not measured probabilities."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Several corrections matter in production:",
+      "text": "Several corrections matter in production:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Errors have a distribution, often with a heavy tail. Expected value may hide a rare unacceptable outcome, so add chance constraints or conditional value-at-risk.<br><strong>•</strong> Reviewer performance depends on action type, evidence, interface, workload, and competence. Do not import one “human accuracy” constant.<br><strong>•</strong> Delay changes the action. A pricing opportunity can expire; a containment decision can allow harm to continue; a fraud signal can become stale.<br><strong>•</strong> Review itself can cause harm through inconsistent treatment, unauthorized access, disclosure, or slow service.<br><strong>•</strong> Review can improve future automation through adjudicated labels, but that future value should not justify unnecessary current exposure.",
+      "text": "• Errors have a distribution, often with a heavy tail. Expected value may hide a rare unacceptable outcome, so add chance constraints or conditional value-at-risk.\n• Reviewer performance depends on action type, evidence, interface, workload, and competence. Do not import one “human accuracy” constant.\n• Delay changes the action. A pricing opportunity can expire; a containment decision can allow harm to continue; a fraud signal can become stale.\n• Review itself can cause harm through inconsistent treatment, unauthorized access, disclosure, or slow service.\n• Review can improve future automation through adjudicated labels, but that future value should not justify unnecessary current exposure."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A constrained decision could be:",
+      "text": "A constrained decision could be:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "minimize   labor_cost + delay_cost + residual_expected_loss\n\nsubject to P(loss > L_max) ≤ ε\n           mandatory_role(action) is present\n           separation_of_duties(action) is satisfied\n           decision_before(expiry)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The organization should document which terms are empirical, estimated, judgmental, or policy-imposed.",
+      "text": "The organization should document which terms are empirical, estimated, judgmental, or policy-imposed."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Create explicit service classes",
+      "text": "Create explicit service classes"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "One queue cannot simultaneously optimize a 30-second incident decision and an eight-hour content review. Define service classes with separate admission, priority, reviewer pools, deadlines, and fallbacks.",
+      "text": "One queue cannot simultaneously optimize a 30-second incident decision and an eight-hour content review. Define service classes with separate admission, priority, reviewer pools, deadlines, and fallbacks."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-05.png",
+      "alt": "Four service classes for no synchronous review, asynchronous review, priority review, and incident command.",
+      "caption": "Figure 5. S0–S3 approval classes declare action characteristics, reviewer pools, maximum waits, and terminal behavior. AI-assisted design visualization; reference classes; not production policy."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>S0 — no synchronous review.</strong> Low-impact, reversible, well-evidenced actions execute under bounded authority and verification. A statistically designed sample may receive retrospective review. “No synchronous review” does not mean no controls.",
+      "text": "S0 — no synchronous review. Low-impact, reversible, well-evidenced actions execute under bounded authority and verification. A statistically designed sample may receive retrospective review. “No synchronous review” does not mean no controls."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>S1 — asynchronous review.</strong> Moderate, non-urgent proposals enter a domain queue with an hours-scale deadline. Expiry denies or regenerates the proposal; it does not leave stale approval open.",
+      "text": "S1 — asynchronous review. Moderate, non-urgent proposals enter a domain queue with an hours-scale deadline. Expiry denies or regenerates the proposal; it does not leave stale approval open."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>S2 — priority review.</strong> High-impact or time-sensitive actions route to senior reviewers with explicit value limits and a minutes-scale SLO. Capacity is reserved, and low-risk queues cannot consume it fully.",
+      "text": "S2 — priority review. High-impact or time-sensitive actions route to senior reviewers with explicit value limits and a minutes-scale SLO. Capacity is reserved, and low-risk queues cannot consume it fully."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>S3 — incident command.</strong> Containment, irreversible, or fast-propagating actions route to a small eligible command pool with seconds-scale acknowledgement. The decision may be “contain now, investigate next,” supported by break-glass governance and after-action review.",
+      "text": "S3 — incident command. Containment, irreversible, or fast-propagating actions route to a small eligible command pool with seconds-scale acknowledgement. The decision may be “contain now, investigate next,” supported by break-glass governance and after-action review."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Policy output should be structured:",
+      "text": "Policy output should be structured:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "{\n  \"service_class\": \"S2\",\n  \"priority\": 87,\n  \"deadline_at\": \"2026-08-23T10:57:00Z\",\n  \"required_skills\": [\"pricing-enterprise\", \"region-apac\"],\n  \"minimum_seniority\": \"principal\",\n  \"value_limit\": 2500000,\n  \"separation_rules\": [\"not-proposer\", \"not-evidence-curator\"],\n  \"minimum_evidence\": [\"pricing-policy-z0\", \"contract-current\"],\n  \"on_expiry\": \"deny_and_repropose\",\n  \"policy_version\": \"approval-routing/19\"\n}",
+      "language": "json"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Service class is part of the approval receipt. Manual reassignment cannot weaken requirements without a new governed decision.",
+      "text": "Service class is part of the approval receipt. Manual reassignment cannot weaken requirements without a new governed decision."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Queueing theory reveals the saturation cliff",
+      "text": "Queueing theory reveals the saturation cliff"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The simplest diagnostic is an M/M/c queue: Poisson arrivals, exponential service time, <code>c</code> identical parallel servers, one class, infinite waiting room, and steady state. Real approval systems violate most assumptions, but the model exposes a crucial fact: delay rises nonlinearly near capacity.",
+      "text": "The simplest diagnostic is an M/M/c queue: Poisson arrivals, exponential service time, c identical parallel servers, one class, infinite waiting room, and steady state. Real approval systems violate most assumptions, but the model exposes a crucial fact: delay rises nonlinearly near capacity."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-06.png",
+      "alt": "Erlang-C heatmap of expected wait for three to ten qualified reviewers and 12 to 92 arrivals per hour.",
+      "caption": "Figure 6. In a synthetic M/M/c model with six-minute mean service, expected wait rises sharply near capacity and becomes unstable at or above full utilization. AI-assisted visualization; mathematical scenario; not workforce data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Let <code>a = λ/μ</code>, <code>ρ = λ/(cμ)</code>, and <code>ρ &lt; 1</code>. The Erlang-C probability that an arrival waits is:",
+      "text": "Let a = λ/μ, ρ = λ/(cμ), and ρ < 1. The Erlang-C probability that an arrival waits is:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "                 a^c\n              ----------\n               c!(1−ρ)\nP(wait) = -------------------------\n           Σ(k=0 to c−1) a^k/k!\n             + a^c/[c!(1−ρ)]",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Expected queue wait is:",
+      "text": "Expected queue wait is:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "E[Wq] = P(wait) / (cμ − λ)\nE[W]  = E[Wq] + 1/μ",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Figure 6 assumes mean service time six minutes, so one reviewer has <code>μ = 10 tasks/hour</code>. Five reviewers offer nominal capacity 50/hour. At 42 arrivals/hour, utilization is 84% and expected queue wait is about 4.8 minutes under these assumptions. At 52/hour the queue is unstable. Adding one reviewer changes both capacity and delay nonlinearly.",
+      "text": "Figure 6 assumes mean service time six minutes, so one reviewer has μ = 10 tasks/hour. Five reviewers offer nominal capacity 50/hour. At 42 arrivals/hour, utilization is 84% and expected queue wait is about 4.8 minutes under these assumptions. At 52/hour the queue is unstable. Adding one reviewer changes both capacity and delay nonlinearly."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Do not use this heatmap as a staffing plan. Real arrivals are bursty and correlated. Service time is typically heavy-tailed: most reviews are short, while complex cases consume an hour. Reviewers are not identical. Skill and value limits partition capacity. Priorities cause low-class starvation. Breaks, training, meetings, time zones, and attention reduce effective availability. Proposals abandon or expire.",
+      "text": "Do not use this heatmap as a staffing plan. Real arrivals are bursty and correlated. Service time is typically heavy-tailed: most reviews are short, while complex cases consume an hour. Reviewers are not identical. Skill and value limits partition capacity. Priorities cause low-class starvation. Breaks, training, meetings, time zones, and attention reduce effective availability. Proposals abandon or expire."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Use empirical discrete-event simulation after the diagnostic. Replay timestamped arrivals, fit service-time distributions by class and reviewer pool, model schedules and eligibility, and test spike, outage, and policy-change scenarios. Preserve uncertainty bands instead of publishing one staffing number.",
+      "text": "Use empirical discrete-event simulation after the diagnostic. Replay timestamped arrivals, fit service-time distributions by class and reviewer pool, model schedules and eligibility, and test spike, outage, and policy-change scenarios. Preserve uncertainty bands instead of publishing one staffing number."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Priority scheduling is a risk policy",
+      "text": "Priority scheduling is a risk policy"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Once multiple classes share capacity, dispatch order becomes part of the risk model. FIFO optimizes arrival fairness but ignores consequence and expiry. Strict priority protects S3 and S2 work but can starve S1 indefinitely. Shortest-processing-time scheduling improves throughput but systematically delays complex decisions. Earliest-deadline-first protects temporal feasibility but can favor low-impact tasks with arbitrary deadlines. No discipline is neutral.",
+      "text": "Once multiple classes share capacity, dispatch order becomes part of the risk model. FIFO optimizes arrival fairness but ignores consequence and expiry. Strict priority protects S3 and S2 work but can starve S1 indefinitely. Shortest-processing-time scheduling improves throughput but systematically delays complex decisions. Earliest-deadline-first protects temporal feasibility but can favor low-impact tasks with arbitrary deadlines. No discipline is neutral."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A practical scheduler uses hard class reservations plus a bounded priority score:",
+      "text": "A practical scheduler uses hard class reservations plus a bounded priority score:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "priority(task, now) =\n    wR × normalized_residual_risk(task)\n  + wD × deadline_pressure(task, now)\n  + wA × bounded_age(task, now)\n  + wP × propagation_velocity(task)\n  − wS × predicted_service_time(task)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<code>deadline_pressure</code> should rise sharply as slack disappears. <code>bounded_age</code> prevents low classes from waiting forever but has a cap so one old cleanup cannot outrank a new containment action. The negative service-time term is small and bounded; otherwise the router optimizes easy throughput while hard decisions age. Categorical S3 requirements and dedicated capacity sit outside the score.",
+      "text": "deadlinepressure should rise sharply as slack disappears. boundedage prevents low classes from waiting forever but has a cap so one old cleanup cannot outrank a new containment action. The negative service-time term is small and bounded; otherwise the router optimizes easy throughput while hard decisions age. Categorical S3 requirements and dedicated capacity sit outside the score."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Slack is not simply <code>deadline − now</code>. The scheduler needs predicted end-to-end completion:",
+      "text": "Slack is not simply deadline − now. The scheduler needs predicted end-to-end completion:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "slack = expires_at\n      − now\n      − predicted_queue_wait\n      − predicted_handle_time\n      − execution_handoff_budget\n      − revalidation_budget",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "When slack is negative, the service should not ask a reviewer to race a stale proposal. It follows the declared fallback: contain, deny, regenerate with current evidence, or escalate to incident command.",
+      "text": "When slack is negative, the service should not ask a reviewer to race a stale proposal. It follows the declared fallback: contain, deny, regenerate with current evidence, or escalate to incident command."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Preemption also needs semantics. Interrupting a reviewer midway through a complex contract decision can destroy context and increase error. S3 work may preempt unstarted S1 assignments while allowing an already opened S2 review a short completion window. The outcome ledger records assignment, open, pause, resume, and requeue events so service-time models distinguish active handling from calendar occupancy.",
+      "text": "Preemption also needs semantics. Interrupting a reviewer midway through a complex contract decision can destroy context and increase error. S3 work may preempt unstarted S1 assignments while allowing an already opened S2 review a short completion window. The outcome ledger records assignment, open, pause, resume, and requeue events so service-time models distinguish active handling from calendar occupancy."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Capacity reservations prevent one class from consuming all servers. For reviewer pool <code>p</code>, policy can reserve <code>r_p,S3</code> slots for S3, <code>r_p,S2</code> for S2, and expose remaining capacity to S1. Unused reservation may be borrowed with a recall rule. Borrowing must not create non-preemptible work that blocks an arriving critical task. Cross-trained surge reviewers add temporary edges to the eligibility graph only after current certification is verified.",
+      "text": "Capacity reservations prevent one class from consuming all servers. For reviewer pool p, policy can reserve rp,S3 slots for S3, rp,S2 for S2, and expose remaining capacity to S1. Unused reservation may be borrowed with a recall rule. Borrowing must not create non-preemptible work that blocks an arriving critical task. Cross-trained surge reviewers add temporary edges to the eligibility graph only after current certification is verified."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Simulate the operating policy before staffing it",
+      "text": "Simulate the operating policy before staffing it"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A discrete-event model should represent individual events rather than average flows:",
+      "text": "A discrete-event model should represent individual events rather than average flows:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1.</strong> proposal arrival with time, class, risk, evidence, expiry, and skill requirements;<br><strong>2.</strong> eligibility snapshot and candidate reviewer set;<br><strong>3.</strong> reviewer schedule, current work, proficiency, and value limit;<br><strong>4.</strong> assignment, accept, open, evidence request, pause, decision, and handoff;<br><strong>5.</strong> source or policy changes that invalidate an open proposal;<br><strong>6.</strong> outage, reviewer absence, queue surge, and break-glass activation;<br><strong>7.</strong> adjudicated decision quality and downstream effect.",
+      "text": "1. proposal arrival with time, class, risk, evidence, expiry, and skill requirements;\n2. eligibility snapshot and candidate reviewer set;\n3. reviewer schedule, current work, proficiency, and value limit;\n4. assignment, accept, open, evidence request, pause, decision, and handoff;\n5. source or policy changes that invalidate an open proposal;\n6. outage, reviewer absence, queue surge, and break-glass activation;\n7. adjudicated decision quality and downstream effect."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Replay actual arrivals when available, but separate training and evaluation periods. Preserve correlations: a product incident can simultaneously increase S3 containment work and remove reviewers who are responding elsewhere. Draw service times from class- and pool-specific distributions, including a long tail. Model reviewer disagreement and evidence requests rather than treating every service completion as a correct decision.",
+      "text": "Replay actual arrivals when available, but separate training and evaluation periods. Preserve correlations: a product incident can simultaneously increase S3 containment work and remove reviewers who are responding elsewhere. Draw service times from class- and pool-specific distributions, including a long tail. Model reviewer disagreement and evidence requests rather than treating every service completion as a correct decision."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Simulation outputs should include wait and deadline percentiles by class, risk backlog, utilization, preemption, context switches, abandonment, expiry, no-eligible capacity, false autonomy, harmful approval, and overtime. Run sensitivity across demand, service-time tail, absence, and routing weights. A staffing recommendation is robust only if the service objective survives plausible combinations—not merely the mean forecast.",
+      "text": "Simulation outputs should include wait and deadline percentiles by class, risk backlog, utilization, preemption, context switches, abandonment, expiry, no-eligible capacity, false autonomy, harmful approval, and overtime. Run sensitivity across demand, service-time tail, absence, and routing weights. A staffing recommendation is robust only if the service objective survives plausible combinations—not merely the mean forecast."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Validate the simulator against a held-out period. If it reproduces throughput but not deadline breaches or skill bottlenecks, it is not decision-ready. Publish the input window, exclusions, distribution choices, random seed, parameter uncertainty, and failure cases with the recommendation.",
+      "text": "Validate the simulator against a held-out period. If it reproduces throughput but not deadline breaches or skill bottlenecks, it is not decision-ready. Publish the input window, exclusions, distribution choices, random seed, parameter uncertainty, and failure cases with the recommendation."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Measure the full approval clock",
+      "text": "Measure the full approval clock"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "“Review time” is often measured from UI open to button click, excluding the largest delays. The service clock begins when a valid task arrives and ends when the bound decision reaches execution or terminal expiry.",
+      "text": "“Review time” is often measured from UI open to button click, excluding the largest delays. The service clock begins when a valid task arrives and ends when the bound decision reaches execution or terminal expiry."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-07.png",
+      "alt": "Timeline covering arrival, classification, assignment, open, decision, handoff, queue and handling intervals, and expiry.",
+      "caption": "Figure 7. Approval latency is decomposed into intake, routing, queue, handle, and execution-handoff intervals with a hard revalidation boundary. AI-assisted design visualization; reference lifecycle; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Capture:",
+      "text": "Capture:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> <code>arrived_at</code>: validated proposal entered the service;<br><strong>•</strong> <code>classified_at</code>: risk and service policy completed;<br><strong>•</strong> <code>assigned_at</code>: eligible reviewer accepted ownership;<br><strong>•</strong> <code>opened_at</code>: packet became visible;<br><strong>•</strong> <code>decision_started_at</code>: reviewer interacted with decision-relevant evidence;<br><strong>•</strong> <code>decided_at</code>: approve, deny, abstain, edit, or expire was signed;<br><strong>•</strong> <code>handed_off_at</code>: downstream authority or rejection receipt was emitted;<br><strong>•</strong> <code>executed_at</code> and <code>verified_at</code>: approved action reached terminal outcome.",
+      "text": "• arrived_at: validated proposal entered the service;\n• classified_at: risk and service policy completed;\n• assigned_at: eligible reviewer accepted ownership;\n• opened_at: packet became visible;\n• decision_started_at: reviewer interacted with decision-relevant evidence;\n• decided_at: approve, deny, abstain, edit, or expire was signed;\n• handed_off_at: downstream authority or rejection receipt was emitted;\n• executed_at and verified_at: approved action reached terminal outcome."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Do not infer attention from page open time. Review analytics should minimize worker surveillance and focus on system design. Evidence navigation, missing-field events, and decision changes can reveal packet problems without pretending to measure cognition.",
+      "text": "Do not infer attention from page open time. Review analytics should minimize worker surveillance and focus on system design. Evidence navigation, missing-field events, and decision changes can reveal packet problems without pretending to measure cognition."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Expiry is a control. If the underlying resource, evidence, policy, reviewer eligibility, or risk band changes, the proposal must be revalidated. The approve endpoint checks packet digest, proposal version, business precondition, reviewer eligibility, and deadline atomically before creating authority.",
+      "text": "Expiry is a control. If the underlying resource, evidence, policy, reviewer eligibility, or risk band changes, the proposal must be revalidated. The approve endpoint checks packet digest, proposal version, business precondition, reviewer eligibility, and deadline atomically before creating authority."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Backlog is aging risk, not just work count",
+      "text": "Backlog is aging risk, not just work count"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "When effective service capacity is below arrivals, backlog grows approximately at <code>λ − cμ</code> in a fluid model. A small average mismatch can become a large risk inventory during a burst.",
+      "text": "When effective service capacity is below arrivals, backlog grows approximately at λ − cμ in a fluid model. A small average mismatch can become a large risk inventory during a burst."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-08.png",
+      "alt": "Three backlog curves for under-capacity, matched, and surge staffing over an eight-hour burst.",
+      "caption": "Figure 8. With 1,200 synthetic arrivals per hour and an initial backlog of 250, 900/hour capacity grows the queue while 1,500/hour surge capacity drains it. AI-assisted visualization; synthetic fluid model; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Figure 8 assumes 1,200 arrivals/hour for eight hours. Effective capacities are 900, 1,200, and 1,500/hour. The under-capacity case grows from 250 to 2,650 open tasks. Matched capacity never removes the initial backlog. Surge capacity drains it in under one hour if the queue is fungible—which real skilled queues are not.",
+      "text": "Figure 8 assumes 1,200 arrivals/hour for eight hours. Effective capacities are 900, 1,200, and 1,500/hour. The under-capacity case grows from 250 to 2,650 open tasks. Matched capacity never removes the initial backlog. Surge capacity drains it in under one hour if the queue is fungible—which real skilled queues are not."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An operational backlog view needs more dimensions:",
+      "text": "An operational backlog view needs more dimensions:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "risk_backlog = Σ open_task_i [exposure_i × urgency(age_i, deadline_i)]\n\ndeadline_debt = Σ max(0, predicted_completion_i − deadline_i)\n\nskill_debt(pool) = arrivals_requiring_pool − effective_capacity(pool)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Counts should be segmented by service class, risk band, action type, reviewer pool, jurisdiction, age, deadline slack, and evidence completeness. The ten oldest low-risk tasks should not obscure a new high-impact task with three minutes of slack.",
+      "text": "Counts should be segmented by service class, risk band, action type, reviewer pool, jurisdiction, age, deadline slack, and evidence completeness. The ten oldest low-risk tasks should not obscure a new high-impact task with three minutes of slack."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Use Little's Law as an instrumentation check over a stable measurement window:",
+      "text": "Use Little's Law as an instrumentation check over a stable measurement window:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "L = λW",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<code>L</code> is average number of tasks in the system, <code>λ</code> is throughput, and <code>W</code> is average end-to-end time. The relationship is broad, but the measurement boundary must match: do not compare open-queue count with arrival-to-execution time while excluding in-review work. If observed values diverge materially after accounting for window and transients, task states may be missing, duplicated, abandoned, or measured under inconsistent clocks. Apply the check separately by class and pool. It validates accounting, not service quality; a perfectly measured six-hour wait can still violate the decision deadline.",
+      "text": "L is average number of tasks in the system, λ is throughput, and W is average end-to-end time. The relationship is broad, but the measurement boundary must match: do not compare open-queue count with arrival-to-execution time while excluding in-review work. If observed values diverge materially after accounting for window and transients, task states may be missing, duplicated, abandoned, or measured under inconsistent clocks. Apply the check separately by class and pool. It validates accounting, not service quality; a perfectly measured six-hour wait can still violate the decision deadline."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Admission control is legitimate. During overload, the service can pause low-value proposal generation, batch similar S1 work, reduce autonomous candidate volume, require stronger evidence before admission, or deny non-urgent proposals with a retry-after signal. It must not silently route S2 work to an unqualified general queue.",
+      "text": "Admission control is legitimate. During overload, the service can pause low-value proposal generation, batch similar S1 work, reduce autonomous candidate volume, require stronger evidence before admission, or deny non-urgent proposals with a retry-after signal. It must not silently route S2 work to an unqualified general queue."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Eligibility routing fragments capacity",
+      "text": "Eligibility routing fragments capacity"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A reviewer who is available is not necessarily eligible. The routing graph is bipartite: action requirements on one side and reviewer pools or individuals on the other. An edge exists only when every current constraint passes.",
+      "text": "A reviewer who is available is not necessarily eligible. The routing graph is bipartite: action requirements on one side and reviewer pools or individuals on the other. An edge exists only when every current constraint passes."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-09.png",
+      "alt": "Bipartite routing graph between pricing, refund, closure, and export actions and qualified reviewer pools.",
+      "caption": "Figure 9. Eligibility edges show why nominal headcount overstates usable capacity for specialized, high-risk approval classes. AI-assisted design visualization; reference graph; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Eligibility predicate:",
+      "text": "Eligibility predicate:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "eligible(task, reviewer, time) =\n    active(reviewer, time)\n  ∧ trained(reviewer, task.action_type)\n  ∧ jurisdiction_allowed(reviewer, task.subject)\n  ∧ reviewer.value_limit ≥ task.exposure\n  ∧ reviewer.product_scope contains task.product\n  ∧ no_conflict(reviewer, task)\n  ∧ separation_of_duties(reviewer, task)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "After hard eligibility, routing can minimize a cost function:",
+      "text": "After hard eligibility, routing can minimize a cost function:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "route_cost = α·predicted_deadline_breach\n           + β·expected_wait\n           + γ·skill_mismatch\n           + δ·workload_imbalance\n           + ε·context_switch_cost",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Skill mismatch should not relax a hard eligibility rule. If no reviewer qualifies, the task escalates, expires, or is denied according to policy. The system must expose “no eligible capacity” rather than recording an ordinary delay.",
+      "text": "Skill mismatch should not relax a hard eligibility rule. If no reviewer qualifies, the task escalates, expires, or is denied according to policy. The system must expose “no eligible capacity” rather than recording an ordinary delay."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Routing fairness matters. Always selecting the fastest reviewer can overload experienced staff and prevent others from developing competence. Use controlled load balancing, mentoring queues, certification tasks, and quality monitoring without turning high-risk decisions into training exercises invisibly.",
+      "text": "Routing fairness matters. Always selecting the fastest reviewer can overload experienced staff and prevent others from developing competence. Use controlled load balancing, mentoring queues, certification tasks, and quality monitoring without turning high-risk decisions into training exercises invisibly."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Enforce separation of duties",
+      "text": "Enforce separation of duties"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Human approval is not independent merely because a human clicked. The same person might have requested the action, curated the evidence, configured the policy, issued authority, or verified the result.",
+      "text": "Human approval is not independent merely because a human clicked. The same person might have requested the action, curated the evidence, configured the policy, issued authority, or verified the result."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-10.png",
+      "alt": "Six-role graph for proposer, evidence curator, approver, lease issuer, executor, and verifier with forbidden combinations.",
+      "caption": "Figure 10. Separation-of-duties rules prohibit self-approval, self-execution, self-verification, and evidence-curator approval combinations. AI-assisted design visualization; reference control graph; not production policy."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<a href=\"https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final\">NIST SP 800-53 Rev. 5</a> includes controls for separation of duties and least privilege, including AC-5 and AC-6. An agent approval service must translate those organizational controls into runtime identity relationships.",
+      "text": "NIST SP 800-53 Rev. 5 includes controls for separation of duties and least privilege, including AC-5 and AC-6. An agent approval service must translate those organizational controls into runtime identity relationships."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Model roles explicitly:",
+      "text": "Model roles explicitly:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> proposal requester and on-behalf-of subject;<br><strong>•</strong> agent workload and orchestration service;<br><strong>•</strong> evidence curator or source owner;<br><strong>•</strong> policy administrator;<br><strong>•</strong> reviewer and approving authority;<br><strong>•</strong> permission issuer;<br><strong>•</strong> executor;<br><strong>•</strong> effect verifier;<br><strong>•</strong> appeal adjudicator.",
+      "text": "• proposal requester and on-behalf-of subject;\n• agent workload and orchestration service;\n• evidence curator or source owner;\n• policy administrator;\n• reviewer and approving authority;\n• permission issuer;\n• executor;\n• effect verifier;\n• appeal adjudicator."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Evaluate conflicts across direct identity, group membership, delegation, service ownership, reporting relationships, and recent participation. A reviewer using a second account is still the same person. A service operated exclusively by the proposal team may not provide sufficient independence for high-risk verification.",
+      "text": "Evaluate conflicts across direct identity, group membership, delegation, service ownership, reporting relationships, and recent participation. A reviewer using a second account is still the same person. A service operated exclusively by the proposal team may not provide sufficient independence for high-risk verification."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Break-glass paths are necessary for incidents. They should require a declared emergency reason, stronger authentication, time-bounded authority, immutable receipt, immediate notification, and after-action review by an independent party. Break-glass is not a permanent high-priority queue bypass.",
+      "text": "Break-glass paths are necessary for incidents. They should require a declared emergency reason, stronger authentication, time-bounded authority, immutable receipt, immediate notification, and after-action review by an independent party. Break-glass is not a permanent high-priority queue bypass."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The approval packet is a decision instrument",
+      "text": "The approval packet is a decision instrument"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Reviewers frequently see a model summary and approve it without inspecting primary evidence. The interface should instead make the exact business decision and its uncertainty legible.",
+      "text": "Reviewers frequently see a model summary and approve it without inspecting primary evidence. The interface should instead make the exact business decision and its uncertainty legible."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-11.png",
+      "alt": "Approval packet centered on the exact quote delta with evidence, uncertainty, policy, recovery, and signed choices.",
+      "caption": "Figure 11. A reviewer signs an exact, expiring delta alongside sources, conflicts, policy, uncertainty, alternatives, and recovery. AI-assisted design visualization; synthetic example; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The packet includes:",
+      "text": "The packet includes:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> exact resource, field delta, current value, expected version, and downstream effects;<br><strong>•</strong> account or case exposure and action risk factors;<br><strong>•</strong> required sources, citations, freshness, provenance, and contradictions;<br><strong>•</strong> model inference and uncertainty clearly separated from observed facts;<br><strong>•</strong> policy result, review class, reviewer eligibility reason, and value limit;<br><strong>•</strong> available alternatives: approve, deny, reduce value, request evidence, abstain;<br><strong>•</strong> expiry and consequences of delay;<br><strong>•</strong> postcondition, verification, compensation, and recovery plan;<br><strong>•</strong> proposal, evidence, and packet digests.",
+      "text": "• exact resource, field delta, current value, expected version, and downstream effects;\n• account or case exposure and action risk factors;\n• required sources, citations, freshness, provenance, and contradictions;\n• model inference and uncertainty clearly separated from observed facts;\n• policy result, review class, reviewer eligibility reason, and value limit;\n• available alternatives: approve, deny, reduce value, request evidence, abstain;\n• expiry and consequences of delay;\n• postcondition, verification, compensation, and recovery plan;\n• proposal, evidence, and packet digests."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Avoid dark patterns. Approve and deny deserve comparable visibility. Keyboard shortcuts should not make high-risk approval effortless by accident. The UI should surface material changes between versions and never carry a prior approval to an edited proposal.",
+      "text": "Avoid dark patterns. Approve and deny deserve comparable visibility. Keyboard shortcuts should not make high-risk approval effortless by accident. The UI should surface material changes between versions and never carry a prior approval to an edited proposal."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An approval record can be:",
+      "text": "An approval record can be:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "{\n  \"approval_id\": \"apr_01JQ8Z...\",\n  \"proposal_id\": \"prop_01JQ8Y...\",\n  \"proposal_sha256\": \"sha256:91ab...72e0\",\n  \"packet_sha256\": \"sha256:c20f...ae17\",\n  \"decision\": \"approve\",\n  \"limits\": {\"discount_pct_lte\": 8},\n  \"reviewer\": \"user:pricing-principal-17\",\n  \"eligibility_policy\": \"pricing-reviewer/12\",\n  \"routing_policy\": \"approval-routing/19\",\n  \"decided_at\": \"2026-08-23T10:51:14Z\",\n  \"expires_at\": \"2026-08-23T10:57:00Z\"\n}",
+      "language": "json"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Execution verifies every digest, limit, identity, deadline, and target precondition before authority is issued.",
+      "text": "Execution verifies every digest, limit, identity, deadline, and target precondition before authority is issued."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Evidence quality determines review depth",
+      "text": "Evidence quality determines review depth"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A reviewer cannot improve a decision when the packet lacks decision-relevant evidence. Evidence quality should route depth and trigger rework before consuming scarce senior capacity.",
+      "text": "A reviewer cannot improve a decision when the packet lacks decision-relevant evidence. Evidence quality should route depth and trigger rework before consuming scarce senior capacity."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-12.png",
+      "alt": "Formula plate for required-source coverage, freshness, corroboration, provenance, conflict, and model uncertainty.",
+      "caption": "Figure 12. A synthetic evidence-quality score exposes support factors and separate conflict and uncertainty penalties. AI-assisted visualization; illustrative weights; not calibrated production evidence."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "One routing heuristic is:",
+      "text": "One routing heuristic is:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "E = wR·required_source_coverage\n  + wF·freshness\n  + wK·independent_corroboration\n  + wP·provenance_completeness\n  − λC·conflict\n  − λU·model_uncertainty",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Figure 12 uses synthetic values <code>.90, .82, .70, 1.0, .25, .18</code>. It produces a review-routing signal, not probability of truth. Categorical requirements remain: if the current contract is mandatory and absent, no weighted combination substitutes for it.",
+      "text": "Figure 12 uses synthetic values .90, .82, .70, 1.0, .25, .18. It produces a review-routing signal, not probability of truth. Categorical requirements remain: if the current contract is mandatory and absent, no weighted combination substitutes for it."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Low evidence quality can cause three different routes. <strong>Acquire</strong> asks an automated connector for missing evidence before queue admission. <strong>Deep review</strong> sends the task to a reviewer qualified to interpret conflicts. <strong>Deny or abstain</strong> applies when evidence cannot be obtained before expiry or the action is too risky under uncertainty.",
+      "text": "Low evidence quality can cause three different routes. Acquire asks an automated connector for missing evidence before queue admission. Deep review sends the task to a reviewer qualified to interpret conflicts. Deny or abstain applies when evidence cannot be obtained before expiry or the action is too risky under uncertainty."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Measure packet yield: the proportion of admitted tasks that contain all required evidence, the additional review time caused by missing fields, and the outcomes of evidence requests. Improving upstream source contracts may create more capacity than hiring reviewers.",
+      "text": "Measure packet yield: the proportion of admitted tasks that contain all required evidence, the additional review time caused by missing fields, and the outcomes of evidence requests. Improving upstream source contracts may create more capacity than hiring reviewers."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Stop gathering evidence when marginal value turns negative",
+      "text": "Stop gathering evidence when marginal value turns negative"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Review can continue indefinitely. Value-of-information analysis asks whether the expected improvement from another evidence step exceeds labor, delay, and opportunity cost.",
+      "text": "Review can continue indefinitely. Value-of-information analysis asks whether the expected improvement from another evidence step exceeds labor, delay, and opportunity cost."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-13.png",
+      "alt": "Three synthetic net-value curves for low-, medium-, and high-risk review as minutes increase.",
+      "caption": "Figure 13. Saturating information benefit and rising review cost create different stopping points for low-, medium-, and high-risk actions. AI-assisted visualization; synthetic curves; not reviewer data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For candidate evidence step <code>e</code>:",
+      "text": "For candidate evidence step e:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "VOI(e) = E[min loss before e] − E[min loss after observing e]\n\nNetVOI(e) = VOI(e) − labor(e) − delay(e) − access_risk(e)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The expectation integrates possible evidence outcomes and resulting decisions. In practice, exact probabilities are difficult. Teams can use calibrated scenario estimates, sensitivity ranges, or ordered evidence policies. The principle remains useful: do not ask a senior reviewer to open five redundant documents when one independent authoritative record resolves the decision.",
+      "text": "The expectation integrates possible evidence outcomes and resulting decisions. In practice, exact probabilities are difficult. Teams can use calibrated scenario estimates, sensitivity ranges, or ordered evidence policies. The principle remains useful: do not ask a senior reviewer to open five redundant documents when one independent authoritative record resolves the decision."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "High-risk actions justify more evidence because potential avoided loss is larger. Urgent actions justify less delay and may choose containment rather than full adjudication. Low-risk actions should often abstain or use retrospective sampling rather than spend expensive synchronous review.",
+      "text": "High-risk actions justify more evidence because potential avoided loss is larger. Urgent actions justify less delay and may choose containment rather than full adjudication. Low-risk actions should often abstain or use retrospective sampling rather than spend expensive synchronous review."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The packet can show a recommended next evidence step and its reason, but the reviewer retains the ability to abstain or escalate. Track whether suggested evidence changed decisions; otherwise “more context” becomes unmeasured latency.",
+      "text": "The packet can show a recommended next evidence step and its reason, but the reviewer retains the ability to abstain or escalate. Track whether suggested evidence changed decisions; otherwise “more context” becomes unmeasured latency."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Fatigue can look like efficiency",
+      "text": "Fatigue can look like efficiency"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "As reviewers process a long streak, median handle time may fall while missed problems rise. The system might celebrate lower latency and higher throughput at exactly the moment judgment quality weakens.",
+      "text": "As reviewers process a long streak, median handle time may fall while missed problems rise. The system might celebrate lower latency and higher throughput at exactly the moment judgment quality weakens."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-14.png",
+      "alt": "Dual-axis synthetic curves where miss probability rises and median handle time falls across consecutive decisions.",
+      "caption": "Figure 14. A synthetic fatigue scenario shows why faster approvals during long uninterrupted streaks are not automatically better performance. AI-assisted visualization; illustrative curves only; not human-subject evidence."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Figure 14 is a scenario, not an empirical claim. A production organization should not impose fatigue thresholds without validated workforce research, ethical review where applicable, labor considerations, and local evidence. Still, the design should make possible failure visible.",
+      "text": "Figure 14 is a scenario, not an empirical claim. A production organization should not impose fatigue thresholds without validated workforce research, ethical review where applicable, labor considerations, and local evidence. Still, the design should make possible failure visible."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Useful signals include consecutive high-risk decisions, time since break or rotation, class switching, packet-open-to-decision distribution, evidence navigation, repeated approval patterns, reviewer-requested deferrals, and outcome disagreement. These signals are sensitive. Govern them for safety improvement, minimize individual surveillance, limit retention, provide transparency, and avoid simplistic productivity scoring.",
+      "text": "Useful signals include consecutive high-risk decisions, time since break or rotation, class switching, packet-open-to-decision distribution, evidence navigation, repeated approval patterns, reviewer-requested deferrals, and outcome disagreement. These signals are sensitive. Govern them for safety improvement, minimize individual surveillance, limit retention, provide transparency, and avoid simplistic productivity scoring."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Controls can include rotation between high- and low-intensity work, maximum uninterrupted high-risk streaks, scheduled recovery time, two-person review for rare actions, peer sampling, more concise packets, and surge staffing. Randomly inserting obvious “attention checks” can degrade trust and distort work; evaluate interventions rather than assuming they help.",
+      "text": "Controls can include rotation between high- and low-intensity work, maximum uninterrupted high-risk streaks, scheduled recovery time, two-person review for rare actions, peer sampling, more concise packets, and surge staffing. Randomly inserting obvious “attention checks” can degrade trust and distort work; evaluate interventions rather than assuming they help."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Quality metrics belong at system and cohort level first. If many qualified reviewers miss the same issue, fix evidence and interface design before blaming individuals.",
+      "text": "Quality metrics belong at system and cohort level first. If many qualified reviewers miss the same issue, fix evidence and interface design before blaming individuals."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Optimize thresholds under capacity and risk constraints",
+      "text": "Optimize thresholds under capacity and risk constraints"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Routing threshold determines review volume. Lowering it sends more actions to humans, raising labor and delay while reducing some residual loss. Raising it saves capacity but exposes more automated errors.",
+      "text": "Routing threshold determines review volume. Lowering it sends more actions to humans, raising labor and delay while reducing some residual loss. Raising it saves capacity but exposes more automated errors."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-15.png",
+      "alt": "Synthetic frontier of total cost and residual loss as the proportion of actions sent to review changes.",
+      "caption": "Figure 15. A 50,000-action synthetic simulation finds a risk-constrained total-cost minimum near a 60% review rate for the modeled action subset. AI-assisted visualization; declared simulation; not production policy."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For threshold <code>τ</code> and capacity state <code>q</code>:",
+      "text": "For threshold τ and capacity state q:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "minimize_τ  C_review(τ, q)\n          + C_delay(τ, q)\n          + E[L_residual(τ)]\n          + C_instability(τ, q)\n\nsubject to false_autonomy_high_impact(τ) ≤ ε\n           P(wait_S2 > 15 min | τ, q) ≤ .05\n           mandatory_review_rules satisfied",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Figure 15 simulates 50,000 actions with synthetic risk scores and cost terms. The point is not its 60% mark. The point is that queue delay makes review cost endogenous: the same threshold can be affordable at 40% utilization and dangerous at 95%. Review capacity has a shadow price.",
+      "text": "Figure 15 simulates 50,000 actions with synthetic risk scores and cost terms. The point is not its 60% mark. The point is that queue delay makes review cost endogenous: the same threshold can be affordable at 40% utilization and dangerous at 95%. Review capacity has a shadow price."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Thresholds should vary by action class, evidence pattern, reversibility, and reviewer pool. During demand spikes, policy may tighten admission for low-value proposals while preserving mandatory high-risk review. It should not automatically raise the high-risk automation threshold to make the dashboard green.",
+      "text": "Thresholds should vary by action class, evidence pattern, reversibility, and reviewer pool. During demand spikes, policy may tighten admission for low-value proposals while preserving mandatory high-risk review. It should not automatically raise the high-risk automation threshold to make the dashboard green."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Evaluate proposed thresholds offline, in shadow routing, and with canary action classes. Compare risk-weighted outcomes and subgroup effects, not only aggregate accuracy.",
+      "text": "Evaluate proposed thresholds offline, in shadow routing, and with canary action classes. Compare risk-weighted outcomes and subgroup effects, not only aggregate accuracy."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Shadow review calibrates the boundary",
+      "text": "Shadow review calibrates the boundary"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Before expanding autonomy, run automated decisions and qualified review in parallel without letting the automated branch execute. Later adjudication creates a four-cell operating view.",
+      "text": "Before expanding autonomy, run automated decisions and qualified review in parallel without letting the automated branch execute. Later adjudication creates a four-cell operating view."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-16.png",
+      "alt": "Two-by-two shadow-review matrix for safe automate, false autonomy, false escalation, and correct escalation.",
+      "caption": "Figure 16. A synthetic 10,000-case matrix highlights 210 false-autonomy and 560 false-escalation cases for risk-weighted analysis. AI-assisted visualization; synthetic counts; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The synthetic matrix has 7,820 safe automation cases, 1,410 correct escalations, 560 false escalations, and 210 false-autonomy cases. Counts alone are insufficient. Weight disagreement by impact and investigate clusters by action, source pattern, model route, reviewer, product, jurisdiction, and novelty.",
+      "text": "The synthetic matrix has 7,820 safe automation cases, 1,410 correct escalations, 560 false escalations, and 210 false-autonomy cases. Counts alone are insufficient. Weight disagreement by impact and investigate clusters by action, source pattern, model route, reviewer, product, jurisdiction, and novelty."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Reviewers are not automatic ground truth. Two reviewers can share a wrong evidence packet or policy interpretation. Use blinded double review for samples, adjudication rules, appeal outcomes, and authoritative business state where available. Measure inter-reviewer agreement and distinguish genuine ambiguity from poor guidance.",
+      "text": "Reviewers are not automatic ground truth. Two reviewers can share a wrong evidence packet or policy interpretation. Use blinded double review for samples, adjudication rules, appeal outcomes, and authoritative business state where available. Measure inter-reviewer agreement and distinguish genuine ambiguity from poor guidance."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Shadowing also estimates capacity. It reveals service-time distributions, skill bottlenecks, packet defects, deadline pressure, and evidence requests before the queue becomes a production dependency. Protect reviewer time by sampling low-risk actions intelligently rather than duplicating everything forever.",
+      "text": "Shadowing also estimates capacity. It reveals service-time distributions, skill bottlenecks, packet defects, deadline pressure, and evidence requests before the queue becomes a production dependency. Protect reviewer time by sampling low-risk actions intelligently rather than duplicating everything forever."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Promotion requires a deployment contract: allowed action slice, maximum exposure, evidence floors, threshold, eligible pools, queue SLOs, false-autonomy budget, appeal path, monitoring, and rollback trigger.",
+      "text": "Promotion requires a deployment contract: allowed action slice, maximum exposure, evidence floors, threshold, eligible pools, queue SLOs, false-autonomy budget, appeal path, monitoring, and rollback trigger."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Workforce capacity is a business portfolio",
+      "text": "Workforce capacity is a business portfolio"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Staffing should be calculated by reviewer pool and time interval, not one global headcount. Required capacity includes productive handling, variability buffer, breaks, training, calibration, appeals, incident response, and management.",
+      "text": "Staffing should be calculated by reviewer pool and time interval, not one global headcount. Required capacity includes productive handling, variability buffer, breaks, training, calibration, appeals, incident response, and management."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For interval <code>t</code>, pool <code>p</code>, and class <code>s</code>:",
+      "text": "For interval t, pool p, and class s:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "demand_minutes[p,t] = Σ_s arrivals[s,t] × mean_service[s,p]\n\neffective_minutes_per_reviewer[t] = scheduled_minutes\n                                  × availability_factor\n                                  × proficiency_factor\n\nbase_reviewers[p,t] = demand_minutes[p,t] / effective_minutes_per_reviewer[t]",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Then size a variability and service-level buffer using queueing or simulation. Avoid treating <code>availability_factor</code> as an individual productivity target; it is a planning assumption that includes system-level time.",
+      "text": "Then size a variability and service-level buffer using queueing or simulation. Avoid treating availabilityfactor as an individual productivity target; it is a planning assumption that includes system-level time."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Cross-training creates option value by adding eligibility edges, but certification and quality must be measured. On-call senior pools reduce incident wait but have opportunity cost. Follow-the-sun staffing reduces overnight delay but introduces jurisdiction, handoff, and continuity requirements. Vendor review capacity adds data-access, quality, labor, and accountability considerations.",
+      "text": "Cross-training creates option value by adding eligibility edges, but certification and quality must be measured. On-call senior pools reduce incident wait but have opportunity cost. Follow-the-sun staffing reduces overnight delay but introduces jurisdiction, handoff, and continuity requirements. Vendor review capacity adds data-access, quality, labor, and accountability considerations."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The business case compares capacity cost with expected avoided loss, opportunity delay, and autonomy enabled. If one specialized queue is the constraint, adding general reviewers may not help. Source automation, clearer packets, policy simplification, and narrower action design can reduce demand more safely.",
+      "text": "The business case compares capacity cost with expected avoided loss, opportunity delay, and autonomy enabled. If one specialized queue is the constraint, adding general reviewers may not help. Source automation, clearer packets, policy simplification, and narrower action design can reduce demand more safely."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Operate approval with class-specific objectives",
+      "text": "Operate approval with class-specific objectives"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Average response time and approval rate are weak metrics. A system can meet both while failing the rare actions that justify review.",
+      "text": "Average response time and approval rate are weak metrics. A system can meet both while failing the rare actions that justify review."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-17.png",
+      "alt": "Eight-row approval SLO scorecard for wait, eligible routing, expiry, false autonomy, appeals, packet coverage, and fatigue rotation.",
+      "caption": "Figure 17. A synthetic 30-day scorecard shows deliberate breaches in S2 p95 wait and false-autonomy rate with explicit owners. AI-assisted visualization; synthetic values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Measure:",
+      "text": "Measure:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> arrival, service, wait, and end-to-end decision time by class and pool;<br><strong>•</strong> deadline breach, expiry, abandonment, reassignment, and no-eligible-reviewer rate;<br><strong>•</strong> packet completeness and evidence-request rate;<br><strong>•</strong> approve, deny, abstain, edit, and appeal outcomes;<br><strong>•</strong> false autonomy, false escalation, harmful approval, and harmful denial after adjudication;<br><strong>•</strong> reviewer disagreement and calibration by action slice;<br><strong>•</strong> stale approval rejected at execution;<br><strong>•</strong> separation-of-duties and value-limit violations;<br><strong>•</strong> ambiguity, recovery, and downstream verification outcomes;<br><strong>•</strong> workload distribution and ethically governed fatigue indicators.",
+      "text": "• arrival, service, wait, and end-to-end decision time by class and pool;\n• deadline breach, expiry, abandonment, reassignment, and no-eligible-reviewer rate;\n• packet completeness and evidence-request rate;\n• approve, deny, abstain, edit, and appeal outcomes;\n• false autonomy, false escalation, harmful approval, and harmful denial after adjudication;\n• reviewer disagreement and calibration by action slice;\n• stale approval rejected at execution;\n• separation-of-duties and value-limit violations;\n• ambiguity, recovery, and downstream verification outcomes;\n• workload distribution and ethically governed fatigue indicators."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Use percentiles and conditional metrics. <code>P(wait &gt; 15m | S2, pricing, APAC)</code> is actionable; global mean wait is not. Maintain zero-event alerts for ineligible approval and approval after expiry.",
+      "text": "Use percentiles and conditional metrics. P(wait  15m | S2, pricing, APAC) is actionable; global mean wait is not. Maintain zero-event alerts for ineligible approval and approval after expiry."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Error budgets control promotion. If false autonomy or harmful approval exceeds the budget, narrow the action slice, increase evidence or review, and investigate. If wait breaches occur with sound decisions, add capacity or reduce admissible volume. Do not compensate for a quality breach by rushing reviewers.",
+      "text": "Error budgets control promotion. If false autonomy or harmful approval exceeds the budget, narrow the action slice, increase evidence or review, and investigate. If wait breaches occur with sound decisions, add capacity or reduce admissible volume. Do not compensate for a quality breach by rushing reviewers."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Migrate from checkbox review to a decision service",
+      "text": "Migrate from checkbox review to a decision service"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The first step is measurement, not automation.",
+      "text": "The first step is measurement, not automation."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/human-approval-is-a-queueing-system/figure-18.png",
+      "alt": "Six-phase roadmap from approval inventory through instrumentation, classification, routing, calibration, and bounded autonomy.",
+      "caption": "Figure 18. Approval maturity increases behind baseline, policy, queue, false-autonomy, and independent-review gates. AI-assisted design visualization; reference roadmap; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 0 — Inventory approval surfaces",
+      "text": "Phase 0 — Inventory approval surfaces"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Find inboxes, chat approvals, ticket states, spreadsheet signoffs, email replies, and implicit “no objection” paths. Map action type, identity, evidence, queue, value limit, expiry, execution binding, and outcome.",
+      "text": "Find inboxes, chat approvals, ticket states, spreadsheet signoffs, email replies, and implicit “no objection” paths. Map action type, identity, evidence, queue, value limit, expiry, execution binding, and outcome."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> every consequential action has an owner and a documented approval path.",
+      "text": "Gate: every consequential action has an owner and a documented approval path."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 1 — Instrument timestamps and outcomes",
+      "text": "Phase 1 — Instrument timestamps and outcomes"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Create stable task and proposal identities. Record lifecycle timestamps, reviewer eligibility, decision, execution, verification, appeal, and recovery. Baseline arrivals and service distributions without using the data for simplistic employee scoring.",
+      "text": "Create stable task and proposal identities. Record lifecycle timestamps, reviewer eligibility, decision, execution, verification, appeal, and recovery. Baseline arrivals and service distributions without using the data for simplistic employee scoring."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> demand, capacity, and outcome evidence is reliable enough for design.",
+      "text": "Gate: demand, capacity, and outcome evidence is reliable enough for design."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 2 — Define risk and service classes",
+      "text": "Phase 2 — Define risk and service classes"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Publish action schemas, risk factors, categorical review floors, S0–S3 classes, deadlines, fallbacks, and separation rules. Replay historical work and review edge cases.",
+      "text": "Publish action schemas, risk factors, categorical review floors, S0–S3 classes, deadlines, fallbacks, and separation rules. Replay historical work and review edge cases."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> business, risk, legal, security, and operations approve the policy contract.",
+      "text": "Gate: business, risk, legal, security, and operations approve the policy contract."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 3 — Route by eligibility and deadline",
+      "text": "Phase 3 — Route by eligibility and deadline"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Implement hard eligibility, skill pools, class reservations, expiry, and admission control. Operate queue SLOs and overload drills. Keep thresholds conservative.",
+      "text": "Implement hard eligibility, skill pools, class reservations, expiry, and admission control. Operate queue SLOs and overload drills. Keep thresholds conservative."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> representative bursts meet critical-class wait and no-eligible-capacity objectives.",
+      "text": "Gate: representative bursts meet critical-class wait and no-eligible-capacity objectives."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 4 — Calibrate in shadow mode",
+      "text": "Phase 4 — Calibrate in shadow mode"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Compare automated route, qualified review, adjudication, business outcome, and subgroup effects. Evaluate packet design and fatigue interventions. Estimate the value and cost of review by action slice.",
+      "text": "Compare automated route, qualified review, adjudication, business outcome, and subgroup effects. Evaluate packet design and fatigue interventions. Estimate the value and cost of review by action slice."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> false-autonomy, harmful-approval, and calibration evidence supports a bounded change.",
+      "text": "Gate: false-autonomy, harmful-approval, and calibration evidence supports a bounded change."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 5 — Expand bounded autonomy",
+      "text": "Phase 5 — Expand bounded autonomy"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Move one low-risk, reversible action slice from synchronous review to bounded execution with sampling, leased authority, receipts, verification, and rollback. Preserve mandatory review floors.",
+      "text": "Move one low-risk, reversible action slice from synchronous review to bounded execution with sampling, leased authority, receipts, verification, and rollback. Preserve mandatory review floors."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> independent review confirms outcomes and rollback drills succeed.",
+      "text": "Gate: independent review confirms outcomes and rollback drills succeed."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Rollback applies by action class and policy version. A pricing threshold failure should not disable incident containment; an S1 backlog should not consume S3 reserved capacity.",
+      "text": "Rollback applies by action class and policy version. A pricing threshold failure should not disable incident containment; an S1 backlog should not consume S3 reserved capacity."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure modes and limitations",
+      "text": "Failure modes and limitations"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Queue models can create false precision.</strong> M/M/c assumptions rarely hold. Use them to expose utilization sensitivity, then validate with empirical replay and simulation.",
+      "text": "Queue models can create false precision. M/M/c assumptions rarely hold. Use them to expose utilization sensitivity, then validate with empirical replay and simulation."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Historical labels encode existing practice.</strong> Reviewer decisions can reflect inconsistent policy, unequal information, or bias. Do not train routing directly on approval history without adjudication and subgroup analysis.",
+      "text": "Historical labels encode existing practice. Reviewer decisions can reflect inconsistent policy, unequal information, or bias. Do not train routing directly on approval history without adjudication and subgroup analysis."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Reviewers can become rubber stamps.</strong> High approval rates, low handle time, and long streaks may reflect habituation. Improve admission, packet quality, sampling, and workload design; do not merely add warnings.",
+      "text": "Reviewers can become rubber stamps. High approval rates, low handle time, and long streaks may reflect habituation. Improve admission, packet quality, sampling, and workload design; do not merely add warnings."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Priority can starve lower classes.</strong> Strict priority protects urgent work but can create indefinite S1 delay. Use bounded priority, aging, capacity reservations, and expiry.",
+      "text": "Priority can starve lower classes. Strict priority protects urgent work but can create indefinite S1 delay. Use bounded priority, aging, capacity reservations, and expiry."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Skill partitions create single points of failure.</strong> One privacy expert or pricing principal can become the entire control. Cross-train, document coverage, and create safe fallback—not eligibility bypass.",
+      "text": "Skill partitions create single points of failure. One privacy expert or pricing principal can become the entire control. Cross-train, document coverage, and create safe fallback—not eligibility bypass."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Delay can change the evidence.</strong> Revalidate resource version, evidence, policy, identity, and risk before execution. Approval is not transferable across material change.",
+      "text": "Delay can change the evidence. Revalidate resource version, evidence, policy, identity, and risk before execution. Approval is not transferable across material change."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Human review can introduce privacy risk.</strong> Packets may expose sensitive sources to reviewers. Apply field-level minimization, purpose binding, access logging, and selective disclosure.",
+      "text": "Human review can introduce privacy risk. Packets may expose sensitive sources to reviewers. Apply field-level minimization, purpose binding, access logging, and selective disclosure."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Economic models can undervalue rights and trust.</strong> Not every harm should be monetized. Categorical constraints, stakeholder input, legal requirements, and organizational values limit optimization.",
+      "text": "Economic models can undervalue rights and trust. Not every harm should be monetized. Categorical constraints, stakeholder input, legal requirements, and organizational values limit optimization."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Fatigue signals can become surveillance.</strong> Govern measurement transparently, minimize retention, consult affected workers, and evaluate system design before individual performance.",
+      "text": "Fatigue signals can become surveillance. Govern measurement transparently, minimize retention, consult affected workers, and evaluate system design before individual performance."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>No review is infallible.</strong> Downstream authorization, preconditions, verification, receipts, containment, and recovery remain mandatory for consequential actions.",
+      "text": "No review is infallible. Downstream authorization, preconditions, verification, receipts, containment, and recovery remain mandatory for consequential actions."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Robustness tests should include burst arrivals, heavy-tailed service, reviewer outage, eligibility revocation, stale packet, policy change, action edit after approval, deadline race, priority starvation, duplicated task, conflict-of-interest discovery, break-glass use, evidence outage, reviewer disagreement, and failed execution after approval.",
+      "text": "Robustness tests should include burst arrivals, heavy-tailed service, reviewer outage, eligibility revocation, stale packet, policy change, action edit after approval, deadline race, priority starvation, duplicated task, conflict-of-interest discovery, break-glass use, evidence outage, reviewer disagreement, and failed execution after approval."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Production checklist",
+      "text": "Production checklist"
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Action and policy",
+      "text": "Action and policy"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Exact typed proposal, business precondition, expiry, postcondition, and recovery.<br><strong>•</strong> Risk factors and categorical floors documented by action class.<br><strong>•</strong> Service class, priority, reviewer requirements, and fallback are machine-readable.<br><strong>•</strong> Same approval cannot authorize a modified proposal.<br><strong>•</strong> Mandatory review rules cannot be overridden by aggregate confidence.",
+      "text": "• Exact typed proposal, business precondition, expiry, postcondition, and recovery.\n• Risk factors and categorical floors documented by action class.\n• Service class, priority, reviewer requirements, and fallback are machine-readable.\n• Same approval cannot authorize a modified proposal.\n• Mandatory review rules cannot be overridden by aggregate confidence."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Queue and workforce",
+      "text": "Queue and workforce"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Arrival and service distributions measured by class and eligible pool.<br><strong>•</strong> Effective capacity includes schedules, skill, training, and variability.<br><strong>•</strong> Critical classes have reservations and overload plans.<br><strong>•</strong> No-eligible-capacity is explicit and fail-closed.<br><strong>•</strong> Deadline and risk backlog—not count alone—drive operations.",
+      "text": "• Arrival and service distributions measured by class and eligible pool.\n• Effective capacity includes schedules, skill, training, and variability.\n• Critical classes have reservations and overload plans.\n• No-eligible-capacity is explicit and fail-closed.\n• Deadline and risk backlog—not count alone—drive operations."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Reviewer control",
+      "text": "Reviewer control"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Current identity, eligibility, value limit, jurisdiction, and conflict checked at decision time.<br><strong>•</strong> Separation of duties spans person, group, workload, delegation, and service ownership.<br><strong>•</strong> Packet displays exact delta, facts, inference, conflicts, policy, alternatives, expiry, and recovery.<br><strong>•</strong> Approve, deny, edit, abstain, and appeal paths are available and measured.<br><strong>•</strong> Workforce analytics are privacy-conscious and not reduced to click speed.",
+      "text": "• Current identity, eligibility, value limit, jurisdiction, and conflict checked at decision time.\n• Separation of duties spans person, group, workload, delegation, and service ownership.\n• Packet displays exact delta, facts, inference, conflicts, policy, alternatives, expiry, and recovery.\n• Approve, deny, edit, abstain, and appeal paths are available and measured.\n• Workforce analytics are privacy-conscious and not reduced to click speed."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Execution and learning",
+      "text": "Execution and learning"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Decision digest binds proposal and evidence.<br><strong>•</strong> Target precondition and approval expiry are checked before authority issuance.<br><strong>•</strong> Execution receives a bounded permission lease and produces an action receipt.<br><strong>•</strong> Effect is independently verified; failures and ambiguity enter recovery.<br><strong>•</strong> Shadow, adjudication, appeal, and business outcomes calibrate policy.<br><strong>•</strong> Promotion and rollback use action-class error budgets.",
+      "text": "• Decision digest binds proposal and evidence.\n• Target precondition and approval expiry are checked before authority issuance.\n• Execution receives a bounded permission lease and produces an action receipt.\n• Effect is independently verified; failures and ambiguity enter recovery.\n• Shadow, adjudication, appeal, and business outcomes calibrate policy.\n• Promotion and rollback use action-class error budgets."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Questions that can change the design",
+      "text": "Questions that can change the design"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1.</strong> Which harms are monetizable, and which require categorical constraints?<br><strong>2.</strong> What is the authoritative action-level error label, and when is it known?<br><strong>3.</strong> Which reviewer skills and limits are hard eligibility versus routing preference?<br><strong>4.</strong> What delay makes each proposal stale or destroys its business value?<br><strong>5.</strong> Which evidence step has the highest marginal value for each action class?<br><strong>6.</strong> How bursty are arrivals, and which policies create correlated demand?<br><strong>7.</strong> Which pools are single points of failure, and how will competence expand safely?<br><strong>8.</strong> How will appeals and reviewer disagreement change calibration?<br><strong>9.</strong> Which workforce measurements are necessary and proportionate?<br><strong>10.</strong> What evidence justifies moving an action from S1 review to S0 bounded autonomy?",
+      "text": "1. Which harms are monetizable, and which require categorical constraints?\n2. What is the authoritative action-level error label, and when is it known?\n3. Which reviewer skills and limits are hard eligibility versus routing preference?\n4. What delay makes each proposal stale or destroys its business value?\n5. Which evidence step has the highest marginal value for each action class?\n6. How bursty are arrivals, and which policies create correlated demand?\n7. Which pools are single points of failure, and how will competence expand safely?\n8. How will appeals and reviewer disagreement change calibration?\n9. Which workforce measurements are necessary and proportionate?\n10. What evidence justifies moving an action from S1 review to S0 bounded autonomy?"
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The durable principle",
+      "text": "The durable principle"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Human oversight is valuable when it introduces qualified judgment at a decision boundary where that judgment changes the result. It is harmful theater when an undifferentiated queue delays urgent work, floods reviewers with low-value tasks, hides evidence, and records a click as proof of safety.",
+      "text": "Human oversight is valuable when it introduces qualified judgment at a decision boundary where that judgment changes the result. It is harmful theater when an undifferentiated queue delays urgent work, floods reviewers with low-value tasks, hides evidence, and records a click as proof of safety."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Treat approval as a decision service. Price avoided loss and delay. Model arrivals and capacity. Reserve service for critical classes. Route only to eligible people. Enforce separation of duties. Give reviewers an exact, expiring packet. Bind their choice to execution. Measure calibrated outcomes, not approval volume.",
+      "text": "Treat approval as a decision service. Price avoided loss and delay. Model arrivals and capacity. Reserve service for critical classes. Route only to eligible people. Enforce separation of duties. Give reviewers an exact, expiring packet. Bind their choice to execution. Measure calibrated outcomes, not approval volume."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Then “human in the loop” becomes an operating claim the organization can test:",
+      "text": "Then “human in the loop” becomes an operating claim the organization can test:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>The right person received the right decision, with the right evidence, before expiry, under the right independence constraints—and the review demonstrably reduced residual risk.</strong>",
+      "text": "The right person received the right decision, with the right evidence, before expiry, under the right independence constraints—and the review demonstrably reduced residual risk."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Anything less is not oversight. It is a queue with a reassuring label.",
+      "text": "Anything less is not oversight. It is a queue with a reassuring label."
+    }
+  ],
+  "canonical": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+  "description": "Treat human-in-the-loop approval as a risk-priced decision service with queueing models, skilled routing, evidence packets, separation of duties, calibration, and operating SLOs.",
+  "heroAlt": "Deep-dive comparison of checkbox human review and a risk-priced approval decision service.",
+  "heroImage": "assets/images/human-approval-is-a-queueing-system/figure-01.png",
+  "id": "8b0e0a2ac9e9",
+  "modifiedAt": "2026-08-23T12:20:00.000Z",
+  "publishedAt": "2026-08-23T12:20:00.000Z",
+  "readTime": "31 min read",
+  "slug": "human-approval-is-a-queueing-system",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+  "subtitle": "How to price review capacity, escalation risk, response time, fatigue, and value of information.",
+  "tags": [
+    "AI agents",
+    "Human in the loop",
+    "Operations research",
+    "Risk management",
+    "Enterprise AI"
+  ],
+  "title": "Human Approval Is a Queueing System",
+  "wordCount": 6004
+}

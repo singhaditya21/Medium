@@ -6,6 +6,36 @@
   "verificationMethod": "signed_in_medium_published_stories",
   "stories": [
     {
+      "storySlug": "every-ai-agent-action-needs-a-receipt",
+      "status": "not_published",
+      "mediumUrl": null
+    },
+    {
+      "storySlug": "human-approval-is-a-queueing-system",
+      "status": "not_published",
+      "mediumUrl": null
+    },
+    {
+      "storySlug": "your-multi-agent-system-is-a-distributed-system",
+      "status": "not_published",
+      "mediumUrl": null
+    },
+    {
+      "storySlug": "model-routing-is-capital-allocation",
+      "status": "not_published",
+      "mediumUrl": null
+    },
+    {
+      "storySlug": "your-ai-agent-needs-a-real-kill-switch",
+      "status": "not_published",
+      "mediumUrl": null
+    },
+    {
+      "storySlug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+      "status": "not_published",
+      "mediumUrl": null
+    },
+    {
       "storySlug": "a-2-4m-account-is-escalating",
       "status": "published",
       "mediumUrl": "https://medium.com/@singhaditya21_89007/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b"
@@ -37,6 +67,11 @@
     },
     {
       "storySlug": "your-ai-agent-should-not-have-a-standing-role",
+      "status": "not_published",
+      "mediumUrl": null
+    },
+    {
+      "storySlug": "your-ai-agents-memory-is-a-database-not-a-prompt",
       "status": "not_published",
       "mediumUrl": null
     }

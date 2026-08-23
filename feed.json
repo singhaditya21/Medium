@@ -11,6 +11,111 @@
   ],
   "items": [
     {
+      "id": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+      "url": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+      "title": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
+      "summary": "A technical and business blueprint for proving an enterprise AI agent is ready for bounded production authority using claims, executable scenarios, stateful tool simulation, failure injection, adversarial tests, shadow evidence, confidence bounds, canaries, attestations, drift, and rollback.",
+      "date_published": "2026-08-23T16:00:00.000Z",
+      "tags": [
+        "AI agents",
+        "AI evaluation",
+        "MLOps",
+        "Enterprise AI",
+        "AI governance"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+      "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+      "title": "Your AI Agent Needs a Real Kill Switch",
+      "summary": "A technical and operating blueprint for reliably stopping an enterprise AI agent's authority and effects across identity, workers, networks, tools, queues, ambiguous transactions, incident evidence, and governed recovery.",
+      "date_published": "2026-08-23T14:20:00.000Z",
+      "tags": [
+        "AI agents",
+        "AI security",
+        "Incident response",
+        "Enterprise architecture",
+        "Reliability"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
+      "url": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
+      "title": "Model Routing Is Capital Allocation",
+      "summary": "A production blueprint for routing enterprise AI actions across model, context, tool, retry, and verification portfolios using constrained utility, calibration, novelty controls, counterfactual evaluation, and business-effect SLOs.",
+      "date_published": "2026-08-23T12:40:00.000Z",
+      "tags": [
+        "AI agents",
+        "Model routing",
+        "AI economics",
+        "FinOps",
+        "Enterprise AI"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
+      "url": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
+      "title": "Your Multi-Agent System Is a Distributed System",
+      "summary": "A production blueprint for coordinating AI agents with durable workflows, invariants, message contracts, idempotency, fencing, causal ordering, sagas, chaos tests, and business-effect SLOs.",
+      "date_published": "2026-08-23T12:30:00.000Z",
+      "tags": [
+        "AI agents",
+        "Distributed systems",
+        "Multi-agent systems",
+        "Enterprise architecture",
+        "Reliability"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+      "url": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+      "title": "Human Approval Is a Queueing System",
+      "summary": "Treat human-in-the-loop approval as a risk-priced decision service with queueing models, skilled routing, evidence packets, separation of duties, calibration, and operating SLOs.",
+      "date_published": "2026-08-23T12:20:00.000Z",
+      "tags": [
+        "AI agents",
+        "Human in the loop",
+        "Operations research",
+        "Risk management",
+        "Enterprise AI"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+      "url": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+      "title": "Every AI Agent Action Needs a Receipt",
+      "summary": "A production architecture for canonical, signed, idempotent, independently verified AI-agent action receipts with lineage, selective disclosure, and recovery.",
+      "date_published": "2026-08-23T12:10:00.000Z",
+      "tags": [
+        "AI agents",
+        "Auditability",
+        "Distributed systems",
+        "Enterprise architecture",
+        "AI governance"
+      ]
+    },
+    {
+      "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
+      "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
+      "title": "Your AI Agent's Memory Is a Database, Not a Prompt",
+      "summary": "Treat agent memory as governed enterprise data: versioned, provenance-complete, bitemporal, policy-filtered, poisoning-resistant, and demonstrably deletable.",
+      "date_published": "2026-08-23T12:00:00.000Z",
+      "tags": [
+        "AI agents",
+        "Agent memory",
+        "Data architecture",
+        "AI governance",
+        "Enterprise AI"
+      ]
+    },
+    {
       "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
       "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
       "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",

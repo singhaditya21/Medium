@@ -38,6 +38,13 @@ TOPIC_MAP = {
     "agentic-crm-reference-architecture": ["Agentic CRM", "Architecture", "Enterprise AI"],
     "traditional-crm-agentic-ai": ["Agentic CRM", "Strategy", "Transformation"],
     "your-ai-agent-should-not-have-a-standing-role": ["AI agents", "Zero trust", "Authorization", "Cybersecurity", "Enterprise AI"],
+    "your-ai-agents-memory-is-a-database-not-a-prompt": ["AI agents", "Agent memory", "Data architecture", "Enterprise AI", "Reliability"],
+    "every-ai-agent-action-needs-a-receipt": ["AI agents", "Auditability", "Event sourcing", "Enterprise architecture", "AI governance"],
+    "human-approval-is-a-queueing-system": ["AI agents", "Human-in-the-loop", "Queueing theory", "Operations", "AI governance"],
+    "your-multi-agent-system-is-a-distributed-system": ["AI agents", "Distributed systems", "Multi-agent systems", "Enterprise architecture", "Reliability"],
+    "model-routing-is-capital-allocation": ["AI agents", "Model routing", "AI economics", "FinOps", "Enterprise AI"],
+    "your-ai-agent-needs-a-real-kill-switch": ["AI agents", "AI security", "Incident response", "Enterprise architecture", "Reliability"],
+    "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation": ["AI agents", "AI evaluation", "MLOps", "Enterprise AI", "AI governance"],
 }
 
 SERIES = [
@@ -48,6 +55,13 @@ SERIES = [
         "stories": [
             "ai-agent-identity-is-not-enough",
             "your-ai-agent-should-not-have-a-standing-role",
+            "your-ai-agents-memory-is-a-database-not-a-prompt",
+            "every-ai-agent-action-needs-a-receipt",
+            "human-approval-is-a-queueing-system",
+            "your-multi-agent-system-is-a-distributed-system",
+            "model-routing-is-capital-allocation",
+            "your-ai-agent-needs-a-real-kill-switch",
+            "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
             "enterprise-agent-control-tower",
             "a-2-4m-account-is-escalating",
         ],
@@ -66,7 +80,21 @@ SERIES = [
         "slug": "ai-unit-economics",
         "title": "AI Unit Economics",
         "description": "Cost models that connect inference, control planes, human review, verification, and business outcomes.",
-        "stories": ["what-an-agent-actually-costs"],
+        "stories": ["what-an-agent-actually-costs", "model-routing-is-capital-allocation"],
+    },
+    {
+        "slug": "agent-systems-engineering",
+        "title": "Agent Systems Engineering",
+        "description": "A seven-part production sequence on memory, receipts, human approval, distributed coordination, model allocation, containment, and evaluation-bound authority.",
+        "stories": [
+            "your-ai-agents-memory-is-a-database-not-a-prompt",
+            "every-ai-agent-action-needs-a-receipt",
+            "human-approval-is-a-queueing-system",
+            "your-multi-agent-system-is-a-distributed-system",
+            "model-routing-is-capital-allocation",
+            "your-ai-agent-needs-a-real-kill-switch",
+            "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+        ],
     },
 ]
 
