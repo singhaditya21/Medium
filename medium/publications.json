@@ -39,6 +39,11 @@
       "storySlug": "your-ai-agent-should-not-have-a-standing-role",
       "status": "not_published",
       "mediumUrl": null
+    },
+    {
+      "storySlug": "your-ai-agents-memory-is-a-database-not-a-prompt",
+      "status": "not_published",
+      "mediumUrl": null
     }
   ]
 }

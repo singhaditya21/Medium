@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "your-ai-agents-memory-is-a-database-not-a-prompt",
+  "operation": "import_to_private_draft",
+  "topics": [
+    "AI Agents",
+    "Data Architecture",
+    "AI Governance",
+    "Cybersecurity",
+    "Enterprise AI"
+  ],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

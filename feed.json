@@ -11,6 +11,21 @@
   ],
   "items": [
     {
+      "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
+      "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
+      "title": "Your AI Agent's Memory Is a Database, Not a Prompt",
+      "summary": "Treat agent memory as governed enterprise data: versioned, provenance-complete, bitemporal, policy-filtered, poisoning-resistant, and demonstrably deletable.",
+      "date_published": "2026-08-23T12:00:00.000Z",
+      "tags": [
+        "AI agents",
+        "Agent memory",
+        "Data architecture",
+        "AI governance",
+        "Enterprise AI"
+      ]
+    },
+    {
       "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
       "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
       "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/",
