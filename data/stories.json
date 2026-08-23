@@ -1,5 +1,26 @@
 [
   {
+    "slug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+    "title": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
+    "description": "A technical and business blueprint for proving an enterprise AI agent is ready for bounded production authority using claims, executable scenarios, stateful tool simulation, failure injection, adversarial tests, shadow evidence, confidence bounds, canaries, attestations, drift, and rollback.",
+    "publishedAt": "2026-08-23T16:00:00.000Z",
+    "readTime": "33 min read",
+    "tags": [
+      "AI agents",
+      "AI evaluation",
+      "MLOps",
+      "Enterprise AI",
+      "AI governance"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-systems-engineering"
+    ]
+  },
+  {
     "slug": "your-ai-agent-needs-a-real-kill-switch",
     "title": "Your AI Agent Needs a Real Kill Switch",
     "description": "A technical and operating blueprint for reliably stopping an enterprise AI agent's authority and effects across identity, workers, networks, tools, queues, ambiguous transactions, incident evidence, and governed recovery.",
@@ -15,7 +36,10 @@
     "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
     "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-ai-agent-needs-a-real-kill-switch",
-    "series": []
+    "series": [
+      "production-grade-ai-agents",
+      "agent-systems-engineering"
+    ]
   },
   {
     "slug": "model-routing-is-capital-allocation",
@@ -33,7 +57,11 @@
     "canonical": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
     "pageUrl": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=model-routing-is-capital-allocation",
-    "series": []
+    "series": [
+      "production-grade-ai-agents",
+      "ai-unit-economics",
+      "agent-systems-engineering"
+    ]
   },
   {
     "slug": "your-multi-agent-system-is-a-distributed-system",
@@ -51,7 +79,10 @@
     "canonical": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
     "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-multi-agent-system-is-a-distributed-system",
-    "series": []
+    "series": [
+      "production-grade-ai-agents",
+      "agent-systems-engineering"
+    ]
   },
   {
     "slug": "human-approval-is-a-queueing-system",
@@ -69,7 +100,10 @@
     "canonical": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
     "pageUrl": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=human-approval-is-a-queueing-system",
-    "series": []
+    "series": [
+      "production-grade-ai-agents",
+      "agent-systems-engineering"
+    ]
   },
   {
     "slug": "every-ai-agent-action-needs-a-receipt",
@@ -87,7 +121,10 @@
     "canonical": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
     "pageUrl": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=every-ai-agent-action-needs-a-receipt",
-    "series": []
+    "series": [
+      "production-grade-ai-agents",
+      "agent-systems-engineering"
+    ]
   },
   {
     "slug": "your-ai-agents-memory-is-a-database-not-a-prompt",
@@ -105,7 +142,10 @@
     "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
     "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-ai-agents-memory-is-a-database-not-a-prompt",
-    "series": []
+    "series": [
+      "production-grade-ai-agents",
+      "agent-systems-engineering"
+    ]
   },
   {
     "slug": "your-ai-agent-should-not-have-a-standing-role",

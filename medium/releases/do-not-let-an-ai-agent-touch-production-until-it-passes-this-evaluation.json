@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+  "operation": "import_to_private_draft",
+  "topics": [
+    "AI Agents",
+    "AI Evaluation",
+    "MLOps",
+    "Enterprise AI",
+    "AI Governance"
+  ],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

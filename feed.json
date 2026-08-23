@@ -11,6 +11,21 @@
   ],
   "items": [
     {
+      "id": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+      "url": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+      "title": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
+      "summary": "A technical and business blueprint for proving an enterprise AI agent is ready for bounded production authority using claims, executable scenarios, stateful tool simulation, failure injection, adversarial tests, shadow evidence, confidence bounds, canaries, attestations, drift, and rollback.",
+      "date_published": "2026-08-23T16:00:00.000Z",
+      "tags": [
+        "AI agents",
+        "AI evaluation",
+        "MLOps",
+        "Enterprise AI",
+        "AI governance"
+      ]
+    },
+    {
       "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
       "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
       "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
