@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "every-ai-agent-action-needs-a-receipt",
+  "operation": "import_to_private_draft",
+  "topics": [
+    "AI Agents",
+    "Distributed Systems",
+    "AI Governance",
+    "Cybersecurity",
+    "Enterprise Architecture"
+  ],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

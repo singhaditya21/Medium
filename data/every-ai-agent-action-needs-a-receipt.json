@@ -1,0 +1,1258 @@
+{
+  "author": "Aditya Singh",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "At 10:42:11, an AI revenue agent applies an 8% pricing exception to a $2.4 million renewal, triggers an invoice update, and sends a customer notice. The CRM responds slowly. The agent runtime times out and retries. The dashboard shows one failed tool call followed by one successful call; the CRM has one changed quote, billing has two adjustment requests, and the customer received one message with no visible approval reference. Operations can see activity. Audit still cannot prove which proposal was approved, which authority was presented, whether the first call committed, which downstream effect is authoritative, or what must be recovered.",
+      "text": "At 10:42:11, an AI revenue agent applies an 8% pricing exception to a $2.4 million renewal, triggers an invoice update, and sends a customer notice. The CRM responds slowly. The agent runtime times out and retries. The dashboard shows one failed tool call followed by one successful call; the CRM has one changed quote, billing has two adjustment requests, and the customer received one message with no visible approval reference. Operations can see activity. Audit still cannot prove which proposal was approved, which authority was presented, whether the first call committed, which downstream effect is authoritative, or what must be recovered."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This story was written with AI writing and visualization assistance. Every organization, account, action, identifier, metric, cost, threshold, incident, and service-level result is synthetic; the architecture is a reference design, not a claim about a deployed production system. “Action receipt” is an application architecture defined here, not a new standards-track protocol.",
+      "text": "This story was written with AI writing and visualization assistance. Every organization, account, action, identifier, metric, cost, threshold, incident, and service-level result is synthetic; the architecture is a reference design, not a claim about a deployed production system. “Action receipt” is an application architecture defined here, not a new standards-track protocol."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An enterprise agent does not complete work merely because a tool returned <code>200 OK</code>, the model said “done,” or a trace ended without an error. Completion is a business claim. The organization needs durable evidence that one exact intent, based on one exact evidence set, passed one policy and approval decision, received one bounded authority object, produced one observed effect, and reached one explicit terminal state.",
+      "text": "An enterprise agent does not complete work merely because a tool returned 200 OK, the model said “done,” or a trace ended without an error. Completion is a business claim. The organization needs durable evidence that one exact intent, based on one exact evidence set, passed one policy and approval decision, received one bounded authority object, produced one observed effect, and reached one explicit terminal state."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "That evidence object is an <strong>action receipt</strong>.",
+      "text": "That evidence object is an action receipt."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A receipt is not a screenshot, a transcript, or a bag of logs. It is a versioned, canonical, integrity-protected envelope that joins intent, evidence, authority, request, effect, verification, ambiguity, recovery, and retention. It is created before execution, updated through a controlled state machine, sealed after independent verification, and stored separately from sensitive payloads. It links to traces and events; it does not pretend that observability is proof.",
+      "text": "A receipt is not a screenshot, a transcript, or a bag of logs. It is a versioned, canonical, integrity-protected envelope that joins intent, evidence, authority, request, effect, verification, ambiguity, recovery, and retention. It is created before execution, updated through a controlled state machine, sealed after independent verification, and stored separately from sensitive payloads. It links to traces and events; it does not pretend that observability is proof."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "A trace says where the request went. A receipt says what the business can prove.",
+      "text": "A trace says where the request went. A receipt says what the business can prove."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-01.png",
+      "alt": "Comparison of traces, logs, events, and action receipts across the questions they answer.",
+      "caption": "Figure 1. Traces, logs, events, and receipts answer different questions; only the receipt is designed as durable proof of one business action and terminal state. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Technical summary",
+      "text": "Technical summary"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The reference design introduces a receipt control plane beside the agent orchestrator and protected APIs. Before execution, it reserves a stable <code>business_action_id</code>, validates the proposal, binds evidence and authorization digests, and writes a prepared receipt. The executor then makes a conditional, idempotent request. An independent verifier observes target state. The receipt service completes the record as verified success, failed before effect, rejected, recovered, or unresolved ambiguity. Canonical bytes are digested and signed under a versioned profile; batches may be Merkle-anchored and independently timestamped.",
+      "text": "The reference design introduces a receipt control plane beside the agent orchestrator and protected APIs. Before execution, it reserves a stable businessactionid, validates the proposal, binds evidence and authorization digests, and writes a prepared receipt. The executor then makes a conditional, idempotent request. An independent verifier observes target state. The receipt service completes the record as verified success, failed before effect, rejected, recovered, or unresolved ambiguity. Canonical bytes are digested and signed under a versioned profile; batches may be Merkle-anchored and independently timestamped."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Six rules define the system:",
+      "text": "Six rules define the system:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1.</strong> <strong>Prepare before effect.</strong> A durable receipt skeleton and action identifier exist before any consequential call.<br><strong>2.</strong> <strong>Use one business action ID everywhere.</strong> Proposal, approval, lease, API request, events, traces, verification, compensation, and receipt share the same stable identity.<br><strong>3.</strong> <strong>Treat timeouts as uncertainty, not failure.</strong> If the target may have committed, the state is <code>ambiguous</code> until authoritative reconciliation.<br><strong>4.</strong> <strong>Verify effect independently.</strong> The component that attempted the action cannot be the only source claiming success.<br><strong>5.</strong> <strong>Sign deterministic content.</strong> Schema validation and canonicalization define exactly which bytes are committed; a signature over ad hoc serialization is not portable proof.<br><strong>6.</strong> <strong>Separate signed proof from sensitive evidence.</strong> The receipt core stores identifiers, digests, state, and verification; payloads remain in governed compartments with selective disclosure.",
+      "text": "1. Prepare before effect. A durable receipt skeleton and action identifier exist before any consequential call.\n2. Use one business action ID everywhere. Proposal, approval, lease, API request, events, traces, verification, compensation, and receipt share the same stable identity.\n3. Treat timeouts as uncertainty, not failure. If the target may have committed, the state is ambiguous until authoritative reconciliation.\n4. Verify effect independently. The component that attempted the action cannot be the only source claiming success.\n5. Sign deterministic content. Schema validation and canonicalization define exactly which bytes are committed; a signature over ad hoc serialization is not portable proof.\n6. Separate signed proof from sensitive evidence. The receipt core stores identifiers, digests, state, and verification; payloads remain in governed compartments with selective disclosure."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The result is not “blockchain for agents.” It is a conventional enterprise transaction pattern using typed schemas, stable identifiers, conditional mutation, durable state, cryptographic integrity, append-only lineage, and independent verification. Teams can implement it with relational databases, event streams, KMS-backed signatures, and ordinary APIs.",
+      "text": "The result is not “blockchain for agents.” It is a conventional enterprise transaction pattern using typed schemas, stable identifiers, conditional mutation, durable state, cryptographic integrity, append-only lineage, and independent verification. Teams can implement it with relational databases, event streams, KMS-backed signatures, and ordinary APIs."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Scope, scenario, and evidence boundary",
+      "text": "Scope, scenario, and evidence boundary"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The business scenario contains three effects:",
+      "text": "The business scenario contains three effects:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> change <code>quote:771.discount_pct</code> from 0 to 8 with expected version 20;<br><strong>•</strong> request one billing adjustment tied to the revised quote;<br><strong>•</strong> send one approved customer message tied to the same renewal decision.",
+      "text": "• change quote:771.discount_pct from 0 to 8 with expected version 20;\n• request one billing adjustment tied to the revised quote;\n• send one approved customer message tied to the same renewal decision."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The agent operates on behalf of a revenue employee. Policy allows the recommendation; an eligible pricing approver accepts the exact delta; a one-use permission lease authorizes the CRM change. Billing and messaging use distinct authority and distinct effect receipts, all linked under one parent workflow receipt.",
+      "text": "The agent operates on behalf of a revenue employee. Policy allows the recommendation; an eligible pricing approver accepts the exact delta; a one-use permission lease authorizes the CRM change. Billing and messaging use distinct authority and distinct effect receipts, all linked under one parent workflow receipt."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The architecture distinguishes four evidence artifacts:",
+      "text": "The architecture distinguishes four evidence artifacts:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Trace.</strong> A causal runtime structure of spans. <a href=\"https://www.w3.org/TR/trace-context/\">W3C Trace Context</a> standardizes propagation fields such as <code>traceparent</code> and <code>tracestate</code> so distributed requests can be correlated. The specification explicitly accommodates recording and sampling decisions. A trace can be incomplete by design.",
+      "text": "Trace. A causal runtime structure of spans. W3C Trace Context standardizes propagation fields such as traceparent and tracestate so distributed requests can be correlated. The specification explicitly accommodates recording and sampling decisions. A trace can be incomplete by design."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Log.</strong> A timestamped operational record. The <a href=\"https://opentelemetry.io/docs/specs/otel/logs/data-model/\">OpenTelemetry Logs Data Model</a> provides a common model that can correlate logs with traces through trace and span identifiers. A log body still depends on emitter correctness, collection, sampling, transformation, retention, and access policy.",
+      "text": "Log. A timestamped operational record. The OpenTelemetry Logs Data Model provides a common model that can correlate logs with traces through trace and span identifiers. A log body still depends on emitter correctness, collection, sampling, transformation, retention, and access policy."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Event.</strong> A notification that something occurred. <a href=\"https://cloudevents.io/\">CloudEvents</a> defines a common event-envelope approach across services. Delivery may be duplicated, reordered, delayed, or lost according to transport and consumer design. An event is evidence, not automatically proof of the underlying business fact.",
+      "text": "Event. A notification that something occurred. CloudEvents defines a common event-envelope approach across services. Delivery may be duplicated, reordered, delayed, or lost according to transport and consumer design. An event is evidence, not automatically proof of the underlying business fact."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Receipt.</strong> A durable application record joining exact intent, decision evidence, authority, execution, independently observed effect, and terminal lifecycle. This article's receipt semantics are a reference profile assembled from standards and production patterns; there is no universal “AI action receipt” standard being claimed.",
+      "text": "Receipt. A durable application record joining exact intent, decision evidence, authority, execution, independently observed effect, and terminal lifecycle. This article's receipt semantics are a reference profile assembled from standards and production patterns; there is no universal “AI action receipt” standard being claimed."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Every quantitative value in the figures is synthetic. Standards claims link to their primary specifications. Cryptographic mechanisms protect integrity and origin under their assumptions; they do not prove that a policy was wise, a human understood an approval, a source record was correct, or a business outcome was beneficial.",
+      "text": "Every quantitative value in the figures is synthetic. Standards claims link to their primary specifications. Cryptographic mechanisms protect integrity and origin under their assumptions; they do not prove that a policy was wise, a human understood an approval, a source record was correct, or a business outcome was beneficial."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The action-receipt control plane",
+      "text": "The action-receipt control plane"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The receipt control plane is logically separate from the model runtime. The runtime may propose an action, but it cannot mint proof of its own success. The protected domain remains authoritative for business state, and a verifier reads that state through an independently governed path.",
+      "text": "The receipt control plane is logically separate from the model runtime. The runtime may propose an action, but it cannot mint proof of its own success. The protected domain remains authoritative for business state, and a verifier reads that state through an independently governed path."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-02.png",
+      "alt": "Architecture connecting proposal, policy and approval, receipt preparation, executor, target API, verifier, key service, append-only store, and recovery.",
+      "caption": "Figure 2. The action-receipt control plane prepares intent before execution and seals a terminal receipt only after independent effect observation. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The path has three durable boundaries.",
+      "text": "The path has three durable boundaries."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Prepare.</strong> The receipt service validates an exact action proposal, evidence manifest, policy result, approval, permission lease reference, target precondition, and recovery specification. It reserves <code>business_action_id</code> atomically and writes status <code>prepared</code>. If the identifier already exists with another proposal digest, it fails closed.",
+      "text": "Prepare. The receipt service validates an exact action proposal, evidence manifest, policy result, approval, permission lease reference, target precondition, and recovery specification. It reserves businessactionid atomically and writes status prepared. If the identifier already exists with another proposal digest, it fails closed."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Execute.</strong> A narrow executor presents the business action ID, request digest, target precondition, and bounded authority to the protected API. The API atomically checks idempotency and the precondition with the mutation. It returns an effect identifier and new version when possible. The executor records the response but never unilaterally marks the business action verified.",
+      "text": "Execute. A narrow executor presents the business action ID, request digest, target precondition, and bounded authority to the protected API. The API atomically checks idempotency and the precondition with the mutation. It returns an effect identifier and new version when possible. The executor records the response but never unilaterally marks the business action verified."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Complete.</strong> The verifier queries authoritative state or a domain ledger. It confirms the expected field-level effect, version transition, and downstream invariant. The receipt service appends verification, recovery if any, and terminal status. It canonicalizes the signed core, produces a digest and signature, and persists seal metadata.",
+      "text": "Complete. The verifier queries authoritative state or a domain ledger. It confirms the expected field-level effect, version transition, and downstream invariant. The receipt service appends verification, recovery if any, and terminal status. It canonicalizes the signed core, produces a digest and signature, and persists seal metadata."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The append store should deny in-place updates to sealed versions. Mutable operational fields—delivery retry count, archive tier, disclosure grants—live outside the signed core or produce new signed receipt versions. “Append-only” is an invariant enforced by the write API and storage controls, not a marketing label for an object bucket.",
+      "text": "The append store should deny in-place updates to sealed versions. Mutable operational fields—delivery retry count, archive tier, disclosure grants—live outside the signed core or produce new signed receipt versions. “Append-only” is an invariant enforced by the write API and storage controls, not a marketing label for an object bucket."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The verifier must be meaningfully independent. A second method in the same executor process reading the same cached response is not independence. Depending on risk, independence can mean a separate service identity, a read replica fed from the authoritative change stream, a domain ledger, a second API endpoint, or a reconciliation job with different credentials and failure modes.",
+      "text": "The verifier must be meaningfully independent. A second method in the same executor process reading the same cached response is not independence. Depending on risk, independence can mean a separate service identity, a read replica fed from the authoritative change stream, a domain ledger, a second API endpoint, or a reconciliation job with different credentials and failure modes."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The receipt is a provenance join",
+      "text": "The receipt is a provenance join"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Business action evidence is usually scattered: natural-language intent in a conversation, sources in a vector store, policy logs in an authorization engine, approval in a workflow tool, access token data in an identity system, request spans in telemetry, state changes in a business database, and recovery in an incident queue. The receipt makes the relationship explicit.",
+      "text": "Business action evidence is usually scattered: natural-language intent in a conversation, sources in a vector store, policy logs in an authorization engine, approval in a workflow tool, access token data in an identity system, request spans in telemetry, state changes in a business database, and recovery in an incident queue. The receipt makes the relationship explicit."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-03.png",
+      "alt": "Lineage graph with a central receipt connected to intent, evidence, policy, approval, authority, request, effect, and recovery.",
+      "caption": "Figure 3. One receipt is the durable join from business intent through decision evidence and authority to observed effect and recovery. AI-assisted design visualization; W3C PROV-inspired reference architecture; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<a href=\"https://www.w3.org/TR/prov-o/\">W3C PROV-O</a> supplies useful concepts for this graph: entities, activities, agents, derivation, attribution, generation, use, and invalidation. A proposal entity was derived from an evidence pack. An approval activity used that proposal. An executor agent used a permission lease and generated a request. A target mutation generated a new resource version. A verifier activity observed that version. A recovery activity may later invalidate or compensate for an effect.",
+      "text": "W3C PROV-O supplies useful concepts for this graph: entities, activities, agents, derivation, attribution, generation, use, and invalidation. A proposal entity was derived from an evidence pack. An approval activity used that proposal. An executor agent used a permission lease and generated a request. A target mutation generated a new resource version. A verifier activity observed that version. A recovery activity may later invalidate or compensate for an effect."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The receipt should not embed all parent objects. It stores resolvable identifiers, versions, and cryptographic digests. A verifier can fetch permitted evidence and compare its canonical digest. If the source no longer exists under retention policy, the receipt can still prove that a specific commitment existed, subject to the digest and signature assumptions, without reconstructing its content.",
+      "text": "The receipt should not embed all parent objects. It stores resolvable identifiers, versions, and cryptographic digests. A verifier can fetch permitted evidence and compare its canonical digest. If the source no longer exists under retention policy, the receipt can still prove that a specific commitment existed, subject to the digest and signature assumptions, without reconstructing its content."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Parent workflow receipts help model multi-effect transactions. The renewal workflow can have child receipts for CRM, billing, and messaging. The parent does not become <code>verified</code> until its completion predicate holds—perhaps CRM updated, exactly one billing adjustment accepted, message delivery recorded, and no child remains ambiguous. A child compensation produces a new receipt linked to both the child and parent.",
+      "text": "Parent workflow receipts help model multi-effect transactions. The renewal workflow can have child receipts for CRM, billing, and messaging. The parent does not become verified until its completion predicate holds—perhaps CRM updated, exactly one billing adjustment accepted, message delivery recorded, and no child remains ambiguous. A child compensation produces a new receipt linked to both the child and parent."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Define a versioned receipt envelope",
+      "text": "Define a versioned receipt envelope"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The data contract must be boring enough to validate mechanically and expressive enough to reconstruct the action. Avoid unconstrained <code>metadata</code> objects in the signed core; they become an ungoverned channel and make schema evolution unpredictable.",
+      "text": "The data contract must be boring enough to validate mechanically and expressive enough to reconstruct the action. Avoid unconstrained metadata objects in the signed core; they become an ungoverned channel and make schema evolution unpredictable."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-04.png",
+      "alt": "Eight-compartment receipt schema for identity, intent, authority, request, effect, recovery, cryptography, and lifecycle.",
+      "caption": "Figure 4. A versioned receipt envelope binds business proof while keeping governed evidence payloads outside the signed core. AI-assisted design visualization; synthetic example; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An illustrative terminal receipt is:",
+      "text": "An illustrative terminal receipt is:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "{\n  \"schema\": \"action-receipt/v1.2\",\n  \"receipt_id\": \"rcpt_01JQ8Q4K2A\",\n  \"receipt_version\": 3,\n  \"business_action_id\": \"act_01JQ8PZZ7C\",\n  \"parent_workflow_id\": \"wf_renewal_042\",\n  \"tenant_id\": \"tenant_acme\",\n  \"intent\": {\n    \"type\": \"quote.discount.apply\",\n    \"resource\": \"crm://quotes/771\",\n    \"delta\": {\"discount_pct\": {\"from\": 0, \"to\": 8}},\n    \"expected_version\": 20,\n    \"proposal_sha256\": \"sha256:91ab...72e0\",\n    \"evidence_pack_sha256\": \"sha256:3e17...41c9\"\n  },\n  \"decision\": {\n    \"policy_id\": \"pricing-action/41\",\n    \"policy_result_sha256\": \"sha256:4c8e...9b11\",\n    \"approval_id\": \"apr_01JQ8P...\",\n    \"approval_sha256\": \"sha256:ca20...18de\"\n  },\n  \"authority\": {\n    \"lease_id\": \"lease_01JQ8Q...\",\n    \"lease_sha256\": \"sha256:129f...77a2\",\n    \"actor\": \"spiffe://corp/agents/renewal\",\n    \"on_behalf_of\": \"user:ae-184\"\n  },\n  \"execution\": {\n    \"request_sha256\": \"sha256:ac04...7d42\",\n    \"idempotency_key\": \"act_01JQ8PZZ7C\",\n    \"trace_id\": \"4bf92f3577b34da6a3ce929d0e0e4736\",\n    \"attempts\": 2,\n    \"first_started_at\": \"2026-08-23T10:42:11.024Z\"\n  },\n  \"effect\": {\n    \"state\": \"verified\",\n    \"resource_version_before\": 20,\n    \"resource_version_after\": 21,\n    \"observed\": {\"discount_pct\": 8},\n    \"observed_state_sha256\": \"sha256:5f28...e113\",\n    \"verified_at\": \"2026-08-23T10:42:13.918Z\",\n    \"verifier\": \"spiffe://corp/control/receipt-verifier\"\n  },\n  \"recovery\": {\n    \"ambiguous_at\": \"2026-08-23T10:42:12.040Z\",\n    \"resolved_at\": \"2026-08-23T10:42:13.918Z\",\n    \"resolution\": \"effect_found_return_prior_success\"\n  },\n  \"seal\": {\n    \"profile\": \"receipt-jcs-jws/v1\",\n    \"algorithm\": \"ES256\",\n    \"kid\": \"kms://receipt-signing/keys/17\",\n    \"signed_core_sha256\": \"sha256:ef32...9a70\",\n    \"jws\": \"eyJhbGciOiJFUzI1NiIs...\",\n    \"timestamp_token_ref\": \"tsa://batch/2026-08-23/1045\"\n  },\n  \"lifecycle\": {\n    \"retention_class\": \"pricing-decision-7y\",\n    \"payload_compartment\": \"evidence-vault://ev_992\",\n    \"sealed_at\": \"2026-08-23T10:42:14.007Z\"\n  }\n}",
+      "language": "json"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is not a recommendation to expose every identifier to every consumer. The receipt service can produce views. A customer-dispute view might disclose the approved field delta and timestamp but not internal risk scores. A security view might disclose actor identity and key metadata but not customer email content.",
+      "text": "This is not a recommendation to expose every identifier to every consumer. The receipt service can produce views. A customer-dispute view might disclose the approved field delta and timestamp but not internal risk scores. A security view might disclose actor identity and key metadata but not customer email content."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "State belongs to a controlled vocabulary: <code>prepared</code>, <code>executing</code>, <code>ambiguous</code>, <code>failed_before_effect</code>, <code>rejected</code>, <code>effect_observed</code>, <code>verified</code>, <code>recovery_required</code>, <code>recovered</code>, and perhaps <code>disputed</code>. Unknown states are invalid. Terminal state semantics must be versioned so an auditor in five years can interpret them.",
+      "text": "State belongs to a controlled vocabulary: prepared, executing, ambiguous, failedbeforeeffect, rejected, effectobserved, verified, recoveryrequired, recovered, and perhaps disputed. Unknown states are invalid. Terminal state semantics must be versioned so an auditor in five years can interpret them."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Canonicalize before signing",
+      "text": "Canonicalize before signing"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "JSON object order is not semantically significant, numbers can be serialized differently, Unicode has representation subtleties, and serializers change across languages. Signing whichever byte string one service happened to emit makes cross-system verification brittle.",
+      "text": "JSON object order is not semantically significant, numbers can be serialized differently, Unicode has representation subtleties, and serializers change across languages. Signing whichever byte string one service happened to emit makes cross-system verification brittle."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-05.png",
+      "alt": "Six-stage pipeline for schema validation, normalization, projection, canonicalization, hashing, and signing.",
+      "caption": "Figure 5. Deterministic canonical bytes—not application object order—become the input to the receipt digest and signature. AI-assisted design visualization; standards-based reference profile; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<a href=\"https://www.rfc-editor.org/rfc/rfc8785.html\">RFC 8785</a> defines the JSON Canonicalization Scheme, based on deterministic property sorting and constrained JSON serialization. A receipt profile can validate an I-JSON-compatible typed object, project the exact signed fields, serialize them with JCS, hash the bytes, and carry that canonical payload in or beside a <a href=\"https://www.rfc-editor.org/info/rfc7515/\">JSON Web Signature defined by RFC 7515</a>.",
+      "text": "RFC 8785 defines the JSON Canonicalization Scheme, based on deterministic property sorting and constrained JSON serialization. A receipt profile can validate an I-JSON-compatible typed object, project the exact signed fields, serialize them with JCS, hash the bytes, and carry that canonical payload in or beside a JSON Web Signature defined by RFC 7515."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The profile must specify more than algorithm names:",
+      "text": "The profile must specify more than algorithm names:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> schema identifier and allowed field projection;<br><strong>•</strong> canonicalization algorithm and version;<br><strong>•</strong> digest algorithm and encoding;<br><strong>•</strong> JWS serialization, detached or attached payload behavior;<br><strong>•</strong> protected headers, permitted algorithms, and critical parameters;<br><strong>•</strong> key identifier semantics and trust store;<br><strong>•</strong> signature creation and verification rules;<br><strong>•</strong> timestamp, key-status, and revocation evaluation;<br><strong>•</strong> payload size and denial-of-service limits;<br><strong>•</strong> behavior for unknown schema or profile versions.",
+      "text": "• schema identifier and allowed field projection;\n• canonicalization algorithm and version;\n• digest algorithm and encoding;\n• JWS serialization, detached or attached payload behavior;\n• protected headers, permitted algorithms, and critical parameters;\n• key identifier semantics and trust store;\n• signature creation and verification rules;\n• timestamp, key-status, and revocation evaluation;\n• payload size and denial-of-service limits;\n• behavior for unknown schema or profile versions."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Illustrative signing code:",
+      "text": "Illustrative signing code:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "def seal_receipt(receipt, profile, kms):\n    typed = profile.schema.validate(receipt)\n    signed_core = profile.project_signed_fields(typed)\n    canonical = profile.jcs.canonicalize(signed_core)\n    digest = sha256(canonical)\n    protected = {\n        \"alg\": profile.allowed_algorithm,\n        \"kid\": kms.active_key_id(profile.key_purpose),\n        \"typ\": \"application/action-receipt+jws\",\n        \"receipt-profile\": profile.version\n    }\n    jws = kms.sign_jws(protected=protected, payload=canonical)\n    return {\"digest\": digest, \"jws\": jws, \"canonical\": canonical}",
+      "language": "python"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The verifier does not trust the stored <code>signed_core_sha256</code>. It validates the schema, reprojects the signed fields, reconstructs canonical bytes, recomputes the digest, verifies the JWS protected header and signature, and evaluates key policy. The stored digest is a convenient commitment and index; it is not the validation authority.",
+      "text": "The verifier does not trust the stored signedcoresha256. It validates the schema, reprojects the signed fields, reconstructs canonical bytes, recomputes the digest, verifies the JWS protected header and signature, and evaluates key policy. The stored digest is a convenient commitment and index; it is not the validation authority."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Never accept <code>alg: none</code>, allow the receipt to select arbitrary keys, or interpret an unknown critical header. Pin algorithms by receipt profile. Keep signing keys in a KMS or HSM appropriate to the risk and separate receipt signing from application TLS keys.",
+      "text": "Never accept alg: none, allow the receipt to select arbitrary keys, or interpret an unknown critical header. Pin algorithms by receipt profile. Keep signing keys in a KMS or HSM appropriate to the risk and separate receipt signing from application TLS keys."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Schema evolution without rewriting evidence",
+      "text": "Schema evolution without rewriting evidence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Receipt schemas will change. A new action may need settlement identity, a policy engine may add an obligation digest, or a verifier may distinguish “observed” from “settled.” The dangerous migration is to deserialize an old receipt into the latest object model, fill defaults, and sign the transformed representation as though it were the original. That destroys the distinction between evidence created then and interpretation added now.",
+      "text": "Receipt schemas will change. A new action may need settlement identity, a policy engine may add an obligation digest, or a verifier may distinguish “observed” from “settled.” The dangerous migration is to deserialize an old receipt into the latest object model, fill defaults, and sign the transformed representation as though it were the original. That destroys the distinction between evidence created then and interpretation added now."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Use immutable profiles. <code>action-receipt/v1.2</code> identifies the field vocabulary and state semantics; <code>receipt-jcs-jws/v1</code> identifies the signed projection and canonicalization. A verifier loads the historical profile by exact identifier. A migration produces an attestation that links the old digest to a new normalized view:",
+      "text": "Use immutable profiles. action-receipt/v1.2 identifies the field vocabulary and state semantics; receipt-jcs-jws/v1 identifies the signed projection and canonicalization. A verifier loads the historical profile by exact identifier. A migration produces an attestation that links the old digest to a new normalized view:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "old receipt r@3 --interpretedBy--> migration profile m@2\nnew view v@1    --wasDerivedFrom--> old signed digest H(r@3)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The new view may be indexed for current tools, but it never replaces the original canonical bytes or signature. If a state named <code>effect_observed</code> in v1.2 is split into <code>committed</code> and <code>settled</code> in v2, the migration records which interpretation was possible from old evidence and which remains unknown. It must not infer settlement merely because the latest schema requires it.",
+      "text": "The new view may be indexed for current tools, but it never replaces the original canonical bytes or signature. If a state named effectobserved in v1.2 is split into committed and settled in v2, the migration records which interpretation was possible from old evidence and which remains unknown. It must not infer settlement merely because the latest schema requires it."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Compatibility tests need positive and negative vectors. Positive vectors prove that independent implementations produce and verify the same digest. Negative vectors include duplicate property names, unknown critical fields, malformed Unicode, extreme numbers, prohibited algorithms, altered field order, excluded-field injection, and a valid signature over the wrong receipt profile. Preserve these vectors with the profile documentation for the full retention horizon.",
+      "text": "Compatibility tests need positive and negative vectors. Positive vectors prove that independent implementations produce and verify the same digest. Negative vectors include duplicate property names, unknown critical fields, malformed Unicode, extreme numbers, prohibited algorithms, altered field order, excluded-field injection, and a valid signature over the wrong receipt profile. Preserve these vectors with the profile documentation for the full retention horizon."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Policy changes also create new evaluations, not retroactive facts. An auditor can ask whether an action conformed to the policy in force then and whether it would conform now. Store both answers as separate, timestamped attestations linked to the original receipt. This allows control improvements without falsifying history.",
+      "text": "Policy changes also create new evaluations, not retroactive facts. An auditor can ask whether an action conformed to the policy in force then and whether it would conform now. Store both answers as separate, timestamped attestations linked to the original receipt. This allows control improvements without falsifying history."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Anchor batches without inventing a ledger",
+      "text": "Anchor batches without inventing a ledger"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Per-receipt signatures make mutation detectable, but a store operator could delete a whole receipt or present an older subset. A batch commitment can improve completeness evidence.",
+      "text": "Per-receipt signatures make mutation detectable, but a store operator could delete a whole receipt or present an older subset. A batch commitment can improve completeness evidence."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-06.png",
+      "alt": "Merkle tree of four receipt digests leading to a batch root and RFC 3161 timestamp token.",
+      "caption": "Figure 6. Receipt hashes form a Merkle root whose inclusion proofs support selective verification; the root is independently timestamped under a declared profile. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For each sealed receipt, compute leaf <code>Lᵢ = H(domain_separator || receipt_id || canonical_receipt_bytes)</code>. Sort or order leaves under an explicit rule, construct a binary Merkle tree, and publish the root with batch metadata. A receipt archive stores its inclusion path. The verifier recomputes the leaf and path to the root.",
+      "text": "For each sealed receipt, compute leaf Lᵢ = H(domainseparator || receiptid || canonicalreceiptbytes). Sort or order leaves under an explicit rule, construct a binary Merkle tree, and publish the root with batch metadata. A receipt archive stores its inclusion path. The verifier recomputes the leaf and path to the root."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A trusted timestamp can provide evidence that a digest existed by a stated time. <a href=\"https://www.rfc-editor.org/info/rfc3161/\">RFC 3161</a> defines the Time-Stamp Protocol for timestamping a hash imprint. A deployment can timestamp each batch root, subject to its trust model, time-stamping authority, validation data, and long-term cryptographic preservation plan.",
+      "text": "A trusted timestamp can provide evidence that a digest existed by a stated time. RFC 3161 defines the Time-Stamp Protocol for timestamping a hash imprint. A deployment can timestamp each batch root, subject to its trust model, time-stamping authority, validation data, and long-term cryptographic preservation plan."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This does not create consensus, prevent the source system from executing an unauthorized action, or guarantee availability. It creates tamper evidence under explicit assumptions. If deletion under privacy or retention policy is required, a separate manifest can record that a committed receipt was lawfully removed or cryptographically erased without retaining the receipt content. Completeness and erasure need a jointly designed policy.",
+      "text": "This does not create consensus, prevent the source system from executing an unauthorized action, or guarantee availability. It creates tamper evidence under explicit assumptions. If deletion under privacy or retention policy is required, a separate manifest can record that a committed receipt was lawfully removed or cryptographically erased without retaining the receipt content. Completeness and erasure need a jointly designed policy."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Batch cadence is a tradeoff. A one-minute batch reduces anchoring cost and limits the window in which omission is not externally committed. High-risk payments might use immediate signing plus frequent roots; low-risk internal updates might accept a longer batch interval. The receipt still exists and is signed before batch anchoring.",
+      "text": "Batch cadence is a tradeoff. A one-minute batch reduces anchoring cost and limits the window in which omission is not externally committed. High-risk payments might use immediate signing plus frequent roots; low-risk internal updates might accept a longer batch interval. The receipt still exists and is signed before batch anchoring."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Verify signatures and business effects",
+      "text": "Verify signatures and business effects"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Signature verification is necessary but not sufficient. A perfectly signed receipt could describe an action that never occurred, a policy that was misconfigured, or an effect that differs from intent.",
+      "text": "Signature verification is necessary but not sufficient. A perfectly signed receipt could describe an action that never occurred, a policy that was misconfigured, or an effect that differs from intent."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-07.png",
+      "alt": "Sequence diagram across receipt service, KMS, append store, target API, and independent verifier.",
+      "caption": "Figure 7. Verification checks schema, canonical bytes, signature, key status, append record, authoritative target state, lineage, and terminal semantics. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A complete verification routine checks:",
+      "text": "A complete verification routine checks:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1.</strong> <strong>Syntactic validity:</strong> receipt schema and profile version are recognized.<br><strong>2.</strong> <strong>Canonical commitment:</strong> signed projection reconstructs to the committed canonical bytes and digest.<br><strong>3.</strong> <strong>Signature:</strong> algorithm, protected headers, key identity, signature, and critical parameters pass policy.<br><strong>4.</strong> <strong>Temporal key status:</strong> the key was authorized at signing time; revocation and compromise policy determine later treatment.<br><strong>5.</strong> <strong>Batch inclusion and timestamp:</strong> if required, the leaf path reaches the anchored root and the timestamp token validates.<br><strong>6.</strong> <strong>Lineage:</strong> referenced proposal, evidence, policy, approval, authority, request, and recovery digests resolve or have documented disposition.<br><strong>7.</strong> <strong>Effect:</strong> authoritative business state matches the receipt's field-level postcondition and version transition.<br><strong>8.</strong> <strong>Terminal semantics:</strong> state transitions are valid and no unresolved child effect contradicts parent completion.",
+      "text": "1. Syntactic validity: receipt schema and profile version are recognized.\n2. Canonical commitment: signed projection reconstructs to the committed canonical bytes and digest.\n3. Signature: algorithm, protected headers, key identity, signature, and critical parameters pass policy.\n4. Temporal key status: the key was authorized at signing time; revocation and compromise policy determine later treatment.\n5. Batch inclusion and timestamp: if required, the leaf path reaches the anchored root and the timestamp token validates.\n6. Lineage: referenced proposal, evidence, policy, approval, authority, request, and recovery digests resolve or have documented disposition.\n7. Effect: authoritative business state matches the receipt's field-level postcondition and version transition.\n8. Terminal semantics: state transitions are valid and no unresolved child effect contradicts parent completion."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Long-term verification needs algorithm agility and archival validation data. A receipt retained for seven years may outlive a key certificate, an algorithm recommendation, or a KMS product. Store profile documentation, key metadata, relevant certificate chains or trust references, timestamp material, and migration events. Re-sealing an archive produces a new outer evidence layer; it must not overwrite the original signature.",
+      "text": "Long-term verification needs algorithm agility and archival validation data. A receipt retained for seven years may outlive a key certificate, an algorithm recommendation, or a KMS product. Store profile documentation, key metadata, relevant certificate chains or trust references, timestamp material, and migration events. Re-sealing an archive produces a new outer evidence layer; it must not overwrite the original signature."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Correlate receipts with traces, logs, and events",
+      "text": "Correlate receipts with traces, logs, and events"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The receipt does not replace observability. It gives telemetry a stable business anchor.",
+      "text": "The receipt does not replace observability. It gives telemetry a stable business anchor."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-08.png",
+      "alt": "Four horizontal field maps connecting W3C trace context, OpenTelemetry logs, CloudEvents, and the action receipt.",
+      "caption": "Figure 8. Correlation identifiers link runtime artifacts while business intent, evidence, and effect digests remain in the receipt rather than propagation headers. AI-assisted design visualization; reference mapping; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<code>traceparent</code> carries trace position across services. It should not carry customer identifiers, approval details, or evidence digests. W3C Trace Context includes privacy and security considerations precisely because propagated context crosses boundaries. Keep it minimal.",
+      "text": "traceparent carries trace position across services. It should not carry customer identifiers, approval details, or evidence digests. W3C Trace Context includes privacy and security considerations precisely because propagated context crosses boundaries. Keep it minimal."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "OpenTelemetry log records can include <code>trace_id</code>, <code>span_id</code>, service identity, severity, event name, and <code>business_action_id</code> as a governed attribute. Logs link to the receipt; they do not copy the receipt payload.",
+      "text": "OpenTelemetry log records can include traceid, spanid, service identity, severity, event name, and businessactionid as a governed attribute. Logs link to the receipt; they do not copy the receipt payload."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A CloudEvent announcing receipt state may include:",
+      "text": "A CloudEvent announcing receipt state may include:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "{\n  \"specversion\": \"1.0\",\n  \"id\": \"evt_01JQ8R...\",\n  \"source\": \"/receipt-control/tenant_acme\",\n  \"type\": \"com.example.action-receipt.verified.v1\",\n  \"subject\": \"receipts/rcpt_01JQ8Q4K2A\",\n  \"time\": \"2026-08-23T10:42:14.007Z\",\n  \"datacontenttype\": \"application/json\",\n  \"data\": {\n    \"receipt_id\": \"rcpt_01JQ8Q4K2A\",\n    \"business_action_id\": \"act_01JQ8PZZ7C\",\n    \"state\": \"verified\",\n    \"signed_core_sha256\": \"sha256:ef32...9a70\"\n  }\n}",
+      "language": "json"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Consumers treat the event as a notification and fetch the authorized receipt view. The event transport's delivery semantics do not define the receipt state machine. Duplicate events are safe because <code>event.id</code>, receipt version, and business action ID are stable.",
+      "text": "Consumers treat the event as a notification and fetch the authorized receipt view. The event transport's delivery semantics do not define the receipt state machine. Duplicate events are safe because event.id, receipt version, and business action ID are stable."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Sampling policy changes around consequential actions. Receipt creation is mandatory for the selected action class; traces may still be sampled according to policy. Tail-based tracing can preserve spans for ambiguous, rejected, compensated, high-latency, or high-value actions. The receipt state is a useful sampling signal, but the trace collector must avoid circular dependency that delays execution.",
+      "text": "Sampling policy changes around consequential actions. Receipt creation is mandatory for the selected action class; traces may still be sampled according to policy. Tail-based tracing can preserve spans for ambiguous, rejected, compensated, high-latency, or high-value actions. The receipt state is a useful sampling signal, but the trace collector must avoid circular dependency that delays execution."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Idempotency is business identity, not retry middleware",
+      "text": "Idempotency is business identity, not retry middleware"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Retries happen after timeouts, connection resets, process crashes, queue redelivery, and user refresh. HTTP method semantics help—<a href=\"https://www.rfc-editor.org/info/rfc9110/\">RFC 9110</a> defines idempotent methods in terms of intended effect—but many consequential operations use <code>POST</code> or domain mutations whose business identity is application-specific.",
+      "text": "Retries happen after timeouts, connection resets, process crashes, queue redelivery, and user refresh. HTTP method semantics help—RFC 9110 defines idempotent methods in terms of intended effect—but many consequential operations use POST or domain mutations whose business identity is application-specific."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-09.png",
+      "alt": "State machine from proposed through reserved, executing, effect observed, ambiguous, failed, and verified or recovered.",
+      "caption": "Figure 9. A stable business action ID is atomically reserved and never becomes executable again after an ambiguous or terminal transition. AI-assisted design visualization; reference state machine; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The idempotency key should represent the business action, not an HTTP attempt. Reusing a random key on each retry defeats deduplication. Reusing one key for a materially changed proposal conflates actions. Bind the key to a proposal digest:",
+      "text": "The idempotency key should represent the business action, not an HTTP attempt. Reusing a random key on each retry defeats deduplication. Reusing one key for a materially changed proposal conflates actions. Bind the key to a proposal digest:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "business_action_id = stable opaque identifier\nproposal_digest    = H(canonical intent + evidence + authority + precondition)\n\nsame action_id + same digest      → return/continue existing action\nsame action_id + different digest → reject as key conflict\nnew action_id + same digest       → policy-defined duplicate proposal check",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The target should store action identity and result atomically with the mutation when possible:",
+      "text": "The target should store action identity and result atomically with the mutation when possible:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "begin;\n\nselect proposal_sha256, terminal_result\nfrom business_action_ledger\nwhere tenant_id = :tenant and action_id = :action\nfor update;\n\n-- Existing matching action: return its terminal result.\n-- Existing different digest: reject.\n-- Otherwise reserve the action and continue.\n\nupdate quote\nset discount_pct = 8, version = version + 1\nwhere tenant_id = :tenant\n  and quote_id = 771\n  and version = 20;\n\n-- Require exactly one updated row.\ninsert into business_action_ledger (..., terminal_result)\nvalues (..., :result);\n\ncommit;",
+      "language": "sql"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Cross-system actions cannot share one database transaction. Each child effect needs its own idempotency ledger and receipt; the parent workflow coordinates completion and compensation. “Exactly once” becomes an application outcome achieved through at-least-once delivery, deduplication, conditional state, and reconciliation—not a property inferred from a queue setting.",
+      "text": "Cross-system actions cannot share one database transaction. Each child effect needs its own idempotency ledger and receipt; the parent workflow coordinates completion and compensation. “Exactly once” becomes an application outcome achieved through at-least-once delivery, deduplication, conditional state, and reconciliation—not a property inferred from a queue setting."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "A timeout is an ambiguity window",
+      "text": "A timeout is an ambiguity window"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Suppose the CRM commits at <code>T2</code>, but the network drops the response. At <code>T3</code>, the caller observes a timeout. “Request failed” is not known. The known fact is “response not observed before deadline.”",
+      "text": "Suppose the CRM commits at T2, but the network drops the response. At T3, the caller observes a timeout. “Request failed” is not known. The known fact is “response not observed before deadline.”"
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-10.png",
+      "alt": "Four-lane timeline showing request delivery, target commit, dropped response, caller timeout, and ambiguous receipt state.",
+      "caption": "Figure 10. The target commits before the response is lost; the caller enters an ambiguity window until authoritative state is reconciled. AI-assisted design visualization; synthetic incident timeline; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The receipt records facts separately:",
+      "text": "The receipt records facts separately:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> request bytes and digest were prepared;<br><strong>•</strong> action ID was reserved;<br><strong>•</strong> target accepted a connection or delivery was attempted;<br><strong>•</strong> no valid response arrived by the deadline;<br><strong>•</strong> effect state is unknown;<br><strong>•</strong> retry is prohibited until reconciliation or target idempotency is proven.",
+      "text": "• request bytes and digest were prepared;\n• action ID was reserved;\n• target accepted a connection or delivery was attempted;\n• no valid response arrived by the deadline;\n• effect state is unknown;\n• retry is prohibited until reconciliation or target idempotency is proven."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Blind retry is especially dangerous when the API creates a new object or triggers downstream work. A second price adjustment, refund, message, or export may be accepted. Even if the direct CRM mutation is idempotent, a webhook subscriber might duplicate side effects unless it deduplicates the same business action ID.",
+      "text": "Blind retry is especially dangerous when the API creates a new object or triggers downstream work. A second price adjustment, refund, message, or export may be accepted. Even if the direct CRM mutation is idempotent, a webhook subscriber might duplicate side effects unless it deduplicates the same business action ID."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Ambiguity has economic duration. Define <code>ambiguity_age = now − ambiguous_at</code> for unresolved receipts. The risk backlog can be approximated by <code>Σ_i exposure_i × ambiguity_age_i</code>, where exposure reflects action value, reversibility, customer impact, and propagation. This is a prioritization index, not expected loss, but it prevents a high-value ambiguous payment from sitting behind thousands of low-risk metadata updates.",
+      "text": "Ambiguity has economic duration. Define ambiguityage = now − ambiguousat for unresolved receipts. The risk backlog can be approximated by Σi exposurei × ambiguityagei, where exposure reflects action value, reversibility, customer impact, and propagation. This is a prioritization index, not expected loss, but it prevents a high-value ambiguous payment from sitting behind thousands of low-risk metadata updates."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Conditional mutation protects concurrent business state",
+      "text": "Conditional mutation protects concurrent business state"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An approved action may be cryptographically valid and still stale. A human could edit the quote after the proposal was prepared. The receipt binds the state version used for decision; the API enforces it.",
+      "text": "An approved action may be cryptographically valid and still stale. A human could edit the quote after the proposal was prepared. The receipt binds the state version used for decision; the API enforces it."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-11.png",
+      "alt": "Five-stage protocol showing read version, proposal, idempotency reservation, conditional mutation, verification, conflict, and safe retry.",
+      "caption": "Figure 11. An expected resource version and stable action ID are checked atomically so stale action intent cannot overwrite newer business state. AI-assisted design visualization; reference protocol; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The executor sends:",
+      "text": "The executor sends:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "POST /quotes/771/actions/apply-discount HTTP/1.1\nAuthorization: DPoP eyJ...\nIdempotency-Key: act_01JQ8PZZ7C\nIf-Match: \"quote-v20\"\nContent-Type: application/json\n\n{\n  \"discount_pct\": 8,\n  \"proposal_sha256\": \"sha256:91ab...72e0\",\n  \"receipt_id\": \"rcpt_01JQ8Q4K2A\"\n}",
+      "language": "http"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The headers illustrate a deployment profile; the business API still needs explicit semantics. <code>If-Match</code> must bind the version whose fields were approved. The idempotency ledger must be scoped by tenant and endpoint or action type. A repeated matching request returns the original result. A matching key with different bytes returns conflict. A stale <code>If-Match</code> returns no effect and the receipt becomes <code>rejected</code> or <code>failed_before_effect</code>, not <code>ambiguous</code>.",
+      "text": "The headers illustrate a deployment profile; the business API still needs explicit semantics. If-Match must bind the version whose fields were approved. The idempotency ledger must be scoped by tenant and endpoint or action type. A repeated matching request returns the original result. A matching key with different bytes returns conflict. A stale If-Match returns no effect and the receipt becomes rejected or failedbeforeeffect, not ambiguous."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "After success, the verifier reads quote version 21 and asserts the exact postcondition. “Resource exists” is insufficient if the wrong discount was applied. Verification can include negative invariants: no unapproved field changed, no duplicate adjustment exists, and audit ownership matches the actor chain.",
+      "text": "After success, the verifier reads quote version 21 and asserts the exact postcondition. “Resource exists” is insufficient if the wrong discount was applied. Verification can include negative invariants: no unapproved field changed, no duplicate adjustment exists, and audit ownership matches the actor chain."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Reconcile ambiguity from authoritative state",
+      "text": "Reconcile ambiguity from authoritative state"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Recovery begins by observing business reality, not by searching for a successful log line.",
+      "text": "Recovery begins by observing business reality, not by searching for a successful log line."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-12.png",
+      "alt": "Decision tree from effect observation through matching intent, safe retry, compensation, and human incident handling.",
+      "caption": "Figure 12. An ambiguous action resolves to prior success, safe retry, compensation, or human incident handling based on authoritative state. AI-assisted design visualization; reference recovery tree; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The reconciler checks target idempotency ledger, resource version history, domain event stream, and downstream systems. Four broad outcomes follow:",
+      "text": "The reconciler checks target idempotency ledger, resource version history, domain event stream, and downstream systems. Four broad outcomes follow:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1.</strong> <strong>Intended effect exists exactly once.</strong> Verify it and return the prior success. Do not execute again.<br><strong>2.</strong> <strong>No effect exists and retry is safe.</strong> If the original authority remains valid and unused under policy, retry the same action ID; otherwise issue new bounded authority linked to the original receipt.<br><strong>3.</strong> <strong>A wrong or partial effect exists and is compensable.</strong> Create a compensation proposal and receipt. Do not delete or rewrite the original evidence.<br><strong>4.</strong> <strong>Effect is mixed, irreversible, or unverifiable.</strong> Escalate to an eligible human with a structured incident packet and contain further related actions.",
+      "text": "1. Intended effect exists exactly once. Verify it and return the prior success. Do not execute again.\n2. No effect exists and retry is safe. If the original authority remains valid and unused under policy, retry the same action ID; otherwise issue new bounded authority linked to the original receipt.\n3. A wrong or partial effect exists and is compensable. Create a compensation proposal and receipt. Do not delete or rewrite the original evidence.\n4. Effect is mixed, irreversible, or unverifiable. Escalate to an eligible human with a structured incident packet and contain further related actions."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Illustrative reconciliation:",
+      "text": "Illustrative reconciliation:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "def reconcile(receipt, domain):\n    state = domain.observe(receipt.intent.resource,\n                           action_id=receipt.business_action_id)\n\n    if state.matches(receipt.intent.postcondition) and state.effect_count == 1:\n        return complete_verified(receipt, state)\n    if state.effect_count == 0 and domain.retry_is_safe(receipt):\n        return retry_same_action_id(receipt)\n    if state.has_partial_or_wrong_effect and domain.can_compensate(state):\n        return propose_compensation(receipt, state)\n    return open_human_incident(receipt, state)",
+      "language": "python"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Every branch records observation time, source versions, decision reason, actor, and result digest. Recovery is a business action and needs its own authority, verification, and receipt.",
+      "text": "Every branch records observation time, source versions, decision reason, actor, and result digest. Recovery is a business action and needs its own authority, verification, and receipt."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Selective disclosure protects evidence",
+      "text": "Selective disclosure protects evidence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An audit receipt that copies full prompts, emails, access tokens, and customer data into a long-retained ledger creates a new security and privacy problem. Proof should be minimal and compartmentalized.",
+      "text": "An audit receipt that copies full prompts, emails, access tokens, and customer data into a long-retained ledger creates a new security and privacy problem. Proof should be minimal and compartmentalized."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-13.png",
+      "alt": "Central signed receipt core connected to separate operations, audit, customer-dispute, and security disclosure packages.",
+      "caption": "Figure 13. A signed core and Merkle proof support role-specific verification while sensitive payloads stay in separately governed evidence compartments. AI-assisted design visualization; reference disclosure model; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The signed core contains identifiers, typed action fields needed for proof, digests, state, timestamps, and cryptographic metadata. Sensitive evidence lives in a vault governed by tenant, purpose, legal basis, role, case, and time. A disclosure package includes the minimum authorized fields plus digest proofs linking them to the signed commitment.",
+      "text": "The signed core contains identifiers, typed action fields needed for proof, digests, state, timestamps, and cryptographic metadata. Sensitive evidence lives in a vault governed by tenant, purpose, legal basis, role, case, and time. A disclosure package includes the minimum authorized fields plus digest proofs linking them to the signed commitment."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Digesting low-entropy sensitive values can leak them through guessing. Do not publish <code>SHA-256(discount=8)</code> and call it private. Commit to a canonical structured object with a cryptographically random salt or use an authenticated encryption and commitment design reviewed for the threat model. Salt management, disclosure proofs, and long-term verification belong in the receipt profile.",
+      "text": "Digesting low-entropy sensitive values can leak them through guessing. Do not publish SHA-256(discount=8) and call it private. Commit to a canonical structured object with a cryptographically random salt or use an authenticated encryption and commitment design reviewed for the threat model. Salt management, disclosure proofs, and long-term verification belong in the receipt profile."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Redaction must preserve the original commitment. Generate a view that omits fields and includes permitted proofs; never create a modified object and reuse the original signature as if it signed the redacted bytes. Advanced selective-disclosure signature schemes may help, but conventional compartmentalization and Merkle proofs are often easier to operate.",
+      "text": "Redaction must preserve the original commitment. Generate a view that omits fields and includes permitted proofs; never create a modified object and reuse the original signature as if it signed the redacted bytes. Advanced selective-disclosure signature schemes may help, but conventional compartmentalization and Merkle proofs are often easier to operate."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Data minimization also applies to trace context, events, and metrics. Emit receipt identifiers and categorical reason codes; fetch payloads through an authorized path only when needed.",
+      "text": "Data minimization also applies to trace context, events, and metrics. Emit receipt identifiers and categorical reason codes; fetch payloads through an authorized path only when needed."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "No single control proves the action",
+      "text": "No single control proves the action"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Teams often over-trust one mechanism: “It is signed,” “we have audit logs,” or “the endpoint supports idempotency.” Each closes only part of the failure surface.",
+      "text": "Teams often over-trust one mechanism: “It is signed,” “we have audit logs,” or “the endpoint supports idempotency.” Each closes only part of the failure surface."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-14.png",
+      "alt": "Eight-by-eight matrix comparing failure modes with schema, digest, JWS, timestamp, idempotency, precondition, verification, and provenance controls.",
+      "caption": "Figure 14. Ordinal control coverage shows that integrity, origin, duplication, staleness, authorization, ambiguity, effect, and lineage require a composed proof system. AI-assisted visualization; architectural judgments; not measured effectiveness."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Schema validation detects malformed or unknown receipt shapes but does not authenticate origin. A digest detects change relative to a trusted commitment but does not identify the committer. JWS authenticates the signer and signed bytes under a key trust model but does not prove the underlying action occurred. A timestamp supports an existence-time claim but not correctness. Idempotency limits duplicate effects but not stale or unauthorized intent. Preconditions protect current state but not operator identity. Independent verification proves observed effect but cannot explain why it was authorized. Provenance provides lineage but needs integrity controls.",
+      "text": "Schema validation detects malformed or unknown receipt shapes but does not authenticate origin. A digest detects change relative to a trusted commitment but does not identify the committer. JWS authenticates the signer and signed bytes under a key trust model but does not prove the underlying action occurred. A timestamp supports an existence-time claim but not correctness. Idempotency limits duplicate effects but not stale or unauthorized intent. Preconditions protect current state but not operator identity. Independent verification proves observed effect but cannot explain why it was authorized. Provenance provides lineage but needs integrity controls."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The operating design therefore composes controls and states the assurance claim narrowly:",
+      "text": "The operating design therefore composes controls and states the assurance claim narrowly:"
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Under receipt profile v1, key policy K, timestamp policy T, and domain verifier V, this record provides integrity-protected evidence that actor A, acting for subject S under decision D, attempted business action X and that authoritative domain state Y was observed at time t.",
+      "text": "Under receipt profile v1, key policy K, timestamp policy T, and domain verifier V, this record provides integrity-protected evidence that actor A, acting for subject S under decision D, attempted business action X and that authoritative domain state Y was observed at time t."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "That is stronger—and more honest—than “the AI did it.”",
+      "text": "That is stronger—and more honest—than “the AI did it.”"
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Price the proof system",
+      "text": "Price the proof system"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Receipt infrastructure adds storage, cryptographic calls, verification reads, event traffic, and operational ownership. The cost model should separate mandatory hot proof from optional or tiered payload.",
+      "text": "Receipt infrastructure adds storage, cryptographic calls, verification reads, event traffic, and operational ownership. The cost model should separate mandatory hot proof from optional or tiered payload."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-15.png",
+      "alt": "Horizontal cost model for signed core, index and replication, hot payload, cold payload, anchoring, and verification.",
+      "caption": "Figure 15. A synthetic 10-million-action monthly model separates hot receipt proof from tiered evidence payload and batch services. AI-assisted visualization; declared synthetic inputs; not vendor pricing or production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For action volume <code>N</code>, signed-core bytes <code>B_c</code>, indexed replication multiplier <code>r</code>, payload bytes <code>B_p</code>, hot fraction <code>h</code>, retention months <code>m</code>, and service costs <code>C_s</code>, an illustrative monthly run-rate is:",
+      "text": "For action volume N, signed-core bytes Bc, indexed replication multiplier r, payload bytes Bp, hot fraction h, retention months m, and service costs Cs, an illustrative monthly run-rate is:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "Storage_hot  = N × (B_c × r + h × B_p) × m_hot\nStorage_cold = N × ((1 − h) × B_p) × m_cold\nCost_total   = rate_hot × Storage_hot\n             + rate_cold × Storage_cold\n             + C_sign + C_timestamp + C_verify + C_operations",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Figure 15 assumes 10 million actions per month, a 3.2 KB signed core, 8 KB of index and replication overhead per action, 42 KB average payload, and illustrative storage/service rates. It is not a cloud quote. Network, database write IOPS, KMS pricing, minimum retention, regional replication, legal hold, and verifier API calls can dominate.",
+      "text": "Figure 15 assumes 10 million actions per month, a 3.2 KB signed core, 8 KB of index and replication overhead per action, 42 KB average payload, and illustrative storage/service rates. It is not a cloud quote. Network, database write IOPS, KMS pricing, minimum retention, regional replication, legal hold, and verifier API calls can dominate."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Segment by action risk. High-risk pricing, payments, terminations, exports, and customer commitments may require mandatory payload retention and immediate verification. Low-risk internal enrichment may retain a signed core and short-lived payload. Sampling the receipt itself for consequential actions defeats the evidence claim; tiering payload is the safer cost lever.",
+      "text": "Segment by action risk. High-risk pricing, payments, terminations, exports, and customer commitments may require mandatory payload retention and immediate verification. Low-risk internal enrichment may retain a signed core and short-lived payload. Sampling the receipt itself for consequential actions defeats the evidence claim; tiering payload is the safer cost lever."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The benefit model includes avoided duplicate effects, faster incident investigation, reduced audit labor, fewer unresolved disputes, narrower data disclosure, and safer autonomy. Measure investigation time and ambiguity age before deployment so value can be demonstrated rather than asserted.",
+      "text": "The benefit model includes avoided duplicate effects, faster incident investigation, reduced audit labor, fewer unresolved disputes, narrower data disclosure, and safer autonomy. Measure investigation time and ambiguity age before deployment so value can be demonstrated rather than asserted."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Reconstruct disputes deterministically",
+      "text": "Reconstruct disputes deterministically"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Without a receipt, an investigator searches model transcripts, application logs, identity records, policy decisions, approval tools, API databases, message queues, and customer communication. Correlation depends on timestamps and partial IDs; sampled spans may be missing.",
+      "text": "Without a receipt, an investigator searches model transcripts, application logs, identity records, policy decisions, approval tools, API databases, message queues, and customer communication. Correlation depends on timestamps and partial IDs; sampled spans may be missing."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-16.png",
+      "alt": "Seven-step rising audit timeline from a business question through locating, cryptographic verification, replay, state observation, explanation, and finding.",
+      "caption": "Figure 16. A receipt turns a quote-change dispute into a deterministic seven-step verification path even when operational spans were sampled. AI-assisted design visualization; reference audit path; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "With a receipt, the investigator begins from the resource version or customer-visible action and resolves <code>business_action_id</code>. The signed core identifies proposal, evidence, policy, approval, actor, authority, trace, effect, and recovery. Cryptographic verification detects alteration. As-of evidence replay shows what was used then, not today's corrected state. The domain history proves the version transition. Any missing or failed verification becomes an explicit exception.",
+      "text": "With a receipt, the investigator begins from the resource version or customer-visible action and resolves businessactionid. The signed core identifies proposal, evidence, policy, approval, actor, authority, trace, effect, and recovery. Cryptographic verification detects alteration. As-of evidence replay shows what was used then, not today's corrected state. The domain history proves the version transition. Any missing or failed verification becomes an explicit exception."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The finding should distinguish:",
+      "text": "The finding should distinguish:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> <strong>cryptographically supported:</strong> the signed record and key policy validate;<br><strong>•</strong> <strong>lineage supported:</strong> referenced decision artifacts resolve and match digests;<br><strong>•</strong> <strong>effect supported:</strong> authoritative state matches the claimed result;<br><strong>•</strong> <strong>process conformant:</strong> policy, approval, authority, and state transitions meet the applicable control version;<br><strong>•</strong> <strong>business justified:</strong> a qualified reviewer agrees the decision was reasonable. This is not supplied by cryptography.",
+      "text": "• cryptographically supported: the signed record and key policy validate;\n• lineage supported: referenced decision artifacts resolve and match digests;\n• effect supported: authoritative state matches the claimed result;\n• process conformant: policy, approval, authority, and state transitions meet the applicable control version;\n• business justified: a qualified reviewer agrees the decision was reasonable. This is not supplied by cryptography."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "That vocabulary prevents audit teams from overclaiming and tells remediation teams what is missing.",
+      "text": "That vocabulary prevents audit teams from overclaiming and tells remediation teams what is missing."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Operate receipts with proof-oriented SLOs",
+      "text": "Operate receipts with proof-oriented SLOs"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A receipt service that is fast but cannot reconcile ambiguity is not reliable. A service with 100% signed records but 2% orphan lineage does not provide end-to-end proof.",
+      "text": "A receipt service that is fast but cannot reconcile ambiguity is not reliable. A service with 100% signed records but 2% orphan lineage does not provide end-to-end proof."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-17.png",
+      "alt": "Eight-row SLO scorecard for receipt coverage, seal latency, effect verification, ambiguity, signature verification, key health, and lineage.",
+      "caption": "Figure 17. A synthetic 30-day scorecard includes deliberate breaches for ambiguity age and orphan lineage, each with an owner and escalation path. AI-assisted visualization; synthetic values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Key objectives include:",
+      "text": "Key objectives include:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> receipt preparation coverage before effect, by action class;<br><strong>•</strong> schema rejection and profile-version errors;<br><strong>•</strong> p50/p95/p99 prepare, verification, and seal latency;<br><strong>•</strong> proportion of effects independently verified;<br><strong>•</strong> ambiguity rate and ambiguity age distribution;<br><strong>•</strong> duplicate-effect rate despite matching action IDs;<br><strong>•</strong> stale-precondition rejection rate;<br><strong>•</strong> signature, timestamp, inclusion-proof, and key-status verification success;<br><strong>•</strong> orphan proposal, evidence, authority, effect, or recovery references;<br><strong>•</strong> receipt-to-resource and resource-to-receipt lookup success;<br><strong>•</strong> disclosure request and legal-hold handling time.",
+      "text": "• receipt preparation coverage before effect, by action class;\n• schema rejection and profile-version errors;\n• p50/p95/p99 prepare, verification, and seal latency;\n• proportion of effects independently verified;\n• ambiguity rate and ambiguity age distribution;\n• duplicate-effect rate despite matching action IDs;\n• stale-precondition rejection rate;\n• signature, timestamp, inclusion-proof, and key-status verification success;\n• orphan proposal, evidence, authority, effect, or recovery references;\n• receipt-to-resource and resource-to-receipt lookup success;\n• disclosure request and legal-hold handling time."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Some targets are zero. A duplicate payment or a receipt sealed under an unknown key status should not disappear inside a percentage. Zero-tolerance events trigger an incident, containment of the action class, reconciliation, evidence preservation, and independent review.",
+      "text": "Some targets are zero. A duplicate payment or a receipt sealed under an unknown key status should not disappear inside a percentage. Zero-tolerance events trigger an incident, containment of the action class, reconciliation, evidence preservation, and independent review."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Instrument stage latency separately. Cryptographic operations are often blamed for the entire control path while target writes or verification reads dominate. Measure queue, schema, canonicalization, KMS, append, target, verification, and anchoring stages. Batch anchoring can run after the receipt is individually sealed if the proof contract permits.",
+      "text": "Instrument stage latency separately. Cryptographic operations are often blamed for the entire control path while target writes or verification reads dominate. Measure queue, schema, canonicalization, KMS, append, target, verification, and anchoring stages. Batch anchoring can run after the receipt is individually sealed if the proof contract permits."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Adopt receipts one action class at a time",
+      "text": "Adopt receipts one action class at a time"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Do not begin by signing every log. Begin with one action where ambiguity, dispute, or duplicate effect matters.",
+      "text": "Do not begin by signing every log. Begin with one action where ambiguity, dispute, or duplicate effect matters."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-ai-agent-action-needs-a-receipt/figure-18.png",
+      "alt": "Six-phase roadmap from inventory and schema through shadow receipts, effect verification, cryptographic sealing, and cross-domain expansion.",
+      "caption": "Figure 18. Receipt maturity increases only after contract, coverage, ambiguity, key, and independent-audit gates pass. AI-assisted design visualization; reference roadmap; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 0 — Inventory claims of completion",
+      "text": "Phase 0 — Inventory claims of completion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Select an action such as <code>quote.discount.apply</code>. Map every system that currently claims success: agent transcript, orchestrator, authorization service, CRM, event bus, warehouse, and audit log. Document identifiers, preconditions, duplicate handling, retention, and ambiguity.",
+      "text": "Select an action such as quote.discount.apply. Map every system that currently claims success: agent transcript, orchestrator, authorization service, CRM, event bus, warehouse, and audit log. Document identifiers, preconditions, duplicate handling, retention, and ambiguity."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> one owner and one stable business identity map exist.",
+      "text": "Gate: one owner and one stable business identity map exist."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 1 — Define the receipt schema and state machine",
+      "text": "Phase 1 — Define the receipt schema and state machine"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Create typed intent and effect schemas, terminal states, failure reasons, lineage requirements, and version rules. Write consumer-driven contract tests. Do not add signatures yet; unstable semantics wrapped in cryptography remain unstable.",
+      "text": "Create typed intent and effect schemas, terminal states, failure reasons, lineage requirements, and version rules. Write consumer-driven contract tests. Do not add signatures yet; unstable semantics wrapped in cryptography remain unstable."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> producers and verifiers pass schema and state-transition conformance tests.",
+      "text": "Gate: producers and verifiers pass schema and state-transition conformance tests."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 2 — Generate shadow receipts",
+      "text": "Phase 2 — Generate shadow receipts"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Prepare receipts beside existing execution without changing business behavior. Measure coverage, missing IDs, divergent digests, unknown effects, and storage volume. Backfill only when evidence is strong; mark reconstructed receipts as reconstructed.",
+      "text": "Prepare receipts beside existing execution without changing business behavior. Measure coverage, missing IDs, divergent digests, unknown effects, and storage volume. Backfill only when evidence is strong; mark reconstructed receipts as reconstructed."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> receipt preparation covers the target and evidence gaps are within the approved threshold.",
+      "text": "Gate: receipt preparation covers the target and evidence gaps are within the approved threshold."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 3 — Enforce idempotency and independent verification",
+      "text": "Phase 3 — Enforce idempotency and independent verification"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Move action ID reservation before execution, implement atomic target deduplication and preconditions, and operate reconciliation. Block blind retry from ambiguous states.",
+      "text": "Move action ID reservation before execution, implement atomic target deduplication and preconditions, and operate reconciliation. Block blind retry from ambiguous states."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> ambiguity rate, age, duplicate-effect tests, and recovery drills meet the action-class objective.",
+      "text": "Gate: ambiguity rate, age, duplicate-effect tests, and recovery drills meet the action-class objective."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 4 — Seal and anchor",
+      "text": "Phase 4 — Seal and anchor"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Freeze a canonicalization and signature profile, introduce KMS keys, verify across independent implementations, rotate and revoke keys in drills, and add batch anchoring where needed.",
+      "text": "Freeze a canonicalization and signature profile, introduce KMS keys, verify across independent implementations, rotate and revoke keys in drills, and add batch anchoring where needed."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> cryptographic, key-status, timestamp, archive, and recovery verification pass independently.",
+      "text": "Gate: cryptographic, key-status, timestamp, archive, and recovery verification pass independently."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Phase 5 — Expand across the workflow",
+      "text": "Phase 5 — Expand across the workflow"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Add child receipts for billing, messaging, fulfillment, and compensation. Define parent completion predicates and selective-disclosure packages. Invite internal audit, security, privacy, legal, and domain owners to challenge the assurance claim.",
+      "text": "Add child receipts for billing, messaging, fulfillment, and compensation. Define parent completion predicates and selective-disclosure packages. Invite internal audit, security, privacy, legal, and domain owners to challenge the assurance claim."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Gate:</strong> cross-domain lineage and terminal parent state withstand independent reconstruction.",
+      "text": "Gate: cross-domain lineage and terminal parent state withstand independent reconstruction."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Rollback is action-specific. If receipt sealing fails, a high-risk action may stop; a reversible low-risk action may continue in a visibly degraded, unsigned state only if policy explicitly allows it. Never label degraded evidence as sealed proof.",
+      "text": "Rollback is action-specific. If receipt sealing fails, a high-risk action may stop; a reversible low-risk action may continue in a visibly degraded, unsigned state only if policy explicitly allows it. Never label degraded evidence as sealed proof."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure modes and limitations",
+      "text": "Failure modes and limitations"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The receipt architecture improves evidence, not reality. Its limits must remain visible.",
+      "text": "The receipt architecture improves evidence, not reality. Its limits must remain visible."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>The signer can be compromised.</strong> A valid signature from a compromised receipt service authenticates the compromised service. Separate proposal, policy, execution, and verification roles; monitor signing patterns; use narrow KMS authorization; and preserve independent domain evidence.",
+      "text": "The signer can be compromised. A valid signature from a compromised receipt service authenticates the compromised service. Separate proposal, policy, execution, and verification roles; monitor signing patterns; use narrow KMS authorization; and preserve independent domain evidence."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>The verifier can observe the wrong source.</strong> A stale read replica or derived event stream may confirm an effect that the authoritative system later rolls back. Define authoritative observation, consistency expectations, and re-verification for delayed settlement.",
+      "text": "The verifier can observe the wrong source. A stale read replica or derived event stream may confirm an effect that the authoritative system later rolls back. Define authoritative observation, consistency expectations, and re-verification for delayed settlement."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Canonicalization profiles can diverge.</strong> Different schema validation, number handling, Unicode processing, or field projection breaks verification. Maintain test vectors across languages and reject unknown profiles.",
+      "text": "Canonicalization profiles can diverge. Different schema validation, number handling, Unicode processing, or field projection breaks verification. Maintain test vectors across languages and reject unknown profiles."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Digests can leak small domains.</strong> Salting or authenticated encryption is necessary when committed values are guessable. A digest is not anonymization.",
+      "text": "Digests can leak small domains. Salting or authenticated encryption is necessary when committed values are guessable. A digest is not anonymization."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Key compromise changes historical confidence.</strong> Policy must distinguish a key revoked for routine rotation from a key suspected compromised since an unknown time. Independent timestamps and batch roots can narrow but not eliminate uncertainty.",
+      "text": "Key compromise changes historical confidence. Policy must distinguish a key revoked for routine rotation from a key suspected compromised since an unknown time. Independent timestamps and batch roots can narrow but not eliminate uncertainty."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>An append-only store can omit records.</strong> External batch commitments and sequence-gap monitoring help. Availability, completeness, and erasure remain separate concerns.",
+      "text": "An append-only store can omit records. External batch commitments and sequence-gap monitoring help. Availability, completeness, and erasure remain separate concerns."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Idempotency stores can partition.</strong> If two regions accept the same action ID without coordinated uniqueness, duplicate effects remain possible. Use a consistent ownership strategy, fencing epoch, or domain-native idempotency primitive.",
+      "text": "Idempotency stores can partition. If two regions accept the same action ID without coordinated uniqueness, duplicate effects remain possible. Use a consistent ownership strategy, fencing epoch, or domain-native idempotency primitive."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Compensation is not reversal.</strong> A refund does not erase a duplicate charge from the customer's experience. A correction email does not make the first message unseen. Receipts must describe compensating effects honestly.",
+      "text": "Compensation is not reversal. A refund does not erase a duplicate charge from the customer's experience. A correction email does not make the first message unseen. Receipts must describe compensating effects honestly."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Human approval can still be weak.</strong> A receipt proves which approval artifact was bound; it does not prove the reviewer paid attention. Approval packet quality, eligibility, separation of duties, and review metrics remain separate controls.",
+      "text": "Human approval can still be weak. A receipt proves which approval artifact was bound; it does not prove the reviewer paid attention. Approval packet quality, eligibility, separation of duties, and review metrics remain separate controls."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Retention can conflict with privacy.</strong> Long-lived proof and deletion obligations require data minimization, compartmentalization, lawful exceptions, and cryptographic lifecycle planning.",
+      "text": "Retention can conflict with privacy. Long-lived proof and deletion obligations require data minimization, compartmentalization, lawful exceptions, and cryptographic lifecycle planning."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Robustness tests should include dropped responses after commit, duplicated queue delivery, key conflict, stale precondition, executor crash after target success, verifier lag, batch omission, invalid timestamp, schema downgrade, digest mismatch, partial multi-system effect, compensation failure, and deleted evidence payload. Each test asserts receipt state and business invariant—not just an HTTP response.",
+      "text": "Robustness tests should include dropped responses after commit, duplicated queue delivery, key conflict, stale precondition, executor crash after target success, verifier lag, batch omission, invalid timestamp, schema downgrade, digest mismatch, partial multi-system effect, compensation failure, and deleted evidence payload. Each test asserts receipt state and business invariant—not just an HTTP response."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Production checklist",
+      "text": "Production checklist"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Before an agent action is called “receipted,” prove the following.",
+      "text": "Before an agent action is called “receipted,” prove the following."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Contract and identity",
+      "text": "Contract and identity"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> One stable <code>business_action_id</code> crosses proposal, policy, approval, lease, request, event, trace, effect, verification, and recovery.<br><strong>•</strong> Same action ID with different proposal digest is rejected.<br><strong>•</strong> Typed intent and field-level postcondition are versioned.<br><strong>•</strong> Parent and child workflow completion rules are explicit.<br><strong>•</strong> Every state transition has allowed predecessors and terminal semantics.",
+      "text": "• One stable business_action_id crosses proposal, policy, approval, lease, request, event, trace, effect, verification, and recovery.\n• Same action ID with different proposal digest is rejected.\n• Typed intent and field-level postcondition are versioned.\n• Parent and child workflow completion rules are explicit.\n• Every state transition has allowed predecessors and terminal semantics."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Execution and recovery",
+      "text": "Execution and recovery"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Receipt is prepared before the first possible effect.<br><strong>•</strong> Target idempotency reservation is atomic with or authoritative for the mutation.<br><strong>•</strong> Business precondition is enforced at the target.<br><strong>•</strong> Timeout after possible effect becomes <code>ambiguous</code>.<br><strong>•</strong> Independent verification observes authoritative state.<br><strong>•</strong> Recovery uses the same action ID or a linked new authorized action, never a blind duplicate.<br><strong>•</strong> Compensation receives its own proposal, authority, verification, and receipt.",
+      "text": "• Receipt is prepared before the first possible effect.\n• Target idempotency reservation is atomic with or authoritative for the mutation.\n• Business precondition is enforced at the target.\n• Timeout after possible effect becomes ambiguous.\n• Independent verification observes authoritative state.\n• Recovery uses the same action ID or a linked new authorized action, never a blind duplicate.\n• Compensation receives its own proposal, authority, verification, and receipt."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Cryptographic proof",
+      "text": "Cryptographic proof"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Signed-field projection and canonicalization profile are documented.<br><strong>•</strong> Cross-language canonicalization and JWS test vectors pass.<br><strong>•</strong> Algorithms are pinned; arbitrary receipt-selected keys and algorithms are denied.<br><strong>•</strong> Signing keys have narrow use, rotation, revocation, audit, and compromise policy.<br><strong>•</strong> Batch ordering, Merkle proof, and timestamp validation are specified where used.<br><strong>•</strong> Archive verification material will survive the retention period.",
+      "text": "• Signed-field projection and canonicalization profile are documented.\n• Cross-language canonicalization and JWS test vectors pass.\n• Algorithms are pinned; arbitrary receipt-selected keys and algorithms are denied.\n• Signing keys have narrow use, rotation, revocation, audit, and compromise policy.\n• Batch ordering, Merkle proof, and timestamp validation are specified where used.\n• Archive verification material will survive the retention period."
+    },
+    {
+      "type": "html",
+      "tag": "h3",
+      "html": "Privacy and operations",
+      "text": "Privacy and operations"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Signed core contains the minimum necessary content.<br><strong>•</strong> Sensitive evidence is compartmentalized by role, purpose, case, and time.<br><strong>•</strong> Digests of low-entropy data cannot be brute-forced trivially.<br><strong>•</strong> Receipt coverage, verification, ambiguity, lineage, and key health have owners and SLOs.<br><strong>•</strong> Resource-to-receipt and receipt-to-resource lookups work.<br><strong>•</strong> Legal hold, deletion, and disclosure workflows are tested.<br><strong>•</strong> Independent audit can reconstruct one representative action without privileged tribal knowledge.",
+      "text": "• Signed core contains the minimum necessary content.\n• Sensitive evidence is compartmentalized by role, purpose, case, and time.\n• Digests of low-entropy data cannot be brute-forced trivially.\n• Receipt coverage, verification, ambiguity, lineage, and key health have owners and SLOs.\n• Resource-to-receipt and receipt-to-resource lookups work.\n• Legal hold, deletion, and disclosure workflows are tested.\n• Independent audit can reconstruct one representative action without privileged tribal knowledge."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Questions that can change the design",
+      "text": "Questions that can change the design"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1.</strong> Which domain system is authoritative for effect, and at what consistency level?<br><strong>2.</strong> What is the stable business identity for retries across protocols and regions?<br><strong>3.</strong> Which actions are reversible, compensable, or irreversible in customer experience?<br><strong>4.</strong> Which receipt fields must remain verifiable for seven years, and which must be deleted sooner?<br><strong>5.</strong> What is the assurance claim of a signature when the key is later compromised?<br><strong>6.</strong> Can the target atomically bind idempotency and mutation, or is reconciliation unavoidable?<br><strong>7.</strong> How will parent workflows express partial success and mixed compensation?<br><strong>8.</strong> Which evidence can an auditor, customer, regulator, or incident responder see?<br><strong>9.</strong> What happens when the receipt service, KMS, verifier, or timestamp authority is unavailable?<br><strong>10.</strong> Which business metric proves that receipts reduce loss or investigation time enough to justify their cost?",
+      "text": "1. Which domain system is authoritative for effect, and at what consistency level?\n2. What is the stable business identity for retries across protocols and regions?\n3. Which actions are reversible, compensable, or irreversible in customer experience?\n4. Which receipt fields must remain verifiable for seven years, and which must be deleted sooner?\n5. What is the assurance claim of a signature when the key is later compromised?\n6. Can the target atomically bind idempotency and mutation, or is reconciliation unavoidable?\n7. How will parent workflows express partial success and mixed compensation?\n8. Which evidence can an auditor, customer, regulator, or incident responder see?\n9. What happens when the receipt service, KMS, verifier, or timestamp authority is unavailable?\n10. Which business metric proves that receipts reduce loss or investigation time enough to justify their cost?"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "If these questions have no owned answers, signing more data will not create accountability.",
+      "text": "If these questions have no owned answers, signing more data will not create accountability."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The durable principle",
+      "text": "The durable principle"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Agents make software behavior less predictable at the same moment organizations ask them to perform more consequential work. That combination makes durable proof more—not less—important.",
+      "text": "Agents make software behavior less predictable at the same moment organizations ask them to perform more consequential work. That combination makes durable proof more—not less—important."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Traces remain essential for latency and causality. Logs remain essential for operations. Events remain essential for integration. None should be stretched into a guarantee it was not designed to provide. The receipt joins them to the business decision, records uncertainty honestly, and closes only when the effect is independently observed or explicitly recovered.",
+      "text": "Traces remain essential for latency and causality. Logs remain essential for operations. Events remain essential for integration. None should be stretched into a guarantee it was not designed to provide. The receipt joins them to the business decision, records uncertainty honestly, and closes only when the effect is independently observed or explicitly recovered."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The action receipt is also a forcing function. To create one, the team must define exact intent, evidence, authority, idempotency, preconditions, postconditions, terminal state, recovery, retention, and disclosure. Those definitions improve the system even before the first signature is produced.",
+      "text": "The action receipt is also a forcing function. To create one, the team must define exact intent, evidence, authority, idempotency, preconditions, postconditions, terminal state, recovery, retention, and disclosure. Those definitions improve the system even before the first signature is produced."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An agent can say, “I changed the quote.” A production system should answer:",
+      "text": "An agent can say, “I changed the quote.” A production system should answer:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Which quote version? Which approved delta? Which evidence? Which authority? Which request? Which observed effect? Which verifier? Which recovery state? Which proof?</strong>",
+      "text": "Which quote version? Which approved delta? Which evidence? Which authority? Which request? Which observed effect? Which verifier? Which recovery state? Which proof?"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "If the organization cannot answer those questions from one durable chain, the action is not complete. It is merely a claim in a transcript.",
+      "text": "If the organization cannot answer those questions from one durable chain, the action is not complete. It is merely a claim in a transcript."
+    }
+  ],
+  "canonical": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+  "description": "A production architecture for canonical, signed, idempotent, independently verified AI-agent action receipts with lineage, selective disclosure, and recovery.",
+  "heroAlt": "Deep-dive comparison of traces, logs, events, and signed action receipts.",
+  "heroImage": "assets/images/every-ai-agent-action-needs-a-receipt/figure-01.png",
+  "id": "193801f28c2a",
+  "modifiedAt": "2026-08-23T12:10:00.000Z",
+  "publishedAt": "2026-08-23T12:10:00.000Z",
+  "readTime": "31 min read",
+  "slug": "every-ai-agent-action-needs-a-receipt",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+  "subtitle": "How signed action receipts turn opaque tool use into auditable, replay-safe, recoverable business transactions.",
+  "tags": [
+    "AI agents",
+    "Auditability",
+    "Distributed systems",
+    "Enterprise architecture",
+    "AI governance"
+  ],
+  "title": "Every AI Agent Action Needs a Receipt",
+  "wordCount": 6085
+}

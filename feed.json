@@ -11,6 +11,21 @@
   ],
   "items": [
     {
+      "id": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+      "url": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+      "external_url": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+      "title": "Every AI Agent Action Needs a Receipt",
+      "summary": "A production architecture for canonical, signed, idempotent, independently verified AI-agent action receipts with lineage, selective disclosure, and recovery.",
+      "date_published": "2026-08-23T12:10:00.000Z",
+      "tags": [
+        "AI agents",
+        "Auditability",
+        "Distributed systems",
+        "Enterprise architecture",
+        "AI governance"
+      ]
+    },
+    {
       "id": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
       "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
       "external_url": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
