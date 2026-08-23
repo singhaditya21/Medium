@@ -24,6 +24,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 ARTICLES_DIR = ROOT / "articles"
 IMAGE_DIR = ROOT / "assets" / "images"
+ASSET_VERSION = hashlib.sha256(
+    b"\0".join((ROOT / "assets" / name).read_bytes() for name in ("styles.css", "site.js"))
+).hexdigest()[:12]
 SITE_URL = "https://singhaditya21.github.io/Medium/"
 MEDIUM_PROFILE = "https://medium.com/@singhaditya21_89007"
 AUTHOR = "Aditya Singh"
@@ -332,7 +335,7 @@ def document(
   <link rel="alternate" type="application/rss+xml" title="Aditya Singh essays" href="{prefix}rss.xml">
   <link rel="alternate" type="application/feed+json" title="Aditya Singh essays" href="{prefix}feed.json">
   <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="{prefix}assets/styles.css">
+  <link rel="stylesheet" href="{prefix}assets/styles.css?v={ASSET_VERSION}">
   {json_ld}
   {analytics}
   <script>try{{document.documentElement.dataset.theme=localStorage.getItem('as-theme')||'light'}}catch(e){{}}</script>
@@ -345,7 +348,7 @@ def document(
     {body}
     {footer(prefix)}
   </div>
-  <script src="{prefix}assets/site.js" defer></script>
+  <script src="{prefix}assets/site.js?v={ASSET_VERSION}" defer></script>
 </body>
 </html>
 """
