@@ -1,5 +1,23 @@
 [
   {
+    "slug": "model-routing-is-capital-allocation",
+    "title": "Model Routing Is Capital Allocation",
+    "description": "A production blueprint for routing enterprise AI actions across model, context, tool, retry, and verification portfolios using constrained utility, calibration, novelty controls, counterfactual evaluation, and business-effect SLOs.",
+    "publishedAt": "2026-08-23T12:40:00.000Z",
+    "readTime": "33 min read",
+    "tags": [
+      "AI agents",
+      "Model routing",
+      "AI economics",
+      "FinOps",
+      "Enterprise AI"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=model-routing-is-capital-allocation",
+    "series": []
+  },
+  {
     "slug": "your-multi-agent-system-is-a-distributed-system",
     "title": "Your Multi-Agent System Is a Distributed System",
     "description": "A production blueprint for coordinating AI agents with durable workflows, invariants, message contracts, idempotency, fencing, causal ordering, sagas, chaos tests, and business-effect SLOs.",
