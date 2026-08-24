@@ -130,6 +130,9 @@
     const download = viewer.querySelector('[data-figure-download]');
     const previousButton = viewer.querySelector('[data-figure-previous]');
     const nextButton = viewer.querySelector('[data-figure-next]');
+    const initialSource = figures[0].querySelector('img').src;
+    download.href = initialSource;
+    download.download = initialSource.split('/').pop().split('?')[0] || 'figure-1.png';
     let activeFigure = 0;
     let zoom = 0;
     let returnFocus = null;

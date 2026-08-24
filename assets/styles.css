@@ -400,8 +400,8 @@ button, input { font: inherit; }
 .figure-expand:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 3px; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .figure-explorer-enabled .story-figure { opacity: 0.58; transform: translateY(14px); transition: opacity 420ms ease, transform 420ms ease; }
-  .figure-explorer-enabled .story-figure.is-figure-visible { opacity: 1; transform: translateY(0); }
+  .figure-explorer-enabled .story-figure { transform: translateY(14px); transition: transform 420ms ease; }
+  .figure-explorer-enabled .story-figure.is-figure-visible { transform: translateY(0); }
 }
 
 .figure-viewer-open { overflow: hidden; }
