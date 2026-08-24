@@ -137,6 +137,17 @@ def main() -> None:
     publish_parser.add_argument("--paywall", type=bool_value, required=True)
     publish_parser.add_argument("--schedule-at")
 
+    schedule_parser = subparsers.add_parser("story-scheduled")
+    add_common_arguments(schedule_parser)
+    schedule_parser.add_argument("--story-slug", required=True)
+    schedule_parser.add_argument("--medium-url", required=True)
+    schedule_parser.add_argument("--canonical-url", required=True)
+    schedule_parser.add_argument("--topic", action="append", required=True)
+    schedule_parser.add_argument("--publication")
+    schedule_parser.add_argument("--subscriber-email", type=bool_value, required=True)
+    schedule_parser.add_argument("--paywall", type=bool_value, required=True)
+    schedule_parser.add_argument("--schedule-at", required=True)
+
     stats_parser = subparsers.add_parser("stats-captured")
     add_common_arguments(stats_parser)
     stats_parser.add_argument("--snapshot-path", required=True)
@@ -156,6 +167,22 @@ def main() -> None:
         action = "draft_imported"
         target = args.story_slug
         result = {"status": "draft_saved", "storySlug": args.story_slug}
+    elif args.command == "story-scheduled":
+        action = "story_scheduled"
+        target = args.story_slug
+        result = {
+            "status": "scheduled",
+            "storySlug": args.story_slug,
+            "mediumUrl": args.medium_url,
+            "settings": {
+                "topics": args.topic,
+                "publication": args.publication,
+                "subscriberEmail": args.subscriber_email,
+                "paywall": args.paywall,
+                "scheduleAt": args.schedule_at,
+                "canonicalUrl": args.canonical_url,
+            },
+        }
     elif args.command == "story-published":
         action = "story_published"
         target = args.story_slug

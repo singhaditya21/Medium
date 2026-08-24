@@ -50,6 +50,7 @@ jobs:
           gh label create medium-release --color 1D76DB --description "Medium release orchestration" --force
           gh label create awaiting-signed-in-execution --color FBCA04 --description "Waiting for a user-initiated signed-in Medium step" --force
           gh label create medium-draft-saved --color C2E0C6 --description "Private Medium draft was visibly verified" --force
+          gh label create medium-scheduled --color 0052CC --description "Medium schedule was visibly verified" --force
           gh label create medium-published --color 0E8A16 --description "Medium publication was visibly verified" --force
           gh label create medium-stats-captured --color 5319E7 --description "Aggregate Medium stats were captured through a signed-in read-only review" --force
           gh label create medium-response-posted --color BFDADC --description "One approved Medium response was visibly verified" --force
@@ -70,7 +71,7 @@ jobs:
             marker="<!-- medium-execution:$operation_id -->"
             comment_body="$(mktemp)"
             case "$action" in
-              draft_imported|story_published) expected_issue_label="medium-release" ;;
+              draft_imported|story_scheduled|story_published) expected_issue_label="medium-release" ;;
               stats_captured) expected_issue_label="medium-metrics" ;;
               response_posted) expected_issue_label="medium-engagement" ;;
             esac
@@ -90,9 +91,15 @@ jobs:
                 remove_label_if_present "$issue_number" awaiting-signed-in-execution
                 gh issue edit "$issue_number" --add-label medium-draft-saved
                 ;;
+              story_scheduled)
+                remove_label_if_present "$issue_number" awaiting-signed-in-execution
+                remove_label_if_present "$issue_number" medium-draft-saved
+                gh issue edit "$issue_number" --add-label medium-scheduled
+                ;;
               story_published)
                 remove_label_if_present "$issue_number" awaiting-signed-in-execution
                 remove_label_if_present "$issue_number" medium-draft-saved
+                remove_label_if_present "$issue_number" medium-scheduled
                 gh issue edit "$issue_number" --add-label medium-published
                 gh issue close "$issue_number" --reason completed
                 ;;

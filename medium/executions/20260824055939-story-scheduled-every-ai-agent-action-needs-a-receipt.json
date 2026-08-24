@@ -1,0 +1,38 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260824055939-story-scheduled-every-ai-agent-action-needs-a-receipt",
+  "action": "story_scheduled",
+  "recordedAt": "2026-08-24T05:59:39Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 27,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-24T05:59:39Z",
+    "scope": "Schedule the seven confirmed stories at 19:30 IST on their specified dates, with personal profile, no publication, subscriber email off, paywall off, five approved topics, and GitHub Pages canonicals."
+  },
+  "result": {
+    "status": "scheduled",
+    "storySlug": "every-ai-agent-action-needs-a-receipt",
+    "mediumUrl": "https://medium.com/@singhaditya21_89007/906fc2c6ddb5",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "Distributed Systems",
+        "AI Governance",
+        "Cybersecurity",
+        "Enterprise Architecture"
+      ],
+      "publication": null,
+      "subscriberEmail": false,
+      "paywall": false,
+      "scheduleAt": "2026-08-26T19:30:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/"
+    },
+    "verifiedAt": "2026-08-24T05:59:39Z",
+    "verification": "Medium Scheduled tab showed this title as Scheduled Aug 26, 7:30 PM; its stable story URL opened after scheduling and its GitHub Pages canonical was verified in Story settings."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}
