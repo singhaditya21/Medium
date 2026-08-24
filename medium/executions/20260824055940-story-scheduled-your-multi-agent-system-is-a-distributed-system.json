@@ -1,0 +1,38 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260824055940-story-scheduled-your-multi-agent-system-is-a-distributed-system",
+  "action": "story_scheduled",
+  "recordedAt": "2026-08-24T05:59:40Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 29,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-24T05:59:40Z",
+    "scope": "Schedule the seven confirmed stories at 19:30 IST on their specified dates, with personal profile, no publication, subscriber email off, paywall off, five approved topics, and GitHub Pages canonicals."
+  },
+  "result": {
+    "status": "scheduled",
+    "storySlug": "your-multi-agent-system-is-a-distributed-system",
+    "mediumUrl": "https://medium.com/@singhaditya21_89007/0c456a0fe664",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "Distributed Systems",
+        "Multi Agent Systems",
+        "Enterprise Architecture",
+        "Reliability"
+      ],
+      "publication": null,
+      "subscriberEmail": false,
+      "paywall": false,
+      "scheduleAt": "2026-08-28T19:30:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/"
+    },
+    "verifiedAt": "2026-08-24T05:59:40Z",
+    "verification": "Medium Scheduled tab showed this title as Scheduled Aug 28, 7:30 PM; its stable story URL opened after scheduling and its GitHub Pages canonical was verified in Story settings."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

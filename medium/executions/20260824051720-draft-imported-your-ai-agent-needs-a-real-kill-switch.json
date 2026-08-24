@@ -1,0 +1,23 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260824051720-draft-imported-your-ai-agent-needs-a-real-kill-switch",
+  "action": "draft_imported",
+  "recordedAt": "2026-08-24T05:17:20Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 30,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-24T05:17:20Z",
+    "scope": "Import this exact GitHub Pages story into a private Medium draft; do not publish"
+  },
+  "result": {
+    "status": "draft_saved",
+    "storySlug": "your-ai-agent-needs-a-real-kill-switch",
+    "verifiedAt": "2026-08-24T05:17:20Z",
+    "verification": "Medium showed the exact title, 18 figures, 18 labeled captions, 18 alt descriptions, and saved draft state"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

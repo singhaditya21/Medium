@@ -33,6 +33,7 @@ SENSITIVE_KEY_PARTS = {
 }
 ACTION_STATUS = {
     "draft_imported": "draft_saved",
+    "story_scheduled": "scheduled",
     "story_published": "published",
     "stats_captured": "stats_captured",
     "response_posted": "response_posted",
@@ -72,7 +73,11 @@ def sensitive_key_paths(value: Any, prefix: str = "") -> list[str]:
         for key, child in value.items():
             path = f"{prefix}.{key}" if prefix else key
             normalized = "".join(character for character in key.casefold() if character.isalnum())
-            if any(part in normalized for part in SENSITIVE_KEY_PARTS):
+            # Receipts intentionally carry this negative assertion. Treat only
+            # the schema-required false value as safe; any other value remains
+            # both a validation error and a sensitive-field finding.
+            safe_secret_assertion = normalized == "secretsstored" and child is False
+            if not safe_secret_assertion and any(part in normalized for part in SENSITIVE_KEY_PARTS):
                 matches.append(path)
             matches.extend(sensitive_key_paths(child, path))
     elif isinstance(value, list):
@@ -268,6 +273,7 @@ def validate_receipt(
         result = {}
     result_fields = {
         "draft_imported": {"status", "storySlug", "verifiedAt", "verification"},
+        "story_scheduled": {"status", "storySlug", "mediumUrl", "settings", "verifiedAt", "verification"},
         "story_published": {"status", "storySlug", "mediumUrl", "settings", "verifiedAt", "verification"},
         "stats_captured": {"status", "snapshotPath", "verifiedAt", "verification"},
         "response_posted": {"status", "candidateId", "targetUrl", "responseUrl", "verifiedAt", "verification"},
@@ -281,20 +287,21 @@ def validate_receipt(
         errors.append(f"{label}: result verification must be non-empty")
 
     story_slug = result.get("storySlug")
-    if action in {"draft_imported", "story_published"} and story_slug not in story_slugs:
+    if action in {"draft_imported", "story_scheduled", "story_published"} and story_slug not in story_slugs:
         errors.append(f"{label}: unknown storySlug")
     if action == "draft_imported" and any(key in result for key in ("mediumDraftUrl", "draftUrl")):
         errors.append(f"{label}: private Medium draft URLs must not be stored")
-    if action == "story_published":
+    if action in {"story_scheduled", "story_published"}:
         url = result.get("mediumUrl")
         if not medium_url(url):
-            errors.append(f"{label}: published story requires an HTTPS medium.com URL")
-        record = publications.get(story_slug, {})
-        if record.get("status") != "published" or record.get("mediumUrl") != url:
-            errors.append(f"{label}: publication registry must match the verified public URL")
+            errors.append(f"{label}: scheduled or published story requires an HTTPS medium.com URL")
+        if action == "story_published":
+            record = publications.get(story_slug, {})
+            if record.get("status") != "published" or record.get("mediumUrl") != url:
+                errors.append(f"{label}: publication registry must match the verified public URL")
         settings = result.get("settings")
         if not isinstance(settings, dict):
-            errors.append(f"{label}: published story requires final settings")
+            errors.append(f"{label}: scheduled or published story requires final settings")
         else:
             allowed_settings = {"topics", "publication", "subscriberEmail", "paywall", "scheduleAt", "canonicalUrl"}
             if set(settings) - allowed_settings:
@@ -307,6 +314,8 @@ def validate_receipt(
                     errors.append(f"{label}: settings.{flag} must be boolean")
             if not isinstance(settings.get("canonicalUrl"), str):
                 errors.append(f"{label}: settings.canonicalUrl is required")
+            if action == "story_scheduled":
+                require_datetime(settings.get("scheduleAt"), f"{label}.settings.scheduleAt", errors)
     if action == "stats_captured":
         snapshot_path = result.get("snapshotPath")
         if not isinstance(snapshot_path, str) or not snapshot_path.startswith("analytics/snapshots/"):
@@ -359,6 +368,7 @@ def build_report(
         "",
         f"- Verified receipts: {len(receipts)}",
         f"- Draft imports: {action_counts['draft_imported']}",
+        f"- Scheduled stories: {action_counts['story_scheduled']}",
         f"- Publications: {action_counts['story_published']}",
         f"- Stats captures: {action_counts['stats_captured']}",
         f"- Responses posted: {action_counts['response_posted']}",

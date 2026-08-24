@@ -42,7 +42,7 @@ The repository supports a deliberate weekly loop without automating Medium or so
 3. The author reviews claims, disclosure, canonical settings, and channel-specific wording before manually publishing or submitting anything.
 4. `metrics-report.yml` packages the latest reviewed Medium snapshot and opens a monthly manual-refresh issue.
 5. `medium-release.yml` validates an exact story against the reviewed Medium publication registry, rejects duplicate imports, packages the Medium settings, and opens a draft-import approval issue.
-6. After a user-initiated signed-in Medium action, `medium-continuation.yml` validates its receipt, updates the originating issue, and resumes analytics and engagement reporting.
+6. After a user-initiated signed-in Medium action, `medium-continuation.yml` validates its draft, schedule, publication, stats, or response receipt; updates the originating issue; and resumes analytics and engagement reporting.
 
 Generate the same assets locally:
 

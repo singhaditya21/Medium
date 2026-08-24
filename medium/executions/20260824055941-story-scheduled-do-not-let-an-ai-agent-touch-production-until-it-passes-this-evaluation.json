@@ -1,0 +1,38 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260824055941-story-scheduled-do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+  "action": "story_scheduled",
+  "recordedAt": "2026-08-24T05:59:41Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 32,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-24T05:59:41Z",
+    "scope": "Schedule the seven confirmed stories at 19:30 IST on their specified dates, with personal profile, no publication, subscriber email off, paywall off, five approved topics, and GitHub Pages canonicals."
+  },
+  "result": {
+    "status": "scheduled",
+    "storySlug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+    "mediumUrl": "https://medium.com/@singhaditya21_89007/44beb06b346a",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "AI Evaluation",
+        "MLOps",
+        "Enterprise AI",
+        "AI Governance"
+      ],
+      "publication": null,
+      "subscriberEmail": false,
+      "paywall": false,
+      "scheduleAt": "2026-09-02T19:30:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/"
+    },
+    "verifiedAt": "2026-08-24T05:59:41Z",
+    "verification": "Medium Scheduled tab showed this title as Scheduled Sep 2, 7:30 PM; its stable story URL opened after scheduling and its GitHub Pages canonical was verified in Story settings."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

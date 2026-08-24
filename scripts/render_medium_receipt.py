@@ -10,6 +10,7 @@ from pathlib import Path
 
 ACTION_LABELS = {
     "draft_imported": "Private Medium draft saved",
+    "story_scheduled": "Medium story scheduled",
     "story_published": "Medium story published",
     "stats_captured": "Medium aggregate stats captured",
     "response_posted": "Medium response posted",
@@ -34,7 +35,10 @@ def main() -> None:
         "- Medium action performed by GitHub Actions: **no**",
     ]
     if result.get("mediumUrl"):
-        lines.append(f"- Published story: {result['mediumUrl']}")
+        story_label = "Scheduled story" if receipt["action"] == "story_scheduled" else "Published story"
+        lines.append(f"- {story_label}: {result['mediumUrl']}")
+    if result.get("settings", {}).get("scheduleAt"):
+        lines.append(f"- Scheduled for: {result['settings']['scheduleAt']}")
     if result.get("responseUrl"):
         lines.append(f"- Published response: {result['responseUrl']}")
     if result.get("snapshotPath"):
