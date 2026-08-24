@@ -12,8 +12,23 @@ from urllib.parse import urljoin, urlsplit
 
 import requests
 from lxml import etree, html
+from PIL import Image
 
 from build_site import DATA_DIR, ROOT, SERIES, SITE_URL, clean_url, load_stories
+
+
+TECHNICAL_FIGURE_CONTRACTS = {
+    "your-ai-agents-memory-is-a-database-not-a-prompt": {"memory", "provenance", "retrieval", "retention", "evidence", "source", "trust", "freshness", "deletion", "valid time"},
+    "every-ai-agent-action-needs-a-receipt": {"receipt", "action", "effect", "verification", "idempotency"},
+    "human-approval-is-a-queueing-system": {"approval", "review", "queue", "reviewer", "risk", "evidence"},
+    "your-multi-agent-system-is-a-distributed-system": {"agent", "coordination", "distributed", "workflow", "message", "ownership", "fencing", "delivery", "idempotency", "event", "compensation", "split-brain", "lease", "epoch", "worker"},
+    "model-routing-is-capital-allocation": {"model", "route", "routing", "cost", "utility", "budget", "capital", "inference"},
+    "your-ai-agent-needs-a-real-kill-switch": {"containment", "kill", "revocation", "authority", "recovery", "stop", "enforcement", "effect", "incident", "fencing", "tool", "ambiguity", "idempotency"},
+    "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation": {"evaluation", "evidence", "scenario", "production", "promotion", "failure", "trial", "risk"},
+}
+TECHNICAL_FIGURE_COUNT = 18
+TECHNICAL_FIGURE_SIZE = (2400, 1600)
+TECHNICAL_FIGURE_MIN_BYTES = 200_000
 
 
 def local_references(document: html.HtmlElement, page_path: Path) -> Iterable[Path]:
@@ -53,6 +68,37 @@ def validate_generated_html(path: Path, expected_canonical: str, errors: list[st
             errors.append(f"broken local reference in {path.relative_to(ROOT)}: {reference.relative_to(ROOT)}")
 
 
+def validate_technical_figure_html(story: dict, errors: list[str]) -> None:
+    path = ROOT / "articles" / story["slug"] / "index.html"
+    if not path.exists():
+        return
+    document = html.fromstring(path.read_text(encoding="utf-8"))
+    figures = document.xpath("//figure[contains(concat(' ', normalize-space(@class), ' '), ' story-figure ')]")
+    if len(figures) != TECHNICAL_FIGURE_COUNT:
+        errors.append(f"{story['slug']}: generated page has {len(figures)} technical figures, expected {TECHNICAL_FIGURE_COUNT}")
+        return
+    for index, figure in enumerate(figures, 1):
+        if figure.get("id") != f"figure-{index}":
+            errors.append(f"{story['slug']} figure {index}: missing stable figure anchor")
+        if figure.get("data-figure-index") != str(index) or figure.get("data-figure-total") != str(TECHNICAL_FIGURE_COUNT):
+            errors.append(f"{story['slug']} figure {index}: invalid dynamic-viewer metadata")
+        images = figure.xpath("./div[contains(@class, 'story-figure-frame')]/img")
+        captions = figure.xpath("./figcaption")
+        toolbars = figure.xpath("./div[contains(@class, 'figure-explorer-toolbar')]")
+        controls = figure.xpath("./div[contains(@class, 'figure-explorer-toolbar')]//button[@data-figure-open]")
+        if len(images) != 1 or len(captions) != 1 or len(toolbars) != 1 or len(controls) != 1:
+            errors.append(f"{story['slug']} figure {index}: incomplete interactive figure structure")
+            continue
+        if controls[0].get("hidden") is None or not controls[0].get("aria-label"):
+            errors.append(f"{story['slug']} figure {index}: progressive-enhancement control is not safely initialized")
+        image = images[0]
+        caption_id = f"figure-{index}-caption"
+        if captions[0].get("id") != caption_id or image.get("aria-describedby") != caption_id:
+            errors.append(f"{story['slug']} figure {index}: caption is not programmatically associated")
+        if (image.get("width"), image.get("height")) != tuple(map(str, TECHNICAL_FIGURE_SIZE)):
+            errors.append(f"{story['slug']} figure {index}: missing intrinsic 2400x1600 dimensions")
+
+
 def validate_live(stories: list[dict], errors: list[str]) -> None:
     urls = [SITE_URL, f"{SITE_URL}series/", f"{SITE_URL}feed.xml"]
     urls.extend(story["pageUrl"] for story in stories)
@@ -83,19 +129,50 @@ def main() -> None:
         if missing:
             errors.append(f"{story.get('slug', '<unknown>')}: missing fields {', '.join(missing)}")
             continue
+        technical_terms = TECHNICAL_FIGURE_CONTRACTS.get(story["slug"])
+        figure_blocks = [block for block in story["blocks"] if block.get("type") == "figure"]
+        if technical_terms and len(figure_blocks) != TECHNICAL_FIGURE_COUNT:
+            errors.append(f"{story['slug']}: expected {TECHNICAL_FIGURE_COUNT} technical figures, found {len(figure_blocks)}")
         figure_index = 0
+        figure_alts: set[str] = set()
+        figure_captions: set[str] = set()
         for block in story["blocks"]:
             if block.get("type") != "figure":
                 continue
             figure_index += 1
-            if not block.get("alt", "").strip():
+            alt = block.get("alt", "").strip()
+            caption = block.get("caption", "").strip()
+            if not alt:
                 errors.append(f"{story['slug']} figure {figure_index}: missing alt text")
-            if not block.get("caption", "").strip():
+            if not caption:
                 errors.append(f"{story['slug']} figure {figure_index}: missing caption")
             images = list((ROOT / "assets" / "images" / story["slug"]).glob(f"figure-{figure_index:02d}.*"))
             if len(images) != 1 or images[0].stat().st_size < 500:
                 errors.append(f"{story['slug']} figure {figure_index}: expected one valid local image")
+            if technical_terms:
+                normalized = f"{alt} {caption}".casefold()
+                if len(alt.split()) < 8:
+                    errors.append(f"{story['slug']} figure {figure_index}: alt text is not technically descriptive")
+                if not caption.startswith(f"Figure {figure_index}."):
+                    errors.append(f"{story['slug']} figure {figure_index}: caption is not sequentially labeled")
+                if not any(term in normalized for term in technical_terms):
+                    errors.append(f"{story['slug']} figure {figure_index}: content does not match the story-specific relevance vocabulary")
+                if alt.casefold() in figure_alts or caption.casefold() in figure_captions:
+                    errors.append(f"{story['slug']} figure {figure_index}: duplicate figure description")
+                figure_alts.add(alt.casefold())
+                figure_captions.add(caption.casefold())
+                if len(images) == 1:
+                    if images[0].suffix.casefold() != ".png" or images[0].stat().st_size < TECHNICAL_FIGURE_MIN_BYTES:
+                        errors.append(f"{story['slug']} figure {figure_index}: full-resolution PNG is below the technical-detail floor")
+                    try:
+                        with Image.open(images[0]) as source_image:
+                            if source_image.size != TECHNICAL_FIGURE_SIZE:
+                                errors.append(f"{story['slug']} figure {figure_index}: expected {TECHNICAL_FIGURE_SIZE}, found {source_image.size}")
+                    except OSError as exc:
+                        errors.append(f"{story['slug']} figure {figure_index}: invalid image ({exc})")
         validate_generated_html(ROOT / "articles" / story["slug"] / "index.html", story["canonical"], errors)
+        if technical_terms:
+            validate_technical_figure_html(story, errors)
         story["pageUrl"] = f"{SITE_URL}articles/{story['slug']}/"
 
     validate_generated_html(ROOT / "index.html", SITE_URL, errors)

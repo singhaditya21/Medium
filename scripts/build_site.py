@@ -378,6 +378,7 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
     toc: list[tuple[int, str, str]] = []
     rendered: list[str] = []
     figure_index = 0
+    figure_total = sum(1 for block in story["blocks"] if block.get("type") == "figure")
     local_hero = ""
     page_url = f"{SITE_URL}articles/{slug}/"
 
@@ -394,10 +395,27 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
             if figure_index == 1 and local:
                 local_hero = f"{SITE_URL}{local.relative_to(ROOT).as_posix()}"
             caption = block.get("caption", "")
-            caption_html = f"<figcaption>{escape(caption)}</figcaption>" if caption else ""
+            caption_id = f"figure-{figure_index}-caption"
+            caption_html = f'<figcaption id="{caption_id}">{escape(caption)}</figcaption>' if caption else ""
+            described_by = f' aria-describedby="{caption_id}"' if caption else ""
+            dimensions = ""
+            if local:
+                try:
+                    with Image.open(local) as source_image:
+                        width, height = source_image.size
+                    dimensions = f' width="{width}" height="{height}"'
+                except (OSError, ValueError):
+                    pass
             rendered.append(
-                '<figure class="story-figure">'
-                f'<img src="{escape(src, quote=True)}" alt="{escape(block.get("alt", ""), quote=True)}" loading="lazy" decoding="async">'
+                f'<figure class="story-figure" id="figure-{figure_index}" data-figure-index="{figure_index}" data-figure-total="{figure_total}">'
+                '<div class="figure-explorer-toolbar">'
+                f'<span class="figure-explorer-badge" aria-hidden="true">Figure {figure_index:02d} / {figure_total:02d} · Technical infographic</span>'
+                f'<button class="figure-expand" type="button" data-figure-open aria-label="Explore figure {figure_index} of {figure_total} in full resolution" hidden>'
+                '<span>Explore details</span><span aria-hidden="true">↗</span></button>'
+                '</div>'
+                '<div class="story-figure-frame">'
+                f'<img src="{escape(src, quote=True)}" alt="{escape(block.get("alt", ""), quote=True)}"{described_by}{dimensions} loading="lazy" decoding="async">'
+                '</div>'
                 f"{caption_html}</figure>"
             )
             continue
