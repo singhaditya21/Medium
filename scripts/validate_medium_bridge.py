@@ -72,7 +72,11 @@ def sensitive_key_paths(value: Any, prefix: str = "") -> list[str]:
         for key, child in value.items():
             path = f"{prefix}.{key}" if prefix else key
             normalized = "".join(character for character in key.casefold() if character.isalnum())
-            if any(part in normalized for part in SENSITIVE_KEY_PARTS):
+            # Receipts intentionally carry this negative assertion. Treat only
+            # the schema-required false value as safe; any other value remains
+            # both a validation error and a sensitive-field finding.
+            safe_secret_assertion = normalized == "secretsstored" and child is False
+            if not safe_secret_assertion and any(part in normalized for part in SENSITIVE_KEY_PARTS):
                 matches.append(path)
             matches.extend(sensitive_key_paths(child, path))
     elif isinstance(value, list):

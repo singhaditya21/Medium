@@ -1,0 +1,23 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260824051719-draft-imported-your-multi-agent-system-is-a-distributed-system",
+  "action": "draft_imported",
+  "recordedAt": "2026-08-24T05:17:19Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 29,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-24T05:17:19Z",
+    "scope": "Import this exact GitHub Pages story into a private Medium draft; do not publish"
+  },
+  "result": {
+    "status": "draft_saved",
+    "storySlug": "your-multi-agent-system-is-a-distributed-system",
+    "verifiedAt": "2026-08-24T05:17:19Z",
+    "verification": "Medium showed the exact title, 18 figures, 18 labeled captions, 18 alt descriptions, and saved draft state"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}
