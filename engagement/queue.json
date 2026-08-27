@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-27T14:02:30Z",
+  "updatedAt": "2026-08-27T14:36:44Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -305,6 +305,23 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7496586504614424576/",
       "receiptOperationId": "20260827140230-reply-posted-2026-08-27-linkedin-reply-dhari-authorization-metrics",
       "postedAt": "2026-08-27T14:02:30Z"
+    },
+    {
+      "id": "2026-08-27-linkedin-reply-manas-gated-learning",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498567720855117824/",
+      "title": "Decision-first agent architecture: gated learning after recovery",
+      "author": "Manas Jain",
+      "reason": "Answers a fresh inbound technical mention by adding the governance boundary between verified outcomes and policy or memory changes.",
+      "evidence": "Manas replied to the existing comment by extending Decision → Context → Sources → Permissions → Tools → Action → Verification → Recovery with Learning, while warning against turning every past outcome into permanent memory. The source post showed 12 reactions and 2 comments; his response was 37 minutes old when inspected. Score: relevance 0.99, discussion quality 0.91, unique contribution 0.90, recency 0.99; weighted 0.95.",
+      "draftResponse": "@Manas Jain, exactly—and Learning should be gated, not reflexive. I would separate outcome evidence from policy change: record the verified result, recovery cause and evaluator confidence immediately, but promote them into retrieval or decision policy only after drift checks, privacy and retention controls, and accountable-owner approval. The operating metrics then become learning-acceptance rate, post-change regret, rollback rate and stale-memory rate.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Manas Jain"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
