@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-27T14:36:44Z",
+  "updatedAt": "2026-08-27T14:49:17Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -321,7 +321,10 @@
       "intendedMentions": [
         "Manas Jain"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498567720855117824/",
+      "receiptOperationId": "20260827144917-reply-posted-2026-08-27-linkedin-reply-manas-gated-learning",
+      "postedAt": "2026-08-27T14:49:17Z"
     }
   ]
 }

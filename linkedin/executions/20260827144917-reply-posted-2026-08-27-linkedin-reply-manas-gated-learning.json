@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827144917-reply-posted-2026-08-27-linkedin-reply-manas-gated-learning",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-27T14:49:17Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T14:49:17Z",
+    "scope": "Approve both exactly as written"
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-27-linkedin-reply-manas-gated-learning",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498567720855117824/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498567720855117824/",
+    "publishedTextSha256": "82f187e6fec83bf211867597ae800accb8d0ad46d16b8da894c06cd6beeb5ddb",
+    "verifiedAt": "2026-08-27T14:49:17Z",
+    "verification": "LinkedIn rendered the exact approved threaded reply under Aditya Singh, You, with a 1-second timestamp; the reply composer cleared after submission"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
