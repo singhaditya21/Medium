@@ -10,6 +10,7 @@ from pathlib import Path
 
 ACTION_LABELS = {
     "draft_imported": "Private Medium draft saved",
+    "draft_revised": "Scheduled Medium draft revised",
     "story_scheduled": "Medium story scheduled",
     "story_published": "Medium story published",
     "stats_captured": "Medium aggregate stats captured",

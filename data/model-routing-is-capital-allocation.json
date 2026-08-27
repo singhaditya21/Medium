@@ -461,6 +461,12 @@
       "text": "The following sections retain the quantitative and systems detail for readers implementing the control plane."
     },
     {
+      "type": "figure",
+      "src": "assets/images/model-routing-is-capital-allocation/figure-01.png",
+      "alt": "Comparison of a static cheap-or-large router and a risk-adjusted capital allocator across decision unit, objective, candidate, constraints, failure cost, evidence, and output.",
+      "caption": "Figure 1. Static model selection becomes production capital allocation when the decision unit is a workflow action and the output is a full execution-and-verification portfolio. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
       "type": "html",
       "tag": "h2",
       "html": "Evaluate counterfactual policy honestly",

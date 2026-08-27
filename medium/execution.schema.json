@@ -22,7 +22,7 @@
     "schemaVersion": {"const": 1},
     "operationId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
     "action": {
-      "enum": ["draft_imported", "story_scheduled", "story_published", "stats_captured", "response_posted"]
+      "enum": ["draft_imported", "draft_revised", "story_scheduled", "story_published", "stats_captured", "response_posted"]
     },
     "recordedAt": {"type": "string", "format": "date-time"},
     "executionSurface": {"const": "user_initiated_signed_in_medium_ui"},

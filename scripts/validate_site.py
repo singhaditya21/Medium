@@ -31,10 +31,10 @@ TECHNICAL_FIGURE_COUNT = 18
 TECHNICAL_FIGURE_COUNTS = {
     "your-ai-agents-memory-is-a-database-not-a-prompt": 18,
     "every-ai-agent-action-needs-a-receipt": 18,
-    "human-approval-is-a-queueing-system": 10,
-    "your-multi-agent-system-is-a-distributed-system": 10,
-    "model-routing-is-capital-allocation": 9,
-    "your-ai-agent-needs-a-real-kill-switch": 9,
+    "human-approval-is-a-queueing-system": 11,
+    "your-multi-agent-system-is-a-distributed-system": 11,
+    "model-routing-is-capital-allocation": 10,
+    "your-ai-agent-needs-a-real-kill-switch": 10,
     "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation": 18,
 }
 TECHNICAL_FIGURE_SIZE = (2400, 1600)

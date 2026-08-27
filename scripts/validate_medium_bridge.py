@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 from collections import Counter
 from datetime import datetime
@@ -33,6 +34,7 @@ SENSITIVE_KEY_PARTS = {
 }
 ACTION_STATUS = {
     "draft_imported": "draft_saved",
+    "draft_revised": "draft_saved",
     "story_scheduled": "scheduled",
     "story_published": "published",
     "stats_captured": "stats_captured",
@@ -273,6 +275,7 @@ def validate_receipt(
         result = {}
     result_fields = {
         "draft_imported": {"status", "storySlug", "verifiedAt", "verification"},
+        "draft_revised": {"status", "storySlug", "settings", "content", "verifiedAt", "verification"},
         "story_scheduled": {"status", "storySlug", "mediumUrl", "settings", "verifiedAt", "verification"},
         "story_published": {"status", "storySlug", "mediumUrl", "settings", "verifiedAt", "verification"},
         "stats_captured": {"status", "snapshotPath", "verifiedAt", "verification"},
@@ -287,14 +290,15 @@ def validate_receipt(
         errors.append(f"{label}: result verification must be non-empty")
 
     story_slug = result.get("storySlug")
-    if action in {"draft_imported", "story_scheduled", "story_published"} and story_slug not in story_slugs:
+    if action in {"draft_imported", "draft_revised", "story_scheduled", "story_published"} and story_slug not in story_slugs:
         errors.append(f"{label}: unknown storySlug")
-    if action == "draft_imported" and any(key in result for key in ("mediumDraftUrl", "draftUrl")):
+    if action in {"draft_imported", "draft_revised"} and any(key in result for key in ("mediumDraftUrl", "draftUrl")):
         errors.append(f"{label}: private Medium draft URLs must not be stored")
-    if action in {"story_scheduled", "story_published"}:
-        url = result.get("mediumUrl")
-        if not medium_url(url):
-            errors.append(f"{label}: scheduled or published story requires an HTTPS medium.com URL")
+    if action in {"draft_revised", "story_scheduled", "story_published"}:
+        if action in {"story_scheduled", "story_published"}:
+            url = result.get("mediumUrl")
+            if not medium_url(url):
+                errors.append(f"{label}: scheduled or published story requires an HTTPS medium.com URL")
         if action == "story_published":
             record = publications.get(story_slug, {})
             if record.get("status") != "published" or record.get("mediumUrl") != url:
@@ -314,8 +318,40 @@ def validate_receipt(
                     errors.append(f"{label}: settings.{flag} must be boolean")
             if not isinstance(settings.get("canonicalUrl"), str):
                 errors.append(f"{label}: settings.canonicalUrl is required")
-            if action == "story_scheduled":
+            if action in {"draft_revised", "story_scheduled"}:
                 require_datetime(settings.get("scheduleAt"), f"{label}.settings.scheduleAt", errors)
+    if action == "draft_revised":
+        content = result.get("content")
+        if not isinstance(content, dict):
+            errors.append(f"{label}: revised draft requires verified content details")
+        else:
+            allowed_content = {
+                "mediumWordCount",
+                "mediumReadTime",
+                "figureCount",
+                "captionCount",
+                "altTextCount",
+                "decisionFormat",
+                "featuredImage",
+                "sourceSha256",
+            }
+            if set(content) - allowed_content:
+                errors.append(f"{label}: content contains unexpected fields")
+            for field in ("mediumWordCount", "figureCount", "captionCount", "altTextCount"):
+                if not nonnegative_int(content.get(field)):
+                    errors.append(f"{label}: content.{field} must be a non-negative integer")
+            if not isinstance(content.get("mediumReadTime"), str) or not content["mediumReadTime"].strip():
+                errors.append(f"{label}: content.mediumReadTime must be non-empty")
+            if content.get("decisionFormat") != "medium_native_structured_list":
+                errors.append(f"{label}: content.decisionFormat must record the Medium-native adaptation")
+            if content.get("featuredImage") != "figure-01":
+                errors.append(f"{label}: content.featuredImage must preserve figure-01")
+            source_hash = content.get("sourceSha256")
+            source_path = ROOT / "stories" / f"{story_slug}.md"
+            if not isinstance(source_hash, str) or len(source_hash) != 64:
+                errors.append(f"{label}: content.sourceSha256 must be a SHA-256 digest")
+            elif source_path.is_file() and hashlib.sha256(source_path.read_bytes()).hexdigest() != source_hash:
+                errors.append(f"{label}: content.sourceSha256 does not match the canonical story")
     if action == "stats_captured":
         snapshot_path = result.get("snapshotPath")
         if not isinstance(snapshot_path, str) or not snapshot_path.startswith("analytics/snapshots/"):
@@ -368,6 +404,7 @@ def build_report(
         "",
         f"- Verified receipts: {len(receipts)}",
         f"- Draft imports: {action_counts['draft_imported']}",
+        f"- Draft revisions: {action_counts['draft_revised']}",
         f"- Scheduled stories: {action_counts['story_scheduled']}",
         f"- Publications: {action_counts['story_published']}",
         f"- Stats captures: {action_counts['stats_captured']}",

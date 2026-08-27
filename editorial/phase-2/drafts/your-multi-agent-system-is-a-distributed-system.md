@@ -247,6 +247,8 @@ Compensation failure is itself a durable business event. It should open an inter
 
 The following sections retain the quantitative and systems detail for readers implementing the control plane.
 
+![Comparison of conversational multi-agent coordination and a governed distributed workflow across ownership, state, ordering, retries, effects, failures, and recovery.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-01.png "Figure 1. The same specialized agents have radically different reliability properties when coordination moves from conversational convention to a durable distributed workflow. AI-assisted design visualization; reference architecture; not production data.")
+
 ## Chaos tests must assert business invariants
 
 Unit tests that mock successful APIs do not exercise the failure modes that dominate multi-agent coordination. Inject faults at message transport, worker runtime, workflow store, lease renewal, domain response, and compensation execution. Continue the test through recovery.

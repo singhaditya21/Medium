@@ -1,10 +1,10 @@
 # Phase 2 — Production AI Control Plane optimization packages
 
-Prepared on 2026-08-27 for the five-story scheduled Medium wave. These files are editorial packages for review; they do not alter the canonical story sources or the scheduled Medium drafts.
+Prepared and executed on 2026-08-27 for the five-story scheduled Medium wave. The approved bodies are now canonical in `stories/`, saved in the scheduled Medium drafts, and recorded by credential-free execution receipts.
 
-## Review-ready complete drafts
+## Applied complete drafts
 
-The approved Phase 2 contracts have been expanded into complete, locally validated story revisions:
+The approved Phase 2 contracts were expanded into complete, locally validated story revisions and applied to Medium:
 
 - [Human Approval Is a Queueing System](drafts/human-approval-is-a-queueing-system.md)
 - [Your Multi-Agent System Is a Distributed System](drafts/your-multi-agent-system-is-a-distributed-system.md)
@@ -35,11 +35,11 @@ These review copies use paths relative to this directory. The canonical `stories
 | Your AI Agent Needs a Real Kill Switch | 2026-09-07 | 11–14 min | [Open package](your-ai-agent-needs-a-real-kill-switch.md) |
 | Do Not Let an AI Agent Touch Production Until It Passes This Evaluation | 2026-09-10 | 20–25 min flagship | [Open package](do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation.md) |
 
-## Phase 2 execution sequence
+## Phase 2 execution record
 
-1. Apply the package to a local working copy of the story.
-2. Confirm technical claims, synthetic labels, citations, image captions, alt text, and links.
-3. Compare the revised word count and heading density with the target.
-4. Review the exact Medium preview, topics, publication, subscriber-email, and paywall state.
-5. Obtain action-time approval before changing a scheduled Medium draft.
-6. After saving, verify the disclosure, preview, schedule, and publication status from fresh Medium state.
+1. Promoted each approved package to its canonical story source.
+2. Confirmed technical claims, synthetic labels, citations, image captions, alt text, and links.
+3. Obtained explicit action-time approval for the five scheduled-draft replacements.
+4. Replaced each Medium body, using native structured lists where Medium removed HTML table markup.
+5. Restored the original `figure-01` featured image and added native alt text to every retained figure.
+6. Verified each saved body, preview, schedule, topics, publication state, canonical URL, paywall, and subscriber-email setting from fresh Medium state.

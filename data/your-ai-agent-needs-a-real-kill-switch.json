@@ -459,6 +459,12 @@
       "text": "The following sections retain the quantitative and systems detail for readers implementing the control plane."
     },
     {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-01.png",
+      "alt": "Comparison across control, authority, workers, network, tools, in-flight work, recovery, and proof between a dashboard toggle and real agent containment.",
+      "caption": "Figure 1. A UI state records intent; production containment revokes authority, fences stale workers, denies reachability, resolves effects, and produces evidence. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
       "type": "html",
       "tag": "h2",
       "html": "Budget the time to stop",

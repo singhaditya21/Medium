@@ -470,6 +470,12 @@
       "text": "The following sections retain the quantitative and systems detail for readers implementing the control plane."
     },
     {
+      "type": "figure",
+      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-01.png",
+      "alt": "Comparison of conversational multi-agent coordination and a governed distributed workflow across ownership, state, ordering, retries, effects, failures, and recovery.",
+      "caption": "Figure 1. The same specialized agents have radically different reliability properties when coordination moves from conversational convention to a durable distributed workflow. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
       "type": "html",
       "tag": "h2",
       "html": "Chaos tests must assert business invariants",

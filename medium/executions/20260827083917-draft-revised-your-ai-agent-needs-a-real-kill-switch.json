@@ -1,0 +1,47 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827083917-draft-revised-your-ai-agent-needs-a-real-kill-switch",
+  "action": "draft_revised",
+  "recordedAt": "2026-08-27T08:39:17Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 30,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T08:39:17Z",
+    "scope": "Replace the bodies of these five scheduled Medium drafts with these exact Phase 2 versions while preserving their existing schedules, topics, publication state, featured images, canonical URLs, paywall settings, and subscriber-email settings."
+  },
+  "result": {
+    "status": "draft_saved",
+    "storySlug": "your-ai-agent-needs-a-real-kill-switch",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "AI Security",
+        "Incident Response",
+        "Enterprise Architecture",
+        "Reliability"
+      ],
+      "publication": null,
+      "subscriberEmail": false,
+      "paywall": false,
+      "scheduleAt": "2026-09-07T14:00:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/"
+    },
+    "content": {
+      "mediumWordCount": 3247,
+      "mediumReadTime": "14 min read",
+      "figureCount": 10,
+      "captionCount": 10,
+      "altTextCount": 10,
+      "decisionFormat": "medium_native_structured_list",
+      "featuredImage": "figure-01",
+      "sourceSha256": "c1d506c6c94ed83be425bbf1c9b38f60b6bc876d850544b6c21ed9632480af01"
+    },
+    "verifiedAt": "2026-08-27T08:39:17Z",
+    "verification": "Fresh Medium editor and schedule review confirmed the revised 3,247-word body, 10 figures, 10 visible captions, 10 native alt texts, structured decision list, original figure-01 cover, unchanged settings, and scheduled status."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}
