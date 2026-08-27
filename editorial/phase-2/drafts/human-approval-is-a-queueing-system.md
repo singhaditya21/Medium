@@ -293,6 +293,8 @@ Execution verifies every digest, limit, identity, deadline, and target precondit
 
 The following sections retain the quantitative and systems detail for readers implementing the control plane.
 
+![Comparison of uniform checkbox review and a risk-priced approval decision service.](../../../assets/images/human-approval-is-a-queueing-system/figure-01.png "Figure 1. A single FIFO inbox hides risk, skills, evidence, expiry, and learning; a decision service makes each control explicit. AI-assisted design visualization; reference architecture; not production data.")
+
 ## Optimize thresholds under capacity and risk constraints
 
 Routing threshold determines review volume. Lowering it sends more actions to humans, raising labor and delay while reducing some residual loss. Raising it saves capacity but exposes more automated errors.

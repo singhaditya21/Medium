@@ -7,6 +7,7 @@ GitHub Actions never creates these receipts on its own and never treats the pres
 Allowed receipt types:
 
 - `draft_imported`: the exact GitHub Pages story was imported and remains a saved Medium draft;
+- `draft_revised`: an explicitly approved replacement body was saved into an existing scheduled story, with its preserved settings and content verification recorded;
 - `story_scheduled`: the exact story, canonical link, topics, delivery settings, and future publication time were confirmed in Medium's Scheduled tab;
 - `story_published`: the exact story and final settings were confirmed, published, and verified publicly;
 - `stats_captured`: a dated aggregate snapshot was read from the signed-in Stats and Audience surfaces;

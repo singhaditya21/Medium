@@ -45,6 +45,7 @@ SPECS = (
             SectionSpec("Optimize thresholds under capacity and risk constraints"),
             SectionSpec("Shadow review calibrates the boundary"),
         ),
+        deep_transition_figure=1,
     ),
     DraftSpec(
         slug="your-multi-agent-system-is-a-distributed-system",
@@ -59,6 +60,7 @@ SPECS = (
             SectionSpec("Recovery follows dependencies and customer impact"),
         ),
         deep=(SectionSpec("Chaos tests must assert business invariants"),),
+        deep_transition_figure=1,
     ),
     DraftSpec(
         slug="model-routing-is-capital-allocation",
@@ -73,6 +75,7 @@ SPECS = (
             SectionSpec("Allocate verification where it reduces loss"),
         ),
         deep=(SectionSpec("Evaluate counterfactual policy honestly", "Build an investment-grade evaluation dossier"),),
+        deep_transition_figure=1,
     ),
     DraftSpec(
         slug="your-ai-agent-needs-a-real-kill-switch",
@@ -90,6 +93,7 @@ SPECS = (
             SectionSpec("Budget the time to stop"),
             SectionSpec("Model the business blast radius"),
         ),
+        deep_transition_figure=1,
     ),
     DraftSpec(
         slug="do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
@@ -184,8 +188,20 @@ def build(spec: DraftSpec) -> Path:
     source_path = STORIES / f"{spec.slug}.md"
     package_path = PACKAGES / f"{spec.slug}.md"
     source_text = source_path.read_text(encoding="utf-8")
-    package_text = package_path.read_text(encoding="utf-8")
     frontmatter, source_body = split_frontmatter(source_text)
+
+    # Once an approved Phase 2 draft becomes canonical, keep this builder
+    # idempotent by deriving the review copy directly from that exact body.
+    # The longer source sections used for the first reduction no longer exist
+    # in the canonical file after promotion.
+    if "## Decision table" in source_body and "## Technical deep dive" in source_body:
+        output_text = f"{frontmatter}\n\n{source_body.replace('](assets/', '](../../../assets/')}\n"
+        OUTPUT.mkdir(parents=True, exist_ok=True)
+        output_path = OUTPUT / f"{spec.slug}.md"
+        output_path.write_text(output_text, encoding="utf-8")
+        return output_path
+
+    package_text = package_path.read_text(encoding="utf-8")
     source_sections = sections(source_body)
     title = title_from_frontmatter(frontmatter)
 

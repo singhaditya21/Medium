@@ -244,6 +244,8 @@ The Figure 14 synthetic allocation uses 40 deterministic units, 31 model-verific
 
 The following sections retain the quantitative and systems detail for readers implementing the control plane.
 
+![Comparison of a static cheap-or-large router and a risk-adjusted capital allocator across decision unit, objective, candidate, constraints, failure cost, evidence, and output.](assets/images/model-routing-is-capital-allocation/figure-01.png "Figure 1. Static model selection becomes production capital allocation when the decision unit is a workflow action and the output is a full execution-and-verification portfolio. AI-assisted design visualization; reference architecture; not production data.")
+
 ## Evaluate counterfactual policy honestly
 
 Historical logs reveal outcomes for the route that was chosen. They usually do not reveal what every other model and verification bundle would have produced. Training or evaluating only on chosen-route outcomes creates selection bias: the old policy sent particular cases to particular models.

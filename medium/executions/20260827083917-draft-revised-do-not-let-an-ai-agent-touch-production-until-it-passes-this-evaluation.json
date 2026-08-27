@@ -1,0 +1,47 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827083917-draft-revised-do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+  "action": "draft_revised",
+  "recordedAt": "2026-08-27T08:39:17Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 32,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T08:39:17Z",
+    "scope": "Replace the bodies of these five scheduled Medium drafts with these exact Phase 2 versions while preserving their existing schedules, topics, publication state, featured images, canonical URLs, paywall settings, and subscriber-email settings."
+  },
+  "result": {
+    "status": "draft_saved",
+    "storySlug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "AI Evaluation",
+        "MLOps",
+        "Enterprise AI",
+        "AI Governance"
+      ],
+      "publication": null,
+      "subscriberEmail": false,
+      "paywall": false,
+      "scheduleAt": "2026-09-10T14:00:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/"
+    },
+    "content": {
+      "mediumWordCount": 5301,
+      "mediumReadTime": "22 min read",
+      "figureCount": 18,
+      "captionCount": 18,
+      "altTextCount": 18,
+      "decisionFormat": "medium_native_structured_list",
+      "featuredImage": "figure-01",
+      "sourceSha256": "3b7373b663cc346aaf63d18b5ca355c04ee095b54eaaabd32f97fa139f241b2a"
+    },
+    "verifiedAt": "2026-08-27T08:39:17Z",
+    "verification": "Fresh Medium editor and schedule review confirmed the revised 5,301-word body, 18 figures, 18 visible captions, 18 native alt texts, structured decision list, original figure-01 cover, unchanged settings, and scheduled status."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

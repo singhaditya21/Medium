@@ -1,6 +1,6 @@
-# Phase 2 — exact Medium scheduled-draft revision batch
+# Phase 2 — executed Medium scheduled-draft revision batch
 
-Prepared and locally validated on 2026-08-27. This batch describes the exact content replacement that is ready for action-time approval in the signed-in Medium session.
+Approved, executed, and freshly verified on 2026-08-27. This batch records the exact Phase 2 content now saved in the five scheduled Medium stories.
 
 ## Mutation boundary
 
@@ -15,10 +15,10 @@ Prepared and locally validated on 2026-08-27. This batch describes the exact con
 
 | Story | Exact source | SHA-256 | GitHub Pages read time | Figures | Authoritative schedule (IST) |
 |---|---|---|---:|---:|---:|
-| Human Approval Is a Queueing System | [`stories/human-approval-is-a-queueing-system.md`](../../stories/human-approval-is-a-queueing-system.md) | `58cd5ad41239fb9630c464006b640b45dfe9d1ee14b187e56ce675d3f97c78ee` | 14 min | 10 | 2026-08-27 19:30 |
-| Your Multi-Agent System Is a Distributed System | [`stories/your-multi-agent-system-is-a-distributed-system.md`](../../stories/your-multi-agent-system-is-a-distributed-system.md) | `6ed54f7cdca06f74aa3b07a86d136ac86f2500959b984491e6835f84ea63eb66` | 15 min | 10 | 2026-08-31 14:00 |
-| Model Routing Is Capital Allocation | [`stories/model-routing-is-capital-allocation.md`](../../stories/model-routing-is-capital-allocation.md) | `bc329c14212ad4bb6d6b8cd3b4a77163af651f0be8b57b7ac83a045224e1241a` | 12 min | 9 | 2026-09-03 14:00 |
-| Your AI Agent Needs a Real Kill Switch | [`stories/your-ai-agent-needs-a-real-kill-switch.md`](../../stories/your-ai-agent-needs-a-real-kill-switch.md) | `68d677711ae1c4441760f51b2d66efab5ef29c4650a6d9606f7808701e47c9bd` | 15 min | 9 | 2026-09-07 14:00 |
+| Human Approval Is a Queueing System | [`stories/human-approval-is-a-queueing-system.md`](../../stories/human-approval-is-a-queueing-system.md) | `b7660d3abfce8c209ca711083a4ffc5bec107aa83d601b75455fdb2b2f74d352` | 14 min | 11 | 2026-08-27 19:30 |
+| Your Multi-Agent System Is a Distributed System | [`stories/your-multi-agent-system-is-a-distributed-system.md`](../../stories/your-multi-agent-system-is-a-distributed-system.md) | `9375f51146298d7f318f49fbe72fb7711d8cb5a8d6b80373d46ba95995fce83f` | 15 min | 11 | 2026-08-31 14:00 |
+| Model Routing Is Capital Allocation | [`stories/model-routing-is-capital-allocation.md`](../../stories/model-routing-is-capital-allocation.md) | `428dce0f960bffe96abb173fdbd4a49af64cf417c531170a6aaa9adf2fe45b2b` | 12 min | 10 | 2026-09-03 14:00 |
+| Your AI Agent Needs a Real Kill Switch | [`stories/your-ai-agent-needs-a-real-kill-switch.md`](../../stories/your-ai-agent-needs-a-real-kill-switch.md) | `c1d506c6c94ed83be425bbf1c9b38f60b6bc876d850544b6c21ed9632480af01` | 15 min | 10 | 2026-09-07 14:00 |
 | Do Not Let an AI Agent Touch Production Until It Passes This Evaluation | [`stories/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation.md`](../../stories/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation.md) | `3b7373b663cc346aaf63d18b5ca355c04ee095b54eaaabd32f97fa139f241b2a` | 24 min | 18 | 2026-09-10 14:00 |
 
 ## Current signed-in Medium baseline
@@ -33,10 +33,22 @@ Prepared and locally validated on 2026-08-27. This batch describes the exact con
 
 Medium's outbox is displaying UTC-like clock values. The schedule-review pages and execution receipts explicitly record the authoritative GMT+5:30 times above; the revision must not change them.
 
+## Verified Medium result
+
+| Story | Saved Medium body | Figures / captions / native alt text | Scheduled (IST) |
+|---|---:|---:|---:|
+| Human Approval Is a Queueing System | 3,095 words / 13 min | 11 / 11 / 11 | 2026-08-27 19:30 |
+| Your Multi-Agent System Is a Distributed System | 3,258 words / 14 min | 11 / 11 / 11 | 2026-08-31 14:00 |
+| Model Routing Is Capital Allocation | 2,728 words / 12 min | 10 / 10 / 10 | 2026-09-03 14:00 |
+| Your AI Agent Needs a Real Kill Switch | 3,247 words / 14 min | 10 / 10 / 10 | 2026-09-07 14:00 |
+| Do Not Let an AI Agent Touch Production Until It Passes This Evaluation | 5,301 words / 22 min | 18 / 18 / 18 | 2026-09-10 14:00 |
+
+Medium strips HTML table markup during import, so each compact decision table is represented as a Medium-native structured list with every source cell preserved. The original `figure-01` featured image remains selected for all five stories. Titles, subtitles, topics, publication state, canonical URLs, paywall settings, and subscriber-email settings were unchanged.
+
 ## Validation evidence
 
 - `python3 scripts/build_site.py` — passed for 14 stories.
 - `python3 scripts/validate_site.py` — passed for 14 stories, four series, and three feeds.
-- `python3 scripts/validate_medium_bridge.py` — passed for one snapshot and 18 execution receipts.
+- `python3 scripts/validate_medium_bridge.py` — passed for one snapshot and 23 execution receipts, including five signed-in draft-revision receipts.
 - Desktop and 375 px mobile visual checks — passed with no document-level horizontal overflow.
 - All selected technical figures — local 2400×1600 PNGs with alt text and AI-assisted/synthetic captions.

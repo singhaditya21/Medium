@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -126,6 +127,27 @@ def main() -> None:
     add_common_arguments(draft_parser)
     draft_parser.add_argument("--story-slug", required=True)
 
+    revision_parser = subparsers.add_parser("draft-revised")
+    add_common_arguments(revision_parser)
+    revision_parser.add_argument("--story-slug", required=True)
+    revision_parser.add_argument("--canonical-url", required=True)
+    revision_parser.add_argument("--topic", action="append", required=True)
+    revision_parser.add_argument("--publication")
+    revision_parser.add_argument("--subscriber-email", type=bool_value, required=True)
+    revision_parser.add_argument("--paywall", type=bool_value, required=True)
+    revision_parser.add_argument("--schedule-at", required=True)
+    revision_parser.add_argument("--medium-word-count", type=int, required=True)
+    revision_parser.add_argument("--medium-read-time", required=True)
+    revision_parser.add_argument("--figure-count", type=int, required=True)
+    revision_parser.add_argument("--caption-count", type=int, required=True)
+    revision_parser.add_argument("--alt-text-count", type=int, required=True)
+    revision_parser.add_argument(
+        "--decision-format",
+        choices=("medium_native_structured_list",),
+        required=True,
+    )
+    revision_parser.add_argument("--featured-image", choices=("figure-01",), required=True)
+
     publish_parser = subparsers.add_parser("story-published")
     add_common_arguments(publish_parser)
     publish_parser.add_argument("--story-slug", required=True)
@@ -167,6 +189,32 @@ def main() -> None:
         action = "draft_imported"
         target = args.story_slug
         result = {"status": "draft_saved", "storySlug": args.story_slug}
+    elif args.command == "draft-revised":
+        action = "draft_revised"
+        target = args.story_slug
+        source_path = ROOT / "stories" / f"{args.story_slug}.md"
+        result = {
+            "status": "draft_saved",
+            "storySlug": args.story_slug,
+            "settings": {
+                "topics": args.topic,
+                "publication": args.publication,
+                "subscriberEmail": args.subscriber_email,
+                "paywall": args.paywall,
+                "scheduleAt": args.schedule_at,
+                "canonicalUrl": args.canonical_url,
+            },
+            "content": {
+                "mediumWordCount": args.medium_word_count,
+                "mediumReadTime": args.medium_read_time,
+                "figureCount": args.figure_count,
+                "captionCount": args.caption_count,
+                "altTextCount": args.alt_text_count,
+                "decisionFormat": args.decision_format,
+                "featuredImage": args.featured_image,
+                "sourceSha256": hashlib.sha256(source_path.read_bytes()).hexdigest(),
+            },
+        }
     elif args.command == "story-scheduled":
         action = "story_scheduled"
         target = args.story_slug

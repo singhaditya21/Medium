@@ -251,6 +251,8 @@ Emergency stop authority can be broad and rapid because delay creates exposure. 
 
 The following sections retain the quantitative and systems detail for readers implementing the control plane.
 
+![Comparison across control, authority, workers, network, tools, in-flight work, recovery, and proof between a dashboard toggle and real agent containment.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-01.png "Figure 1. A UI state records intent; production containment revokes authority, fences stale workers, denies reachability, resolves effects, and produces evidence. AI-assisted design visualization; reference architecture; not production data.")
+
 ## Budget the time to stop
 
 A kill-switch API that responds in 200 milliseconds can coexist with ten minutes of effect exposure. Measure the critical path from trigger to proof. Detection and incident declaration, operator authentication, signing, event distribution, local policy update, connection termination, tool disablement, queue control, and independent verification each consume time.
