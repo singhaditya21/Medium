@@ -1,0 +1,25 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827133744-response-posted-2026-08-27-medium-response-secure-agent-authorization-flow",
+  "action": "response_posted",
+  "recordedAt": "2026-08-27T13:37:44Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T13:37:44Z",
+    "scope": "Approve all three exactly as written"
+  },
+  "result": {
+    "status": "response_posted",
+    "candidateId": "2026-08-27-medium-response-secure-agent-authorization-flow",
+    "targetUrl": "https://medium.com/@ericbroda/secure-agent-authorization-how-it-works-a068eb7c152d",
+    "responseUrl": "https://medium.com/@singhaditya21_89007/eric-the-eight-step-chain-puts-the-trust-boundary-in-the-right-place-the-executor-not-the-model-c75901e67cc1",
+    "verifiedAt": "2026-08-27T13:37:44Z",
+    "verification": "Medium visibly showed Responses (1), Aditya Singh, You, Just now, the exact approved response, and the public response URL"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

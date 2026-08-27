@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827133744-comment-posted-2026-08-27-linkedin-comment-versioned-agent-skills",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T13:37:44Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T13:37:44Z",
+    "scope": "Approve all three exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-versioned-agent-skills",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497690639925600256/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497690639925600256/",
+    "publishedTextSha256": "af20633d6faa8cf9b79e7f5dcda9a2d91498ff895f46dd490be26c4b3e620f44",
+    "verifiedAt": "2026-08-27T13:37:44Z",
+    "verification": "LinkedIn visibly rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Velmurugan Muthaiyan mention; the editor cleared after submission"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

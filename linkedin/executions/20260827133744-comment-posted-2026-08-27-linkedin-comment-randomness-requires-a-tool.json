@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827133744-comment-posted-2026-08-27-linkedin-comment-randomness-requires-a-tool",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T13:37:44Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T13:37:44Z",
+    "scope": "Approve all three exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-randomness-requires-a-tool",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498133736639660032/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498133736639660032/",
+    "publishedTextSha256": "1b76bf9d1661ca6f52c5d09414711e4e6930685d04548a233965801cd50c2160",
+    "verifiedAt": "2026-08-27T13:37:44Z",
+    "verification": "LinkedIn visibly rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Maria Sukhareva mention; the editor cleared after submission"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

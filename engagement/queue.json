@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-27T13:18:27Z",
+  "updatedAt": "2026-08-27T13:38:05Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -241,7 +241,10 @@
       "draftResponse": "Eric, the eight-step chain puts the trust boundary in the right place: the executor, not the model, enforces scope. I would make the grant single-use—or explicitly count-bounded—and bind it to an action hash, resource, maximum side effect, and post-condition. Expiry alone does not prevent replay inside the validity window. The executor should return a signed outcome receipt, and the verifier should compare the observed business state with the requested state, not merely accept a successful tool response.",
       "priorityScore": 0.77,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://medium.com/@singhaditya21_89007/eric-the-eight-step-chain-puts-the-trust-boundary-in-the-right-place-the-executor-not-the-model-c75901e67cc1",
+      "receiptOperationId": "20260827133744-response-posted-2026-08-27-medium-response-secure-agent-authorization-flow",
+      "postedAt": "2026-08-27T13:37:44Z"
     },
     {
       "id": "2026-08-27-linkedin-comment-versioned-agent-skills",
@@ -258,7 +261,10 @@
       "intendedMentions": [
         "Velmurugan Muthaiyan"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497690639925600256/",
+      "receiptOperationId": "20260827133744-comment-posted-2026-08-27-linkedin-comment-versioned-agent-skills",
+      "postedAt": "2026-08-27T13:37:44Z"
     },
     {
       "id": "2026-08-27-linkedin-comment-randomness-requires-a-tool",
@@ -274,6 +280,26 @@
       "priorityScore": 0.88,
       "intendedMentions": [
         "Maria Sukhareva"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498133736639660032/",
+      "receiptOperationId": "20260827133744-comment-posted-2026-08-27-linkedin-comment-randomness-requires-a-tool",
+      "postedAt": "2026-08-27T13:37:44Z"
+    },
+    {
+      "id": "2026-08-27-linkedin-reply-dhari-authorization-metrics",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7496586504614424576/",
+      "title": "Prisma AIRS and executive authorization metrics",
+      "author": "Dhari A.",
+      "reason": "Directly answers an inbound technical response by translating blocked actions and recovery into executive-grade risk and control metrics.",
+      "evidence": "Dhari replied to the existing governance comment that Palo Alto Networks Idira addresses agent identity and authorization, and identified blocked high-impact actions and successful recovery as the strongest executive metrics. The source post had 253 reactions and 24 comments; the reply was 19 minutes old when inspected. Score: relevance 0.98, discussion quality 0.88, unique contribution 0.88, recency 0.99; weighted 0.94.",
+      "draftResponse": "@Dhari A., agreed. Idira makes the authorization layer concrete; the next executive step is to connect each blocked action to avoided loss and each recovery to restoration time. I would report blocked high-impact actions by policy reason, false-block rate, mean time to revoke, verified recovery rate, and residual exposure after recovery. That separates controls that merely stop activity from controls that measurably reduce business risk.",
+      "priorityScore": 0.94,
+      "intendedMentions": [
+        "Dhari A."
       ],
       "state": "ready_for_confirmation"
     }
