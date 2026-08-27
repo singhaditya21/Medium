@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827130452-comment-posted-2026-08-27-linkedin-comment-duckdb-aws",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T13:04:52Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T13:04:52Z",
+    "scope": "Lets go with wave 2."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-duckdb-aws",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498413199894122497/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498413199894122497/",
+    "publishedTextSha256": "90e2526246f024167dc6c5f1744c0a03fac01cf5c9b08e4c5f443c0c247f7f54",
+    "verifiedAt": "2026-08-27T13:04:52Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Swami Sivasubramanian mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

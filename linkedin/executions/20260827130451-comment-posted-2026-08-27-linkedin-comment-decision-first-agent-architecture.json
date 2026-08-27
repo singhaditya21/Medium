@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827130451-comment-posted-2026-08-27-linkedin-comment-decision-first-agent-architecture",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T13:04:51Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T13:04:51Z",
+    "scope": "Lets go with wave 2."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-decision-first-agent-architecture",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498567718414036992/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498567718414036992/",
+    "publishedTextSha256": "d35466476628b7ffc4b7dee0e7eb333a5c8ba27535ca2b7c1115d77b5725384d",
+    "verifiedAt": "2026-08-27T13:04:51Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Manas Jain mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

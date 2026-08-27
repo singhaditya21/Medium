@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827130450-comment-posted-2026-08-27-linkedin-comment-gemini-agent-cost-controls",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T13:04:50Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T13:04:50Z",
+    "scope": "Lets go with wave 2."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-gemini-agent-cost-controls",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498392580158537728/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498392580158537728/",
+    "publishedTextSha256": "9ba8b4b6e686f65b23a6f873f3f6f296a6ed6bbf160e7dce0a09fca6135f5879",
+    "verifiedAt": "2026-08-27T13:04:50Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Thomas Kurian mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

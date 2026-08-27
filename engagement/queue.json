@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-27T12:42:23Z",
+  "updatedAt": "2026-08-27T13:04:52Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -127,6 +127,106 @@
       "responseUrl": "https://www.linkedin.com/pulse/ai-governance-problem-nobody-talking-who-controls-agent-koppikar-gny9f/",
       "receiptOperationId": "20260827124223-comment-posted-2026-08-27-linkedin-comment-vikram-accountability",
       "postedAt": "2026-08-27T12:42:23Z"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-gitnexus-graph-context",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498685264265908224/",
+      "title": "Your AI coding agent sees files. Not the system.",
+      "author": "Anuj J.",
+      "reason": "The post provides benchmark evidence that knowledge-graph context can improve coding-agent quality and search efficiency while lowering run cost.",
+      "evidence": "GitNexus reports 68.4% solved versus 37.0% without graph context, 51% lower cost per run, and 45k+ GitHub stars.",
+      "draftResponse": "@Akon Labs (YC S26), moving from 37.0% to 68.4% solved while cutting run cost 51% suggests graph context affects both quality and search efficiency. The enterprise test I would add is blast-radius precision: how many predicted dependencies were real, and how many critical callers were missed?",
+      "priorityScore": 0.88,
+      "intendedMentions": [
+        "Akon Labs (YC S26)"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498685264265908224/",
+      "receiptOperationId": "20260827130448-comment-posted-2026-08-27-linkedin-comment-gitnexus-graph-context",
+      "postedAt": "2026-08-27T13:04:48Z"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-llm-memory-architecture",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7497621603313430528/",
+      "title": "LLM Memory Architecture",
+      "author": "Sanjay Kumar Ph.D., MBA",
+      "reason": "The post frames production LLM memory as a three-tier architecture and explicitly discusses latency, recall, persistence, privacy, cost, and controlled forgetting.",
+      "evidence": "The source describes working, episodic, and semantic memory tiers plus routing, consolidation, privacy controls, and deletion trade-offs.",
+      "draftResponse": "@Sanjay Kumar, the three-tier model becomes operational only when each tier has an explicit retention and deletion contract. I would track recall at k, stale-fact rate, p95 retrieval latency, privacy-deletion SLA, and the percentage of answers whose memory provenance can be reconstructed.",
+      "priorityScore": 0.86,
+      "intendedMentions": [
+        "Sanjay Kumar"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:share:7497621603313430528/",
+      "receiptOperationId": "20260827130449-comment-posted-2026-08-27-linkedin-comment-llm-memory-architecture",
+      "postedAt": "2026-08-27T13:04:49Z"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-gemini-agent-cost-controls",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498392580158537728/",
+      "title": "Flexible billing and cost controls for Gemini Enterprise",
+      "author": "Thomas Kurian",
+      "reason": "The post introduces four concrete AI cost controls, including spend caps, savings commitments, and automatic model routing.",
+      "evidence": "The source describes four controls and up to 20% token-cost savings; current revalidation showed 802 reactions, 33 comments, and 63 reposts.",
+      "draftResponse": "@Thomas Kurian, the 20% token-saving commitment is useful, but the stronger control is tying spend caps to outcome SLOs. Teams should see cost per verified task, fallback rate, model-route distribution, and quality-adjusted savings; otherwise auto-routing can look cheaper while shifting cost into rework.",
+      "priorityScore": 0.84,
+      "intendedMentions": [
+        "Thomas Kurian"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498392580158537728/",
+      "receiptOperationId": "20260827130450-comment-posted-2026-08-27-linkedin-comment-gemini-agent-cost-controls",
+      "postedAt": "2026-08-27T13:04:50Z"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-decision-first-agent-architecture",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498567718414036992/",
+      "title": "Context engineering starts with one decision",
+      "author": "Manas Jain",
+      "reason": "The post proposes a decision-first build order for enterprise agents and makes permissions and trusted context explicit before tools and actions.",
+      "evidence": "The source sequence is Decision → Required Context → Trusted Sources → Permissions → Tools → Action and includes ten diagnostic context questions.",
+      "draftResponse": "@Manas Jain, Decision → Context → Sources → Permissions → Tools → Action is the right build order. I would add Verification → Recovery, then instrument p95 decision latency, approval rate, false-escalation rate, successful postcondition checks, and mean time to reverse an incorrect action.",
+      "priorityScore": 0.82,
+      "intendedMentions": [
+        "Manas Jain"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498567718414036992/",
+      "receiptOperationId": "20260827130451-comment-posted-2026-08-27-linkedin-comment-decision-first-agent-architecture",
+      "postedAt": "2026-08-27T13:04:51Z"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-duckdb-aws",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498413199894122497/",
+      "title": "AWS welcomes DuckLabs",
+      "author": "Swami Sivasubramanian",
+      "reason": "The acquisition discussion is directly relevant to enterprise analytics architecture, operational weight, data movement, and governed production deployment.",
+      "evidence": "The source welcomes DuckLabs to AWS and frames the opportunity as making analytics faster, simpler, and more cost-effective; current revalidation showed 937 reactions, 17 comments, and 36 reposts.",
+      "draftResponse": "@Swami Sivasubramanian, DuckDB's appeal is moving analytics to the data with very little operational weight. The acquisition opportunity for AWS is measurable: query latency, cross-service data movement, price-performance, and time from local prototype to governed production should improve without weakening workload portability.",
+      "priorityScore": 0.8,
+      "intendedMentions": [
+        "Swami Sivasubramanian"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498413199894122497/",
+      "receiptOperationId": "20260827130452-comment-posted-2026-08-27-linkedin-comment-duckdb-aws",
+      "postedAt": "2026-08-27T13:04:52Z"
     }
   ]
 }

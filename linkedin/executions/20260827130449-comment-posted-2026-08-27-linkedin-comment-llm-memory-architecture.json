@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827130449-comment-posted-2026-08-27-linkedin-comment-llm-memory-architecture",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T13:04:49Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T13:04:49Z",
+    "scope": "Lets go with wave 2."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-llm-memory-architecture",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7497621603313430528/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:share:7497621603313430528/",
+    "publishedTextSha256": "4e639085c6e63462b633f5584fc50d2b57b7854f6a63ae85a2d0ead35ddf36bc",
+    "verifiedAt": "2026-08-27T13:04:49Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Sanjay Kumar Ph.D., MBA mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -86,11 +86,11 @@
       "topic": "Knowledge graphs for coding-agent context",
       "sourceLocator": "Post beginning 'Your AI coding agent sees files. Not the system.'",
       "discoveryUrl": "https://www.linkedin.com/in/anujcodes21/recent-activity/all/",
-      "targetUrl": null,
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498685264265908224/",
       "intendedMention": "Akon Labs (YC S26)",
       "observedNumbers": ["68.4% solved with GitNexus", "37.0% without a graph", "51% cheaper per run", "45k+ GitHub stars"],
       "draft": "@Akon Labs (YC S26), moving from 37.0% to 68.4% solved while cutting run cost 51% suggests graph context affects both quality and search efficiency. The enterprise test I would add is blast-radius precision: how many predicted dependencies were real, and how many critical callers were missed?",
-      "state": "researched_requires_target_resolution"
+      "state": "posted"
     },
     {
       "rank": 7,
@@ -99,11 +99,11 @@
       "topic": "Three-tier LLM memory architecture",
       "sourceLocator": "Post titled 'LLM Memory Architecture'",
       "discoveryUrl": "https://www.linkedin.com/in/genaiproduct/recent-activity/all/",
-      "targetUrl": null,
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7497621603313430528/",
       "intendedMention": "Sanjay Kumar",
       "observedNumbers": ["three memory tiers", "173 reactions", "11 comments", "11 reposts"],
       "draft": "@Sanjay Kumar, the three-tier model becomes operational only when each tier has an explicit retention and deletion contract. I would track recall at k, stale-fact rate, p95 retrieval latency, privacy-deletion SLA, and the percentage of answers whose memory provenance can be reconstructed.",
-      "state": "researched_requires_target_resolution"
+      "state": "posted"
     },
     {
       "rank": 8,
@@ -112,11 +112,11 @@
       "topic": "Gemini Enterprise billing and agent cost controls",
       "sourceLocator": "Post introducing four AI cost-management controls",
       "discoveryUrl": "https://www.linkedin.com/in/thomas-kurian-469b6219/recent-activity/all/",
-      "targetUrl": null,
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498392580158537728/",
       "intendedMention": "Thomas Kurian",
       "observedNumbers": ["four controls", "up to 20% token savings", "795 reactions", "32 comments", "62 reposts"],
       "draft": "@Thomas Kurian, the 20% token-saving commitment is useful, but the stronger control is tying spend caps to outcome SLOs. Teams should see cost per verified task, fallback rate, model-route distribution, and quality-adjusted savings; otherwise auto-routing can look cheaper while shifting cost into rework.",
-      "state": "researched_requires_target_resolution"
+      "state": "posted"
     },
     {
       "rank": 9,
@@ -128,7 +128,7 @@
       "intendedMention": "Manas Jain",
       "observedNumbers": ["ten diagnostic context questions", "12 reactions"],
       "draft": "@Manas Jain, Decision → Context → Sources → Permissions → Tools → Action is the right build order. I would add Verification → Recovery, then instrument p95 decision latency, approval rate, false-escalation rate, successful postcondition checks, and mean time to reverse an incorrect action.",
-      "state": "researched_ready_for_revalidation"
+      "state": "posted"
     },
     {
       "rank": 10,
@@ -137,11 +137,11 @@
       "topic": "AWS acquisition of DuckLabs and DuckDB",
       "sourceLocator": "Post welcoming DuckLabs to AWS",
       "discoveryUrl": "https://www.linkedin.com/in/swaminathansivasubramanian/recent-activity/all/",
-      "targetUrl": null,
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498413199894122497/",
       "intendedMention": "Swami Sivasubramanian",
       "observedNumbers": ["927 reactions", "16 comments", "36 reposts"],
       "draft": "@Swami Sivasubramanian, DuckDB's appeal is moving analytics to the data with very little operational weight. The acquisition opportunity for AWS is measurable: query latency, cross-service data movement, price-performance, and time from local prototype to governed production should improve without weakening workload portability.",
-      "state": "researched_requires_target_resolution"
+      "state": "posted"
     },
     {
       "rank": 11,

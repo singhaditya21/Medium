@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827130448-comment-posted-2026-08-27-linkedin-comment-gitnexus-graph-context",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T13:04:48Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T13:04:48Z",
+    "scope": "Lets go with wave 2."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-gitnexus-graph-context",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498685264265908224/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498685264265908224/",
+    "publishedTextSha256": "2879881a7a9b8e9cfae2afa6d0012611c7d26d8dff5200cd18cb1f5c40529c7b",
+    "verifiedAt": "2026-08-27T13:04:48Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Akon Labs (YC S26) mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
