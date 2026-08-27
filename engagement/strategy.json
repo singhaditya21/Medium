@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "status": "active",
+  "timezone": "Asia/Kolkata",
+  "phase": "cross_platform_compounding_loop",
+  "profiles": {
+    "medium": "https://medium.com/@singhaditya21_89007",
+    "linkedin": "https://www.linkedin.com/in/adityasinghiitr/"
+  },
+  "contentPillars": [
+    "enterprise AI control planes",
+    "agent identity and just-in-time authorization",
+    "evidence, verification, and recovery",
+    "agent economics and model routing",
+    "production CRM and distributed agent architecture"
+  ],
+  "candidateScoring": {
+    "formula": "0.35*relevance + 0.25*discussionQuality + 0.20*uniqueContribution + 0.20*recency",
+    "weights": {
+      "relevance": 0.35,
+      "discussionQuality": 0.25,
+      "uniqueContribution": 0.2,
+      "recency": 0.2
+    },
+    "minimumPriorityScore": 0.7
+  },
+  "weeklyCadence": {
+    "medium": {
+      "inboundResponseReviews": 2,
+      "maximumOutboundResponses": 2,
+      "maximumCandidatesPerReview": 5
+    },
+    "linkedin": {
+      "inboundCommentReviews": 5,
+      "maximumOutboundComments": 5,
+      "maximumCandidatesPerReview": 5
+    }
+  },
+  "responseStandards": {
+    "medium": {
+      "minimumCharacters": 120,
+      "maximumCharacters": 1200,
+      "requireSourceSpecificEvidence": true,
+      "allowSelfPromotionalLink": false
+    },
+    "linkedin": {
+      "minimumCharacters": 60,
+      "maximumCharacters": 900,
+      "requireSourceSpecificEvidence": true,
+      "allowSelfPromotionalLink": false,
+      "allowHashtagsInComments": false,
+      "maximumMentions": 1
+    }
+  },
+  "measurement": {
+    "windowsHours": [48, 168, 672],
+    "mediumMetrics": ["presentations", "views", "reads", "readRatio", "followers", "emailSubscribers"],
+    "linkedinMetrics": ["impressions", "membersReached", "reactions", "comments", "reposts", "saves", "linkEngagements", "newFollowers"],
+    "baselinePath": "analytics/phase1-baseline-2026-08-27.json"
+  },
+  "automationPolicy": {
+    "prepareAndPrioritizeAutomatically": true,
+    "packageReviewedDraftsAutomatically": true,
+    "generateMeasurementCheckpointsAutomatically": true,
+    "openAndRefreshGitHubIssuesAutomatically": true,
+    "accessSignedInAccountsFromGitHubActions": false,
+    "publishPublicInteractionsAutomatically": false,
+    "requireExactActionTimeConfirmation": true,
+    "requireVisibleResultVerification": true,
+    "storeCredentialsOrBrowserState": false
+  },
+  "platformPolicyUrls": {
+    "medium": "https://help.medium.com/hc/en-us/articles/213477928-Medium-Rules",
+    "linkedin": "https://www.linkedin.com/help/linkedin/answer/a1341387"
+  }
+}

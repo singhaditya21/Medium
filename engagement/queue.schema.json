@@ -1,29 +1,76 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://singhaditya21.github.io/Medium/engagement/queue.schema.json",
-  "title": "Curated Medium engagement queue",
+  "title": "Approval-gated Medium and LinkedIn engagement queue",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "updatedAt", "maxBatchSize", "policy", "candidates"],
+  "required": ["schemaVersion", "updatedAt", "maxBatchSizePerPlatform", "policy", "candidates"],
   "properties": {
     "$schema": {"type": "string"},
-    "schemaVersion": {"const": 1},
+    "schemaVersion": {"const": 2},
     "updatedAt": {"type": "string", "format": "date-time"},
-    "maxBatchSize": {"type": "integer", "minimum": 1, "maximum": 5},
+    "maxBatchSizePerPlatform": {"type": "integer", "minimum": 1, "maximum": 5},
     "policy": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["requiresExactActionTimeConfirmation", "allowUnattendedPosting", "allowBulkEngagement"],
+      "required": [
+        "requiresExactActionTimeConfirmation",
+        "allowUnattendedPosting",
+        "allowBulkEngagement",
+        "allowAutomatedAccountAccess",
+        "allowAutomatedLikesOrFollows"
+      ],
       "properties": {
         "requiresExactActionTimeConfirmation": {"const": true},
         "allowUnattendedPosting": {"const": false},
-        "allowBulkEngagement": {"const": false}
+        "allowBulkEngagement": {"const": false},
+        "allowAutomatedAccountAccess": {"const": false},
+        "allowAutomatedLikesOrFollows": {"const": false}
       }
     },
     "candidates": {
       "type": "array",
-      "maxItems": 5,
-      "items": {"type": "object"}
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "platform",
+          "action",
+          "direction",
+          "targetUrl",
+          "title",
+          "author",
+          "reason",
+          "evidence",
+          "draftResponse",
+          "priorityScore",
+          "state"
+        ],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
+          "platform": {"enum": ["medium", "linkedin"]},
+          "action": {"enum": ["response", "comment", "reply", "author_comment"]},
+          "direction": {"enum": ["inbound", "outbound"]},
+          "targetUrl": {"type": "string", "format": "uri"},
+          "title": {"type": "string", "minLength": 1},
+          "author": {"type": "string", "minLength": 1},
+          "reason": {"type": "string", "minLength": 1},
+          "evidence": {"type": "string", "minLength": 1},
+          "draftResponse": {"type": "string", "minLength": 1},
+          "priorityScore": {"type": "number", "minimum": 0, "maximum": 1},
+          "intendedMentions": {
+            "type": "array",
+            "maxItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "state": {"enum": ["proposed", "ready_for_confirmation", "posted", "skipped"]},
+          "responseUrl": {"type": "string", "format": "uri"},
+          "receiptOperationId": {"type": "string"},
+          "postedAt": {"type": "string", "format": "date-time"}
+        }
+      }
     }
   }
 }

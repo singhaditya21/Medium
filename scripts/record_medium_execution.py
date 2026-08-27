@@ -94,6 +94,8 @@ def update_response_candidate(candidate_id: str, target_url: str, response_url: 
     if len(matches) != 1:
         raise SystemExit(f"engagement queue must contain exactly one candidate for {candidate_id}")
     candidate = matches[0]
+    if candidate.get("platform") != "medium" or candidate.get("action") != "response":
+        raise SystemExit(f"engagement candidate {candidate_id} is not a Medium response")
     if candidate.get("state") != "ready_for_confirmation":
         raise SystemExit(f"engagement candidate {candidate_id} must be ready_for_confirmation before recording a response")
     if candidate.get("targetUrl") != target_url:

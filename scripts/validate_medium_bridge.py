@@ -65,6 +65,18 @@ def medium_url(value: Any) -> bool:
     return isinstance(value, str) and urlsplit(value).scheme == "https" and urlsplit(value).netloc.casefold().endswith("medium.com")
 
 
+def linkedin_url(value: Any) -> bool:
+    return isinstance(value, str) and urlsplit(value).scheme == "https" and urlsplit(value).netloc.casefold().endswith("linkedin.com")
+
+
+def platform_url(platform: str, value: Any) -> bool:
+    if platform == "medium":
+        return medium_url(value)
+    if platform == "linkedin":
+        return linkedin_url(value)
+    return False
+
+
 def nonnegative_int(value: Any) -> bool:
     return isinstance(value, int) and not isinstance(value, bool) and value >= 0
 
@@ -139,27 +151,30 @@ def validate_snapshot(path: Path, story_slugs: set[str]) -> tuple[dict[str, Any]
 def validate_queue() -> tuple[dict[str, Any], list[str]]:
     queue = load_json(QUEUE_PATH)
     errors: list[str] = []
-    if queue.get("schemaVersion") != 1:
-        errors.append("engagement queue schemaVersion must be 1")
+    if queue.get("schemaVersion") != 2:
+        errors.append("engagement queue schemaVersion must be 2")
     exposed_keys = sensitive_key_paths(queue)
     if exposed_keys:
         errors.append(f"engagement queue contains prohibited credential/session fields: {', '.join(exposed_keys)}")
     require_datetime(queue.get("updatedAt"), "engagement queue updatedAt", errors)
-    if queue.get("maxBatchSize") not in range(1, 6):
-        errors.append("engagement queue maxBatchSize must be between one and five")
+    if queue.get("maxBatchSizePerPlatform") not in range(1, 6):
+        errors.append("engagement queue maxBatchSizePerPlatform must be between one and five")
     policy = queue.get("policy", {})
     expected_policy = {
         "requiresExactActionTimeConfirmation": True,
         "allowUnattendedPosting": False,
         "allowBulkEngagement": False,
+        "allowAutomatedAccountAccess": False,
+        "allowAutomatedLikesOrFollows": False,
     }
     if policy != expected_policy:
         errors.append("engagement queue policy must preserve exact confirmation and prohibit unattended/bulk posting")
     candidates = queue.get("candidates")
-    if not isinstance(candidates, list) or len(candidates) > 5:
-        errors.append("engagement queue candidates must be an array of at most five items")
+    if not isinstance(candidates, list) or len(candidates) > 100:
+        errors.append("engagement queue candidates must be an array of at most 100 audited items")
         return queue, errors
     seen: set[str] = set()
+    active_by_platform: Counter[str] = Counter()
     for candidate in candidates:
         if not isinstance(candidate, dict):
             errors.append("each engagement candidate must be an object")
@@ -173,6 +188,8 @@ def validate_queue() -> tuple[dict[str, Any], list[str]]:
         seen.add(candidate_id)
         allowed_fields = {
             "id",
+            "platform",
+            "action",
             "direction",
             "targetUrl",
             "title",
@@ -180,6 +197,8 @@ def validate_queue() -> tuple[dict[str, Any], list[str]]:
             "reason",
             "evidence",
             "draftResponse",
+            "priorityScore",
+            "intendedMentions",
             "state",
             "responseUrl",
             "receiptOperationId",
@@ -188,21 +207,42 @@ def validate_queue() -> tuple[dict[str, Any], list[str]]:
         unexpected_fields = set(candidate) - allowed_fields
         if unexpected_fields:
             errors.append(f"{candidate_id}: unexpected fields: {', '.join(sorted(unexpected_fields))}")
+        platform = candidate.get("platform")
+        action = candidate.get("action")
+        if platform not in {"medium", "linkedin"}:
+            errors.append(f"{candidate_id}: platform must be medium or linkedin")
+        if platform == "medium" and action != "response":
+            errors.append(f"{candidate_id}: Medium candidates must use the response action")
+        if platform == "linkedin" and action not in {"comment", "reply", "author_comment"}:
+            errors.append(f"{candidate_id}: LinkedIn candidates must use comment, reply, or author_comment")
         if candidate.get("direction") not in {"inbound", "outbound"}:
             errors.append(f"{candidate_id}: direction must be inbound or outbound")
-        if not medium_url(candidate.get("targetUrl")):
-            errors.append(f"{candidate_id}: targetUrl must be an HTTPS medium.com URL")
+        if isinstance(platform, str) and not platform_url(platform, candidate.get("targetUrl")):
+            errors.append(f"{candidate_id}: targetUrl must be an HTTPS {platform}.com URL")
         for field in ("title", "author", "reason", "evidence", "draftResponse"):
             if not isinstance(candidate.get(field), str) or not candidate[field].strip():
                 errors.append(f"{candidate_id}: {field} must be non-empty")
         state = candidate.get("state")
         if state not in {"proposed", "ready_for_confirmation", "posted", "skipped"}:
             errors.append(f"{candidate_id}: invalid state")
+        if state in {"proposed", "ready_for_confirmation"} and isinstance(platform, str):
+            active_by_platform[platform] += 1
+        score = candidate.get("priorityScore")
+        if not isinstance(score, (int, float)) or isinstance(score, bool) or not 0 <= score <= 1:
+            errors.append(f"{candidate_id}: priorityScore must be between zero and one")
+        mentions = candidate.get("intendedMentions", [])
+        if not isinstance(mentions, list) or len(mentions) > 1 or not all(isinstance(item, str) and item.strip() for item in mentions):
+            errors.append(f"{candidate_id}: intendedMentions must contain at most one non-empty value")
         if state == "posted":
-            if not medium_url(candidate.get("responseUrl")):
-                errors.append(f"{candidate_id}: posted responses require a public Medium responseUrl")
+            if isinstance(platform, str) and not platform_url(platform, candidate.get("responseUrl")):
+                errors.append(f"{candidate_id}: posted interactions require a public {platform} responseUrl")
             if not isinstance(candidate.get("receiptOperationId"), str):
                 errors.append(f"{candidate_id}: posted responses require receiptOperationId")
+    maximum = queue.get("maxBatchSizePerPlatform")
+    if isinstance(maximum, int):
+        for platform, count in active_by_platform.items():
+            if count > maximum:
+                errors.append(f"engagement queue has {count} active {platform} candidates; maximum is {maximum}")
     return queue, errors
 
 
@@ -368,6 +408,8 @@ def validate_receipt(
             errors.append(f"{label}: response receipt requires target and response Medium URLs")
         if candidate.get("state") != "posted" or candidate.get("receiptOperationId") != operation_id:
             errors.append(f"{label}: engagement queue must mark the candidate posted with this receipt")
+        if candidate.get("platform") != "medium" or candidate.get("action") != "response":
+            errors.append(f"{label}: response receipt must reference a Medium response candidate")
         if candidate.get("targetUrl") != target_url or candidate.get("responseUrl") != response_url:
             errors.append(f"{label}: response receipt and queue URLs must match")
     return receipt, errors
@@ -444,7 +486,7 @@ def build_report(
             ])
 
     with (output_dir / "engagement-queue.csv").open("w", newline="", encoding="utf-8") as handle:
-        fields = ["id", "direction", "state", "title", "author", "targetUrl", "responseUrl", "receiptOperationId"]
+        fields = ["id", "platform", "action", "direction", "priorityScore", "state", "title", "author", "targetUrl", "responseUrl", "receiptOperationId"]
         writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(queue["candidates"])

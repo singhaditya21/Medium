@@ -64,9 +64,11 @@ The continuation workflow validates snapshot chronology and consistency, then pr
 
 ## Response continuation
 
-`engagement/queue.json` holds no more than five carefully reviewed candidates. Each candidate names one Medium story, its author, specific evidence from the story, the reason to engage, and the full proposed response.
+`engagement/queue.json` is the shared Medium + LinkedIn audit trail and holds no more than five active candidates per platform. Each Medium candidate names one story, its author, specific evidence from the story, the reason to engage, and the full proposed response.
 
 The queue does not grant posting permission. Immediately before responding, Codex presents the exact target and exact public text for confirmation. After the response is posted and its public URL verified, a `response_posted` receipt updates the queue and resumes GitHub reporting.
+
+LinkedIn comments and replies use the same state machine and a separate receipt contract in `linkedin/`. GitHub Actions validates both platforms without transferring either browser session.
 
 ## Repository states
 

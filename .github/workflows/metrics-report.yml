@@ -30,7 +30,9 @@ jobs:
       - name: Validate snapshot and generate report
         run: |
           python scripts/validate_medium_bridge.py --output-dir medium-continuation-report
+          python scripts/validate_engagement_automation.py --output-dir metrics-report/cross-platform-validation
           python scripts/generate_metrics_report.py --output-dir metrics-report
+          python scripts/generate_engagement_review.py --output-dir metrics-report/cross-platform-review
           cp medium-continuation-report/snapshot-history.csv metrics-report/snapshot-history.csv
           cp medium-continuation-report/engagement-queue.csv metrics-report/engagement-queue.csv
           cp medium-continuation-report/summary.md metrics-report/signed-in-bridge-summary.md
@@ -42,16 +44,17 @@ jobs:
           name: metrics-report-${{ github.run_number }}
           path: metrics-report
           retention-days: 90
-      - name: Open monthly manual-refresh issue
+      - name: Open monthly cross-platform refresh issue
         if: github.event_name == 'schedule'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh label create medium-metrics --color 5319E7 --description "Medium aggregate metrics review" --force
+          gh label create cross-platform-metrics --color 0A66C2 --description "Medium and LinkedIn aggregate metrics review" --force
           gh label create awaiting-signed-in-execution --color FBCA04 --description "Waiting for a user-initiated signed-in Medium step" --force
           month="$(date -u +%Y-%m)"
           issue_title="Metrics refresh · $month"
           existing="$(gh issue list --state all --search "$issue_title in:title" --json title --limit 100 | jq --arg title "$issue_title" 'map(select(.title == $title)) | length')"
           if [[ "$existing" == "0" ]]; then
-            gh issue create --title "$issue_title" --label medium-metrics --label awaiting-signed-in-execution --body "Refresh analytics/engagement-baseline.json and analytics/snapshots/ from a user-initiated, signed-in, read-only Medium Stats review; rebuild the canonical dashboard; record UTM/referrer data from the selected privacy-friendly analytics provider; and compare the new period with the previous snapshot. After visible verification, create a stats_captured receipt linked to this issue. Do not store Medium cookies, credentials, private URLs, or subscriber-level data in GitHub."
+            gh issue create --title "$issue_title" --label medium-metrics --label cross-platform-metrics --label awaiting-signed-in-execution --body "Refresh Medium and LinkedIn aggregate metrics through user-initiated, signed-in, read-only reviews; update the dated cross-platform baseline and the canonical Medium snapshot; rebuild the dashboard; record UTM/referrer data from the selected privacy-friendly analytics provider; and compare 48-hour, 7-day, and 28-day windows. After visible verification, create the Medium stats_captured receipt linked to this issue. Do not store cookies, credentials, private URLs, or person-level audience data in GitHub."
           fi

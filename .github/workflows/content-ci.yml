@@ -10,6 +10,10 @@ on:
       - "scripts/**"
       - "requirements.txt"
       - ".github/workflows/**"
+      - "analytics/**"
+      - "engagement/**"
+      - "linkedin/**"
+      - "medium/**"
   workflow_dispatch:
 
 permissions:
@@ -40,6 +44,10 @@ jobs:
         run: python scripts/prepare_medium_release.py --all --strict --output-dir medium-release-bundles
       - name: Validate signed-in Medium continuation state
         run: python scripts/validate_medium_bridge.py --output-dir medium-continuation-report
+      - name: Validate and generate cross-platform engagement controls
+        run: |
+          python scripts/validate_engagement_automation.py --output-dir engagement-continuation-report
+          python scripts/generate_engagement_review.py --as-of 2026-08-27T12:00:00Z --output-dir engagement-review
       - name: Upload distribution packs
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
