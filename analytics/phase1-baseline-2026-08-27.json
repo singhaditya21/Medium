@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "phase": "phase_1_live_schedule_and_measurement",
+  "capturedAt": "2026-08-27T09:49:26Z",
+  "timezone": "Asia/Kolkata",
+  "captureMethod": "user_initiated_signed_in_medium_and_linkedin_ui_read_only",
+  "status": "active",
+  "medium": {
+    "profile": "@singhaditya21_89007",
+    "catalog": {
+      "published": 8,
+      "drafts": 5,
+      "scheduled": 5
+    },
+    "august2026": {
+      "presentations": 37,
+      "views": 32,
+      "reads": 11,
+      "followersAdded": 2,
+      "subscribersAdded": 2
+    },
+    "audienceLifetime": {
+      "followers": 2,
+      "emailSubscribers": 2
+    },
+    "storyLifetime": [
+      {
+        "story": "Every AI Agent Action Needs a Receipt",
+        "slug": "every-ai-agent-action-needs-a-receipt",
+        "presentations": 0,
+        "views": 4,
+        "reads": 0,
+        "readRatio": 0.0,
+        "clapsObserved": 1,
+        "responsesObserved": 1
+      },
+      {
+        "story": "Your AI Agent's Memory Is a Database, Not a Prompt",
+        "slug": "your-ai-agents-memory-is-a-database-not-a-prompt",
+        "presentations": 0,
+        "views": 0,
+        "reads": 0,
+        "readRatio": 0.0
+      },
+      {
+        "story": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+        "slug": "a-2-4m-account-is-escalating",
+        "presentations": 5,
+        "views": 0,
+        "reads": 0,
+        "readRatio": 0.0
+      },
+      {
+        "story": "AI Agent Identity Is Not Enough",
+        "slug": "ai-agent-identity-is-not-enough",
+        "presentations": 8,
+        "views": 10,
+        "reads": 1,
+        "readRatio": 0.1
+      },
+      {
+        "story": "What an Agent Actually Costs",
+        "slug": "what-an-agent-actually-costs",
+        "presentations": 7,
+        "views": 2,
+        "reads": 1,
+        "readRatio": 0.5
+      },
+      {
+        "story": "The Enterprise Agent Control Tower: A Production Architecture",
+        "slug": "enterprise-agent-control-tower",
+        "presentations": 5,
+        "views": 8,
+        "reads": 4,
+        "readRatio": 0.5
+      },
+      {
+        "story": "How to Build an Agentic CRM: A Reference Architecture",
+        "slug": "agentic-crm-reference-architecture",
+        "presentations": 8,
+        "views": 8,
+        "reads": 5,
+        "readRatio": 0.63
+      },
+      {
+        "story": "Why Traditional CRM Will Die Without Agentic AI",
+        "slug": "traditional-crm-agentic-ai",
+        "presentations": 4,
+        "views": 6,
+        "reads": 5,
+        "readRatio": 0.83
+      }
+    ],
+    "verifiedSchedule": [
+      {
+        "story": "Human Approval Is a Queueing System",
+        "scheduledAt": "2026-08-27T19:30:00+05:30"
+      },
+      {
+        "story": "Your Multi-Agent System Is a Distributed System",
+        "scheduledAt": "2026-08-31T14:00:00+05:30"
+      },
+      {
+        "story": "Model Routing Is Capital Allocation",
+        "scheduledAt": "2026-09-03T14:00:00+05:30"
+      },
+      {
+        "story": "Your AI Agent Needs a Real Kill Switch",
+        "scheduledAt": "2026-09-07T14:00:00+05:30"
+      },
+      {
+        "story": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
+        "scheduledAt": "2026-09-10T14:00:00+05:30"
+      }
+    ]
+  },
+  "linkedin": {
+    "profile": "https://www.linkedin.com/in/adityasinghiitr/",
+    "window": "2026-08-21/2026-08-27",
+    "sevenDay": {
+      "impressions": 1786,
+      "membersReached": 807,
+      "socialEngagements": 43,
+      "reactions": 29,
+      "comments": 11,
+      "reposts": 0,
+      "saves": 3,
+      "sends": 0,
+      "linkEngagements": 1,
+      "inNetworkShare": 0.71,
+      "outOfNetworkShare": 0.29,
+      "newFollowers": 36
+    },
+    "audienceLifetime": {
+      "followers": 13378
+    },
+    "derived": {
+      "socialEngagementRate": 0.0241,
+      "linkEngagementRate": 0.00056
+    },
+    "verifiedSchedule": [
+      {
+        "label": "The Enterprise AI Control Plane - Part 1/5",
+        "scheduledAt": "2026-08-28T08:45:00+05:30"
+      },
+      {
+        "label": "Every AI Agent Action Needs a Receipt",
+        "scheduledAt": "2026-09-01T14:00:00+05:30"
+      },
+      {
+        "label": "The Enterprise AI Control Plane - Part 2/5",
+        "scheduledAt": "2026-09-02T08:45:00+05:30"
+      },
+      {
+        "label": "Your AI Agent's Memory Is a Database, Not a Prompt",
+        "scheduledAt": "2026-09-04T14:00:00+05:30"
+      },
+      {
+        "label": "The Enterprise AI Control Plane - Part 3/5",
+        "scheduledAt": "2026-09-07T08:45:00+05:30"
+      },
+      {
+        "label": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+        "scheduledAt": "2026-09-09T14:00:00+05:30"
+      },
+      {
+        "label": "The Enterprise AI Control Plane - Part 4/5",
+        "scheduledAt": "2026-09-11T08:45:00+05:30"
+      },
+      {
+        "label": "The Enterprise AI Control Plane - Part 5/5",
+        "scheduledAt": "2026-09-16T08:45:00+05:30"
+      }
+    ]
+  },
+  "engagementReview": {
+    "medium": {
+      "unansweredInboundResponses": 1,
+      "candidateId": "2026-08-27-future-agi-verifier-trust"
+    },
+    "linkedin": {
+      "unansweredExternalCommentsOnReviewedLatestPost": 0
+    }
+  },
+  "measurementWindows": ["48_hours", "7_days", "28_days"],
+  "notes": [
+    "Medium account totals are August values; story rows are lifetime values and must not be summed or reconciled.",
+    "LinkedIn metrics cover the seven-day window shown by LinkedIn and are recorded in UTC by the platform.",
+    "The Medium schedule dialog displays explicit GMT+5:30 times; the stories list can display the UTC clock value without the offset.",
+    "No schedule, public story, post, reaction, follow, or response was changed during this capture."
+  ]
+}
