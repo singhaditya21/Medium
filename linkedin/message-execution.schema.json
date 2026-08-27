@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://singhaditya21.github.io/Medium/linkedin/message-execution.schema.json",
+  "title": "Signed-in LinkedIn private-message execution receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "operationId",
+    "action",
+    "recordedAt",
+    "executionSurface",
+    "initiatedBy",
+    "githubIssueNumber",
+    "userConfirmation",
+    "result",
+    "secretsStored",
+    "githubActionsPerformedLinkedInAction"
+  ],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"const": 1},
+    "operationId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
+    "action": {"const": "message_posted"},
+    "recordedAt": {"type": "string", "format": "date-time"},
+    "executionSurface": {"const": "user_initiated_signed_in_linkedin_ui"},
+    "initiatedBy": {"const": "user"},
+    "githubIssueNumber": {"type": "integer", "minimum": 1},
+    "userConfirmation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["obtained", "confirmedAt", "scope"],
+      "properties": {
+        "obtained": {"const": true},
+        "confirmedAt": {"type": "string", "format": "date-time"},
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "recipientProfileUrl",
+        "messageTextSha256",
+        "verifiedAt",
+        "verification"
+      ],
+      "properties": {
+        "status": {"const": "message_posted"},
+        "recipientProfileUrl": {"type": "string", "format": "uri"},
+        "messageTextSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "verifiedAt": {"type": "string", "format": "date-time"},
+        "verification": {"type": "string", "minLength": 1}
+      }
+    },
+    "secretsStored": {"const": false},
+    "githubActionsPerformedLinkedInAction": {"const": false}
+  }
+}

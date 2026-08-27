@@ -24,6 +24,7 @@ from validate_medium_bridge import (
 
 STRATEGY_PATH = ROOT / "engagement" / "strategy.json"
 EXECUTIONS_DIR = ROOT / "linkedin" / "executions"
+MESSAGE_EXECUTIONS_DIR = ROOT / "linkedin" / "message-executions"
 ACTION_TO_CANDIDATE = {
     "comment_posted": "comment",
     "reply_posted": "reply",
@@ -210,7 +211,79 @@ def validate_linkedin_receipt(path: Path, candidates: dict[str, dict[str, Any]])
     return receipt, errors
 
 
-def build_report(queue: dict[str, Any], receipts: list[dict[str, Any]], output_dir: Path) -> None:
+def validate_linkedin_message_receipt(path: Path) -> tuple[dict[str, Any], list[str]]:
+    receipt = load_json(path)
+    errors: list[str] = []
+    label = str(path.relative_to(ROOT))
+    allowed_fields = {
+        "$schema",
+        "schemaVersion",
+        "operationId",
+        "action",
+        "recordedAt",
+        "executionSurface",
+        "initiatedBy",
+        "githubIssueNumber",
+        "userConfirmation",
+        "result",
+        "secretsStored",
+        "githubActionsPerformedLinkedInAction",
+    }
+    if set(receipt) - allowed_fields:
+        errors.append(f"{label}: unexpected receipt fields")
+    if receipt.get("schemaVersion") != 1:
+        errors.append(f"{label}: schemaVersion must be 1")
+    operation_id = receipt.get("operationId")
+    if operation_id != path.stem:
+        errors.append(f"{label}: operationId must match the filename")
+    if receipt.get("action") != "message_posted":
+        errors.append(f"{label}: action must be message_posted")
+    require_datetime(receipt.get("recordedAt"), f"{label}.recordedAt", errors)
+    if receipt.get("executionSurface") != "user_initiated_signed_in_linkedin_ui":
+        errors.append(f"{label}: invalid executionSurface")
+    if receipt.get("initiatedBy") != "user":
+        errors.append(f"{label}: initiatedBy must be user")
+    if not isinstance(receipt.get("githubIssueNumber"), int) or receipt.get("githubIssueNumber", 0) < 1:
+        errors.append(f"{label}: githubIssueNumber must be positive")
+    confirmation = receipt.get("userConfirmation", {})
+    if not isinstance(confirmation, dict) or set(confirmation) != {"obtained", "confirmedAt", "scope"}:
+        errors.append(f"{label}: userConfirmation must contain obtained, confirmedAt, and scope")
+        confirmation = {}
+    if confirmation.get("obtained") is not True or not isinstance(confirmation.get("scope"), str) or not confirmation.get("scope", "").strip():
+        errors.append(f"{label}: exact user confirmation must be recorded")
+    require_datetime(confirmation.get("confirmedAt"), f"{label}.userConfirmation.confirmedAt", errors)
+    if receipt.get("secretsStored") is not False:
+        errors.append(f"{label}: secretsStored must be false")
+    if receipt.get("githubActionsPerformedLinkedInAction") is not False:
+        errors.append(f"{label}: GitHub Actions must not perform the LinkedIn action")
+    exposed = sensitive_key_paths(receipt)
+    if exposed:
+        errors.append(f"{label}: prohibited credential/session fields: {', '.join(exposed)}")
+
+    result = receipt.get("result", {})
+    expected_result_fields = {
+        "status",
+        "recipientProfileUrl",
+        "messageTextSha256",
+        "verifiedAt",
+        "verification",
+    }
+    if not isinstance(result, dict) or set(result) != expected_result_fields:
+        errors.append(f"{label}: result fields do not match the LinkedIn message receipt contract")
+        result = result if isinstance(result, dict) else {}
+    if result.get("status") != "message_posted":
+        errors.append(f"{label}: result status must be message_posted")
+    require_datetime(result.get("verifiedAt"), f"{label}.result.verifiedAt", errors)
+    if not isinstance(result.get("verification"), str) or not result.get("verification", "").strip():
+        errors.append(f"{label}: result verification must be non-empty")
+    if not linkedin_url(result.get("recipientProfileUrl")) or "/in/" not in result.get("recipientProfileUrl", ""):
+        errors.append(f"{label}: recipientProfileUrl must be a public LinkedIn profile URL")
+    if not re.fullmatch(r"[0-9a-f]{64}", result.get("messageTextSha256", "")):
+        errors.append(f"{label}: messageTextSha256 must be 64 lowercase hexadecimal characters")
+    return receipt, errors
+
+
+def build_report(queue: dict[str, Any], receipts: list[dict[str, Any]], message_receipts: list[dict[str, Any]], output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     candidates = queue["candidates"]
     platform_counts = Counter(candidate["platform"] for candidate in candidates)
@@ -226,6 +299,7 @@ def build_report(queue: dict[str, Any], receipts: list[dict[str, Any]], output_d
         f"- Ready for exact confirmation: {state_counts['ready_for_confirmation']}",
         f"- Posted: {state_counts['posted']}",
         f"- Verified LinkedIn receipts: {len(receipts)}",
+        f"- Verified LinkedIn private-message receipts: {len(message_receipts)}",
     ]
     (output_dir / "validation-summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     with (output_dir / "queue.csv").open("w", newline="", encoding="utf-8") as handle:
@@ -247,7 +321,11 @@ def main() -> None:
     receipts = [receipt for receipt, _ in receipt_pairs]
     for _, receipt_errors in receipt_pairs:
         errors.extend(receipt_errors)
-    operation_ids = [receipt.get("operationId") for receipt in receipts]
+    message_receipt_pairs = [validate_linkedin_message_receipt(path) for path in sorted(MESSAGE_EXECUTIONS_DIR.glob("*.json"))]
+    message_receipts = [receipt for receipt, _ in message_receipt_pairs]
+    for _, receipt_errors in message_receipt_pairs:
+        errors.extend(receipt_errors)
+    operation_ids = [receipt.get("operationId") for receipt in [*receipts, *message_receipts]]
     duplicates = [value for value, count in Counter(operation_ids).items() if count > 1]
     if duplicates:
         errors.append(f"duplicate LinkedIn operationIds: {', '.join(duplicates)}")
@@ -261,8 +339,11 @@ def main() -> None:
             print(f"- {error}")
         raise SystemExit(1)
     if args.output_dir:
-        build_report(queue, receipts, args.output_dir)
-    print(f"validated cross-platform engagement: {len(candidates)} candidates, {len(receipts)} LinkedIn receipts")
+        build_report(queue, receipts, message_receipts, args.output_dir)
+    print(
+        f"validated cross-platform engagement: {len(candidates)} candidates, "
+        f"{len(receipts)} LinkedIn public receipts, {len(message_receipts)} LinkedIn message receipts"
+    )
 
 
 if __name__ == "__main__":

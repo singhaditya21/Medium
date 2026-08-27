@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827140230-reply-posted-2026-08-27-linkedin-reply-dhari-authorization-metrics",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-27T14:02:30Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T14:02:30Z",
+    "scope": "Approve the Dhari reply and Garima DM exactly as written."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-27-linkedin-reply-dhari-authorization-metrics",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7496586504614424576/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7496586504614424576/",
+    "publishedTextSha256": "3d026c5d8219c784fcd8683fc7430c3af3d586b925659cb7142018340159e86e",
+    "verifiedAt": "2026-08-27T14:02:30Z",
+    "verification": "LinkedIn rendered the approved threaded reply under Aditya Singh, You, with a current timestamp; the reply composer cleared after submission"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
