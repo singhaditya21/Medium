@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-27T09:54:56Z",
+  "updatedAt": "2026-08-27T12:20:40Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -27,6 +27,81 @@
       "responseUrl": "https://medium.com/@singhaditya21_89007/that-is-the-right-failure-mode-to-challenge-dead30f3c147",
       "receiptOperationId": "20260827095456-response-posted-2026-08-27-future-agi-verifier-trust",
       "postedAt": "2026-08-27T09:54:56Z"
+    },
+    {
+      "id": "2026-08-27-linkedin-reply-manisha-operational-consistency",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7498689649511546881&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7488611013357879297%2C7492977278805778433%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7488611013357879297%2C7498689638400671744%29",
+      "title": "Adobe Summit Mumbai 2026: measurable experience consistency",
+      "author": "Manisha chouhan",
+      "reason": "This is a direct, substantive reply to the user's existing comment and should be handled before outbound engagement.",
+      "evidence": "Manisha agreed that reliable processes create a seamless customer experience and specifically highlighted consistency as measurable.",
+      "draftResponse": "Agreed, @Manisha chouhan. The useful operating measures are the percentage of event failures absorbed without attendee impact, handoff variance, and recovery time. If those improve while satisfaction stays high, the experience is not only seamless; the operating model is resilient.",
+      "priorityScore": 0.95,
+      "intendedMentions": ["Manisha chouhan"],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-pascal-agent-org-chart",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498665641244041217/",
+      "title": "Should agents appear on the org chart?",
+      "author": "Pascal BORNET",
+      "reason": "The post opens a high-quality discussion about agent ownership, accountability, and organizational design that closely matches the user's control-plane positioning.",
+      "evidence": "Pascal contrasts direct-report, agent-pod, and shared-infrastructure models and argues that an org chart can make hidden agent work and human ownership visible.",
+      "draftResponse": "Putting agents on the org chart helps ownership, but I would add an authority chart beside it. @Pascal BORNET, four fields should travel with every agent: named human principal, maximum delegated scope, approval threshold, and kill-switch owner. Otherwise visible accountability can still hide who spent whose authority.",
+      "priorityScore": 0.92,
+      "intendedMentions": ["Pascal BORNET"],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-cael-human-agency",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497330732646699008/",
+      "title": "AI employees should preserve human agency",
+      "author": "Cael Stewart",
+      "reason": "The post directly challenges fully autonomous agent designs and has an active, relevant discussion with 30 reactions and 20 comments.",
+      "evidence": "Cael notes that 10–20 well-funded startups are pursuing AI employees and argues that winners will keep critical decisions human while automating execution.",
+      "draftResponse": "The 10–20 funded entrants make the control boundary more important, not less. @Cael Stewart, I would measure human-agency preservation through escalation precision, unauthorized-action rate, verified completion rate, and recovery time. A winner should maximize successful execution without silently converting ambiguity into autonomy.",
+      "priorityScore": 0.91,
+      "intendedMentions": ["Cael Stewart"],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-farrukh-control-plane",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/pulse/ai-control-plane-building-trust-governance-agentic-enterprise-khan-id0jf/",
+      "title": "The AI Control Plane: Building Trust, Governance, and Accountability",
+      "author": "Farrukh Ahmed Khan",
+      "reason": "The article covers runtime policy, identity, observability, FinOps, MCP, A2A, and human oversight—the core architecture themes in the user's catalog.",
+      "evidence": "Farrukh compares the emerging agent control plane with the role API gateways played in the API economy and asks how enterprises are governing agents at scale.",
+      "draftResponse": "The API-gateway analogy is strong, but an agent control plane must govern intent and effect, not only traffic. @Farrukh Ahmed Khan, I would make five runtime measures non-negotiable: policy-decision latency, unauthorized-action rate, evidence completeness, postcondition-verification success, and mean recovery time.",
+      "priorityScore": 0.9,
+      "intendedMentions": ["Farrukh Ahmed Khan"],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-vikram-accountability",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/pulse/ai-governance-problem-nobody-talking-who-controls-agent-koppikar-gny9f/",
+      "title": "Who controls the agent?",
+      "author": "Vikram V. Koppikar",
+      "reason": "The article asks who is accountable by name for harmful agent actions and supplies seven concrete pre-deployment governance questions.",
+      "evidence": "Vikram asks who approved the agent, what data and prohibitions apply, where humans intervene, who contains failure, who monitors it, and who is personally accountable.",
+      "draftResponse": "Naming accountability is necessary, but the seven answers should also become machine-verifiable control data. @Vikram V. Koppikar, bind each action to its principal, policy version, scoped permission, approval evidence, outcome verifier, and recovery owner; then measure orphaned actions and exception-closure time.",
+      "priorityScore": 0.89,
+      "intendedMentions": ["Vikram V. Koppikar"],
+      "state": "ready_for_confirmation"
     }
   ]
 }

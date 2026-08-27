@@ -29,6 +29,8 @@ Every item in `queue.json` contains:
 
 Up to five active candidates per platform are allowed in a review batch. Posted and skipped entries remain as an audit trail and do not consume the active limit.
 
+Larger researched campaigns are stored as dated opportunity backlogs. Only one wave of five moves into `queue.json` at a time; later waves must have their source and exact target revalidated before promotion. This prevents stale, duplicate, or high-volume interactions while preserving the research and draft work.
+
 The score is:
 
 ```text
