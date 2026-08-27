@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827124220-reply-posted-2026-08-27-linkedin-reply-manisha-operational-consistency",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-27T12:42:20Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T12:42:20Z",
+    "scope": "Approve Wave 1 exactly as written"
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-27-linkedin-reply-manisha-operational-consistency",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7498689649511546881&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7488611013357879297%2C7492977278805778433%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7488611013357879297%2C7498689638400671744%29",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7498689649511546881&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7488611013357879297%2C7492977278805778433%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7488611013357879297%2C7498689638400671744%29",
+    "publishedTextSha256": "49fa03eac16dc8a82d3585bdb454462790c38c78032acd402463fe5296c93252",
+    "verifiedAt": "2026-08-27T12:42:20Z",
+    "verification": "LinkedIn rendered the exact approved reply under Aditya Singh with a current timestamp and a clickable Manisha chouhan mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

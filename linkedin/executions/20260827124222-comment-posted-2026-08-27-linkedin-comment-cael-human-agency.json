@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827124222-comment-posted-2026-08-27-linkedin-comment-cael-human-agency",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T12:42:22Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T12:42:22Z",
+    "scope": "Approve Wave 1 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-cael-human-agency",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497330732646699008/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497330732646699008/",
+    "publishedTextSha256": "706a6751aa22d6e4e8bc94d8c5c5f6a6dc54b4f3280ffdd773bfb5c53fabd1b9",
+    "verifiedAt": "2026-08-27T12:42:22Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Cael Stewart mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

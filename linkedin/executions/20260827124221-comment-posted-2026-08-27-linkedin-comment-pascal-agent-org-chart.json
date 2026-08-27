@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827124221-comment-posted-2026-08-27-linkedin-comment-pascal-agent-org-chart",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T12:42:21Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T12:42:21Z",
+    "scope": "Approve Wave 1 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-pascal-agent-org-chart",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498665641244041217/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498665641244041217/",
+    "publishedTextSha256": "7b612895c0f558e16b3d3c15c238b7f2407bbd5dfb1f875231a9e886cbe97012",
+    "verifiedAt": "2026-08-27T12:42:21Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Pascal BORNET mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

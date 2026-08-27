@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827124223-comment-posted-2026-08-27-linkedin-comment-vikram-accountability",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T12:42:23Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T12:42:23Z",
+    "scope": "Approve Wave 1 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-vikram-accountability",
+    "targetUrl": "https://www.linkedin.com/pulse/ai-governance-problem-nobody-talking-who-controls-agent-koppikar-gny9f/",
+    "publicUrl": "https://www.linkedin.com/pulse/ai-governance-problem-nobody-talking-who-controls-agent-koppikar-gny9f/",
+    "publishedTextSha256": "33062ce70f6ddf36e62b30a45ef37d2cea37fa188a6a5e7cfd3c24cfee74a630",
+    "verifiedAt": "2026-08-27T12:42:23Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Vikram V. Koppikar mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

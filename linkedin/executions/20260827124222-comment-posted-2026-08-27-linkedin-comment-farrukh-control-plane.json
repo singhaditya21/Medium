@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827124222-comment-posted-2026-08-27-linkedin-comment-farrukh-control-plane",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-27T12:42:22Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T12:42:22Z",
+    "scope": "Approve Wave 1 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-27-linkedin-comment-farrukh-control-plane",
+    "targetUrl": "https://www.linkedin.com/pulse/ai-control-plane-building-trust-governance-agentic-enterprise-khan-id0jf/",
+    "publicUrl": "https://www.linkedin.com/pulse/ai-control-plane-building-trust-governance-agentic-enterprise-khan-id0jf/",
+    "publishedTextSha256": "447bf2d1859661175c46d03a6ec7009f127ac327f2cd5bf373151d6ea7a6d448",
+    "verifiedAt": "2026-08-27T12:42:22Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Farrukh Ahmed Khan mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
