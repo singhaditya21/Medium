@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-27T13:04:52Z",
+  "updatedAt": "2026-08-27T13:18:27Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -227,6 +227,55 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498413199894122497/",
       "receiptOperationId": "20260827130452-comment-posted-2026-08-27-linkedin-comment-duckdb-aws",
       "postedAt": "2026-08-27T13:04:52Z"
+    },
+    {
+      "id": "2026-08-27-medium-response-secure-agent-authorization-flow",
+      "platform": "medium",
+      "action": "response",
+      "direction": "outbound",
+      "targetUrl": "https://medium.com/@ericbroda/secure-agent-authorization-how-it-works-a068eb7c152d",
+      "title": "Secure Agent Authorization — How It Works",
+      "author": "Eric Broda",
+      "reason": "Directly extends the article’s eight-step scoped-grant architecture with replay resistance, effect bounds, signed outcome receipts, and business-state verification.",
+      "evidence": "Full free 2-minute article read in the signed-in Medium UI. It defines eight stages from orchestrated request through trust-authority registry checks, a task/tool/skill/expiry/evidence-bound execution grant, executor validation, and recorded tool outcome. No existing response from this profile was visible. Score: relevance 0.98, discussion quality 0.55, unique contribution 0.94, recency 0.50; weighted 0.77.",
+      "draftResponse": "Eric, the eight-step chain puts the trust boundary in the right place: the executor, not the model, enforces scope. I would make the grant single-use—or explicitly count-bounded—and bind it to an action hash, resource, maximum side effect, and post-condition. Expiry alone does not prevent replay inside the validity window. The executor should return a signed outcome receipt, and the verifier should compare the observed business state with the requested state, not merely accept a successful tool response.",
+      "priorityScore": 0.77,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-versioned-agent-skills",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497690639925600256/",
+      "title": "A Skills-Based Pattern for AI Agents in Microsoft Foundry",
+      "author": "Velmurugan Muthaiyan",
+      "reason": "Adds the missing governance contract for reusable skills and connects version resolution to execution receipts and bounded authority.",
+      "evidence": "Full post and visible discussion read in the signed-in LinkedIn UI: the post separates agent, skill, tool, and toolbox and reports 34 reactions, 2 comments, and 3 reposts after two days. No existing comment by this profile was visible. Score: relevance 0.96, discussion quality 0.58, unique contribution 0.93, recency 0.90; weighted 0.85.",
+      "draftResponse": "@Velmurugan Muthaiyan, the separation is valuable, but the governance boundary needs to attach to each versioned skill and tool contract—not only to the agent. I would make every skill declare its input/output schema, data classification, permitted tools, maximum authority, confirmation rule, idempotency behavior, and compensation path. Pin that skill version in the execution receipt; otherwise a stable agent can change behavior silently when the toolbox resolves a newer skill.",
+      "priorityScore": 0.85,
+      "intendedMentions": [
+        "Velmurugan Muthaiyan"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-27-linkedin-comment-randomness-requires-a-tool",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498133736639660032/",
+      "title": "It is always 17: LLMs and random-number selection",
+      "author": "Maria Sukhareva",
+      "reason": "Converts the observed 17-selection bias into a measurable sampling test and a production control for entropy-sensitive tasks.",
+      "evidence": "Full post and visible discussion read in the signed-in LinkedIn UI: three independent prompts per model mostly returned 17; the post had 127 reactions, 38 comments, and 7 reposts after one day. No existing comment by this profile was visible. Score: relevance 0.78, discussion quality 0.94, unique contribution 0.92, recency 0.95; weighted 0.88.",
+      "draftResponse": "@Maria Sukhareva, this is useful precisely because “pick” is not “sample.” For three draws per model, the result is diagnostic, not yet inferential; I’d repeat 1,000+ independent calls and test the observed distribution against uniformity. In production, entropy-sensitive tasks should route to a cryptographic PRNG/tool and record the tool identity, sample space, and acceptance test. Natural-language competence is not evidence of statistical randomness.",
+      "priorityScore": 0.88,
+      "intendedMentions": [
+        "Maria Sukhareva"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
