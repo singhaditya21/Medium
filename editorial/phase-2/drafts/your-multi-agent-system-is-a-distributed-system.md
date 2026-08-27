@@ -19,7 +19,7 @@ This story was written with AI writing and visualization assistance. The company
 
 Once independent agents can observe and mutate shared business state, the architecture is a distributed system. The control question is no longer “Can the agents collaborate?” It is whether one durable workflow owns the intent, stale owners are fenced, each semantic action creates at most one business effect, concurrent writes respect versions and every ambiguous outcome enters reconciliation instead of blind retry. Conversation quality cannot provide those guarantees. Domain services, workflow state and effect receipts must.
 
-![Reference architecture with six specialized agents, one durable workflow, and domain-owned systems of record.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-02.png "Figure 2. Agents coordinate through durable workflow state and typed domain APIs instead of mutating peer memory or shared records directly. AI-assisted design visualization; reference architecture; not production data.")
+![Reference architecture with six specialized agents, one durable workflow, and domain-owned systems of record.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-02.png "Figure 2. Agents coordinate through durable workflow state and typed domain APIs instead of mutating peer memory or shared records directly. AI-assisted design visualization; reference architecture; not production data.")
 
 ## What this changes in production
 
@@ -42,7 +42,7 @@ Once independent agents can observe and mutate shared business state, the archit
 
 Agent prompts describe desired behavior. Invariants describe states the system must never accept or must eventually resolve. Start architecture work by writing invariants in business language, then locate the component that can enforce each one.
 
-![Eight distributed-workflow invariants spanning ownership, effect uniqueness, order, durability, authority, verification, lineage, and recovery.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-03.png "Figure 3. Informal collaboration assumptions become eight fault-testable business invariants with explicit enforcement points. AI-assisted design visualization; reference architecture; not production data.")
+![Eight distributed-workflow invariants spanning ownership, effect uniqueness, order, durability, authority, verification, lineage, and recovery.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-03.png "Figure 3. Informal collaboration assumptions become eight fault-testable business invariants with explicit enforcement points. AI-assisted design visualization; reference architecture; not production data.")
 
 For the renewal scenario, “one owner” is not a statement that only one process is running. Networks can partition and schedulers can pause. The enforceable form is: **for a protected scope, the domain accepts writes only from the highest valid epoch it has observed**. “Exactly once” is similarly misleading if interpreted as a transport guarantee. The useful invariant is: **one action identity produces no more than one semantic effect in the authoritative domain**.
 
@@ -65,7 +65,7 @@ Some invariants are safety properties: something bad never happens, such as acce
 
 Suppose worker A owns workflow scope `account/A42/renewal/R9` under epoch 42. A network partition prevents renewal of the lease, but A remains alive. After expiry, worker B acquires epoch 43. Both can now execute application code. If domain APIs accept whichever request arrives first, the lease did not prevent split brain; it only informed the control plane that ownership changed.
 
-![Timeline showing lease expiry, takeover under a higher epoch, and a stale worker resuming after partition.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-06.png "Figure 6. A worker can survive beyond lease expiry, so takeover must issue a higher epoch and protected domains must reject effects from the former owner. AI-assisted design visualization; reference timeline; not production data.")
+![Timeline showing lease expiry, takeover under a higher epoch, and a stale worker resuming after partition.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-06.png "Figure 6. A worker can survive beyond lease expiry, so takeover must issue a higher epoch and protected domains must reject effects from the former owner. AI-assisted design visualization; reference timeline; not production data.")
 
 Lease records should include scope, holder, acquired time, renewal time, duration, and monotonically increasing epoch. [Kubernetes Lease objects](https://kubernetes.io/docs/concepts/architecture/leases/) demonstrate production uses of lease-shaped coordination, including node heartbeats and leader election. That documentation is evidence that leases are a practical coordination primitive; it does not make a Kubernetes Lease alone sufficient for business-effect fencing.
 
@@ -88,7 +88,7 @@ Lease duration creates a trade-off. A short duration reduces stale-owner time bu
 
 Fencing closes the lease gap by putting the ownership epoch on each protected mutation and making the resource domain reject old epochs. The critical control is not “worker A knows it is stale.” It is “pricing refuses worker A even if A still believes it is current.”
 
-![Sequence diagram showing epoch takeover and domain rejection of a late write from the former owner.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-07.png "Figure 7. The protected domain stores the highest accepted ownership epoch and rejects a delayed write carrying an older epoch. AI-assisted design visualization; reference protocol; not production data.")
+![Sequence diagram showing epoch takeover and domain rejection of a late write from the former owner.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-07.png "Figure 7. The protected domain stores the highest accepted ownership epoch and rejects a delayed write carrying an older epoch. AI-assisted design visualization; reference protocol; not production data.")
 
 The domain-side check can be expressed as:
 
@@ -125,7 +125,7 @@ Epochs are scope-specific. A single global epoch would serialize unrelated custo
 
 At-most-once delivery can lose a request. At-least-once delivery can duplicate it. Ordered partitions provide local order only within a declared key. A transactional outbox closes one local commit gap but does not create a transaction across the remote domain. “Exactly once” claims are often scoped to a broker or processor and do not prove exactly one customer charge, CRM transition, or email.
 
-![Matrix of application obligations under at-most-once, at-least-once, partition-ordered, and transactional-outbox delivery.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-09.png "Figure 9. Each transport mode leaves distinct loss, duplication, ordering, idempotency, and reconciliation obligations at the application layer. AI-assisted visualization; qualitative reference assessment; not benchmark data.")
+![Matrix of application obligations under at-most-once, at-least-once, partition-ordered, and transactional-outbox delivery.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-09.png "Figure 9. Each transport mode leaves distinct loss, duplication, ordering, idempotency, and reconciliation obligations at the application layer. AI-assisted visualization; qualitative reference assessment; not benchmark data.")
 
 The application must decide its semantic objective per action:
 
@@ -146,7 +146,7 @@ The reconciliation budget belongs to the action class. A customer-visible price 
 
 An idempotency cache that expires after a few minutes may improve UX but is weak protection for business workflows that retry hours later or replay after disaster recovery. The ledger must preserve enough information for the domain's duplication horizon and audit obligations.
 
-![Lifecycle of an idempotency-ledger record from absent through reserved, executing, ambiguous, and verified.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-10.png "Figure 10. One durable ledger record binds the action identity to its proposal digest, authority, attempts, effect, and terminal receipt. AI-assisted design visualization; reference state model; not production data.")
+![Lifecycle of an idempotency-ledger record from absent through reserved, executing, ambiguous, and verified.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-10.png "Figure 10. One durable ledger record binds the action identity to its proposal digest, authority, attempts, effect, and terminal receipt. AI-assisted design visualization; reference state model; not production data.")
 
 A relational design could begin with:
 
@@ -179,7 +179,7 @@ Retention should follow the maximum period in which a duplicate could reappear o
 
 The pricing and contract agents are each individually authorized. That does not make their concurrent writes jointly valid. Both can read account version 20, form locally coherent proposals, and race. Without conditional writes, the later request may overwrite the earlier effect or combine fields that were never evaluated together.
 
-![Timeline of pricing and contract agents reading the same record version, followed by one commit and one conditional-write conflict.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-11.png "Figure 11. Two valid proposals based on version 20 cannot both assume they remain valid after one advances the record to version 21. AI-assisted design visualization; reference race; not production data.")
+![Timeline of pricing and contract agents reading the same record version, followed by one commit and one conditional-write conflict.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-11.png "Figure 11. Two valid proposals based on version 20 cannot both assume they remain valid after one advances the record to version 21. AI-assisted design visualization; reference race; not production data.")
 
 Use optimistic concurrency when conflicts are uncommon and re-evaluation is cheap. The command carries `If-Match: version-20` or a domain equivalent. The first write commits version 21. The second receives a conflict, re-reads version 21, reconstructs evidence, and asks whether its proposal is still valid. It must not simply replace the precondition and retry unchanged.
 
@@ -193,7 +193,7 @@ The business implication is important: adding specialist agents increases the nu
 
 A renewal can reserve a quote, apply price, sign a term, adjust billing, reserve fulfillment, and notify the customer. Those systems rarely share one atomic database transaction. Treat the process as a saga: a durable sequence of local transactions, each with a recovery action or explicit irreversibility.
 
-![Renewal saga state machine with six forward transactions, a billing failure, compensations, and human remediation.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-13.png "Figure 13. Local commits form a long-lived saga; a later rejection activates policy-ordered compensations and, when needed, human remediation. AI-assisted design visualization; reference saga; not production data.")
+![Renewal saga state machine with six forward transactions, a billing failure, compensations, and human remediation.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-13.png "Figure 13. Local commits form a long-lived saga; a later rejection activates policy-ordered compensations and, when needed, human remediation. AI-assisted design visualization; reference saga; not production data.")
 
 The original [Sagas paper by Garcia-Molina and Salem](https://www.cs.princeton.edu/techreports/1987/070.pdf) describes long-lived transactions as sequences of transactions that can be interleaved, with compensating transactions used when the overall activity must be rolled back. Modern agent platforms inherit the same problem: local commits survive even when later work fails.
 
@@ -225,7 +225,7 @@ Compensation is semantic, not time travel. Releasing a reservation may restore c
 
 Blindly running compensations in reverse completion order is unsafe when recovery actions depend on one another or when external commitments have different consequences. Construct a compensation dependency graph when the saga begins or when its plan version is selected.
 
-![Dependency graph for cancelling billing, reverting a quote, releasing a contract, correcting a message, and verifying the account.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-14.png "Figure 14. Recovery is a dependency-aware plan whose order follows domain constraints and customer impact rather than raw message order. AI-assisted design visualization; reference recovery graph; not production data.")
+![Dependency graph for cancelling billing, reverting a quote, releasing a contract, correcting a message, and verifying the account.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-14.png "Figure 14. Recovery is a dependency-aware plan whose order follows domain constraints and customer impact rather than raw message order. AI-assisted design visualization; reference recovery graph; not production data.")
 
 Nodes are compensation or verification actions. Directed edges mean one must complete before another can safely run. The scheduler may parallelize independent nodes, but it must preserve each dependency and domain concurrency guard. Prioritize irreversible or accumulating harm: stop repeated billing before repairing internal metadata; prevent a misleading message before optimizing queue throughput.
 
@@ -251,7 +251,7 @@ The following sections retain the quantitative and systems detail for readers im
 
 Unit tests that mock successful APIs do not exercise the failure modes that dominate multi-agent coordination. Inject faults at message transport, worker runtime, workflow store, lease renewal, domain response, and compensation execution. Continue the test through recovery.
 
-![Chaos-test matrix mapping eight injected faults to seven distributed-workflow assertions.](assets/images/your-multi-agent-system-is-a-distributed-system/figure-16.png "Figure 16. Fault scenarios assert ownership, effect uniqueness, versions, authority, receipts, recovery, and orphan prevention; deliberate breach cells show what a failing control looks like. AI-assisted visualization; synthetic matrix; not production test results.")
+![Chaos-test matrix mapping eight injected faults to seven distributed-workflow assertions.](../../../assets/images/your-multi-agent-system-is-a-distributed-system/figure-16.png "Figure 16. Fault scenarios assert ownership, effect uniqueness, versions, authority, receipts, recovery, and orphan prevention; deliberate breach cells show what a failing control looks like. AI-assisted visualization; synthetic matrix; not production test results.")
 
 Each test case needs an injection point, timing, affected scope, authoritative oracle, expected transient states, maximum ambiguity age, expected terminal state, and cleanup proof. For example:
 

@@ -19,7 +19,7 @@ This story was written with AI writing and visualization assistance. The inciden
 
 An agent’s authority is distributed across tokens, sessions, workload leases, delegated children, network paths, tool-side jobs and in-flight operations. A central flag records intent; it does not remove those capabilities. A real kill switch is a containment protocol: advance a monotonic epoch, revoke the authority graph, fence stale workers at effect boundaries, remove reachability, classify in-flight work, reconcile uncertain effects and require fresh authorization for recovery. It must also produce independent proof that every material boundary complied.
 
-![Reference architecture connecting a signed containment coordinator to identity, scheduler, workload, network, tool, data, effect, evidence, and independent observation layers.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-02.png "Figure 2. One containment epoch fans out across seven enforcement planes while an independent observer measures convergence and evidence gaps. AI-assisted design visualization; reference architecture; not production data.")
+![Reference architecture connecting a signed containment coordinator to identity, scheduler, workload, network, tool, data, effect, evidence, and independent observation layers.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-02.png "Figure 2. One containment epoch fans out across seven enforcement planes while an independent observer measures convergence and evidence gaps. AI-assisted design visualization; reference architecture; not production data.")
 
 ## What this changes in production
 
@@ -100,7 +100,7 @@ The signature protects command integrity and attribution. It does not make the c
 
 An agent rarely holds one credential. A root identity may create a session; the session may obtain a short access token; the workflow may receive a lease; the worker may mint a tool-specific credential; the tool may create an asynchronous job; and a child agent may receive a narrowed delegation. Revoking only the root login misses live descendants.
 
-![Authority dependency graph from agent principal through grants, sessions, leases, child agents, tool tokens, queue claims, database sessions, and business systems.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-03.png "Figure 3. Containment computes graph closure across every live descendant of the selected authority scope. AI-assisted design visualization; reference graph; not production data.")
+![Authority dependency graph from agent principal through grants, sessions, leases, child agents, tool tokens, queue claims, database sessions, and business systems.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-03.png "Figure 3. Containment computes graph closure across every live descendant of the selected authority scope. AI-assisted design visualization; reference graph; not production data.")
 
 Every capability record should include a stable identifier, principal, tenant, parent capability, issue time, expiry, resource and action scope, delegation depth, issuer, epoch, proof key or binding where applicable, and revocation state. The graph service should answer both directions: “What authority descends from this principal?” and “Which principal and grant produced this observed tool call?”
 
@@ -130,7 +130,7 @@ Graph closure is an evidence requirement, not permission to place raw credential
 
 Revocation says a capability should no longer be used. Fencing makes an effect boundary distinguish old authority from current authority. The control authority maintains a monotonically increasing epoch for the protected scope. A worker receives an authority envelope for epoch `41`. Containment advances the accepted epoch to `42`. Any later request presenting `41` is rejected even if the worker never received the shutdown message.
 
-![Timeline showing a connected epoch-41 request allowed before containment and a partitioned worker's late epoch-41 request rejected after the accepted epoch advances to 42.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-06.png "Figure 6. Monotonic fencing prevents a disconnected stale worker from creating an effect after the gateway advances the protected scope. AI-assisted design visualization; reference timeline; not production data.")
+![Timeline showing a connected epoch-41 request allowed before containment and a partitioned worker's late epoch-41 request rejected after the accepted epoch advances to 42.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-06.png "Figure 6. Monotonic fencing prevents a disconnected stale worker from creating an effect after the gateway advances the protected scope. AI-assisted design visualization; reference timeline; not production data.")
 
 The source of epoch truth must provide ordering strong enough for the scope. Two coordinators cannot independently issue conflicting “latest” epochs. Use a transactional counter, consensus-backed control store, or platform primitive with atomic compare-and-set. Scope hierarchy requires care: a tenant epoch may supersede an agent epoch, and a global epoch may supersede both. Define the comparison rule and snapshot it in the receipt.
 
@@ -161,7 +161,7 @@ The check must occur at the boundary that owns the effect, not only in an SDK in
 
 Stopping intake does not resolve work already in motion. The workflow engine needs a state machine aligned to effect boundaries. **Proposed** work has not received authority and can be rejected. **Authorized** work has authority but is not dispatched and can be revoked. **Dispatched** work may be cancellable. **Accepted** work has crossed a tool boundary but lacks a final outcome and must be reconciled. **Committed** work must be verified and, if wrong, compensated where permissible.
 
-![State machine mapping proposed, authorized, dispatched, accepted, and committed actions to reject, revoke, cancel, reconcile, verify, compensate, and verified terminal states.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-10.png "Figure 10. Containment assigns a safe disposition according to the last authoritative effect boundary crossed. AI-assisted design visualization; reference state machine; not production data.")
+![State machine mapping proposed, authorized, dispatched, accepted, and committed actions to reject, revoke, cancel, reconcile, verify, compensate, and verified terminal states.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-10.png "Figure 10. Containment assigns a safe disposition according to the last authoritative effect boundary crossed. AI-assisted design visualization; reference state machine; not production data.")
 
 State transitions are events, not mutable labels with no history. Preserve who or what authorized the action, which epoch applied, the tool request, acknowledgement, external operation identifier, resource version, postcondition, and verifier result. A worker crash cannot erase the fact that the tool accepted a request.
 
@@ -173,7 +173,7 @@ Compensation deserves the same controls as the original action. A “restore old
 
 Incident response needs a business-action inventory, not merely workload telemetry. The inventory joins workflow, action, attempt, queue claim, authority, tool call, external operation, resource, and effect receipt identities. It includes the last known state, time, business impact, reversibility, deadline, containment decision, current owner, and evidence completeness.
 
-![Stacked horizontal inventory of synthetic proposed, authorized, dispatched, accepted, committed, and ambiguous actions by reversibility class.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-11.png "Figure 11. The synthetic incident inventory separates 1,264 actions by effect state and reversibility so reconciliation can be loss-ranked. AI-assisted visualization; synthetic counts; not production data.")
+![Stacked horizontal inventory of synthetic proposed, authorized, dispatched, accepted, committed, and ambiguous actions by reversibility class.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-11.png "Figure 11. The synthetic incident inventory separates 1,264 actions by effect state and reversibility so reconciliation can be loss-ranked. AI-assisted visualization; synthetic counts; not production data.")
 
 An inventory query can start from the containment epoch and join all nonterminal work:
 
@@ -210,7 +210,7 @@ Rank review by potential loss, irreversibility, customer exposure, rights impact
 
 Distributed systems produce ambiguous outcomes. The client sends a request. The server accepts it. The response is lost. From the client's perspective, the call failed; from the business system's perspective, it may have committed. Retrying with a new identity can duplicate the effect.
 
-![Decision tree for an accepted request without a receipt, branching through authoritative lookup to committed, not found, partial, or unknown dispositions.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-12.png "Figure 12. Authoritative state and idempotency evidence determine whether to verify, retry safely, compensate, or freeze; unknown never means replay. AI-assisted design visualization; reference decision tree; not production data.")
+![Decision tree for an accepted request without a receipt, branching through authoritative lookup to committed, not found, partial, or unknown dispositions.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-12.png "Figure 12. Authoritative state and idempotency evidence determine whether to verify, retry safely, compensate, or freeze; unknown never means replay. AI-assisted design visualization; reference decision tree; not production data.")
 
 The resolver queries the system of record by idempotency key, external operation ID, and resource version. If committed, verify the postcondition and record the receipt. If not found and the tool guarantees the lookup is authoritative, a retry may use the same action and idempotency identity after fresh authorization. If partial, freeze the resource and execute a domain-approved repair. If unknown, freeze and escalate.
 
@@ -228,7 +228,7 @@ Reconciliation logic needs adversarial tests. Simulate a commit before timeout, 
 
 The original workload, credentials, queues, configuration, memory, or retrieved evidence may be compromised. Turning the same agent back on restores uncertainty. Recovery creates a fresh workload identity, new credentials, a higher epoch, verified policy and tool configurations, bounded scope, traffic cap, and expiry.
 
-![Recovery authorization chain joining security, platform, domain owner, and incident commander evidence into fresh workload, shadow, canary, and bounded restore stages.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-14.png "Figure 14. Restart authority is separate from emergency stop authority and binds to a fresh epoch, evidence digest, traffic cap, expiry, and rollback. AI-assisted design visualization; reference chain; not production data.")
+![Recovery authorization chain joining security, platform, domain owner, and incident commander evidence into fresh workload, shadow, canary, and bounded restore stages.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-14.png "Figure 14. Restart authority is separate from emergency stop authority and binds to a fresh epoch, evidence digest, traffic cap, expiry, and rollback. AI-assisted design visualization; reference chain; not production data.")
 
 Security establishes that the threat and persistence mechanism are contained and evidence preserved. Platform engineering establishes that images, dependencies, credentials, gateways, network policy, telemetry, and rollback are healthy. The domain owner establishes that material effects are reconciled or frozen and accepts residual business risk. Incident command binds those facts to a recovery scope and expiry.
 
@@ -255,7 +255,7 @@ The following sections retain the quantitative and systems detail for readers im
 
 A kill-switch API that responds in 200 milliseconds can coexist with ten minutes of effect exposure. Measure the critical path from trigger to proof. Detection and incident declaration, operator authentication, signing, event distribution, local policy update, connection termination, tool disablement, queue control, and independent verification each consume time.
 
-![Synthetic P99 latency waterfall decomposing detection, signing, event delivery, enforcement, and verification within a 90-second stop-time objective.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-05.png "Figure 5. The synthetic 85-second budget shows why end-to-end stop time depends on the slowest material enforcement and proof path. AI-assisted visualization; synthetic values; not production performance.")
+![Synthetic P99 latency waterfall decomposing detection, signing, event delivery, enforcement, and verification within a 90-second stop-time objective.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-05.png "Figure 5. The synthetic 85-second budget shows why end-to-end stop time depends on the slowest material enforcement and proof path. AI-assisted visualization; synthetic values; not production performance.")
 
 For layer `l`, record issue, receive, persist, enforce, and verify timestamps. The overall time is not necessarily their sum because layers operate in parallel:
 
@@ -287,7 +287,7 @@ Expected exposure(s) = ∫[0, STO] rate_effect(t, s)
 
 The integral should be segmented by action class, resource concentration, reversibility, and control path. Ten low-impact enrichment writes are not equivalent to ten emails or exports. Correlated effects on one strategic account may create more harm than the same count spread across reversible sandbox records.
 
-![Exposure curves showing synthetic committed effects under a central toggle, epoch fencing, and layered containment as verified stop time increases.](assets/images/your-ai-agent-needs-a-real-kill-switch/figure-13.png "Figure 13. Local fencing and layered controls bend the synthetic exposure curve before every worker observes the central command. AI-assisted visualization; synthetic scenario; not a forecast.")
+![Exposure curves showing synthetic committed effects under a central toggle, epoch fencing, and layered containment as verified stop time increases.](../../../assets/images/your-ai-agent-needs-a-real-kill-switch/figure-13.png "Figure 13. Local fencing and layered controls bend the synthetic exposure curve before every worker observes the central command. AI-assisted visualization; synthetic scenario; not a forecast.")
 
 Report attempted, locally rejected, accepted, committed, ambiguous, verified-correct, compensated, irrecoverable, and customer-remedied effects separately. A high rejection count can prove containment working; folding it into “failed actions” obscures the control value. A low committed count can still hide one severe event; include value and impact bands.
 

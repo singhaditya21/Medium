@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Iterable
@@ -27,6 +28,15 @@ TECHNICAL_FIGURE_CONTRACTS = {
     "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation": {"evaluation", "evidence", "scenario", "production", "promotion", "failure", "trial", "risk"},
 }
 TECHNICAL_FIGURE_COUNT = 18
+TECHNICAL_FIGURE_COUNTS = {
+    "your-ai-agents-memory-is-a-database-not-a-prompt": 18,
+    "every-ai-agent-action-needs-a-receipt": 18,
+    "human-approval-is-a-queueing-system": 10,
+    "your-multi-agent-system-is-a-distributed-system": 10,
+    "model-routing-is-capital-allocation": 9,
+    "your-ai-agent-needs-a-real-kill-switch": 9,
+    "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation": 18,
+}
 TECHNICAL_FIGURE_SIZE = (2400, 1600)
 TECHNICAL_FIGURE_MIN_BYTES = 200_000
 
@@ -74,13 +84,15 @@ def validate_technical_figure_html(story: dict, errors: list[str]) -> None:
         return
     document = html.fromstring(path.read_text(encoding="utf-8"))
     figures = document.xpath("//figure[contains(concat(' ', normalize-space(@class), ' '), ' story-figure ')]")
-    if len(figures) != TECHNICAL_FIGURE_COUNT:
-        errors.append(f"{story['slug']}: generated page has {len(figures)} technical figures, expected {TECHNICAL_FIGURE_COUNT}")
+    expected_count = TECHNICAL_FIGURE_COUNTS.get(story["slug"], TECHNICAL_FIGURE_COUNT)
+    if len(figures) != expected_count:
+        errors.append(f"{story['slug']}: generated page has {len(figures)} technical figures, expected {expected_count}")
         return
     for index, figure in enumerate(figures, 1):
-        if figure.get("id") != f"figure-{index}":
+        source_number = int(figure.get("data-figure-label", index))
+        if figure.get("id") != f"figure-{source_number}":
             errors.append(f"{story['slug']} figure {index}: missing stable figure anchor")
-        if figure.get("data-figure-index") != str(index) or figure.get("data-figure-total") != str(TECHNICAL_FIGURE_COUNT):
+        if figure.get("data-figure-index") != str(index) or figure.get("data-figure-total") != str(expected_count):
             errors.append(f"{story['slug']} figure {index}: invalid dynamic-viewer metadata")
         images = figure.xpath("./div[contains(@class, 'story-figure-frame')]/img")
         captions = figure.xpath("./figcaption")
@@ -92,7 +104,7 @@ def validate_technical_figure_html(story: dict, errors: list[str]) -> None:
         if controls[0].get("hidden") is None or not controls[0].get("aria-label"):
             errors.append(f"{story['slug']} figure {index}: progressive-enhancement control is not safely initialized")
         image = images[0]
-        caption_id = f"figure-{index}-caption"
+        caption_id = f"figure-{source_number}-caption"
         if captions[0].get("id") != caption_id or image.get("aria-describedby") != caption_id:
             errors.append(f"{story['slug']} figure {index}: caption is not programmatically associated")
         if (image.get("width"), image.get("height")) != tuple(map(str, TECHNICAL_FIGURE_SIZE)):
@@ -131,8 +143,9 @@ def main() -> None:
             continue
         technical_terms = TECHNICAL_FIGURE_CONTRACTS.get(story["slug"])
         figure_blocks = [block for block in story["blocks"] if block.get("type") == "figure"]
-        if technical_terms and len(figure_blocks) != TECHNICAL_FIGURE_COUNT:
-            errors.append(f"{story['slug']}: expected {TECHNICAL_FIGURE_COUNT} technical figures, found {len(figure_blocks)}")
+        expected_count = TECHNICAL_FIGURE_COUNTS.get(story["slug"], TECHNICAL_FIGURE_COUNT)
+        if technical_terms and len(figure_blocks) != expected_count:
+            errors.append(f"{story['slug']}: expected {expected_count} technical figures, found {len(figure_blocks)}")
         figure_index = 0
         figure_alts: set[str] = set()
         figure_captions: set[str] = set()
@@ -146,15 +159,26 @@ def main() -> None:
                 errors.append(f"{story['slug']} figure {figure_index}: missing alt text")
             if not caption:
                 errors.append(f"{story['slug']} figure {figure_index}: missing caption")
-            images = list((ROOT / "assets" / "images" / story["slug"]).glob(f"figure-{figure_index:02d}.*"))
+            source_path = Path(urlsplit(block.get("src", "")).path)
+            source_number_match = re.search(r"figure-(\d+)", source_path.stem, re.I)
+            source_number = int(source_number_match.group(1)) if source_number_match else figure_index
+            local_source = (ROOT / source_path).resolve()
+            if local_source.is_relative_to(ROOT) and local_source.exists():
+                images = [local_source]
+            else:
+                images = list(
+                    (ROOT / "assets" / "images" / story["slug"]).glob(
+                        f"figure-{source_number:02d}.*"
+                    )
+                )
             if len(images) != 1 or images[0].stat().st_size < 500:
                 errors.append(f"{story['slug']} figure {figure_index}: expected one valid local image")
             if technical_terms:
                 normalized = f"{alt} {caption}".casefold()
                 if len(alt.split()) < 8:
                     errors.append(f"{story['slug']} figure {figure_index}: alt text is not technically descriptive")
-                if not caption.startswith(f"Figure {figure_index}."):
-                    errors.append(f"{story['slug']} figure {figure_index}: caption is not sequentially labeled")
+                if not caption.startswith(f"Figure {source_number}."):
+                    errors.append(f"{story['slug']} figure {figure_index}: caption does not match its source figure number")
                 if not any(term in normalized for term in technical_terms):
                     errors.append(f"{story['slug']} figure {figure_index}: content does not match the story-specific relevance vocabulary")
                 if alt.casefold() in figure_alts or caption.casefold() in figure_captions:

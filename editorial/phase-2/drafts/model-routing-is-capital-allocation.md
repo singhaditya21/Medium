@@ -19,7 +19,7 @@ This story was written with AI writing and visualization assistance. All routes,
 
 Model routing is a capital-allocation problem. Each action competes for a portfolio of model capacity, context, tools, retries, latency and verification. The router must first remove routes that violate policy or cannot satisfy the action’s assurance floor. It should then maximize expected business value net of workflow cost, delay and tail loss—not merely choose the lowest-priced model above a generic score. The output is a governed route bundle with evidence, limits and an accountable decision record.
 
-![Risk-aware routing architecture connecting action, evidence, runtime, and portfolio inputs to policy filtering, utility optimization, route controls, receipts, and outcome feedback.](assets/images/model-routing-is-capital-allocation/figure-02.png "Figure 2. Hard feasibility removes unsafe routes before economic ranking; the chosen bundle, verification, retry policy, receipt, and outcomes remain separate control responsibilities. AI-assisted design visualization; reference architecture; not production data.")
+![Risk-aware routing architecture connecting action, evidence, runtime, and portfolio inputs to policy filtering, utility optimization, route controls, receipts, and outcome feedback.](../../../assets/images/model-routing-is-capital-allocation/figure-02.png "Figure 2. Hard feasibility removes unsafe routes before economic ranking; the chosen bundle, verification, retry policy, receipt, and outcomes remain separate control responsibilities. AI-assisted design visualization; reference architecture; not production data.")
 
 ## What this changes in production
 
@@ -75,7 +75,7 @@ The receipt is an operational and governance artifact. It enables replay under a
 
 Token price is an input rate, not unit economics. A route can trigger input tokens, output tokens, prompt caching, embeddings, retrieval, reranking, model-based tools, external APIs, retries, replayed context, deterministic verification, model judging, human review, queue delay, compensation, and incident work. Some failed workflows incur cost without producing a completed unit.
 
-![Horizontal cost ledger decomposing synthetic per-workflow spend across input, output, router, tools, retries, verification, delay, and recovery.](assets/images/model-routing-is-capital-allocation/figure-03.png "Figure 3. The synthetic $0.186 completed-workflow cost shows why token charges alone understate the economic decision. AI-assisted visualization; synthetic USD allocation; not provider pricing or production data.")
+![Horizontal cost ledger decomposing synthetic per-workflow spend across input, output, router, tools, retries, verification, delay, and recovery.](../../../assets/images/model-routing-is-capital-allocation/figure-03.png "Figure 3. The synthetic $0.186 completed-workflow cost shows why token charges alone understate the economic decision. AI-assisted visualization; synthetic USD allocation; not provider pricing or production data.")
 
 Use one stable allocation key across every execution component:
 
@@ -117,7 +117,7 @@ U(r | x) = E[V_correct(r, x)]
          - λ_tail × CVaRα(L_error(r, x))
 ```
 
-![Formula map decomposing expected route utility into decision value, execution, delay, expected loss, tail loss, and hard constraints.](assets/images/model-routing-is-capital-allocation/figure-04.png "Figure 4. Economic ranking happens only inside a feasible set defined by quality, latency, privacy, authority, and capacity floors. AI-assisted design visualization; reference equation; not production data.")
+![Formula map decomposing expected route utility into decision value, execution, delay, expected loss, tail loss, and hard constraints.](../../../assets/images/model-routing-is-capital-allocation/figure-04.png "Figure 4. Economic ranking happens only inside a feasible set defined by quality, latency, privacy, authority, and capacity floors. AI-assisted design visualization; reference equation; not production data.")
 
 `V_correct` represents the incremental business value of a useful correct action. It can be zero for routine compliance work where the objective is loss avoidance. `C_execution` includes all route attempts and tool calls. `C_verification` includes automated and human assurance. `C_delay` prices missed deadlines, queueing, and slower customer response. `E[L_error]` weights route error probability by consequence. `CVaRα` describes the average loss in the worst `1 − α` share of modeled outcomes, useful when average loss understates an unacceptable tail.
 
@@ -131,7 +131,7 @@ The optimizer can be a rule table, linear program, contextual bandit, learned ra
 
 Average task quality treats a punctuation error and an unauthorized account action as comparable misses. Route economics must condition error value on the action.
 
-![Risk-adjusted frontier comparing expected loss and CVaR95 loss across synthetic route costs with a policy floor and selected point.](assets/images/model-routing-is-capital-allocation/figure-07.png "Figure 7. A route that looks attractive on average quality may become inefficient after action-weighted expected and tail loss are included. AI-assisted visualization; synthetic scenario model; not production data.")
+![Risk-adjusted frontier comparing expected loss and CVaR95 loss across synthetic route costs with a policy floor and selected point.](../../../assets/images/model-routing-is-capital-allocation/figure-07.png "Figure 7. A route that looks attractive on average quality may become inefficient after action-weighted expected and tail loss are included. AI-assisted visualization; synthetic scenario model; not production data.")
 
 For action class `k`:
 
@@ -157,7 +157,7 @@ The risk model must not double-count the same consequence in expected loss, CVaR
 
 Some constraints are categorical. Restricted personal data cannot move to an unauthorized region. A route without tool authority cannot execute the action. A novel high-impact request cannot inherit a low-risk cohort's evidence. A route that cannot finish required verification before expiry is not eligible.
 
-![Decision tree applying data boundary, authority, impact, novelty, and deadline gates before selecting private, fast, deep, or abstention routes.](assets/images/model-routing-is-capital-allocation/figure-08.png "Figure 8. Policy gates narrow the model portfolio and produce an explicit safe default before economic ranking begins. AI-assisted design visualization; reference decision tree; not production data.")
+![Decision tree applying data boundary, authority, impact, novelty, and deadline gates before selecting private, fast, deep, or abstention routes.](../../../assets/images/model-routing-is-capital-allocation/figure-08.png "Figure 8. Policy gates narrow the model portfolio and produce an explicit safe default before economic ranking begins. AI-assisted design visualization; reference decision tree; not production data.")
 
 Implement the filter with explicit reason codes:
 
@@ -185,7 +185,7 @@ Use a lower confidence bound rather than a point estimate for critical cohorts. 
 
 Suppose the router estimates `q = P(strong route adds decision value | x)`. A threshold such as `q > .65` is meaningful only if the probability is calibrated on the deployment cohort. Among cases assigned about `.70`, the event should occur at approximately the expected rate, within uncertainty and definition limits.
 
-![Calibration curve comparing predicted route suitability with observed suitability across ten synthetic probability bands.](assets/images/model-routing-is-capital-allocation/figure-10.png "Figure 10. The synthetic reliability curve shows overconfidence at higher predicted probabilities and includes uncertainty intervals around observed rates. AI-assisted visualization; synthetic n=20,000; not measured model performance.")
+![Calibration curve comparing predicted route suitability with observed suitability across ten synthetic probability bands.](../../../assets/images/model-routing-is-capital-allocation/figure-10.png "Figure 10. The synthetic reliability curve shows overconfidence at higher predicted probabilities and includes uncertainty intervals around observed rates. AI-assisted visualization; synthetic n=20,000; not measured model performance.")
 
 Expected calibration error can be summarized as:
 
@@ -213,7 +213,7 @@ Hard policy controls still apply on both sides.
 
 A router is most dangerous when it is confident far from its evaluation support. Novelty can arise from a new domain, schema, jurisdiction, product, language, attachment type, tool combination, context length, adversarial pattern, or business-value range.
 
-![Synthetic two-dimensional embedding map separating evaluated support, known hard cases, and out-of-distribution cases outside a support boundary.](assets/images/model-routing-is-capital-allocation/figure-11.png "Figure 11. Distance from evaluated support activates conservative routing, extra verification, or abstention instead of cheapest-route confidence. AI-assisted visualization; synthetic projection; not production embedding analysis.")
+![Synthetic two-dimensional embedding map separating evaluated support, known hard cases, and out-of-distribution cases outside a support boundary.](../../../assets/images/model-routing-is-capital-allocation/figure-11.png "Figure 11. Distance from evaluated support activates conservative routing, extra verification, or abstention instead of cheapest-route confidence. AI-assisted visualization; synthetic projection; not production embedding analysis.")
 
 No single distance threshold proves semantic novelty. Combine multiple signals: embedding distance, density, classifier uncertainty, schema mismatch, unseen category, evidence missingness, disagreement among routers, high entropy, and explicit policy novelty. Evaluate false-positive and false-negative costs.
 
@@ -225,7 +225,7 @@ OOD behavior should be declared per action class: abstain, use a conservative pr
 
 Equal verification sampling is simple but inefficient. Model confidence is also insufficient: high confidence can be miscalibrated, and low confidence on a harmless action may have little business consequence. Allocate assurance capacity by expected marginal loss reduction and policy duty.
 
-![Stacked horizontal bars allocating a synthetic 100-unit verification budget across six action cohorts and deterministic, model, and human assurance modes.](assets/images/model-routing-is-capital-allocation/figure-14.png "Figure 14. The corrected synthetic allocation sums to 100 units and concentrates human judgment on higher-impact cohorts while using deterministic checks broadly. AI-assisted visualization; synthetic budget; not production data.")
+![Stacked horizontal bars allocating a synthetic 100-unit verification budget across six action cohorts and deterministic, model, and human assurance modes.](../../../assets/images/model-routing-is-capital-allocation/figure-14.png "Figure 14. The corrected synthetic allocation sums to 100 units and concentrates human judgment on higher-impact cohorts while using deterministic checks broadly. AI-assisted visualization; synthetic budget; not production data.")
 
 For verification mode `v`, action cohort `k`, and route `r`:
 
@@ -248,7 +248,7 @@ The following sections retain the quantitative and systems detail for readers im
 
 Historical logs reveal outcomes for the route that was chosen. They usually do not reveal what every other model and verification bundle would have produced. Training or evaluating only on chosen-route outcomes creates selection bias: the old policy sent particular cases to particular models.
 
-![Counterfactual evaluation architecture joining logged decisions, deterministic replay, inverse-propensity or doubly robust estimation, shadow execution, cohort metrics, and promotion gates.](assets/images/model-routing-is-capital-allocation/figure-16.png "Figure 16. New routing policy value requires candidate coverage beyond the historical chosen route and must pass cohort, risk, latency, and budget gates. AI-assisted design visualization; reference evaluation architecture; not production data.")
+![Counterfactual evaluation architecture joining logged decisions, deterministic replay, inverse-propensity or doubly robust estimation, shadow execution, cohort metrics, and promotion gates.](../../../assets/images/model-routing-is-capital-allocation/figure-16.png "Figure 16. New routing policy value requires candidate coverage beyond the historical chosen route and must pass cohort, risk, latency, and budget gates. AI-assisted design visualization; reference evaluation architecture; not production data.")
 
 Safe evidence options include:
 

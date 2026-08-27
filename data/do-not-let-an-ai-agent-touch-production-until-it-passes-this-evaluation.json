@@ -4,74 +4,86 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "A collections agent scores 94% on a curated conversation set. It summarizes balances correctly, chooses reasonable language, and calls the expected tool in the demo. The launch deck calls it “production ready.” In the first realistic rehearsal, the account ledger and CRM disagree, a promise-to-pay record is stale, the policy version changes during the conversation, the payment-plan API times out after accepting a request, and an attachment contains instructions designed to redirect the workflow. The agent retries the accepted request with a new idempotency key, offers a term outside policy, and marks the case resolved before the system of record confirms the plan. None of those failures were possible in the benchmark.",
-      "text": "A collections agent scores 94% on a curated conversation set. It summarizes balances correctly, chooses reasonable language, and calls the expected tool in the demo. The launch deck calls it “production ready.” In the first realistic rehearsal, the account ledger and CRM disagree, a promise-to-pay record is stale, the policy version changes during the conversation, the payment-plan API times out after accepting a request, and an attachment contains instructions designed to redirect the workflow. The agent retries the accepted request with a new idempotency key, offers a term outside policy, and marks the case resolved before the system of record confirms the plan. None of those failures were possible in the benchmark."
+      "html": "A collections agent scores 94% on a curated conversation set. In a realistic rehearsal, the ledger and CRM disagree, a promise-to-pay is stale, policy changes mid-conversation, the payment API times out after accepting a request and an attachment tries to redirect the workflow. The agent retries with a new idempotency key, offers an out-of-policy term and closes the case before the system of record confirms the plan. None of those failures existed in the benchmark.",
+      "text": "A collections agent scores 94% on a curated conversation set. In a realistic rehearsal, the ledger and CRM disagree, a promise-to-pay is stale, policy changes mid-conversation, the payment API times out after accepting a request and an attachment tries to redirect the workflow. The agent retries with a new idempotency key, offers an out-of-policy term and closes the case before the system of record confirms the plan. None of those failures existed in the benchmark."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "This story was written with AI writing and visualization assistance. The company, agent, workflow, datasets, sample sizes, thresholds, test results, confidence intervals, coverage ratings, drift signals, canary stages, service objectives, costs, and chart data are synthetic; the architecture, schemas, formulas, tests, and operating model are reference designs rather than claims about a deployed system. Primary sources are linked near the relevant concepts, and every production claim must be validated on the target action distribution, tool contracts, policies, infrastructure, users, and business outcomes.",
-      "text": "This story was written with AI writing and visualization assistance. The company, agent, workflow, datasets, sample sizes, thresholds, test results, confidence intervals, coverage ratings, drift signals, canary stages, service objectives, costs, and chart data are synthetic; the architecture, schemas, formulas, tests, and operating model are reference designs rather than claims about a deployed system. Primary sources are linked near the relevant concepts, and every production claim must be validated on the target action distribution, tool contracts, policies, infrastructure, users, and business outcomes."
+      "html": "This story was written with AI writing and visualization assistance. All datasets, thresholds, sample sizes, results, coverage ratings and canary stages are synthetic reference scenarios.",
+      "text": "This story was written with AI writing and visualization assistance. All datasets, thresholds, sample sizes, results, coverage ratings and canary stages are synthetic reference scenarios."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Benchmark accuracy is valuable evidence. It is not a deployment decision. An agent in production is a versioned system containing a model or models, instructions, retrieval, memory, tool adapters, identity, policy, scheduler, retry logic, verifiers, human interfaces, runtime, network, and rollback path. It acts through trajectories: later decisions depend on earlier observations and effects. The evaluation unit must therefore be the complete deployable agent bundle inside a declared authority envelope.",
-      "text": "Benchmark accuracy is valuable evidence. It is not a deployment decision. An agent in production is a versioned system containing a model or models, instructions, retrieval, memory, tool adapters, identity, policy, scheduler, retry logic, verifiers, human interfaces, runtime, network, and rollback path. It acts through trajectories: later decisions depend on earlier observations and effects. The evaluation unit must therefore be the complete deployable agent bundle inside a declared authority envelope."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Production readiness is not a universal property. It is a scoped claim: this exact artifact may perform these actions, for these populations and resources, through these tools and policies, up to these value and volume ceilings, under these operating conditions, for this validity period, with these monitors, human responsibilities, and rollback controls. Change the artifact or envelope materially and the evidence must be reconsidered.",
-      "text": "Production readiness is not a universal property. It is a scoped claim: this exact artifact may perform these actions, for these populations and resources, through these tools and policies, up to these value and volume ceilings, under these operating conditions, for this validity period, with these monitors, human responsibilities, and rollback controls. Change the artifact or envelope materially and the evidence must be reconsidered."
-    },
-    {
-      "type": "html",
-      "tag": "blockquote",
-      "html": "Do not ask whether the agent passed “the eval.” Ask which production claim each piece of evidence supports—and what authority that claim justifies.",
-      "text": "Do not ask whether the agent passed “the eval.” Ask which production claim each piece of evidence supports—and what authority that claim justifies."
+      "html": "Benchmark accuracy is evidence, not production authority. The evaluation unit is the complete deployable bundle—model, prompts, retrieval, memory, tools, identity, policy, retries, verifiers, runtime and rollback—inside a declared authority envelope. A release should pass only when versioned evidence supports the exact actions, populations, tools, value limits and failure conditions the agent will encounter, and when the control plane can enforce that bounded contract.",
+      "text": "Benchmark accuracy is evidence, not production authority. The evaluation unit is the complete deployable bundle—model, prompts, retrieval, memory, tools, identity, policy, retries, verifiers, runtime and rollback—inside a declared authority envelope. A release should pass only when versioned evidence supports the exact actions, populations, tools, value limits and failure conditions the agent will encounter, and when the control plane can enforce that bounded contract."
     },
     {
       "type": "figure",
-      "src": "assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-01.png",
-      "alt": "Comparison across evaluated unit, inputs, environment, output, failures, policy, statistics, and decision between a benchmark score and production readiness.",
-      "caption": "Figure 1. A benchmark supports bounded component evidence; production readiness requires a versioned system assurance case and explicit authority contract. AI-assisted design visualization; reference architecture; not production data."
+      "src": "assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-02.png",
+      "alt": "Reference architecture connecting agent artifact, deployment contract, scenario registry, isolated harness, evidence, promotion, attestations, production monitoring, and independent storage.",
+      "caption": "Figure 2. A governed evidence plane turns versioned system artifacts and representative scenarios into reproducible runs, claims, gates, and signed promotion decisions. AI-assisted design visualization; reference architecture; not production data."
     },
     {
       "type": "html",
       "tag": "h2",
-      "html": "Technical summary",
-      "text": "Technical summary"
+      "html": "What this changes in production",
+      "text": "What this changes in production"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Begin with a deployment contract that enumerates action types, subjects, resources, data classes, tools, effect value, reversibility, volume, latency, jurisdictions, human roles, and prohibited behavior. Hash the full deployable artifact: model and deployment, prompts and policies, code, dependencies, tool contracts, memory schema, retrieval configuration, evaluator versions, and infrastructure configuration. The promotion decision binds to those digests.",
-      "text": "Begin with a deployment contract that enumerates action types, subjects, resources, data classes, tools, effect value, reversibility, volume, latency, jurisdictions, human roles, and prohibited behavior. Hash the full deployable artifact: model and deployment, prompts and policies, code, dependencies, tool contracts, memory schema, retrieval configuration, evaluator versions, and infrastructure configuration. The promotion decision binds to those digests."
+      "html": "<strong>•</strong> Replace a universal “production ready” label with a scoped deployment contract.<br><strong>•</strong> Bind evaluation evidence to the exact artifact, environment and tool contracts.<br><strong>•</strong> Evaluate stateful trajectories and business effects, not only final responses.<br><strong>•</strong> Expand authority through shadow and multidimensional canaries.<br><strong>•</strong> Expire, narrow or revoke authority when the validated envelope changes.",
+      "text": "• Replace a universal “production ready” label with a scoped deployment contract.\n• Bind evaluation evidence to the exact artifact, environment and tool contracts.\n• Evaluate stateful trajectories and business effects, not only final responses.\n• Expand authority through shadow and multidimensional canaries.\n• Expire, narrow or revoke authority when the validated envelope changes."
     },
     {
       "type": "html",
-      "tag": "p",
-      "html": "Create an assurance graph whose root claim is <strong>safe and effective bounded production</strong>. Decompose it into task effectiveness, policy compliance, tool safety, resilience, recoverability, operability, human-impact, and business-outcome subclaims. Each claim contains scope, metric, threshold, cohort, environment, uncertainty, evidence references, limitations, owner, and expiry. Critical claims use AND semantics: strong average performance cannot offset a prohibited effect or missing rollback proof.",
-      "text": "Create an assurance graph whose root claim is safe and effective bounded production. Decompose it into task effectiveness, policy compliance, tool safety, resilience, recoverability, operability, human-impact, and business-outcome subclaims. Each claim contains scope, metric, threshold, cohort, environment, uncertainty, evidence references, limitations, owner, and expiry. Critical claims use AND semantics: strong average performance cannot offset a prohibited effect or missing rollback proof."
+      "tag": "h2",
+      "html": "Decision table",
+      "text": "Decision table"
     },
     {
-      "type": "html",
-      "tag": "p",
-      "html": "Build a stateful evaluation harness. Every executable scenario defines initial world state, inputs, policy version, artifact, permitted authority, tool simulation, injected faults, stop rules, postconditions, invariants, and evidence. Cover business tasks, data states, policy boundaries, tools, failures, users, and adversarial conditions with risk-based combinations. Tool simulators reproduce permissions, resource versions, idempotency, asynchronous jobs, partial commits, latency, and receipts. Fault controllers prove activation. Adversarial tests run in isolated worlds and convert unique failures into versioned regressions.",
-      "text": "Build a stateful evaluation harness. Every executable scenario defines initial world state, inputs, policy version, artifact, permitted authority, tool simulation, injected faults, stop rules, postconditions, invariants, and evidence. Cover business tasks, data states, policy boundaries, tools, failures, users, and adversarial conditions with risk-based combinations. Tool simulators reproduce permissions, resource versions, idempotency, asynchronous jobs, partial commits, latency, and receipts. Fault controllers prove activation. Adversarial tests run in isolated worlds and convert unique failures into versioned regressions."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Measure component, workflow, policy, system, human, and business outcomes separately. Report cohort denominators, label quality, confidence intervals, practical differences, and rare-event limitations. Shadow mode gives candidates representative envelopes without external effect authority. Canaries then expand independently across population, action scope, value, tools, volume, duration, and reversibility. Every stage has a control-plane-enforced ceiling and automatic rollback.",
-      "text": "Measure component, workflow, policy, system, human, and business outcomes separately. Report cohort denominators, label quality, confidence intervals, practical differences, and rare-event limitations. Shadow mode gives candidates representative envelopes without external effect authority. Canaries then expand independently across population, action scope, value, tools, volume, duration, and reversibility. Every stage has a control-plane-enforced ceiling and automatic rollback."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Promotion produces a signed evaluation and authority attestation—not a mutable spreadsheet approval. Production monitoring detects input, outcome, calibration, policy, tool, trajectory, cost, latency, and incident drift. Evidence expires after material artifact, policy, environment, or population changes. Continuous evaluation renews, narrows, or revokes authority based on current evidence.",
-      "text": "Promotion produces a signed evaluation and authority attestation—not a mutable spreadsheet approval. Production monitoring detects input, outcome, calibration, policy, tool, trajectory, cost, latency, and incident drift. Evidence expires after material artifact, policy, environment, or population changes. Continuous evaluation renews, narrows, or revokes authority based on current evidence."
+      "type": "table",
+      "headers": [
+        "Evidence state",
+        "Release decision",
+        "Authority",
+        "Required next step"
+      ],
+      "rows": [
+        [
+          "Missing critical scenario or rollback proof",
+          "Block",
+          "None",
+          "Add executable evidence"
+        ],
+        [
+          "Core claims pass, representative shadow incomplete",
+          "Shadow only",
+          "No external effects",
+          "Collect cohort evidence"
+        ],
+        [
+          "Shadow passes, rare-event uncertainty remains",
+          "Bounded canary",
+          "Narrow actions and value",
+          "Monitor and accumulate exposure"
+        ],
+        [
+          "Claims, controls and operations remain current",
+          "Promote within contract",
+          "Explicit envelope only",
+          "Continuous evaluation"
+        ],
+        [
+          "Material artifact, policy or population change",
+          "Expire or narrow",
+          "Reduced/revoked",
+          "Re-evaluate affected claims"
+        ]
+      ],
+      "text": "Evidence state | Release decision | Authority | Required next step\nMissing critical scenario or rollback proof | Block | None | Add executable evidence\nCore claims pass, representative shadow incomplete | Shadow only | No external effects | Collect cohort evidence\nShadow passes, rare-event uncertainty remains | Bounded canary | Narrow actions and value | Monitor and accumulate exposure\nClaims, controls and operations remain current | Promote within contract | Explicit envelope only | Continuous evaluation\nMaterial artifact, policy or population change | Expire or narrow | Reduced/revoked | Re-evaluate affected claims"
     },
     {
       "type": "html",
@@ -129,12 +141,6 @@
       "text": "Evaluation requires separation of duties. The development pipeline produces an agent artifact. A scenario registry supplies versioned test cases and risk metadata. An isolated harness runs the artifact against controlled world state and tool contracts. An evidence service records manifests, trajectories, state diffs, faults, labels, metrics, and uncertainty. A release policy makes the promotion decision. Production telemetry returns outcomes and drift to the evidence plane."
     },
     {
-      "type": "figure",
-      "src": "assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-02.png",
-      "alt": "Reference architecture connecting agent artifact, deployment contract, scenario registry, isolated harness, evidence, promotion, attestations, production monitoring, and independent storage.",
-      "caption": "Figure 2. A governed evidence plane turns versioned system artifacts and representative scenarios into reproducible runs, claims, gates, and signed promotion decisions. AI-assisted design visualization; reference architecture; not production data."
-    },
-    {
       "type": "html",
       "tag": "p",
       "html": "Evaluation infrastructure is production infrastructure. The harness must control time, seeds, evidence snapshots, tools, network, faults, identity, and side effects. The runner should be unable to alter the promotion threshold or delete failed results. The promoter should not be able to replace the tested artifact. The production deployer should verify that artifact and attestation match before granting authority.",
@@ -151,48 +157,6 @@
       "tag": "p",
       "html": "In August 2026, NIST announced the <strong>initial public draft</strong> of its <a href=\"https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems\">TEVV-Athlon framework</a>, describing an adaptable approach intended to cover systems including agentic AI. It is a draft open for comment at the time of this story, not a final standard. It reinforces the need to make the evaluation context, system, methods, evidence, and decision logic explicit.",
       "text": "In August 2026, NIST announced the initial public draft of its TEVV-Athlon framework, describing an adaptable approach intended to cover systems including agentic AI. It is a draft open for comment at the time of this story, not a final standard. It reinforces the need to make the evaluation context, system, methods, evidence, and decision logic explicit."
-    },
-    {
-      "type": "html",
-      "tag": "h3",
-      "html": "Govern evaluation data as production evidence",
-      "text": "Govern evaluation data as production evidence"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Evaluation data is not a bag of prompts. It may contain customer records, disputes, communications, financial attributes, policy decisions, human judgments, incident traces, adversarial payloads, and confidential system behavior. Build a data manifest for every set: source, purpose, collection basis, consent or contractual basis where relevant, data classes, population, time range, transformations, sampling, exclusions, retention, access, residency, known bias, and permitted downstream uses.",
-      "text": "Evaluation data is not a bag of prompts. It may contain customer records, disputes, communications, financial attributes, policy decisions, human judgments, incident traces, adversarial payloads, and confidential system behavior. Build a data manifest for every set: source, purpose, collection basis, consent or contractual basis where relevant, data classes, population, time range, transformations, sampling, exclusions, retention, access, residency, known bias, and permitted downstream uses."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Separate raw source, sanitized case, executable world fixture, run output, label, and aggregate metric. Give each an immutable version and lineage edge. If a customer record is transformed into a synthetic case, record what semantics were preserved and what risk was removed. “De-identified” should not be a casual label; the access and reuse policy should reflect realistic re-identification and sensitive-attribute risk.",
-      "text": "Separate raw source, sanitized case, executable world fixture, run output, label, and aggregate metric. Give each an immutable version and lineage edge. If a customer record is transformed into a synthetic case, record what semantics were preserved and what risk was removed. “De-identified” should not be a casual label; the access and reuse policy should reflect realistic re-identification and sensitive-attribute risk."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Prevent leakage across evaluation boundaries. A case used to tune prompts, routing, or tool logic is development data even if it was originally called test data. Move it to the regression set and evaluate the new release on untouched families or time periods. Record every artifact version that consumed a case for training, retrieval, few-shot examples, debugging, or human-guided optimization. When the full model provider training corpus is unknown, state that limitation rather than claiming contamination-free measurement.",
-      "text": "Prevent leakage across evaluation boundaries. A case used to tune prompts, routing, or tool logic is development data even if it was originally called test data. Move it to the regression set and evaluate the new release on untouched families or time periods. Record every artifact version that consumed a case for training, retrieval, few-shot examples, debugging, or human-guided optimization. When the full model provider training corpus is unknown, state that limitation rather than claiming contamination-free measurement."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Labels need provenance too. Preserve label instructions, evidence shown, evaluator role and qualification, blind or unblinded status, time, confidence, disagreements, adjudication, and later appeal. A collections policy expert, customer-operations reviewer, security analyst, and affected customer answer different questions. Do not collapse their judgments into one “gold” label without a resolution rule.",
-      "text": "Labels need provenance too. Preserve label instructions, evidence shown, evaluator role and qualification, blind or unblinded status, time, confidence, disagreements, adjudication, and later appeal. A collections policy expert, customer-operations reviewer, security analyst, and affected customer answer different questions. Do not collapse their judgments into one “gold” label without a resolution rule."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Evaluate subgroup evidence where the contract and risk require it, but distinguish decision features from measurement attributes. Some sensitive attributes may be necessary to detect unequal failure and forbidden to drive the agent's action. Apply purpose limitation and access controls. Small subgroups require privacy protection and honest uncertainty; suppressing every result can also hide harm, so the governance design needs an escalation path for protected analysis.",
-      "text": "Evaluate subgroup evidence where the contract and risk require it, but distinguish decision features from measurement attributes. Some sensitive attributes may be necessary to detect unequal failure and forbidden to drive the agent's action. Apply purpose limitation and access controls. Small subgroups require privacy protection and honest uncertainty; suppressing every result can also hide harm, so the governance design needs an escalation path for protected analysis."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Finally, freeze the evaluation manifest at promotion. The result must identify the exact case versions, source snapshot, exclusions, label state, evaluator versions, and metric code. Later label corrections append a new evidence version and can revoke or supersede the decision. Rewriting the original run destroys the audit trail.",
-      "text": "Finally, freeze the evaluation manifest at promotion. The result must identify the exact case versions, source snapshot, exclusions, label state, evaluator versions, and metric code. Later label corrections append a new evidence version and can revoke or supersede the decision. Rewriting the original run destroys the audit trail."
     },
     {
       "type": "html",
@@ -415,61 +379,6 @@
     },
     {
       "type": "html",
-      "tag": "h3",
-      "html": "Diagnose the full trajectory",
-      "text": "Diagnose the full trajectory"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Two agents can reach the same final answer through very different risk paths. One reads the correct account, checks current policy, proposes a bounded plan, obtains approval, executes once, and verifies the postcondition. Another queries the wrong tenant, retries a timeout, receives a gateway denial, guesses a result, and is rescued by a human. A final-answer metric may label both successful.",
-      "text": "Two agents can reach the same final answer through very different risk paths. One reads the correct account, checks current policy, proposes a bounded plan, obtains approval, executes once, and verifies the postcondition. Another queries the wrong tenant, retries a timeout, receives a gateway denial, guesses a result, and is rescued by a human. A final-answer metric may label both successful."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Represent each run as a typed event sequence:",
-      "text": "Represent each run as a typed event sequence:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "observation → belief update → proposal → authority decision\n→ tool request → tool acknowledgement → state observation\n→ verification → terminal disposition",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The system need not expose hidden chain-of-thought. Evaluate observable decisions, evidence references, structured proposals, policy outcomes, tool arguments, state transitions, retries, and postconditions. Hidden reasoning text is neither necessary nor a reliable control artifact.",
-      "text": "The system need not expose hidden chain-of-thought. Evaluate observable decisions, evidence references, structured proposals, policy outcomes, tool arguments, state transitions, retries, and postconditions. Hidden reasoning text is neither necessary nor a reliable control artifact."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Define trajectory metrics for unnecessary steps, unsupported evidence use, repeated queries, tool selection, authority-denial attempts, retry correlation, context growth, stale reads, idempotency preservation, recovery branch, and time to stable postcondition. Use sequence alignment or state-machine conformance where useful, but permit multiple valid paths. Overly prescriptive golden traces can penalize better solutions and encourage brittle imitation.",
-      "text": "Define trajectory metrics for unnecessary steps, unsupported evidence use, repeated queries, tool selection, authority-denial attempts, retry correlation, context growth, stale reads, idempotency preservation, recovery branch, and time to stable postcondition. Use sequence alignment or state-machine conformance where useful, but permit multiple valid paths. Overly prescriptive golden traces can penalize better solutions and encourage brittle imitation."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Classify failure at the earliest causal boundary. A wrong business outcome can arise from missing source data, retrieval selection, model interpretation, policy rule, authority, tool contract, transport, idempotency, verification, human judgment, or stale label. Recording only “agent failed” prevents the organization from funding the right fix. Conversely, a model error blocked by a deterministic gateway establishes a model defect and a control success.",
-      "text": "Classify failure at the earliest causal boundary. A wrong business outcome can arise from missing source data, retrieval selection, model interpretation, policy rule, authority, tool contract, transport, idempotency, verification, human judgment, or stale label. Recording only “agent failed” prevents the organization from funding the right fix. Conversely, a model error blocked by a deterministic gateway establishes a model defect and a control success."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Analyze recovery as a first-class trajectory. After a timeout, does the agent query authoritative state or blindly replay? After a denied tool call, does it narrow the request, escalate, or attempt a bypass? After conflicting evidence, does it surface the conflict? After human rejection, does it respect the decision across subsequent turns? Production incidents often arise from the second action after an ordinary failure.",
-      "text": "Analyze recovery as a first-class trajectory. After a timeout, does the agent query authoritative state or blindly replay? After a denied tool call, does it narrow the request, escalate, or attempt a bypass? After conflicting evidence, does it surface the conflict? After human rejection, does it respect the decision across subsequent turns? Production incidents often arise from the second action after an ordinary failure."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Trajectory cost matters to the business case. Measure tokens, retrievals, tool calls, model calls, retries, verifier calls, human minutes, queue delay, and recovery per verified outcome. A candidate that improves final success by one point but doubles tool traffic and human review may be economically worse. A shorter trajectory can also be unsafe if it skips necessary checks; cost optimization remains subject to policy and assurance floors.",
-      "text": "Trajectory cost matters to the business case. Measure tokens, retrievals, tool calls, model calls, retries, verifier calls, human minutes, queue delay, and recovery per verified outcome. A candidate that improves final success by one point but doubles tool traffic and human review may be economically worse. A shorter trajectory can also be unsafe if it skips necessary checks; cost optimization remains subject to policy and assurance floors."
-    },
-    {
-      "type": "html",
       "tag": "h2",
       "html": "Inject failures throughout the system",
       "text": "Inject failures throughout the system"
@@ -653,6 +562,24 @@
       "tag": "p",
       "html": "Each stage needs minimum exposure and observation time. Labels for payment-plan quality may mature days later. A one-hour canary with no immediate technical error cannot establish the business outcome. Define leading indicators for rapid rollback and lagging outcomes for further expansion. Never treat absence of a fast alert as final success.",
       "text": "Each stage needs minimum exposure and observation time. Labels for payment-plan quality may mature days later. A one-hour canary with no immediate technical error cannot establish the business outcome. Define leading indicators for rapid rollback and lagging outcomes for further expansion. Never treat absence of a fast alert as final success."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Technical deep dive",
+      "text": "Technical deep dive"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The following sections retain the quantitative and systems detail for readers implementing the control plane.",
+      "text": "The following sections retain the quantitative and systems detail for readers implementing the control plane."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-01.png",
+      "alt": "Comparison across evaluated unit, inputs, environment, output, failures, policy, statistics, and decision between a benchmark score and production readiness.",
+      "caption": "Figure 1. A benchmark supports bounded component evidence; production readiness requires a versioned system assurance case and explicit authority contract. AI-assisted design visualization; reference architecture; not production data."
     },
     {
       "type": "html",
@@ -869,55 +796,6 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Write the business case for evaluation",
-      "text": "Write the business case for evaluation"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Evaluation expenditure should follow the value and risk of production authority. Start with the workflow baseline: action volume, current human cost, service level, success, error and remedy, customer impact, compliance duty, incident exposure, and constraint. Then estimate how the agent changes completion, quality, time, cost, and risk under the bounded contract.",
-      "text": "Evaluation expenditure should follow the value and risk of production authority. Start with the workflow baseline: action volume, current human cost, service level, success, error and remedy, customer impact, compliance duty, incident exposure, and constraint. Then estimate how the agent changes completion, quality, time, cost, and risk under the bounded contract."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Evaluation creates value through four channels. It prevents harmful or ineffective launches. It accelerates safe launches by making evidence reusable. It reduces incident and rollback time through reproducible cases and artifact binding. It supports greater authority when controls and outcomes are proven. These benefits should be modeled without treating every prevented theoretical harm as cash savings.",
-      "text": "Evaluation creates value through four channels. It prevents harmful or ineffective launches. It accelerates safe launches by making evidence reusable. It reduces incident and rollback time through reproducible cases and artifact binding. It supports greater authority when controls and outcomes are proven. These benefits should be modeled without treating every prevented theoretical harm as cash savings."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Prioritize the next evaluation unit by expected decision value:",
-      "text": "Prioritize the next evaluation unit by expected decision value:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "EVSI(test) ≈ P(test changes release decision)\n             × value of better decision\n             − test cost\n             − delay cost",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<code>EVSI</code> is expected value of sample information. The calculation can be qualitative or scenario-based when data is sparse. It helps avoid two extremes: running enormous easy suites that cannot change the decision, or demanding perfect evidence for an authority the product does not need.",
-      "text": "EVSI is expected value of sample information. The calculation can be qualitative or scenario-based when data is sparse. It helps avoid two extremes: running enormous easy suites that cannot change the decision, or demanding perfect evidence for an authority the product does not need."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A missing critical scenario may have high decision value because failure would block an action. More examples in a well-measured low-impact cohort may have low value. A tool-equivalence probe can unlock many future releases. A business-outcome label study can reveal that a technically successful workflow does not improve collections. Make the question and possible decision explicit before funding the run.",
-      "text": "A missing critical scenario may have high decision value because failure would block an action. More examples in a well-measured low-impact cohort may have low value. A tool-equivalence probe can unlock many future releases. A business-outcome label study can reveal that a technically successful workflow does not improve collections. Make the question and possible decision explicit before funding the run."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Separate cashable savings, released capacity, avoided risk, and enabled revenue. Include evaluator labor, domain adjudication, simulator maintenance, inference and tool cost, shadow infrastructure, test data, privacy controls, red-team work, canary monitoring, delay, and opportunity cost. Treat continuous renewal as run cost, not one-time project cost.",
-      "text": "Separate cashable savings, released capacity, avoided risk, and enabled revenue. Include evaluator labor, domain adjudication, simulator maintenance, inference and tool cost, shadow infrastructure, test data, privacy controls, red-team work, canary monitoring, delay, and opportunity cost. Treat continuous renewal as run cost, not one-time project cost."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
       "html": "Roll out evaluation maturity with authority",
       "text": "Roll out evaluation maturity with authority"
     },
@@ -978,116 +856,38 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Failure modes and limitations",
-      "text": "Failure modes and limitations"
+      "html": "Production implementation checklist",
+      "text": "Production implementation checklist"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "<strong>The test distribution is curated for success.</strong> Production-derived sampling, temporal holdouts, hidden sets, incident regressions, and independent challenge reduce selection bias. Publish exclusions and uncovered production share.",
-      "text": "The test distribution is curated for success. Production-derived sampling, temporal holdouts, hidden sets, incident regressions, and independent challenge reduce selection bias. Publish exclusions and uncovered production share."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The oracle is a model with the same blind spot.</strong> Use deterministic invariants, domain labels, system-of-record postconditions, customer or human outcomes, and evaluator calibration. A model judge can assist but not universally ground truth.",
-      "text": "The oracle is a model with the same blind spot. Use deterministic invariants, domain labels, system-of-record postconditions, customer or human outcomes, and evaluator calibration. A model judge can assist but not universally ground truth."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The simulator is too clean.</strong> Add state, asynchronous semantics, partial commits, stale reads, contract probes, and sandbox comparison. Preserve differences as limitations.",
-      "text": "The simulator is too clean. Add state, asynchronous semantics, partial commits, stale reads, contract probes, and sandbox comparison. Preserve differences as limitations."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Shadow traffic leaks data.</strong> Enforce purpose, minimization, provider and region eligibility, access control, retention, and audit. Shadow is still data processing.",
-      "text": "Shadow traffic leaks data. Enforce purpose, minimization, provider and region eligibility, access control, retention, and audit. Shadow is still data processing."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The canary is bounded only by convention.</strong> Put value, rate, tool, population, resource, lease, and approval ceilings in an external gateway. Test bypass and rollback.",
-      "text": "The canary is bounded only by convention. Put value, rate, tool, population, resource, lease, and approval ceilings in an external gateway. Test bypass and rollback."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Pass rates hide severity.</strong> Separate critical prohibited effects, high-impact failures, recovery failures, and low-impact quality errors. One weighted score should not make categorical controls tradable.",
-      "text": "Pass rates hide severity. Separate critical prohibited effects, high-impact failures, recovery failures, and low-impact quality errors. One weighted score should not make categorical controls tradable."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Repeated testing overfits the gate.</strong> Hold out families, rotate cases, measure production drift, retain incident-derived tests, and review whether teams are optimizing proxy metrics instead of business outcomes.",
-      "text": "Repeated testing overfits the gate. Hold out families, rotate cases, measure production drift, retain incident-derived tests, and review whether teams are optimizing proxy metrics instead of business outcomes."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Confidence calculations assume independence.</strong> Account for customer, template, reviewer, time, and episode clusters. Report assumptions and sensitivity. More duplicate cases do not eliminate uncertainty.",
-      "text": "Confidence calculations assume independence. Account for customer, template, reviewer, time, and episode clusters. Report assumptions and sensitivity. More duplicate cases do not eliminate uncertainty."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Evidence becomes stale after a hidden provider change.</strong> Bind to the finest observable model and deployment version, run continuous sentinels, monitor behavior, and constrain authority if version identity is insufficient.",
-      "text": "Evidence becomes stale after a hidden provider change. Bind to the finest observable model and deployment version, run continuous sentinels, monitor behavior, and constrain authority if version identity is insufficient."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>A green evaluation platform becomes the new rubber stamp.</strong> Separate development, evaluation, risk challenge, promotion, and deployment roles. Review claim quality and post-launch prediction error, not merely workflow completion.",
-      "text": "A green evaluation platform becomes the new rubber stamp. Separate development, evaluation, risk challenge, promotion, and deployment roles. Review claim quality and post-launch prediction error, not merely workflow completion."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Business outcome attribution is weak.</strong> Use controlled comparisons where feasible, adjust for selection, state assumptions, and distinguish correlation from causation. Do not turn agent-influenced revenue into agent-created revenue.",
-      "text": "Business outcome attribution is weak. Use controlled comparisons where feasible, adjust for selection, state assumptions, and distinguish correlation from causation. Do not turn agent-influenced revenue into agent-created revenue."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>No finite test proves universal safety.</strong> Keep structural controls, bounded authority, monitoring, incident response, human appeal, containment, and recovery. Evaluation reduces and characterizes uncertainty; it does not abolish it.",
-      "text": "No finite test proves universal safety. Keep structural controls, bounded authority, monitoring, incident response, human appeal, containment, and recovery. Evaluation reduces and characterizes uncertainty; it does not abolish it."
+      "html": "<strong>•</strong> Define a policy-enforceable deployment contract and prohibited actions.<br><strong>•</strong> Hash the full artifact, policies, evaluators, tool contracts and environment.<br><strong>•</strong> Build a claim graph with owners, thresholds, evidence, limitations and expiry.<br><strong>•</strong> Create stateful scenarios with world state, faults, invariants and postconditions.<br><strong>•</strong> Simulate permissions, versions, idempotency, async jobs and partial commits.<br><strong>•</strong> Separate component, workflow, policy, reliability, human and business metrics.<br><strong>•</strong> Report cohort denominators, uncertainty and label provenance.<br><strong>•</strong> Run adversarial tests in isolation and convert failures into regressions.<br><strong>•</strong> Use shadow mode before external-effect authority.<br><strong>•</strong> Expand canaries by population, action, value, tool, volume, duration and reversibility.<br><strong>•</strong> Make promotion, rollback and evidence expiry machine-enforced.<br><strong>•</strong> Continuously monitor drift against the validated envelope.",
+      "text": "• Define a policy-enforceable deployment contract and prohibited actions.\n• Hash the full artifact, policies, evaluators, tool contracts and environment.\n• Build a claim graph with owners, thresholds, evidence, limitations and expiry.\n• Create stateful scenarios with world state, faults, invariants and postconditions.\n• Simulate permissions, versions, idempotency, async jobs and partial commits.\n• Separate component, workflow, policy, reliability, human and business metrics.\n• Report cohort denominators, uncertainty and label provenance.\n• Run adversarial tests in isolation and convert failures into regressions.\n• Use shadow mode before external-effect authority.\n• Expand canaries by population, action, value, tool, volume, duration and reversibility.\n• Make promotion, rollback and evidence expiry machine-enforced.\n• Continuously monitor drift against the validated envelope."
     },
     {
       "type": "html",
       "tag": "h2",
-      "html": "Production-readiness questions",
-      "text": "Production-readiness questions"
+      "html": "Continue the Production AI Control Plane series",
+      "text": "Continue the Production AI Control Plane series"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Before an agent touches production, answer:",
-      "text": "Before an agent touches production, answer:"
+      "html": "<strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/\">Your Multi-Agent System Is a Distributed System</a><br><strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/\">Your AI Agent Needs a Real Kill Switch</a><br><strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/\">Every AI Agent Action Needs a Receipt</a>",
+      "text": "• Your Multi-Agent System Is a Distributed System\n• Your AI Agent Needs a Real Kill Switch\n• Every AI Agent Action Needs a Receipt"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "<strong>•</strong> What exact artifact and environment were evaluated, and can deployment verify their digests?<br><strong>•</strong> What authority contract—population, actions, tools, resources, value, volume, duration, and reversibility—is being requested?<br><strong>•</strong> What claims must be true for that authority, and which are critical AND-gates?<br><strong>•</strong> Which evidence supports every claim, with what sample, oracle, uncertainty, limitation, and expiry?<br><strong>•</strong> What share of production traffic lies inside evaluated support?<br><strong>•</strong> Which critical scenario cells are empty, stale, simulated only, or weakly labeled?<br><strong>•</strong> Does each test define initial world state, permissions, faults, permitted effects, postconditions, invariants, and evidence?<br><strong>•</strong> Do tool simulators reproduce versions, idempotency, asynchronous jobs, partial commits, authoritative queries, and receipts?<br><strong>•</strong> Which faults were injected, and what proves they activated?<br><strong>•</strong> Which adversarial surfaces and abuse paths were tested, and did failures become regressions?<br><strong>•</strong> Is the candidate truly effectless in shadow mode?<br><strong>•</strong> Which canary ceilings are enforced outside the agent, and what automatically rolls back?<br><strong>•</strong> Are quality and safety results reported with cohort denominators, uncertainty, label delay, and practical consequence?<br><strong>•</strong> What does zero observed critical failure imply under the actual dependence and observability assumptions?<br><strong>•</strong> Which material changes invalidate the evidence or require targeted re-evaluation?<br><strong>•</strong> Who owns scenarios, oracles, risk floors, evaluation infrastructure, canary operations, business outcomes, and promotion?<br><strong>•</strong> Can an incident commander stop the agent and restore the last safe version without the candidate's cooperation?<br><strong>•</strong> What evidence will be collected after launch to confirm—or falsify—the original business case?",
-      "text": "• What exact artifact and environment were evaluated, and can deployment verify their digests?\n• What authority contract—population, actions, tools, resources, value, volume, duration, and reversibility—is being requested?\n• What claims must be true for that authority, and which are critical AND-gates?\n• Which evidence supports every claim, with what sample, oracle, uncertainty, limitation, and expiry?\n• What share of production traffic lies inside evaluated support?\n• Which critical scenario cells are empty, stale, simulated only, or weakly labeled?\n• Does each test define initial world state, permissions, faults, permitted effects, postconditions, invariants, and evidence?\n• Do tool simulators reproduce versions, idempotency, asynchronous jobs, partial commits, authoritative queries, and receipts?\n• Which faults were injected, and what proves they activated?\n• Which adversarial surfaces and abuse paths were tested, and did failures become regressions?\n• Is the candidate truly effectless in shadow mode?\n• Which canary ceilings are enforced outside the agent, and what automatically rolls back?\n• Are quality and safety results reported with cohort denominators, uncertainty, label delay, and practical consequence?\n• What does zero observed critical failure imply under the actual dependence and observability assumptions?\n• Which material changes invalidate the evidence or require targeted re-evaluation?\n• Who owns scenarios, oracles, risk floors, evaluation infrastructure, canary operations, business outcomes, and promotion?\n• Can an incident commander stop the agent and restore the last safe version without the candidate's cooperation?\n• What evidence will be collected after launch to confirm—or falsify—the original business case?"
+      "html": "<em>Part of the Production AI Control Plane series—practical architectures for agent identity, authorization, governance, observability and recovery.</em>",
+      "text": "Part of the Production AI Control Plane series—practical architectures for agent identity, authorization, governance, observability and recovery."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "If those questions cannot be answered, “production ready” is an aspiration attached to a model score.",
-      "text": "If those questions cannot be answered, “production ready” is an aspiration attached to a model score."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The release principle is:",
-      "text": "The release principle is:"
-    },
-    {
-      "type": "html",
-      "tag": "blockquote",
-      "html": "Bind every production authority to a versioned claim, representative evidence, explicit uncertainty, a control-plane ceiling, and a tested path back to safety.",
-      "text": "Bind every production authority to a versioned claim, representative evidence, explicit uncertainty, a control-plane ceiling, and a tested path back to safety."
+      "html": "<em>Follow Aditya Singh for production-grade enterprise AI architecture, governance and economics.</em>",
+      "text": "Follow Aditya Singh for production-grade enterprise AI architecture, governance and economics."
     }
   ],
   "canonical": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
@@ -1097,7 +897,7 @@
   "id": "042718815d13",
   "modifiedAt": "2026-08-23T16:00:00.000Z",
   "publishedAt": "2026-08-23T16:00:00.000Z",
-  "readTime": "33 min read",
+  "readTime": "24 min read",
   "slug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
   "sourceUrl": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
   "subtitle": "A deployment gate for scenario coverage, tool safety, shadow traffic, canaries, SLOs, red teams, and rollback.",
@@ -1109,5 +909,5 @@
     "AI governance"
   ],
   "title": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
-  "wordCount": 6423
+  "wordCount": 4630
 }

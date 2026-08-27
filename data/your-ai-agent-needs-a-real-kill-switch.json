@@ -4,68 +4,80 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "At 09:17, a revenue-operations agent begins changing discount terms, moving opportunity stages, drafting customer emails, and preparing exports across CRM, CPQ, messaging, and analytics systems. The actions do not match its normal account set. Security clicks <strong>Disable agent</strong> at 09:19. The dashboard turns green. One connected worker stops polling. Three workers remain alive: one is partitioned from the control plane, one has a cached vendor session, and one already placed asynchronous jobs on external queues. A price change commits at 09:21. Two emails leave at 09:23. At 09:28, the response team still cannot say which actions were rejected, accepted, committed, duplicated, or left ambiguous.",
-      "text": "At 09:17, a revenue-operations agent begins changing discount terms, moving opportunity stages, drafting customer emails, and preparing exports across CRM, CPQ, messaging, and analytics systems. The actions do not match its normal account set. Security clicks Disable agent at 09:19. The dashboard turns green. One connected worker stops polling. Three workers remain alive: one is partitioned from the control plane, one has a cached vendor session, and one already placed asynchronous jobs on external queues. A price change commits at 09:21. Two emails leave at 09:23. At 09:28, the response team still cannot say which actions were rejected, accepted, committed, duplicated, or left ambiguous."
+      "html": "At 09:19, security clicks <strong>Disable agent</strong>. The dashboard turns green. One worker stops polling, but another is partitioned from the control plane, a third still has a cached vendor session and asynchronous jobs are already waiting on external queues. A price change commits at 09:21. Two emails leave at 09:23. The response team still cannot classify what was rejected, accepted, committed, duplicated or left ambiguous.",
+      "text": "At 09:19, security clicks Disable agent. The dashboard turns green. One worker stops polling, but another is partitioned from the control plane, a third still has a cached vendor session and asynchronous jobs are already waiting on external queues. A price change commits at 09:21. Two emails leave at 09:23. The response team still cannot classify what was rejected, accepted, committed, duplicated or left ambiguous."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "This story was written with AI writing and visualization assistance. The company, incident, system names, action counts, durations, latency budgets, control ratings, exposure curves, service-level values, and chart data are synthetic; the architectures, schemas, algorithms, and operating procedures are reference designs, not claims about a deployed environment. Standards are linked to their primary sources, while every control and threshold must be validated against the target identity system, runtime, network, tool, data store, and incident process.",
-      "text": "This story was written with AI writing and visualization assistance. The company, incident, system names, action counts, durations, latency budgets, control ratings, exposure curves, service-level values, and chart data are synthetic; the architectures, schemas, algorithms, and operating procedures are reference designs, not claims about a deployed environment. Standards are linked to their primary sources, while every control and threshold must be validated against the target identity system, runtime, network, tool, data store, and incident process."
+      "html": "This story was written with AI writing and visualization assistance. The incident, action counts, latency budgets, exposure curves and control ratings are synthetic reference scenarios.",
+      "text": "This story was written with AI writing and visualization assistance. The incident, action counts, latency budgets, exposure curves and control ratings are synthetic reference scenarios."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "The problem is not the color of the button. The problem is that an agent's effective authority is distributed. It exists in access and refresh tokens, sessions, workload leases, queued messages, delegated child agents, database connections, browser cookies, API keys, tool-side jobs, network routes, and operations that have crossed an external effect boundary but have not returned a receipt. A central flag expresses intent. It does not necessarily remove any of those capabilities.",
-      "text": "The problem is not the color of the button. The problem is that an agent's effective authority is distributed. It exists in access and refresh tokens, sessions, workload leases, queued messages, delegated child agents, database connections, browser cookies, API keys, tool-side jobs, network routes, and operations that have crossed an external effect boundary but have not returned a receipt. A central flag expresses intent. It does not necessarily remove any of those capabilities."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A real kill switch must do six things: stop new authority, fence stale authority, remove reachability, classify in-flight work, reconcile uncertain effects, and control recovery. It must also prove when each material boundary complied. If the system cannot independently demonstrate that an obsolete worker is incapable of changing the business, it has a shutdown convention—not containment.",
-      "text": "A real kill switch must do six things: stop new authority, fence stale authority, remove reachability, classify in-flight work, reconcile uncertain effects, and control recovery. It must also prove when each material boundary complied. If the system cannot independently demonstrate that an obsolete worker is incapable of changing the business, it has a shutdown convention—not containment."
-    },
-    {
-      "type": "html",
-      "tag": "blockquote",
-      "html": "A kill switch is a distributed containment protocol with a business-reconciliation obligation.",
-      "text": "A kill switch is a distributed containment protocol with a business-reconciliation obligation."
+      "html": "An agent’s authority is distributed across tokens, sessions, workload leases, delegated children, network paths, tool-side jobs and in-flight operations. A central flag records intent; it does not remove those capabilities. A real kill switch is a containment protocol: advance a monotonic epoch, revoke the authority graph, fence stale workers at effect boundaries, remove reachability, classify in-flight work, reconcile uncertain effects and require fresh authorization for recovery. It must also produce independent proof that every material boundary complied.",
+      "text": "An agent’s authority is distributed across tokens, sessions, workload leases, delegated children, network paths, tool-side jobs and in-flight operations. A central flag records intent; it does not remove those capabilities. A real kill switch is a containment protocol: advance a monotonic epoch, revoke the authority graph, fence stale workers at effect boundaries, remove reachability, classify in-flight work, reconcile uncertain effects and require fresh authorization for recovery. It must also produce independent proof that every material boundary complied."
     },
     {
       "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-01.png",
-      "alt": "Comparison across control, authority, workers, network, tools, in-flight work, recovery, and proof between a dashboard toggle and real agent containment.",
-      "caption": "Figure 1. A UI state records intent; production containment revokes authority, fences stale workers, denies reachability, resolves effects, and produces evidence. AI-assisted design visualization; reference architecture; not production data."
+      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-02.png",
+      "alt": "Reference architecture connecting a signed containment coordinator to identity, scheduler, workload, network, tool, data, effect, evidence, and independent observation layers.",
+      "caption": "Figure 2. One containment epoch fans out across seven enforcement planes while an independent observer measures convergence and evidence gaps. AI-assisted design visualization; reference architecture; not production data."
     },
     {
       "type": "html",
       "tag": "h2",
-      "html": "Technical summary",
-      "text": "Technical summary"
+      "html": "What this changes in production",
+      "text": "What this changes in production"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "The decision unit is a <strong>containment scope</strong>, not a process. Scope may be one agent instance, principal, tenant, workflow, tool, action class, credential family, cluster, or global agent platform. An incident commander issues a signed command containing scope, a monotonically increasing containment epoch, reason, issuer, issue time, expiry, and evidence destination. Independent enforcement points in identity, scheduling, workload, network, tool, data, and effect layers update their accepted epoch and local deny state. Every effectful request presents a short-lived authority envelope with the relevant scope and epoch. A stale or missing epoch is rejected before the effect.",
-      "text": "The decision unit is a containment scope, not a process. Scope may be one agent instance, principal, tenant, workflow, tool, action class, credential family, cluster, or global agent platform. An incident commander issues a signed command containing scope, a monotonically increasing containment epoch, reason, issuer, issue time, expiry, and evidence destination. Independent enforcement points in identity, scheduling, workload, network, tool, data, and effect layers update their accepted epoch and local deny state. Every effectful request presents a short-lived authority envelope with the relevant scope and epoch. A stale or missing epoch is rejected before the effect."
+      "html": "<strong>•</strong> Define containment scope independently of process identity.<br><strong>•</strong> Propagate a signed containment epoch to every material enforcement point.<br><strong>•</strong> Reject stale authority at tool and data effect boundaries, even when a worker is disconnected.<br><strong>•</strong> Inventory actions by effect state, not only by running process.<br><strong>•</strong> Treat recovery as a new, evidence-bound authorization event.",
+      "text": "• Define containment scope independently of process identity.\n• Propagate a signed containment epoch to every material enforcement point.\n• Reject stale authority at tool and data effect boundaries, even when a worker is disconnected.\n• Inventory actions by effect state, not only by running process.\n• Treat recovery as a new, evidence-bound authorization event."
     },
     {
       "type": "html",
-      "tag": "p",
-      "html": "Token revocation is necessary but incomplete. Cached or self-contained access tokens may remain usable until resource servers learn of revocation or the token expires. Sessions, workload leases, derived tool tokens, and delegated agents require graph closure. Signed security events can distribute state changes, but receivers must authenticate, deduplicate, persist, enforce, acknowledge, and recover from missed delivery. Short authority lifetimes and deny-on-stale enforcement bound the exposure of disconnected workers.",
-      "text": "Token revocation is necessary but incomplete. Cached or self-contained access tokens may remain usable until resource servers learn of revocation or the token expires. Sessions, workload leases, derived tool tokens, and delegated agents require graph closure. Signed security events can distribute state changes, but receivers must authenticate, deduplicate, persist, enforce, acknowledge, and recover from missed delivery. Short authority lifetimes and deny-on-stale enforcement bound the exposure of disconnected workers."
+      "tag": "h2",
+      "html": "Decision table",
+      "text": "Decision table"
     },
     {
-      "type": "html",
-      "tag": "p",
-      "html": "Network quarantine independently removes new outbound paths and terminates dangerous established connections. Tool adapters implement effect-specific stops: deny new calls, cancel supported jobs, purge unclaimed queue entries, freeze target resources, revoke vendor sessions, or route everything to reconciliation. The workflow ledger distinguishes proposed, authorized, dispatched, accepted, committed, verified, cancelled, compensated, and ambiguous states. A timeout after acceptance must never trigger blind replay.",
-      "text": "Network quarantine independently removes new outbound paths and terminates dangerous established connections. Tool adapters implement effect-specific stops: deny new calls, cancel supported jobs, purge unclaimed queue entries, freeze target resources, revoke vendor sessions, or route everything to reconciliation. The workflow ledger distinguishes proposed, authorized, dispatched, accepted, committed, verified, cancelled, compensated, and ambiguous states. A timeout after acceptance must never trigger blind replay."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Recovery is a new authorization event, not reversal of the stop flag. It requires evidence that the cause is controlled, compromised state is replaced, ambiguous effects are resolved or frozen, boundaries are healthy, and residual risk is accepted. Fresh credentials and a higher recovery epoch enter shadow and bounded canary stages before broader authority returns. Service objectives cover trigger-to-proof stop time, stale-effect rejection, inventory completeness, ambiguity closure, evidence coverage, drill performance, and recovery-bypass attempts.",
-      "text": "Recovery is a new authorization event, not reversal of the stop flag. It requires evidence that the cause is controlled, compromised state is replaced, ambiguous effects are resolved or frozen, boundaries are healthy, and residual risk is accepted. Fresh credentials and a higher recovery epoch enter shadow and bounded canary stages before broader authority returns. Service objectives cover trigger-to-proof stop time, stale-effect rejection, inventory completeness, ambiguity closure, evidence coverage, drill performance, and recovery-bypass attempts."
+      "type": "table",
+      "headers": [
+        "In-flight state",
+        "Safe containment action",
+        "Retry allowed?",
+        "Required evidence"
+      ],
+      "rows": [
+        [
+          "Proposed or authorized",
+          "Revoke and discard",
+          "Only with new authority",
+          "Revocation receipt"
+        ],
+        [
+          "Dispatched, not accepted",
+          "Cancel or fence",
+          "After terminal proof",
+          "Queue/tool acknowledgement"
+        ],
+        [
+          "Accepted, outcome unknown",
+          "Reconcile authoritative state",
+          "No blind retry",
+          "Effect query and action ID"
+        ],
+        [
+          "Committed",
+          "Verify, compensate or freeze",
+          "Not as a duplicate action",
+          "Domain receipt and recovery decision"
+        ]
+      ],
+      "text": "In-flight state | Safe containment action | Retry allowed? | Required evidence\nProposed or authorized | Revoke and discard | Only with new authority | Revocation receipt\nDispatched, not accepted | Cancel or fence | After terminal proof | Queue/tool acknowledgement\nAccepted, outcome unknown | Reconcile authoritative state | No blind retry | Effect query and action ID\nCommitted | Verify, compensate or freeze | Not as a duplicate action | Domain receipt and recovery decision"
     },
     {
       "type": "html",
@@ -132,36 +144,6 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Start with the threat model",
-      "text": "Start with the threat model"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The design must survive more than obedient software. Relevant failure and attacker conditions include:",
-      "text": "The design must survive more than obedient software. Relevant failure and attacker conditions include:"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>•</strong> The agent runtime is compromised and ignores shutdown.<br><strong>•</strong> A worker is partitioned from the control plane but can still reach a tool.<br><strong>•</strong> A stolen token is replayed outside the managed workload.<br><strong>•</strong> A refresh token, browser session, or vendor-side credential outlives the primary token.<br><strong>•</strong> A child agent or asynchronous job holds delegated authority that is absent from the dashboard.<br><strong>•</strong> A queue redelivers an old message after restart.<br><strong>•</strong> A tool accepted an operation before containment but did not return its result.<br><strong>•</strong> The identity provider, event bus, network controller, or tool gateway is degraded during the incident.<br><strong>•</strong> An insider attempts to trigger containment without authorization or to restart before evidence is complete.<br><strong>•</strong> The kill switch itself becomes a denial-of-service target.",
-      "text": "• The agent runtime is compromised and ignores shutdown.\n• A worker is partitioned from the control plane but can still reach a tool.\n• A stolen token is replayed outside the managed workload.\n• A refresh token, browser session, or vendor-side credential outlives the primary token.\n• A child agent or asynchronous job holds delegated authority that is absent from the dashboard.\n• A queue redelivers an old message after restart.\n• A tool accepted an operation before containment but did not return its result.\n• The identity provider, event bus, network controller, or tool gateway is degraded during the incident.\n• An insider attempts to trigger containment without authorization or to restart before evidence is complete.\n• The kill switch itself becomes a denial-of-service target."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The safety property is not “all processes exit.” A compromised process may continue consuming CPU in quarantine. The safety property is that it cannot acquire new authority or cross a protected effect boundary. Process termination helps availability and forensics, but it is not the sole security control.",
-      "text": "The safety property is not “all processes exit.” A compromised process may continue consuming CPU in quarantine. The safety property is that it cannot acquire new authority or cross a protected effect boundary. Process termination helps availability and forensics, but it is not the sole security control."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Scope also matters. A global switch reduces coordination during severe compromise but creates a large availability impact. A narrow switch limits disruption but can miss shared credentials, sibling workers, or delegated jobs. The command should support multiple selectors—principal, tenant, workflow, tool binding, resource set, deployment, and global—and the authority graph should calculate the transitive closure implied by those selectors.",
-      "text": "Scope also matters. A global switch reduces coordination during severe compromise but creates a large availability impact. A narrow switch limits disruption but can miss shared credentials, sibling workers, or delegated jobs. The command should support multiple selectors—principal, tenant, workflow, tool binding, resource set, deployment, and global—and the authority graph should calculate the transitive closure implied by those selectors."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
       "html": "Build independent containment layers",
       "text": "Build independent containment layers"
     },
@@ -170,12 +152,6 @@
       "tag": "p",
       "html": "The coordinator is a policy and evidence component, not a magical central choke point. It authenticates emergency operators, applies dual-control rules when time permits, creates a signed containment command, advances the appropriate epoch, distributes the command, and tracks acknowledgements. Each enforcement plane can continue rejecting stale work even if the coordinator later becomes unavailable.",
       "text": "The coordinator is a policy and evidence component, not a magical central choke point. It authenticates emergency operators, applies dual-control rules when time permits, creates a signed containment command, advances the appropriate epoch, distributes the command, and tracks acknowledgements. Each enforcement plane can continue rejecting stale work even if the coordinator later becomes unavailable."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-02.png",
-      "alt": "Reference architecture connecting a signed containment coordinator to identity, scheduler, workload, network, tool, data, effect, evidence, and independent observation layers.",
-      "caption": "Figure 2. One containment epoch fans out across seven enforcement planes while an independent observer measures convergence and evidence gaps. AI-assisted design visualization; reference architecture; not production data."
     },
     {
       "type": "html",
@@ -254,98 +230,6 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Propagate security state as an event",
-      "text": "Propagate security state as an event"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<a href=\"https://www.rfc-editor.org/info/rfc8417/\">RFC 8417</a> defines the Security Event Token (SET), a JWT-based structure for statements about security-related state changes. <a href=\"https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html\">OpenID's Shared Signals Framework 1.0</a> profiles event streams between cooperating transmitters and receivers, and the <a href=\"https://openid.net/specs/openid-caep-1_0-final.html\">OpenID CAEP 1.0 final specification</a> defines continuous-access event types that receivers can use to attenuate access. The OpenID Foundation announced those specifications as final in September 2025. These standards provide interoperable signaling primitives; they do not supply the complete agent containment architecture in this story.",
-      "text": "RFC 8417 defines the Security Event Token (SET), a JWT-based structure for statements about security-related state changes. OpenID's Shared Signals Framework 1.0 profiles event streams between cooperating transmitters and receivers, and the OpenID CAEP 1.0 final specification defines continuous-access event types that receivers can use to attenuate access. The OpenID Foundation announced those specifications as final in September 2025. These standards provide interoperable signaling primitives; they do not supply the complete agent containment architecture in this story."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-04.png",
-      "alt": "Sequence diagram from incident command through event transmitter, identity, runtime, tool gateway, and containment observer.",
-      "caption": "Figure 4. Security event delivery becomes containment only after receivers authenticate, deduplicate, persist, enforce, acknowledge, and expose proof time. AI-assisted design visualization; reference sequence; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Treat message receipt and enforcement as different facts. A receiver acknowledgement should state command ID, local component identity and version, scope understood, epoch applied, control activated, enforcement time, residual work count, error code, and evidence digest. “HTTP 202 accepted” is not proof that stale tool calls are denied.",
-      "text": "Treat message receipt and enforcement as different facts. A receiver acknowledgement should state command ID, local component identity and version, scope understood, epoch applied, control activated, enforcement time, residual work count, error code, and evidence digest. “HTTP 202 accepted” is not proof that stale tool calls are denied."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Receivers validate issuer, signature, audience, subject identifiers, event type, issue time, event identifier, and supported scope. They reject a lower epoch even if the message arrives later. They deduplicate the same event without reverting state. Ordering across unrelated scopes need not be global, but ordering inside a protected scope must be monotonic and unambiguous.",
-      "text": "Receivers validate issuer, signature, audience, subject identifiers, event type, issue time, event identifier, and supported scope. They reject a lower epoch even if the message arrives later. They deduplicate the same event without reverting state. Ordering across unrelated scopes need not be global, but ordering inside a protected scope must be monotonic and unambiguous."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Push delivery lowers normal latency. A recovery poll or durable stream covers missed notifications. Short authority expiry bounds a receiver that is entirely disconnected. For high-impact actions, a receiver whose control-plane state is older than its maximum staleness should fail closed or restrict itself to a declared safe subset. Availability trade-offs must be owned; silently accepting stale authority is not a neutral default.",
-      "text": "Push delivery lowers normal latency. A recovery poll or durable stream covers missed notifications. Short authority expiry bounds a receiver that is entirely disconnected. For high-impact actions, a receiver whose control-plane state is older than its maximum staleness should fail closed or restrict itself to a declared safe subset. Availability trade-offs must be owned; silently accepting stale authority is not a neutral default."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Budget the time to stop",
-      "text": "Budget the time to stop"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A kill-switch API that responds in 200 milliseconds can coexist with ten minutes of effect exposure. Measure the critical path from trigger to proof. Detection and incident declaration, operator authentication, signing, event distribution, local policy update, connection termination, tool disablement, queue control, and independent verification each consume time.",
-      "text": "A kill-switch API that responds in 200 milliseconds can coexist with ten minutes of effect exposure. Measure the critical path from trigger to proof. Detection and incident declaration, operator authentication, signing, event distribution, local policy update, connection termination, tool disablement, queue control, and independent verification each consume time."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-05.png",
-      "alt": "Synthetic P99 latency waterfall decomposing detection, signing, event delivery, enforcement, and verification within a 90-second stop-time objective.",
-      "caption": "Figure 5. The synthetic 85-second budget shows why end-to-end stop time depends on the slowest material enforcement and proof path. AI-assisted visualization; synthetic values; not production performance."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "For layer <code>l</code>, record issue, receive, persist, enforce, and verify timestamps. The overall time is not necessarily their sum because layers operate in parallel:",
-      "text": "For layer l, record issue, receive, persist, enforce, and verify timestamps. The overall time is not necessarily their sum because layers operate in parallel:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "t_contained = max_l(t_verified,l)\n\nSTO = t_contained − t_credible_trigger",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The maximum should range only over material boundaries in the incident scope, but missing boundaries are failures—not zeros. Report P50, P95, P99, and worst observed drill values. Averages hide the exact partitions and downstream systems that determine blast radius.",
-      "text": "The maximum should range only over material boundaries in the incident scope, but missing boundaries are failures—not zeros. Report P50, P95, P99, and worst observed drill values. Averages hide the exact partitions and downstream systems that determine blast radius."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Offline authority sets the theoretical upper bound. Suppose a disconnected worker has a credential valid for <code>T_token</code>, an effect lease valid for <code>T_lease</code>, and a receiver that denies when containment state is older than <code>T_stale</code>. If no online epoch check exists, worst-case exposure is driven by the longest usable path, not the shortest advertised credential:",
-      "text": "Offline authority sets the theoretical upper bound. Suppose a disconnected worker has a credential valid for Ttoken, an effect lease valid for Tlease, and a receiver that denies when containment state is older than Tstale. If no online epoch check exists, worst-case exposure is driven by the longest usable path, not the shortest advertised credential:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "T_offline_exposure ≤ max(T_token, T_lease, T_session, T_connection)",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "If every effect gateway checks a locally updated monotonic epoch and enters deny-on-stale, exposure is instead bounded by event delivery, local update, connection handling, and the stale-state threshold. The architecture should document which bound actually applies to every tool.",
-      "text": "If every effect gateway checks a locally updated monotonic epoch and enters deny-on-stale, exposure is instead bounded by event delivery, local update, connection handling, and the stale-state threshold. The architecture should document which bound actually applies to every tool."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
       "html": "Fence stale workers with epochs",
       "text": "Fence stale workers with epochs"
     },
@@ -391,115 +275,6 @@
       "tag": "p",
       "html": "The check must occur at the boundary that owns the effect, not only in an SDK inside the potentially compromised agent. The reservation and allow decision should be atomic with idempotency registration where possible; otherwise two concurrent attempts can both pass before either records the action.",
       "text": "The check must occur at the boundary that owns the effect, not only in an SDK inside the potentially compromised agent. The reservation and allow decision should be atomic with idempotency registration where possible; otherwise two concurrent attempts can both pass before either records the action."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Let stale workers compute—but never effect",
-      "text": "Let stale workers compute—but never effect"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A worker can be isolated after compromise without immediately destroying volatile evidence. It may continue local inference, but it should not possess direct resource credentials or a network route around the gateway. Every protected mutation, external send, export, or tool invocation passes through an enforcement point that validates the complete authority envelope.",
-      "text": "A worker can be isolated after compromise without immediately destroying volatile evidence. It may continue local inference, but it should not possess direct resource credentials or a network route around the gateway. Every protected mutation, external send, export, or tool invocation passes through an enforcement point that validates the complete authority envelope."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-07.png",
-      "alt": "Request path from a partitioned stale worker through its epoch-41 authority envelope to an effect gateway that has advanced to epoch 42 and rejects the effect.",
-      "caption": "Figure 7. External effect gates, rather than cooperative worker behavior, prevent stale execution from changing business systems. AI-assisted design visualization; reference architecture; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The gateway logs a denial receipt containing request hash, action identity, principal, scope, presented epoch, current epoch, policy version, lease state, resource version, decision, reason, and timestamp. The rejected proposal may be quarantined for incident review. It should not automatically enter a retry loop: the same compromised planner can otherwise create a denial storm or exhaust evidence storage.",
-      "text": "The gateway logs a denial receipt containing request hash, action identity, principal, scope, presented epoch, current epoch, policy version, lease state, resource version, decision, reason, and timestamp. The rejected proposal may be quarantined for incident review. It should not automatically enter a retry loop: the same compromised planner can otherwise create a denial storm or exhaust evidence storage."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Read paths require deliberate treatment. Some reads expose regulated or customer data; others are required to reconcile uncertain effects. A containment mode can deny all reads to the agent runtime while permitting a separate incident-reconciliation identity to query authoritative state. Recovery personnel should not reuse compromised agent credentials.",
-      "text": "Read paths require deliberate treatment. Some reads expose regulated or customer data; others are required to reconcile uncertain effects. A containment mode can deny all reads to the agent runtime while permitting a separate incident-reconciliation identity to query authoritative state. Recovery personnel should not reuse compromised agent credentials."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Deny reachability independently",
-      "text": "Deny reachability independently"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Identity controls fail when a process holds another secret, uses a long-lived connection, reaches an unauthenticated internal service, or calls a vendor outside the managed gateway. Network containment removes that alternate path. The baseline workload should already have allowlisted egress. Quarantine then denies new egress and severs risky established flows while preserving only the narrow services required for time, identity validation, health, and append-only evidence.",
-      "text": "Identity controls fail when a process holds another secret, uses a long-lived connection, reaches an unauthenticated internal service, or calls a vendor outside the managed gateway. Network containment removes that alternate path. The baseline workload should already have allowlisted egress. Quarantine then denies new egress and severs risky established flows while preserving only the narrow services required for time, identity validation, health, and append-only evidence."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-08.png",
-      "alt": "Network containment map with a quarantined workload allowed only to identity validation, incident ledger, and time service while CRM, email, web, and exports are denied.",
-      "caption": "Figure 8. Default-deny quarantine preserves a narrow incident channel while removing business-system reachability and terminating risky sessions. AI-assisted design visualization; reference network map; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Kubernetes documents how <a href=\"https://kubernetes.io/docs/concepts/services-networking/network-policies/\">NetworkPolicy</a> selects pods and controls allowed ingress and egress when the network plugin enforces the resource. A default-deny egress policy must be explicit; absent selecting policy, pods are generally non-isolated for egress. Production design must also account for the chosen CNI, DNS, service mesh, sidecars, node-level paths, IPv4 and IPv6, proxies, NAT, host networking, control-plane endpoints, and established connection behavior.",
-      "text": "Kubernetes documents how NetworkPolicy selects pods and controls allowed ingress and egress when the network plugin enforces the resource. A default-deny egress policy must be explicit; absent selecting policy, pods are generally non-isolated for egress. Production design must also account for the chosen CNI, DNS, service mesh, sidecars, node-level paths, IPv4 and IPv6, proxies, NAT, host networking, control-plane endpoints, and established connection behavior."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A quarantine policy should be pre-created and continuously tested. Building it during an incident is slow and error-prone. Workload labels or identities used to activate quarantine must be protected from the workload itself. If a compromised pod can remove its containment label, the mechanism is advisory.",
-      "text": "A quarantine policy should be pre-created and continuously tested. Building it during an incident is slow and error-prone. Workload labels or identities used to activate quarantine must be protected from the workload itself. If a compromised pod can remove its containment label, the mechanism is advisory."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Connection termination matters. A policy that prevents new TCP sessions may not terminate an existing HTTP/2, WebSocket, database, or vendor session. Tool gateways should close sessions, rotate credentials, invalidate cookies, or add an application-layer deny keyed to principal and epoch. Network and application controls overlap intentionally.",
-      "text": "Connection termination matters. A policy that prevents new TCP sessions may not terminate an existing HTTP/2, WebSocket, database, or vendor session. Tool gateways should close sessions, rotate credentials, invalidate cookies, or add an application-layer deny keyed to principal and epoch. Network and application controls overlap intentionally."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Design a kill contract for every tool",
-      "text": "Design a kill contract for every tool"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "CRM mutation, email delivery, payment, database write, object export, queue processing, browser automation, and long-running CPQ jobs have different semantics. Some accept cancellation. Some commit atomically. Some enqueue work and return early. Some provide idempotency lookup. Some expose no reliable revocation after acceptance.",
-      "text": "CRM mutation, email delivery, payment, database write, object export, queue processing, browser automation, and long-running CPQ jobs have different semantics. Some accept cancellation. Some commit atomically. Some enqueue work and return early. Some provide idempotency lookup. Some expose no reliable revocation after acceptance."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-09.png",
-      "alt": "Matrix comparing revoke, gateway deny, connection sever, queue purge, cancellation, freeze, and reconciliation controls across eight tool and effect classes.",
-      "caption": "Figure 9. Every effect class needs a tool-specific stop, acknowledgement, residual-risk, and reconciliation contract. AI-assisted visualization; synthetic control ratings; not vendor capability claims."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Each adapter should publish a machine-readable containment contract:",
-      "text": "Each adapter should publish a machine-readable containment contract:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "tool: cpq.production\neffect_class: quote.mutate\nauthority:\n  credential_ttl_seconds: 120\n  epoch_required: true\nstop:\n  deny_new_requests: gateway\n  terminate_sessions: supported\n  cancel_async_job: conditional\n  freeze_resource: supported\nacknowledgement:\n  means: local deny active and session invalidated\n  target_p99_seconds: 20\neffect:\n  idempotency_lookup: supported\n  authoritative_query: quote_version\n  compensation: create_restoring_version\n  irreversible_after: customer_acceptance\nevidence:\n  receipt_fields: [action_id, job_id, quote_id, version, status, committed_at]\nowner: revenue-platform",
-      "language": "yaml"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The matrix turns vendor and internal limitations into business decisions. If email cannot be recalled after provider acceptance, the system must place stronger approval and send-time gates before that boundary. If an export can be cancelled only before materialization, reduce the job lease and monitor status. If a payment API supplies idempotency but no transaction cancel, the compensation process becomes part of the permitted authority model.",
-      "text": "The matrix turns vendor and internal limitations into business decisions. If email cannot be recalled after provider acceptance, the system must place stronger approval and send-time gates before that boundary. If an export can be cancelled only before materialization, reduce the job lease and monitor status. If a payment API supplies idempotency but no transaction cancel, the compensation process becomes part of the permitted authority model."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "“Tool disabled” must mean something testable: new calls rejected, which credentials invalidated, which sessions terminated, which queued jobs cancelled, what residual work remains, how the system acknowledges the stop, and how a reviewer establishes final truth.",
-      "text": "“Tool disabled” must mean something testable: new calls rejected, which credentials invalidated, which sessions terminated, which queued jobs cancelled, what residual work remains, how the system acknowledges the stop, and how a reviewer establishes final truth."
     },
     {
       "type": "html",
@@ -582,48 +357,6 @@
     },
     {
       "type": "html",
-      "tag": "h3",
-      "html": "Preserve evidence outside the compromised workload",
-      "text": "Preserve evidence outside the compromised workload"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Incident evidence must survive both compromise and containment. A worker-local log can be deleted, altered, buffered indefinitely, or lost when the workload is terminated. Send control and effect receipts through a separately authorized append path whose client can create a narrowly typed event but cannot update or delete prior records. The evidence system should timestamp on receipt, preserve the producer timestamp, validate schema and signature, bind tenant and incident scope, and calculate an integrity digest over an ordered segment.",
-      "text": "Incident evidence must survive both compromise and containment. A worker-local log can be deleted, altered, buffered indefinitely, or lost when the workload is terminated. Send control and effect receipts through a separately authorized append path whose client can create a narrowly typed event but cannot update or delete prior records. The evidence system should timestamp on receipt, preserve the producer timestamp, validate schema and signature, bind tenant and incident scope, and calculate an integrity digest over an ordered segment."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Evidence quality has several dimensions. <strong>Completeness</strong> asks whether every expected decision and effect produced a record. <strong>Integrity</strong> asks whether content changed. <strong>Authenticity</strong> asks which component produced it. <strong>Ordering</strong> asks whether the sequence is reliable enough for the claim. <strong>Availability</strong> asks whether investigators can access it during network isolation. <strong>Retention</strong> asks whether it remains for the legal, regulatory, operational, and learning period. One hash does not prove completeness, and one timestamp does not prove causal order across distributed systems.",
-      "text": "Evidence quality has several dimensions. Completeness asks whether every expected decision and effect produced a record. Integrity asks whether content changed. Authenticity asks which component produced it. Ordering asks whether the sequence is reliable enough for the claim. Availability asks whether investigators can access it during network isolation. Retention asks whether it remains for the legal, regulatory, operational, and learning period. One hash does not prove completeness, and one timestamp does not prove causal order across distributed systems."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Capture both positive and negative decisions. A denied stale request proves a gate enforced containment. A tool acknowledgement proves only what its contract says. A system-of-record snapshot may establish final state, but it may not establish which attempt caused it. Join these facts by stable identities and preserve uncertainty rather than inventing a seamless narrative.",
-      "text": "Capture both positive and negative decisions. A denied stale request proves a gate enforced containment. A tool acknowledgement proves only what its contract says. A system-of-record snapshot may establish final state, but it may not establish which attempt caused it. Join these facts by stable identities and preserve uncertainty rather than inventing a seamless narrative."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Clock behavior is part of evidence. Use authenticated time where practical, monitor skew, record monotonic durations inside components, and retain receive time at the ledger. Incident analysis should distinguish producer clocks from ledger clocks. If a component's clock is outside its permitted bound, mark related latency and ordering claims uncertain.",
-      "text": "Clock behavior is part of evidence. Use authenticated time where practical, monitor skew, record monotonic durations inside components, and retain receive time at the ledger. Incident analysis should distinguish producer clocks from ledger clocks. If a component's clock is outside its permitted bound, mark related latency and ordering claims uncertain."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Containment itself can destroy evidence by killing processes, purging queues, severing remote sessions, or rotating secrets. Define an evidence-preservation order for each effect class, but never let collection become an indefinite veto on stopping harm. For a high-rate malicious export, block the path first and preserve what can be captured safely. For a quarantined worker with no remaining effect authority, memory and filesystem capture may proceed before destruction.",
-      "text": "Containment itself can destroy evidence by killing processes, purging queues, severing remote sessions, or rotating secrets. Define an evidence-preservation order for each effect class, but never let collection become an indefinite veto on stopping harm. For a high-rate malicious export, block the path first and preserve what can be captured safely. For a quarantined worker with no remaining effect authority, memory and filesystem capture may proceed before destruction."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Finally, restrict evidence access. Prompts, retrieved documents, tool arguments, customer records, tokens, and security events may contain sensitive data. Store secrets by reference or redact them at collection, separate incident roles from general engineering access, record every evidence read, and define downstream use. A forensic ledger should not become a new ungoverned memory store for the agent platform.",
-      "text": "Finally, restrict evidence access. Prompts, retrieved documents, tool arguments, customer records, tokens, and security events may contain sensitive data. Store secrets by reference or redact them at collection, separate incident roles from general engineering access, record every evidence read, and define downstream use. A forensic ledger should not become a new ungoverned memory store for the agent platform."
-    },
-    {
-      "type": "html",
       "tag": "h2",
       "html": "Never retry an ambiguous effect blindly",
       "text": "Never retry an ambiguous effect blindly"
@@ -674,6 +407,116 @@
     {
       "type": "html",
       "tag": "h2",
+      "html": "Recovery is a fresh authorization event",
+      "text": "Recovery is a fresh authorization event"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The original workload, credentials, queues, configuration, memory, or retrieved evidence may be compromised. Turning the same agent back on restores uncertainty. Recovery creates a fresh workload identity, new credentials, a higher epoch, verified policy and tool configurations, bounded scope, traffic cap, and expiry.",
+      "text": "The original workload, credentials, queues, configuration, memory, or retrieved evidence may be compromised. Turning the same agent back on restores uncertainty. Recovery creates a fresh workload identity, new credentials, a higher epoch, verified policy and tool configurations, bounded scope, traffic cap, and expiry."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-14.png",
+      "alt": "Recovery authorization chain joining security, platform, domain owner, and incident commander evidence into fresh workload, shadow, canary, and bounded restore stages.",
+      "caption": "Figure 14. Restart authority is separate from emergency stop authority and binds to a fresh epoch, evidence digest, traffic cap, expiry, and rollback. AI-assisted design visualization; reference chain; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Security establishes that the threat and persistence mechanism are contained and evidence preserved. Platform engineering establishes that images, dependencies, credentials, gateways, network policy, telemetry, and rollback are healthy. The domain owner establishes that material effects are reconciled or frozen and accepts residual business risk. Incident command binds those facts to a recovery scope and expiry.",
+      "text": "Security establishes that the threat and persistence mechanism are contained and evidence preserved. Platform engineering establishes that images, dependencies, credentials, gateways, network policy, telemetry, and rollback are healthy. The domain owner establishes that material effects are reconciled or frozen and accepts residual business risk. Incident command binds those facts to a recovery scope and expiry."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The recovery artifact should include:",
+      "text": "The recovery artifact should include:"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Incident and containment IDs.<br><strong>•</strong> Root-cause confidence and unresolved hypotheses.<br><strong>•</strong> Evidence digest and immutable storage reference.<br><strong>•</strong> Replaced workloads, secrets, policies, and dependencies.<br><strong>•</strong> Reconciled, frozen, and outstanding actions by impact.<br><strong>•</strong> Fresh recovery epoch and credential issuance.<br><strong>•</strong> Allowed actions, tenants, resources, tools, and volume.<br><strong>•</strong> Shadow and canary success criteria.<br><strong>•</strong> Observation period, owners, and automatic rollback triggers.<br><strong>•</strong> Expiry and requirement for broader reauthorization.",
+      "text": "• Incident and containment IDs.\n• Root-cause confidence and unresolved hypotheses.\n• Evidence digest and immutable storage reference.\n• Replaced workloads, secrets, policies, and dependencies.\n• Reconciled, frozen, and outstanding actions by impact.\n• Fresh recovery epoch and credential issuance.\n• Allowed actions, tenants, resources, tools, and volume.\n• Shadow and canary success criteria.\n• Observation period, owners, and automatic rollback triggers.\n• Expiry and requirement for broader reauthorization."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Emergency stop authority can be broad and rapid because delay creates exposure. Restart authority should be deliberate and multi-party. A malicious or mistaken stop is recoverable availability damage; an unsafe restart can restore compromised effect authority.",
+      "text": "Emergency stop authority can be broad and rapid because delay creates exposure. Restart authority should be deliberate and multi-party. A malicious or mistaken stop is recoverable availability damage; an unsafe restart can restore compromised effect authority."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Technical deep dive",
+      "text": "Technical deep dive"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The following sections retain the quantitative and systems detail for readers implementing the control plane.",
+      "text": "The following sections retain the quantitative and systems detail for readers implementing the control plane."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Budget the time to stop",
+      "text": "Budget the time to stop"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A kill-switch API that responds in 200 milliseconds can coexist with ten minutes of effect exposure. Measure the critical path from trigger to proof. Detection and incident declaration, operator authentication, signing, event distribution, local policy update, connection termination, tool disablement, queue control, and independent verification each consume time.",
+      "text": "A kill-switch API that responds in 200 milliseconds can coexist with ten minutes of effect exposure. Measure the critical path from trigger to proof. Detection and incident declaration, operator authentication, signing, event distribution, local policy update, connection termination, tool disablement, queue control, and independent verification each consume time."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-05.png",
+      "alt": "Synthetic P99 latency waterfall decomposing detection, signing, event delivery, enforcement, and verification within a 90-second stop-time objective.",
+      "caption": "Figure 5. The synthetic 85-second budget shows why end-to-end stop time depends on the slowest material enforcement and proof path. AI-assisted visualization; synthetic values; not production performance."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For layer <code>l</code>, record issue, receive, persist, enforce, and verify timestamps. The overall time is not necessarily their sum because layers operate in parallel:",
+      "text": "For layer l, record issue, receive, persist, enforce, and verify timestamps. The overall time is not necessarily their sum because layers operate in parallel:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "t_contained = max_l(t_verified,l)\n\nSTO = t_contained − t_credible_trigger",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The maximum should range only over material boundaries in the incident scope, but missing boundaries are failures—not zeros. Report P50, P95, P99, and worst observed drill values. Averages hide the exact partitions and downstream systems that determine blast radius.",
+      "text": "The maximum should range only over material boundaries in the incident scope, but missing boundaries are failures—not zeros. Report P50, P95, P99, and worst observed drill values. Averages hide the exact partitions and downstream systems that determine blast radius."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Offline authority sets the theoretical upper bound. Suppose a disconnected worker has a credential valid for <code>T_token</code>, an effect lease valid for <code>T_lease</code>, and a receiver that denies when containment state is older than <code>T_stale</code>. If no online epoch check exists, worst-case exposure is driven by the longest usable path, not the shortest advertised credential:",
+      "text": "Offline authority sets the theoretical upper bound. Suppose a disconnected worker has a credential valid for Ttoken, an effect lease valid for Tlease, and a receiver that denies when containment state is older than Tstale. If no online epoch check exists, worst-case exposure is driven by the longest usable path, not the shortest advertised credential:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "T_offline_exposure ≤ max(T_token, T_lease, T_session, T_connection)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "If every effect gateway checks a locally updated monotonic epoch and enters deny-on-stale, exposure is instead bounded by event delivery, local update, connection handling, and the stale-state threshold. The architecture should document which bound actually applies to every tool.",
+      "text": "If every effect gateway checks a locally updated monotonic epoch and enters deny-on-stale, exposure is instead bounded by event delivery, local update, connection handling, and the stale-state threshold. The architecture should document which bound actually applies to every tool."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
       "html": "Model the business blast radius",
       "text": "Model the business blast radius"
     },
@@ -717,388 +560,38 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Recovery is a fresh authorization event",
-      "text": "Recovery is a fresh authorization event"
+      "html": "Production implementation checklist",
+      "text": "Production implementation checklist"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "The original workload, credentials, queues, configuration, memory, or retrieved evidence may be compromised. Turning the same agent back on restores uncertainty. Recovery creates a fresh workload identity, new credentials, a higher epoch, verified policy and tool configurations, bounded scope, traffic cap, and expiry.",
-      "text": "The original workload, credentials, queues, configuration, memory, or retrieved evidence may be compromised. Turning the same agent back on restores uncertainty. Recovery creates a fresh workload identity, new credentials, a higher epoch, verified policy and tool configurations, bounded scope, traffic cap, and expiry."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-14.png",
-      "alt": "Recovery authorization chain joining security, platform, domain owner, and incident commander evidence into fresh workload, shadow, canary, and bounded restore stages.",
-      "caption": "Figure 14. Restart authority is separate from emergency stop authority and binds to a fresh epoch, evidence digest, traffic cap, expiry, and rollback. AI-assisted design visualization; reference chain; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Security establishes that the threat and persistence mechanism are contained and evidence preserved. Platform engineering establishes that images, dependencies, credentials, gateways, network policy, telemetry, and rollback are healthy. The domain owner establishes that material effects are reconciled or frozen and accepts residual business risk. Incident command binds those facts to a recovery scope and expiry.",
-      "text": "Security establishes that the threat and persistence mechanism are contained and evidence preserved. Platform engineering establishes that images, dependencies, credentials, gateways, network policy, telemetry, and rollback are healthy. The domain owner establishes that material effects are reconciled or frozen and accepts residual business risk. Incident command binds those facts to a recovery scope and expiry."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The recovery artifact should include:",
-      "text": "The recovery artifact should include:"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>•</strong> Incident and containment IDs.<br><strong>•</strong> Root-cause confidence and unresolved hypotheses.<br><strong>•</strong> Evidence digest and immutable storage reference.<br><strong>•</strong> Replaced workloads, secrets, policies, and dependencies.<br><strong>•</strong> Reconciled, frozen, and outstanding actions by impact.<br><strong>•</strong> Fresh recovery epoch and credential issuance.<br><strong>•</strong> Allowed actions, tenants, resources, tools, and volume.<br><strong>•</strong> Shadow and canary success criteria.<br><strong>•</strong> Observation period, owners, and automatic rollback triggers.<br><strong>•</strong> Expiry and requirement for broader reauthorization.",
-      "text": "• Incident and containment IDs.\n• Root-cause confidence and unresolved hypotheses.\n• Evidence digest and immutable storage reference.\n• Replaced workloads, secrets, policies, and dependencies.\n• Reconciled, frozen, and outstanding actions by impact.\n• Fresh recovery epoch and credential issuance.\n• Allowed actions, tenants, resources, tools, and volume.\n• Shadow and canary success criteria.\n• Observation period, owners, and automatic rollback triggers.\n• Expiry and requirement for broader reauthorization."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Emergency stop authority can be broad and rapid because delay creates exposure. Restart authority should be deliberate and multi-party. A malicious or mistaken stop is recoverable availability damage; an unsafe restart can restore compromised effect authority.",
-      "text": "Emergency stop authority can be broad and rapid because delay creates exposure. Restart authority should be deliberate and multi-party. A malicious or mistaken stop is recoverable availability damage; an unsafe restart can restore compromised effect authority."
+      "html": "<strong>•</strong> Inventory principals, sessions, grants, leases, child agents, queues, tools and network paths.<br><strong>•</strong> Define containment scopes and a signed monotonic epoch contract.<br><strong>•</strong> Enforce epoch freshness at every protected effect boundary.<br><strong>•</strong> Issue short-lived, audience-bound authority and deny stale grants.<br><strong>•</strong> Add default-deny egress containment and tool-specific cancel/freeze controls.<br><strong>•</strong> Maintain an in-flight action ledger with authoritative state.<br><strong>•</strong> Reconcile ambiguous effects before retrying.<br><strong>•</strong> Require fresh credentials, a higher epoch, shadow mode and bounded canary for recovery.<br><strong>•</strong> Drill partitioned workers, cached sessions, queued work and partial commits.",
+      "text": "• Inventory principals, sessions, grants, leases, child agents, queues, tools and network paths.\n• Define containment scopes and a signed monotonic epoch contract.\n• Enforce epoch freshness at every protected effect boundary.\n• Issue short-lived, audience-bound authority and deny stale grants.\n• Add default-deny egress containment and tool-specific cancel/freeze controls.\n• Maintain an in-flight action ledger with authoritative state.\n• Reconcile ambiguous effects before retrying.\n• Require fresh credentials, a higher epoch, shadow mode and bounded canary for recovery.\n• Drill partitioned workers, cached sessions, queued work and partial commits."
     },
     {
       "type": "html",
       "tag": "h2",
-      "html": "Drill the failure modes that matter",
-      "text": "Drill the failure modes that matter"
+      "html": "Continue the Production AI Control Plane series",
+      "text": "Continue the Production AI Control Plane series"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "<a href=\"https://csrc.nist.gov/pubs/sp/800/61/r3/final\">NIST SP 800-61 Revision 3</a> frames incident response as part of cybersecurity risk management and emphasizes preparation, detection, response, recovery, and improvement. An agent kill switch should be exercised inside that operating lifecycle, not left as an untested application feature.",
-      "text": "NIST SP 800-61 Revision 3 frames incident response as part of cybersecurity risk management and emphasizes preparation, detection, response, recovery, and improvement. An agent kill switch should be exercised inside that operating lifecycle, not left as an untested application feature."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-15.png",
-      "alt": "Synthetic 120-minute containment drill timeline covering anomaly injection, command, layered enforcement, action inventory, ambiguity resolution, shadow, canary, and verified recovery.",
-      "caption": "Figure 15. A credible drill measures both technical containment and business reconciliation under partial failure. AI-assisted visualization; synthetic exercise; not production data."
+      "html": "<strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/\">Your AI Agent Should Not Have a Standing Role</a><br><strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/\">Your Multi-Agent System Is a Distributed System</a><br><strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/\">Every AI Agent Action Needs a Receipt</a>",
+      "text": "• Your AI Agent Should Not Have a Standing Role\n• Your Multi-Agent System Is a Distributed System\n• Every AI Agent Action Needs a Receipt"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "A tabletop is useful for roles and decisions, but it cannot prove enforcement. Integration drills should inject a controlled agent principal and harmless synthetic resources, then create realistic failure paths: a connected worker, partitioned worker, restarted worker with an old queue message, long-lived vendor session, open database connection, asynchronous job, delayed security event, control-plane outage, stale read replica, and ambiguous tool acknowledgement.",
-      "text": "A tabletop is useful for roles and decisions, but it cannot prove enforcement. Integration drills should inject a controlled agent principal and harmless synthetic resources, then create realistic failure paths: a connected worker, partitioned worker, restarted worker with an old queue message, long-lived vendor session, open database connection, asynchronous job, delayed security event, control-plane outage, stale read replica, and ambiguous tool acknowledgement."
+      "html": "<em>Part of the Production AI Control Plane series—practical architectures for agent identity, authorization, governance, observability and recovery.</em>",
+      "text": "Part of the Production AI Control Plane series—practical architectures for agent identity, authorization, governance, observability and recovery."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Measure the first credible trigger, command issuance, receiver enforcement, stale-request rejection, network isolation, connection termination, tool acknowledgement, inventory completeness, ambiguous-effect closure, recovery approval, canary start, and verified recovery. Preserve request and receipt identities so an auditor can reproduce the timing.",
-      "text": "Measure the first credible trigger, command issuance, receiver enforcement, stale-request rejection, network isolation, connection termination, tool acknowledgement, inventory completeness, ambiguous-effect closure, recovery approval, canary start, and verified recovery. Preserve request and receipt identities so an auditor can reproduce the timing."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Do not cause uncontrolled business effects in a drill. Use isolated tenants, simulator endpoints, reversible fixtures, vendor sandboxes where representative, or gateway-enforced dry-run modes. When a production path cannot be realistically exercised, document the evidence weakness and use compensating controls. A paper assumption is not equivalent to an observed denial.",
-      "text": "Do not cause uncontrolled business effects in a drill. Use isolated tenants, simulator endpoints, reversible fixtures, vendor sandboxes where representative, or gateway-enforced dry-run modes. When a production path cannot be realistically exercised, document the evidence weakness and use compensating controls. A paper assumption is not equivalent to an observed denial."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Every drill produces gaps with severity, owner, due date, interim constraint, and retest. If the partitioned-worker scenario proves that one tool accepts stale credentials for 45 minutes, reduce agent authority or add a gateway before the next expansion. Calling the drill “successful” because the meeting finished defeats the purpose.",
-      "text": "Every drill produces gaps with severity, owner, due date, interim constraint, and retest. If the partitioned-worker scenario proves that one tool accepts stale credentials for 45 minutes, reduce agent authority or add a gateway before the next expansion. Calling the drill “successful” because the meeting finished defeats the purpose."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Grade containment coverage by evidence",
-      "text": "Grade containment coverage by evidence"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Configuration review can establish that a policy exists. Simulation can establish logic under a model. Integration testing can establish behavior across actual components. A drill can establish behavior under coordinated incident conditions. These evidence strengths are not interchangeable.",
-      "text": "Configuration review can establish that a policy exists. Simulation can establish logic under a model. Integration testing can establish behavior across actual components. A drill can establish behavior under coordinated incident conditions. These evidence strengths are not interchangeable."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-16.png",
-      "alt": "Coverage matrix grading token revocation, epoch fencing, queue drain, egress deny, tool disablement, connection kill, reconciliation, and recovery across seven failure contexts.",
-      "caption": "Figure 16. Synthetic coverage ratings expose where containment claims rely only on configuration or simulation rather than observed drill evidence. AI-assisted visualization; synthetic ratings; not a deployed-system assessment."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Maintain a coverage matrix with rows for authority, scheduler, network, tool, data, reconciliation, evidence, and recovery controls; columns for connected, partitioned, restarted, delayed-event, open-session, asynchronous-job, and control-outage conditions. Each cell links to its latest evidence, environment, version, time, result, and limitation.",
-      "text": "Maintain a coverage matrix with rows for authority, scheduler, network, tool, data, reconciliation, evidence, and recovery controls; columns for connected, partitioned, restarted, delayed-event, open-session, asynchronous-job, and control-outage conditions. Each cell links to its latest evidence, environment, version, time, result, and limitation."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Coverage is versioned. A provider SDK, CNI, queue, sidecar, prompt runtime, token issuer, tool adapter, or recovery workflow change can invalidate a cell. Define which changes trigger full retest, targeted retest, or documentary review. Unobserved critical paths block an organization-wide “kill switch” claim; the correct statement may be narrower, such as “verified for CRM and CPQ writes from managed Kubernetes workers, not browser sessions or vendor-side jobs.”",
-      "text": "Coverage is versioned. A provider SDK, CNI, queue, sidecar, prompt runtime, token issuer, tool adapter, or recovery workflow change can invalidate a cell. Define which changes trigger full retest, targeted retest, or documentary review. Unobserved critical paths block an organization-wide “kill switch” claim; the correct statement may be narrower, such as “verified for CRM and CPQ writes from managed Kubernetes workers, not browser sessions or vendor-side jobs.”"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Negative tests matter. Attempt a stale epoch, missing epoch, wrong tenant, revoked principal, expired lease, replayed event, lower event epoch, duplicate idempotency key, resource-version mismatch, direct IP egress, old session, and recovery without the second approver. Confirm denial at the correct boundary and a durable reason code.",
-      "text": "Negative tests matter. Attempt a stale epoch, missing epoch, wrong tenant, revoked principal, expired lease, replayed event, lower event epoch, duplicate idempotency key, resource-version mismatch, direct IP egress, old session, and recovery without the second approver. Confirm denial at the correct boundary and a durable reason code."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Operate containment as a service",
-      "text": "Operate containment as a service"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A single “kill switch works” KPI cannot establish control. A command can be accepted quickly while local enforcement is slow. Stale effects can be rejected while action inventory is incomplete. Technical containment can succeed while ambiguity remains for days. Operate independent objectives.",
-      "text": "A single “kill switch works” KPI cannot establish control. A command can be accepted quickly while local enforcement is slow. Stale effects can be rejected while action inventory is incomplete. Technical containment can succeed while ambiguity remains for days. Operate independent objectives."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-17.png",
-      "alt": "Containment scorecard for command acceptance, local enforcement, stale-effect rejection, inventory, ambiguity closure, evidence, drills, and recovery bypass.",
-      "caption": "Figure 17. The synthetic 90-day scorecard deliberately breaches local enforcement and ambiguity closure while six other objectives pass. AI-assisted visualization; synthetic metrics; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Define metrics precisely:",
-      "text": "Define metrics precisely:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "local_enforcement_p99\n  = p99(t_local_enforced − t_credible_trigger)\n\nstale_effect_rejection_rate\n  = stale_epoch_effect_requests_rejected_before_effect\n    / adjudicated_stale_epoch_effect_requests\n\ninflight_inventory_completeness\n  = actions_matched_across_authority_queue_gateway_and_tool\n    / actions_expected_from_reconciled_sources\n\nambiguity_closure_rate_4h\n  = material_ambiguous_actions_with_verified_disposition_in_4h\n    / material_ambiguous_actions",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Every denominator needs scope and missingness. If a bypass path does not log requests, the apparent stale-effect rejection rate may be perfect because the dangerous traffic is absent from the dataset. Reconcile gateway receipts with the systems of record and network telemetry.",
-      "text": "Every denominator needs scope and missingness. If a bypass path does not log requests, the apparent stale-effect rejection rate may be perfect because the dangerous traffic is absent from the dataset. Reconcile gateway receipts with the systems of record and network telemetry."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Security owns the incident policy, threat model, event trust, containment authority, and evidence integrity. Platform owns the coordinator, epoch service, workload and network controls, observer, and technical objectives. Identity owns grants, sessions, and revocation behavior. Tool and domain teams own stop contracts, postconditions, compensation, and business truth. Operations owns queue drain and recovery execution. Risk and audit challenge coverage and residual exposure. One named incident commander owns scope and sequencing during an event.",
-      "text": "Security owns the incident policy, threat model, event trust, containment authority, and evidence integrity. Platform owns the coordinator, epoch service, workload and network controls, observer, and technical objectives. Identity owns grants, sessions, and revocation behavior. Tool and domain teams own stop contracts, postconditions, compensation, and business truth. Operations owns queue drain and recovery execution. Risk and audit challenge coverage and residual exposure. One named incident commander owns scope and sequencing during an event."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The control has a cost. Short leases add renewal load and can reduce availability. Default-deny egress increases integration work. Gateways add latency and operating complexity. Drills consume engineering and domain time. Reconciliation requires durable identifiers and tool support. Quantify those costs against the authority being granted. A low-impact read-only summarizer may accept a slower cooperative stop; an agent able to export data or alter commercial terms requires enforced and verified containment.",
-      "text": "The control has a cost. Short leases add renewal load and can reduce availability. Default-deny egress increases integration work. Gateways add latency and operating complexity. Drills consume engineering and domain time. Reconciliation requires durable identifiers and tool support. Quantify those costs against the authority being granted. A low-impact read-only summarizer may accept a slower cooperative stop; an agent able to export data or alter commercial terms requires enforced and verified containment."
-    },
-    {
-      "type": "html",
-      "tag": "h3",
-      "html": "Build the containment business case",
-      "text": "Build the containment business case"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Containment is not a decorative security line item. It is part of the economic permission to automate consequential work. The business case begins with the proposed authority: monthly action volume, resources reachable, maximum value per action, concentration by customer or account, irreversible effects, data sensitivity, recovery effort, customer-remedy obligations, and realistic incident scenarios. The stronger the authority, rate, and concentration, the smaller the acceptable stop-time and uncertainty window.",
-      "text": "Containment is not a decorative security line item. It is part of the economic permission to automate consequential work. The business case begins with the proposed authority: monthly action volume, resources reachable, maximum value per action, concentration by customer or account, irreversible effects, data sensitivity, recovery effort, customer-remedy obligations, and realistic incident scenarios. The stronger the authority, rate, and concentration, the smaller the acceptable stop-time and uncertainty window."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Separate four benefit categories. <strong>Loss avoidance</strong> estimates the reduction in committed harmful effects and their consequence. <strong>Incident efficiency</strong> measures shorter investigation, reconciliation, and recovery work. <strong>Availability protection</strong> measures the value of scoped containment and bounded recovery compared with a global platform shutdown. <strong>Authority enablement</strong> measures business workflows that governance can permit only after enforced containment exists. The last category is often important but should not be double-counted as both revenue and loss avoidance.",
-      "text": "Separate four benefit categories. Loss avoidance estimates the reduction in committed harmful effects and their consequence. Incident efficiency measures shorter investigation, reconciliation, and recovery work. Availability protection measures the value of scoped containment and bounded recovery compared with a global platform shutdown. Authority enablement measures business workflows that governance can permit only after enforced containment exists. The last category is often important but should not be double-counted as both revenue and loss avoidance."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A scenario model can express annual risk reduction as:",
-      "text": "A scenario model can express annual risk reduction as:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "annual risk reduction\n  = Σ_s frequency_s\n      × (loss_without_control_s − loss_with_control_s)\n      × control_reliability_s",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Every term is uncertain. Use low, base, and severe scenarios; show sensitivity to incident frequency, effect rate, containment latency, bypass probability, impact, and compensation success. Do not infer control reliability from design completion. Use drill evidence, defect history, coverage, and observed enforcement. Rare severe incidents may still justify categorical controls even when an expected-value estimate is unstable.",
-      "text": "Every term is uncertain. Use low, base, and severe scenarios; show sensitivity to incident frequency, effect rate, containment latency, bypass probability, impact, and compensation success. Do not infer control reliability from design completion. Use drill evidence, defect history, coverage, and observed enforcement. Rare severe incidents may still justify categorical controls even when an expected-value estimate is unstable."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The cost side includes engineering, identity and gateway infrastructure, reserved incident capacity, network enforcement, tool-adapter work, observability, evidence storage, review tooling, exercises, response staffing, vendor features, performance overhead, and availability failures caused by false containment. Separate one-time change cost from recurring run cost. Separate cash spend from internal capacity. Price the additional latency or tool constraint where it affects customer or employee workflows.",
-      "text": "The cost side includes engineering, identity and gateway infrastructure, reserved incident capacity, network enforcement, tool-adapter work, observability, evidence storage, review tooling, exercises, response staffing, vendor features, performance overhead, and availability failures caused by false containment. Separate one-time change cost from recurring run cost. Separate cash spend from internal capacity. Price the additional latency or tool constraint where it affects customer or employee workflows."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Allocation should follow the beneficiary and the control plane. Shared epoch, event, evidence, and observation services belong to the platform. Tool-specific cancellation and reconciliation belong to the product or domain integration. Enterprise security owns incident governance and shared assurance. A transparent allocation avoids the common outcome where every team agrees containment is necessary but no budget owns the last unprotected vendor path.",
-      "text": "Allocation should follow the beneficiary and the control plane. Shared epoch, event, evidence, and observation services belong to the platform. Tool-specific cancellation and reconciliation belong to the product or domain integration. Enterprise security owns incident governance and shared assurance. A transparent allocation avoids the common outcome where every team agrees containment is necessary but no budget owns the last unprotected vendor path."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Fund remediation through an authority gate. If a tool lacks epoch enforcement or authoritative reconciliation, the product can restrict the agent to read-only access, reduce transaction limits, require approval, isolate a sandbox, or fund the missing adapter. The decision is no longer “security wants a kill switch.” It is “this business authority requires this demonstrable containment envelope.”",
-      "text": "Fund remediation through an authority gate. If a tool lacks epoch enforcement or authoritative reconciliation, the product can restrict the agent to read-only access, reduce transaction limits, require approval, isolate a sandbox, or fund the missing adapter. The decision is no longer “security wants a kill switch.” It is “this business authority requires this demonstrable containment envelope.”"
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Roll out control before authority",
-      "text": "Roll out control before authority"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Do not add an emergency button after the agent already holds broad direct credentials. Build the effect and authority structure in stages.",
-      "text": "Do not add an emergency button after the agent already holds broad direct credentials. Build the effect and authority structure in stages."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-ai-agent-needs-a-real-kill-switch/figure-18.png",
-      "alt": "Six-phase roadmap from authority inventory through effect gates, short-lived authority, layered stop, drills, and governed recovery.",
-      "caption": "Figure 18. Production authority expands only after each phase proves its containment, reconciliation, and recovery gate. AI-assisted design visualization; reference roadmap; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 0 — inventory.</strong> Enumerate principals, credentials, sessions, leases, queues, delegated agents, networks, tools, resources, asynchronous jobs, effect boundaries, owners, and maximum lifetimes. Declare the containment scope the current system can honestly support.",
-      "text": "Phase 0 — inventory. Enumerate principals, credentials, sessions, leases, queues, delegated agents, networks, tools, resources, asynchronous jobs, effect boundaries, owners, and maximum lifetimes. Declare the containment scope the current system can honestly support."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 1 — effect gates.</strong> Route all consequential effects through controlled gateways. Add stable workflow, action, attempt, idempotency, external-operation, and resource-version identities. Produce append-only decision and effect receipts. Remove direct credentials from workers.",
-      "text": "Phase 1 — effect gates. Route all consequential effects through controlled gateways. Add stable workflow, action, attempt, idempotency, external-operation, and resource-version identities. Produce append-only decision and effect receipts. Remove direct credentials from workers."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 2 — short authority.</strong> Introduce scoped, short-lived leases and tokens, monotonic epochs, revocation handles, graph lineage, deny-on-stale behavior, and signed containment commands. Measure renewal and failure behavior before shortening lifetimes further.",
-      "text": "Phase 2 — short authority. Introduce scoped, short-lived leases and tokens, monotonic epochs, revocation handles, graph lineage, deny-on-stale behavior, and signed containment commands. Measure renewal and failure behavior before shortening lifetimes further."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 3 — layered stop.</strong> Pre-stage identity revocation, intake stop, queue handling, workload quarantine, network deny, connection termination, tool-specific kill contracts, resource freeze, and independent observation. Define the STO for each authority and effect class.",
-      "text": "Phase 3 — layered stop. Pre-stage identity revocation, intake stop, queue handling, workload quarantine, network deny, connection termination, tool-specific kill contracts, resource freeze, and independent observation. Define the STO for each authority and effect class."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 4 — reconciliation and drills.</strong> Build the live in-flight inventory, authoritative queries, disposition workflow, compensation controls, evidence matrix, and partial-failure exercises. Close critical coverage gaps before granting broader tools or irreversible actions.",
-      "text": "Phase 4 — reconciliation and drills. Build the live in-flight inventory, authoritative queries, disposition workflow, compensation controls, evidence matrix, and partial-failure exercises. Close critical coverage gaps before granting broader tools or irreversible actions."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 5 — governed recovery.</strong> Separate restart authority, generate fresh credentials and workload state, bind approvals to evidence, and restore through shadow, bounded canary, SLO gates, and automatic rollback. Continue quarterly or risk-based drills and retest after material changes.",
-      "text": "Phase 5 — governed recovery. Separate restart authority, generate fresh credentials and workload state, bind approvals to evidence, and restore through shadow, bounded canary, SLO gates, and automatic rollback. Continue quarterly or risk-based drills and retest after material changes."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Each phase should have an explicit stop claim. Phase 1 may prove that all managed CRM writes have receipts, but not that vendor browser sessions are contained. Phase 3 may prove technical rejection within 90 seconds, but not four-hour ambiguity closure. Honest narrow claims are safer than an impressive global label.",
-      "text": "Each phase should have an explicit stop claim. Phase 1 may prove that all managed CRM writes have receipts, but not that vendor browser sessions are contained. Phase 3 may prove technical rejection within 90 seconds, but not four-hour ambiguity closure. Honest narrow claims are safer than an impressive global label."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Failure modes and limitations",
-      "text": "Failure modes and limitations"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The kill switch shares the compromised trust domain.</strong> If the agent can alter its own labels, gateway policy, event keys, or evidence, containment is not independent. Separate administrative identity, signing, enforcement, and evidence permissions.",
-      "text": "The kill switch shares the compromised trust domain. If the agent can alter its own labels, gateway policy, event keys, or evidence, containment is not independent. Separate administrative identity, signing, enforcement, and evidence permissions."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Revocation delivery fails.</strong> Push events can be lost, reordered, delayed, or rejected. Use monotonic epochs, durable streams or polling, short authority, stale-state denial, and independent probes.",
-      "text": "Revocation delivery fails. Push events can be lost, reordered, delayed, or rejected. Use monotonic epochs, durable streams or polling, short authority, stale-state denial, and independent probes."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>A direct path bypasses the gateway.</strong> Legacy credentials, browser sessions, host networking, or vendor integrations can preserve effect authority. Continuously discover network and credential paths and reconcile system-of-record changes to gateway receipts.",
-      "text": "A direct path bypasses the gateway. Legacy credentials, browser sessions, host networking, or vendor integrations can preserve effect authority. Continuously discover network and credential paths and reconcile system-of-record changes to gateway receipts."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The epoch source becomes unavailable.</strong> Local gateways should continue enforcing the last known containment state. Recovery or authority expansion fails closed until ordering is re-established. Design emergency operations for the coordinator outage itself.",
-      "text": "The epoch source becomes unavailable. Local gateways should continue enforcing the last known containment state. Recovery or authority expansion fails closed until ordering is re-established. Design emergency operations for the coordinator outage itself."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Containment causes data loss.</strong> Abrupt process or queue termination can lose evidence or leave uncertain work. Quarantine and append durable state before destructive cleanup where incident risk permits. Evidence preservation does not override an urgent need to stop harmful effects.",
-      "text": "Containment causes data loss. Abrupt process or queue termination can lose evidence or leave uncertain work. Quarantine and append durable state before destructive cleanup where incident risk permits. Evidence preservation does not override an urgent need to stop harmful effects."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Compensation creates a second incident.</strong> Current state may include legitimate changes after the original effect. Compensation requires fresh authorization, resource versions, domain evidence, and verification.",
-      "text": "Compensation creates a second incident. Current state may include legitimate changes after the original effect. Compensation requires fresh authorization, resource versions, domain evidence, and verification."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The blast-radius model is wrong.</strong> Effect rates, incident frequency, commit probability, and impact are uncertain. Use ranges, stress cases, and actual drills. Do not promise a financial loss reduction from synthetic curves.",
-      "text": "The blast-radius model is wrong. Effect rates, incident frequency, commit probability, and impact are uncertain. Use ranges, stress cases, and actual drills. Do not promise a financial loss reduction from synthetic curves."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Network policy is assumed, not enforced.</strong> Platform behavior depends on the network implementation and path. Test real traffic, existing sessions, IPv6, sidecars, proxies, DNS, and failover.",
-      "text": "Network policy is assumed, not enforced. Platform behavior depends on the network implementation and path. Test real traffic, existing sessions, IPv6, sidecars, proxies, DNS, and failover."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Recovery restores contaminated memory or evidence.</strong> Rebuild from trusted artifacts, revalidate persistent agent memory and retrieved data, rotate credentials, and constrain the canary. A clean container with poisoned workflow state is not clean recovery.",
-      "text": "Recovery restores contaminated memory or evidence. Rebuild from trusted artifacts, revalidate persistent agent memory and retrieved data, rotate credentials, and constrain the canary. A clean container with poisoned workflow state is not clean recovery."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The emergency control is abused.</strong> Strong authentication, scoped authorization, tamper-evident commands, rate limits, protected operator paths, out-of-band break glass, and post-event review reduce malicious or accidental denial of service.",
-      "text": "The emergency control is abused. Strong authentication, scoped authorization, tamper-evident commands, rate limits, protected operator paths, out-of-band break glass, and post-event review reduce malicious or accidental denial of service."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Production-readiness questions",
-      "text": "Production-readiness questions"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Before allowing an agent to create consequential external effects, answer:",
-      "text": "Before allowing an agent to create consequential external effects, answer:"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>•</strong> What exact principal, tenant, workflow, resource, tool, and global scopes can be contained?<br><strong>•</strong> What falsifiable claim defines stopped authority, verified containment, and reconciled business truth?<br><strong>•</strong> Which credentials, sessions, leases, queues, child agents, and vendor jobs descend from each root grant?<br><strong>•</strong> Can a partitioned or malicious worker bypass the effect gateway?<br><strong>•</strong> What monotonic epoch fences stale requests, and which system orders it?<br><strong>•</strong> Which boundaries check epoch and lease on every effectful request?<br><strong>•</strong> How are SET or equivalent security events authenticated, deduplicated, ordered, recovered, and acknowledged?<br><strong>•</strong> What is the P99 trigger-to-proof stop-time objective for each high-impact effect class?<br><strong>•</strong> How are new egress, established connections, direct IP, DNS, proxy, mesh, IPv4, and IPv6 paths controlled?<br><strong>•</strong> What does “stopped” mean for every CRM, CPQ, email, payment, database, export, queue, and browser adapter?<br><strong>•</strong> Can every accepted request be queried by stable idempotency and external-operation identity?<br><strong>•</strong> What prevents a timeout from causing blind replay?<br><strong>•</strong> How complete is the in-flight action inventory, and how is completeness independently reconciled?<br><strong>•</strong> Which actions are reversible, compensable, irreversible, or subject to customer remedy?<br><strong>•</strong> Who can trigger containment, narrow or widen scope, accept residual risk, and authorize recovery?<br><strong>•</strong> Does recovery use fresh workloads, credentials, epoch, evidence, and bounded traffic?<br><strong>•</strong> When was each connected, partitioned, restarted, delayed, open-session, asynchronous, and control-outage path last tested?<br><strong>•</strong> Which SLO breach blocks recovery or future authority expansion?",
-      "text": "• What exact principal, tenant, workflow, resource, tool, and global scopes can be contained?\n• What falsifiable claim defines stopped authority, verified containment, and reconciled business truth?\n• Which credentials, sessions, leases, queues, child agents, and vendor jobs descend from each root grant?\n• Can a partitioned or malicious worker bypass the effect gateway?\n• What monotonic epoch fences stale requests, and which system orders it?\n• Which boundaries check epoch and lease on every effectful request?\n• How are SET or equivalent security events authenticated, deduplicated, ordered, recovered, and acknowledged?\n• What is the P99 trigger-to-proof stop-time objective for each high-impact effect class?\n• How are new egress, established connections, direct IP, DNS, proxy, mesh, IPv4, and IPv6 paths controlled?\n• What does “stopped” mean for every CRM, CPQ, email, payment, database, export, queue, and browser adapter?\n• Can every accepted request be queried by stable idempotency and external-operation identity?\n• What prevents a timeout from causing blind replay?\n• How complete is the in-flight action inventory, and how is completeness independently reconciled?\n• Which actions are reversible, compensable, irreversible, or subject to customer remedy?\n• Who can trigger containment, narrow or widen scope, accept residual risk, and authorize recovery?\n• Does recovery use fresh workloads, credentials, epoch, evidence, and bounded traffic?\n• When was each connected, partitioned, restarted, delayed, open-session, asynchronous, and control-outage path last tested?\n• Which SLO breach blocks recovery or future authority expansion?"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "If the organization cannot answer those questions with current receipts and observed tests, the dashboard control should be labeled accurately: <strong>request cooperative shutdown</strong>.",
-      "text": "If the organization cannot answer those questions with current receipts and observed tests, the dashboard control should be labeled accurately: request cooperative shutdown."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The production principle is stricter:",
-      "text": "The production principle is stricter:"
-    },
-    {
-      "type": "html",
-      "tag": "blockquote",
-      "html": "Stop authority at the effect boundary, prove every material boundary converged, resolve every ambiguous action, and restart only with fresh evidence.",
-      "text": "Stop authority at the effect boundary, prove every material boundary converged, resolve every ambiguous action, and restart only with fresh evidence."
+      "html": "<em>Follow Aditya Singh for production-grade enterprise AI architecture, governance and economics.</em>",
+      "text": "Follow Aditya Singh for production-grade enterprise AI architecture, governance and economics."
     }
   ],
   "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
@@ -1108,7 +601,7 @@
   "id": "0a0d752db384",
   "modifiedAt": "2026-08-23T14:20:00.000Z",
   "publishedAt": "2026-08-23T14:20:00.000Z",
-  "readTime": "33 min read",
+  "readTime": "15 min read",
   "slug": "your-ai-agent-needs-a-real-kill-switch",
   "sourceUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
   "subtitle": "A production architecture for revocation, fencing, network containment, draining, reconciliation, and recovery.",
@@ -1120,5 +613,5 @@
     "Reliability"
   ],
   "title": "Your AI Agent Needs a Real Kill Switch",
-  "wordCount": 6498
+  "wordCount": 2861
 }
