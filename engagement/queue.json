@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 1,
-  "updatedAt": "2026-08-27T09:49:26Z",
+  "updatedAt": "2026-08-27T09:54:56Z",
   "maxBatchSize": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -18,7 +18,10 @@
       "reason": "The reader asks a concrete architecture question about preventing an independent verifier from becoming a single point of trust.",
       "evidence": "The response distinguishes timeout ambiguity from failure, identifies double-application risk during retries, and asks how the verifier itself should be governed.",
       "draftResponse": "That is the right failure mode to challenge. I would avoid a singular verifier and use a tiered verification quorum: an authoritative system-of-record read, a policy-specific postcondition check, and an independently operated evaluator for high-impact actions. The receipt should preserve each verifier's identity, evidence digest, result, disagreement, and timeout; unresolved disagreement fails closed or escalates. Shadow cases, canaries, and fault injection then test the verification layer itself, so trust rests on diverse evidence and visible disagreement rather than one component.",
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://medium.com/@singhaditya21_89007/that-is-the-right-failure-mode-to-challenge-dead30f3c147",
+      "receiptOperationId": "20260827095456-response-posted-2026-08-27-future-agi-verifier-trust",
+      "postedAt": "2026-08-27T09:54:56Z"
     }
   ]
 }
