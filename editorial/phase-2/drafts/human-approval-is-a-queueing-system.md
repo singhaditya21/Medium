@@ -19,7 +19,7 @@ This story was written with AI writing and visualization assistance. All organiz
 
 The design error is treating “human in the loop” as a checkbox. Approval is a capacity-constrained decision service: work arrives unevenly, reviewers have different authority, evidence changes decision value and delay can create loss. The production question is not whether a human clicked. It is whether an eligible reviewer received the right evidence and made the decision before its safe operating window closed.
 
-![Approval architecture connecting proposal, risk engine, policy, queue router, review UI, eligibility, outcome ledger, calibration, and execution boundary.](assets/images/human-approval-is-a-queueing-system/figure-02.png "Figure 2. Risk scoring, policy, reviewer eligibility, queueing, human decision, execution, and calibration are separate control responsibilities. AI-assisted design visualization; reference architecture; not production data.")
+![Approval architecture connecting proposal, risk engine, policy, queue router, review UI, eligibility, outcome ledger, calibration, and execution boundary.](../../../assets/images/human-approval-is-a-queueing-system/figure-02.png "Figure 2. Risk scoring, policy, reviewer eligibility, queueing, human decision, execution, and calibration are separate control responsibilities. AI-assisted design visualization; reference architecture; not production data.")
 
 ## What this changes in production
 
@@ -66,7 +66,7 @@ x(a) = [impact, error_likelihood, irreversibility, novelty,
         evidence_weakness, propagation, control_gap]
 ```
 
-![Seven-factor action-risk model covering impact, likelihood, reversibility, novelty, evidence, propagation, and controls.](assets/images/human-approval-is-a-queueing-system/figure-03.png "Figure 3. Seven explicit factors determine action risk, while categorical policy floors prevent one favorable factor from cancelling a mandatory control. AI-assisted design visualization; synthetic factors; not production data.")
+![Seven-factor action-risk model covering impact, likelihood, reversibility, novelty, evidence, propagation, and controls.](../../../assets/images/human-approval-is-a-queueing-system/figure-03.png "Figure 3. Seven explicit factors determine action risk, while categorical policy floors prevent one favorable factor from cancelling a mandatory control. AI-assisted design visualization; synthetic factors; not production data.")
 
 **Impact** includes reachable money, customer commitments, rights, safety, privacy, operational continuity, and reputational consequence. Use distributions or bands when value is uncertain; do not collapse every effect into dollars.
 
@@ -92,7 +92,7 @@ Store every feature value, source, transformation, model or rules version, uncer
 
 Human review has positive value when it reduces expected decision loss enough to exceed review cost, delay cost, reviewer residual error, and any opportunity cost. It also has mandatory value when law, policy, contractual duty, or organizational risk tolerance requires it regardless of average economics.
 
-![Expected-loss comparison for no review and qualified review with an illustrative $505 value of review.](assets/images/human-approval-is-a-queueing-system/figure-04.png "Figure 4. Synthetic probabilities and costs show how expected avoided loss can exceed review and delay cost while a policy floor still constrains the choice. AI-assisted visualization; illustrative values; not production data.")
+![Expected-loss comparison for no review and qualified review with an illustrative $505 value of review.](../../../assets/images/human-approval-is-a-queueing-system/figure-04.png "Figure 4. Synthetic probabilities and costs show how expected avoided loss can exceed review and delay cost while a policy floor still constrains the choice. AI-assisted visualization; illustrative values; not production data.")
 
 For an action class:
 
@@ -133,7 +133,7 @@ The organization should document which terms are empirical, estimated, judgmenta
 
 One queue cannot simultaneously optimize a 30-second incident decision and an eight-hour content review. Define service classes with separate admission, priority, reviewer pools, deadlines, and fallbacks.
 
-![Four service classes for no synchronous review, asynchronous review, priority review, and incident command.](assets/images/human-approval-is-a-queueing-system/figure-05.png "Figure 5. S0–S3 approval classes declare action characteristics, reviewer pools, maximum waits, and terminal behavior. AI-assisted design visualization; reference classes; not production policy.")
+![Four service classes for no synchronous review, asynchronous review, priority review, and incident command.](../../../assets/images/human-approval-is-a-queueing-system/figure-05.png "Figure 5. S0–S3 approval classes declare action characteristics, reviewer pools, maximum waits, and terminal behavior. AI-assisted design visualization; reference classes; not production policy.")
 
 **S0 — no synchronous review.** Low-impact, reversible, well-evidenced actions execute under bounded authority and verification. A statistically designed sample may receive retrospective review. “No synchronous review” does not mean no controls.
 
@@ -166,7 +166,7 @@ Service class is part of the approval receipt. Manual reassignment cannot weaken
 
 The simplest diagnostic is an M/M/c queue: Poisson arrivals, exponential service time, `c` identical parallel servers, one class, infinite waiting room, and steady state. Real approval systems violate most assumptions, but the model exposes a crucial fact: delay rises nonlinearly near capacity.
 
-![Erlang-C heatmap of expected wait for three to ten qualified reviewers and 12 to 92 arrivals per hour.](assets/images/human-approval-is-a-queueing-system/figure-06.png "Figure 6. In a synthetic M/M/c model with six-minute mean service, expected wait rises sharply near capacity and becomes unstable at or above full utilization. AI-assisted visualization; mathematical scenario; not workforce data.")
+![Erlang-C heatmap of expected wait for three to ten qualified reviewers and 12 to 92 arrivals per hour.](../../../assets/images/human-approval-is-a-queueing-system/figure-06.png "Figure 6. In a synthetic M/M/c model with six-minute mean service, expected wait rises sharply near capacity and becomes unstable at or above full utilization. AI-assisted visualization; mathematical scenario; not workforce data.")
 
 Let `a = λ/μ`, `ρ = λ/(cμ)`, and `ρ < 1`. The Erlang-C probability that an arrival waits is:
 
@@ -196,7 +196,7 @@ Use empirical discrete-event simulation after the diagnostic. Replay timestamped
 
 A reviewer who is available is not necessarily eligible. The routing graph is bipartite: action requirements on one side and reviewer pools or individuals on the other. An edge exists only when every current constraint passes.
 
-![Bipartite routing graph between pricing, refund, closure, and export actions and qualified reviewer pools.](assets/images/human-approval-is-a-queueing-system/figure-09.png "Figure 9. Eligibility edges show why nominal headcount overstates usable capacity for specialized, high-risk approval classes. AI-assisted design visualization; reference graph; not production data.")
+![Bipartite routing graph between pricing, refund, closure, and export actions and qualified reviewer pools.](../../../assets/images/human-approval-is-a-queueing-system/figure-09.png "Figure 9. Eligibility edges show why nominal headcount overstates usable capacity for specialized, high-risk approval classes. AI-assisted design visualization; reference graph; not production data.")
 
 Eligibility predicate:
 
@@ -229,7 +229,7 @@ Routing fairness matters. Always selecting the fastest reviewer can overload exp
 
 Human approval is not independent merely because a human clicked. The same person might have requested the action, curated the evidence, configured the policy, issued authority, or verified the result.
 
-![Six-role graph for proposer, evidence curator, approver, lease issuer, executor, and verifier with forbidden combinations.](assets/images/human-approval-is-a-queueing-system/figure-10.png "Figure 10. Separation-of-duties rules prohibit self-approval, self-execution, self-verification, and evidence-curator approval combinations. AI-assisted design visualization; reference control graph; not production policy.")
+![Six-role graph for proposer, evidence curator, approver, lease issuer, executor, and verifier with forbidden combinations.](../../../assets/images/human-approval-is-a-queueing-system/figure-10.png "Figure 10. Separation-of-duties rules prohibit self-approval, self-execution, self-verification, and evidence-curator approval combinations. AI-assisted design visualization; reference control graph; not production policy.")
 
 [NIST SP 800-53 Rev. 5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) includes controls for separation of duties and least privilege, including AC-5 and AC-6. An agent approval service must translate those organizational controls into runtime identity relationships.
 
@@ -253,7 +253,7 @@ Break-glass paths are necessary for incidents. They should require a declared em
 
 Reviewers frequently see a model summary and approve it without inspecting primary evidence. The interface should instead make the exact business decision and its uncertainty legible.
 
-![Approval packet centered on the exact quote delta with evidence, uncertainty, policy, recovery, and signed choices.](assets/images/human-approval-is-a-queueing-system/figure-11.png "Figure 11. A reviewer signs an exact, expiring delta alongside sources, conflicts, policy, uncertainty, alternatives, and recovery. AI-assisted design visualization; synthetic example; not production data.")
+![Approval packet centered on the exact quote delta with evidence, uncertainty, policy, recovery, and signed choices.](../../../assets/images/human-approval-is-a-queueing-system/figure-11.png "Figure 11. A reviewer signs an exact, expiring delta alongside sources, conflicts, policy, uncertainty, alternatives, and recovery. AI-assisted design visualization; synthetic example; not production data.")
 
 The packet includes:
 
@@ -297,7 +297,7 @@ The following sections retain the quantitative and systems detail for readers im
 
 Routing threshold determines review volume. Lowering it sends more actions to humans, raising labor and delay while reducing some residual loss. Raising it saves capacity but exposes more automated errors.
 
-![Synthetic frontier of total cost and residual loss as the proportion of actions sent to review changes.](assets/images/human-approval-is-a-queueing-system/figure-15.png "Figure 15. A 50,000-action synthetic simulation finds a risk-constrained total-cost minimum near a 60% review rate for the modeled action subset. AI-assisted visualization; declared simulation; not production policy.")
+![Synthetic frontier of total cost and residual loss as the proportion of actions sent to review changes.](../../../assets/images/human-approval-is-a-queueing-system/figure-15.png "Figure 15. A 50,000-action synthetic simulation finds a risk-constrained total-cost minimum near a 60% review rate for the modeled action subset. AI-assisted visualization; declared simulation; not production policy.")
 
 For threshold `τ` and capacity state `q`:
 
@@ -322,7 +322,7 @@ Evaluate proposed thresholds offline, in shadow routing, and with canary action 
 
 Before expanding autonomy, run automated decisions and qualified review in parallel without letting the automated branch execute. Later adjudication creates a four-cell operating view.
 
-![Two-by-two shadow-review matrix for safe automate, false autonomy, false escalation, and correct escalation.](assets/images/human-approval-is-a-queueing-system/figure-16.png "Figure 16. A synthetic 10,000-case matrix highlights 210 false-autonomy and 560 false-escalation cases for risk-weighted analysis. AI-assisted visualization; synthetic counts; not production data.")
+![Two-by-two shadow-review matrix for safe automate, false autonomy, false escalation, and correct escalation.](../../../assets/images/human-approval-is-a-queueing-system/figure-16.png "Figure 16. A synthetic 10,000-case matrix highlights 210 false-autonomy and 560 false-escalation cases for risk-weighted analysis. AI-assisted visualization; synthetic counts; not production data.")
 
 The synthetic matrix has 7,820 safe automation cases, 1,410 correct escalations, 560 false escalations, and 210 false-autonomy cases. Counts alone are insufficient. Weight disagreement by impact and investigate clusters by action, source pattern, model route, reviewer, product, jurisdiction, and novelty.
 

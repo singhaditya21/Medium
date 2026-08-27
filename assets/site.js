@@ -173,9 +173,10 @@
       const caption = figure.querySelector('figcaption');
       const source = image.currentSrc || image.src;
       const number = activeFigure + 1;
+      const sourceNumber = figure.dataset.figureLabel || String(number);
       const naturalWidth = image.naturalWidth || Number(image.getAttribute('width')) || 2400;
       const naturalHeight = image.naturalHeight || Number(image.getAttribute('height')) || 1600;
-      viewerTitle.textContent = `Figure ${number} of ${figures.length}`;
+      viewerTitle.textContent = `Figure ${sourceNumber} · ${number} of ${figures.length} selected`;
       viewerImage.src = source;
       viewerImage.alt = image.alt;
       viewerCaption.textContent = caption ? caption.textContent.trim() : image.alt;

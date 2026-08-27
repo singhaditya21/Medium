@@ -19,7 +19,7 @@ This story was written with AI writing and visualization assistance. All dataset
 
 Benchmark accuracy is evidence, not production authority. The evaluation unit is the complete deployable bundle—model, prompts, retrieval, memory, tools, identity, policy, retries, verifiers, runtime and rollback—inside a declared authority envelope. A release should pass only when versioned evidence supports the exact actions, populations, tools, value limits and failure conditions the agent will encounter, and when the control plane can enforce that bounded contract.
 
-![Reference architecture connecting agent artifact, deployment contract, scenario registry, isolated harness, evidence, promotion, attestations, production monitoring, and independent storage.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-02.png "Figure 2. A governed evidence plane turns versioned system artifacts and representative scenarios into reproducible runs, claims, gates, and signed promotion decisions. AI-assisted design visualization; reference architecture; not production data.")
+![Reference architecture connecting agent artifact, deployment contract, scenario registry, isolated harness, evidence, promotion, attestations, production monitoring, and independent storage.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-02.png "Figure 2. A governed evidence plane turns versioned system artifacts and representative scenarios into reproducible runs, claims, gates, and signed promotion decisions. AI-assisted design visualization; reference architecture; not production data.")
 
 ## What this changes in production
 
@@ -106,7 +106,7 @@ In August 2026, NIST announced the **initial public draft** of its [TEVV-Athlon 
 
 A release report that says “passed 1,200 tests” hides what those tests establish. Use an assurance graph. The root claim is decomposed into subclaims, and every edge points to evidence. A critical missing or failed child blocks the parent. Noncritical weakness may narrow scope, impose review, or create an expiring exception.
 
-![Assurance graph connecting a safe bounded production root claim through effectiveness, policy, tool, recovery, and operations claims to versioned evidence.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-03.png "Figure 3. Every production claim decomposes into measurable subclaims with provenance, uncertainty, expiry, and explicit limitations. AI-assisted design visualization; reference assurance graph; not production data.")
+![Assurance graph connecting a safe bounded production root claim through effectiveness, policy, tool, recovery, and operations claims to versioned evidence.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-03.png "Figure 3. Every production claim decomposes into measurable subclaims with provenance, uncertainty, expiry, and explicit limitations. AI-assisted design visualization; reference assurance graph; not production data.")
 
 A claim record can look like:
 
@@ -136,7 +136,7 @@ Record negative claims cautiously. “The agent cannot disclose protected data�
 
 A production scenario is not one prompt and one expected string. It starts with a world state: account balances, customer permissions, promises, disputes, policies, clocks, tool versions, queue contents, and prior messages. It provides inputs and events over time. It permits certain actions, injects operating conditions, and ends with business postconditions and invariants.
 
-![Seven-axis scenario taxonomy covering business task, data state, policy, tool state, operating conditions, people, and adversarial context.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-04.png "Figure 4. Risk-based combinations turn seven scenario dimensions into stateful workflow trajectories rather than a flat prompt corpus. AI-assisted design visualization; reference taxonomy; not production data.")
+![Seven-axis scenario taxonomy covering business task, data state, policy, tool state, operating conditions, people, and adversarial context.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-04.png "Figure 4. Risk-based combinations turn seven scenario dimensions into stateful workflow trajectories rather than a flat prompt corpus. AI-assisted design visualization; reference taxonomy; not production data.")
 
 For the collections scenario, business tasks include contact, promise capture, dispute routing, payment-plan proposal, fee-waiver escalation, legal hold, and account closure. Data states include current, stale, missing, duplicated, contradictory, unauthorized, and later-updated. Policy states include normal, boundary, conflicting, newly effective, and unavailable. Tool states include healthy, slow, timeout before acceptance, timeout after acceptance, partial commit, stale read, version conflict, and schema change.
 
@@ -150,7 +150,7 @@ Hold out scenarios by template family, account, document source, time, and attac
 
 Aggregate test count is a vanity metric without a coverage denominator. Map action cohorts against operating and failure conditions. Each cell records expected production weight, risk tier, scenario count, recent execution count, evidence strength, label quality, artifact coverage, result, and last execution.
 
-![Heatmap of synthetic coverage strength across eight action cohorts and nine normal, stale, conflicting, failed, changed, adversarial, burst, and delayed conditions.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-05.png "Figure 5. Critical empty or weak cells block promotion even when aggregate test volume and pass rate are high. AI-assisted visualization; synthetic coverage ratings; not a deployed-agent evaluation.")
+![Heatmap of synthetic coverage strength across eight action cohorts and nine normal, stale, conflicting, failed, changed, adversarial, burst, and delayed conditions.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-05.png "Figure 5. Critical empty or weak cells block promotion even when aggregate test volume and pass rate are high. AI-assisted visualization; synthetic coverage ratings; not a deployed-agent evaluation.")
 
 Coverage has at least four meanings:
 
@@ -167,7 +167,7 @@ Set critical coverage gates independently of average performance. If account-clo
 
 Each test case should be a portable contract that the harness can validate before execution. It identifies the artifact and environment, creates the initial world, grants scoped test authority, schedules inputs and faults, declares allowed and forbidden effects, defines the oracle, and states termination rules.
 
-![Schema anatomy showing identity, artifact, initial world, inputs, tools, faults, limits, oracle, evidence, and stop rules around an immutable run contract.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-06.png "Figure 6. Reproducibility requires world state, permissions, faults, postconditions, invariants, and evidence—not merely an expected answer. AI-assisted design visualization; reference schema; not production data.")
+![Schema anatomy showing identity, artifact, initial world, inputs, tools, faults, limits, oracle, evidence, and stop rules around an immutable run contract.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-06.png "Figure 6. Reproducibility requires world state, permissions, faults, postconditions, invariants, and evidence—not merely an expected answer. AI-assisted design visualization; reference schema; not production data.")
 
 ```yaml
 case_id: collections/stale-promise-timeout-after-accept/v12
@@ -208,7 +208,7 @@ Exact replay may remain impossible for externally hosted stochastic models. Repr
 
 Evaluation fails when one proxy becomes the product objective. Model answer accuracy, tool-call correctness, workflow completion, policy compliance, customer impact, and business value answer different questions. Build a metric tree and preserve guardrails.
 
-![Six-level hierarchy from component and workflow metrics through policy, system, human, and verified business outcomes.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-07.png "Figure 7. Business objectives can improve only while every critical policy, safety, rights, reliability, and evidence guardrail meets its own floor. AI-assisted design visualization; reference metric tree; not production data.")
+![Six-level hierarchy from component and workflow metrics through policy, system, human, and verified business outcomes.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-07.png "Figure 7. Business objectives can improve only while every critical policy, safety, rights, reliability, and evidence guardrail meets its own floor. AI-assisted design visualization; reference metric tree; not production data.")
 
 **Component metrics** measure retrieval relevance, evidence freshness, model task behavior, tool argument validity, verifier accuracy, and policy-rule execution. **Workflow metrics** measure verified postconditions, safe abstention, steps, retries, duplication, and recovery. **Policy metrics** measure unauthorized proposals and effects, disclosure, required escalation, approval binding, and cross-tenant isolation. **System metrics** measure end-to-end latency, cost, capacity, availability, fault recovery, and receipt completeness.
 
@@ -230,7 +230,7 @@ Avoid silent denominator changes. “Success among completed cases” can improv
 
 Clean-path evaluation measures only clean-path behavior. Production tools fail before and after acceptance. Data becomes stale. credentials expire. queues duplicate. networks partition. models return malformed output. verifiers fail open. reviewers delay. The harness needs controlled fault injection at every boundary.
 
-![Fault map around the agent workflow covering model, context, memory, scheduler, identity, network, tool, data, verifier, and human failure modes.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-08.png "Figure 8. Each injected fault requires activation proof, system observation, safe restoration, and an oracle for task and containment behavior. AI-assisted design visualization; reference fault architecture; not production data.")
+![Fault map around the agent workflow covering model, context, memory, scheduler, identity, network, tool, data, verifier, and human failure modes.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-08.png "Figure 8. Each injected fault requires activation proof, system observation, safe restoration, and an oracle for task and containment behavior. AI-assisted design visualization; reference fault architecture; not production data.")
 
 A fault record specifies target, trigger, mode, duration, probability or exact schedule, affected calls, activation proof, restoration, and expected response. If the network proxy was supposed to delay a tool but the request used a bypass route, the test did not pass; the fault never activated. Record an injection receipt and observation receipt.
 
@@ -242,7 +242,7 @@ Assert invariants during failure, not only the final answer. No duplicate plan. 
 
 A mock that returns `{"status": "ok"}` does not evaluate tool use. A production-compatible simulator needs resource state, versions, permission checks, idempotency, asynchronous jobs, clocks, rate limits, latency distributions, validation errors, partial commits, callbacks, and authoritative query behavior.
 
-![Architecture joining an agent under test to a production-compatible tool API, stateful world model, fault engine, deterministic clock, effect monitor, oracle, and equivalence probes.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-09.png "Figure 9. A safe tool testbed models business state and effect semantics while contract-equivalence probes compare it with approved vendor sandboxes. AI-assisted design visualization; reference architecture; not production data.")
+![Architecture joining an agent under test to a production-compatible tool API, stateful world model, fault engine, deterministic clock, effect monitor, oracle, and equivalence probes.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-09.png "Figure 9. A safe tool testbed models business state and effect semantics while contract-equivalence probes compare it with approved vendor sandboxes. AI-assisted design visualization; reference architecture; not production data.")
 
 The simulator owns the test world, so the candidate cannot create a real external effect. It should expose the same request and receipt schema as production and enforce equivalent authority and idempotency behavior. It records state transitions before, during, and after each request so the oracle can distinguish rejected, accepted, committed, partially committed, and ambiguous outcomes.
 
@@ -254,7 +254,7 @@ Some production paths cannot be represented in a sandbox, particularly customer 
 
 Red teaming should begin with assets and authority, not a random collection of clever strings. Identify protected data, business effects, identity boundaries, approval paths, memory, tool outputs, attachments, and human channels. Generate attacks against explicit abuse cases and run them inside an environment that cannot create real harm.
 
-![Pipeline from threat model and attack generation through sanitization, isolated execution, adjudication, clustering, minimization, and versioned regression capture.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-10.png "Figure 10. Controlled adversarial testing becomes durable evidence when unique failures are adjudicated, minimized, assigned, fixed, and rerun. AI-assisted design visualization; reference pipeline; not production data.")
+![Pipeline from threat model and attack generation through sanitization, isolated execution, adjudication, clustering, minimization, and versioned regression capture.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-10.png "Figure 10. Controlled adversarial testing becomes durable evidence when unique failures are adjudicated, minimized, assigned, fixed, and rerun. AI-assisted design visualization; reference pipeline; not production data.")
 
 Attack surfaces include direct instructions, quoted customer messages, PDFs and spreadsheets, retrieved knowledge, memory entries, tool output, identity metadata, URLs, multi-turn persuasion, and compromised upstream agents. Objectives include authority escalation, hidden tool use, policy bypass, data exfiltration, cross-tenant confusion, approval spoofing, memory persistence, denial of service, and unsafe recovery.
 
@@ -268,7 +268,7 @@ Red-team discovery rates are not production incident probabilities. The case gen
 
 Shadow execution brings production-like inputs and operating conditions into evaluation while the incumbent remains the only path allowed to affect the business. The candidate receives an eligible, minimized action envelope and operates against a frozen, replayed, or simulated tool world. Its proposed decisions, trajectory, cost, latency, and failure behavior are recorded for comparison.
 
-![Sequence diagram separating production traffic and incumbent authorized effects from an effectless candidate shadow path and matured outcome comparison.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-11.png "Figure 11. Shadow mode improves representativeness while the candidate remains incapable of crossing an external effect boundary. AI-assisted design visualization; reference sequence; not production data.")
+![Sequence diagram separating production traffic and incumbent authorized effects from an effectless candidate shadow path and matured outcome comparison.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-11.png "Figure 11. Shadow mode improves representativeness while the candidate remains incapable of crossing an external effect boundary. AI-assisted design visualization; reference sequence; not production data.")
 
 Shadow traffic is not free of risk. Inputs may contain personal or confidential data. The candidate may use a different provider or region. Logging can duplicate sensitive content. Apply purpose, minimization, access, retention, and geography rules. Sample only eligible contracts and record why each envelope was included or excluded.
 
@@ -280,7 +280,7 @@ Shadow conditions differ from production. Simulated tools do not create downstre
 
 “Two percent of traffic” is not a sufficient canary definition. Two percent can contain an irreversible high-value export. Define independent ceilings for population, action types, resources, tools, value, volume, concurrency, duration, autonomy, reversibility, and human review.
 
-![Six-stage ladder from effectless shadow through internal, human-reviewed, low-value, cohort-limited, and bounded production authority.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-12.png "Figure 12. Each canary stage expands multiple authority dimensions only after lower-bound quality, guardrails, SLOs, label windows, and rollback proof pass. AI-assisted design visualization; reference ladder; not production data.")
+![Six-stage ladder from effectless shadow through internal, human-reviewed, low-value, cohort-limited, and bounded production authority.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-12.png "Figure 12. Each canary stage expands multiple authority dimensions only after lower-bound quality, guardrails, SLOs, label windows, and rollback proof pass. AI-assisted design visualization; reference ladder; not production data.")
 
 Stage 0 is shadow with no effect authority. Stage 1 uses internal or synthetic tenants and reversible resources. Stage 2 permits real proposals but requires human approval for every effect. Stage 3 permits a narrow low-value reversible effect set. Stage 4 expands to a declared cohort and volume. Stage 5 reaches the bounded production contract—not unlimited autonomy.
 
@@ -292,13 +292,13 @@ Each stage needs minimum exposure and observation time. Labels for payment-plan 
 
 The following sections retain the quantitative and systems detail for readers implementing the control plane.
 
-![Comparison across evaluated unit, inputs, environment, output, failures, policy, statistics, and decision between a benchmark score and production readiness.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-01.png "Figure 1. A benchmark supports bounded component evidence; production readiness requires a versioned system assurance case and explicit authority contract. AI-assisted design visualization; reference architecture; not production data.")
+![Comparison across evaluated unit, inputs, environment, output, failures, policy, statistics, and decision between a benchmark score and production readiness.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-01.png "Figure 1. A benchmark supports bounded component evidence; production readiness requires a versioned system assurance case and explicit authority contract. AI-assisted design visualization; reference architecture; not production data.")
 
 ## Put uncertainty into the release decision
 
 An observed rate is an estimate. Suppose a critical cohort records 88 verified successes in 95 independent cases. The point estimate is about `.926`, but uncertainty is wide. If the production floor is `.92`, the point estimate passes while the lower confidence bound fails.
 
-![Interval chart of synthetic verified workflow success proportions and Wilson 95% intervals for eight collections action cohorts.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-13.png "Figure 13. Smaller or weaker cohorts fail the lower-bound gate even when their point estimate exceeds the synthetic production floor. AI-assisted visualization; synthetic outcomes; not measured performance.")
+![Interval chart of synthetic verified workflow success proportions and Wilson 95% intervals for eight collections action cohorts.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-13.png "Figure 13. Smaller or weaker cohorts fail the lower-bound gate even when their point estimate exceeds the synthetic production floor. AI-assisted visualization; synthetic outcomes; not measured performance.")
 
 For `k` successes in `n` Bernoulli trials, a Wilson interval is often more reliable near the boundaries than the simplest normal approximation. With `z` for the desired confidence level:
 
@@ -319,7 +319,7 @@ Report results by the cohorts that drive risk and operations: action, policy bou
 
 When zero critical events appear in `n` simple independent trials, the “rule of three” gives an approximate one-sided 95% upper rate of `3/n`. Zero failures in 1,000 trials is consistent with an underlying rate around three per thousand at that confidence approximation. Reaching an upper bound of one per 100,000 requires about 300,000 representative independent exposures with zero events.
 
-![Log-log curve of the approximate one-sided 95% upper failure-rate bound after zero observed critical failures from one hundred to one million trials.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-14.png "Figure 14. Zero observed events is not zero risk; the approximate bound falls as representative independent exposure accumulates. AI-assisted visualization; analytical rule-of-three curve; not a risk forecast.")
+![Log-log curve of the approximate one-sided 95% upper failure-rate bound after zero observed critical failures from one hundred to one million trials.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-14.png "Figure 14. Zero observed events is not zero risk; the approximate bound falls as representative independent exposure accumulates. AI-assisted visualization; analytical rule-of-three curve; not a risk forecast.")
 
 The approximation becomes misleading when trials are dependent, cases are easier than production, the monitor misses events, behavior drifts, an attacker adapts, or the tested authority is narrower than deployment. One million duplicated easy prompts do not supply one million independent high-risk trials.
 
@@ -331,7 +331,7 @@ Use Bayesian methods or reliability models if their assumptions and priors are d
 
 The approval applies to an evaluated envelope. Production changes it. Customer language evolves. Account mix changes. Policy is revised. Tools change schema. Model providers update deployments. Retrieval content ages. Reviewers adapt. Queue load alters trajectories. The same artifact can leave its validated support without a formal release.
 
-![Timeline of synthetic input, outcome, calibration, and tool-error drift signals crossing review and constrain-or-rollback thresholds after tool and policy changes.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-15.png "Figure 15. Evidence expires when production moves outside the approved envelope, triggering review, constrained authority, targeted evaluation, or rollback. AI-assisted visualization; synthetic drift signals; not production monitoring.")
+![Timeline of synthetic input, outcome, calibration, and tool-error drift signals crossing review and constrain-or-rollback thresholds after tool and policy changes.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-15.png "Figure 15. Evidence expires when production moves outside the approved envelope, triggering review, constrained authority, targeted evaluation, or rollback. AI-assisted visualization; synthetic drift signals; not production monitoring.")
 
 Monitor input drift, action mix, novelty, evidence coverage, tool error, trajectory length, retry, abstention, human override, policy violations, calibration, latency, cost, and mature business outcomes separately. A single drift score hides cause and response.
 
@@ -345,7 +345,7 @@ Evidence has an expiry even without detected drift. Set validity by change rate 
 
 The release gate verifies artifact provenance, the deployment contract, critical scenario coverage, metric floors and bounds, policy and safety invariants, shadow evidence, canary results, operational readiness, incident controls, and rollback proof. It returns promote, constrain, or reject with reason codes and evidence links.
 
-![Decision tree from provenance, contract, coverage, metrics, shadow, and canary operations to explicit reject, constrain, or promote outcomes.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-16.png "Figure 16. Promotion emits a signed scoped authority contract; gaps produce rejection or a narrow expiring constraint, never a silent pass. AI-assisted design visualization; reference gate; not production data.")
+![Decision tree from provenance, contract, coverage, metrics, shadow, and canary operations to explicit reject, constrain, or promote outcomes.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-16.png "Figure 16. Promotion emits a signed scoped authority contract; gaps produce rejection or a narrow expiring constraint, never a silent pass. AI-assisted design visualization; reference gate; not production data.")
 
 Promotion evidence should be attached to the deployed artifact. [SLSA specification 1.2](https://slsa.dev/spec/v1.2/) describes supply-chain security levels and provenance concepts, and [SLSA's provenance overview](https://slsa.dev/spec/v1.2/provenance) describes verifiable information about where, when, and how artifacts were produced. This story borrows the principle of verifiable artifact identity and provenance; an agent evaluation attestation is an additional organization-specific artifact and is not a claim of SLSA compliance.
 
@@ -380,7 +380,7 @@ The deployment gateway verifies the signature, artifact digest, environment, con
 
 Evaluation is a service with backlogs, freshness, failure, and quality. Operate scenario coverage, reproducibility, evaluator agreement, evidence age, critical-policy performance, shadow receipt completeness, canary detection latency, and rollback exercise success separately.
 
-![Release-cycle scorecard for critical coverage, reproducibility, adjudication, freshness, policy, shadow receipts, canary detection, and rollback drills.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-17.png "Figure 17. The synthetic scorecard deliberately breaches critical coverage and evidence freshness even though six operational objectives pass. AI-assisted visualization; synthetic metrics; not production data.")
+![Release-cycle scorecard for critical coverage, reproducibility, adjudication, freshness, policy, shadow receipts, canary detection, and rollback drills.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-17.png "Figure 17. The synthetic scorecard deliberately breaches critical coverage and evidence freshness even though six operational objectives pass. AI-assisted visualization; synthetic metrics; not production data.")
 
 Reproducibility should define the allowed variance. The same run manifest may produce nonidentical text but should preserve policy invariants and outcome distribution. Adjudication agreement requires a protocol, training, blind overlap sample, disagreement resolution, and subgroup checks. High agreement can still encode a shared misunderstanding, so domain and risk review remain necessary.
 
@@ -394,7 +394,7 @@ Conflicts are expected. Product may want speed, evaluation may want more coverag
 
 Do not begin with a high-autonomy production canary and promise to build evaluation later. Establish observable effect boundaries and a reproducible harness before the candidate receives real authority.
 
-![Seven-phase roadmap from deployment contract and harness through coverage, resilience, shadow, canary, and continuous evidence renewal.](assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-18.png "Figure 18. Evidence strength and production authority increase together; each phase creates reusable claims, gates, and rollback capability. AI-assisted design visualization; reference roadmap; not production data.")
+![Seven-phase roadmap from deployment contract and harness through coverage, resilience, shadow, canary, and continuous evidence renewal.](../../../assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-18.png "Figure 18. Evidence strength and production authority increase together; each phase creates reusable claims, gates, and rollback capability. AI-assisted design visualization; reference roadmap; not production data.")
 
 **Phase 0 — contract.** Define actions, populations, tools, effects, value, volume, reversibility, human roles, prohibitions, SLOs, evidence, validity, and rollback. Instrument stable workflow, action, attempt, tool, approval, and outcome identities.
 

@@ -4,104 +4,20 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "A revenue-operations company deploys six AI agents to renew a strategic account: sales gathers context, pricing selects a discount, contract edits terms, billing changes the schedule, fulfillment reserves capacity, and communications sends the customer update. Pricing and contract both read account version 20. Pricing commits an 8% discount and advances the record to version 21. Contract, unaware of that change, submits a mutually incompatible term against version 20. Meanwhile billing commits, its response times out, the workflow retries, and a second worker takes over after a lease expires. Every model produced fluent output. The business now has two workers, two candidate truths, an ambiguous charge, and a customer message that may describe a state that never existed.",
-      "text": "A revenue-operations company deploys six AI agents to renew a strategic account: sales gathers context, pricing selects a discount, contract edits terms, billing changes the schedule, fulfillment reserves capacity, and communications sends the customer update. Pricing and contract both read account version 20. Pricing commits an 8% discount and advances the record to version 21. Contract, unaware of that change, submits a mutually incompatible term against version 20. Meanwhile billing commits, its response times out, the workflow retries, and a second worker takes over after a lease expires. Every model produced fluent output. The business now has two workers, two candidate truths, an ambiguous charge, and a customer message that may describe a state that never existed."
+      "html": "Six AI agents coordinate a strategic renewal. Pricing commits an 8% discount and advances the account to version 21. Contract, still reading version 20, submits an incompatible term. Billing commits a schedule change, but its response times out. The workflow retries while a second worker takes over after a lease expires. Every model produced fluent output. The business now has overlapping owners, incompatible truths and an ambiguous charge.",
+      "text": "Six AI agents coordinate a strategic renewal. Pricing commits an 8% discount and advances the account to version 21. Contract, still reading version 20, submits an incompatible term. Billing commits a schedule change, but its response times out. The workflow retries while a second worker takes over after a lease expires. Every model produced fluent output. The business now has overlapping owners, incompatible truths and an ambiguous charge."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "This story was written with AI writing and visualization assistance. The company, workflows, account values, traffic, service levels, failure rates, test results, and economics are synthetic; the diagrams are reference architectures rather than observations about a deployed multi-agent system. Source-backed distributed-systems mechanisms are distinguished from illustrative design choices, and production parameters require measurement and validation in the target environment.",
-      "text": "This story was written with AI writing and visualization assistance. The company, workflows, account values, traffic, service levels, failure rates, test results, and economics are synthetic; the diagrams are reference architectures rather than observations about a deployed multi-agent system. Source-backed distributed-systems mechanisms are distinguished from illustrative design choices, and production parameters require measurement and validation in the target environment."
+      "html": "This story was written with AI writing and visualization assistance. The company, traffic, failure rates and economics are synthetic; the diagrams are reference architectures.",
+      "text": "This story was written with AI writing and visualization assistance. The company, traffic, failure rates and economics are synthetic; the diagrams are reference architectures."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "The difficult part of a multi-agent system is not making agents talk. It is preserving business truth while messages are delayed, duplicated, reordered, or lost; workers crash after an external commit; owners overlap; records change concurrently; permissions expire; and compensations fail. Once independent processes can observe and mutate shared business state, the system has entered distributed-systems territory whether the components are called agents, services, copilots, or workflows.",
-      "text": "The difficult part of a multi-agent system is not making agents talk. It is preserving business truth while messages are delayed, duplicated, reordered, or lost; workers crash after an external commit; owners overlap; records change concurrently; permissions expire; and compensations fail. Once independent processes can observe and mutate shared business state, the system has entered distributed-systems territory whether the components are called agents, services, copilots, or workflows."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The production question is therefore not, “Can the agents collaborate?” It is:",
-      "text": "The production question is therefore not, “Can the agents collaborate?” It is:"
-    },
-    {
-      "type": "html",
-      "tag": "blockquote",
-      "html": "Can every externally visible effect be attributed to one durable workflow, accepted under current authority and resource state, applied at most once as a business effect, verified against its postcondition, and recovered without leaving an ownerless obligation?",
-      "text": "Can every externally visible effect be attributed to one durable workflow, accepted under current authority and resource state, applied at most once as a business effect, verified against its postcondition, and recovered without leaving an ownerless obligation?"
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-01.png",
-      "alt": "Comparison of conversational multi-agent coordination and a governed distributed workflow across ownership, state, ordering, retries, effects, failures, and recovery.",
-      "caption": "Figure 1. The same specialized agents have radically different reliability properties when coordination moves from conversational convention to a durable distributed workflow. AI-assisted design visualization; reference architecture; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Technical summary",
-      "text": "Technical summary"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A production multi-agent platform should treat the language model as a proposal engine inside a distributed control system. One durable workflow owns the lifecycle of the business intent. Every message carries stable workflow and action identities, causal parents, resource versions, an ownership epoch, bounded authority, expiry, and content digests. Domain systems enforce conditional writes, idempotency, and fencing; the orchestrator cannot merely claim those properties. External effects travel through a transactional outbox or an equivalent durable handoff. Ambiguous results enter reconciliation, not blind retry. Long-lived cross-domain work is modeled as a saga with explicit compensations and human-remediation states.",
-      "text": "A production multi-agent platform should treat the language model as a proposal engine inside a distributed control system. One durable workflow owns the lifecycle of the business intent. Every message carries stable workflow and action identities, causal parents, resource versions, an ownership epoch, bounded authority, expiry, and content digests. Domain systems enforce conditional writes, idempotency, and fencing; the orchestrator cannot merely claim those properties. External effects travel through a transactional outbox or an equivalent durable handoff. Ambiguous results enter reconciliation, not blind retry. Long-lived cross-domain work is modeled as a saga with explicit compensations and human-remediation states."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The core safety invariants are concrete and testable:",
-      "text": "The core safety invariants are concrete and testable:"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>•</strong> No domain accepts a write from an ownership epoch older than the highest epoch it has observed for the governed scope.<br><strong>•</strong> One stable action identity creates no more than one semantic business effect, even if transport delivers the request many times.<br><strong>•</strong> A mutation commits only if its resource-version precondition and policy-bound authority still hold.<br><strong>•</strong> Every terminal “succeeded” state resolves to a domain receipt and a verified postcondition.<br><strong>•</strong> Every nonterminal workflow has a current owner, a future retry, a reconciliation task, a compensation plan, or a human escalation.<br><strong>•</strong> Customer-visible facts are derived from verified domain state, not from the last message an agent generated.",
-      "text": "• No domain accepts a write from an ownership epoch older than the highest epoch it has observed for the governed scope.\n• One stable action identity creates no more than one semantic business effect, even if transport delivers the request many times.\n• A mutation commits only if its resource-version precondition and policy-bound authority still hold.\n• Every terminal “succeeded” state resolves to a domain receipt and a verified postcondition.\n• Every nonterminal workflow has a current owner, a future retry, a reconciliation task, a compensation plan, or a human escalation.\n• Customer-visible facts are derived from verified domain state, not from the last message an agent generated."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "These are stronger than “the agent completed its task.” A model can complete a task while the write is rejected. An API can return an error after committing. A queue can deliver twice. A lease holder can remain alive after losing ownership. The control plane must reason about business effects independently from conversational success.",
-      "text": "These are stronger than “the agent completed its task.” A model can complete a task while the write is rejected. An API can return an error after committing. A queue can deliver twice. A lease holder can remain alive after losing ownership. The control plane must reason about business effects independently from conversational success."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "This design does not require teams to implement a consensus algorithm inside prompts. It requires them to use proven durable infrastructure for workflow state and to expose the resulting monotonic terms, versions, idempotency keys, and receipts at business-effect boundaries. The <a href=\"https://raft.github.io/raft.pdf\">Raft paper</a> is useful here because it explains how replicated logs, terms, leader election, and deterministic state machines produce coherent state despite crash faults. It is a conceptual foundation for the workflow store, not a suggestion that application agents should reimplement Raft.",
-      "text": "This design does not require teams to implement a consensus algorithm inside prompts. It requires them to use proven durable infrastructure for workflow state and to expose the resulting monotonic terms, versions, idempotency keys, and receipts at business-effect boundaries. The Raft paper is useful here because it explains how replicated logs, terms, leader election, and deterministic state machines produce coherent state despite crash faults. It is a conceptual foundation for the workflow store, not a suggestion that application agents should reimplement Raft."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Scope and precise definitions",
-      "text": "Scope and precise definitions"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The reference scenario is a renewal workflow that spans CRM, configure-price-quote, contract, billing, fulfillment, and messaging domains. Each domain remains authoritative for its own records and policies. The workflow service owns progression, not the underlying business truth. Agents may propose steps and interpret evidence, but they do not acquire unbounded permission to rewrite a shared memory blob.",
-      "text": "The reference scenario is a renewal workflow that spans CRM, configure-price-quote, contract, billing, fulfillment, and messaging domains. Each domain remains authoritative for its own records and policies. The workflow service owns progression, not the underlying business truth. Agents may propose steps and interpret evidence, but they do not acquire unbounded permission to rewrite a shared memory blob."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "An <strong>agent</strong> is an independently scheduled component that can interpret context and propose or invoke typed actions. A <strong>workflow</strong> is the durable state machine for one business intent. A <strong>step</strong> is a retryable unit of workflow progress. An <strong>action</strong> is a stable semantic mutation request such as “apply approved discount proposal P7 to account A42.” An <strong>attempt</strong> is one transport execution of that action. An <strong>effect</strong> is the authoritative state transition accepted by a domain. A <strong>receipt</strong> binds the action, input digest, authority, precondition, domain result, resource version, and verification evidence.",
-      "text": "An agent is an independently scheduled component that can interpret context and propose or invoke typed actions. A workflow is the durable state machine for one business intent. A step is a retryable unit of workflow progress. An action is a stable semantic mutation request such as “apply approved discount proposal P7 to account A42.” An attempt is one transport execution of that action. An effect is the authoritative state transition accepted by a domain. A receipt binds the action, input digest, authority, precondition, domain result, resource version, and verification evidence."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A <strong>lease</strong> grants temporary ownership of a coordination scope. An <strong>epoch</strong>, or fencing token, is a monotonically increasing number assigned when ownership changes. A <strong>saga</strong> is a long-lived sequence of local transactions with explicit recovery actions; it does not provide global atomicity. A <strong>compensation</strong> is a domain action intended to semantically offset an earlier effect. It may be imperfect or impossible. A <strong>reconciliation</strong> resolves an ambiguous outcome by reading authoritative state and evidence before deciding whether to retry, compensate, accept, or escalate.",
-      "text": "A lease grants temporary ownership of a coordination scope. An epoch, or fencing token, is a monotonically increasing number assigned when ownership changes. A saga is a long-lived sequence of local transactions with explicit recovery actions; it does not provide global atomicity. A compensation is a domain action intended to semantically offset an earlier effect. It may be imperfect or impossible. A reconciliation resolves an ambiguous outcome by reading authoritative state and evidence before deciding whether to retry, compensate, accept, or escalate."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The consistency model is deliberately scoped. The architecture does not promise one globally serializable transaction across every SaaS and internal system. It promises explicit local preconditions, durable workflow state, causal evidence, duplicate containment, stale-owner rejection where domains support it, and governed recovery where they do not.",
-      "text": "The consistency model is deliberately scoped. The architecture does not promise one globally serializable transaction across every SaaS and internal system. It promises explicit local preconditions, durable workflow state, causal evidence, duplicate containment, stale-owner rejection where domains support it, and governed recovery where they do not."
+      "html": "Once independent agents can observe and mutate shared business state, the architecture is a distributed system. The control question is no longer “Can the agents collaborate?” It is whether one durable workflow owns the intent, stale owners are fenced, each semantic action creates at most one business effect, concurrent writes respect versions and every ambiguous outcome enters reconciliation instead of blind retry. Conversation quality cannot provide those guarantees. Domain services, workflow state and effect receipts must.",
+      "text": "Once independent agents can observe and mutate shared business state, the architecture is a distributed system. The control question is no longer “Can the agents collaborate?” It is whether one durable workflow owns the intent, stale owners are fenced, each semantic action creates at most one business effect, concurrent writes respect versions and every ambiguous outcome enters reconciliation instead of blind retry. Conversation quality cannot provide those guarantees. Domain services, workflow state and effect receipts must."
     },
     {
       "type": "figure",
@@ -111,9 +27,57 @@
     },
     {
       "type": "html",
+      "tag": "h2",
+      "html": "What this changes in production",
+      "text": "What this changes in production"
+    },
+    {
+      "type": "html",
       "tag": "p",
-      "html": "The architecture separates three responsibilities. Specialist agents interpret domain evidence and form proposals. The durable workflow records ownership, step state, causal lineage, outbox entries, receipts, and recovery obligations. Domain services enforce business invariants, versions, idempotency, and authority independently. This separation prevents an orchestration defect from becoming an automatic permission to corrupt every downstream system.",
-      "text": "The architecture separates three responsibilities. Specialist agents interpret domain evidence and form proposals. The durable workflow records ownership, step state, causal lineage, outbox entries, receipts, and recovery obligations. Domain services enforce business invariants, versions, idempotency, and authority independently. This separation prevents an orchestration defect from becoming an automatic permission to corrupt every downstream system."
+      "html": "<strong>•</strong> Give one durable workflow—not a chat transcript—ownership of the business intent.<br><strong>•</strong> Separate stable action identity from retry attempt identity.<br><strong>•</strong> Require conditional writes, idempotency and fencing at the domain boundary.<br><strong>•</strong> Treat timeouts after dispatch as ambiguous until authoritative state is reconciled.<br><strong>•</strong> Model cross-domain recovery as a saga with explicit human-remediation states.",
+      "text": "• Give one durable workflow—not a chat transcript—ownership of the business intent.\n• Separate stable action identity from retry attempt identity.\n• Require conditional writes, idempotency and fencing at the domain boundary.\n• Treat timeouts after dispatch as ambiguous until authoritative state is reconciled.\n• Model cross-domain recovery as a saga with explicit human-remediation states."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Decision table",
+      "text": "Decision table"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Coordination problem",
+        "Required mechanism",
+        "Enforcement point",
+        "Failure outcome"
+      ],
+      "rows": [
+        [
+          "Worker takeover",
+          "Lease plus monotonic epoch",
+          "Workflow store and domain gateway",
+          "Reject stale owner"
+        ],
+        [
+          "Duplicate delivery",
+          "Stable action ID and idempotency ledger",
+          "Authoritative domain",
+          "Return recorded result"
+        ],
+        [
+          "Concurrent mutation",
+          "Expected resource version",
+          "System of record",
+          "Reject and re-evaluate"
+        ],
+        [
+          "Cross-domain partial completion",
+          "Saga and compensation graph",
+          "Durable workflow",
+          "Reconcile, compensate or escalate"
+        ]
+      ],
+      "text": "Coordination problem | Required mechanism | Enforcement point | Failure outcome\nWorker takeover | Lease plus monotonic epoch | Workflow store and domain gateway | Reject stale owner\nDuplicate delivery | Stable action ID and idempotency ledger | Authoritative domain | Return recorded result\nConcurrent mutation | Expected resource version | System of record | Reject and re-evaluate\nCross-domain partial completion | Saga and compensation graph | Durable workflow | Reconcile, compensate or escalate"
     },
     {
       "type": "html",
@@ -163,91 +127,6 @@
       "tag": "p",
       "html": "Some invariants are safety properties: something bad never happens, such as accepting a stale owner. Others are liveness obligations: something good eventually happens, such as every ambiguous charge reaching verified, compensated, or escalated state. Liveness needs deadlines and ownership. “Eventually” without an age objective is an orphan queue.",
       "text": "Some invariants are safety properties: something bad never happens, such as accepting a stale owner. Others are liveness obligations: something good eventually happens, such as every ambiguous charge reaching verified, compensated, or escalated state. Liveness needs deadlines and ownership. “Eventually” without an age objective is an orphan queue."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Put coordination semantics inside the message",
-      "text": "Put coordination semantics inside the message"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Natural-language messages are insufficient protocol envelopes. “Please update the quote” does not identify the durable intent, expected record version, current owner, permission boundary, causal inputs, expiry, or duplicate key. Every inter-agent or agent-to-domain command needs a governed envelope that can be validated without asking a model what it meant.",
-      "text": "Natural-language messages are insufficient protocol envelopes. “Please update the quote” does not identify the durable intent, expected record version, current owner, permission boundary, causal inputs, expiry, or duplicate key. Every inter-agent or agent-to-domain command needs a governed envelope that can be validated without asking a model what it meant."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-04.png",
-      "alt": "Message envelope carrying durable identity, step metadata, causal order, authority, content digests, and delivery constraints.",
-      "caption": "Figure 4. Coordination metadata travels with the command so receivers can independently validate identity, order, authority, expiry, and duplication. AI-assisted design visualization; reference architecture; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A concrete envelope might look like this:",
-      "text": "A concrete envelope might look like this:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "{\n  \"message_id\": \"msg_092\",\n  \"tenant_id\": \"tenant_7\",\n  \"workflow_id\": \"wf_renewal_42\",\n  \"action_id\": \"act_discount_007\",\n  \"step\": \"pricing.apply_discount\",\n  \"attempt\": 2,\n  \"schema_version\": 3,\n  \"parent_message_ids\": [\"msg_088\", \"msg_089\"],\n  \"ownership\": {\n    \"scope\": \"account/A42/renewal/R9\",\n    \"epoch\": 43,\n    \"lease_id\": \"lease_071\",\n    \"not_after\": \"2026-08-23T10:42:20Z\"\n  },\n  \"authority\": {\n    \"grant_id\": \"grant_551\",\n    \"actions\": [\"pricing.discount.apply\"],\n    \"resource\": \"account/A42\",\n    \"value_limit\": 250000,\n    \"expires_at\": \"2026-08-23T10:42:30Z\"\n  },\n  \"preconditions\": {\n    \"resource_version\": 20,\n    \"policy_version\": \"pricing-policy/19\"\n  },\n  \"proposal_sha256\": \"c8b5…\",\n  \"evidence_manifest_sha256\": \"785f…\",\n  \"created_at\": \"2026-08-23T10:42:01Z\",\n  \"not_after\": \"2026-08-23T10:42:20Z\"\n}",
-      "language": "json"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Stable identifiers have separate jobs. <code>message_id</code> distinguishes transport events. <code>workflow_id</code> groups the end-to-end intent. <code>action_id</code> remains constant across retries and is the semantic deduplication key. <code>attempt</code> increases for observability but must not create a new effect identity. The proposal digest prevents a retry from silently changing the requested mutation. The evidence digest binds the decision to the sources that justified it. The resource version protects against lost updates. The epoch protects against stale owners. Expiry prevents delayed delivery from exercising old authority.",
-      "text": "Stable identifiers have separate jobs. messageid distinguishes transport events. workflowid groups the end-to-end intent. actionid remains constant across retries and is the semantic deduplication key. attempt increases for observability but must not create a new effect identity. The proposal digest prevents a retry from silently changing the requested mutation. The evidence digest binds the decision to the sources that justified it. The resource version protects against lost updates. The epoch protects against stale owners. Expiry prevents delayed delivery from exercising old authority."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Do not put secrets or entire sensitive documents in the envelope. Put immutable references and digests there, then resolve content through least-privilege access. Receivers should reject unknown schema versions, missing required parents, expired messages, mismatched digests, stale epochs, invalid grants, and failed preconditions with machine-readable reasons.",
-      "text": "Do not put secrets or entire sensitive documents in the envelope. Put immutable references and digests there, then resolve content through least-privilege access. Receivers should reject unknown schema versions, missing required parents, expired messages, mismatched digests, stale epochs, invalid grants, and failed preconditions with machine-readable reasons."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Choose orchestration, choreography, or a governed hybrid",
-      "text": "Choose orchestration, choreography, or a governed hybrid"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "“Multi-agent” does not imply peer-to-peer choreography. Topology should follow the invariants, coupling, observability, latency, and recovery model.",
-      "text": "“Multi-agent” does not imply peer-to-peer choreography. Topology should follow the invariants, coupling, observability, latency, and recovery model."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-05.png",
-      "alt": "Decision matrix comparing orchestration, choreography, and hybrid topology across seven coordination needs.",
-      "caption": "Figure 5. Orchestration is strongest for global invariants and recovery visibility, choreography for domain autonomy and fan-out, and a governed hybrid often fits enterprise workflows. AI-assisted visualization; synthetic comparative assessment; not benchmark data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Central orchestration works well when one end-to-end invariant, strict sequence, bounded concurrency, or visible recovery plan dominates. It concentrates workflow state and makes stuck progress easier to find. Its failure modes are control-plane concentration, coupling, and the temptation to absorb domain policy into one giant coordinator.",
-      "text": "Central orchestration works well when one end-to-end invariant, strict sequence, bounded concurrency, or visible recovery plan dominates. It concentrates workflow state and makes stuck progress easier to find. Its failure modes are control-plane concentration, coupling, and the temptation to absorb domain policy into one giant coordinator."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Choreography works well when domains own independent reactions to durable events, fan-out is expected, and no participant can know the entire process. Its failure modes are invisible coupling, event-version drift, accidental cycles, difficult end-to-end recovery, and multiple consumers interpreting one event differently.",
-      "text": "Choreography works well when domains own independent reactions to durable events, fan-out is expected, and no participant can know the entire process. Its failure modes are invisible coupling, event-version drift, accidental cycles, difficult end-to-end recovery, and multiple consumers interpreting one event differently."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The practical enterprise pattern is often hybrid: a durable orchestrator owns the customer or financial commitment, while domains publish facts and run local automation behind their boundaries. The orchestrator requests “reserve quote under proposal P7.” Pricing decides whether that action is valid and emits <code>quote.reserved</code>. Analytics, notification, and audit consumers may react choreographically. A global renewal status changes only through the durable workflow.",
-      "text": "The practical enterprise pattern is often hybrid: a durable orchestrator owns the customer or financial commitment, while domains publish facts and run local automation behind their boundaries. The orchestrator requests “reserve quote under proposal P7.” Pricing decides whether that action is valid and emits quote.reserved. Analytics, notification, and audit consumers may react choreographically. A global renewal status changes only through the durable workflow."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Avoid two extremes. A “god orchestrator” that bypasses domain rules becomes a privileged monolith. Pure peer choreography that relies on each agent remembering the whole story creates distributed responsibility without distributed control. Ownership of progression and ownership of business truth should be explicit and different.",
-      "text": "Avoid two extremes. A “god orchestrator” that bypasses domain rules becomes a privileged monolith. Pure peer choreography that relies on each agent remembering the whole story creates distributed responsibility without distributed control. Ownership of progression and ownership of business truth should be explicit and different."
     },
     {
       "type": "html",
@@ -340,55 +219,6 @@
       "tag": "p",
       "html": "Epochs are scope-specific. A single global epoch would serialize unrelated customers and create a huge blast radius. Choose the narrowest scope that contains the invariant: workflow, account, quote, order, or ledger partition. A pricing write and a fulfillment reservation may use different domain fences even when one workflow owns both.",
       "text": "Epochs are scope-specific. A single global epoch would serialize unrelated customers and create a huge blast radius. Choose the narrowest scope that contains the invariant: workflow, account, quote, order, or ledger partition. A pricing write and a fulfillment reservation may use different domain fences even when one workflow owns both."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Durable workflow state is a replicated-state problem",
-      "text": "Durable workflow state is a replicated-state problem"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Workflow progress cannot live only in an agent's context window. A crash, deployment, model route change, or context truncation would erase the authoritative plan. Store workflow state in a durable system that offers explicit consistency and recovery guarantees.",
-      "text": "Workflow progress cannot live only in an agent's context window. A crash, deployment, model route change, or context truncation would erase the authoritative plan. Store workflow state in a durable system that offers explicit consistency and recovery guarantees."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-08.png",
-      "alt": "Replicated workflow state machine with command log, committed index, deterministic apply, outbox, and effect worker.",
-      "caption": "Figure 8. Durable commands produce committed workflow state before external effects leave through an outbox and idempotent worker. AI-assisted design visualization informed by replicated-state-machine concepts; not an implementation of Raft."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The <a href=\"https://raft.github.io/raft.pdf\">Raft paper</a> describes replicated state machines as servers executing the same ordered commands from consistent logs, and it separates leader election, log replication, and safety. Application teams should normally rely on a mature database, durable workflow engine, or replicated log that already implements equivalent infrastructure guarantees. Prompts should never vote on who is leader, infer a committed index, or resolve conflicting workflow histories.",
-      "text": "The Raft paper describes replicated state machines as servers executing the same ordered commands from consistent logs, and it separates leader election, log replication, and safety. Application teams should normally rely on a mature database, durable workflow engine, or replicated log that already implements equivalent infrastructure guarantees. Prompts should never vote on who is leader, infer a committed index, or resolve conflicting workflow histories."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The application-level state machine still needs design. A renewal could move through:",
-      "text": "The application-level state machine still needs design. A renewal could move through:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "DRAFT\n  -> EVIDENCE_READY\n  -> PRICE_PROPOSED\n  -> PRICE_APPROVED\n  -> PRICE_APPLY_PENDING\n  -> PRICE_APPLIED\n  -> CONTRACT_PENDING\n  -> ...\n\nAny effecting state may also enter:\n  AMBIGUOUS -> RECONCILING -> VERIFIED | RETRYABLE | COMPENSATING | ESCALATED",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Transitions must be deterministic with respect to recorded inputs. Model calls can be nondeterministic, so persist their proposal, route, parameters, evidence digest, and output before a transition depends on them. Do not replay a model call and assume it reconstructs the same command.",
-      "text": "Transitions must be deterministic with respect to recorded inputs. Model calls can be nondeterministic, so persist their proposal, route, parameters, evidence digest, and output before a transition depends on them. Do not replay a model call and assume it reconstructs the same command."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Use a transactional outbox when the workflow database commits state that should cause an external effect. In the same transaction, update the workflow and append an outbox record. A worker later delivers that record using the stable <code>action_id</code>. This prevents the classic gap in which workflow state commits but the request is never sent. It does not make the external effect atomic with the local transaction; idempotency and reconciliation remain necessary.",
-      "text": "Use a transactional outbox when the workflow database commits state that should cause an external effect. In the same transaction, update the workflow and append an outbox record. A worker later delivers that record using the stable actionid. This prevents the classic gap in which workflow state commits but the request is never sent. It does not make the external effect atomic with the local transaction; idempotency and reconciliation remain necessary."
     },
     {
       "type": "html",
@@ -532,48 +362,6 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Causal order is narrower than global order",
-      "text": "Causal order is narrower than global order"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Not every event needs one total global sequence. It does need enough causality to prevent dependent work from observing impossible histories. If a customer message depends on a committed price and signed term, its parents should identify those facts. Two proposals with no causal path may be concurrent and require a domain merge or conflict rule.",
-      "text": "Not every event needs one total global sequence. It does need enough causality to prevent dependent work from observing impossible histories. If a customer message depends on a committed price and signed term, its parents should identify those facts. Two proposals with no causal path may be concurrent and require a domain merge or conflict rule."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-12.png",
-      "alt": "Causal graph distinguishing ordered proposal and commit chains from concurrent price and contract work.",
-      "caption": "Figure 12. Parent links and resource versions expose which events happened before others and which proposals were concurrent. AI-assisted design visualization; reference causal graph; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "For events <code>a</code> and <code>b</code>, define <code>a → b</code> when <code>a</code> causally precedes <code>b</code>: the same process emitted <code>a</code> before <code>b</code>, <code>b</code> was produced after consuming <code>a</code>, or transitivity connects them. If neither <code>a → b</code> nor <code>b → a</code>, they are concurrent, written <code>a ∥ b</code>. Physical timestamps can help operations but cannot prove causality under skew and delayed delivery.",
-      "text": "For events a and b, define a → b when a causally precedes b: the same process emitted a before b, b was produced after consuming a, or transitivity connects them. If neither a → b nor b → a, they are concurrent, written a ∥ b. Physical timestamps can help operations but cannot prove causality under skew and delayed delivery."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The platform can record direct parent IDs plus domain versions. Vector clocks offer richer causality but may be expensive when participants are dynamic. A workflow sequence plus per-domain versions is often sufficient for bounded enterprise processes. The right structure depends on the merge question, not academic elegance.",
-      "text": "The platform can record direct parent IDs plus domain versions. Vector clocks offer richer causality but may be expensive when participants are dynamic. A workflow sequence plus per-domain versions is often sufficient for bounded enterprise processes. The right structure depends on the merge question, not academic elegance."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Consumer logic should declare required predecessors. A message-generation step could require <code>pricing_effect.version = 21</code>, <code>contract_effect.status = SIGNED</code>, and <code>workflow.customer_commitment_state = VERIFIED</code>. If one parent is missing or superseded, the event waits, expires, or triggers reconciliation. It does not ask a model whether the timeline “looks consistent.”",
-      "text": "Consumer logic should declare required predecessors. A message-generation step could require pricingeffect.version = 21, contracteffect.status = SIGNED, and workflow.customercommitmentstate = VERIFIED. If one parent is missing or superseded, the event waits, expires, or triggers reconciliation. It does not ask a model whether the timeline “looks consistent.”"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Event-time analytics must also handle reordering. Operational dashboards should distinguish created time, committed time, observed time, and reconciled time. Otherwise a late event can make recovery appear to precede failure or inflate apparent step latency.",
-      "text": "Event-time analytics must also handle reordering. Operational dashboards should distinguish created time, committed time, observed time, and reconciled time. Otherwise a late event can make recovery appear to precede failure or inflate apparent step latency."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
       "html": "Cross-domain work is a saga, not a giant transaction",
       "text": "Cross-domain work is a saga, not a giant transaction"
     },
@@ -672,44 +460,14 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Split brain is an effect problem",
-      "text": "Split brain is an effect problem"
+      "html": "Technical deep dive",
+      "text": "Technical deep dive"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Two active workers can arise through network partition, lease-store failover, scheduler suspension, long garbage collection, delayed revocation, or incorrect clock assumptions. A health check can prove one worker responds; it cannot prove no other worker is acting elsewhere.",
-      "text": "Two active workers can arise through network partition, lease-store failover, scheduler suspension, long garbage collection, delayed revocation, or incorrect clock assumptions. A health check can prove one worker responds; it cannot prove no other worker is acting elsewhere."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-15.png",
-      "alt": "Failure tree showing four paths to two active owners and three domain controls that contain their effects.",
-      "caption": "Figure 15. Split brain can begin in several control-plane failures; monotonic epochs, domain fencing, and action idempotency contain its business effects. AI-assisted design visualization; reference failure tree; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The containment strategy is layered:",
-      "text": "The containment strategy is layered:"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>•</strong> The ownership store issues monotonically increasing epochs through a strongly consistent update.<br><strong>•</strong> Workers stop starting new work when they cannot renew within a safety margin.<br><strong>•</strong> Messages carry the epoch and expire quickly enough for the action class.<br><strong>•</strong> Domain services store the highest accepted epoch for the protected scope and reject older writes.<br><strong>•</strong> Stable action identities prevent duplicate effects even when two current-looking attempts arrive.<br><strong>•</strong> Resource versions reject proposals built against stale business state.<br><strong>•</strong> Reconciliation searches for ambiguous effects and unresolved sagas after failover.",
-      "text": "• The ownership store issues monotonically increasing epochs through a strongly consistent update.\n• Workers stop starting new work when they cannot renew within a safety margin.\n• Messages carry the epoch and expire quickly enough for the action class.\n• Domain services store the highest accepted epoch for the protected scope and reject older writes.\n• Stable action identities prevent duplicate effects even when two current-looking attempts arrive.\n• Resource versions reject proposals built against stale business state.\n• Reconciliation searches for ambiguous effects and unresolved sagas after failover."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Default-deny behavior matters. If a protected domain cannot verify the epoch or authority service, it should reject high-risk writes or route them through an explicitly designed degraded mode. “Fail open so the agent keeps working” silently converts a control-plane outage into unauthorized business activity.",
-      "text": "Default-deny behavior matters. If a protected domain cannot verify the epoch or authority service, it should reject high-risk writes or route them through an explicitly designed degraded mode. “Fail open so the agent keeps working” silently converts a control-plane outage into unauthorized business activity."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Not every action needs the same availability choice. A low-risk enrichment may proceed in a partition under bounded local rules. A material price change may wait. A safety containment action may use a pre-authorized emergency path with narrower scope, shorter duration, and mandatory after-action review. Availability is a business policy encoded at the action boundary.",
-      "text": "Not every action needs the same availability choice. A low-risk enrichment may proceed in a partition under bounded local rules. A material price change may wait. A safety containment action may use a pre-authorized emergency path with narrower scope, shorter duration, and mandatory after-action review. Availability is a business policy encoded at the action boundary."
+      "html": "The following sections retain the quantitative and systems detail for readers implementing the control plane.",
+      "text": "The following sections retain the quantitative and systems detail for readers implementing the control plane."
     },
     {
       "type": "html",
@@ -757,305 +515,38 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Operate business-effect SLOs",
-      "text": "Operate business-effect SLOs"
+      "html": "Production implementation checklist",
+      "text": "Production implementation checklist"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Model quality, task completion, and API availability are useful but insufficient. Operations needs objectives that describe the integrity and recovery of business effects.",
-      "text": "Model quality, task completion, and API availability are useful but insufficient. Operations needs objectives that describe the integrity and recovery of business effects."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-17.png",
-      "alt": "Scorecard for duplicate effects, stale-owner acceptance, ambiguity age, saga recovery, compensation breaches, orphan sagas, causal rejection, and receipt coverage.",
-      "caption": "Figure 17. Multi-agent operations tracks business-effect integrity and recovery separately from agent task success. AI-assisted visualization; synthetic 30-day values with deliberate breaches; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Define a denominator and oracle for every metric:",
-      "text": "Define a denominator and oracle for every metric:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "duplicate_effect_rate\n  = action_ids_with_more_than_one_accepted_effect\n    / action_ids_with_any_accepted_effect\n\nstale_owner_accept_rate\n  = accepted_effects_with_epoch_below_domain_max\n    / protected_effect_attempts\n\nambiguity_age_p99\n  = p99(resolved_at - ambiguity_started_at)\n\norphan_saga_count\n  = sagas_without_terminal_state\n    and without_owner\n    and without_scheduled_transition",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Targets depend on action class. Duplicate financial effects and stale-owner acceptance may have a zero tolerance with immediate containment. Low-risk enrichment may use a small error budget. Ambiguity age should be shorter than the point at which unresolved state creates customer or financial harm. Saga-recovery targets should state both recovery rate and deadline.",
-      "text": "Targets depend on action class. Duplicate financial effects and stale-owner acceptance may have a zero tolerance with immediate containment. Low-risk enrichment may use a small error budget. Ambiguity age should be shorter than the point at which unresolved state creates customer or financial harm. Saga-recovery targets should state both recovery rate and deadline."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Interpret errors correctly. A spike in <code>STALE_OWNER</code> rejections can mean the fencing control worked during instability. It is still an operational signal about lease churn or paused workers, but it is not equivalent to an accepted stale effect. Separate prevented attempts from realized invariant breaches.",
-      "text": "Interpret errors correctly. A spike in STALEOWNER rejections can mean the fencing control worked during instability. It is still an operational signal about lease churn or paused workers, but it is not equivalent to an accepted stale effect. Separate prevented attempts from realized invariant breaches."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Create a reconciliation control room for unresolved effects. Operators should see the workflow, action, scope, last confirmed state, domains touched, receipts present, ambiguity age, potential exposure, next scheduled action, and human owner. Pages should link to safe recovery operations, not encourage ad hoc database edits.",
-      "text": "Create a reconciliation control room for unresolved effects. Operators should see the workflow, action, scope, last confirmed state, domains touched, receipts present, ambiguity age, potential exposure, next scheduled action, and human owner. Pages should link to safe recovery operations, not encourage ad hoc database edits."
+      "html": "<strong>•</strong> Define workflow, step, action, attempt, effect and receipt identifiers.<br><strong>•</strong> Persist workflow transitions before dispatching external effects.<br><strong>•</strong> Put resource version, authority digest, expiry and ownership epoch on every effect request.<br><strong>•</strong> Enforce fencing and idempotency in each authoritative domain.<br><strong>•</strong> Use a transactional outbox or equivalent durable handoff.<br><strong>•</strong> Reconcile timeout-after-dispatch before retrying.<br><strong>•</strong> Declare compensations, dependencies and human-remediation states.<br><strong>•</strong> Test duplicate delivery, lease expiry, partition, stale write and partial compensation.",
+      "text": "• Define workflow, step, action, attempt, effect and receipt identifiers.\n• Persist workflow transitions before dispatching external effects.\n• Put resource version, authority digest, expiry and ownership epoch on every effect request.\n• Enforce fencing and idempotency in each authoritative domain.\n• Use a transactional outbox or equivalent durable handoff.\n• Reconcile timeout-after-dispatch before retrying.\n• Declare compensations, dependencies and human-remediation states.\n• Test duplicate delivery, lease expiry, partition, stale write and partial compensation."
     },
     {
       "type": "html",
       "tag": "h2",
-      "html": "Price coordination as a business cost",
-      "text": "Price coordination as a business cost"
+      "html": "Continue the Production AI Control Plane series",
+      "text": "Continue the Production AI Control Plane series"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Multi-agent architecture changes the economics of automation. Decomposing one workflow across more agents may improve expertise, modularity, and independent checks. It also adds messages, model calls, durable transitions, potential races, recovery branches, and operational burden.",
-      "text": "Multi-agent architecture changes the economics of automation. Decomposing one workflow across more agents may improve expertise, modularity, and independent checks. It also adds messages, model calls, durable transitions, potential races, recovery branches, and operational burden."
+      "html": "<strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/\">Every AI Agent Action Needs a Receipt</a><br><strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/\">Your AI Agent Needs a Real Kill Switch</a><br><strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/\">Do Not Let an AI Agent Touch Production Until It Passes This Evaluation</a>",
+      "text": "• Every AI Agent Action Needs a Receipt\n• Your AI Agent Needs a Real Kill Switch\n• Do Not Let an AI Agent Touch Production Until It Passes This Evaluation"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "An illustrative expected cost per completed workflow is:",
-      "text": "An illustrative expected cost per completed workflow is:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "C_total = C_model\n        + C_tool\n        + C_coordination\n        + C_review\n        + C_delay\n        + E[C_recovery]\n        + E[L_residual]\n\nE[C_recovery] = Σ_f P(f) × C_recover(f)\nE[L_residual] = Σ_h P(h | controls) × Loss(h)",
-      "language": "text"
+      "html": "<em>Part of the Production AI Control Plane series—practical architectures for agent identity, authorization, governance, observability and recovery.</em>",
+      "text": "Part of the Production AI Control Plane series—practical architectures for agent identity, authorization, governance, observability and recovery."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "<code>C_coordination</code> includes state transitions, messages, storage, idempotency lookups, version conflicts, and observability. <code>C_delay</code> includes customer and operational value lost while steps serialize or reconcile. <code>E[C_recovery]</code> prices common fault paths. <code>E[L_residual]</code> prices harm that controls do not prevent or fully reverse.",
-      "text": "Ccoordination includes state transitions, messages, storage, idempotency lookups, version conflicts, and observability. Cdelay includes customer and operational value lost while steps serialize or reconcile. E[Crecovery] prices common fault paths. E[Lresidual] prices harm that controls do not prevent or fully reverse."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The correct comparator is not token cost alone. Compare a one-agent controlled workflow, a multi-agent controlled workflow, and the human or legacy process across decision quality, cycle time, throughput, loss tail, auditability, recovery workload, and change cost. A multi-agent design is justified when specialization or independent checking creates measurable value greater than coordination and residual-risk cost.",
-      "text": "The correct comparator is not token cost alone. Compare a one-agent controlled workflow, a multi-agent controlled workflow, and the human or legacy process across decision quality, cycle time, throughput, loss tail, auditability, recovery workload, and change cost. A multi-agent design is justified when specialization or independent checking creates measurable value greater than coordination and residual-risk cost."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A useful marginal decision is:",
-      "text": "A useful marginal decision is:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "add specialist agent k only if\n\nΔQualityValue_k + ΔRiskReduction_k + ΔCapacityValue_k\n  > ΔInferenceCost_k + ΔLatencyCost_k\n  + ΔCoordinationCost_k + ΔRecoveryCost_k\n  + ΔResidualLoss_k",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The terms need empirical estimates and sensitivity ranges. If the business case works only when retries never happen or recovery labor is valued at zero, it is not a production business case.",
-      "text": "The terms need empirical estimates and sensitivity ranges. If the business case works only when retries never happen or recovery labor is valued at zero, it is not a production business case."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Define ownership across platform and domains",
-      "text": "Define ownership across platform and domains"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The platform team should own the workflow runtime, envelope standard, lease and epoch service, schema registry, outbox library, trace correlation, replay controls, and coordination SLO framework. Domain teams should own business invariants, conditional mutation APIs, idempotency retention, receipt semantics, compensation actions, and authoritative oracles. Risk and security should own action classes, degraded-mode rules, authority constraints, and independent control testing. Operations should own reconciliation queues and recovery runbooks.",
-      "text": "The platform team should own the workflow runtime, envelope standard, lease and epoch service, schema registry, outbox library, trace correlation, replay controls, and coordination SLO framework. Domain teams should own business invariants, conditional mutation APIs, idempotency retention, receipt semantics, compensation actions, and authoritative oracles. Risk and security should own action classes, degraded-mode rules, authority constraints, and independent control testing. Operations should own reconciliation queues and recovery runbooks."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Product teams own the end-to-end journey and trade-offs. They decide which failures may wait, which require containment, which residuals need customer remediation, and whether added specialization is economically justified. An architecture committee can review patterns, but it cannot become the daily owner of every stuck saga.",
-      "text": "Product teams own the end-to-end journey and trade-offs. They decide which failures may wait, which require containment, which residuals need customer remediation, and whether added specialization is economically justified. An architecture committee can review patterns, but it cannot become the daily owner of every stuck saga."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Separation of duties may also apply among agents. An evidence-gathering agent can prepare sources while a policy agent evaluates admissibility and a deterministic service enforces the result. That separation is useful only when identities, inputs, and permissions are actually isolated. Three prompts sharing one credential and one mutable context are not three independent controls.",
-      "text": "Separation of duties may also apply among agents. An evidence-gathering agent can prepare sources while a policy agent evaluates admissibility and a deterministic service enforces the result. That separation is useful only when identities, inputs, and permissions are actually isolated. Three prompts sharing one credential and one mutable context are not three independent controls."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Change management needs protocol compatibility. Version envelopes and events. Support a bounded compatibility window. Replay historical traces against new transition logic. Roll out by workflow slice and action class. Keep old consumers until lag and dead-letter evidence show safe retirement. A prompt deployment can be reversible while an event-schema break is not.",
-      "text": "Change management needs protocol compatibility. Version envelopes and events. Support a bounded compatibility window. Replay historical traces against new transition logic. Roll out by workflow slice and action class. Keep old consumers until lag and dead-letter evidence show safe retirement. A prompt deployment can be reversible while an event-schema break is not."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Migrate before multiplying agents",
-      "text": "Migrate before multiplying agents"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Do not begin by splitting the current agent into six personas. First make one workflow's effects durable, unique, conditional, authorized, and recoverable. Then add specialization behind the same control contract.",
-      "text": "Do not begin by splitting the current agent into six personas. First make one workflow's effects durable, unique, conditional, authorized, and recoverable. Then add specialization behind the same control contract."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/your-multi-agent-system-is-a-distributed-system/figure-18.png",
-      "alt": "Six-phase migration from shared-state inventory through durable workflow, fencing, recovery, and controlled specialization.",
-      "caption": "Figure 18. Coordination maturity advances through evidence gates; additional agents arrive only after business effects survive fault injection and recovery. AI-assisted design visualization; reference roadmap; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 0 — inventory.</strong> Map every shared record, external side effect, credential, queue, callback, scheduler, manual correction, and retry path. Identify where timeouts can hide commits. Write the top business invariants and name domain oracles.",
-      "text": "Phase 0 — inventory. Map every shared record, external side effect, credential, queue, callback, scheduler, manual correction, and retry path. Identify where timeouts can hide commits. Write the top business invariants and name domain oracles."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 1 — stable identity.</strong> Assign workflow and action IDs. Separate action identity from attempt identity. Normalize proposal digests. Add domain idempotency for the highest-risk effects. Gate exit on deliberate duplicate-delivery tests.",
-      "text": "Phase 1 — stable identity. Assign workflow and action IDs. Separate action identity from attempt identity. Normalize proposal digests. Add domain idempotency for the highest-risk effects. Gate exit on deliberate duplicate-delivery tests."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 2 — durable workflow.</strong> Move progression out of prompt memory. Persist transitions, model proposals, evidence digests, outbox records, receipts, ambiguity, and recovery obligations. Gate exit on crash-and-replay tests with no lost committed work.",
-      "text": "Phase 2 — durable workflow. Move progression out of prompt memory. Persist transitions, model proposals, evidence digests, outbox records, receipts, ambiguity, and recovery obligations. Gate exit on crash-and-replay tests with no lost committed work."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 3 — versions and fencing.</strong> Add resource preconditions, ownership leases, monotonic epochs, and domain rejection of stale owners. Gate exit on partition, pause, failover, and concurrent-write tests.",
-      "text": "Phase 3 — versions and fencing. Add resource preconditions, ownership leases, monotonic epochs, and domain rejection of stale owners. Gate exit on partition, pause, failover, and concurrent-write tests."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 4 — recovery.</strong> Define sagas, compensation dependencies, reconciliation, intervention queues, and business-effect SLOs. Gate exit on end-to-end chaos tests that run through terminal recovery.",
-      "text": "Phase 4 — recovery. Define sagas, compensation dependencies, reconciliation, intervention queues, and business-effect SLOs. Gate exit on end-to-end chaos tests that run through terminal recovery."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 5 — specialize.</strong> Introduce additional agents where the economic and risk case is positive. Preserve the action contract. Compare one-agent and multi-agent cohorts on quality, cycle time, cost, conflicts, ambiguity, and recovery. Roll back the workflow slice—not just the latest prompt—if invariant evidence degrades.",
-      "text": "Phase 5 — specialize. Introduce additional agents where the economic and risk case is positive. Preserve the action contract. Compare one-agent and multi-agent cohorts on quality, cycle time, cost, conflicts, ambiguity, and recovery. Roll back the workflow slice—not just the latest prompt—if invariant evidence degrades."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The migration can be incremental. Start with one consequential action, such as discount application, rather than replacing the entire renewal process. The vertical slice should include proposal, authority, version guard, idempotency, receipt, verification, compensation, metrics, and runbook. A narrow complete control path teaches more than a broad orchestration demo.",
-      "text": "The migration can be incremental. Start with one consequential action, such as discount application, rather than replacing the entire renewal process. The vertical slice should include proposal, authority, version guard, idempotency, receipt, verification, compensation, metrics, and runbook. A narrow complete control path teaches more than a broad orchestration demo."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Failure modes and limitations",
-      "text": "Failure modes and limitations"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "This blueprint does not eliminate distributed failure. It makes failure bounded, visible, and recoverable.",
-      "text": "This blueprint does not eliminate distributed failure. It makes failure bounded, visible, and recoverable."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>A strongly consistent workflow store can still be unavailable.</strong> Decide which actions wait, fail closed, or enter a constrained emergency path. Do not weaken every domain because the coordinator is down.",
-      "text": "A strongly consistent workflow store can still be unavailable. Decide which actions wait, fail closed, or enter a constrained emergency path. Do not weaken every domain because the coordinator is down."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Fencing coverage can be incomplete.</strong> Some third-party APIs cannot validate epochs or stable idempotency keys. Wrap them where possible, serialize through a gateway, verify immediately, and keep the residual exposure explicit.",
-      "text": "Fencing coverage can be incomplete. Some third-party APIs cannot validate epochs or stable idempotency keys. Wrap them where possible, serialize through a gateway, verify immediately, and keep the residual exposure explicit."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Idempotency can preserve the wrong effect.</strong> One uniquely applied command can still be based on bad evidence or invalid policy. Evidence provenance, approval, authority, preconditions, and postcondition verification remain separate controls.",
-      "text": "Idempotency can preserve the wrong effect. One uniquely applied command can still be based on bad evidence or invalid policy. Evidence provenance, approval, authority, preconditions, and postcondition verification remain separate controls."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Compensations can create additional harm.</strong> A refund, correction, or cancellation may have tax, contractual, customer, or operational consequences. Test compensation policy and require human remediation for irreversible commitments.",
-      "text": "Compensations can create additional harm. A refund, correction, or cancellation may have tax, contractual, customer, or operational consequences. Test compensation policy and require human remediation for irreversible commitments."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Causal metadata can be lost at integration boundaries.</strong> Legacy systems may emit events without workflow IDs or versions. Reconstructing lineage from timestamps is probabilistic. Mark confidence and avoid strong causal claims when evidence is incomplete.",
-      "text": "Causal metadata can be lost at integration boundaries. Legacy systems may emit events without workflow IDs or versions. Reconstructing lineage from timestamps is probabilistic. Mark confidence and avoid strong causal claims when evidence is incomplete."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Byzantine behavior is out of scope.</strong> The reference design primarily addresses crash faults, partitions, retries, stale workers, concurrency, and integration defects. A malicious domain, forged identity, compromised key, or colluding component needs stronger authentication, integrity, attestation, isolation, and incident response.",
-      "text": "Byzantine behavior is out of scope. The reference design primarily addresses crash faults, partitions, retries, stale workers, concurrency, and integration defects. A malicious domain, forged identity, compromised key, or colluding component needs stronger authentication, integrity, attestation, isolation, and incident response."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Synthetic figures are not reliability evidence.</strong> The matrices, values, and scorecards illustrate how to structure decisions. They do not establish achievable failure rates, safe lease durations, or economic returns. Production teams need measured traces, controlled fault injection, recovery exercises, and independent review.",
-      "text": "Synthetic figures are not reliability evidence. The matrices, values, and scorecards illustrate how to structure decisions. They do not establish achievable failure rates, safe lease durations, or economic returns. Production teams need measured traces, controlled fault injection, recovery exercises, and independent review."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Production-readiness questions",
-      "text": "Production-readiness questions"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Before a multi-agent workflow can mutate consequential systems, its owners should answer:",
-      "text": "Before a multi-agent workflow can mutate consequential systems, its owners should answer:"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>•</strong> What are the business invariants, and which domains enforce them?<br><strong>•</strong> What is the stable workflow identity, action identity, and retry identity?<br><strong>•</strong> Which resource version and causal parents justified each proposal?<br><strong>•</strong> Who owns the workflow now, under what epoch, and which domains fence it?<br><strong>•</strong> Can a duplicate request produce a second semantic effect?<br><strong>•</strong> What does a timeout mean for each tool, and how is ambiguity reconciled?<br><strong>•</strong> Which durable record survives a worker crash between local commit and external delivery?<br><strong>•</strong> Which receipts prove that a claimed success became authoritative state?<br><strong>•</strong> Which cross-domain sequence is a saga, and what are its compensations and irreversibilities?<br><strong>•</strong> How are compensation dependencies ordered and verified?<br><strong>•</strong> Which fault tests demonstrate one effect, current authority, preserved versions, and no orphan recovery?<br><strong>•</strong> Which SLOs measure business integrity rather than conversational completion?<br><strong>•</strong> Who owns each unresolved saga, and when does it escalate?<br><strong>•</strong> What measurable value justifies every additional agent and coordination edge?",
-      "text": "• What are the business invariants, and which domains enforce them?\n• What is the stable workflow identity, action identity, and retry identity?\n• Which resource version and causal parents justified each proposal?\n• Who owns the workflow now, under what epoch, and which domains fence it?\n• Can a duplicate request produce a second semantic effect?\n• What does a timeout mean for each tool, and how is ambiguity reconciled?\n• Which durable record survives a worker crash between local commit and external delivery?\n• Which receipts prove that a claimed success became authoritative state?\n• Which cross-domain sequence is a saga, and what are its compensations and irreversibilities?\n• How are compensation dependencies ordered and verified?\n• Which fault tests demonstrate one effect, current authority, preserved versions, and no orphan recovery?\n• Which SLOs measure business integrity rather than conversational completion?\n• Who owns each unresolved saga, and when does it escalate?\n• What measurable value justifies every additional agent and coordination edge?"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "If the answers live only in prompts, diagrams, or the memory of one engineer, the system is not production-coordinated.",
-      "text": "If the answers live only in prompts, diagrams, or the memory of one engineer, the system is not production-coordinated."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Further questions",
-      "text": "Further questions"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Several design questions require target-system evidence. How long can duplicate attempts reappear after queue replay, disaster recovery, or offline operation? Which domains can atomically bind fencing, idempotency, and mutation? What scheduler pauses and network delays define a safe lease margin? Which compensation steps are legally or operationally irreversible? Which action classes require stronger consistency than the platform currently offers? How quickly does ambiguity become customer harm? Which specialist agent adds measurable value after coordination cost is included?",
-      "text": "Several design questions require target-system evidence. How long can duplicate attempts reappear after queue replay, disaster recovery, or offline operation? Which domains can atomically bind fencing, idempotency, and mutation? What scheduler pauses and network delays define a safe lease margin? Which compensation steps are legally or operationally irreversible? Which action classes require stronger consistency than the platform currently offers? How quickly does ambiguity become customer harm? Which specialist agent adds measurable value after coordination cost is included?"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "These should become experiments, fault campaigns, and policy decisions with owners—not assumptions hidden in framework defaults.",
-      "text": "These should become experiments, fault campaigns, and policy decisions with owners—not assumptions hidden in framework defaults."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The governing principle is simple:",
-      "text": "The governing principle is simple:"
-    },
-    {
-      "type": "html",
-      "tag": "blockquote",
-      "html": "Agent fluency can propose the next move. Only a distributed control system can prove which move owns the right state, authority, order, effect, and recovery obligation.",
-      "text": "Agent fluency can propose the next move. Only a distributed control system can prove which move owns the right state, authority, order, effect, and recovery obligation."
+      "html": "<em>Follow Aditya Singh for production-grade enterprise AI architecture, governance and economics.</em>",
+      "text": "Follow Aditya Singh for production-grade enterprise AI architecture, governance and economics."
     }
   ],
   "canonical": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
@@ -1065,7 +556,7 @@
   "id": "b722ff3f2488",
   "modifiedAt": "2026-08-23T12:30:00.000Z",
   "publishedAt": "2026-08-23T12:30:00.000Z",
-  "readTime": "31 min read",
+  "readTime": "15 min read",
   "slug": "your-multi-agent-system-is-a-distributed-system",
   "sourceUrl": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
   "subtitle": "Why delegation, retries, races, partial failure, leases, and sagas matter more than conversational fluency.",
@@ -1077,5 +568,5 @@
     "Reliability"
   ],
   "title": "Your Multi-Agent System Is a Distributed System",
-  "wordCount": 6089
+  "wordCount": 2833
 }

@@ -1,0 +1,38 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260827074418-story-scheduled-do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+  "action": "story_scheduled",
+  "recordedAt": "2026-08-27T07:44:18Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 32,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-27T07:44:18Z",
+    "scope": "Reschedule the four approved future stories to Aug 31, Sep 3, Sep 7, and Sep 10 at 14:00 IST; leave topics, publication, paywall, and subscriber email unchanged."
+  },
+  "result": {
+    "status": "scheduled",
+    "storySlug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+    "mediumUrl": "https://medium.com/@singhaditya21_89007/44beb06b346a",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "AI Evaluation",
+        "MLOps",
+        "Enterprise AI",
+        "AI Governance"
+      ],
+      "publication": null,
+      "subscriberEmail": false,
+      "paywall": false,
+      "scheduleAt": "2026-09-10T14:00:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/"
+    },
+    "verifiedAt": "2026-08-27T07:44:18Z",
+    "verification": "Medium review screen persisted Do Not Let an AI Agent Touch Production Until It Passes This Evaluation for 10/09/2026 at 14:00 GMT+5:30; subscriber email remained unchecked."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

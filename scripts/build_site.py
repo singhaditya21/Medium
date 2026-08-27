@@ -382,20 +382,28 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
     local_hero = ""
     page_url = f"{SITE_URL}articles/{slug}/"
 
+    hero_source = story.get("heroImage", "")
+    if hero_source and not hero_source.startswith(("http://", "https://")):
+        hero_candidate = (ROOT / hero_source).resolve()
+        if hero_candidate.is_relative_to(ROOT) and hero_candidate.exists():
+            local_hero = f"{SITE_URL}{hero_candidate.relative_to(ROOT).as_posix()}"
+
     for block in story["blocks"]:
         if block["type"] == "figure":
             figure_index += 1
             source = block["src"]
+            source_number_match = re.search(r"figure-(\d+)", Path(urlsplit(source).path).stem, re.I)
+            source_number = int(source_number_match.group(1)) if source_number_match else figure_index
             local_candidate = (ROOT / source).resolve() if not source.startswith(("http://", "https://")) else None
             if local_candidate and local_candidate.is_relative_to(ROOT) and local_candidate.exists():
                 local = local_candidate
             else:
                 local = download_image(session, source, slug, figure_index)
             src = f"../../{local.relative_to(ROOT).as_posix()}" if local else block["src"]
-            if figure_index == 1 and local:
+            if figure_index == 1 and local and not local_hero:
                 local_hero = f"{SITE_URL}{local.relative_to(ROOT).as_posix()}"
             caption = block.get("caption", "")
-            caption_id = f"figure-{figure_index}-caption"
+            caption_id = f"figure-{source_number}-caption"
             caption_html = f'<figcaption id="{caption_id}">{escape(caption)}</figcaption>' if caption else ""
             described_by = f' aria-describedby="{caption_id}"' if caption else ""
             dimensions = ""
@@ -407,16 +415,37 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
                 except (OSError, ValueError):
                     pass
             rendered.append(
-                f'<figure class="story-figure" id="figure-{figure_index}" data-figure-index="{figure_index}" data-figure-total="{figure_total}">'
+                f'<figure class="story-figure" id="figure-{source_number}" data-figure-index="{figure_index}" data-figure-label="{source_number}" data-figure-total="{figure_total}">'
                 '<div class="figure-explorer-toolbar">'
-                f'<span class="figure-explorer-badge" aria-hidden="true">Figure {figure_index:02d} / {figure_total:02d} · Technical infographic</span>'
-                f'<button class="figure-expand" type="button" data-figure-open aria-label="Explore figure {figure_index} of {figure_total} in full resolution" hidden>'
+                f'<span class="figure-explorer-badge" aria-hidden="true">Figure {source_number:02d} · {figure_index:02d} of {figure_total:02d} selected · Technical infographic</span>'
+                f'<button class="figure-expand" type="button" data-figure-open aria-label="Explore figure {source_number} in full resolution" hidden>'
                 '<span>Explore details</span><span aria-hidden="true">↗</span></button>'
                 '</div>'
                 '<div class="story-figure-frame">'
                 f'<img src="{escape(src, quote=True)}" alt="{escape(block.get("alt", ""), quote=True)}"{described_by}{dimensions} loading="lazy" decoding="async">'
                 '</div>'
                 f"{caption_html}</figure>"
+            )
+            continue
+
+        if block["type"] == "table":
+            headers = "".join(
+                f"<th scope=\"col\">{sanitize_inline(cell, story.get('canonical', MEDIUM_PROFILE))}</th>"
+                for cell in block.get("headers", [])
+            )
+            rows = "".join(
+                "<tr>"
+                + "".join(
+                    f"<td>{sanitize_inline(cell, story.get('canonical', MEDIUM_PROFILE))}</td>"
+                    for cell in row
+                )
+                + "</tr>"
+                for row in block.get("rows", [])
+            )
+            rendered.append(
+                '<div class="story-table-wrap"><table class="story-table">'
+                f"<thead><tr>{headers}</tr></thead><tbody>{rows}</tbody>"
+                "</table></div>"
             )
             continue
 

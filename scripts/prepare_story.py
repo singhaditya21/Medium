@@ -52,6 +52,16 @@ def plain_text(value: str) -> str:
     return re.sub(r"[*_`#>]", "", value).strip()
 
 
+def table_cells(value: str) -> list[str]:
+    """Split a simple GitHub-Flavored Markdown table row into cells."""
+    return [cell.strip() for cell in value.strip().strip("|").split("|")]
+
+
+def is_table_separator(value: str) -> bool:
+    cells = table_cells(value)
+    return bool(cells) and all(re.fullmatch(r":?-{3,}:?", cell) for cell in cells)
+
+
 def markdown_blocks(body: str) -> list[dict[str, str]]:
     lines = body.splitlines()
     blocks: list[dict[str, str]] = []
@@ -70,6 +80,11 @@ def markdown_blocks(body: str) -> list[dict[str, str]]:
         line = lines[index].rstrip()
         stripped = line.strip()
         if not stripped:
+            flush_paragraph()
+            index += 1
+            continue
+        if stripped.startswith("# "):
+            # The page template already renders the front-matter title as its H1.
             flush_paragraph()
             index += 1
             continue
@@ -92,6 +107,37 @@ def markdown_blocks(body: str) -> list[dict[str, str]]:
             flush_paragraph()
             blocks.append({"type": "figure", "src": figure.group(2), "alt": figure.group(1), "caption": figure.group(3) or ""})
             index += 1
+            continue
+        if (
+            "|" in stripped
+            and index + 1 < len(lines)
+            and is_table_separator(lines[index + 1].strip())
+        ):
+            flush_paragraph()
+            headers = table_cells(stripped)
+            index += 2
+            rows: list[list[str]] = []
+            while index < len(lines):
+                current = lines[index].strip()
+                if not current or "|" not in current:
+                    break
+                cells = table_cells(current)
+                if len(cells) < len(headers):
+                    cells.extend([""] * (len(headers) - len(cells)))
+                rows.append(cells[: len(headers)])
+                index += 1
+            table_text = "\n".join(
+                [" | ".join(plain_text(cell) for cell in headers)]
+                + [" | ".join(plain_text(cell) for cell in row) for row in rows]
+            )
+            blocks.append(
+                {
+                    "type": "table",
+                    "headers": [inline_markup(cell) for cell in headers],
+                    "rows": [[inline_markup(cell) for cell in row] for row in rows],
+                    "text": table_text,
+                }
+            )
             continue
         heading = re.match(r"^(#{2,4})\s+(.+)$", stripped)
         if heading:
@@ -134,7 +180,11 @@ def markdown_blocks(body: str) -> list[dict[str, str]]:
 def prepare(path: Path) -> Path:
     meta, body = parse_front_matter(path.read_text(encoding="utf-8"))
     blocks = markdown_blocks(body)
-    words = sum(len(block.get("text", "").split()) for block in blocks if block["type"] == "html")
+    words = sum(
+        len(block.get("text", "").split())
+        for block in blocks
+        if block["type"] in {"html", "table"}
+    )
     slug = meta["slug"]
     story = {
         "author": meta.get("author", "Aditya Singh"),

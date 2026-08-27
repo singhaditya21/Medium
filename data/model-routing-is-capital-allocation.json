@@ -4,111 +4,80 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "An enterprise agent platform handles one million tasks a month. Some extract invoice fields, classify support requests, and normalize CRM records. Others research pricing, interpret contracts, negotiate customer language, recommend credit actions, or prepare changes to valuable accounts. The platform team adds a router: “easy” prompts go to a cheaper model, “hard” prompts go to a larger one. Token spend falls in the first dashboard. Then retries replay long contexts, tool calls multiply, verification runs after the expensive branch, a fast route misses a material exception, and the organization cannot allocate cost or loss to the workflow decision that caused it. The cheapest model call is not the cheapest completed business outcome.",
-      "text": "An enterprise agent platform handles one million tasks a month. Some extract invoice fields, classify support requests, and normalize CRM records. Others research pricing, interpret contracts, negotiate customer language, recommend credit actions, or prepare changes to valuable accounts. The platform team adds a router: “easy” prompts go to a cheaper model, “hard” prompts go to a larger one. Token spend falls in the first dashboard. Then retries replay long contexts, tool calls multiply, verification runs after the expensive branch, a fast route misses a material exception, and the organization cannot allocate cost or loss to the workflow decision that caused it. The cheapest model call is not the cheapest completed business outcome."
+      "html": "A production router sends “easy” tasks to a cheap model and “hard” tasks to a large one. That rule looks efficient until a short, syntactically simple request changes a $2.4 million quote while a long, technically complex request only drafts an internal summary. Difficulty is not exposure. Token price is not completed-workflow cost. Average quality is not the loss distribution.",
+      "text": "A production router sends “easy” tasks to a cheap model and “hard” tasks to a large one. That rule looks efficient until a short, syntactically simple request changes a $2.4 million quote while a long, technically complex request only drafts an internal summary. Difficulty is not exposure. Token price is not completed-workflow cost. Average quality is not the loss distribution."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "This story was written with AI writing and visualization assistance. The company, task volumes, prices, costs, probabilities, losses, budgets, performance values, calibration sample, operating targets, and chart data are synthetic; the architectures and equations are reference designs, not claims about a deployed router or current model-provider performance. Research results are attributed to their source papers, while all production thresholds require target-workload measurement, validation, and governance.",
-      "text": "This story was written with AI writing and visualization assistance. The company, task volumes, prices, costs, probabilities, losses, budgets, performance values, calibration sample, operating targets, and chart data are synthetic; the architectures and equations are reference designs, not claims about a deployed router or current model-provider performance. Research results are attributed to their source papers, while all production thresholds require target-workload measurement, validation, and governance."
+      "html": "This story was written with AI writing and visualization assistance. All routes, costs, budgets, loss estimates, performance values and charts are synthetic reference scenarios.",
+      "text": "This story was written with AI writing and visualization assistance. All routes, costs, budgets, loss estimates, performance values and charts are synthetic reference scenarios."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Model routing is usually presented as a classification problem: predict request difficulty, then choose a weak or strong model. That is useful research abstraction, but an enterprise action is not merely a query. It has business value, loss exposure, privacy constraints, tool permissions, context requirements, deadlines, verification options, capacity scarcity, and recovery cost. A production route is therefore a portfolio containing a model, deployment, context policy, tools, inference settings, retry limit, verification path, and escalation rule.",
-      "text": "Model routing is usually presented as a classification problem: predict request difficulty, then choose a weak or strong model. That is useful research abstraction, but an enterprise action is not merely a query. It has business value, loss exposure, privacy constraints, tool permissions, context requirements, deadlines, verification options, capacity scarcity, and recovery cost. A production route is therefore a portfolio containing a model, deployment, context policy, tools, inference settings, retry limit, verification path, and escalation rule."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The decision is capital allocation. The platform spends scarce inference, latency, verification, and human-attention budgets where they create the highest risk-adjusted business value—subject to controls that cannot be traded away.",
-      "text": "The decision is capital allocation. The platform spends scarce inference, latency, verification, and human-attention budgets where they create the highest risk-adjusted business value—subject to controls that cannot be traded away."
-    },
-    {
-      "type": "html",
-      "tag": "blockquote",
-      "html": "Route the action, not the prompt; optimize the completed, verified business outcome, not the nominal model call.",
-      "text": "Route the action, not the prompt; optimize the completed, verified business outcome, not the nominal model call."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-01.png",
-      "alt": "Comparison of a static cheap-or-large router and a risk-adjusted capital allocator across decision unit, objective, candidate, constraints, failure cost, evidence, and output.",
-      "caption": "Figure 1. Static model selection becomes production capital allocation when the decision unit is a workflow action and the output is a full execution-and-verification portfolio. AI-assisted design visualization; reference architecture; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Technical summary",
-      "text": "Technical summary"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A governed router should receive a typed action and evidence manifest, construct an eligible portfolio of route bundles, remove candidates that violate privacy, authority, quality, latency, geography, capacity, or assurance constraints, and rank the remaining candidates by expected business utility. The utility function includes decision value, execution cost, delay cost, verification cost, expected loss, and a tail-loss penalty. The result is a signed or integrity-bound route receipt containing feature versions, candidates, exclusions, scores, selected controls, policy version, expiry, and fallback.",
-      "text": "A governed router should receive a typed action and evidence manifest, construct an eligible portfolio of route bundles, remove candidates that violate privacy, authority, quality, latency, geography, capacity, or assurance constraints, and rank the remaining candidates by expected business utility. The utility function includes decision value, execution cost, delay cost, verification cost, expected loss, and a tail-loss penalty. The result is a signed or integrity-bound route receipt containing feature versions, candidates, exclusions, scores, selected controls, policy version, expiry, and fallback."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The router operates at workflow-step grain. Its cost ledger joins every attempt, replayed token, tool invocation, verifier, queue delay, human decision, compensation, and incident to a stable workflow and action identity. Outcome evaluation separates model correctness from tool success and business postconditions. Cohort-specific calibration and out-of-distribution detection determine whether router probabilities are decision-useful. Unknown or weakly supported inputs abstain, escalate, or use a conservative route.",
-      "text": "The router operates at workflow-step grain. Its cost ledger joins every attempt, replayed token, tool invocation, verifier, queue delay, human decision, compensation, and incident to a stable workflow and action identity. Outcome evaluation separates model correctness from tool success and business postconditions. Cohort-specific calibration and out-of-distribution detection determine whether router probabilities are decision-useful. Unknown or weakly supported inputs abstain, escalate, or use a conservative route."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Offline evaluation cannot infer every candidate's outcome from logs containing only the selected route. It needs randomized exploration within safe bounds, propensity scores, shadow executions, parallel labels, or counterfactual estimators with explicit assumptions. Promotion requires quality floors, tail-latency limits, budget limits, calibration, policy-violation controls, novelty handling, expected-loss or tail-loss limits, and receipt coverage. Online adaptation remains behind versioned policy, drift detection, constrained exploration, and immediate fallback.",
-      "text": "Offline evaluation cannot infer every candidate's outcome from logs containing only the selected route. It needs randomized exploration within safe bounds, propensity scores, shadow executions, parallel labels, or counterfactual estimators with explicit assumptions. Promotion requires quality floors, tail-latency limits, budget limits, calibration, policy-violation controls, novelty handling, expected-loss or tail-loss limits, and receipt coverage. Online adaptation remains behind versioned policy, drift detection, constrained exploration, and immediate fallback."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Research supports the premise that routing can improve cost-quality trade-offs. <a href=\"https://arxiv.org/abs/2406.18665\">RouteLLM</a> learns routers from preference data to choose between stronger and weaker models. <a href=\"https://arxiv.org/abs/2404.14618\">Hybrid LLM</a> predicts when the smaller model can satisfy a desired quality level. <a href=\"https://arxiv.org/abs/2305.05176\">FrugalGPT</a> studies prompt adaptation, approximation, and cascades, reporting substantial gains in its evaluated settings. Those results establish routing opportunity; they do not establish safe enterprise action policy, provider-independent transfer, or a universal production threshold.",
-      "text": "Research supports the premise that routing can improve cost-quality trade-offs. RouteLLM learns routers from preference data to choose between stronger and weaker models. Hybrid LLM predicts when the smaller model can satisfy a desired quality level. FrugalGPT studies prompt adaptation, approximation, and cascades, reporting substantial gains in its evaluated settings. Those results establish routing opportunity; they do not establish safe enterprise action policy, provider-independent transfer, or a universal production threshold."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Scope and decision unit",
-      "text": "Scope and decision unit"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The synthetic workload includes six action cohorts: structured extraction, CRM enrichment, customer messaging, pricing exception analysis, data export review, and account closure. Each action has a typed schema, purpose, input evidence, business owner, resource scope, value or impact band, reversibility, deadline, authority requirement, and postcondition. The router never receives a free-floating string with no business context.",
-      "text": "The synthetic workload includes six action cohorts: structured extraction, CRM enrichment, customer messaging, pricing exception analysis, data export review, and account closure. Each action has a typed schema, purpose, input evidence, business owner, resource scope, value or impact band, reversibility, deadline, authority requirement, and postcondition. The router never receives a free-floating string with no business context."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A <strong>model</strong> is an inference artifact and version. A <strong>deployment</strong> adds provider or infrastructure, region, privacy boundary, throughput, context window, and service characteristics. A <strong>route bundle</strong> combines model deployment, system instructions, evidence-selection policy, tool set, generation settings, retry rule, verifier, and escalation. A <strong>routing policy</strong> maps a feature vector and portfolio state to an eligible bundle. A <strong>route receipt</strong> preserves the inputs and decision. A <strong>business outcome</strong> is the verified domain result, not merely an accepted completion.",
-      "text": "A model is an inference artifact and version. A deployment adds provider or infrastructure, region, privacy boundary, throughput, context window, and service characteristics. A route bundle combines model deployment, system instructions, evidence-selection policy, tool set, generation settings, retry rule, verifier, and escalation. A routing policy maps a feature vector and portfolio state to an eligible bundle. A route receipt preserves the inputs and decision. A business outcome is the verified domain result, not merely an accepted completion."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The route decision can be expressed as:",
-      "text": "The route decision can be expressed as:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "r* = argmax U(r | x, p)\n     over r in F(x, p)",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<code>x</code> is the action and evidence feature vector. <code>p</code> is current portfolio state: candidate versions, price, capacity, health, regional availability, and policy. <code>F</code> is the feasible set after hard controls. <code>U</code> is risk-adjusted utility. The separation matters. A route that violates a data boundary is not “slightly less attractive.” It is ineligible.",
-      "text": "x is the action and evidence feature vector. p is current portfolio state: candidate versions, price, capacity, health, regional availability, and policy. F is the feasible set after hard controls. U is risk-adjusted utility. The separation matters. A route that violates a data boundary is not “slightly less attractive.” It is ineligible."
+      "html": "Model routing is a capital-allocation problem. Each action competes for a portfolio of model capacity, context, tools, retries, latency and verification. The router must first remove routes that violate policy or cannot satisfy the action’s assurance floor. It should then maximize expected business value net of workflow cost, delay and tail loss—not merely choose the lowest-priced model above a generic score. The output is a governed route bundle with evidence, limits and an accountable decision record.",
+      "text": "Model routing is a capital-allocation problem. Each action competes for a portfolio of model capacity, context, tools, retries, latency and verification. The router must first remove routes that violate policy or cannot satisfy the action’s assurance floor. It should then maximize expected business value net of workflow cost, delay and tail loss—not merely choose the lowest-priced model above a generic score. The output is a governed route bundle with evidence, limits and an accountable decision record."
     },
     {
       "type": "figure",
       "src": "assets/images/model-routing-is-capital-allocation/figure-02.png",
       "alt": "Risk-aware routing architecture connecting action, evidence, runtime, and portfolio inputs to policy filtering, utility optimization, route controls, receipts, and outcome feedback.",
       "caption": "Figure 2. Hard feasibility removes unsafe routes before economic ranking; the chosen bundle, verification, retry policy, receipt, and outcomes remain separate control responsibilities. AI-assisted design visualization; reference architecture; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "What this changes in production",
+      "text": "What this changes in production"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>•</strong> Route an action cohort, not an isolated prompt.<br><strong>•</strong> Filter policy-ineligible routes before economic optimization.<br><strong>•</strong> Price the completed workflow, including tools, retries, verification, delay and recovery.<br><strong>•</strong> Calibrate route suitability by cohort and abstain outside evaluated support.<br><strong>•</strong> Allocate verification where its marginal expected-loss reduction is highest.",
+      "text": "• Route an action cohort, not an isolated prompt.\n• Filter policy-ineligible routes before economic optimization.\n• Price the completed workflow, including tools, retries, verification, delay and recovery.\n• Calibrate route suitability by cohort and abstain outside evaluated support.\n• Allocate verification where its marginal expected-loss reduction is highest."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Decision table",
+      "text": "Decision table"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Routing signal",
+        "Wrong shortcut",
+        "Production treatment",
+        "Output"
+      ],
+      "rows": [
+        [
+          "Action impact",
+          "“Prompt looks easy”",
+          "Apply assurance and policy floor",
+          "Eligible route set"
+        ],
+        [
+          "Workflow cost",
+          "Token price",
+          "Include tools, retries, latency and recovery",
+          "Expected total cost"
+        ],
+        [
+          "Quality",
+          "Global benchmark",
+          "Use calibrated cohort evidence",
+          "Suitability distribution"
+        ],
+        [
+          "Budget pressure",
+          "Cheapest model",
+          "Use marginal value and hard limits",
+          "Governed route bundle"
+        ]
+      ],
+      "text": "Routing signal | Wrong shortcut | Production treatment | Output\nAction impact | “Prompt looks easy” | Apply assurance and policy floor | Eligible route set\nWorkflow cost | Token price | Include tools, retries, latency and recovery | Expected total cost\nQuality | Global benchmark | Use calibrated cohort evidence | Suitability distribution\nBudget pressure | Cheapest model | Use marginal value and hard limits | Governed route bundle"
     },
     {
       "type": "html",
@@ -198,48 +167,6 @@
     },
     {
       "type": "html",
-      "tag": "h3",
-      "html": "Reconcile technical telemetry to financial truth",
-      "text": "Reconcile technical telemetry to financial truth"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The execution ledger and the finance ledger answer different questions. Runtime telemetry records tokens, milliseconds, attempts, cache hits, tool units, and verifier calls at event time. Finance records invoices, cloud amortization, committed-use discounts, support contracts, internal labor, currency conversion, tax treatment, and allocation policy at accounting close. A credible routing business case needs a bridge between them rather than pretending the model-provider line item is the whole expense.",
-      "text": "The execution ledger and the finance ledger answer different questions. Runtime telemetry records tokens, milliseconds, attempts, cache hits, tool units, and verifier calls at event time. Finance records invoices, cloud amortization, committed-use discounts, support contracts, internal labor, currency conversion, tax treatment, and allocation policy at accounting close. A credible routing business case needs a bridge between them rather than pretending the model-provider line item is the whole expense."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Use an immutable usage event as the quantity record, a versioned rate card as the provisional valuation, and a monthly reconciliation record as the booked valuation. Never rewrite the original quantity when an invoice arrives. Append the price variance and its cause: tier threshold, cache discount, minimum commitment, foreign exchange, correction, or shared-capacity allocation. This preserves both operational replay and financial audit.",
-      "text": "Use an immutable usage event as the quantity record, a versioned rate card as the provisional valuation, and a monthly reconciliation record as the booked valuation. Never rewrite the original quantity when an invoice arrives. Append the price variance and its cause: tier threshold, cache discount, minimum commitment, foreign exchange, correction, or shared-capacity allocation. This preserves both operational replay and financial audit."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "For internally hosted models, calculate capacity cost explicitly. GPU expense is not just active inference time; it includes reserved but idle capacity, replicas held for availability, orchestration, storage, networking, observability, engineering support, and depreciation or cloud commitment. Allocate that pool using a declared driver—reserved tokens per second, accelerator-seconds, or capacity entitlement—and show utilization separately. A seemingly cheap internal route can be expensive if its low-latency reservation is mostly idle, while a hosted route can become expensive when retries or long-context input dominates.",
-      "text": "For internally hosted models, calculate capacity cost explicitly. GPU expense is not just active inference time; it includes reserved but idle capacity, replicas held for availability, orchestration, storage, networking, observability, engineering support, and depreciation or cloud commitment. Allocate that pool using a declared driver—reserved tokens per second, accelerator-seconds, or capacity entitlement—and show utilization separately. A seemingly cheap internal route can be expensive if its low-latency reservation is mostly idle, while a hosted route can become expensive when retries or long-context input dominates."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The business view should reconcile four layers:",
-      "text": "The business view should reconcile four layers:"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>•</strong> <strong>Usage:</strong> physical quantities produced by each workflow and attempt.<br><strong>•</strong> <strong>Rated cost:</strong> quantities multiplied by the rate card effective at execution.<br><strong>•</strong> <strong>Booked cost:</strong> invoice and internal-cost allocation after reconciliation.<br><strong>•</strong> <strong>Economic exposure:</strong> delay, expected loss, recovery, and foregone value, kept separate from accounting expense.",
-      "text": "• Usage: physical quantities produced by each workflow and attempt.\n• Rated cost: quantities multiplied by the rate card effective at execution.\n• Booked cost: invoice and internal-cost allocation after reconciliation.\n• Economic exposure: delay, expected loss, recovery, and foregone value, kept separate from accounting expense."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A model-routing team should be able to explain a monthly variance as volume, mix, price, efficiency, or failure-path effects. Volume means more actions. Mix means a larger share of difficult or high-assurance actions. Price means rate-card or infrastructure change. Efficiency means fewer tokens, calls, or verifier units for the same outcome. Failure-path variance means more retries, tool errors, recovery, or human escalation. Without this decomposition, a cost reduction may merely reflect fewer completed outcomes or unsafe routing mix.",
-      "text": "A model-routing team should be able to explain a monthly variance as volume, mix, price, efficiency, or failure-path effects. Volume means more actions. Mix means a larger share of difficult or high-assurance actions. Price means rate-card or infrastructure change. Efficiency means fewer tokens, calls, or verifier units for the same outcome. Failure-path variance means more retries, tool errors, recovery, or human escalation. Without this decomposition, a cost reduction may merely reflect fewer completed outcomes or unsafe routing mix."
-    },
-    {
-      "type": "html",
       "tag": "h2",
       "html": "Optimize risk-adjusted utility",
       "text": "Optimize risk-adjusted utility"
@@ -286,79 +213,6 @@
       "tag": "p",
       "html": "<a href=\"https://airc.nist.gov/airmf-resources/airmf/5-sec-core/\">NIST's AI RMF Core</a> calls for risk management across governance, mapping, measurement, and management, including documented context, expected benefits, costs, risk tolerance, and ongoing monitoring. It does not prescribe this formula. It supports the broader control expectation that economic benefit and risk evidence be documented across the lifecycle.",
       "text": "NIST's AI RMF Core calls for risk management across governance, mapping, measurement, and management, including documented context, expected benefits, costs, risk tolerance, and ongoing monitoring. It does not prescribe this formula. It supports the broader control expectation that economic benefit and risk evidence be documented across the lifecycle."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Treat routes as capabilities, not model ranks",
-      "text": "Treat routes as capabilities, not model ranks"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A global leaderboard assumes one task distribution, metric, prompt format, inference configuration, and evaluation contract. Enterprise routes face heterogeneous constraints. A local model may be strongest for privacy and predictable latency but weak on a novel reasoning task. A hosted fast route may be excellent for tools but ineligible for restricted data. A large model plus independent verifier may improve assurance but miss the deadline.",
-      "text": "A global leaderboard assumes one task distribution, metric, prompt format, inference configuration, and evaluation contract. Enterprise routes face heterogeneous constraints. A local model may be strongest for privacy and predictable latency but weak on a novel reasoning task. A hosted fast route may be excellent for tools but ineligible for restricted data. A large model plus independent verifier may improve assurance but miss the deadline."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-05.png",
-      "alt": "Capability matrix comparing six route bundles across extraction, reasoning, tool use, long context, privacy, P99 latency, and assurance.",
-      "caption": "Figure 5. Synthetic ordinal capability scores show why a production portfolio cannot be reduced to one global model ranking. AI-assisted visualization; synthetic assessment; not a benchmark comparison."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Maintain a model-route registry at deployment-and-configuration grain:",
-      "text": "Maintain a model-route registry at deployment-and-configuration grain:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "route_id: hosted-deep-eu-v12-verified\nmodel_artifact: model-family/v12\ndeployment: eu-prod/deep-3\ncontext_policy: evidence-pack/v9\ntools: [policy_lookup, quote_simulator]\nverification: [schema, policy, judge-v4]\neligible_data_classes: [internal, confidential]\nprohibited_actions: [raw_personal_data_export]\nevaluated_cohorts: [pricing_exception_v6, contract_reasoning_v4]\nquality_floor: 0.975\nlatency_contract: {p95_ms: 5200, p99_ms: 7800}\ncapacity_contract: {reserved_rps: 12, burst_rps: 24}",
-      "language": "yaml"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Unknown cells are not zero; they are unproven. For low-impact traffic, the policy may explore within a bounded safe set. For consequential actions, missing evidence makes the route ineligible until evaluated. Model updates, quantization, system-prompt changes, tool changes, context selection, and verifier changes can alter the route and should create a new version.",
-      "text": "Unknown cells are not zero; they are unproven. For low-impact traffic, the policy may explore within a bounded safe set. For consequential actions, missing evidence makes the route ineligible until evaluated. Model updates, quantization, system-prompt changes, tool changes, context selection, and verifier changes can alter the route and should create a new version."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Remove dominated routes by cohort",
-      "text": "Remove dominated routes by cohort"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "For a fixed cohort and evaluation contract, route <code>a</code> dominates route <code>b</code> if <code>a</code> is no worse on every decision-relevant objective and strictly better on at least one. In a simple cost-quality view, a route that costs more and scores lower is dominated.",
-      "text": "For a fixed cohort and evaluation contract, route a dominates route b if a is no worse on every decision-relevant objective and strictly better on at least one. In a simple cost-quality view, a route that costs more and scores lower is dominated."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-06.png",
-      "alt": "Synthetic scatter plot of route cost and evaluated quality with a highlighted non-dominated Pareto frontier.",
-      "caption": "Figure 6. The Pareto frontier identifies efficient route candidates for one cohort; dominated points require another justified constraint to remain in the portfolio. AI-assisted visualization; synthetic route values; not provider benchmarks."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The frontier is conditional. It changes by action cohort, language, context length, tool set, deployment region, latency objective, verifier, and model version. Report sample size and uncertainty. A route with an estimated quality of <code>.90</code> on 80 easy cases is not necessarily better than <code>.88</code> on 20,000 representative cases.",
-      "text": "The frontier is conditional. It changes by action cohort, language, context length, tool set, deployment region, latency objective, verifier, and model version. Report sample size and uncertainty. A route with an estimated quality of .90 on 80 easy cases is not necessarily better than .88 on 20,000 representative cases."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Do not delete every dominated route automatically. A route may remain valuable as outage fallback, private boundary, capacity reserve, or diversity control. Record the reason. The portfolio should distinguish <strong>economically dominated on the measured cohort</strong> from <strong>operationally redundant under all constraints</strong>.",
-      "text": "Do not delete every dominated route automatically. A route may remain valuable as outage fallback, private boundary, capacity reserve, or diversity control. Record the reason. The portfolio should distinguish economically dominated on the measured cohort from operationally redundant under all constraints."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Research benchmarks help reveal complementarity. <a href=\"https://arxiv.org/abs/2403.12031\">RouterBench</a> introduced a framework and dataset with more than 405,000 inference outcomes to compare multi-model routing strategies. More recent <a href=\"https://aclanthology.org/2026.findings-acl.1881/\">LLMRouterBench</a> reports over 400,000 instances across 21 datasets and 33 models; its unified evaluation finds strong model complementarity but also similar performance among many methods and a persistent gap to the oracle. That is a useful warning: a sophisticated router name does not guarantee material advantage over a well-designed baseline on the target workload.",
-      "text": "Research benchmarks help reveal complementarity. RouterBench introduced a framework and dataset with more than 405,000 inference outcomes to compare multi-model routing strategies. More recent LLMRouterBench reports over 400,000 instances across 21 datasets and 33 models; its unified evaluation finds strong model complementarity but also similar performance among many methods and a persistent gap to the oracle. That is a useful warning: a sophisticated router name does not guarantee material advantage over a well-designed baseline on the target workload."
     },
     {
       "type": "html",
@@ -452,42 +306,6 @@
       "tag": "p",
       "html": "Use a lower confidence bound rather than a point estimate for critical cohorts. Re-evaluate feasibility when provider health, capacity, price, policy, or evidence changes. The receipt should show both candidates considered and candidates excluded. Otherwise an incident reviewer cannot distinguish “the optimizer preferred route A” from “route B was unavailable or prohibited.”",
       "text": "Use a lower confidence bound rather than a point estimate for critical cohorts. Re-evaluate feasibility when provider health, capacity, price, policy, or evidence changes. The receipt should show both candidates considered and candidates excluded. Otherwise an incident reviewer cannot distinguish “the optimizer preferred route A” from “route B was unavailable or prohibited.”"
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Version the feature pipeline",
-      "text": "Version the feature pipeline"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A router feature vector may include action type, domain, schema complexity, evidence length, evidence coverage, contradiction count, language, novelty, impact, reversibility, tool plan, deadline, model health, queue depth, price, and capacity. Those features come from different systems and times. Without versioning, offline evaluation cannot reproduce a decision.",
-      "text": "A router feature vector may include action type, domain, schema complexity, evidence length, evidence coverage, contradiction count, language, novelty, impact, reversibility, tool plan, deadline, model health, queue depth, price, and capacity. Those features come from different systems and times. Without versioning, offline evaluation cannot reproduce a decision."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-09.png",
-      "alt": "Feature pipeline joining task, evidence, risk, runtime, and portfolio features into a contract, policy filter, utility score, and route receipt.",
-      "caption": "Figure 9. Versioned feature sources and transformations prevent training-serving skew and make route decisions replayable. AI-assisted design visualization; reference pipeline; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Store source event time, observation time, transform version, missingness, and access purpose. Define defaults and reject states for missing features. A missing <code>impact_band</code> on a consequential action should not become numeric zero. It should trigger a conservative band or ineligibility.",
-      "text": "Store source event time, observation time, transform version, missingness, and access purpose. Define defaults and reject states for missing features. A missing impactband on a consequential action should not become numeric zero. It should trigger a conservative band or ineligibility."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Prevent target leakage. A feature available only after execution cannot train a router that makes a pre-execution decision. Prevent policy leakage: if historical human review caused better outcomes, a model may learn that high-risk cases are “easy” because the label includes the reviewer. Train and evaluate the route bundle as actually deployed, including assurance.",
-      "text": "Prevent target leakage. A feature available only after execution cannot train a router that makes a pre-execution decision. Prevent policy leakage: if historical human review caused better outcomes, a model may learn that high-risk cases are “easy” because the label includes the reviewer. Train and evaluate the route bundle as actually deployed, including assurance."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Sensitive or protected attributes require explicit purpose, access control, and subgroup analysis. Some attributes may be necessary to enforce jurisdiction or assess unequal failure. Others may be prohibited as optimization features. Governance should distinguish measurement attributes from decision attributes.",
-      "text": "Sensitive or protected attributes require explicit purpose, access control, and subgroup analysis. Some attributes may be necessary to enforce jurisdiction or assess unequal failure. Others may be prohibited as optimization features. Governance should distinguish measurement attributes from decision attributes."
     },
     {
       "type": "html",
@@ -590,85 +408,6 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Cascades spend budget conditionally",
-      "text": "Cascades spend budget conditionally"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "A cascade begins with a lower-cost route and escalates when uncertainty, deterministic checks, policy, or expected value justifies another call. It can outperform a one-shot allocation when early stages resolve enough work cheaply and escalation signals are reliable.",
-      "text": "A cascade begins with a lower-cost route and escalates when uncertainty, deterministic checks, policy, or expected value justifies another call. It can outperform a one-shot allocation when early stages resolve enough work cheaply and escalation signals are reliable."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-12.png",
-      "alt": "Sequence diagram for routing to a fast model, running checks, escalating with fresh context to a deep model, and obtaining policy judgment.",
-      "caption": "Figure 12. Each escalation has an explicit trigger and fresh governed context; the cascade stops only at verified output or abstention. AI-assisted design visualization; reference sequence; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The first model should return a typed proposal, evidence references, and uncertainty signals—not a stream of hidden reasoning that the next model must trust. Deterministic checks validate schema, calculations, citations, policy fields, tool preconditions, and contradictions. If escalation is required, reconstruct context from governed evidence and the typed proposal. Copying the entire first response can anchor the stronger model on the original error and increase context cost.",
-      "text": "The first model should return a typed proposal, evidence references, and uncertainty signals—not a stream of hidden reasoning that the next model must trust. Deterministic checks validate schema, calculations, citations, policy fields, tool preconditions, and contradictions. If escalation is required, reconstruct context from governed evidence and the typed proposal. Copying the entire first response can anchor the stronger model on the original error and increase context cost."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Cascades need stop conditions and attempt caps. A verifier that repeatedly asks the same model to “try again” can create correlated retries rather than independent evidence. Vary the error channel deliberately: deterministic computation for arithmetic, retrieval for source claims, a different model or prompt family for independent critique, and qualified human judgment where policy or ambiguity requires it.",
-      "text": "Cascades need stop conditions and attempt caps. A verifier that repeatedly asks the same model to “try again” can create correlated retries rather than independent evidence. Vary the error channel deliberately: deterministic computation for arithmetic, retrieval for source claims, a different model or prompt family for independent critique, and qualified human judgment where policy or ambiguity requires it."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<a href=\"https://arxiv.org/abs/2305.05176\">FrugalGPT</a> formalizes cascades among cost-saving strategies and reports strong cost-quality results in its experiments. <a href=\"https://arxiv.org/abs/2404.14618\">Hybrid LLM</a> estimates the quality gap between smaller and larger models and allows a desired quality level to adjust routing. Production teams should preserve the insight—spend marginal inference where it adds value—while re-estimating performance on their action and assurance bundle.",
-      "text": "FrugalGPT formalizes cascades among cost-saving strategies and reports strong cost-quality results in its experiments. Hybrid LLM estimates the quality gap between smaller and larger models and allows a desired quality level to adjust routing. Production teams should preserve the insight—spend marginal inference where it adds value—while re-estimating performance on their action and assurance bundle."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Measure retry and tool inflation",
-      "text": "Measure retry and tool inflation"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Nominal route cost often excludes failure paths. A timeout can replay the full context. A tool can fail after a billable model call. A verifier can trigger another generation. A recovery step can invoke additional tools and human attention.",
-      "text": "Nominal route cost often excludes failure paths. A timeout can replay the full context. A tool can fail after a billable model call. A verifier can trigger another generation. A recovery step can invoke additional tools and human attention."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-13.png",
-      "alt": "Waterfall showing synthetic workflow cost rising from a $0.041 nominal model call to $0.186 after retry, context replay, tools, verification, and recovery.",
-      "caption": "Figure 13. The focused-scale synthetic waterfall exposes 4.5× inflation between nominal model call and realized completed-workflow cost. AI-assisted visualization; synthetic values; not provider pricing."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Define realized route cost:",
-      "text": "Define realized route cost:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "C_realized(action) = Σ_attempt C_inference\n                   + Σ_tool C_tool\n                   + Σ_check C_check\n                   + Σ_human C_human\n                   + C_queue_delay\n                   + C_recovery",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Allocate failed attempts to the action even when a later route succeeds. Report the distribution, not only the mean: P50, P95, P99, and conditional cost for recovered or failed workflows. High tail cost can exhaust a monthly budget despite acceptable average unit economics.",
-      "text": "Allocate failed attempts to the action even when a later route succeeds. Report the distribution, not only the mean: P50, P95, P99, and conditional cost for recovered or failed workflows. High tail cost can exhaust a monthly budget despite acceptable average unit economics."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Retry policy is part of the route. Specify retryable errors, maximum attempts, backoff, context-reuse policy, idempotency requirements for tools, and terminal fallback. A response-quality retry differs from a transport retry. The former should usually create a new candidate with a documented reason; the latter must preserve the same business action identity.",
-      "text": "Retry policy is part of the route. Specify retryable errors, maximum attempts, backoff, context-reuse policy, idempotency requirements for tools, and terminal fallback. A response-quality retry differs from a transport retry. The former should usually create a new candidate with a documented reason; the latter must preserve the same business action identity."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
       "html": "Allocate verification where it reduces loss",
       "text": "Allocate verification where it reduces loss"
     },
@@ -712,100 +451,14 @@
     {
       "type": "html",
       "tag": "h2",
-      "html": "Use the shadow price of budget",
-      "text": "Use the shadow price of budget"
+      "html": "Technical deep dive",
+      "text": "Technical deep dive"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "When inference and verification budgets are constrained, each extra unit has opportunity cost. In constrained optimization, the Lagrange multiplier on the budget constraint can be interpreted as a shadow price: the marginal objective improvement available from one more budget unit near the optimum.",
-      "text": "When inference and verification budgets are constrained, each extra unit has opportunity cost. In constrained optimization, the Lagrange multiplier on the budget constraint can be interpreted as a shadow price: the marginal objective improvement available from one more budget unit near the optimum."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-15.png",
-      "alt": "Marginal-value curve over synthetic monthly inference and verification budgets with a shadow-price cutoff and fund-versus-defer regions.",
-      "caption": "Figure 15. Synthetic marginal value declines as the highest-value escalations are funded, making the budget cutoff explicit. AI-assisted visualization; synthetic monthly budget; not a forecast."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Suppose routes are chosen for cohorts <code>k</code> with volume <code>n_k</code>:",
-      "text": "Suppose routes are chosen for cohorts k with volume nk:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "maximize Σ_k n_k × U(r_k, k)\n\nsubject to Σ_k n_k × C(r_k, k) <= B\n           all hard cohort constraints hold",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The shadow price <code>λ_B</code> helps compare marginal expansions: additional deep-model capacity, verification workers, lower-latency reservations, or better evaluation. If a candidate escalation's expected marginal value is below the current shadow price, defer or reprice it—unless a policy floor requires the spend.",
-      "text": "The shadow price λB helps compare marginal expansions: additional deep-model capacity, verification workers, lower-latency reservations, or better evaluation. If a candidate escalation's expected marginal value is below the current shadow price, defer or reprice it—unless a policy floor requires the spend."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Budget exhaustion must never silently weaken privacy, authority, safety, or mandatory review. The system can throttle low-priority work, queue until the next window, ask for a business-owner exception, or fail closed. Hard controls remain hard even when the economic portfolio is constrained.",
-      "text": "Budget exhaustion must never silently weaken privacy, authority, safety, or mandatory review. The system can throttle low-priority work, queue until the next window, ask for a business-owner exception, or fail closed. Hard controls remain hard even when the economic portfolio is constrained."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "FinOps should manage more than provider invoices. It should expose committed and forecast spend by workflow, cohort, route, model version, cost pool, retry reason, verifier, business unit, and outcome. Risk owners should see the same allocation with expected and realized loss. One shared decision ledger prevents cost optimization and risk governance from operating on incompatible denominators.",
-      "text": "FinOps should manage more than provider invoices. It should expose committed and forecast spend by workflow, cohort, route, model version, cost pool, retry reason, verifier, business unit, and outcome. Risk owners should see the same allocation with expected and realized loss. One shared decision ledger prevents cost optimization and risk governance from operating on incompatible denominators."
-    },
-    {
-      "type": "html",
-      "tag": "h3",
-      "html": "Reserve capacity against business deadlines",
-      "text": "Reserve capacity against business deadlines"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Cost and latency are coupled through capacity. A lower-price route is not feasible when its queue makes the action miss a commercial or control deadline. The scheduler therefore needs an admission decision after route eligibility and before execution. It should evaluate remaining deadline, predicted service time, verification duration, queue position, reserved capacity, rate limits, retry allowance, and fallback lead time.",
-      "text": "Cost and latency are coupled through capacity. A lower-price route is not feasible when its queue makes the action miss a commercial or control deadline. The scheduler therefore needs an admission decision after route eligibility and before execution. It should evaluate remaining deadline, predicted service time, verification duration, queue position, reserved capacity, rate limits, retry allowance, and fallback lead time."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "For an action with deadline <code>D</code>, arrival time <code>t0</code>, predicted queue time <code>Wq</code>, inference service time <code>S</code>, verification time <code>V</code>, and recovery reserve <code>R</code>, the route has positive slack only when:",
-      "text": "For an action with deadline D, arrival time t0, predicted queue time Wq, inference service time S, verification time V, and recovery reserve R, the route has positive slack only when:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "slack = D − t0 − Wq − S − V − R > 0",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Use distributions rather than averages for consequential work. If a pricing exception must be answered within ten minutes, a route with two-minute mean duration and fifteen-minute P99 is materially different from a route with three-minute mean and six-minute P99. Reserve enough time for the authorized fallback; otherwise the first attempt consumes the entire decision window and turns a recoverable failure into a missed obligation.",
-      "text": "Use distributions rather than averages for consequential work. If a pricing exception must be answered within ten minutes, a route with two-minute mean duration and fifteen-minute P99 is materially different from a route with three-minute mean and six-minute P99. Reserve enough time for the authorized fallback; otherwise the first attempt consumes the entire decision window and turns a recoverable failure into a missed obligation."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Capacity can be divided into baseline reservations for critical cohorts, elastic pools for normal work, and interruptible pools for batch or low-priority work. The router should price these classes differently because consuming reserved capacity has an opportunity cost even if the immediate provider charge is the same. During degradation, admission control should shed or defer the lowest-value eligible work before it violates a critical cohort's latency or assurance floor.",
-      "text": "Capacity can be divided into baseline reservations for critical cohorts, elastic pools for normal work, and interruptible pools for batch or low-priority work. The router should price these classes differently because consuming reserved capacity has an opportunity cost even if the immediate provider charge is the same. During degradation, admission control should shed or defer the lowest-value eligible work before it violates a critical cohort's latency or assurance floor."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Forecasting should join business arrival curves with technical service curves. Model hourly and day-of-week demand, campaign or close-of-quarter spikes, tenant concentration, context-size distribution, tool latency, verifier concurrency, human-review staffing, and correlated provider failure. A simple independent-arrival simulation will understate tail pressure if many workflows arrive after the same batch, market event, or upstream outage. Stress tests should include burst traffic, one candidate unavailable, slower tools, reduced human capacity, and an elevated novelty rate at the same time.",
-      "text": "Forecasting should join business arrival curves with technical service curves. Model hourly and day-of-week demand, campaign or close-of-quarter spikes, tenant concentration, context-size distribution, tool latency, verifier concurrency, human-review staffing, and correlated provider failure. A simple independent-arrival simulation will understate tail pressure if many workflows arrive after the same batch, market event, or upstream outage. Stress tests should include burst traffic, one candidate unavailable, slower tools, reduced human capacity, and an elevated novelty rate at the same time."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The operating decision is then concrete: buy more reserved inference, improve prompts or context to reduce service time, move eligible work to another route, add verification capacity, relax only a genuinely negotiable deadline, or throttle low-priority demand. Each option has a price and a measurable effect on completed outcomes. “The model is slow” is not an actionable portfolio diagnosis.",
-      "text": "The operating decision is then concrete: buy more reserved inference, improve prompts or context to reduce service time, move eligible work to another route, add verification capacity, relax only a genuinely negotiable deadline, or throttle low-priority demand. Each option has a price and a measurable effect on completed outcomes. “The model is slow” is not an actionable portfolio diagnosis."
+      "html": "The following sections retain the quantitative and systems detail for readers implementing the control plane.",
+      "text": "The following sections retain the quantitative and systems detail for readers implementing the control plane."
     },
     {
       "type": "html",
@@ -870,323 +523,39 @@
     },
     {
       "type": "html",
-      "tag": "h3",
-      "html": "Build an investment-grade evaluation dossier",
-      "text": "Build an investment-grade evaluation dossier"
+      "tag": "h2",
+      "html": "Production implementation checklist",
+      "text": "Production implementation checklist"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "A candidate policy should be reviewed like a capital proposal, not a demo. The dossier needs a frozen evaluation manifest: action taxonomy, sampling frame, exclusions, time range, volumes, input lineage, label protocol, route and prompt versions, tool mocks or snapshots, price version, latency environment, outcome maturity window, and known gaps. Publish the manifest hash with the result so a later rerun can establish what changed.",
-      "text": "A candidate policy should be reviewed like a capital proposal, not a demo. The dossier needs a frozen evaluation manifest: action taxonomy, sampling frame, exclusions, time range, volumes, input lineage, label protocol, route and prompt versions, tool mocks or snapshots, price version, latency environment, outcome maturity window, and known gaps. Publish the manifest hash with the result so a later rerun can establish what changed."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Split evaluation by causal purpose. A <strong>capability set</strong> measures whether each bundle can perform each action cohort under representative conditions. A <strong>routing set</strong> measures whether the policy chooses among already eligible bundles. A <strong>stress set</strong> exercises long context, contradictory evidence, provider failure, tool timeouts, policy boundaries, novel schemas, and high-loss edge cases. A <strong>regression set</strong> preserves known incidents and previously fixed failures. Mixing these into one leaderboard obscures whether the model failed, the router selected poorly, or the control plane degraded.",
-      "text": "Split evaluation by causal purpose. A capability set measures whether each bundle can perform each action cohort under representative conditions. A routing set measures whether the policy chooses among already eligible bundles. A stress set exercises long context, contradictory evidence, provider failure, tool timeouts, policy boundaries, novel schemas, and high-loss edge cases. A regression set preserves known incidents and previously fixed failures. Mixing these into one leaderboard obscures whether the model failed, the router selected poorly, or the control plane degraded."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Do not randomly split near-duplicate workflow records across train and test. Group by customer, case, template, source document, or temporal episode as appropriate, then reserve a forward time window. Otherwise the router can memorize a recurring request family and appear to generalize. Report overlap checks, support coverage, cohort prevalence, missing labels, and the share of production traffic that the evaluation does not represent.",
-      "text": "Do not randomly split near-duplicate workflow records across train and test. Group by customer, case, template, source document, or temporal episode as appropriate, then reserve a forward time window. Otherwise the router can memorize a recurring request family and appear to generalize. Report overlap checks, support coverage, cohort prevalence, missing labels, and the share of production traffic that the evaluation does not represent."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Promotion evidence should include paired comparisons when the same safely replayable action is run through candidate bundles. For binary adjudicated success, report the paired difference and confidence interval, not only two independent percentages. For cost and duration, show distributions and bootstrap intervals because tails are skewed. For loss, show scenario assumptions and sensitivity. For calibration, show reliability by consequential cohort. For policy, require zero known selection of ineligible routes in the test harness and explicit mutation tests that prove each hard gate can reject.",
-      "text": "Promotion evidence should include paired comparisons when the same safely replayable action is run through candidate bundles. For binary adjudicated success, report the paired difference and confidence interval, not only two independent percentages. For cost and duration, show distributions and bootstrap intervals because tails are skewed. For loss, show scenario assumptions and sensitivity. For calibration, show reliability by consequential cohort. For policy, require zero known selection of ineligible routes in the test harness and explicit mutation tests that prove each hard gate can reject."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The decision memo should translate metrics into a portfolio outcome. At forecast volume, how many additional verified successes are expected? What booked spend changes? How much P99 capacity is consumed? Which failure types rise or fall? How much human-review demand moves by hour and skill? What is the worst plausible loss under the sensitivity range? Which cohorts receive no benefit and should remain on the old route? A global “12% cheaper at equal quality” statement is insufficient if the saving comes from low-impact extraction while tail exposure increases in contract or account actions.",
-      "text": "The decision memo should translate metrics into a portfolio outcome. At forecast volume, how many additional verified successes are expected? What booked spend changes? How much P99 capacity is consumed? Which failure types rise or fall? How much human-review demand moves by hour and skill? What is the worst plausible loss under the sensitivity range? Which cohorts receive no benefit and should remain on the old route? A global “12% cheaper at equal quality” statement is insufficient if the saving comes from low-impact extraction while tail exposure increases in contract or account actions."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Approval must bind to the evaluated artifact. Record the policy digest, route-registry snapshot, feature contract, rate card, verifier versions, eligibility rules, and rollback target. If any material component changes before launch, invalidate or scope the approval. The production canary then tests the forecast under real arrival, queue, tool, and outcome conditions; it does not retroactively excuse missing offline evidence.",
-      "text": "Approval must bind to the evaluated artifact. Record the policy digest, route-registry snapshot, feature contract, rate card, verifier versions, eligibility rules, and rollback target. If any material component changes before launch, invalidate or scope the approval. The production canary then tests the forecast under real arrival, queue, tool, and outcome conditions; it does not retroactively excuse missing offline evidence."
+      "html": "<strong>•</strong> Define the action cohort and business postcondition before selecting a model.<br><strong>•</strong> Maintain a versioned portfolio of model, context, tool, retry and verification bundles.<br><strong>•</strong> Record workflow-level cost and outcome, not only token usage.<br><strong>•</strong> Apply policy, privacy, residency and assurance floors before scoring utility.<br><strong>•</strong> Calibrate suitability by cohort and expose uncertainty.<br><strong>•</strong> Add an abstain or conservative route for unsupported requests.<br><strong>•</strong> Log candidate routes for defensible counterfactual evaluation.<br><strong>•</strong> Set separate quality, latency, budget, loss and policy objectives.",
+      "text": "• Define the action cohort and business postcondition before selecting a model.\n• Maintain a versioned portfolio of model, context, tool, retry and verification bundles.\n• Record workflow-level cost and outcome, not only token usage.\n• Apply policy, privacy, residency and assurance floors before scoring utility.\n• Calibrate suitability by cohort and expose uncertainty.\n• Add an abstain or conservative route for unsupported requests.\n• Log candidate routes for defensible counterfactual evaluation.\n• Set separate quality, latency, budget, loss and policy objectives."
     },
     {
       "type": "html",
       "tag": "h2",
-      "html": "Operate independent routing objectives",
-      "text": "Operate independent routing objectives"
+      "html": "Continue the Production AI Control Plane series",
+      "text": "Continue the Production AI Control Plane series"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "A router can meet its average cost target while failing a critical quality cohort. It can meet quality while exceeding P99 latency. It can meet both while becoming miscalibrated or allowing unsupported novelty through. Operate separate objectives.",
-      "text": "A router can meet its average cost target while failing a critical quality cohort. It can meet quality while exceeding P99 latency. It can meet both while becoming miscalibrated or allowing unsupported novelty through. Operate separate objectives."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-17.png",
-      "alt": "Routing SLO scorecard for quality, P99 duration, cost per success, calibration, policy violation, OOD abstention, CVaR95 loss, and route-receipt coverage.",
-      "caption": "Figure 17. The synthetic scorecard deliberately breaches calibration and tail loss while six other objectives pass, demonstrating why one aggregate KPI is insufficient. AI-assisted visualization; synthetic 30-day values; not production data."
+      "html": "<strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/\">What an Agent Actually Costs</a><br><strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/\">Human Approval Is a Queueing System</a><br><strong>•</strong> <a href=\"https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/\">Do Not Let an AI Agent Touch Production Until It Passes This Evaluation</a>",
+      "text": "• What an Agent Actually Costs\n• Human Approval Is a Queueing System\n• Do Not Let an AI Agent Touch Production Until It Passes This Evaluation"
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Define every metric with cohort, denominator, time window, and oracle:",
-      "text": "Define every metric with cohort, denominator, time window, and oracle:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "critical_quality\n  = adjudicated_correct_critical_actions\n    / adjudicated_critical_actions\n\ncost_per_verified_success\n  = booked_workflow_cost\n    / actions_with_verified_success\n\npolicy_violation_rate\n  = route_decisions_with_ineligible_selected_route\n    / route_decisions\n\nOOD_abstention_rate\n  = OOD_actions_abstained_or_conservatively_routed\n    / adjudicated_OOD_actions",
-      "language": "text"
+      "html": "<em>Part of the Production AI Control Plane series—practical architectures for agent identity, authorization, governance, observability and recovery.</em>",
+      "text": "Part of the Production AI Control Plane series—practical architectures for agent identity, authorization, governance, observability and recovery."
     },
     {
       "type": "html",
       "tag": "p",
-      "html": "Quality needs coverage reporting: adjudication rate, missing labels, label delay, disagreement, and appeal. Latency should include time to verified result, not only time to first token. Cost should include retries and assurance. Expected loss and CVaR need sensitivity and incident reconciliation. Receipt coverage should be 100% for consequential routes because missing evidence disables governance.",
-      "text": "Quality needs coverage reporting: adjudication rate, missing labels, label delay, disagreement, and appeal. Latency should include time to verified result, not only time to first token. Cost should include retries and assurance. Expected loss and CVaR need sensitivity and incident reconciliation. Receipt coverage should be 100% for consequential routes because missing evidence disables governance."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Error budgets can control rollout. If calibration or tail-loss budget is consumed, freeze expansion and fall back to the last safe policy. If provider capacity degrades, rerun feasibility rather than forcing the optimizer to choose an unavailable route. If budget consumption accelerates, throttle eligible low-priority cohorts—not critical controls.",
-      "text": "Error budgets can control rollout. If calibration or tail-loss budget is consumed, freeze expansion and fall back to the last safe policy. If provider capacity degrades, rerun feasibility rather than forcing the optimizer to choose an unavailable route. If budget consumption accelerates, throttle eligible low-priority cohorts—not critical controls."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Define the operating model",
-      "text": "Define the operating model"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The ML platform team owns router runtime, feature contracts, model registry, calibration, policy execution, receipts, and technical SLOs. Domain product teams own action schemas, decision value, outcome definitions, deadlines, and workflow trade-offs. Risk, legal, privacy, and security own categorical constraints and tail-risk tolerance. FinOps owns booked-cost integrity, forecasting, budget policy, and allocation views. Operations owns fallbacks, capacity incidents, and recovery.",
-      "text": "The ML platform team owns router runtime, feature contracts, model registry, calibration, policy execution, receipts, and technical SLOs. Domain product teams own action schemas, decision value, outcome definitions, deadlines, and workflow trade-offs. Risk, legal, privacy, and security own categorical constraints and tail-risk tolerance. FinOps owns booked-cost integrity, forecasting, budget policy, and allocation views. Operations owns fallbacks, capacity incidents, and recovery."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "No team should optimize alone. FinOps cannot downgrade assurance based only on invoice variance. ML cannot promote based only on benchmark accuracy. Risk cannot require universal largest-model routing without pricing capacity, latency, and residual error. Product cannot hide unsuccessful actions from the denominator.",
-      "text": "No team should optimize alone. FinOps cannot downgrade assurance based only on invoice variance. ML cannot promote based only on benchmark accuracy. Risk cannot require universal largest-model routing without pricing capacity, latency, and residual error. Product cannot hide unsuccessful actions from the denominator."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Create a monthly portfolio review with route additions and removals, candidate-version changes, cohort frontier shifts, cost inflation, calibration drift, novelty, policy exclusions, incident loss, capacity, verification yield, and shadow-policy evidence. Material policy changes receive owners, effective dates, rollback versions, and post-deployment review.",
-      "text": "Create a monthly portfolio review with route additions and removals, candidate-version changes, cohort frontier shifts, cost inflation, calibration drift, novelty, policy exclusions, incident loss, capacity, verification yield, and shadow-policy evidence. Material policy changes receive owners, effective dates, rollback versions, and post-deployment review."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Vendor management belongs in the portfolio. Prices, quotas, regions, retention terms, service characteristics, and model behavior can change. Avoid provider-specific claims in permanent policy. Bind policy to evaluated route versions and capabilities. Requalify a material change before treating it as interchangeable.",
-      "text": "Vendor management belongs in the portfolio. Prices, quotas, regions, retention terms, service characteristics, and model behavior can change. Avoid provider-specific claims in permanent policy. Bind policy to evaluated route versions and capabilities. Requalify a material change before treating it as interchangeable."
-    },
-    {
-      "type": "html",
-      "tag": "h3",
-      "html": "Write the portfolio business case",
-      "text": "Write the portfolio business case"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The business case should start with a baseline cohort table rather than a proposed model. For each action class, record monthly volume, completion rate, verified quality, P95 and P99 time to postcondition, booked cost per verified success, human minutes, expected loss range, top failure types, and current capacity constraint. Then state the intervention: which route bundle changes, which controls remain fixed, what verification is added or removed, and which traffic is explicitly out of scope.",
-      "text": "The business case should start with a baseline cohort table rather than a proposed model. For each action class, record monthly volume, completion rate, verified quality, P95 and P99 time to postcondition, booked cost per verified success, human minutes, expected loss range, top failure types, and current capacity constraint. Then state the intervention: which route bundle changes, which controls remain fixed, what verification is added or removed, and which traffic is explicitly out of scope."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Forecast value as a bridge from the baseline. A defensible annual contribution model can be written as:",
-      "text": "Forecast value as a bridge from the baseline. A defensible annual contribution model can be written as:"
-    },
-    {
-      "type": "html",
-      "tag": "pre",
-      "html": "",
-      "text": "Contribution = value of additional verified outcomes\n             + avoided execution and recovery cost\n             + avoided modeled loss\n             − incremental inference and tool cost\n             − incremental verification and review cost\n             − platform, evaluation, and change cost",
-      "language": "text"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Show low, base, and high cases. Volume, success uplift, human-time conversion, incident probability, and adoption are uncertain and should not share one false-precision estimate. Separate cashable savings, such as avoided vendor usage or contractor hours, from capacity released but not removed from the cost base. Separate revenue influenced from revenue recognized. If an improved route merely completes work faster, quantify whether the deadline affects conversion, service level, working capital, or risk; do not label latency reduction as value without a mechanism.",
-      "text": "Show low, base, and high cases. Volume, success uplift, human-time conversion, incident probability, and adoption are uncertain and should not share one false-precision estimate. Separate cashable savings, such as avoided vendor usage or contractor hours, from capacity released but not removed from the cost base. Separate revenue influenced from revenue recognized. If an improved route merely completes work faster, quantify whether the deadline affects conversion, service level, working capital, or risk; do not label latency reduction as value without a mechanism."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Assign benefit and risk owners. Finance validates cost assumptions and cashability. The domain owner validates volume, action value, and adoption. Operations validates staffing and capacity. Risk validates loss scenarios and categorical constraints. Engineering owns delivery and run cost. The approval record should name who accepts residual risk and who can halt the policy if the canary violates its bounds.",
-      "text": "Assign benefit and risk owners. Finance validates cost assumptions and cashability. The domain owner validates volume, action value, and adoption. Operations validates staffing and capacity. Risk validates loss scenarios and categorical constraints. Engineering owns delivery and run cost. The approval record should name who accepts residual risk and who can halt the policy if the canary violates its bounds."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Finally, fund learning deliberately. Some proposed spend has immediate production return; some buys evidence that could change a later allocation. A stratified adjudication sample, shadow run, or evaluator improvement can have option value because it reduces uncertainty around a high-volume decision. Treat that as an explicit evaluation investment with a question, sample requirement, expiry, and decision it will unlock—not as an indefinite research budget.",
-      "text": "Finally, fund learning deliberately. Some proposed spend has immediate production return; some buys evidence that could change a later allocation. A stratified adjudication sample, shadow run, or evaluator improvement can have option value because it reduces uncertainty around a high-volume decision. Treat that as an explicit evaluation investment with a question, sample requirement, expiry, and decision it will unlock—not as an indefinite research budget."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Migrate from fixed routes to governed allocation",
-      "text": "Migrate from fixed routes to governed allocation"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Do not begin with an online bandit controlling high-impact production traffic. Build evidence and control in stages.",
-      "text": "Do not begin with an online bandit controlling high-impact production traffic. Build evidence and control in stages."
-    },
-    {
-      "type": "figure",
-      "src": "assets/images/model-routing-is-capital-allocation/figure-18.png",
-      "alt": "Six-phase migration from inventory and receipts through fixed policy, shadow evaluation, bounded canary, and governed adaptation.",
-      "caption": "Figure 18. Economic autonomy increases only after each policy stage clears quality, risk, cost, and rollback evidence gates. AI-assisted design visualization; reference roadmap; not production data."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 0 — inventory.</strong> Enumerate models, deployments, prompts, tools, workflows, data boundaries, retries, verifiers, prices, capacity, and owners. Establish the workflow cost ledger.",
-      "text": "Phase 0 — inventory. Enumerate models, deployments, prompts, tools, workflows, data boundaries, retries, verifiers, prices, capacity, and owners. Establish the workflow cost ledger."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 1 — receipts.</strong> Give every route decision stable workflow, action, attempt, policy, candidate, and selected-route identities. Join realized cost, latency, verification, postcondition, incident, and adjudication.",
-      "text": "Phase 1 — receipts. Give every route decision stable workflow, action, attempt, policy, candidate, and selected-route identities. Join realized cost, latency, verification, postcondition, incident, and adjudication."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 2 — fixed rules.</strong> Define safe cohorts and explicit eligibility. Use simple deterministic routes and fallbacks. Establish quality floors, novelty handling, and route-level SLOs.",
-      "text": "Phase 2 — fixed rules. Define safe cohorts and explicit eligibility. Use simple deterministic routes and fallbacks. Establish quality floors, novelty handling, and route-level SLOs."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 3 — shadow.</strong> Evaluate learned or optimized policies without external effect. Build candidate coverage through safe shadow inference and stratified adjudication. Compare with simple baselines and the fixed policy.",
-      "text": "Phase 3 — shadow. Evaluate learned or optimized policies without external effect. Build candidate coverage through safe shadow inference and stratified adjudication. Compare with simple baselines and the fixed policy."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 4 — bounded canary.</strong> Allocate a small, policy-eligible cohort under traffic, budget, loss, latency, and exploration limits. Use immediate fallback to the last safe route. Expand only after full label windows and tail review.",
-      "text": "Phase 4 — bounded canary. Allocate a small, policy-eligible cohort under traffic, budget, loss, latency, and exploration limits. Use immediate fallback to the last safe route. Expand only after full label windows and tail review."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Phase 5 — governed adaptation.</strong> Update portfolio allocation on a controlled cadence or online only within approved bounds. Detect feature, outcome, calibration, price, and candidate drift. Version every policy and preserve instant rollback.",
-      "text": "Phase 5 — governed adaptation. Update portfolio allocation on a controlled cadence or online only within approved bounds. Detect feature, outcome, calibration, price, and candidate drift. Version every policy and preserve instant rollback."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Each gate must define what evidence is sufficient, not merely who signs. A canary should specify minimum sample, cohort coverage, quality lower bound, calibration limit, P99 duration, cost per verified success, expected and tail loss, policy violations, incident count, and observation window.",
-      "text": "Each gate must define what evidence is sufficient, not merely who signs. A canary should specify minimum sample, cohort coverage, quality lower bound, calibration limit, P99 duration, cost per verified success, expected and tail loss, policy violations, incident count, and observation window."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Failure modes and limitations",
-      "text": "Failure modes and limitations"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The reward is misspecified.</strong> A router optimized for model-judge preference may not improve business postconditions. Join downstream outcomes and keep proxy limitations explicit.",
-      "text": "The reward is misspecified. A router optimized for model-judge preference may not improve business postconditions. Join downstream outcomes and keep proxy limitations explicit."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>The action mix changes.</strong> Aggregate gains can disappear when a new region, product, language, or high-impact cohort grows. Monitor cohort mix and reweight evaluation.",
-      "text": "The action mix changes. Aggregate gains can disappear when a new region, product, language, or high-impact cohort grows. Monitor cohort mix and reweight evaluation."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Router and verifier errors correlate.</strong> A model-based router, generator, and judge may share blind spots. Use deterministic checks, independent evidence, model diversity where validated, and human adjudication.",
-      "text": "Router and verifier errors correlate. A model-based router, generator, and judge may share blind spots. Use deterministic checks, independent evidence, model diversity where validated, and human adjudication."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Price and latency are nonstationary.</strong> Provider price, caching, quota, queueing, and outage state can change the frontier. Snapshot portfolio state and re-evaluate feasibility at execution.",
-      "text": "Price and latency are nonstationary. Provider price, caching, quota, queueing, and outage state can change the frontier. Snapshot portfolio state and re-evaluate feasibility at execution."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>A cheap route can create expensive recovery.</strong> Cost allocation must include retries, compensations, customer remediation, and incident labor. Sparse incidents require uncertainty ranges rather than zero expected loss.",
-      "text": "A cheap route can create expensive recovery. Cost allocation must include retries, compensations, customer remediation, and incident labor. Sparse incidents require uncertainty ranges rather than zero expected loss."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Exploration creates exposure.</strong> Randomization needs a policy-eligible safe set, action-level caps, monitoring, informed governance, and immediate stop. Some actions should never explore online.",
-      "text": "Exploration creates exposure. Randomization needs a policy-eligible safe set, action-level caps, monitoring, informed governance, and immediate stop. Some actions should never explore online."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Counterfactual estimators rely on support and assumptions.</strong> Propensity errors, hidden confounding, extreme weights, and outcome-model bias can invalidate results. Report diagnostics and prefer controlled evidence when stakes are high.",
-      "text": "Counterfactual estimators rely on support and assumptions. Propensity errors, hidden confounding, extreme weights, and outcome-model bias can invalidate results. Report diagnostics and prefer controlled evidence when stakes are high."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>Figures are explanatory.</strong> Every numerical figure in this story is synthetic. None establishes current model rankings, safe thresholds, provider pricing, achievable savings, or forecast value.",
-      "text": "Figures are explanatory. Every numerical figure in this story is synthetic. None establishes current model rankings, safe thresholds, provider pricing, achievable savings, or forecast value."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Production-readiness questions",
-      "text": "Production-readiness questions"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "Before enabling dynamic routing for consequential actions, answer:",
-      "text": "Before enabling dynamic routing for consequential actions, answer:"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "<strong>•</strong> Is the decision unit a typed business action with stable identity and postcondition?<br><strong>•</strong> Does every route include model, deployment, context, tools, retry, verification, and fallback?<br><strong>•</strong> Which hard controls define the feasible set, and are exclusions recorded?<br><strong>•</strong> Can cost be allocated from every attempt and tool to a verified workflow outcome?<br><strong>•</strong> Are booked cost, delay cost, expected loss, and tail loss separated and auditable?<br><strong>•</strong> Which route capability cells are measured, uncertain, or untested for each cohort?<br><strong>•</strong> Is the router calibrated by action class, impact, language, novelty, and time?<br><strong>•</strong> What happens outside evaluated support?<br><strong>•</strong> Do cascades use fresh governed context, independent checks, and bounded stop rules?<br><strong>•</strong> Is verification allocated by loss reduction and duty rather than confidence alone?<br><strong>•</strong> Does offline evaluation have support for the new policy, with propensities or shadow evidence?<br><strong>•</strong> Which SLO or risk breach freezes rollout and invokes the last safe policy?<br><strong>•</strong> Who owns model evidence, action value, cost integrity, risk constraints, and operations?<br><strong>•</strong> What marginal business value justifies each additional dollar, second, model call, and reviewer minute?",
-      "text": "• Is the decision unit a typed business action with stable identity and postcondition?\n• Does every route include model, deployment, context, tools, retry, verification, and fallback?\n• Which hard controls define the feasible set, and are exclusions recorded?\n• Can cost be allocated from every attempt and tool to a verified workflow outcome?\n• Are booked cost, delay cost, expected loss, and tail loss separated and auditable?\n• Which route capability cells are measured, uncertain, or untested for each cohort?\n• Is the router calibrated by action class, impact, language, novelty, and time?\n• What happens outside evaluated support?\n• Do cascades use fresh governed context, independent checks, and bounded stop rules?\n• Is verification allocated by loss reduction and duty rather than confidence alone?\n• Does offline evaluation have support for the new policy, with propensities or shadow evidence?\n• Which SLO or risk breach freezes rollout and invokes the last safe policy?\n• Who owns model evidence, action value, cost integrity, risk constraints, and operations?\n• What marginal business value justifies each additional dollar, second, model call, and reviewer minute?"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "If the platform cannot answer these questions, it does not have model routing economics. It has a traffic splitter with an invoice dashboard.",
-      "text": "If the platform cannot answer these questions, it does not have model routing economics. It has a traffic splitter with an invoice dashboard."
-    },
-    {
-      "type": "html",
-      "tag": "h2",
-      "html": "Further questions",
-      "text": "Further questions"
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The target workload must determine whether quality complementarity is stable, which simple baseline is difficult to beat, how long labels take to mature, where the router is miscalibrated, which OOD signals correlate with failure, how retries inflate tail cost, whether verifiers add independent information, and which cohorts create most marginal value from expensive inference. It must also determine which constraints remain categorical even if monetized utility favors a cheaper route.",
-      "text": "The target workload must determine whether quality complementarity is stable, which simple baseline is difficult to beat, how long labels take to mature, where the router is miscalibrated, which OOD signals correlate with failure, how retries inflate tail cost, whether verifiers add independent information, and which cohorts create most marginal value from expensive inference. It must also determine which constraints remain categorical even if monetized utility favors a cheaper route."
-    },
-    {
-      "type": "html",
-      "tag": "p",
-      "html": "The governing principle is:",
-      "text": "The governing principle is:"
-    },
-    {
-      "type": "html",
-      "tag": "blockquote",
-      "html": "Spend model and verification capacity where it changes the risk-adjusted business decision—and preserve enough evidence to prove that it did.",
-      "text": "Spend model and verification capacity where it changes the risk-adjusted business decision—and preserve enough evidence to prove that it did."
+      "html": "<em>Follow Aditya Singh for production-grade enterprise AI architecture, governance and economics.</em>",
+      "text": "Follow Aditya Singh for production-grade enterprise AI architecture, governance and economics."
     }
   ],
   "canonical": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
@@ -1196,7 +565,7 @@
   "id": "86659da7c08d",
   "modifiedAt": "2026-08-23T12:40:00.000Z",
   "publishedAt": "2026-08-23T12:40:00.000Z",
-  "readTime": "33 min read",
+  "readTime": "12 min read",
   "slug": "model-routing-is-capital-allocation",
   "sourceUrl": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
   "subtitle": "A risk-adjusted method for allocating quality, latency, token, verification, and failure budgets across agent workflows.",
@@ -1208,5 +577,5 @@
     "Enterprise AI"
   ],
   "title": "Model Routing Is Capital Allocation",
-  "wordCount": 6502
+  "wordCount": 2361
 }
