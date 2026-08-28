@@ -113,8 +113,12 @@
     "profile": "https://medium.com/@vreshch",
     "name": "Volodymyr Vreshch",
     "observedProfile": "Senior Engineer at Microsoft, Ph.D.; writes about AI tools, MCP, production incidents, and software architecture.",
-    "observedAudience": "193 followers and 198 following were visible.",
+    "observedAudience": "201 followers and 198 following were visible at execution time.",
     "recommendation": "Reciprocal follow is substantively justified after the full postmortem review; keep email notifications off.",
-    "requiresExactConfirmation": true
+    "requiresExactConfirmation": true,
+    "state": "followed",
+    "emailNotifications": "off",
+    "verifiedAt": "2026-08-28T16:13:16Z",
+    "verification": "Medium showed Following on Volodymyr Vreshch's profile and a checkmark beside Email notifications off in the subscription-options menu."
   }
 }

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828161303-comment-posted-2026-08-28-linkedin-comment-rahul-sales-ops-outcomes",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-28T16:13:03Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T16:13:03Z",
+    "scope": "Approve L1, L2, L3 and M1 exactly as written."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-28-linkedin-comment-rahul-sales-ops-outcomes",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499003197294837760/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499003197294837760/",
+    "publishedTextSha256": "2b6d8f8a574695eeb9af33d4be064ed986aee7d5b72cbe245213a33008955344",
+    "verifiedAt": "2026-08-28T16:13:03Z",
+    "verification": "LinkedIn rendered the exact approved Rahul Shetty comment under Aditya Singh with a now timestamp on the correct public post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828161302-comment-posted-2026-08-28-linkedin-comment-barry-ai-outcome-contract",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-28T16:13:02Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T16:13:02Z",
+    "scope": "Approve L1, L2, L3 and M1 exactly as written."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-28-linkedin-comment-barry-ai-outcome-contract",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499080852702937088/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499080852702937088/",
+    "publishedTextSha256": "12a39439da7d281ea171d20950074851beeb1edffc3b5e537c16bb455ca452b8",
+    "verifiedAt": "2026-08-28T16:13:02Z",
+    "verification": "LinkedIn rendered the exact approved Barry O’Reilly comment under Aditya Singh with a now timestamp on the correct public post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

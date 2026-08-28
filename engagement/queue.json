@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T13:46:34Z",
+  "updatedAt": "2026-08-28T16:13:03Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -459,6 +459,60 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497555972484255744/",
       "receiptOperationId": "20260828134634-reply-posted-2026-08-28-linkedin-reply-kevin-burden-ledger",
       "postedAt": "2026-08-28T13:46:34Z"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-barry-ai-outcome-contract",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499080852702937088/",
+      "title": "Are Leaders Turning AI Use Into Measurable AI Outcomes",
+      "author": "Barry O’Reilly",
+      "reason": "Connects AI adoption to explicit workflow redesign, accountability, and post-cost value realization without promoting the user catalog.",
+      "evidence": "The signed-in LinkedIn UI showed a three-hour-old public post citing 92 percent executive belief in AI productivity potential, 72 percent uncertainty about where to start, and 8 percent use in strategy and forecasting; three reactions and two comments were visible before posting, and no prior comment by this profile was visible.",
+      "draftResponse": "Barry, the 92%/72% gap suggests adoption is being measured before work redesign is specified. I would require each initiative to name one workflow, one displaced task, one accountable owner and four outcome measures: cycle time, exception rate, hours released and 30/60/90-day value realized after implementation cost. The jump from 8% strategic use will come from making that operating contract explicit—not from adding more licenses.",
+      "priorityScore": 0.88,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499080852702937088/",
+      "receiptOperationId": "20260828161302-comment-posted-2026-08-28-linkedin-comment-barry-ai-outcome-contract",
+      "postedAt": "2026-08-28T16:13:02Z"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-rahul-sales-ops-outcomes",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499003197294837760/",
+      "title": "Selling the AI Sales Ops Outcome",
+      "author": "Rahul Shetty",
+      "reason": "Adds commercial and operating metrics to a source-specific discussion about moving from an AI tool to an outsourced Sales Operations outcome.",
+      "evidence": "The signed-in LinkedIn UI showed a two-day-old public post explaining that an AI sales-leader tool did not convert until the offer became an outsourced Sales Operations service; the author stated that the provider owns the stack and people while the client buys outcomes. Twenty-four reactions and two comments were visible, and no prior comment by this profile was visible.",
+      "draftResponse": "Rahul, shifting from tool to service does more than change positioning—it transfers implementation risk and working-capital timing. I would put four numbers in the contract: qualified pipeline per 100 target accounts, cost per accepted opportunity, median time from lead signal to rep action, and the human-correction rate on agent-created activity. If the provider owns the stack and people, the commercial unit should be a verified outcome with a service-level envelope—not licenses or hours.",
+      "priorityScore": 0.79,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499003197294837760/",
+      "receiptOperationId": "20260828161303-comment-posted-2026-08-28-linkedin-comment-rahul-sales-ops-outcomes",
+      "postedAt": "2026-08-28T16:13:03Z"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-alejandro-genrec-promotion-gates",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498632028914106368/",
+      "title": "GenRec: An LLM-Backed Recommendation Ranker at Netflix",
+      "author": "Alejandro Saucedo",
+      "reason": "Adds segment-level reliability and rollback gates to a detailed recommendation-ranking discussion with specific cost, data, and quality evidence.",
+      "evidence": "The signed-in LinkedIn UI showed a one-day-old public post reporting about 1.6 percent relative offline MRR lift, roughly 40 times less training data, context compression from about 5,000 to 1,700 tokens, a four-week A/B test on about 10 percent of traffic, and failures involving popularity bias, out-of-catalog titles, and business constraints. Four hundred fifty-eight reactions, twenty-five comments, and twenty reposts were visible; no prior comment by this profile was visible.",
+      "draftResponse": "The +1.6% relative MRR, roughly 40× less training data and 5,000→1,700-token compression are compelling—but the promotion gate should also expose catalog-validity failures, popularity concentration, long-tail coverage, p95 latency and cost per scored slate. A ranker can improve aggregate reward while amplifying constraint violations in a small segment. I would ship only when the lift survives those segment-level checks and live drift can trigger rollback.",
+      "priorityScore": 0.93,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498632028914106368/",
+      "receiptOperationId": "20260828161303-comment-posted-2026-08-28-linkedin-comment-alejandro-genrec-promotion-gates",
+      "postedAt": "2026-08-28T16:13:03Z"
     }
   ]
 }
