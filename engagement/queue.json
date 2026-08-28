@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T17:44:34Z",
+  "updatedAt": "2026-08-28T18:36:48Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -603,6 +603,24 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497732421367533568/",
       "receiptOperationId": "20260828174434-comment-posted-2026-08-28-linkedin-comment-audi-rowe-human-judgment",
       "postedAt": "2026-08-28T17:44:34Z"
+    },
+    {
+      "id": "2026-08-29-linkedin-reply-pavan-kumar-control-plane",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+      "title": "Pavan Kumar B response on the Enterprise AI Control Plane",
+      "author": "Pavan Kumar B",
+      "reason": "Respond to a substantive inbound contribution from an AI-governance founder whose implementation focus closely matches the Production AI Control Plane series.",
+      "evidence": "Pavan connected after adding a specific comment that defined state transition as the consequential audit boundary; no Aditya Singh reply was present before the approved action.",
+      "draftResponse": "Exactly, Pavan. The state transition is the audit boundary because that is where authority becomes consequence. In practice, I would persist five fields for every Level 3–4 action: input evidence, delegated authority and lease, policy version, execution receipt, and resulting state. Otherwise, an audit can prove that a model ran but not that the outcome was authorized.",
+      "priorityScore": 0.97,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+      "receiptOperationId": "20260828183648-reply-posted-2026-08-29-linkedin-reply-pavan-kumar-control-plane",
+      "postedAt": "2026-08-28T18:36:48Z"
     }
   ]
 }

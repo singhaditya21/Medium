@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828183648-reply-posted-2026-08-29-linkedin-reply-pavan-kumar-control-plane",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-28T18:36:48Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T18:36:48Z",
+    "scope": "Approved all three exactly as written"
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-29-linkedin-reply-pavan-kumar-control-plane",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+    "publishedTextSha256": "cdc99e0892723d1d2d9281ae8ae842149f912480dd76794c5cad467ae15888db",
+    "verifiedAt": "2026-08-28T18:36:48Z",
+    "verification": "LinkedIn rendered the exact approved reply under Pavan Kumar B’s comment on Aditya Singh’s Enterprise AI Control Plane post, attributed to Aditya Singh with a current timestamp."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

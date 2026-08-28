@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "executedAt": "2026-08-28T18:37:03Z",
+  "timezone": "Asia/Kolkata",
+  "status": "verified",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "userConfirmation": {
+    "obtained": true,
+    "scope": "Approved all three exactly as written"
+  },
+  "person": {
+    "name": "Pavan Kumar B",
+    "profileUrl": "https://www.linkedin.com/in/pavan8855/",
+    "headline": "Founder @ Qusure | Helping enterprises with real-time AI governance and enforcement | NIST · EU AI Act · ISO 42001 | 15+ Yrs in DevSecOps"
+  },
+  "actions": [
+    {
+      "action": "connection_invitation_accepted",
+      "status": "verified",
+      "verification": "LinkedIn displayed ‘Pavan Kumar is now a connection’ after accepting the inbound invitation."
+    },
+    {
+      "action": "public_reply_posted",
+      "status": "verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+      "receiptOperationId": "20260828183648-reply-posted-2026-08-29-linkedin-reply-pavan-kumar-control-plane"
+    },
+    {
+      "action": "private_message_posted",
+      "status": "verified",
+      "receiptOperationId": "20260828183703-message-posted-in-pavan8855"
+    }
+  ],
+  "notes": [
+    "The accepted invitation was relevant to the account’s enterprise-AI governance positioning and followed a substantive contribution to the Production AI Control Plane discussion.",
+    "The private message text and conversation URL are not stored; the dedicated message receipt contains only a SHA-256 digest and the public recipient profile URL.",
+    "No credentials, cookies, browser state, or private URLs are stored."
+  ],
+  "secretsStored": false
+}
