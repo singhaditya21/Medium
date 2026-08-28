@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T16:13:03Z",
+  "updatedAt": "2026-08-28T17:32:09Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -513,6 +513,81 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498632028914106368/",
       "receiptOperationId": "20260828161303-comment-posted-2026-08-28-linkedin-comment-alejandro-genrec-promotion-gates",
       "postedAt": "2026-08-28T16:13:03Z"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-nick-lambeth-claudeforce",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
+      "title": "Claudeforce and the CRM control boundary",
+      "author": "Nick Lambeth",
+      "reason": "Direct fit with production CRM, agent authority, auditability, and control-plane positioning.",
+      "evidence": "Posted 1 day ago; 69 reactions and 18 comments. The post says sellers can read live deal context, update CRM records, and act from Claude with real guardrails. No existing Aditya Singh comment was visible.",
+      "draftResponse": "The interface shift is real, but the control boundary cannot move invisibly with it. If a seller can update records or trigger actions from Claude, I would measure authorization-denial rate, approval latency, rollback rate and evidence completeness by action class; otherwise fewer clicks may come at the cost of weaker auditability. The system of record should retain policy enforcement and an immutable receipt even when the system of engagement changes.",
+      "priorityScore": 0.9,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-taras-maister-voice-economics",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498873561533751296/",
+      "title": "PhoneLLM voice-agent serving economics",
+      "author": "Taras Maister",
+      "reason": "Exceptional fit with agent unit economics, model routing, evaluation, latency, and production reliability.",
+      "evidence": "Posted 18 hours ago; 131 reactions and 9 comments. The post compares about $5,000 monthly B200 serving with $1,500 monthly L40S FP8 serving, 16 concurrent connections and up to 700,000 voice minutes. No existing Aditya Singh comment was visible.",
+      "draftResponse": "That cost step-change is material: $5,000 to $1,500 per month is a 70% reduction, and 700,000 minutes implies roughly $0.0021 of serving cost per voice minute at full utilization, before telephony, ASR/TTS, orchestration and idle-capacity overhead. The production benchmark I would add is cost per successfully completed intent at p95 latency, segmented by concurrency—weight retention alone will not expose tool-call failures or quality degradation on high-risk turns.",
+      "priorityScore": 0.93,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-ronak-sheth-pricing-agents",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498699987300544513/",
+      "title": "Governed pricing agents inside ServiceNow",
+      "author": "Ronak Sheth",
+      "reason": "Strong fit with CRM workflow automation, bounded action, approvals, revenue operations, and measurable outcomes.",
+      "evidence": "Posted 1 day ago; 44 reactions and 1 comment. The post describes floor, target and stretch pricing, win-rate intelligence, recommendations, margin-risk monitoring and approvals in ServiceNow. No existing Aditya Singh comment was visible.",
+      "draftResponse": "Putting floor, target and stretch prices in the live quote flow is where pricing intelligence becomes operational, but it also changes the control surface. I would track override rate, realized-margin lift, win-rate delta and approval-cycle time by recommendation band; if conversion improves while override or exception rates spike, the agent may be learning to route around policy rather than applying it.",
+      "priorityScore": 0.84,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-sayandeb-banerjee-ai-system",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498974097348153344/",
+      "title": "Enterprise AI as a system, not disconnected pilots",
+      "author": "Sayandeb Banerjee",
+      "reason": "Direct fit with enterprise AI control planes, shared context, reusable architecture, governance, and value realization.",
+      "evidence": "Posted 11 hours ago; 221 reactions and 11 comments. The post argues that disconnected pilots repeatedly rebuild data access, context and definitions. No existing Aditya Singh comment was visible.",
+      "draftResponse": "The expensive failure mode is not the number of pilots; it is the number of incompatible control and context planes they create. I would require every pilot to declare five reusable contracts before scale—identity, data semantics, evaluation, authorization and telemetry—and measure reuse across subsequent use cases. If the second deployment cannot reuse at least 60–70% of those contracts, the organisation is still funding isolated demos.",
+      "priorityScore": 0.92,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-audi-rowe-human-judgment",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497732421367533568/",
+      "title": "Human judgment as the scarce enterprise resource",
+      "author": "Audi Rowe",
+      "reason": "Strong fit with human approval design, queueing, governance, expected-loss controls, and enterprise operating models.",
+      "evidence": "Posted 3 days ago; 47 reactions and 6 comments. The post argues that AI moves the bottleneck from building software to deciding what to build, govern and value. No existing Aditya Singh comment was visible.",
+      "draftResponse": "Human judgment becomes a queueing constraint long before it becomes a philosophical one. For every AI-assisted decision I would measure arrival rate, reviewer service time, escalation rate and cost of false approval, then reserve people for cases where expected-loss reduction exceeds review cost. Otherwise human-in-the-loop design simply converts automation into an unmeasured backlog.",
+      "priorityScore": 0.8,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
     }
   ]
 }
