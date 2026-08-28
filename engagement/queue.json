@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T18:36:48Z",
+  "updatedAt": "2026-08-28T18:41:32Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -621,6 +621,21 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
       "receiptOperationId": "20260828183648-reply-posted-2026-08-29-linkedin-reply-pavan-kumar-control-plane",
       "postedAt": "2026-08-28T18:36:48Z"
+    },
+    {
+      "id": "2026-08-29-linkedin-reply-nick-lambeth-cross-system-policy",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
+      "title": "Salesforce and Databricks cross-system policy boundary",
+      "author": "Nick Lambeth",
+      "reason": "Nick directly extended the existing control-boundary comment with Salesforce security posture and Databricks row-level catalog governance, creating a high-fit opening to define cross-system privilege amplification.",
+      "evidence": "Fresh signed-in review: Nick explicitly mentioned Aditya Singh in a 28-minute-old reply. The source post had 100 reactions and 22 comments; the existing Aditya comment had 2 reactions and 38 impressions, and no subsequent Aditya reply was visible.",
+      "draftResponse": "Agreed, Nick. Row-level policy in the Databricks catalog and Salesforce permissions each protect a local boundary; the harder failure appears when an agent combines a permitted read with a permitted CRM write. I would track cross-system privilege amplification, denial rate and p95 policy-evaluation latency, then require one action-time decision and receipt spanning both systems—otherwise two locally valid permissions can produce one globally invalid outcome.",
+      "priorityScore": 0.96,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
     }
   ]
 }
