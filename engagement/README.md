@@ -31,6 +31,8 @@ Up to five active candidates per platform are allowed in a review batch. Posted 
 
 Larger researched campaigns are stored as dated opportunity backlogs. Only one wave of five moves into `queue.json` at a time; later waves must have their source and exact target revalidated before promotion. This prevents stale, duplicate, or high-volume interactions while preserving the research and draft work.
 
+The current five-candidate Medium review, full-read exclusions, scoring evidence, and follower assessment are recorded in [`medium-opportunities-2026-08-28.json`](medium-opportunities-2026-08-28.json).
+
 The score is:
 
 ```text

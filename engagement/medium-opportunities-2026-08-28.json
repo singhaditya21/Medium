@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-28T08:04:16Z",
+  "platform": "medium",
+  "status": "five_candidates_reviewed_one_current_week_slot",
+  "selectionBasis": [
+    "source-specific evidence was reviewed in the signed-in Medium UI",
+    "only fully readable stories are eligible for a proposed response",
+    "responses must add a technical argument, operating metric, or constructive challenge",
+    "no self-promotional links, generic praise, claps, highlights, or automatic follows",
+    "the weekly maximum is two outbound Medium responses and one outbound response was already posted in the current week"
+  ],
+  "scoring": {
+    "formula": "0.35*relevance + 0.25*discussionQuality + 0.20*uniqueContribution + 0.20*recency",
+    "minimum": 0.7
+  },
+  "opportunities": [
+    {
+      "rank": 1,
+      "author": "Volodymyr Vreshch",
+      "title": "My Vibecoded Server Went Down",
+      "targetUrl": "https://medium.com/towards-artificial-intelligence/why-my-vibecoded-server-went-down-a-postmortem-5e5be97f44cd",
+      "observedEvidence": [
+        "19,124 requests in a 35-minute sample, of which 99.6% were machine traffic",
+        "13,067 distinct query strings prevented useful cache reuse",
+        "RSA-4096 handshakes and a 0.6-core Traefik ceiling amplified per-request cost",
+        "five domains failed about 21 times across 16 hours",
+        "an elliptic-curve certificate and two proxy cores restored roughly 70 ms responses at about 30% proxy CPU",
+        "380 claps, one response, and three reposts were visible"
+      ],
+      "scoreComponents": {
+        "relevance": 0.94,
+        "discussionQuality": 0.86,
+        "uniqueContribution": 0.97,
+        "recency": 0.94
+      },
+      "priorityScore": 0.93,
+      "state": "ready_for_confirmation",
+      "queueCandidateId": "2026-08-28-medium-response-volodymyr-vibecoded-postmortem"
+    },
+    {
+      "rank": 2,
+      "author": "Astropomeai",
+      "title": "Who Decides When the Job Is Done? — MissionOS, a Mission-Control Layer for Physical AI",
+      "targetUrl": "https://medium.com/@astropomeai/who-decides-when-the-job-is-done-missionos-a-mission-control-layer-for-physical-ai-c84e4b6b7739",
+      "observedEvidence": [
+        "a Mission Contract freezes success criteria before execution",
+        "approval_ref is revalidated after durable pause and resume",
+        "only one of eight raced processes reached the simulated sender for one dispatch_ref",
+        "unknown_send_outcome blocks a blind retry",
+        "the Husky A300 simulation moved about 0.492 metres after a stop request without independently verified acknowledgment or stopping effect"
+      ],
+      "scoreComponents": {
+        "relevance": 0.99,
+        "discussionQuality": 0.62,
+        "uniqueContribution": 0.98,
+        "recency": 0.9
+      },
+      "priorityScore": 0.88,
+      "state": "proposed_for_next_weekly_slot",
+      "queueCandidateId": "2026-08-28-medium-response-missionos-effect-verification"
+    },
+    {
+      "rank": 3,
+      "author": "Henry Okonkwo",
+      "title": "PermitRail: a permission layer for AI agents that take real actions",
+      "targetUrl": "https://medium.com/@chokonaira/permitrail-a-permission-layer-for-ai-agents-that-take-real-actions-ebb81a7b4359",
+      "observedEvidence": [
+        "the gateway binds a short-lived signed proof to the exact tool, recipient, amount, purpose, and audience",
+        "replay or mutation of the proof stops matching",
+        "Ed25519 proofs and receipts can be verified offline",
+        "the author explicitly retains input validation, secret management, application authorization, and deployment controls outside the wrapper",
+        "five claps and no visible responses"
+      ],
+      "scoreComponents": {
+        "relevance": 0.98,
+        "discussionQuality": 0.35,
+        "uniqueContribution": 0.94,
+        "recency": 0.55
+      },
+      "priorityScore": 0.73,
+      "state": "researched_not_selected"
+    },
+    {
+      "rank": 4,
+      "author": "Jaroslaw Wasowski",
+      "title": "Stop Treating Agent Memory Like a Cache — It Is a Security Layer",
+      "targetUrl": "https://medium.com/gitconnected/stop-treating-agent-memory-like-a-cache-its-a-security-layer-df1d0c3c9e7b",
+      "observedEvidence": [
+        "the accessible opening separates relevance from permission",
+        "the opening cites a 98.2% injection success rate and a 76.8% average attack success rate",
+        "461 claps, seven responses, and four reposts were visible"
+      ],
+      "priorityScore": 0.84,
+      "state": "excluded_paywall_prevented_full_read",
+      "exclusionReason": "A response was not drafted because the signed-in account could not read the full member-only story."
+    },
+    {
+      "rank": 5,
+      "author": "ORB, Operations Research Bit",
+      "title": "Optimizing AI Agent Governance Practical Frameworks and Playbooks",
+      "targetUrl": "https://medium.com/ai-drop/optimizing-ai-agent-governance-practical-frameworks-and-playbooks-12256e241e58",
+      "observedEvidence": [
+        "the accessible opening proposes risk tiers, lifecycle controls, short-lived credentials, observability, escalation, and KPIs",
+        "55 claps and one response were visible"
+      ],
+      "priorityScore": 0.75,
+      "state": "excluded_paywall_prevented_full_read",
+      "exclusionReason": "A response was not drafted because the signed-in account could not read the full member-only story."
+    }
+  ],
+  "followerReview": {
+    "profile": "https://medium.com/@vreshch",
+    "name": "Volodymyr Vreshch",
+    "observedProfile": "Senior Engineer at Microsoft, Ph.D.; writes about AI tools, MCP, production incidents, and software architecture.",
+    "observedAudience": "193 followers and 198 following were visible.",
+    "recommendation": "Reciprocal follow is substantively justified after the full postmortem review; keep email notifications off.",
+    "requiresExactConfirmation": true
+  }
+}

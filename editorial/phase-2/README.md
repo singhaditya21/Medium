@@ -2,6 +2,8 @@
 
 Prepared and executed on 2026-08-27 for the five-story scheduled Medium wave. The approved bodies are now canonical in `stories/`, saved in the scheduled Medium drafts, and recorded by credential-free execution receipts.
 
+The current signed-in distribution audit and prepared intervention batch are in [MEDIUM_DISTRIBUTION_PACKAGE_2026-08-28.md](MEDIUM_DISTRIBUTION_PACKAGE_2026-08-28.md). It is a preparation artifact only; it does not authorize Medium edits, submissions, emails, follows, or responses.
+
 ## Applied complete drafts
 
 The approved Phase 2 contracts were expanded into complete, locally validated story revisions and applied to Medium:

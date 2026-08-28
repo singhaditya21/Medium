@@ -1,0 +1,107 @@
+{
+  "$schema": "snapshot.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-28T08:04:16Z",
+  "captureMethod": "user_initiated_signed_in_medium_ui_read_only",
+  "profile": "@singhaditya21_89007",
+  "scopes": {
+    "currentMonth": {
+      "label": "August 2026",
+      "presentations": 37,
+      "views": 34,
+      "reads": 11,
+      "followersAdded": 2,
+      "emailSubscribersAdded": 2
+    },
+    "audienceLifetime": {
+      "followers": 2,
+      "emailSubscribers": 2
+    },
+    "storyLifetime": [
+      {
+        "story": "Human Approval Is a Queueing System",
+        "slug": "human-approval-is-a-queueing-system",
+        "presentations": 0,
+        "views": 0,
+        "reads": 0,
+        "readRatio": 0.0
+      },
+      {
+        "story": "Every AI Agent Action Needs a Receipt",
+        "slug": "every-ai-agent-action-needs-a-receipt",
+        "presentations": 0,
+        "views": 5,
+        "reads": 0,
+        "readRatio": 0.0,
+        "memberViews": 0,
+        "nonMemberViews": 5,
+        "internalTrafficShare": 0.0,
+        "directExternalViews": 5,
+        "clappers": 1,
+        "responders": 1
+      },
+      {
+        "story": "Your AI Agent's Memory Is a Database, Not a Prompt",
+        "slug": "your-ai-agents-memory-is-a-database-not-a-prompt",
+        "presentations": 0,
+        "views": 0,
+        "reads": 0,
+        "readRatio": 0.0
+      },
+      {
+        "story": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+        "slug": "a-2-4m-account-is-escalating",
+        "presentations": 5,
+        "views": 0,
+        "reads": 0,
+        "readRatio": 0.0
+      },
+      {
+        "story": "AI Agent Identity Is Not Enough",
+        "slug": "ai-agent-identity-is-not-enough",
+        "presentations": 8,
+        "views": 10,
+        "reads": 1,
+        "readRatio": 0.1
+      },
+      {
+        "story": "What an Agent Actually Costs",
+        "slug": "what-an-agent-actually-costs",
+        "presentations": 7,
+        "views": 3,
+        "reads": 1,
+        "readRatio": 0.33
+      },
+      {
+        "story": "The Enterprise Agent Control Tower: A Production Architecture",
+        "slug": "enterprise-agent-control-tower",
+        "presentations": 5,
+        "views": 8,
+        "reads": 4,
+        "readRatio": 0.5
+      },
+      {
+        "story": "How to Build an Agentic CRM: A Reference Architecture",
+        "slug": "agentic-crm-reference-architecture",
+        "presentations": 8,
+        "views": 8,
+        "reads": 5,
+        "readRatio": 0.63
+      },
+      {
+        "story": "Why Traditional CRM Will Die Without Agentic AI",
+        "slug": "traditional-crm-agentic-ai",
+        "presentations": 4,
+        "views": 6,
+        "reads": 5,
+        "readRatio": 0.83
+      }
+    ]
+  },
+  "notes": [
+    "The current-month account totals and lifetime story totals have different scopes and must not be summed or reconciled.",
+    "Every AI Agent Action Needs a Receipt received all five views from direct or external traffic; Medium attributed zero percent to internal distribution and all five views to non-members.",
+    "Medium's daily Audience dashboard still showed two followers while the public profile showed three and the notification feed showed Volodymyr Vreshch following about three hours earlier; this is a refresh-cadence difference.",
+    "No story, topic, canonical, publication, subscriber-email, paywall, follow, clap, highlight, or response state was changed during this capture."
+  ]
+}
