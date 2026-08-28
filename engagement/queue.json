@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-27T14:49:17Z",
+  "updatedAt": "2026-08-28T03:52:32Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -325,6 +325,38 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498567720855117824/",
       "receiptOperationId": "20260827144917-reply-posted-2026-08-27-linkedin-reply-manas-gated-learning",
       "postedAt": "2026-08-27T14:49:17Z"
+    },
+    {
+      "id": "2026-08-28-medium-reply-eric-grant-boundary",
+      "platform": "medium",
+      "action": "response",
+      "direction": "inbound",
+      "targetUrl": "https://medium.com/@ericbroda/agreed-we-have-left-out-some-details-to-accomodate-a-reasonable-article-length-but-these-are-c5030ce433d1",
+      "title": "Secure Agent Authorization — implementation follow-up",
+      "author": "Eric Broda",
+      "reason": "Eric directly confirmed that his implementation uses one-shot grants and signed outputs, then invited further technical engagement through his longer treatment.",
+      "evidence": "Fresh signed-in review: Eric replied 13 hours ago to the existing response, explicitly confirmed one-shot grants and signed outputs, thanked the author, and pointed to a longer technical version. Score: relevance 0.98, discussion quality 0.88, unique contribution 0.82, recency 0.98; weighted 0.92.",
+      "draftResponse": "Eric, thank you. One-shot grants and signed outputs are the implementation details that turn the pattern into an enforceable boundary. The additional test I would add is whether every grant is bound to one intended state transition, an explicit expiry or use count, and an independently verified postcondition—without giving the verifier standing authority to act. That makes the authorization chain replay-resistant and keeps verification from becoming a second privileged executor.",
+      "priorityScore": 0.92,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-abhishek-reliability-boundary",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498753952771936256/",
+      "title": "Most AI agents are fragile workflows with better branding",
+      "author": "Abhishek Bhattacharjee",
+      "reason": "The post makes the same production distinction as the catalog—deterministic controls around the model—and leaves room for a specific effect-verification and retry-safety contribution.",
+      "evidence": "Fresh signed-in review of the full 13-hour-old public post: it identifies missing fields, timeouts, conflicting systems, duplicate requests, unsafe actions, validation, deterministic rules, retries, logging, confidence thresholds, and human approval; it had 1 reaction and no visible comments. Score: relevance 0.98, discussion quality 0.40, unique contribution 0.94, recency 0.92; weighted 0.82.",
+      "draftResponse": "@Abhishek Bhattacharjee, agreed—the missing production boundary is effect verification. Validation and deterministic policy decide whether an action may start; idempotency keys, state-version preconditions and postcondition checks decide whether a retry can safely continue after a timeout. I would measure duplicate-effect rate, ambiguous-outcome rate, p95 recovery time and human interventions per 1,000 actions. Reliability is not “the workflow usually finishes”; it is every consequential state transition being authorized, observable and recoverable.",
+      "priorityScore": 0.82,
+      "intendedMentions": [
+        "Abhishek Bhattacharjee"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
