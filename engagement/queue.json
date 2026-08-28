@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T17:32:09Z",
+  "updatedAt": "2026-08-28T17:44:34Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -527,7 +527,10 @@
       "draftResponse": "The interface shift is real, but the control boundary cannot move invisibly with it. If a seller can update records or trigger actions from Claude, I would measure authorization-denial rate, approval latency, rollback rate and evidence completeness by action class; otherwise fewer clicks may come at the cost of weaker auditability. The system of record should retain policy enforcement and an immutable receipt even when the system of engagement changes.",
       "priorityScore": 0.9,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
+      "receiptOperationId": "20260828174431-comment-posted-2026-08-28-linkedin-comment-nick-lambeth-claudeforce",
+      "postedAt": "2026-08-28T17:44:31Z"
     },
     {
       "id": "2026-08-28-linkedin-comment-taras-maister-voice-economics",
@@ -542,7 +545,10 @@
       "draftResponse": "That cost step-change is material: $5,000 to $1,500 per month is a 70% reduction, and 700,000 minutes implies roughly $0.0021 of serving cost per voice minute at full utilization, before telephony, ASR/TTS, orchestration and idle-capacity overhead. The production benchmark I would add is cost per successfully completed intent at p95 latency, segmented by concurrency—weight retention alone will not expose tool-call failures or quality degradation on high-risk turns.",
       "priorityScore": 0.93,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498873561533751296/",
+      "receiptOperationId": "20260828174432-comment-posted-2026-08-28-linkedin-comment-taras-maister-voice-economics",
+      "postedAt": "2026-08-28T17:44:32Z"
     },
     {
       "id": "2026-08-28-linkedin-comment-ronak-sheth-pricing-agents",
@@ -557,7 +563,10 @@
       "draftResponse": "Putting floor, target and stretch prices in the live quote flow is where pricing intelligence becomes operational, but it also changes the control surface. I would track override rate, realized-margin lift, win-rate delta and approval-cycle time by recommendation band; if conversion improves while override or exception rates spike, the agent may be learning to route around policy rather than applying it.",
       "priorityScore": 0.84,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498699987300544513/",
+      "receiptOperationId": "20260828174432-comment-posted-2026-08-28-linkedin-comment-ronak-sheth-pricing-agents",
+      "postedAt": "2026-08-28T17:44:32Z"
     },
     {
       "id": "2026-08-28-linkedin-comment-sayandeb-banerjee-ai-system",
@@ -572,7 +581,10 @@
       "draftResponse": "The expensive failure mode is not the number of pilots; it is the number of incompatible control and context planes they create. I would require every pilot to declare five reusable contracts before scale—identity, data semantics, evaluation, authorization and telemetry—and measure reuse across subsequent use cases. If the second deployment cannot reuse at least 60–70% of those contracts, the organisation is still funding isolated demos.",
       "priorityScore": 0.92,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498974097348153344/",
+      "receiptOperationId": "20260828174433-comment-posted-2026-08-28-linkedin-comment-sayandeb-banerjee-ai-system",
+      "postedAt": "2026-08-28T17:44:33Z"
     },
     {
       "id": "2026-08-28-linkedin-comment-audi-rowe-human-judgment",
@@ -587,7 +599,10 @@
       "draftResponse": "Human judgment becomes a queueing constraint long before it becomes a philosophical one. For every AI-assisted decision I would measure arrival rate, reviewer service time, escalation rate and cost of false approval, then reserve people for cases where expected-loss reduction exceeds review cost. Otherwise human-in-the-loop design simply converts automation into an unmeasured backlog.",
       "priorityScore": 0.8,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497732421367533568/",
+      "receiptOperationId": "20260828174434-comment-posted-2026-08-28-linkedin-comment-audi-rowe-human-judgment",
+      "postedAt": "2026-08-28T17:44:34Z"
     }
   ]
 }

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "executedAt": "2026-08-28T17:59:30Z",
+  "timezone": "Asia/Kolkata",
+  "status": "verified",
+  "executionSurface": "user_initiated_signed_in_linkedin_and_medium_ui",
+  "userConfirmation": {
+    "obtained": true,
+    "scope": "Approved all five LinkedIn comments exactly as written, and approve X2-LI-1, X2-LI-2, X2-M-1, X2-M-2 and X2-M-3 exactly as previously listed."
+  },
+  "linkedin": {
+    "profileUrl": "https://www.linkedin.com/in/adityasinghiitr/",
+    "actions": [
+      {
+        "id": "X2-LI-1",
+        "action": "reorder_featured",
+        "status": "verified",
+        "verifiedTopOrder": [
+          {
+            "title": "The Enterprise AI Control Plane - Part 1/5",
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/"
+          },
+          {
+            "title": "99.5% Accurate—and Still Wrong 500 Times",
+            "approvedUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7494373867352707072/",
+            "verifiedLinkedInAliasUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498216408086929409/"
+          },
+          {
+            "title": "Every AI Agent Needs a Passport",
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493169263051182081/"
+          }
+        ],
+        "preservedBelowTopThree": [
+          "The Coordination Tax: Engineering Reliable Multi-Agent Systems",
+          "Agentic AI course certificate",
+          "existing newsletter feature"
+        ]
+      },
+      {
+        "id": "X2-LI-2",
+        "action": "append_about_paragraph",
+        "status": "verified",
+        "exactText": "I publish the Production AI Control Plane series across LinkedIn and Medium—practical blueprints for agent identity, bounded authority, human approval, action receipts, evaluation and recovery. Start here: https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+        "preservation": "Existing About content was retained."
+      }
+    ]
+  },
+  "medium": {
+    "profileUrl": "https://medium.com/@singhaditya21_89007",
+    "aboutUrl": "https://medium.com/@singhaditya21_89007/about",
+    "actions": [
+      {
+        "id": "X2-M-1",
+        "action": "replace_bio",
+        "status": "verified",
+        "exactText": "Enterprise AI leader writing production blueprints for agent architecture, governance, CRM and measurable value in regulated enterprises."
+      },
+      {
+        "id": "X2-M-2",
+        "action": "append_about_start_here",
+        "status": "verified",
+        "exactText": "Start here: How to Build an Agentic CRM: A Reference Architecture — https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+        "preservation": "The existing About text and paragraph order were retained."
+      },
+      {
+        "id": "X2-M-3",
+        "action": "expand_pinned_story_set",
+        "status": "verified",
+        "verifiedOrder": [
+          "How to Build an Agentic CRM: A Reference Architecture",
+          "The Enterprise Agent Control Tower: A Production Architecture",
+          "Why Traditional CRM Will Die Without Agentic AI"
+        ]
+      }
+    ]
+  },
+  "linkedinComments": [
+    {
+      "candidateId": "2026-08-28-linkedin-comment-nick-lambeth-claudeforce",
+      "status": "posted_and_verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
+      "receiptOperationId": "20260828174431-comment-posted-2026-08-28-linkedin-comment-nick-lambeth-claudeforce"
+    },
+    {
+      "candidateId": "2026-08-28-linkedin-comment-taras-maister-voice-economics",
+      "status": "posted_and_verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498873561533751296/",
+      "receiptOperationId": "20260828174432-comment-posted-2026-08-28-linkedin-comment-taras-maister-voice-economics"
+    },
+    {
+      "candidateId": "2026-08-28-linkedin-comment-ronak-sheth-pricing-agents",
+      "status": "posted_and_verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498699987300544513/",
+      "receiptOperationId": "20260828174432-comment-posted-2026-08-28-linkedin-comment-ronak-sheth-pricing-agents"
+    },
+    {
+      "candidateId": "2026-08-28-linkedin-comment-sayandeb-banerjee-ai-system",
+      "status": "posted_and_verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498974097348153344/",
+      "receiptOperationId": "20260828174433-comment-posted-2026-08-28-linkedin-comment-sayandeb-banerjee-ai-system"
+    },
+    {
+      "candidateId": "2026-08-28-linkedin-comment-audi-rowe-human-judgment",
+      "status": "posted_and_verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497732421367533568/",
+      "receiptOperationId": "20260828174434-comment-posted-2026-08-28-linkedin-comment-audi-rowe-human-judgment"
+    }
+  ],
+  "notes": [
+    "LinkedIn exposed the approved 99.5% Accurate UGC post through an activity alias in the Featured selector; the title and underlying post were verified as the same content.",
+    "No credentials, cookies, browser state, or private URLs are stored in this record.",
+    "No actions outside the approved comments and profile-conversion changes were performed."
+  ],
+  "secretsStored": false
+}
