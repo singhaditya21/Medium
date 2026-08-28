@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828134634-reply-posted-2026-08-28-linkedin-reply-kevin-burden-ledger",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-28T13:46:34Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T13:45:47Z",
+    "scope": "Approved."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-28-linkedin-reply-kevin-burden-ledger",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497555972484255744/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497555972484255744/",
+    "publishedTextSha256": "a40c52a821fdf44c7dfda8c9bfc48087d9419dca1c9d997d1d50a5a9bd17d9d5",
+    "verifiedAt": "2026-08-28T13:46:34Z",
+    "verification": "LinkedIn rendered the exact approved threaded reply under Aditya Singh beneath Kevin McDonnell’s response, with Kevin McDonnell preserved as a clickable profile mention."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

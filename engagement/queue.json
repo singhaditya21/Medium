@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T13:07:34Z",
+  "updatedAt": "2026-08-28T13:46:34Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -417,7 +417,10 @@
       "draftResponse": "Volodymyr, the key number is not 1,600 requests per minute; it is that 27 requests per second could take down five domains because RSA-4096 handshakes, a 0.6-core proxy ceiling, and shared placement multiplied unit cost and blast radius. I would turn the postmortem into four release gates: measure CPU per request at the outermost layer, alert on dependency saturation rather than only HTTP errors, bound URL and cache cardinality, and enforce a blast-radius budget so public crawl workloads cannot share a failure domain with authentication or private memory. The move to an elliptic-curve certificate and two proxy cores—followed by roughly 70 ms responses at about 30% proxy CPU—is strong evidence that infrastructure defaults need explicit owners and SLOs.",
       "priorityScore": 0.93,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://medium.com/@singhaditya21_89007/volodymyr-the-key-number-is-not-1-600-requests-per-minute-it-is-that-27-requests-per-second-could-a6bc6c86129b",
+      "receiptOperationId": "20260828134634-response-posted-2026-08-28-medium-response-volodymyr-vibecoded-postmortem",
+      "postedAt": "2026-08-28T13:46:34Z"
     },
     {
       "id": "2026-08-28-medium-response-missionos-effect-verification",
@@ -432,7 +435,10 @@
       "draftResponse": "The distinction between stop requested and stopped is the strongest part of this design. Your Husky A300 test recorded about 0.492 m of movement after the stop request without an independent controller acknowledgment, which correctly leaves the effect unverified. I would add four operating metrics to the Mission Contract: p99 approval age at dispatch, stale-approval rejection rate, age of unknown_send_outcome, and residual movement after stop. Together with the eight-process single-dispatch test, those metrics make authority freshness, idempotency, and postcondition verification measurable across adapters rather than implicit in the control flow.",
       "priorityScore": 0.88,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://medium.com/@singhaditya21_89007/the-distinction-between-stop-requested-and-stopped-is-the-strongest-part-of-this-design-23b2466bfc41",
+      "receiptOperationId": "20260828134634-response-posted-2026-08-28-medium-response-missionos-effect-verification",
+      "postedAt": "2026-08-28T13:46:34Z"
     },
     {
       "id": "2026-08-28-linkedin-reply-kevin-burden-ledger",
@@ -449,7 +455,10 @@
       "intendedMentions": [
         "Kevin McDonnell"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497555972484255744/",
+      "receiptOperationId": "20260828134634-reply-posted-2026-08-28-linkedin-reply-kevin-burden-ledger",
+      "postedAt": "2026-08-28T13:46:34Z"
     }
   ]
 }

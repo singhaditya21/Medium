@@ -1,0 +1,25 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828134634-response-posted-2026-08-28-medium-response-missionos-effect-verification",
+  "action": "response_posted",
+  "recordedAt": "2026-08-28T13:46:34Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T13:45:47Z",
+    "scope": "Approved."
+  },
+  "result": {
+    "status": "response_posted",
+    "candidateId": "2026-08-28-medium-response-missionos-effect-verification",
+    "targetUrl": "https://medium.com/@astropomeai/who-decides-when-the-job-is-done-missionos-a-mission-control-layer-for-physical-ai-c84e4b6b7739",
+    "responseUrl": "https://medium.com/@singhaditya21_89007/the-distinction-between-stop-requested-and-stopped-is-the-strongest-part-of-this-design-23b2466bfc41",
+    "verifiedAt": "2026-08-28T13:46:34Z",
+    "verification": "Medium rendered the exact approved response under Aditya Singh in the MissionOS response panel; the story now shows one response and the public response permalink is visible."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}
