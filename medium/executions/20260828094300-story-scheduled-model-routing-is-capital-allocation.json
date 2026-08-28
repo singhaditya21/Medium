@@ -1,0 +1,38 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828094300-story-scheduled-model-routing-is-capital-allocation",
+  "action": "story_scheduled",
+  "recordedAt": "2026-08-28T09:43:00Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 31,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T09:42:59Z",
+    "scope": "Send the nine published-story emails immediately and enable subscriber notifications for the four scheduled stories exactly as listed, while preserving all other settings."
+  },
+  "result": {
+    "status": "scheduled",
+    "storySlug": "model-routing-is-capital-allocation",
+    "mediumUrl": "https://medium.com/@singhaditya21_89007/8ee7ebb8b0ae",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "Model Routing",
+        "AI Economics",
+        "FinOps",
+        "Enterprise AI"
+      ],
+      "publication": null,
+      "subscriberEmail": true,
+      "paywall": false,
+      "scheduleAt": "2026-09-03T14:00:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/"
+    },
+    "verifiedAt": "2026-08-28T09:43:00Z",
+    "verification": "Medium publish preview showed Notify your subscribers checked and the unchanged schedule of September 3, 2026 at 14:00 IST; both were re-opened and visibly verified."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

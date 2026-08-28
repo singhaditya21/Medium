@@ -1,0 +1,38 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828094301-story-scheduled-your-ai-agent-needs-a-real-kill-switch",
+  "action": "story_scheduled",
+  "recordedAt": "2026-08-28T09:43:01Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 30,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T09:42:59Z",
+    "scope": "Send the nine published-story emails immediately and enable subscriber notifications for the four scheduled stories exactly as listed, while preserving all other settings."
+  },
+  "result": {
+    "status": "scheduled",
+    "storySlug": "your-ai-agent-needs-a-real-kill-switch",
+    "mediumUrl": "https://medium.com/@singhaditya21_89007/f7c50791894d",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "AI Security",
+        "Incident Response",
+        "Enterprise Architecture",
+        "Reliability"
+      ],
+      "publication": null,
+      "subscriberEmail": true,
+      "paywall": false,
+      "scheduleAt": "2026-09-07T14:00:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/"
+    },
+    "verifiedAt": "2026-08-28T09:43:01Z",
+    "verification": "Medium publish preview showed Notify your subscribers checked and the unchanged schedule of September 7, 2026 at 14:00 IST; both were re-opened and visibly verified."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

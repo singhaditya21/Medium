@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-28T09:42:59Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "userConfirmation": {
+    "obtained": true,
+    "scope": "Send the nine published-story emails immediately and enable subscriber notifications for the four scheduled stories exactly as listed, while preserving all other settings."
+  },
+  "audience": {
+    "emailSubscribers": 2,
+    "source": "Medium Audience dashboard",
+    "updatedDaily": true
+  },
+  "publishedStories": [
+    {
+      "title": "Human Approval Is a Queueing System",
+      "mediumStoryId": "0c2858baa088",
+      "subscriberEmailState": "sent_and_confirmed",
+      "verification": "Medium displayed: Your story has been emailed to subscribers."
+    },
+    {
+      "title": "Every AI Agent Action Needs a Receipt",
+      "mediumStoryId": "906fc2c6ddb5",
+      "subscriberEmailState": "sent_and_confirmed",
+      "verification": "Medium displayed: Your story has been emailed to subscribers."
+    },
+    {
+      "title": "Your AI Agent’s Memory Is a Database, Not a Prompt",
+      "mediumStoryId": "74f5e24f49ef",
+      "subscriberEmailState": "verified_already_sent",
+      "verification": "Medium displayed: You’ve already sent this story to subscribers."
+    },
+    {
+      "title": "A $2.4M Account Is Escalating. Should the AI Agent Act? — Aditya Singh",
+      "mediumStoryId": "0e20321f6d2b",
+      "subscriberEmailState": "verified_already_sent",
+      "verification": "Medium displayed: You’ve already sent this story to subscribers."
+    },
+    {
+      "title": "AI Agent Identity Is Not Enough",
+      "mediumStoryId": "59992dc9e155",
+      "subscriberEmailState": "verified_already_sent",
+      "verification": "Medium displayed: You’ve already sent this story to subscribers."
+    },
+    {
+      "title": "What an Agent Actually Costs",
+      "mediumStoryId": "7df104a6fae5",
+      "subscriberEmailState": "verified_already_sent",
+      "verification": "Medium displayed: You’ve already sent this story to subscribers."
+    },
+    {
+      "title": "The Enterprise Agent Control Tower: A Production Architecture",
+      "mediumStoryId": "b964e0538438",
+      "subscriberEmailState": "verified_already_sent",
+      "verification": "Medium displayed: You’ve already sent this story to subscribers."
+    },
+    {
+      "title": "How to Build an Agentic CRM: A Reference Architecture",
+      "mediumStoryId": "7485b5da8cae",
+      "subscriberEmailState": "verified_already_sent",
+      "verification": "Medium displayed: You’ve already sent this story to subscribers."
+    },
+    {
+      "title": "Why Traditional CRM Will Die Without Agentic AI",
+      "mediumStoryId": "6b097803a1f4",
+      "subscriberEmailState": "verified_already_sent",
+      "verification": "Medium displayed: You’ve already sent this story to subscribers."
+    }
+  ],
+  "scheduledStories": [
+    {
+      "title": "Your Multi-Agent System Is a Distributed System",
+      "mediumStoryId": "0c456a0fe664",
+      "scheduleAt": "2026-08-31T14:00:00+05:30",
+      "subscriberEmail": true,
+      "titleVerified": true,
+      "schedulePreserved": true
+    },
+    {
+      "title": "Model Routing Is Capital Allocation",
+      "mediumStoryId": "8ee7ebb8b0ae",
+      "scheduleAt": "2026-09-03T14:00:00+05:30",
+      "subscriberEmail": true,
+      "titleVerified": true,
+      "schedulePreserved": true
+    },
+    {
+      "title": "Your AI Agent Needs a Real Kill Switch",
+      "mediumStoryId": "f7c50791894d",
+      "scheduleAt": "2026-09-07T14:00:00+05:30",
+      "subscriberEmail": true,
+      "titleVerified": true,
+      "schedulePreserved": true
+    },
+    {
+      "title": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
+      "mediumStoryId": "44beb06b346a",
+      "scheduleAt": "2026-09-10T14:00:00+05:30",
+      "subscriberEmail": true,
+      "titleVerified": true,
+      "schedulePreserved": true
+    }
+  ],
+  "repositoryOnlyStories": [
+    {
+      "title": "Your AI Agent Should Not Have a Standing Role",
+      "storySlug": "your-ai-agent-should-not-have-a-standing-role",
+      "mediumState": "not_present_in_live_story_inventory",
+      "releaseDefaultSubscriberEmail": true,
+      "verification": "No published, scheduled, or unscheduled Medium draft was available to email; the repository release setting is enabled for its future Medium publication."
+    }
+  ],
+  "otherSettingsModified": false,
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

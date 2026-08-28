@@ -1,0 +1,38 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828094259-story-scheduled-your-multi-agent-system-is-a-distributed-system",
+  "action": "story_scheduled",
+  "recordedAt": "2026-08-28T09:42:59Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 29,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T09:42:59Z",
+    "scope": "Send the nine published-story emails immediately and enable subscriber notifications for the four scheduled stories exactly as listed, while preserving all other settings."
+  },
+  "result": {
+    "status": "scheduled",
+    "storySlug": "your-multi-agent-system-is-a-distributed-system",
+    "mediumUrl": "https://medium.com/@singhaditya21_89007/0c456a0fe664",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "Distributed Systems",
+        "Multi Agent Systems",
+        "Enterprise Architecture",
+        "Reliability"
+      ],
+      "publication": null,
+      "subscriberEmail": true,
+      "paywall": false,
+      "scheduleAt": "2026-08-31T14:00:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/"
+    },
+    "verifiedAt": "2026-08-28T09:42:59Z",
+    "verification": "Medium publish preview showed Notify your subscribers checked and the unchanged schedule of August 31, 2026 at 14:00 IST; both were re-opened and visibly verified."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}
