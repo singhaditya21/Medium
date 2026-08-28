@@ -1,0 +1,25 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828072649-response-posted-2026-08-28-medium-reply-eric-grant-boundary",
+  "action": "response_posted",
+  "recordedAt": "2026-08-28T07:26:49Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T07:26:49Z",
+    "scope": "Approved but check we are doing this after 24 hours"
+  },
+  "result": {
+    "status": "response_posted",
+    "candidateId": "2026-08-28-medium-reply-eric-grant-boundary",
+    "targetUrl": "https://medium.com/@ericbroda/agreed-we-have-left-out-some-details-to-accomodate-a-reasonable-article-length-but-these-are-c5030ce433d1",
+    "responseUrl": "https://medium.com/@singhaditya21_89007/eric-thank-you-9461629dd45f",
+    "verifiedAt": "2026-08-28T07:26:49Z",
+    "verification": "The public response URL rendered Aditya Singh and the exact approved response, including the independently verified postcondition and replay-resistant authorization boundary"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

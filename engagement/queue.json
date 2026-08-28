@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T03:52:32Z",
+  "updatedAt": "2026-08-28T07:27:13Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -339,7 +339,10 @@
       "draftResponse": "Eric, thank you. One-shot grants and signed outputs are the implementation details that turn the pattern into an enforceable boundary. The additional test I would add is whether every grant is bound to one intended state transition, an explicit expiry or use count, and an independently verified postcondition—without giving the verifier standing authority to act. That makes the authorization chain replay-resistant and keeps verification from becoming a second privileged executor.",
       "priorityScore": 0.92,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://medium.com/@singhaditya21_89007/eric-thank-you-9461629dd45f",
+      "receiptOperationId": "20260828072649-response-posted-2026-08-28-medium-reply-eric-grant-boundary",
+      "postedAt": "2026-08-28T07:26:49Z"
     },
     {
       "id": "2026-08-28-linkedin-comment-abhishek-reliability-boundary",
@@ -355,6 +358,43 @@
       "priorityScore": 0.82,
       "intendedMentions": [
         "Abhishek Bhattacharjee"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498753952771936256/",
+      "receiptOperationId": "20260828072649-comment-posted-2026-08-28-linkedin-comment-abhishek-reliability-boundary",
+      "postedAt": "2026-08-28T07:26:49Z"
+    },
+    {
+      "id": "2026-08-28-linkedin-reply-sara-series-part2",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/",
+      "title": "Part 1: Five Levels of Human Control for Enterprise AI Agents",
+      "author": "Sara Simeone",
+      "reason": "Sara is the first fresh commenter on the newly published series opener and explicitly asked for the next installments, creating a high-fit opportunity to answer with the release date and the operational control-plane thesis.",
+      "evidence": "Fresh signed-in review: Sara commented “I’m looking forward the next parts of this post 🍿😊” on the author’s Part 1 post. The post had reached 86 impressions when inspected. Score: relevance 0.99, discussion quality 0.90, unique contribution 0.84, recency 0.99; weighted 0.94.",
+      "draftResponse": "Thank you, @Sara Simeone. Part 2 goes live on 2 September at 8:45 AM IST and moves from the five intervention levels into the control plane itself: context provenance, leased permissions, approval thresholds, execution receipts and recovery. The operating test is simple—can the enterprise reconstruct every consequential decision and revoke authority before one bad action compounds?",
+      "priorityScore": 0.94,
+      "intendedMentions": [
+        "Sara Simeone"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-28-linkedin-comment-praveen-ai-hiring-scorecard",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498923755059019776/",
+      "title": "Hiring: Senior Technical Architect and AI Engineer",
+      "author": "Praveen Narwaal",
+      "reason": "The hiring brief separates senior architecture from implementation and explicitly requires production-scale AI and human-in-the-loop experience, making an evidence-based production evaluation scorecard directly useful.",
+      "evidence": "Fresh signed-in review of the five-hour-old C1 India hiring post: Senior Technical Architect requires 7+ years overall and 2+ years scaling AI systems; AI Engineer requires 3+ years overall and 1+ year in LLM/RAG/KG/agentic workflows, including human-in-the-loop for high-stakes actions. Both roles are on-site in Gurugram with a 2 September 2026 deadline; the post had 5 reactions and no visible comments. Score: relevance 0.96, discussion quality 0.45, unique contribution 0.91, recency 0.95; weighted 0.82.",
+      "draftResponse": "@Praveen Narwaal, the role split is stronger than a generic AI hiring brief: 7+ years with 2+ years scaling AI for the architect, versus 3+ years with 1+ year hands-on LLM/RAG/agentic work for the engineer. I would add four production gates to the scorecard—evaluation pass rate, p95 latency and cost, unauthorized-action rate, and verified recovery time—so candidates are assessed on governed outcomes, not only stack familiarity.",
+      "priorityScore": 0.82,
+      "intendedMentions": [
+        "Praveen Narwaal"
       ],
       "state": "ready_for_confirmation"
     }

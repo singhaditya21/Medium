@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828072649-message-posted-in-garima-kakkar-54456b60",
+  "action": "message_posted",
+  "recordedAt": "2026-08-28T07:26:49Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T07:26:49Z",
+    "scope": "Approved but check we are doing this after 24 hours"
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/garima-kakkar-54456b60/",
+    "messageTextSha256": "646fd351011f340cbaf9d17acfe6756f60f591332b87c5b293982df32facfbb3",
+    "verifiedAt": "2026-08-28T07:26:49Z",
+    "verification": "LinkedIn rendered the exact approved message in the Garima Kakkar conversation under Aditya Singh at 12:51 PM with a sent timestamp"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

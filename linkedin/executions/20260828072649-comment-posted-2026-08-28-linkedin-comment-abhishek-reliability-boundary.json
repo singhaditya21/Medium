@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828072649-comment-posted-2026-08-28-linkedin-comment-abhishek-reliability-boundary",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-28T07:26:49Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T07:26:49Z",
+    "scope": "Approved but check we are doing this after 24 hours"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-28-linkedin-comment-abhishek-reliability-boundary",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498753952771936256/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498753952771936256/",
+    "publishedTextSha256": "51c2ed01ebf5d242361c2af6e25cf733218ac0ccfe19b134372cdfe347cee1c0",
+    "verifiedAt": "2026-08-28T07:26:49Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a now timestamp; the author name text was included but LinkedIn did not resolve it as a clickable mention"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
