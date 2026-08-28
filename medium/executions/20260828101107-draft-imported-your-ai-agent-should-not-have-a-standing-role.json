@@ -1,0 +1,23 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828101107-draft-imported-your-ai-agent-should-not-have-a-standing-role",
+  "action": "draft_imported",
+  "recordedAt": "2026-08-28T10:11:07Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 7,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T10:11:07Z",
+    "scope": "Import the GitHub-only story into Medium as the reversible private-draft preparation required to schedule it."
+  },
+  "result": {
+    "status": "draft_saved",
+    "storySlug": "your-ai-agent-should-not-have-a-standing-role",
+    "verifiedAt": "2026-08-28T10:11:07Z",
+    "verification": "Medium showed Draft Saved with the clean title and subtitle, 4,629 words, 25 distinct uploaded figures, 25 captions, 25 alt-text descriptions, the AI-assistance disclosure, five prepared topics, the Figure 1 preview image, and the exact GitHub Pages canonical. The story remains a private draft pending exact schedule confirmation."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

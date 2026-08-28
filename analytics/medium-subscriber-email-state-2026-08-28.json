@@ -105,9 +105,9 @@
     {
       "title": "Your AI Agent Should Not Have a Standing Role",
       "storySlug": "your-ai-agent-should-not-have-a-standing-role",
-      "mediumState": "not_present_in_live_story_inventory",
+      "mediumState": "private_draft_prepared_for_scheduling",
       "releaseDefaultSubscriberEmail": false,
-      "verification": "No published, scheduled, or unscheduled Medium draft was available to email. The repository safety gate keeps subscriber email off during private draft preparation; it must be enabled at the story's eventual approved scheduling or publishing step."
+      "verification": "The canonical GitHub Pages story is now a verified private Medium draft with 25 figures, captions, and alt-text descriptions. The repository safety gate keeps subscriber email off until the exact schedule batch is approved and saved."
     }
   ],
   "otherSettingsModified": false,
