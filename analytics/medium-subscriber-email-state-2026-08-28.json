@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "capturedAt": "2026-08-28T09:42:59Z",
+  "capturedAt": "2026-08-28T10:51:01Z",
   "executionSurface": "user_initiated_signed_in_medium_ui",
   "userConfirmation": {
     "obtained": true,
@@ -99,17 +99,17 @@
       "subscriberEmail": true,
       "titleVerified": true,
       "schedulePreserved": true
-    }
-  ],
-  "repositoryOnlyStories": [
+    },
     {
       "title": "Your AI Agent Should Not Have a Standing Role",
-      "storySlug": "your-ai-agent-should-not-have-a-standing-role",
-      "mediumState": "private_draft_prepared_for_scheduling",
-      "releaseDefaultSubscriberEmail": false,
-      "verification": "The canonical GitHub Pages story is now a verified private Medium draft with 25 figures, captions, and alt-text descriptions. The repository safety gate keeps subscriber email off until the exact schedule batch is approved and saved."
+      "mediumStoryId": "165cf6e0c3db",
+      "scheduleAt": "2026-09-14T14:00:00+05:30",
+      "subscriberEmail": true,
+      "titleVerified": true,
+      "schedulePreserved": true
     }
   ],
+  "repositoryOnlyStories": [],
   "otherSettingsModified": false,
   "secretsStored": false,
   "githubActionsPerformedMediumAction": false

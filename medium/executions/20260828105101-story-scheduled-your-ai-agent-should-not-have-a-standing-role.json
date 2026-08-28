@@ -1,0 +1,38 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828105101-story-scheduled-your-ai-agent-should-not-have-a-standing-role",
+  "action": "story_scheduled",
+  "recordedAt": "2026-08-28T10:51:01Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 7,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T10:51:01Z",
+    "scope": "Schedule “Your AI Agent Should Not Have a Standing Role” for September 14, 2026 at 2:00 PM IST with the exact approved settings: personal profile, five named topics, subscriber email on, paywall off, GitHub Pages canonical, and Figure 1 preview image."
+  },
+  "result": {
+    "status": "scheduled",
+    "storySlug": "your-ai-agent-should-not-have-a-standing-role",
+    "mediumUrl": "https://medium.com/@singhaditya21_89007/165cf6e0c3db",
+    "settings": {
+      "topics": [
+        "AI Agents",
+        "Cybersecurity",
+        "Zero Trust",
+        "Enterprise Architecture",
+        "Identity Management"
+      ],
+      "publication": null,
+      "subscriberEmail": true,
+      "paywall": false,
+      "scheduleAt": "2026-09-14T14:00:00+05:30",
+      "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/"
+    },
+    "verifiedAt": "2026-08-28T10:51:01Z",
+    "verification": "Medium confirmed scheduling for Monday, September 14, 2026 at 14:00 IST. Reopening Review scheduled story showed the exact title and subtitle, all five approved topics, subscriber-email checked, the Figure 1 preview image, and 14/09/2026 at 14:00 GMT+5:30. The Stories dashboard listed the story as Scheduled for Sep 14."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}
