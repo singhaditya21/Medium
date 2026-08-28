@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T07:27:13Z",
+  "updatedAt": "2026-08-28T07:41:06Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -379,7 +379,10 @@
       "intendedMentions": [
         "Sara Simeone"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/",
+      "receiptOperationId": "20260828074106-reply-posted-2026-08-28-linkedin-reply-sara-series-part2",
+      "postedAt": "2026-08-28T07:41:06Z"
     },
     {
       "id": "2026-08-28-linkedin-comment-praveen-ai-hiring-scorecard",
@@ -396,7 +399,10 @@
       "intendedMentions": [
         "Praveen Narwaal"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498923755059019776/",
+      "receiptOperationId": "20260828074106-comment-posted-2026-08-28-linkedin-comment-praveen-ai-hiring-scorecard",
+      "postedAt": "2026-08-28T07:41:06Z"
     }
   ]
 }

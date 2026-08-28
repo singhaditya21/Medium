@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828074106-comment-posted-2026-08-28-linkedin-comment-praveen-ai-hiring-scorecard",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-28T07:41:06Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T07:41:06Z",
+    "scope": "Approve all three exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-28-linkedin-comment-praveen-ai-hiring-scorecard",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498923755059019776/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498923755059019776/",
+    "publishedTextSha256": "e75f73169fa05aa0bea5cd5c012495335d00672d7efc3a54d6b5a3c49682c2fe",
+    "verifiedAt": "2026-08-28T07:41:06Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh and the intended Praveen Narwaal mention as a clickable profile link; the post shows one comment"
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
