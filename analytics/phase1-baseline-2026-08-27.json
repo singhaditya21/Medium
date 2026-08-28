@@ -111,6 +111,10 @@
       {
         "story": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
         "scheduledAt": "2026-09-10T14:00:00+05:30"
+      },
+      {
+        "story": "Your AI Agent Should Not Have a Standing Role",
+        "scheduledAt": "2026-09-14T14:00:00+05:30"
       }
     ]
   },

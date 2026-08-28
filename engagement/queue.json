@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T08:04:56Z",
+  "updatedAt": "2026-08-28T13:07:34Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -432,7 +432,24 @@
       "draftResponse": "The distinction between stop requested and stopped is the strongest part of this design. Your Husky A300 test recorded about 0.492 m of movement after the stop request without an independent controller acknowledgment, which correctly leaves the effect unverified. I would add four operating metrics to the Mission Contract: p99 approval age at dispatch, stale-approval rejection rate, age of unknown_send_outcome, and residual movement after stop. Together with the eight-process single-dispatch test, those metrics make authority freshness, idempotency, and postcondition verification measurable across adapters rather than implicit in the control flow.",
       "priorityScore": 0.88,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-28-linkedin-reply-kevin-burden-ledger",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497555972484255744/",
+      "title": "NHS burden ledger and implementation timing",
+      "author": "Kevin McDonnell",
+      "reason": "Kevin replied directly to the user’s burden-ledger comment and agreed that surfacing uncomfortable assumptions early is valuable; a concise follow-up can turn that agreement into an auditable implementation test.",
+      "evidence": "Fresh signed-in thread review: Kevin’s NHS Subtraction Test names six dimensions—task removal, risk reduction, budget impact, new burden, implementation ownership, and benefit timing. The post showed 50 reactions, 33 comments, and 2 reposts; Kevin’s direct reply said a burden ledger would expose uncomfortable assumptions early. Score components: relevance 0.93, discussion quality 0.90, unique contribution 0.88, recency 0.98; weighted score 0.92.",
+      "draftResponse": "Exactly, @Kevin McDonnell. I would make each burden auditable with four fields: named owner, weekly capacity transferred, date the burden begins, and the condition that retires it. If a deployment creates 12 hours of operational work per week while its financial benefit starts in month nine, that timing mismatch should be visible before procurement—not discovered during rollout.",
+      "priorityScore": 0.92,
+      "intendedMentions": [
+        "Kevin McDonnell"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
