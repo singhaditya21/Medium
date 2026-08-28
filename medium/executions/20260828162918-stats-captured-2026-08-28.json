@@ -1,0 +1,23 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260828162918-stats-captured-2026-08-28",
+  "action": "stats_captured",
+  "recordedAt": "2026-08-28T16:29:18Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-28T16:29:18Z",
+    "scope": "Approve M2 and X1 exactly as listed, and run the X2 read-only audit."
+  },
+  "result": {
+    "status": "stats_captured",
+    "snapshotPath": "analytics/snapshots/2026-08-28.json",
+    "verifiedAt": "2026-08-28T16:29:18Z",
+    "verification": "Medium Stats showed August totals of 58 presentations, 35 views, 12 reads, +2 followers and +2 subscribers; Audience showed 2 lifetime followers and 2 email subscribers, while the public profile showed 3 followers."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

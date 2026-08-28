@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "Medium Engagement Baseline",
     "description": "A source-backed snapshot of audience reach, reading depth, and story-level retention for Aditya Singh's Medium catalog.",
-    "generatedAt": "2026-08-21T15:36:30Z",
+    "generatedAt": "2026-08-28T16:26:27Z",
     "cards": [
       {
         "id": "presentations",
@@ -79,7 +79,7 @@
         "subtitle": "Lifetime story read ratios as displayed by Medium; small samples limit inference.",
         "intent": "comparison",
         "question": "Which published stories convert views into reads most consistently?",
-        "rationale": "A sorted horizontal bar chart keeps six long story labels readable.",
+        "rationale": "A sorted horizontal bar chart keeps nine long story labels readable.",
         "comparisonContext": {
           "denominator": "Views for each story over its Medium lifetime",
           "grain": "story",
@@ -142,30 +142,33 @@
         "id": "methodology",
         "type": "markdown",
         "sourceId": "medium_story_lifetime",
-        "body": "## Scope and caveats\n\n- **August funnel:** account totals for August 2026.\n- **Story table:** lifetime totals per story, not an August subset.\n- **Read ratio:** Medium's displayed reads divided by views, preserved at the displayed rounding.\n- **Interactions:** all six Medium stories showed zero clappers, highlighters, responders, and reposters at capture time.\n- **Decision rule:** do not interpret ranking changes until each story has a materially larger view denominator."
+        "body": "## Scope and caveats\n\n- **August funnel:** account totals for August 2026.\n- **Story table:** lifetime totals per story, not an August subset.\n- **Read ratio:** reads divided by views, preserved at the displayed rounding.\n- **Audience cadence:** the Audience dashboard updates daily and may lag the public profile.\n- **Decision rule:** do not interpret ranking changes until each story has a materially larger view denominator."
       }
     ]
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-21T15:36:30Z",
+    "generatedAt": "2026-08-28T16:26:27Z",
     "status": "ready",
     "datasets": {
       "account_summary": [
-        {"period": "August 2026", "presentations": 34, "views": 21, "reads": 9, "followers": 2, "email_subscribers": 2}
+        {"period": "August 2026", "presentations": 58, "views": 35, "reads": 12, "followers": 2, "email_subscribers": 2}
       ],
       "august_funnel": [
-        {"stage": "Presentations", "count": 34, "share_of_presentations": 1.0, "stage_order": 1},
-        {"stage": "Views", "count": 21, "share_of_presentations": 0.6176, "stage_order": 2},
-        {"stage": "Reads", "count": 9, "share_of_presentations": 0.2647, "stage_order": 3}
+        {"stage": "Presentations", "count": 58, "share_of_presentations": 1.0, "stage_order": 1},
+        {"stage": "Views", "count": 35, "share_of_presentations": 0.6034, "stage_order": 2},
+        {"stage": "Reads", "count": 12, "share_of_presentations": 0.2069, "stage_order": 3}
       ],
       "story_lifetime": [
-        {"story": "Traditional CRM vs Agentic AI", "slug": "traditional-crm-agentic-ai", "presentations": 4, "views": 6, "reads": 5, "read_ratio": 0.83},
-        {"story": "Agentic CRM Reference Architecture", "slug": "agentic-crm-reference-architecture", "presentations": 8, "views": 6, "reads": 4, "read_ratio": 0.67},
-        {"story": "Enterprise Agent Control Tower", "slug": "enterprise-agent-control-tower", "presentations": 4, "views": 8, "reads": 4, "read_ratio": 0.5},
-        {"story": "What an Agent Actually Costs", "slug": "what-an-agent-actually-costs", "presentations": 7, "views": 2, "reads": 1, "read_ratio": 0.5},
-        {"story": "AI Agent Identity Is Not Enough", "slug": "ai-agent-identity-is-not-enough", "presentations": 7, "views": 5, "reads": 0, "read_ratio": 0.0},
-        {"story": "A $2.4M Account Is Escalating", "slug": "a-2-4m-account-is-escalating", "presentations": 4, "views": 0, "reads": 0, "read_ratio": 0.0}
+        {"story": "Why Traditional CRM Will Die Without Agentic AI", "slug": "traditional-crm-agentic-ai", "presentations": 4, "views": 6, "reads": 5, "read_ratio": 0.83},
+        {"story": "How to Build an Agentic CRM: A Reference Architecture", "slug": "agentic-crm-reference-architecture", "presentations": 11, "views": 8, "reads": 5, "read_ratio": 0.63},
+        {"story": "The Enterprise Agent Control Tower: A Production Architecture", "slug": "enterprise-agent-control-tower", "presentations": 8, "views": 8, "reads": 4, "read_ratio": 0.5},
+        {"story": "What an Agent Actually Costs", "slug": "what-an-agent-actually-costs", "presentations": 7, "views": 3, "reads": 1, "read_ratio": 0.33},
+        {"story": "AI Agent Identity Is Not Enough", "slug": "ai-agent-identity-is-not-enough", "presentations": 11, "views": 11, "reads": 2, "read_ratio": 0.18},
+        {"story": "A $2.4M Account Is Escalating. Should the AI Agent Act?", "slug": "a-2-4m-account-is-escalating", "presentations": 5, "views": 0, "reads": 0, "read_ratio": 0.0},
+        {"story": "Your AI Agent's Memory Is a Database, Not a Prompt", "slug": "your-ai-agents-memory-is-a-database-not-a-prompt", "presentations": 3, "views": 0, "reads": 0, "read_ratio": 0.0},
+        {"story": "Every AI Agent Action Needs a Receipt", "slug": "every-ai-agent-action-needs-a-receipt", "presentations": 3, "views": 5, "reads": 0, "read_ratio": 0.0},
+        {"story": "Human Approval Is a Queueing System", "slug": "human-approval-is-a-queueing-system", "presentations": 3, "views": 0, "reads": 0, "read_ratio": 0.0}
       ]
     }
   },
@@ -179,7 +182,7 @@
         "language": "sql",
         "sql": "SELECT scopes.currentMonth.presentations AS presentations, scopes.currentMonth.views AS views, scopes.currentMonth.reads AS reads FROM read_json_auto('analytics/engagement-baseline.json')",
         "description": "Read-only capture of the signed-in Medium account summary for August 2026.",
-        "executed_at": "2026-08-21T15:36:30Z",
+        "executed_at": "2026-08-28T16:26:27Z",
         "tables_used": ["Medium Stats > August summary"],
         "filters": ["Account: @singhaditya21_89007", "Period: August 2026"],
         "metric_definitions": [
@@ -198,7 +201,7 @@
         "language": "sql",
         "sql": "SELECT scopes.audienceLifetime.followers AS followers, scopes.audienceLifetime.emailSubscribers AS email_subscribers FROM read_json_auto('analytics/engagement-baseline.json')",
         "description": "Read-only capture of the signed-in Medium audience totals.",
-        "executed_at": "2026-08-21T15:36:30Z",
+        "executed_at": "2026-08-28T16:26:27Z",
         "tables_used": ["Medium Stats > Audience"],
         "filters": ["Account: @singhaditya21_89007", "Scope: lifetime"],
         "metric_definitions": [
@@ -215,8 +218,8 @@
         "engine": "duckdb",
         "language": "sql",
         "sql": "SELECT item.story, item.slug, item.presentations, item.views, item.reads, item.readRatio AS read_ratio FROM read_json_auto('analytics/engagement-baseline.json') AS source, UNNEST(source.scopes.storyLifetime) AS rows(item)",
-        "description": "Read-only capture of lifetime presentations, views, reads, and read ratios for the six Medium-published stories.",
-        "executed_at": "2026-08-21T15:36:30Z",
+        "description": "Read-only capture of lifetime presentations, views, reads, and read ratios for the nine Medium-published stories.",
+        "executed_at": "2026-08-28T16:26:27Z",
         "tables_used": ["Medium Stats > Stories"],
         "filters": ["Account: @singhaditya21_89007", "Scope: lifetime", "Stories: published on Medium at capture time"],
         "metric_definitions": [

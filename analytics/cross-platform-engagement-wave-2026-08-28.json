@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-28T16:26:27Z",
+  "timezone": "Asia/Kolkata",
+  "captureMethod": "user_initiated_signed_in_medium_and_linkedin_ui",
+  "status": "verified",
+  "approvedScope": "M2 and X1 exactly as listed, and X2 read-only audit",
+  "medium": {
+    "currentMonth": {
+      "presentations": 58,
+      "views": 35,
+      "reads": 12,
+      "followersAdded": 2,
+      "subscribersAdded": 2
+    },
+    "audienceLifetimeDailyDashboard": {
+      "followers": 2,
+      "emailSubscribers": 2
+    },
+    "publicProfileFollowersVisible": 3,
+    "navigationFooterExecution": {
+      "state": "published_and_verified",
+      "heading": "Continue the production AI-agent series",
+      "links": [
+        {
+          "label": "How to Build an Agentic CRM: A Reference Architecture",
+          "url": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae"
+        },
+        {
+          "label": "The Enterprise Agent Control Tower: A Production Architecture",
+          "url": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438"
+        }
+      ],
+      "question": "Which control is hardest to implement in your production environment: evidence, bounded authority, approval, verification, or recovery?",
+      "stories": [
+        {
+          "title": "Human Approval Is a Queueing System",
+          "url": "https://medium.com/@singhaditya21_89007/human-approval-is-a-queueing-system-0c2858baa088"
+        },
+        {
+          "title": "Every AI Agent Action Needs a Receipt",
+          "url": "https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5"
+        },
+        {
+          "title": "Your AI Agent's Memory Is a Database, Not a Prompt",
+          "url": "https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef"
+        },
+        {
+          "title": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+          "url": "https://medium.com/@singhaditya21_89007/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b"
+        },
+        {
+          "title": "AI Agent Identity Is Not Enough",
+          "url": "https://medium.com/@singhaditya21_89007/ai-agent-identity-authorization-use-cases-59992dc9e155"
+        },
+        {
+          "title": "What an Agent Actually Costs",
+          "url": "https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5"
+        }
+      ],
+      "preservedByScope": [
+        "existing story text",
+        "titles and subtitles",
+        "topics",
+        "featured images",
+        "canonical URLs",
+        "publication state",
+        "subscriber-email state",
+        "paywall state"
+      ]
+    }
+  },
+  "linkedin": {
+    "window": "2026-08-22/2026-08-28",
+    "sevenDay": {
+      "impressions": 1762,
+      "membersReached": 839,
+      "socialEngagements": 49,
+      "reactions": 34,
+      "comments": 12,
+      "reposts": 0,
+      "saves": 3,
+      "sends": 0,
+      "inNetworkShare": 0.7,
+      "outOfNetworkShare": 0.3,
+      "newFollowers": 36
+    },
+    "audienceLifetime": {
+      "followers": 13382
+    },
+    "derived": {
+      "socialEngagementRate": 0.0278,
+      "followersPerThousandImpressions": 20.43
+    },
+    "latestSeriesPost": {
+      "title": "The Enterprise AI Control Plane - Part 1/5",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/",
+      "impressions": 259,
+      "engagements": 15
+    }
+  },
+  "profileConversionAudit": {
+    "linkedin": {
+      "currentAboutAssessment": "Strong enterprise-AI and operating-model positioning, but no direct bridge from profile visitors into the current Production AI Control Plane series.",
+      "currentFeaturedTopThree": [
+        {
+          "title": "The Coordination Tax: Engineering Reliable Multi-Agent Systems",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7492459738148851712/",
+          "visibleEngagement": "3 reactions"
+        },
+        {
+          "title": "Every AI Agent Needs a Passport",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493169263051182081/",
+          "visibleEngagement": "6 reactions and 3 comments"
+        },
+        {
+          "title": "Agentic AI course certificate",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495008007278223361/",
+          "visibleEngagement": "4 reactions"
+        }
+      ],
+      "proposedActions": [
+        {
+          "id": "X2-LI-1",
+          "action": "reorder_featured",
+          "exactTopOrder": [
+            "The Enterprise AI Control Plane - Part 1/5 — https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/",
+            "99.5% Accurate—and Still Wrong 500 Times — https://www.linkedin.com/feed/update/urn:li:ugcPost:7494373867352707072/",
+            "Every AI Agent Needs a Passport — https://www.linkedin.com/feed/update/urn:li:activity:7493169263051182081/"
+          ],
+          "handling": "Keep the Coordination Tax and course-certificate items below the top three if LinkedIn permits; do not delete them implicitly.",
+          "requiresConfirmation": true
+        },
+        {
+          "id": "X2-LI-2",
+          "action": "append_about_paragraph",
+          "exactText": "I publish the Production AI Control Plane series across LinkedIn and Medium—practical blueprints for agent identity, bounded authority, human approval, action receipts, evaluation and recovery. Start here: https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+          "requiresConfirmation": true
+        }
+      ]
+    },
+    "medium": {
+      "currentBio": "Enterprise AI and transformation leader with 14+ years in banking and BFSI SaaS, writing on agentic architecture, governance, CRM, and RevOps.",
+      "currentProfileAssessment": "The bio and About page are credible and the Agentic CRM reference architecture is already pinned; the About page does not provide a direct clickable start-here path and only one story is pinned.",
+      "currentPinnedStory": "How to Build an Agentic CRM: A Reference Architecture",
+      "proposedActions": [
+        {
+          "id": "X2-M-1",
+          "action": "replace_bio",
+          "exactText": "Enterprise AI leader writing production blueprints for agent architecture, governance, CRM and measurable value in regulated enterprises.",
+          "requiresConfirmation": true
+        },
+        {
+          "id": "X2-M-2",
+          "action": "append_about_start_here",
+          "exactText": "Start here: How to Build an Agentic CRM: A Reference Architecture — https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+          "requiresConfirmation": true
+        },
+        {
+          "id": "X2-M-3",
+          "action": "expand_pinned_story_set",
+          "exactOrder": [
+            "How to Build an Agentic CRM: A Reference Architecture",
+            "The Enterprise Agent Control Tower: A Production Architecture",
+            "Why Traditional CRM Will Die Without Agentic AI"
+          ],
+          "requiresConfirmation": true
+        }
+      ]
+    }
+  },
+  "changesPerformed": [
+    "Published the exact approved Medium-native navigation footer on six named stories.",
+    "Captured current Medium and LinkedIn metrics.",
+    "Completed the LinkedIn and Medium profile-conversion audit without changing either profile."
+  ],
+  "notes": [
+    "The LinkedIn window is rolling; comparison with a previous seven-day capture is directional and not causal.",
+    "Medium Audience totals update daily while the public profile can reflect a newer follower count.",
+    "No LinkedIn or Medium profile mutation was made during X2."
+  ]
+}
