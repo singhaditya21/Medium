@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260829044146-reply-posted-2026-08-29-linkedin-reply-nick-lambeth-cross-system-policy",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-29T04:41:46Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-29T04:41:46Z",
+    "scope": "Approved N1, N2 and N3 exactly as listed"
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-29-linkedin-reply-nick-lambeth-cross-system-policy",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
+    "publishedTextSha256": "0c5d0c96da80dcdb4de2cd60f4124c419a73ad74e8dd609678bf7c240211ebdd",
+    "verifiedAt": "2026-08-29T04:41:46Z",
+    "verification": "LinkedIn rendered the exact approved threaded reply under Nick Lambeth’s mention, attributed to Aditya Singh with a current timestamp."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

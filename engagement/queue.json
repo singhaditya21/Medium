@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-29T04:34:18Z",
+  "updatedAt": "2026-08-29T04:41:46Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -635,7 +635,10 @@
       "draftResponse": "Agreed, Nick. Row-level policy in the Databricks catalog and Salesforce permissions each protect a local boundary; the harder failure appears when an agent combines a permitted read with a permitted CRM write. I would track cross-system privilege amplification, denial rate and p95 policy-evaluation latency, then require one action-time decision and receipt spanning both systems—otherwise two locally valid permissions can produce one globally invalid outcome.",
       "priorityScore": 0.96,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
+      "receiptOperationId": "20260829044146-reply-posted-2026-08-29-linkedin-reply-nick-lambeth-cross-system-policy",
+      "postedAt": "2026-08-29T04:41:46Z"
     }
   ]
 }

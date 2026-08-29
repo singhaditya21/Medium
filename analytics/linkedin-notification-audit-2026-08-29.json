@@ -2,7 +2,9 @@
   "schemaVersion": 1,
   "auditedAt": "2026-08-29T04:34:18Z",
   "timezone": "Asia/Kolkata",
-  "status": "prepared_awaiting_confirmation",
+  "status": "executed_verified",
+  "executedAt": "2026-08-29T04:41:46Z",
+  "userConfirmation": "Approved N1, N2 and N3 exactly as listed",
   "scope": {
     "surface": "LinkedIn notifications in the signed-in Chrome session",
     "window": "Rolling 24 hours",
@@ -33,7 +35,9 @@
       "target": "Nick Lambeth's reply to Aditya Singh",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
       "exactText": "Agreed, Nick. Row-level policy in the Databricks catalog and Salesforce permissions each protect a local boundary; the harder failure appears when an agent combines a permitted read with a permitted CRM write. I would track cross-system privilege amplification, denial rate and p95 policy-evaluation latency, then require one action-time decision and receipt spanning both systems—otherwise two locally valid permissions can produce one globally invalid outcome.",
-      "state": "ready_for_confirmation"
+      "state": "executed_verified",
+      "receiptOperationId": "20260829044146-reply-posted-2026-08-29-linkedin-reply-nick-lambeth-cross-system-policy",
+      "verification": "LinkedIn rendered the exact approved reply beneath Nick Lambeth's comment under Aditya Singh with a current timestamp."
     },
     {
       "id": "N2",
@@ -41,7 +45,8 @@
       "target": "Christopher Coleman",
       "url": "https://www.linkedin.com/in/ccengineering/",
       "reason": "Carryover approved candidate; strong overlap with enterprise AI architecture, AI governance, MCP, RAG, permissions, observability and distributed systems. Re-audit confirms the profile is not yet followed.",
-      "state": "ready_for_confirmation"
+      "state": "executed_verified",
+      "verification": "Christopher Coleman's profile changed from Follow to Following."
     },
     {
       "id": "N3",
@@ -49,7 +54,8 @@
       "target": "Usama Masood",
       "url": "https://www.linkedin.com/in/masood-usama/",
       "reason": "New follower with direct topical alignment: AI engineering, autonomous workflows and multi-agent systems. Re-audit confirms the profile is not yet followed.",
-      "state": "ready_for_confirmation"
+      "state": "executed_verified",
+      "verification": "Usama Masood's profile changed from Follow to Following."
     }
   ],
   "closedWithoutAction": [
@@ -86,7 +92,7 @@
     }
   ],
   "safety": {
-    "externalActionsExecuted": false,
+    "externalActionsExecuted": true,
     "credentialsOrBrowserStateStored": false,
     "privateUrlsStored": false
   }
