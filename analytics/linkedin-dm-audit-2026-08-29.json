@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-08-29T04:47:46Z",
+  "timezone": "Asia/Kolkata",
+  "status": "prepared_for_confirmation",
+  "scope": {
+    "surface": "LinkedIn Messaging in the signed-in Chrome session",
+    "window": "Rolling month through 2026-08-29",
+    "oldestConversationIncluded": "2026-08-04",
+    "conversationsReviewed": 29,
+    "candidateLimitApplied": 5,
+    "qualifiedReplyCandidates": 3
+  },
+  "disposition": {
+    "readyForConfirmation": 3,
+    "alreadyHandledAwaitingOtherParty": 16,
+    "terminalAcknowledgementsNoReply": 6,
+    "sponsoredNoReply": 2,
+    "contentOrAttachmentShareNoReply": 2
+  },
+  "proposedActions": [
+    {
+      "id": "D1",
+      "action": "private_message_reply",
+      "target": "Pavan Kumar B",
+      "profileUrl": "https://www.linkedin.com/in/pavan8855/",
+      "context": "Fresh reply from the founder of Qusure following substantive discussion of enterprise AI governance and the Production AI Control Plane.",
+      "exactText": "Thanks, Pavan. I value the same kind of exchange—specific implementation evidence is more useful than broad agreement. As the Control Plane series progresses, I’d be interested in comparing how Qusure measures policy-decision p95 latency, denied-action rate, exception volume and audit-reconstruction success in live deployments.",
+      "score": {
+        "relevance": 1.0,
+        "discussionQuality": 0.95,
+        "uniqueContribution": 0.95,
+        "recency": 1.0,
+        "priorityScore": 0.98
+      },
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "D2",
+      "action": "private_message_reply",
+      "target": "Jyoti Kr Aroraa",
+      "profileUrl": "https://www.linkedin.com/in/jyoti-kr-aroraa%F0%9F%92%8E-6a9a5235/",
+      "context": "Unanswered connection message from a logistics executive and AI generalist whose profile claims 22+ years of experience and 25% savings outcomes.",
+      "exactText": "Thank you, Jyoti. Your combination of 22+ years in logistics and current AI work caught my attention, especially the 25% savings claim in your profile. In practice, which lever contributes most to that result—customs cycle time, inventory working capital, route utilization or exception leakage—and how do you isolate attribution from normal volume and mix changes?",
+      "score": {
+        "relevance": 0.8,
+        "discussionQuality": 0.85,
+        "uniqueContribution": 0.9,
+        "recency": 0.9,
+        "priorityScore": 0.85
+      },
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "D3",
+      "action": "private_message_reply",
+      "target": "Matthew Arredondo",
+      "profileUrl": "https://www.linkedin.com/in/matthew-arredondo-aa208173/",
+      "context": "Unanswered greeting from the founder and CEO of T²; his profile makes technical claims about mathematical verification, high-arity reasoning and autonomous execution.",
+      "exactText": "Good morning, Matthew—and apologies for the late reply. Your T² thesis is ambitious, particularly the claims around mathematical verification, high-arity reasoning and autonomous execution. What concrete artifact best validates it today: a formal specification, benchmark, reproducible system demo or production reliability data such as task success rate, p95 latency and recovery rate?",
+      "score": {
+        "relevance": 0.85,
+        "discussionQuality": 0.8,
+        "uniqueContribution": 0.9,
+        "recency": 0.75,
+        "priorityScore": 0.83
+      },
+      "state": "ready_for_confirmation"
+    }
+  ],
+  "notRecommendedNow": [
+    {
+      "target": "Akram Hussain",
+      "reason": "The user supplied the requested resume on August 27 and Akram acknowledged receipt; the recruiting process is with Akram, so another immediate message would be redundant."
+    },
+    {
+      "target": "Umaima Zainab",
+      "reason": "The user requested commissioning-organization, privacy and retention details on August 21; no answer arrived, and the time-sensitive survey is likely stale."
+    },
+    {
+      "target": "Samrat Singh Shekhawat",
+      "reason": "The user already requested the open-status, budget, payroll entity, hybrid requirement and conversion path; no response arrived, and the dated contract opportunity is below the 0.70 priority threshold."
+    }
+  ],
+  "unreadStatus": {
+    "rollingMonthUnreadRemaining": 0,
+    "legacyUnreadOutsideScope": true,
+    "note": "LinkedIn's Unread filter contains only older conversations from 2024 and 2023; these were outside the requested one-month window."
+  },
+  "safety": {
+    "externalActionsExecuted": false,
+    "exactActionTimeConfirmationRequired": true,
+    "credentialsOrBrowserStateStored": false,
+    "privateUrlsStored": false
+  }
+}
