@@ -2,7 +2,9 @@
   "schemaVersion": 1,
   "auditedAt": "2026-08-29T04:47:46Z",
   "timezone": "Asia/Kolkata",
-  "status": "prepared_for_confirmation",
+  "status": "executed_verified",
+  "executedAt": "2026-08-29T05:10:52Z",
+  "userConfirmation": "Approve D1, D2 and D3 exactly as written",
   "scope": {
     "surface": "LinkedIn Messaging in the signed-in Chrome session",
     "window": "Rolling month through 2026-08-29",
@@ -12,7 +14,8 @@
     "qualifiedReplyCandidates": 3
   },
   "disposition": {
-    "readyForConfirmation": 3,
+    "readyForConfirmation": 0,
+    "executedVerified": 3,
     "alreadyHandledAwaitingOtherParty": 16,
     "terminalAcknowledgementsNoReply": 6,
     "sponsoredNoReply": 2,
@@ -33,7 +36,9 @@
         "recency": 1.0,
         "priorityScore": 0.98
       },
-      "state": "ready_for_confirmation"
+      "state": "executed_verified",
+      "receiptOperationId": "20260829051052-message-posted-in-pavan8855",
+      "verification": "LinkedIn rendered the exact approved message under Aditya Singh in the Pavan Kumar B conversation at 10:39 AM IST."
     },
     {
       "id": "D2",
@@ -49,7 +54,9 @@
         "recency": 0.9,
         "priorityScore": 0.85
       },
-      "state": "ready_for_confirmation"
+      "state": "executed_verified",
+      "receiptOperationId": "20260829051052-message-posted-in-jyoti-kr-aroraa-6a9a5235",
+      "verification": "LinkedIn rendered the exact approved message under Aditya Singh in the Jyoti Kr Aroraa conversation at 10:40 AM IST."
     },
     {
       "id": "D3",
@@ -65,7 +72,9 @@
         "recency": 0.75,
         "priorityScore": 0.83
       },
-      "state": "ready_for_confirmation"
+      "state": "executed_verified",
+      "receiptOperationId": "20260829051052-message-posted-in-matthew-arredondo-aa208173",
+      "verification": "LinkedIn rendered the exact approved message under Aditya Singh in the Matthew Arredondo conversation at 10:40 AM IST."
     }
   ],
   "notRecommendedNow": [
@@ -88,7 +97,7 @@
     "note": "LinkedIn's Unread filter contains only older conversations from 2024 and 2023; these were outside the requested one-month window."
   },
   "safety": {
-    "externalActionsExecuted": false,
+    "externalActionsExecuted": true,
     "exactActionTimeConfirmationRequired": true,
     "credentialsOrBrowserStateStored": false,
     "privateUrlsStored": false

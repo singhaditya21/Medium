@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260829051052-message-posted-in-jyoti-kr-aroraa-6a9a5235",
+  "action": "message_posted",
+  "recordedAt": "2026-08-29T05:10:52Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-29T05:10:52Z",
+    "scope": "Approve D1, D2 and D3 exactly as written"
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/jyoti-kr-aroraa%F0%9F%92%8E-6a9a5235/",
+    "messageTextSha256": "509b4b75b9d8f6db92bf7d06e817ae3f1c0e2d8981cae629cddaecae10a4d767",
+    "verifiedAt": "2026-08-29T05:10:52Z",
+    "verification": "LinkedIn rendered the exact approved message under Aditya Singh in the Jyoti Kr Aroraa conversation at 10:40 AM IST; the composer cleared after sending."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
