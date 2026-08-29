@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "executedAt": "2026-08-29T11:30:42Z",
+  "timezone": "Asia/Kolkata",
+  "status": "verified",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "userConfirmation": {
+    "obtained": true,
+    "scope": "Approved H1, H2 and H3 exactly as written."
+  },
+  "actions": [
+    {
+      "id": "H1",
+      "action": "public_reply_posted",
+      "status": "verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7497275354135502848/",
+      "receiptOperationId": "20260829113042-reply-posted-2026-08-29-linkedin-reply-ehson-residual-loss-ownership",
+      "tagVerified": "Ehson Golandaz"
+    },
+    {
+      "id": "H2",
+      "action": "public_reply_posted",
+      "status": "verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
+      "receiptOperationId": "20260829113042-reply-posted-2026-08-29-linkedin-reply-amit-preference-consent-authority",
+      "tagVerified": "Amit Jain"
+    },
+    {
+      "id": "H3",
+      "action": "private_message_posted",
+      "status": "verified",
+      "targetProfileUrl": "https://www.linkedin.com/in/matthew-arredondo-aa208173/",
+      "receiptOperationId": "20260829113042-message-posted-in-matthew-arredondo-aa208173"
+    }
+  ],
+  "notes": [
+    "The two public replies were posted through their specific reply controls so LinkedIn preserved thread context and rendered the intended author mentions as profile links.",
+    "Private message text and private conversation URLs are not stored; the dedicated receipt contains only a SHA-256 digest and the public recipient profile URL.",
+    "No credentials, cookies, browser state or private URLs are stored.",
+    "GitHub Actions did not perform any LinkedIn action."
+  ],
+  "secretsStored": false
+}

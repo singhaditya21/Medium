@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260829113042-reply-posted-2026-08-29-linkedin-reply-amit-preference-consent-authority",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-29T11:30:42Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-29T11:30:42Z",
+    "scope": "Approved H1, H2 and H3 exactly as written."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-29-linkedin-reply-amit-preference-consent-authority",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
+    "publishedTextSha256": "24f9f07417d39df3c9cdb0cc6d3405b05dde2e8e6c843db30e89d2110d72849a",
+    "verifiedAt": "2026-08-29T11:30:42Z",
+    "verification": "LinkedIn rendered the exact approved reply under Aditya Singh with a current timestamp and a clickable Amit Jain mention in the correct comment thread."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

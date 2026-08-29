@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260829113042-reply-posted-2026-08-29-linkedin-reply-ehson-residual-loss-ownership",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-29T11:30:42Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-29T11:30:42Z",
+    "scope": "Approved H1, H2 and H3 exactly as written."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-29-linkedin-reply-ehson-residual-loss-ownership",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7497275354135502848/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7497275354135502848/",
+    "publishedTextSha256": "c175a9b11f73f5eadc3de2efa2641c63aa3c54ae4494b1754d77288e6f3a8620",
+    "verifiedAt": "2026-08-29T11:30:42Z",
+    "verification": "LinkedIn rendered the exact approved reply under Aditya Singh with a current timestamp and a clickable Ehson Golandaz mention in the correct comment thread."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

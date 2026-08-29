@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-29T07:34:32Z",
+  "updatedAt": "2026-08-29T11:30:42Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -675,6 +675,42 @@
       "receiptOperationId": "20260829073432-comment-posted-2026-08-29-linkedin-comment-amit-travel-agent-controls",
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
       "postedAt": "2026-08-29T07:34:32Z"
+    },
+    {
+      "id": "2026-08-29-linkedin-reply-ehson-residual-loss-ownership",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7497275354135502848/",
+      "title": "Residual-loss ownership in agentic banking workflows",
+      "author": "Ehson Golandaz",
+      "reason": "Direct technical question from a banking enterprise architect on whether residual-loss ownership belongs in the execution contract or a higher governance artifact.",
+      "evidence": "Fresh author reply on a post with 40 reactions and 13 comments. The existing Aditya comment had 36 impressions and one reaction immediately before the approved response, and no later Aditya reply was present.",
+      "draftResponse": "Both, but with one source of truth. The accountability registry should own the durable assignment—business principal, residual-loss owner, escalation owner and risk ceiling—while every execution contract resolves and binds those identities at action time alongside the reversal path and unrecoverable window. That lets the control plane deny execution when ownership is missing or stale, and gives audit teams metrics such as owner-resolution coverage, compensation-failure escalation time and residual-loss acceptance time.",
+      "priorityScore": 0.98,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7497275354135502848/",
+      "receiptOperationId": "20260829113042-reply-posted-2026-08-29-linkedin-reply-ehson-residual-loss-ownership",
+      "postedAt": "2026-08-29T11:30:42Z"
+    },
+    {
+      "id": "2026-08-29-linkedin-reply-amit-preference-consent-authority",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
+      "title": "Preference learning versus consent and delegated authority",
+      "author": "Amit Jain",
+      "reason": "Direct author reply on the travel-agent thread created an opportunity to distinguish predicted preference from payment consent and delegated operating authority.",
+      "evidence": "The original Aditya comment had 214 impressions and the author replied directly. No subsequent Aditya response was visible before the approved action.",
+      "draftResponse": "Agreed that preference learning will make the experience smoother, but preference is not the same as consent or delegated authority. Past behaviour may predict a hotel, fare or seat; it should not silently expand payment scope or accept cancellation and refund risk. I would measure preference accuracy together with explicit-override rate, unauthorized-action rate and recovery time.",
+      "priorityScore": 0.91,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
+      "receiptOperationId": "20260829113042-reply-posted-2026-08-29-linkedin-reply-amit-preference-consent-authority",
+      "postedAt": "2026-08-29T11:30:42Z"
     }
   ]
 }
