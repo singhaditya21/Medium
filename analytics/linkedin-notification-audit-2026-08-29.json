@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-08-29T04:34:18Z",
+  "timezone": "Asia/Kolkata",
+  "status": "prepared_awaiting_confirmation",
+  "scope": {
+    "surface": "LinkedIn notifications in the signed-in Chrome session",
+    "window": "Rolling 24 hours",
+    "boundaryHandling": "Reviewed 43 notifications with labels newer than LinkedIn's 1d boundary; 1d-labelled items were excluded because LinkedIn does not expose exact timestamps in the notification list.",
+    "notificationsReviewedBeforeOneDayBoundary": 43
+  },
+  "observedMetrics": [
+    {
+      "title": "The Enterprise AI Control Plane - Part 1/5",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498941183755333632/",
+      "impressions": 327,
+      "profileViewers": 4,
+      "reactions": 9,
+      "comments": 4
+    },
+    {
+      "title": "99.5% Accurate—and Still Wrong 500 Times",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498216408086929409/",
+      "impressions": 491,
+      "reactions": 3,
+      "comments": 2
+    }
+  ],
+  "proposedActions": [
+    {
+      "id": "N1",
+      "action": "threaded_reply",
+      "target": "Nick Lambeth's reply to Aditya Singh",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
+      "exactText": "Agreed, Nick. Row-level policy in the Databricks catalog and Salesforce permissions each protect a local boundary; the harder failure appears when an agent combines a permitted read with a permitted CRM write. I would track cross-system privilege amplification, denial rate and p95 policy-evaluation latency, then require one action-time decision and receipt spanning both systems—otherwise two locally valid permissions can produce one globally invalid outcome.",
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "N2",
+      "action": "follow",
+      "target": "Christopher Coleman",
+      "url": "https://www.linkedin.com/in/ccengineering/",
+      "reason": "Carryover approved candidate; strong overlap with enterprise AI architecture, AI governance, MCP, RAG, permissions, observability and distributed systems. Re-audit confirms the profile is not yet followed.",
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "N3",
+      "action": "follow",
+      "target": "Usama Masood",
+      "url": "https://www.linkedin.com/in/masood-usama/",
+      "reason": "New follower with direct topical alignment: AI engineering, autonomous workflows and multi-agent systems. Re-audit confirms the profile is not yet followed.",
+      "state": "ready_for_confirmation"
+    }
+  ],
+  "closedWithoutAction": [
+    {
+      "target": "Pavan Kumar B and Sara Simeone thread on The Enterprise AI Control Plane",
+      "result": "All four visible comments are already answered; no new unanswered contribution exists."
+    },
+    {
+      "target": "Kevin McDonnell mention",
+      "result": "The approved burden-ledger reply is visibly present and no newer direct reply to Aditya Singh is visible."
+    },
+    {
+      "target": "Abhishek Bhattacharjee mention",
+      "result": "Abhishek acknowledged the effect-verification distinction without asking a question; another response would be repetitive."
+    },
+    {
+      "target": "Kenneth Fahrman follow notification",
+      "result": "No reciprocal follow recommended now: the profile is relevant to financial services but has no visible recent public activity to support an engagement hypothesis."
+    },
+    {
+      "target": "Rose Steinberg follow notification",
+      "result": "Prior relevance audit remains unchanged; no reciprocal follow recommended."
+    },
+    {
+      "target": "Likes, profile views, job alerts, newsletters, event roundups, post analytics and network activity",
+      "result": "Informational only; no reply, reaction, follow or message is warranted."
+    }
+  ],
+  "excludedFromScope": [
+    {
+      "surface": "LinkedIn Messaging",
+      "target": "Pavan Kumar B",
+      "reason": "A new message was visible, but direct messages are separate from the requested notification audit and require their own exact-text approval."
+    }
+  ],
+  "safety": {
+    "externalActionsExecuted": false,
+    "credentialsOrBrowserStateStored": false,
+    "privateUrlsStored": false
+  }
+}

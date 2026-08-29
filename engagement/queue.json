@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-28T18:41:32Z",
+  "updatedAt": "2026-08-29T04:34:18Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -631,7 +631,7 @@
       "title": "Salesforce and Databricks cross-system policy boundary",
       "author": "Nick Lambeth",
       "reason": "Nick directly extended the existing control-boundary comment with Salesforce security posture and Databricks row-level catalog governance, creating a high-fit opening to define cross-system privilege amplification.",
-      "evidence": "Fresh signed-in review: Nick explicitly mentioned Aditya Singh in a 28-minute-old reply. The source post had 100 reactions and 22 comments; the existing Aditya comment had 2 reactions and 38 impressions, and no subsequent Aditya reply was visible.",
+      "evidence": "Fresh signed-in re-audit on 29 August: Nick's direct reply remains unanswered. The existing Aditya comment now has 2 reactions and 250 impressions, the exact proposed follow-up is not present, and no subsequent Aditya reply is visible.",
       "draftResponse": "Agreed, Nick. Row-level policy in the Databricks catalog and Salesforce permissions each protect a local boundary; the harder failure appears when an agent combines a permitted read with a permitted CRM write. I would track cross-system privilege amplification, denial rate and p95 policy-evaluation latency, then require one action-time decision and receipt spanning both systems—otherwise two locally valid permissions can produce one globally invalid outcome.",
       "priorityScore": 0.96,
       "intendedMentions": [],
