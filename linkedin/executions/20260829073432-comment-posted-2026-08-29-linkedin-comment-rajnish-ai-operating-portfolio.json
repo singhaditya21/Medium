@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260829073432-comment-posted-2026-08-29-linkedin-comment-rajnish-ai-operating-portfolio",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-29T07:34:32Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-29T07:34:32Z",
+    "scope": "Approved P1, P2, P3, P4 and P5 exactly as listed."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-29-linkedin-comment-rajnish-ai-operating-portfolio",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499357875597811713/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499357875597811713/",
+    "publishedTextSha256": "48be0a9d509eb9f367bda2be024c8fe18efdf8bbc4e39df87d06f3a074f8f4d5",
+    "verifiedAt": "2026-08-29T07:34:32Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh in Rajnish Dass’s post thread and cleared the composer."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

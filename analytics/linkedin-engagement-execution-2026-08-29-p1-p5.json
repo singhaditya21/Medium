@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "executedAt": "2026-08-29T07:34:32Z",
+  "timezone": "Asia/Kolkata",
+  "status": "verified",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "userConfirmation": {
+    "obtained": true,
+    "scope": "Approved P1, P2, P3, P4 and P5 exactly as listed."
+  },
+  "actions": [
+    {
+      "id": "P1",
+      "action": "private_message_posted",
+      "status": "verified",
+      "targetProfileUrl": "https://www.linkedin.com/in/matthew-arredondo-aa208173/",
+      "receiptOperationId": "20260829073432-message-posted-in-matthew-arredondo-aa208173"
+    },
+    {
+      "id": "P2",
+      "action": "private_message_posted",
+      "status": "verified",
+      "targetProfileUrl": "https://www.linkedin.com/in/jyoti-kr-aroraa%F0%9F%92%8E-6a9a5235/",
+      "receiptOperationId": "20260829073432-message-posted-in-jyoti-kr-aroraa-6a9a5235"
+    },
+    {
+      "id": "P3",
+      "action": "public_comment_posted",
+      "status": "verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499357875597811713/",
+      "receiptOperationId": "20260829073432-comment-posted-2026-08-29-linkedin-comment-rajnish-ai-operating-portfolio"
+    },
+    {
+      "id": "P4",
+      "action": "public_comment_posted",
+      "status": "verified",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
+      "receiptOperationId": "20260829073432-comment-posted-2026-08-29-linkedin-comment-amit-travel-agent-controls"
+    },
+    {
+      "id": "P5",
+      "action": "newsletter_subscribed",
+      "status": "verified",
+      "targetUrl": "https://www.linkedin.com/newsletters/brokerwiseai-7482914790584107008/",
+      "beforeSubscriberCount": 518,
+      "afterSubscriberCount": 519,
+      "verification": "The newsletter control changed from Subscribe to Subscribed; no share action was taken."
+    }
+  ],
+  "notes": [
+    "Private message text and private conversation URLs are not stored; dedicated receipts contain only SHA-256 digests and public recipient profile URLs.",
+    "No credentials, cookies, browser state, phone numbers or private URLs are stored.",
+    "GitHub Actions did not perform any LinkedIn action."
+  ],
+  "secretsStored": false
+}

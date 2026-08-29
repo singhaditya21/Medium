@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-29T04:41:46Z",
+  "updatedAt": "2026-08-29T07:34:32Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -639,6 +639,42 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498776476557815808/",
       "receiptOperationId": "20260829044146-reply-posted-2026-08-29-linkedin-reply-nick-lambeth-cross-system-policy",
       "postedAt": "2026-08-29T04:41:46Z"
+    },
+    {
+      "id": "2026-08-29-linkedin-comment-rajnish-ai-operating-portfolio",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499357875597811713/",
+      "title": "The Board is discussing AI",
+      "author": "Rajnish Dass",
+      "reason": "Direct overlap with enterprise AI value realization, workflow redesign, operating models and stop-or-scale governance.",
+      "evidence": "Posted within the hour when reviewed; 2 reactions, no comments and no existing Aditya Singh comment. The post asks how to bridge board ambition and enterprise value.",
+      "draftResponse": "Rajnish, the missing middle is an operating portfolio, not another use-case list. I would require every AI initiative to name the workflow unit, baseline cost and cycle time, value-at-stake, risk ceiling, accountable owner and a 30/60/90-day stop-or-scale gate; otherwise board ambition becomes pilot inventory rather than changed economics.",
+      "priorityScore": 0.94,
+      "intendedMentions": [],
+      "state": "posted",
+      "receiptOperationId": "20260829073432-comment-posted-2026-08-29-linkedin-comment-rajnish-ai-operating-portfolio",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499357875597811713/",
+      "postedAt": "2026-08-29T07:34:32Z"
+    },
+    {
+      "id": "2026-08-29-linkedin-comment-amit-travel-agent-controls",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
+      "title": "Google AI search as a travel agent",
+      "author": "Amit Jain",
+      "reason": "Relevant agentic-commerce discussion where operational authority, liability and recovery metrics add a distinct enterprise control perspective.",
+      "evidence": "Posted 2 hours before review; 1 reaction, no comments and no existing Aditya Singh comment. The post argues that AI booking agents threaten traditional travel intermediaries.",
+      "draftResponse": "Amit, the displacement risk is real, but booking is only the visible action. The control question is who owns fare-rule interpretation, consent, payment authority, cancellation recovery and liability when the agent selects the wrong trade-off; I would track conversion lift alongside intervention rate, failed-booking recovery time, refund leakage and disputed-booking rate before calling the intermediary obsolete.",
+      "priorityScore": 0.84,
+      "intendedMentions": [],
+      "state": "posted",
+      "receiptOperationId": "20260829073432-comment-posted-2026-08-29-linkedin-comment-amit-travel-agent-controls",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
+      "postedAt": "2026-08-29T07:34:32Z"
     }
   ]
 }
