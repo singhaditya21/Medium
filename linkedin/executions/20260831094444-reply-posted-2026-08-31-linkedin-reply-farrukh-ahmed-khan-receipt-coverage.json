@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831094444-reply-posted-2026-08-31-linkedin-reply-farrukh-ahmed-khan-receipt-coverage",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-31T09:44:44Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T09:44:44Z",
+    "scope": "Approved A2 and F1 exactly as written"
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-31-linkedin-reply-farrukh-ahmed-khan-receipt-coverage",
+    "targetUrl": "https://www.linkedin.com/pulse/ai-control-plane-building-trust-governance-agentic-enterprise-khan-id0jf/",
+    "publicUrl": "https://www.linkedin.com/pulse/ai-control-plane-building-trust-governance-agentic-enterprise-khan-id0jf/",
+    "publishedTextSha256": "0bf4fa28b22ad081818d8f1ad6ddbf9c4f922ea6e41b7db8bdfc2d6ec5888605",
+    "verifiedAt": "2026-08-31T09:44:44Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved threaded reply under Aditya Singh with a current timestamp beneath Farrukh Ahmed Khan’s reply; native reply context and author mention were preserved."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

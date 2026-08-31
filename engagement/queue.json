@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T09:36:34Z",
+  "updatedAt": "2026-08-31T09:44:44Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1026,6 +1026,42 @@
       "responseUrl": "https://www.linkedin.com/posts/finaiconfluence2026-agenticai-bfsi-ugcPost-7500118677372162048-blYM/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
       "receiptOperationId": "20260831093634-comment-posted-2026-08-31-linkedin-comment-nasscom-ai-banking-control-case",
       "postedAt": "2026-08-31T09:36:34Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-reply-adrienne-craukamp-verifier-receipts",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/posts/adriennek-craukamp_agenticai-aigovernance-share-7500118218179575809-Geco/",
+      "title": "Verifier-owned receipts as a day-one requirement",
+      "author": "Adrienne Craukamp",
+      "reason": "Replying to Adrienne’s direct question on whether organizations build verifier-owned receipts from day one or retrofit them after an incident.",
+      "evidence": "Adrienne replied to the approved top-level comment, asked for observed implementation patterns, and identified verifier-owned receipts as a baseline control.",
+      "draftResponse": "Mostly retrofitted today. The recurring pattern is that teams fund a verifier only after a meaningful exception, then discover the operational dependency: a receipt is useful only if it binds to the live policy, tool, identity, and business-state versions at decision time. I would make verifier-owned receipts a day-one requirement for any workflow that can change money, identity, customer commitments, or production state; the maturity metric is receipt coverage of high-consequence actions, not the number of logs retained.",
+      "priorityScore": 0.91,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/adriennek-craukamp_agenticai-aigovernance-share-7500118218179575809-Geco/",
+      "receiptOperationId": "20260831094443-reply-posted-2026-08-31-linkedin-reply-adrienne-craukamp-verifier-receipts",
+      "postedAt": "2026-08-31T09:44:43Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-reply-farrukh-ahmed-khan-receipt-coverage",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/pulse/ai-control-plane-building-trust-governance-agentic-enterprise-khan-id0jf/",
+      "title": "End-to-end receipt coverage for AI control planes",
+      "author": "Farrukh Ahmed Khan",
+      "reason": "Replying to Farrukh’s comment on postcondition verification by adding a measurable definition of end-to-end receipt coverage.",
+      "evidence": "Farrukh replied to the approved comment and agreed that business-effect verification distinguishes enterprise-grade AI governance from basic agent management.",
+      "draftResponse": "Precisely. Most organizations design the control plane as a policy service, then leave business-effect verification to downstream operations. The missing denominator is end-to-end receipt coverage: the percentage of high-impact actions that can be reconstructed across intent, authority, tool execution, observed effect, and recovery. That turns governance maturity into an operating metric rather than an architecture diagram.",
+      "priorityScore": 0.9,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/pulse/ai-control-plane-building-trust-governance-agentic-enterprise-khan-id0jf/",
+      "receiptOperationId": "20260831094444-reply-posted-2026-08-31-linkedin-reply-farrukh-ahmed-khan-receipt-coverage",
+      "postedAt": "2026-08-31T09:44:44Z"
     }
   ]
 }

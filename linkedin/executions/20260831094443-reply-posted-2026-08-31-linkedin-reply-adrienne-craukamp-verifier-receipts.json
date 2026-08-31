@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831094443-reply-posted-2026-08-31-linkedin-reply-adrienne-craukamp-verifier-receipts",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-31T09:44:43Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T09:44:43Z",
+    "scope": "Approved A2 and F1 exactly as written"
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-31-linkedin-reply-adrienne-craukamp-verifier-receipts",
+    "targetUrl": "https://www.linkedin.com/posts/adriennek-craukamp_agenticai-aigovernance-share-7500118218179575809-Geco/",
+    "publicUrl": "https://www.linkedin.com/posts/adriennek-craukamp_agenticai-aigovernance-share-7500118218179575809-Geco/",
+    "publishedTextSha256": "eb13f605c49077e5f12a6d5ce99a11e52afaefa4a54832482b1c5e524fb3c37d",
+    "verifiedAt": "2026-08-31T09:44:43Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved threaded reply under Aditya Singh with a current timestamp beneath Adrienne Craukamp’s reply; native reply context was preserved."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
