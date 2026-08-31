@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-31T10:04:45Z",
+  "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
+  "globalRules": {
+    "requireExactActionTimeConfirmation": true,
+    "doNotSendFollowUpWithoutInboundReply": true,
+    "minimumDaysBetweenUnpromptedPublicTouches": 7,
+    "preferredNextTouch": "A specific response to a new, directly relevant post or inbound question.",
+    "disallowed": [
+      "generic check-ins",
+      "reciprocal engagement requests",
+      "automatic follows",
+      "duplicate comments or replies"
+    ]
+  },
+  "relationships": [
+    {
+      "name": "Sriinivasa Chary (Srini)",
+      "profileUrl": "https://www.linkedin.com/in/rayabandisrinivasa/",
+      "themes": ["GCC", "GBS", "enterprise operating models", "decision rights"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-08-31",
+      "nextReviewOn": "2026-09-07",
+      "nextActionRule": "Respond to his answer to the existing question; otherwise inspect one new relevant post after the review date."
+    },
+    {
+      "name": "Crystal Valentine",
+      "profileUrl": "https://www.linkedin.com/in/crystalsvalentine/",
+      "themes": ["AI transformation", "AI economics", "operating models", "outcome verification"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-08-31",
+      "nextReviewOn": "2026-09-07",
+      "nextActionRule": "Respond only if the current thread continues; otherwise inspect one new relevant post after the review date."
+    },
+    {
+      "name": "Adrienne Craukamp",
+      "profileUrl": "https://www.linkedin.com/in/adriennek-craukamp/",
+      "themes": ["multi-agent governance", "independent evidence", "verifier-owned receipts"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-08-31",
+      "nextReviewOn": "2026-09-07",
+      "nextActionRule": "Do not add to the current thread; inspect a new directly relevant post after the review date."
+    },
+    {
+      "name": "Farrukh Ahmed Khan",
+      "profileUrl": "https://www.linkedin.com/in/farrukh-ahmed-khan-932009b6/",
+      "themes": ["AI control planes", "postcondition verification", "receipt coverage"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-08-31",
+      "nextReviewOn": "2026-09-07",
+      "nextActionRule": "Do not repeat the architecture point; inspect a new control-plane discussion after the review date."
+    },
+    {
+      "name": "Gary Williams",
+      "profileUrl": "https://www.linkedin.com/in/gary-williams-b361b7177/",
+      "themes": ["AI security", "cyber insurance", "authorization boundaries", "containment"],
+      "state": "passive_signal_only",
+      "lastMeaningfulTouch": "2026-08-31",
+      "nextReviewOn": "2026-09-14",
+      "nextActionRule": "No follow-up on the prior comment; consider a new post only if it has a distinct AI-security or insurance angle."
+    }
+  ]
+}
