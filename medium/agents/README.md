@@ -4,15 +4,16 @@ This folder defines the non-API, approval-gated Medium research system. It uses 
 
 ## Agent roles
 
-1. **Catalog and gap analysis** maps the published catalog, scheduled releases, audience promise, and content-pillar gaps.
-2. **Source and story opportunity research** identifies differentiated technical story opportunities and primary evidence.
-3. **Story architecture and visual planning** prepares the thesis, reader, outline, artifacts, figures, code, and series placement.
-4. **Editorial, claims, and policy review** tests factual support, clarity, originality, image attribution, AI disclosure, and paywall/distribution eligibility.
-5. **Performance and retention audit** diagnoses presentations, views, reads, read ratio, traffic, and audience conversion at 48-hour, 7-day, and 28-day checkpoints.
-6. **Distribution and publication fit** checks story settings, preview rendering, topics, canonical links, subscriber-email intent, internal navigation, and selective publication fit.
-7. **Conversation research and response drafting** identifies a small number of source-specific stories where an original technical response would add value.
-8. **Growth experiment planning** proposes measured, reversible improvements to discovery, clickthrough, retention, and reader relationship.
-9. **Approval, receipts, and reporting** presents exact choices in chat, enforces confirmation, verifies approved actions, and records credential-free evidence.
+1. **Catalog and gap analysis** maps the published catalog, audience promise, and content-pillar gaps.
+2. **Scheduled-story and release audit** inspects every scheduled story and its release settings before it publishes.
+3. **Source and story opportunity research** identifies differentiated technical story opportunities and primary evidence.
+4. **Story architecture and visual planning** prepares the thesis, reader, outline, artifacts, figures, code, and series placement.
+5. **Editorial, claims, and policy review** tests factual support, clarity, originality, image attribution, AI disclosure, and paywall/distribution eligibility.
+6. **Performance and retention audit** diagnoses presentations, views, reads, read ratio, traffic, and audience conversion at 48-hour, 7-day, and 28-day checkpoints.
+7. **Distribution and publication fit** checks story settings, preview rendering, topics, canonical links, subscriber-email intent, internal navigation, and selective publication fit.
+8. **Conversation research and response drafting** identifies a small number of source-specific stories where an original technical response would add value.
+9. **Growth experiment planning** proposes measured, reversible improvements to discovery, clickthrough, retention, and reader relationship.
+10. **Approval, receipts, and reporting** presents exact choices in chat, enforces confirmation, verifies approved actions, and records credential-free evidence.
 
 The roles are logical stages in the overnight Medium runs. They are not independent accounts, browser sessions, or permission to take public actions.
 
@@ -21,6 +22,8 @@ The roles are logical stages in the overnight Medium runs. They are not independ
 The Medium lane runs only at **11 PM, 1 AM, 3 AM, 5 AM, and 7 AM IST**. It shares the scheduler with LinkedIn, but its inputs, analysis, outputs, and approval requirements remain separate.
 
 Each completed run reports in chat. When recommendations are ready, the report includes evidence, score, exact target, exact proposed text or settings, expected effect, and the exact approval needed. An empty or low-quality batch is reported as such; quantity never overrides judgment.
+
+Every run also reports every scheduled story: title, scheduled date/time in IST, remaining time, publication destination, public/unlisted state, topics, canonical URL, featured-image/preview check, subscriber-email setting, paywall setting, and any release-risk alert. It may inspect these settings but never changes them without approval.
 
 ## State ownership
 

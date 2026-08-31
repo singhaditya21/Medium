@@ -17,6 +17,14 @@ Before a finding reaches the user, it must pass the applicable gates.
 3. **Causal restraint:** distinguishes observed evidence from likely explanation and proposed test.
 4. **Smallest intervention:** recommends the narrowest safe change with a measurable stop rule.
 
+## Scheduled story
+
+1. **Completeness:** every scheduled story is listed; none may be silently skipped.
+2. **Timing:** exact time is expressed in IST and compared with current time.
+3. **Release settings:** schedule, destination, subscriber email, paywall, canonical URL, topics, preview, and featured image are explicitly checked.
+4. **No implicit mutation:** observations are not treated as permission to fix a setting.
+5. **Release risk:** overdue, missing, inconsistent, or low-readiness stories are clearly flagged.
+
 ## Conversation candidate
 
 1. **Relevance:** relates directly to an established content pillar and the source argument.

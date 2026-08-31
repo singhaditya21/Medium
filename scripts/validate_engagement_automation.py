@@ -164,6 +164,7 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
     medium_agent_system = strategy.get("mediumAgentSystem", {})
     expected_medium_roles = [
         "catalog_and_gap_analysis",
+        "scheduled_story_and_release_audit",
         "source_and_story_opportunity_research",
         "story_architecture_and_visual_planning",
         "editorial_claims_and_policy_review",
@@ -185,6 +186,7 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
         errors.append("Medium agent system roles do not match the approved nine-role design")
     expected_medium_limits = {
         "maximumOwnedStoryAudits": 3,
+        "requireScheduledStoryAuditEveryCycle": True,
         "maximumStoryBriefs": 2,
         "maximumPrimarySourcesPerStoryBrief": 5,
         "maximumPublicationFitCandidates": 3,

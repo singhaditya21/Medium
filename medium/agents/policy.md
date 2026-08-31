@@ -13,6 +13,7 @@
 ## Research and review limits
 
 - Run only at 11 PM, 1 AM, 3 AM, 5 AM, and 7 AM IST.
+- Inspect every scheduled story in every cycle. Verify exact schedule in IST, title/subtitle/preview, featured image, topics, canonical URL, publication destination, public/unlisted state, subscriber-email setting, paywall state, and time remaining. Surface a discrepancy or imminent release risk immediately; never correct it without exact approval.
 - Audit no more than three owned stories per cycle. Prioritize due 48-hour, 7-day, and 28-day checkpoints, then zero-exposure or anomalous stories.
 - Prepare at most two story briefs and at most three publication-fit candidates per cycle. Each technical story brief may cite up to five relevant primary sources.
 - Inspect at most five source-specific Medium stories per cycle and prepare no more than two response candidates. A response must meet the shared 0.70 priority threshold and add a source-specific technical contribution.
