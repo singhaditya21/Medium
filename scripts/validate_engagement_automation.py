@@ -49,6 +49,7 @@ CROSS_PLATFORM_AGENT_ROOT = ROOT / "engagement" / "agents"
 CROSS_PLATFORM_AGENT_REQUIRED_FILES = (
     "README.md",
     "policy.md",
+    "evaluations/dry-run-matrix.json",
 )
 ACTION_TO_CANDIDATE = {
     "comment_posted": "comment",
@@ -150,6 +151,39 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
     for relative_path in CROSS_PLATFORM_AGENT_REQUIRED_FILES:
         if not (CROSS_PLATFORM_AGENT_ROOT / relative_path).is_file():
             errors.append(f"cross-platform agent documentation is missing {relative_path}")
+
+    expected_efficiency = {
+        "schemaVersion": 1,
+        "defaultMode": "idle_first",
+        "skipRoleWithoutDecisionRelevantInput": True,
+        "stopAfterQuietStatusWhenNoTrigger": True,
+        "prohibitDraftingWithoutQualifiedSignal": True,
+        "prohibitNewSourceResearchWhenApprovalQueueAtCapacity": True,
+        "activationTriggers": {
+            "linkedin": [
+                "new_substantive_inbound",
+                "due_measurement_checkpoint",
+                "explicit_user_research_request",
+                "approved_action_requires_verification",
+            ],
+            "medium": [
+                "scheduled_story_audit",
+                "new_substantive_inbound",
+                "due_measurement_checkpoint",
+                "planned_editorial_window",
+                "explicit_user_research_request",
+                "approved_action_requires_verification",
+            ],
+        },
+        "quietCycleOutput": {
+            "mustStateNoActionRecommended": True,
+            "mustStateNextCheckpoint": True,
+            "mayInspectNewExternalSources": False,
+            "mayDraftExternalCommunication": False,
+        },
+    }
+    if strategy.get("cycleEfficiency") != expected_efficiency:
+        errors.append("cycleEfficiency must preserve the idle-first, source-capacity, and quiet-exit controls")
 
     agent_system = strategy.get("linkedinAgentSystem", {})
     expected_roles = [

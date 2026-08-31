@@ -1,6 +1,6 @@
 # Repository inventory and categorization
 
-Snapshot: 31 August 2026. This inventory covers the 454 tracked files in this repository. Generated working directories are listed separately because they are deliberately ignored by Git.
+Snapshot: 31 August 2026. This inventory covers the 456 tracked files in this repository. Generated working directories are listed separately because they are deliberately ignored by Git.
 
 ## 1. Root project and public-site metadata
 
@@ -70,12 +70,12 @@ Suggested category: **editorial source of truth**. Agents may cite this material
 
 ## 5. Deterministic scripts
 
-All 29 files in `scripts/` are deterministic local tooling:
+All 30 files in `scripts/` are deterministic local tooling:
 
 - Site lifecycle: `build_site.py`, `stage_pages.py`, `validate_site.py`, `check_lighthouse.py`
 - Story and figure generation: `prepare_story.py`, `technical_figure_framework.py`, `generate_action_receipt_figures.py`, `generate_agent_evaluation_figures.py`, `generate_agent_kill_switch_figures.py`, `generate_approval_queue_figures.py`, `generate_crm_figures.py`, `generate_memory_figures.py`, `generate_model_routing_figures.py`, `generate_multi_agent_distributed_figures.py`, `generate_permission_lease_figures.py`
 - Editorial and distribution preparation: `build_phase2_drafts.py`, `generate_distribution_pack.py`, `generate_weekly_editorial.py`, `prepare_medium_release.py`
-- Measurement and review: `generate_metrics_report.py`, `generate_engagement_review.py`, `validate_engagement_automation.py`, `validate_medium_bridge.py`
+- Measurement and review: `generate_metrics_report.py`, `generate_engagement_review.py`, `validate_engagement_automation.py`, `validate_agent_dry_run.py`, `validate_medium_bridge.py`
 - Credential-free action evidence: `record_linkedin_execution.py`, `record_linkedin_message.py`, `record_medium_execution.py`, `render_linkedin_receipt.py`, `render_medium_receipt.py`
 - Queue operations: `manage_engagement_queue.py`
 
@@ -108,6 +108,7 @@ The shared, cross-platform agent workspace is under `engagement/agents/`:
 engagement/agents/
   README.md          # five shared research and review roles
   policy.md          # no-new-schedule, approval, privacy, and evidence boundaries
+  evaluations/       # deterministic role and guardrail dry-run matrix
 ```
 
 These logical roles run only as hooks inside the existing LinkedIn and Medium schedules. They have no browser identity, independent schedule, or authority to act publicly.

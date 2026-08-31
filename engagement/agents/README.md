@@ -18,3 +18,9 @@ This workspace defines five logical research and review roles used by both the L
 - Any action recommendation is passed to the appropriate LinkedIn or Medium approval-and-receipts role and still needs exact action-time user confirmation.
 
 The authoritative machine-readable contract is `engagement/strategy.json` under `crossPlatformAgentSystem`.
+
+## Token-efficiency controls
+
+The system is **idle-first**. It does not activate every logical role in every run. A role is activated only by a decision-relevant trigger, and an idle run returns a short no-action status with the next checkpoint. It does not browse new sources, draft external communication, or enlarge the approval queue.
+
+Deeper work is triggered only by a substantive inbound item, a due measurement checkpoint, an explicit request, an approved action that needs verification, a Medium scheduled-story audit, or the planned Medium editorial window. New discovery stops when the approval queue is full. The deterministic test matrix is in [`evaluations/dry-run-matrix.json`](evaluations/dry-run-matrix.json).

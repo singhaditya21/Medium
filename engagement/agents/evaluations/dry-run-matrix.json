@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "description": "Deterministic, no-browser checks of the agent system's activation, quality, and approval boundaries. These fixtures do not simulate writing quality; they prove the control plane refuses unsafe or wasteful work.",
+  "cases": [
+    {
+      "id": "linkedin-idle-cycle",
+      "platform": "linkedin",
+      "scenario": "idle",
+      "expectedDisposition": "quiet_status",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "linkedin-qualified-inbound",
+      "platform": "linkedin",
+      "scenario": "qualified_candidate",
+      "score": 0.91,
+      "sourceSpecific": true,
+      "duplicate": false,
+      "awaitingInboundReply": false,
+      "exactDraft": true,
+      "expectedDisposition": "approval_brief",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "linkedin-low-score-rejected",
+      "platform": "linkedin",
+      "scenario": "qualified_candidate",
+      "score": 0.69,
+      "sourceSpecific": true,
+      "duplicate": false,
+      "awaitingInboundReply": false,
+      "exactDraft": true,
+      "expectedDisposition": "reject",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "linkedin-duplicate-rejected",
+      "platform": "linkedin",
+      "scenario": "qualified_candidate",
+      "score": 0.94,
+      "sourceSpecific": true,
+      "duplicate": true,
+      "awaitingInboundReply": false,
+      "exactDraft": true,
+      "expectedDisposition": "reject",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "linkedin-awaiting-reply-rejected",
+      "platform": "linkedin",
+      "scenario": "qualified_candidate",
+      "score": 0.94,
+      "sourceSpecific": true,
+      "duplicate": false,
+      "awaitingInboundReply": true,
+      "exactDraft": true,
+      "expectedDisposition": "reject",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "linkedin-capacity-stops-discovery",
+      "platform": "linkedin",
+      "scenario": "discovery_request",
+      "approvalQueueAtCapacity": true,
+      "expectedDisposition": "quiet_status",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "medium-idle-cycle",
+      "platform": "medium",
+      "scenario": "idle",
+      "expectedDisposition": "quiet_status",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "medium-scheduled-release-audit",
+      "platform": "medium",
+      "scenario": "scheduled_story_audit",
+      "expectedDisposition": "audit_only",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "medium-small-retention-sample",
+      "platform": "medium",
+      "scenario": "retention_check",
+      "views": 5,
+      "reads": 0,
+      "hoursSincePublication": 48,
+      "expectedDisposition": "observe_until_checkpoint",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "medium-low-read-ratio-intervention",
+      "platform": "medium",
+      "scenario": "retention_check",
+      "views": 25,
+      "reads": 4,
+      "hoursSincePublication": 168,
+      "expectedDisposition": "approval_brief",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "medium-qualified-response",
+      "platform": "medium",
+      "scenario": "qualified_candidate",
+      "score": 0.84,
+      "sourceSpecific": true,
+      "duplicate": false,
+      "exactDraft": true,
+      "expectedDisposition": "approval_brief",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "medium-excess-primary-sources-rejected",
+      "platform": "medium",
+      "scenario": "story_brief",
+      "primarySources": 6,
+      "expectedDisposition": "reject",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "shared-weak-claim-becomes-evidence-gap",
+      "platform": "shared",
+      "scenario": "claim_review",
+      "primaryEvidence": false,
+      "expectedDisposition": "evidence_gap",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    },
+    {
+      "id": "shared-measured-experiment",
+      "platform": "shared",
+      "scenario": "experiment",
+      "hasMetric": true,
+      "hasDecisionThreshold": true,
+      "hasCheckpoint": true,
+      "expectedDisposition": "experiment_packet",
+      "expectedExternalSources": 0,
+      "expectedExternalAction": false
+    }
+  ]
+}

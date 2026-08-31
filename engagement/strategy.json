@@ -100,6 +100,36 @@
       "requireVisibleVerification": true
     }
   },
+  "cycleEfficiency": {
+    "schemaVersion": 1,
+    "defaultMode": "idle_first",
+    "skipRoleWithoutDecisionRelevantInput": true,
+    "stopAfterQuietStatusWhenNoTrigger": true,
+    "prohibitDraftingWithoutQualifiedSignal": true,
+    "prohibitNewSourceResearchWhenApprovalQueueAtCapacity": true,
+    "activationTriggers": {
+      "linkedin": [
+        "new_substantive_inbound",
+        "due_measurement_checkpoint",
+        "explicit_user_research_request",
+        "approved_action_requires_verification"
+      ],
+      "medium": [
+        "scheduled_story_audit",
+        "new_substantive_inbound",
+        "due_measurement_checkpoint",
+        "planned_editorial_window",
+        "explicit_user_research_request",
+        "approved_action_requires_verification"
+      ]
+    },
+    "quietCycleOutput": {
+      "mustStateNoActionRecommended": true,
+      "mustStateNextCheckpoint": true,
+      "mayInspectNewExternalSources": false,
+      "mayDraftExternalCommunication": false
+    }
+  },
   "linkedinAgentSystem": {
     "schemaVersion": 1,
     "orchestration": "codex_heartbeat",

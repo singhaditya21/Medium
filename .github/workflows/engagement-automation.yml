@@ -31,6 +31,7 @@ jobs:
         run: |
           python scripts/validate_medium_bridge.py --output-dir engagement-review/medium
           python scripts/validate_engagement_automation.py --output-dir engagement-review/validation
+          python scripts/validate_agent_dry_run.py --output engagement-review/agent-dry-run.json
       - name: Generate calendar, queue, and measurement packet
         run: python scripts/generate_engagement_review.py --output-dir engagement-review
       - name: Upload operating packet
