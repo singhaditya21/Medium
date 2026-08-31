@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831093633-comment-posted-2026-08-31-linkedin-comment-sriinivasa-chary-operating-model-decision-rights",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T09:36:33Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T09:36:33Z",
+    "scope": "Approved O1, O2, O3, O4 and O5 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-sriinivasa-chary-operating-model-decision-rights",
+    "targetUrl": "https://www.linkedin.com/posts/rayabandisrinivasa_%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%B3%F0%9D%98%82%F0%9D%98%81%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%B2-%F0%9D%97%BC%F0%9D%97%B3-%F0%9D%97%9A%F0%9D%97%B9%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%A2%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-share-7500117546608807936-NOr1/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publicUrl": "https://www.linkedin.com/posts/rayabandisrinivasa_%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%B3%F0%9D%98%82%F0%9D%98%81%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%B2-%F0%9D%97%BC%F0%9D%97%B3-%F0%9D%97%9A%F0%9D%97%B9%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%A2%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-share-7500117546608807936-NOr1/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publishedTextSha256": "a6893bd74042b608b6bbf1bb31a40c85dc3bf8cd495b108da4c9799de65d97b1",
+    "verifiedAt": "2026-08-31T09:36:33Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp; Sriinivasa Chary (Srini) rendered as a clickable profile mention."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

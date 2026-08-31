@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T08:51:22Z",
+  "updatedAt": "2026-08-31T09:36:34Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -928,6 +928,104 @@
       "responseUrl": "https://www.linkedin.com/pulse/cyber-insurance-industry-just-found-hole-our-ai-security-logan-daley-wslvc/",
       "receiptOperationId": "20260831085122-comment-posted-2026-08-31-linkedin-comment-logan-cyber-insurance-autonomy",
       "postedAt": "2026-08-31T08:51:22Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-gary-williams-constitutional-governance",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/gary-williams-b361b7177_what-happens-when-you-deploy-one-ai-agent-share-7498422894130003968-9Ifa/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "title": "Node compromise versus governing-system compromise",
+      "author": "Gary Williams",
+      "reason": "A high-quality governance-at-scale discussion where the comment adds measurable containment and delegated-authority controls.",
+      "evidence": "Observed 4 days old with 30 reactions and 42 comments; author discusses bounded authority, minimum necessary capability, and separation of governance from agent reasoning.",
+      "draftResponse": "@Gary Williams, the separation of a compromised node from the governing system is the right scaling boundary. I would formalize it with task-bound authority leases, a maximum delegation depth, and an independently verifiable postcondition for each consequential action. At one million agents, the resilience KPI is p95 containment time and the share of compromised nodes whose effective authority can be revoked without changing the governing plane.",
+      "priorityScore": 0.84,
+      "intendedMentions": [
+        "Gary Williams"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/gary-williams-b361b7177_what-happens-when-you-deploy-one-ai-agent-share-7498422894130003968-9Ifa/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "receiptOperationId": "20260831093631-comment-posted-2026-08-31-linkedin-comment-gary-williams-constitutional-governance",
+      "postedAt": "2026-08-31T09:36:31Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-john-hall-autonomous-finance-controls",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/john-hall-b0326820_autonomousenterprise-autonomousfinance-autonomousspend-share-7500118279798247424-AXNr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "title": "Autonomous finance with action-time authority",
+      "author": "John Hall",
+      "reason": "A fresh autonomous-finance discussion where the comment grounds efficiency claims in controls, evidence, and recovery.",
+      "evidence": "Observed as a newly posted SAP finance and spend-management update covering close, treasury, and source-to-pay automation.",
+      "draftResponse": "Congratulations on the new remit, @John Hall. In close, treasury, and source-to-pay, the operating KPI should not be autonomous task volume; it should be the share of consequential actions with action-time authority, a reconcilable receipt, and a tested reversal path. Faster cycles create durable value only when exceptions, reconciliation, and residual loss remain visible to a named owner.",
+      "priorityScore": 0.83,
+      "intendedMentions": [
+        "John Hall"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/john-hall-b0326820_autonomousenterprise-autonomousfinance-autonomousspend-share-7500118279798247424-AXNr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "receiptOperationId": "20260831093632-comment-posted-2026-08-31-linkedin-comment-john-hall-autonomous-finance-controls",
+      "postedAt": "2026-08-31T09:36:32Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-adrienne-craukamp-evidence-independence",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/adriennek-craukamp_agenticai-aigovernance-share-7500118218179575809-Geco/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "title": "Independent evidence for multi-agent governance",
+      "author": "Adrienne Craukamp",
+      "reason": "A fresh multi-agent governance discussion where the comment adds an independent-evidence control without endorsing the post's unverified incident claim.",
+      "evidence": "Observed as a new post about isolation boundaries, tamper-evident logs, and kill switches for multi-agent systems.",
+      "draftResponse": "@Adrienne Craukamp, the key design test is whether evidence is independent of the agent that produced the event. For high-impact multi-agent workflows, I would bind every consequential action to a signed policy/tool version and a verifier-owned receipt, then measure evidence completeness, cross-agent disagreement, and p95 containment time. Tamper-evident logs are not enough if a workload can rewrite the proof used to judge it.",
+      "priorityScore": 0.8,
+      "intendedMentions": [
+        "Adrienne Craukamp"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/adriennek-craukamp_agenticai-aigovernance-share-7500118218179575809-Geco/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "receiptOperationId": "20260831093632-comment-posted-2026-08-31-linkedin-comment-adrienne-craukamp-evidence-independence",
+      "postedAt": "2026-08-31T09:36:32Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-sriinivasa-chary-operating-model-decision-rights",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/rayabandisrinivasa_%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%B3%F0%9D%98%82%F0%9D%98%81%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%B2-%F0%9D%97%BC%F0%9D%97%B3-%F0%9D%97%9A%F0%9D%97%B9%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%A2%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-share-7500117546608807936-NOr1/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "title": "Decision rights in AI-enabled operating models",
+      "author": "Sriinivasa Chary (Srini)",
+      "reason": "A fresh enterprise operating-model discussion where the comment adds decision rights and measurable automation controls.",
+      "evidence": "Observed as a new GCC/GBS operating-model post focused on ownership, governance, capability, and outcome measures.",
+      "draftResponse": "@Sriinivasa Chary (Srini), the move from cost centre to transformation engine needs one more operating dimension: decision rights. For AI-enabled GCC and GBS services, the scoreboard should pair cost-to-serve and cycle time with delegation limits, exception-aging, escalation quality, and the percentage of automated decisions that are reconstructible end to end. That prevents a capability build from becoming an opaque productivity program.",
+      "priorityScore": 0.79,
+      "intendedMentions": [
+        "Sriinivasa Chary (Srini)"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/rayabandisrinivasa_%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%B3%F0%9D%98%82%F0%9D%98%81%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%B2-%F0%9D%97%BC%F0%9D%97%B3-%F0%9D%97%9A%F0%9D%97%B9%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%A2%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-share-7500117546608807936-NOr1/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "receiptOperationId": "20260831093633-comment-posted-2026-08-31-linkedin-comment-sriinivasa-chary-operating-model-decision-rights",
+      "postedAt": "2026-08-31T09:36:33Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-nasscom-ai-banking-control-case",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/finaiconfluence2026-agenticai-bfsi-ugcPost-7500118677372162048-blYM/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "title": "Banking agentic-AI control case",
+      "author": "nasscom ai",
+      "reason": "A fresh BFSI agentic-AI industry discussion where the comment adds a concrete regulated-workflow control model.",
+      "evidence": "Observed as a newly posted FinAI Confluence discussion linking agentic AI, banking, governance, and human judgment.",
+      "draftResponse": "Banking’s agentic-AI value case needs a parallel control case. Alongside cycle-time gains, institutions should measure the percentage of high-impact actions with a named authority, independently verifiable evidence, and a tested reversal path. In a regulated workflow, human judgment is not a reassurance; it needs to be an explicit escalation design with accountable owners.",
+      "priorityScore": 0.73,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/finaiconfluence2026-agenticai-bfsi-ugcPost-7500118677372162048-blYM/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+      "receiptOperationId": "20260831093634-comment-posted-2026-08-31-linkedin-comment-nasscom-ai-banking-control-case",
+      "postedAt": "2026-08-31T09:36:34Z"
     }
   ]
 }

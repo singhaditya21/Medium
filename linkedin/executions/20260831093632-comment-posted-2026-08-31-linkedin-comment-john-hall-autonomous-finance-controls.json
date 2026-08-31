@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831093632-comment-posted-2026-08-31-linkedin-comment-john-hall-autonomous-finance-controls",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T09:36:32Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T09:36:32Z",
+    "scope": "Approved O1, O2, O3, O4 and O5 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-john-hall-autonomous-finance-controls",
+    "targetUrl": "https://www.linkedin.com/posts/john-hall-b0326820_autonomousenterprise-autonomousfinance-autonomousspend-share-7500118279798247424-AXNr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publicUrl": "https://www.linkedin.com/posts/john-hall-b0326820_autonomousenterprise-autonomousfinance-autonomousspend-share-7500118279798247424-AXNr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publishedTextSha256": "d647d0304a60fb56972d5a5d344292ed45d637e952b38a9d236e146d8c7a6129",
+    "verifiedAt": "2026-08-31T09:36:32Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp; John Hall rendered as a clickable profile mention."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

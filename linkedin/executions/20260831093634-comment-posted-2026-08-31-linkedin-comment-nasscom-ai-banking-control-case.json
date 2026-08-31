@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831093634-comment-posted-2026-08-31-linkedin-comment-nasscom-ai-banking-control-case",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T09:36:34Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T09:36:34Z",
+    "scope": "Approved O1, O2, O3, O4 and O5 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-nasscom-ai-banking-control-case",
+    "targetUrl": "https://www.linkedin.com/posts/finaiconfluence2026-agenticai-bfsi-ugcPost-7500118677372162048-blYM/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publicUrl": "https://www.linkedin.com/posts/finaiconfluence2026-agenticai-bfsi-ugcPost-7500118677372162048-blYM/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publishedTextSha256": "ddf13b5d955f2a6097362fe9681a86df80d2c9f9ac28ab1ba6b5cb9507377bd6",
+    "verifiedAt": "2026-08-31T09:36:34Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp; no profile mention was intended for the company post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

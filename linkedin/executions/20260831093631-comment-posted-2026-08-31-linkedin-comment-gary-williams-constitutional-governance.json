@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831093631-comment-posted-2026-08-31-linkedin-comment-gary-williams-constitutional-governance",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T09:36:31Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T09:36:31Z",
+    "scope": "Approved O1, O2, O3, O4 and O5 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-gary-williams-constitutional-governance",
+    "targetUrl": "https://www.linkedin.com/posts/gary-williams-b361b7177_what-happens-when-you-deploy-one-ai-agent-share-7498422894130003968-9Ifa/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publicUrl": "https://www.linkedin.com/posts/gary-williams-b361b7177_what-happens-when-you-deploy-one-ai-agent-share-7498422894130003968-9Ifa/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publishedTextSha256": "476fdc27a3fc92d541726c9da4a5ae4c5f18ad4cc204e9e08eaed9ccea8c627c",
+    "verifiedAt": "2026-08-31T09:36:31Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp; Gary Williams rendered as a clickable profile mention."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

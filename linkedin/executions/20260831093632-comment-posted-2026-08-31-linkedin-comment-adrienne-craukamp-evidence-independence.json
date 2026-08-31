@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831093632-comment-posted-2026-08-31-linkedin-comment-adrienne-craukamp-evidence-independence",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T09:36:32Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T09:36:32Z",
+    "scope": "Approved O1, O2, O3, O4 and O5 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-adrienne-craukamp-evidence-independence",
+    "targetUrl": "https://www.linkedin.com/posts/adriennek-craukamp_agenticai-aigovernance-share-7500118218179575809-Geco/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publicUrl": "https://www.linkedin.com/posts/adriennek-craukamp_agenticai-aigovernance-share-7500118218179575809-Geco/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAPcUKABUejb74-kRQCKkfnaAMBWI-MAQqs",
+    "publishedTextSha256": "3ff6e1f975434f902aa20fe141ab79aa30d9b252d3107a9b4f0405904f44941d",
+    "verifiedAt": "2026-08-31T09:36:32Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp; Adrienne Craukamp rendered as a clickable profile mention."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
