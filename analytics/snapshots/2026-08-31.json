@@ -1,4 +1,6 @@
 {
+  "$schema": "../snapshot.schema.json",
+  "schemaVersion": 1,
   "capturedAt": "2026-08-31T06:18:58Z",
   "captureMethod": "user_initiated_signed_in_medium_ui_read_only",
   "profile": "@singhaditya21_89007",

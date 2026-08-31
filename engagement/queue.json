@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-29T11:30:42Z",
+  "updatedAt": "2026-08-31T06:17:11Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -711,6 +711,113 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499326454422433792/",
       "receiptOperationId": "20260829113042-reply-posted-2026-08-29-linkedin-reply-amit-preference-consent-authority",
       "postedAt": "2026-08-29T11:30:42Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-abhishek-production-failure-semantics",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500045870051078144&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=INAPP&showCommentBox=true",
+      "title": "Production reliability begins after the demo",
+      "author": "Abhishek Bhattacharjee",
+      "reason": "Fresh, source-specific production-AI discussion covering incomplete inputs, duplicate events, API timeouts, system disagreement and high-consequence actions.",
+      "evidence": "Reviewed in the signed-in LinkedIn UI at 09:17 IST: posted about one hour earlier with one reaction and no visible comments; no prior Aditya Singh comment was visible.",
+      "draftResponse": "@Abhishek Bhattacharjee, exactly. A production-readiness gate should test failure semantics, not only happy-path accuracy. I would require 10,000 replayable cases across missing fields, duplicate events, conflicting systems, timeouts and high-consequence actions, then track false-accept rate, duplicate-effect rate, p95 recovery time and the percentage of runs with reconstructable receipts. “Keeps working” should mean bounded failure and verified recovery, not merely higher uptime.",
+      "priorityScore": 0.79,
+      "intendedMentions": [
+        "Abhishek Bhattacharjee"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-samvad-transitive-agent-privilege",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
+      "title": "Securing the full execution graph of an AI agent",
+      "author": "Samvad G",
+      "reason": "Directly advances the account position on transitive authority, trusted execution graphs and blast-radius containment.",
+      "evidence": "Reviewed in the signed-in LinkedIn UI: a 13-hour-old post with three reactions describes 17,000 autonomous actions and the path Agent → Tool → Artifact → Trusted Process → Privilege → Production; no prior Aditya Singh comment was visible.",
+      "draftResponse": "Exactly—the permission model has to close over the entire execution graph. I would calculate effective privilege as direct grants plus reachable actions through tools, artifacts, CI/CD and trusted identities, then test maximum propagation depth, unauthorized state changes per 1,000 runs and mean time to revoke every reachable edge. Sandboxing one process cannot contain a chain whose later nodes still trust its output.",
+      "priorityScore": 0.81,
+      "intendedMentions": [],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-manjeet-goal-authorization-lease",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/manjeetmba_agentic-security-share-7499863377700245504-Mn2n/",
+      "title": "Goal-based agents need budgeted authorization leases",
+      "author": "Manjeet Singh",
+      "reason": "High-fit security discussion about persistent goal pursuit, zero trust for agents and the limits of sandboxes and monitoring.",
+      "evidence": "Reviewed in the signed-in LinkedIn UI: a 13-hour-old post with five reactions and one substantive comment cites a 13-hour compromise and a secret password-sharing channel; no prior Aditya Singh comment was visible.",
+      "draftResponse": "The reported 13-hour compromise is a failure of goal scoping and control latency, not simply a sandbox failure. I would represent every goal as a budgeted authorization lease: permitted action classes, maximum delegation depth, time and spend caps, prohibited resources and hard expiry—then measure privilege-escalation attempts per 1,000 tool calls, containment latency and kill-switch completion p95.",
+      "priorityScore": 0.83,
+      "intendedMentions": [],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-koushik-human-review-slo",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/koushik-lahiri-5a356125_healthcare-doesnt-need-more-ai-pilots-it-share-7499861870812717056-ZvJu/",
+      "title": "Healthcare AI production controls and reviewer queues",
+      "author": "Koushik Lahiri",
+      "reason": "Strong overlap with bounded autonomy, evidence-before-action, human intervention and measurable production reliability in healthcare.",
+      "evidence": "Reviewed in the signed-in LinkedIn UI: a 14-hour-old post proposes five production controls and asks whether the system can repeatedly act safely and prove what happened; no prior Aditya Singh comment was visible.",
+      "draftResponse": "Strong five-control baseline. For prior authorization, I would add high-impact exception recall and a reviewer-queue SLO: percentage of unsafe or ambiguous cases routed before consequence, p95 approval latency, false-accept rate and reversal time. Evidence-before-action works only if the human queue can keep pace with arrival volume.",
+      "priorityScore": 0.76,
+      "intendedMentions": [],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-victor-autonomous-finance-trust-gap",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/viktor-yaromin_the-state-of-autonomous-finance-2026-ugcPost-7499644052632670209-VX7q/",
+      "title": "The 53-point trust gap in autonomous finance",
+      "author": "Victor Yaromin",
+      "reason": "The strongest current fit with autonomous finance, agent authority, auditability and independently reconstructable consequential actions.",
+      "evidence": "Reviewed in the signed-in LinkedIn UI: a 15-hour-old post with 31 reactions, four comments and nine reposts reports 71% buyer demand for agentic capability versus 18% bank confidence in passing an independent controls audit.",
+      "draftResponse": "The 71% buyer-demand figure versus 18% audit confidence creates a 53-point trust gap. Banks can close it action by action: principal and agent identity, leased authority, policy version, evidence, approval and settlement or reversal receipt. The primary KPI should be the percentage of consequential actions independently reconstructable within a defined SLA.",
+      "priorityScore": 0.89,
+      "intendedMentions": [],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-08-31-medium-response-ritvik-proof-of-conduct",
+      "platform": "medium",
+      "action": "response",
+      "direction": "outbound",
+      "targetUrl": "https://medium.com/ai-pace/agentic-ai-governance-from-task-performance-to-behavioural-science-ce82d4be2689",
+      "title": "Agentic AI Governance: From Task Performance to Behavioural Science",
+      "author": "Ritvik Shyam",
+      "reason": "Adds an action-authority dimension and a measurable longitudinal evaluation matrix to the article’s proof-of-conduct framework.",
+      "evidence": "Full article reviewed in the signed-in Medium UI. Published June 5, 2026 with two visible responses; it connects long-horizon behavioral divergence, heterogeneous agents, handoff integrity and enterprise incident management. No response by Aditya Singh was visible.",
+      "draftResponse": "The move from proof-of-task to proof-of-conduct is important. I would make it operational with a longitudinal evaluation matrix: behavioral drift by run horizon, downstream-error propagation across handoffs, override quality under time pressure and recovery after contradictory context. One missing dimension is authority: identical behavior becomes materially different when one agent can only recommend and another can change business state. Every conduct metric should therefore be segmented by action class and reversibility.",
+      "priorityScore": 0.74,
+      "intendedMentions": [],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-08-31-medium-response-srinivas-evidence-threshold",
+      "platform": "medium",
+      "action": "response",
+      "direction": "outbound",
+      "targetUrl": "https://medium.com/@srinib100/runtime-ai-governance-a-practitioners-playbook-for-governing-agentic-ai-systems-ea12fbeba674",
+      "title": "Runtime AI Governance: A Practitioner’s Playbook for Governing Agentic AI Systems",
+      "author": "Srinivas Bommena",
+      "reason": "Extends the permission-versus-intent argument with evidence freshness, false-allow measurement and outcome-verification receipts.",
+      "evidence": "Full article reviewed in the signed-in Medium UI. Published June 13, 2026 with four visible responses; it covers identity, intent, enforcement, oversight, accountability and governance decision records. No response by Aditya Singh was visible.",
+      "draftResponse": "The distinction between permission and intent is the center of runtime governance. I would add a failure-mode test in which the agent has valid permission, a correct identity and a plausible purpose, but the supporting evidence is stale or insufficient. The policy gate then needs an evidence threshold and an outcome-verification receipt, measured through evidence-freshness coverage, false-allow rate, reviewer-escalation p95 and the percentage of consequential actions reconstructed end to end.",
+      "priorityScore": 0.76,
+      "intendedMentions": [],
+      "state": "proposed"
     }
   ]
 }

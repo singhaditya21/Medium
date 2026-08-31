@@ -1,0 +1,23 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831061858-stats-captured-2026-08-31",
+  "action": "stats_captured",
+  "recordedAt": "2026-08-31T06:18:58Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T03:47:00Z",
+    "scope": "Run the Medium and LinkedIn engagement heartbeat read-only audit and record validated preparation changes; do not perform public actions without exact action-time confirmation."
+  },
+  "result": {
+    "status": "stats_captured",
+    "snapshotPath": "analytics/snapshots/2026-08-31.json",
+    "verifiedAt": "2026-08-31T06:18:58Z",
+    "verification": "Signed-in Medium Stats showed August totals of 66 presentations, 37 views and 12 reads; Audience showed 3 lifetime followers and 2 email subscribers. Story lifetime checkpoints were Human Approval 5/0/0, Action Receipt 5/5/0 and Memory 3/0/0. The Stories view showed five scheduled stories, including Your Multi-Agent System Is a Distributed System for August 31 at 08:30 UTC (14:00 IST)."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}
