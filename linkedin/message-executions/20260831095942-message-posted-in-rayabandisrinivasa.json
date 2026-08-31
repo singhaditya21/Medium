@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831095942-message-posted-in-rayabandisrinivasa",
+  "action": "message_posted",
+  "recordedAt": "2026-08-31T09:59:42Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T09:59:42Z",
+    "scope": "User approved accepting Sriinivasa Chary (Srini)’s invitation and sending the exact proposed opening message."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/rayabandisrinivasa/",
+    "messageTextSha256": "74d4ca2bdf33a7d7ca53ded9bd8ac416b8176731ab2e385c55c9e2b9490957e2",
+    "verifiedAt": "2026-08-31T09:59:42Z",
+    "verification": "The signed-in LinkedIn conversation showed the exact message under Aditya Singh with the visible sent timestamp 3:29 PM, and the invitation page confirmed Sriinivasa is now a connection."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
