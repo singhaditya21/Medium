@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831065741-comment-posted-samvad-transitive-agent-privilege",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T06:57:41Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T06:50:00Z",
+    "scope": "Approved D1 and D2, L1, L2, L4, L16, L17, M1 and M2 exactly as written and before that go ahead and check with notifications."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-samvad-transitive-agent-privilege",
+    "targetUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
+    "publicUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
+    "publishedTextSha256": "42b0d908953a95ba01966b403d2d66d82bf8da45e78ed1a89e161e0f08805575",
+    "verifiedAt": "2026-08-31T06:57:41Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh on Samvad G’s post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831065743-comment-posted-koushik-human-review-slo",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T06:57:43Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T06:50:00Z",
+    "scope": "Approved D1 and D2, L1, L2, L4, L16, L17, M1 and M2 exactly as written and before that go ahead and check with notifications."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-koushik-human-review-slo",
+    "targetUrl": "https://www.linkedin.com/posts/koushik-lahiri-5a356125_healthcare-doesnt-need-more-ai-pilots-it-share-7499861870812717056-ZvJu/",
+    "publicUrl": "https://www.linkedin.com/posts/koushik-lahiri-5a356125_healthcare-doesnt-need-more-ai-pilots-it-share-7499861870812717056-ZvJu/",
+    "publishedTextSha256": "1c17b97f8891029f75717e060f7080be3aa9401a5acb439acbc6fddc29e818ac",
+    "verifiedAt": "2026-08-31T06:57:43Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh on Koushik Lahiri’s post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

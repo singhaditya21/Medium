@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831065742-comment-posted-manjeet-goal-authorization-lease",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T06:57:42Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T06:50:00Z",
+    "scope": "Approved D1 and D2, L1, L2, L4, L16, L17, M1 and M2 exactly as written and before that go ahead and check with notifications."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-manjeet-goal-authorization-lease",
+    "targetUrl": "https://www.linkedin.com/posts/manjeetmba_agentic-security-share-7499863377700245504-Mn2n/",
+    "publicUrl": "https://www.linkedin.com/posts/manjeetmba_agentic-security-share-7499863377700245504-Mn2n/",
+    "publishedTextSha256": "3835493fe435e8e12525a6bf91a69957fada94502e6036672abe0bb7323a99b8",
+    "verifiedAt": "2026-08-31T06:57:42Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh on Manjeet Singh’s post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T06:17:11Z",
+  "updatedAt": "2026-08-31T06:59:54Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -727,7 +727,7 @@
       "intendedMentions": [
         "Abhishek Bhattacharjee"
       ],
-      "state": "proposed"
+      "state": "skipped"
     },
     {
       "id": "2026-08-31-linkedin-comment-samvad-transitive-agent-privilege",
@@ -742,7 +742,10 @@
       "draftResponse": "Exactly—the permission model has to close over the entire execution graph. I would calculate effective privilege as direct grants plus reachable actions through tools, artifacts, CI/CD and trusted identities, then test maximum propagation depth, unauthorized state changes per 1,000 runs and mean time to revoke every reachable edge. Sandboxing one process cannot contain a chain whose later nodes still trust its output.",
       "priorityScore": 0.81,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
+      "receiptOperationId": "20260831065741-comment-posted-samvad-transitive-agent-privilege",
+      "postedAt": "2026-08-31T06:57:41Z"
     },
     {
       "id": "2026-08-31-linkedin-comment-manjeet-goal-authorization-lease",
@@ -757,7 +760,10 @@
       "draftResponse": "The reported 13-hour compromise is a failure of goal scoping and control latency, not simply a sandbox failure. I would represent every goal as a budgeted authorization lease: permitted action classes, maximum delegation depth, time and spend caps, prohibited resources and hard expiry—then measure privilege-escalation attempts per 1,000 tool calls, containment latency and kill-switch completion p95.",
       "priorityScore": 0.83,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/manjeetmba_agentic-security-share-7499863377700245504-Mn2n/",
+      "receiptOperationId": "20260831065742-comment-posted-manjeet-goal-authorization-lease",
+      "postedAt": "2026-08-31T06:57:42Z"
     },
     {
       "id": "2026-08-31-linkedin-comment-koushik-human-review-slo",
@@ -772,7 +778,10 @@
       "draftResponse": "Strong five-control baseline. For prior authorization, I would add high-impact exception recall and a reviewer-queue SLO: percentage of unsafe or ambiguous cases routed before consequence, p95 approval latency, false-accept rate and reversal time. Evidence-before-action works only if the human queue can keep pace with arrival volume.",
       "priorityScore": 0.76,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/koushik-lahiri-5a356125_healthcare-doesnt-need-more-ai-pilots-it-share-7499861870812717056-ZvJu/",
+      "receiptOperationId": "20260831065743-comment-posted-koushik-human-review-slo",
+      "postedAt": "2026-08-31T06:57:43Z"
     },
     {
       "id": "2026-08-31-linkedin-comment-victor-autonomous-finance-trust-gap",
@@ -787,7 +796,10 @@
       "draftResponse": "The 71% buyer-demand figure versus 18% audit confidence creates a 53-point trust gap. Banks can close it action by action: principal and agent identity, leased authority, policy version, evidence, approval and settlement or reversal receipt. The primary KPI should be the percentage of consequential actions independently reconstructable within a defined SLA.",
       "priorityScore": 0.89,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/viktor-yaromin_the-state-of-autonomous-finance-2026-ugcPost-7499644052632670209-VX7q/",
+      "receiptOperationId": "20260831065744-comment-posted-victor-autonomous-finance-trust-gap",
+      "postedAt": "2026-08-31T06:57:44Z"
     },
     {
       "id": "2026-08-31-medium-response-ritvik-proof-of-conduct",
@@ -802,7 +814,7 @@
       "draftResponse": "The move from proof-of-task to proof-of-conduct is important. I would make it operational with a longitudinal evaluation matrix: behavioral drift by run horizon, downstream-error propagation across handoffs, override quality under time pressure and recovery after contradictory context. One missing dimension is authority: identical behavior becomes materially different when one agent can only recommend and another can change business state. Every conduct metric should therefore be segmented by action class and reversibility.",
       "priorityScore": 0.74,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "ready_for_confirmation"
     },
     {
       "id": "2026-08-31-medium-response-srinivas-evidence-threshold",
@@ -817,7 +829,25 @@
       "draftResponse": "The distinction between permission and intent is the center of runtime governance. I would add a failure-mode test in which the agent has valid permission, a correct identity and a plausible purpose, but the supporting evidence is stale or insufficient. The policy gate then needs an evidence threshold and an outcome-verification receipt, measured through evidence-freshness coverage, false-allow rate, reviewer-escalation p95 and the percentage of consequential actions reconstructed end to end.",
       "priorityScore": 0.76,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-robin-benign-intent-adversarial-chain",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499805761041133568/",
+      "title": "Benign intent can still produce an adversarial cause chain",
+      "author": "Robin Jose",
+      "reason": "Directly connects a real-world gym incident to consequence-based controls, transitive authority and credential-revocation metrics.",
+      "evidence": "Revalidated in the signed-in LinkedIn UI immediately before posting: the post described a Claude-powered agent hacking a gym to satisfy a benign morning-class goal, showed six comments, and had no prior Aditya Singh comment.",
+      "draftResponse": "The gym example shows that user intent can be benign while the resulting cause chain is adversarial. Controls should score action consequence and transitive authority, not user sentiment. I would measure prohibited-path attempts per 1,000 runs, maximum privilege reachability, policy-denial accuracy and time to revoke every dependent credential.",
+      "priorityScore": 0.82,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499805761041133568/",
+      "receiptOperationId": "20260831065745-comment-posted-robin-benign-intent-adversarial-chain",
+      "postedAt": "2026-08-31T06:57:45Z"
     }
   ]
 }
