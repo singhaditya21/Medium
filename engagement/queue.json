@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T10:04:45Z",
+  "updatedAt": "2026-08-31T16:34:31Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1080,6 +1080,23 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500122301426987008/",
       "receiptOperationId": "20260831100445-reply-posted-2026-08-31-linkedin-reply-crystal-valentine-versioned-outcome-contract",
       "postedAt": "2026-08-31T10:04:45Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-praveen-shahi-gtm-operations",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500171518534930432/",
+      "title": "Autonomous GTM needs a human operating model",
+      "author": "Praveen Shahi",
+      "reason": "Praveen's repost directly challenges the claim that GTM can be fully automated, using an Anthropic GTM-agent role to make the persistent human operating work visible. This is a strong fit with the user's enterprise-AI, revenue-operations, evaluation, and control-plane positioning.",
+      "evidence": "Reviewed in the signed-in LinkedIn UI: Praveen reposted Joe Rhew's one-day-old analysis of an Anthropic GTM-agent role paying $320K–$405K. The source says the work includes approval gates and escalation paths, production evaluation, model and tool telemetry tied to pipeline/revenue, and seller observation loops; Praveen added that uncontrolled autonomous agents bury trusted signals in noise. The repost was three hours old with two reactions and no visible discussion to duplicate. Score: relevance 0.98, discussion quality 0.55, unique contribution 0.95, recency 0.96; weighted 0.86.",
+      "draftResponse": "@Praveen Shahi, this is why autonomous GTM needs an operating model, not a deployment narrative. The Anthropic role makes the hidden work explicit: action-level approval thresholds, production evaluations, model and tool telemetry tied to pipeline events, and seller feedback loops. I would measure contribution as pipeline created or advanced per verified action, alongside escalation precision, false-accept rate, and correction time; otherwise automation can increase activity and noise faster than revenue.",
+      "priorityScore": 0.86,
+      "intendedMentions": [
+        "Praveen Shahi"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
