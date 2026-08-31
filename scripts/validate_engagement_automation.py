@@ -28,6 +28,7 @@ MESSAGE_EXECUTIONS_DIR = ROOT / "linkedin" / "message-executions"
 LINKEDIN_AGENT_ROOT = ROOT / "linkedin" / "agents"
 LINKEDIN_AGENT_REQUIRED_FILES = (
     "README.md",
+    "roles.md",
     "policy.md",
     "runbooks/two-hourly-cycle.md",
     "prompts/research.md",
@@ -37,11 +38,17 @@ LINKEDIN_AGENT_REQUIRED_FILES = (
 MEDIUM_AGENT_ROOT = ROOT / "medium" / "agents"
 MEDIUM_AGENT_REQUIRED_FILES = (
     "README.md",
+    "roles.md",
     "policy.md",
     "runbooks/overnight-cycle.md",
     "prompts/story-research.md",
     "prompts/audit-and-conversation.md",
     "evaluations/quality-gates.md",
+)
+CROSS_PLATFORM_AGENT_ROOT = ROOT / "engagement" / "agents"
+CROSS_PLATFORM_AGENT_REQUIRED_FILES = (
+    "README.md",
+    "policy.md",
 )
 ACTION_TO_CANDIDATE = {
     "comment_posted": "comment",
@@ -115,14 +122,48 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
     if strategy.get("automationPolicy") != expected_policy:
         errors.append("automationPolicy must preserve the signed-in confirmation and credential boundary")
 
+    cross_platform_system = strategy.get("crossPlatformAgentSystem", {})
+    expected_cross_platform_roles = [
+        "content_intelligence_graph",
+        "evidence_supply_chain",
+        "experiment_manager",
+        "technical_art_director",
+        "portfolio_conversion",
+    ]
+    if cross_platform_system.get("schemaVersion") != 1:
+        errors.append("cross-platform agent system schemaVersion must be 1")
+    if cross_platform_system.get("orchestration") != "platform_cycle_hooks" or cross_platform_system.get("usesOpenAIAPI") is not False:
+        errors.append("cross-platform agents must run inside platform cycles without an OpenAI API")
+    if cross_platform_system.get("executionMode") != "research_and_prepare_only" or cross_platform_system.get("hasIndependentSchedule") is not False:
+        errors.append("cross-platform agents must remain research-only and cannot create a third schedule")
+    if cross_platform_system.get("roles") != expected_cross_platform_roles:
+        errors.append("cross-platform agent roles do not match the approved five-role design")
+    expected_cross_platform_policy = {
+        "runsInsideExistingPlatformCycles": True,
+        "mayCreateAThirdSchedule": False,
+        "mayTakePublicActions": False,
+        "requireExactUserApproval": True,
+        "requireVisibleVerification": True,
+    }
+    if cross_platform_system.get("executionPolicy") != expected_cross_platform_policy:
+        errors.append("cross-platform agents must preserve the approval and no-new-schedule boundary")
+    for relative_path in CROSS_PLATFORM_AGENT_REQUIRED_FILES:
+        if not (CROSS_PLATFORM_AGENT_ROOT / relative_path).is_file():
+            errors.append(f"cross-platform agent documentation is missing {relative_path}")
+
     agent_system = strategy.get("linkedinAgentSystem", {})
     expected_roles = [
         "signal_triage",
         "relationship_context",
+        "relationship_allocator",
+        "network_adjacency_mapper",
         "opportunity_research",
+        "conversation_quality_verifier",
         "comment_and_reply_drafting",
         "dm_drafting",
+        "post_format_strategist",
         "post_drafting",
+        "reputation_risk_editor",
         "performance_analysis",
         "approval_and_receipts",
     ]
@@ -132,8 +173,10 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
         errors.append("LinkedIn agent system must use Codex heartbeat without an OpenAI API")
     if agent_system.get("runIntervalHours") != 2 or agent_system.get("executionMode") != "research_and_prepare_only":
         errors.append("LinkedIn agent system must run every two hours in research-and-prepare mode")
+    if agent_system.get("scheduledHoursIST") != [22, 0, 2, 4, 6]:
+        errors.append("LinkedIn agent system must run at 10 PM, 12 AM, 2 AM, 4 AM, and 6 AM IST")
     if agent_system.get("roles") != expected_roles:
-        errors.append("LinkedIn agent system roles do not match the approved eight-role design")
+        errors.append("LinkedIn agent system roles do not match the approved thirteen-role design")
     research_targets = agent_system.get("researchTargetsPerRollingDay", {})
     if research_targets != {"commentOpportunities": 50, "dmProspects": 50}:
         errors.append("LinkedIn agent rolling-day research targets must remain 50 comments and 50 DM prospects")
@@ -169,6 +212,7 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
         "story_architecture_and_visual_planning",
         "editorial_claims_and_policy_review",
         "performance_and_retention_audit",
+        "read_through_engineering",
         "distribution_and_publication_fit",
         "conversation_research_and_response_drafting",
         "growth_experiment_planning",
@@ -183,7 +227,7 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
     if medium_agent_system.get("scheduledHoursIST") != [23, 1, 3, 5, 7]:
         errors.append("Medium agent system must run at 11 PM, 1 AM, 3 AM, 5 AM, and 7 AM IST")
     if medium_agent_system.get("roles") != expected_medium_roles:
-        errors.append("Medium agent system roles do not match the approved nine-role design")
+        errors.append("Medium agent system roles do not match the approved eleven-role design")
     expected_medium_limits = {
         "maximumOwnedStoryAudits": 3,
         "requireScheduledStoryAuditEveryCycle": True,

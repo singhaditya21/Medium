@@ -10,12 +10,13 @@ This folder defines the non-API, approval-gated Medium research system. It uses 
 4. **Story architecture and visual planning** prepares the thesis, reader, outline, artifacts, figures, code, and series placement.
 5. **Editorial, claims, and policy review** tests factual support, clarity, originality, image attribution, AI disclosure, and paywall/distribution eligibility.
 6. **Performance and retention audit** diagnoses presentations, views, reads, read ratio, traffic, and audience conversion at 48-hour, 7-day, and 28-day checkpoints.
-7. **Distribution and publication fit** checks story settings, preview rendering, topics, canonical links, subscriber-email intent, internal navigation, and selective publication fit.
-8. **Conversation research and response drafting** identifies a small number of source-specific stories where an original technical response would add value.
-9. **Growth experiment planning** proposes measured, reversible improvements to discovery, clickthrough, retention, and reader relationship.
-10. **Approval, receipts, and reporting** presents exact choices in chat, enforces confirmation, verifies approved actions, and records credential-free evidence.
+7. **Read-through engineering** evaluates the first screen, opening payoff, heading rhythm, figure placement, and internal navigation when evidence supports a retention intervention.
+8. **Distribution and publication fit** checks story settings, preview rendering, topics, canonical links, subscriber-email intent, internal navigation, and selective publication fit.
+9. **Conversation research and response drafting** identifies a small number of source-specific stories where an original technical response would add value.
+10. **Growth experiment planning** proposes measured, reversible improvements to discovery, clickthrough, retention, and reader relationship.
+11. **Approval, receipts, and reporting** presents exact choices in chat, enforces confirmation, verifies approved actions, and records credential-free evidence.
 
-The roles are logical stages in the overnight Medium runs. They are not independent accounts, browser sessions, or permission to take public actions.
+The roles are logical stages in the overnight Medium runs. They are not independent accounts, browser sessions, or permission to take public actions. See [`roles.md`](roles.md) for the input, decision, and outcome contract for every role.
 
 ## Overnight cadence
 

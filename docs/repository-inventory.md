@@ -1,6 +1,6 @@
 # Repository inventory and categorization
 
-Snapshot: 31 August 2026. This inventory covers the 450 tracked files in this repository. Generated working directories are listed separately because they are deliberately ignored by Git.
+Snapshot: 31 August 2026. This inventory covers the 454 tracked files in this repository. Generated working directories are listed separately because they are deliberately ignored by Git.
 
 ## 1. Root project and public-site metadata
 
@@ -93,7 +93,7 @@ Suggested category: **measurement evidence**. New two-hourly agent summaries may
 
 ## 7. Engagement control plane
 
-`engagement/` contains seven policy and queue files:
+`engagement/` contains seven policy and queue files plus the shared agent workspace:
 
 - `strategy.json`, `queue.json`, `queue.schema.json`
 - `linkedin-relationship-watchlist.json`
@@ -101,6 +101,16 @@ Suggested category: **measurement evidence**. New two-hourly agent summaries may
 - `README.md`
 
 Suggested category: **shared engagement state**. This is the canonical location for scoring, approval state, candidate priority, duplicate prevention, and relationship timing. Future agents must read it before creating a draft and must not duplicate it in a private parallel queue.
+
+The shared, cross-platform agent workspace is under `engagement/agents/`:
+
+```text
+engagement/agents/
+  README.md          # five shared research and review roles
+  policy.md          # no-new-schedule, approval, privacy, and evidence boundaries
+```
+
+These logical roles run only as hooks inside the existing LinkedIn and Medium schedules. They have no browser identity, independent schedule, or authority to act publicly.
 
 ## 8. LinkedIn evidence and agent workspace
 
@@ -118,6 +128,7 @@ The future non-API agent workspace belongs at `linkedin/agents/`:
 ```text
 linkedin/agents/
   README.md          # agent roles and orchestration contract
+  roles.md           # role-level input, decision, and outcome contracts
   policy.md          # approval, privacy, anti-spam, and quality limits
   prompts/           # task-specific drafting instructions
   runbooks/          # two-hourly research and morning approval process
@@ -142,6 +153,7 @@ The non-API Medium agent workspace is under `medium/agents/`:
 ```text
 medium/agents/
   README.md          # Medium roles and state ownership
+  roles.md           # role-level input, decision, and outcome contracts
   policy.md          # AI disclosure, anti-spam, approval, and privacy limits
   prompts/           # story-research and audit/conversation instructions
   runbooks/          # 11 PM–7 AM IST overnight cycle

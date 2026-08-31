@@ -69,19 +69,56 @@
     "requireVisibleResultVerification": true,
     "storeCredentialsOrBrowserState": false
   },
+  "crossPlatformAgentSystem": {
+    "schemaVersion": 1,
+    "orchestration": "platform_cycle_hooks",
+    "usesOpenAIAPI": false,
+    "executionMode": "research_and_prepare_only",
+    "hasIndependentSchedule": false,
+    "roles": [
+      "content_intelligence_graph",
+      "evidence_supply_chain",
+      "experiment_manager",
+      "technical_art_director",
+      "portfolio_conversion"
+    ],
+    "inputs": [
+      "engagement/strategy.json",
+      "engagement/queue.json",
+      "analytics/",
+      "stories/",
+      "data/stories.json",
+      "medium/releases/",
+      "medium/executions/",
+      "linkedin/executions/"
+    ],
+    "executionPolicy": {
+      "runsInsideExistingPlatformCycles": true,
+      "mayCreateAThirdSchedule": false,
+      "mayTakePublicActions": false,
+      "requireExactUserApproval": true,
+      "requireVisibleVerification": true
+    }
+  },
   "linkedinAgentSystem": {
     "schemaVersion": 1,
     "orchestration": "codex_heartbeat",
     "usesOpenAIAPI": false,
     "runIntervalHours": 2,
+    "scheduledHoursIST": [22, 0, 2, 4, 6],
     "executionMode": "research_and_prepare_only",
     "roles": [
       "signal_triage",
       "relationship_context",
+      "relationship_allocator",
+      "network_adjacency_mapper",
       "opportunity_research",
+      "conversation_quality_verifier",
       "comment_and_reply_drafting",
       "dm_drafting",
+      "post_format_strategist",
       "post_drafting",
+      "reputation_risk_editor",
       "performance_analysis",
       "approval_and_receipts"
     ],
@@ -126,6 +163,7 @@
       "story_architecture_and_visual_planning",
       "editorial_claims_and_policy_review",
       "performance_and_retention_audit",
+      "read_through_engineering",
       "distribution_and_publication_fit",
       "conversation_research_and_response_drafting",
       "growth_experiment_planning",
