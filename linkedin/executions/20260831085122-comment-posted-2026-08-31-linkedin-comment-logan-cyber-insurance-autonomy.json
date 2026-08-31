@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831085122-comment-posted-2026-08-31-linkedin-comment-logan-cyber-insurance-autonomy",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T08:51:22Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T08:51:22Z",
+    "scope": "Approved N1, L1, L2 and L3 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-logan-cyber-insurance-autonomy",
+    "targetUrl": "https://www.linkedin.com/pulse/cyber-insurance-industry-just-found-hole-our-ai-security-logan-daley-wslvc/",
+    "publicUrl": "https://www.linkedin.com/pulse/cyber-insurance-industry-just-found-hole-our-ai-security-logan-daley-wslvc/",
+    "publishedTextSha256": "a64e6cb1a9b7ee723e399ce4c2b9249403c6426edaed758814b9ed0b4a9cdad3",
+    "verifiedAt": "2026-08-31T08:51:22Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp. LinkedIn did not expose a matching mention picker for Logan Daley in this root-comment composer, so the approved @Logan Daley text rendered as plain text rather than a profile link."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

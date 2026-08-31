@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831084734-comment-posted-2026-08-31-linkedin-comment-crystal-ai-economics",
+  "action": "comment_posted",
+  "recordedAt": "2026-08-31T08:47:34Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T08:47:34Z",
+    "scope": "Approved N1, L1, L2 and L3 exactly as written"
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-crystal-ai-economics",
+    "targetUrl": "https://www.linkedin.com/posts/crystalsvalentine_aitransformation-aistrategy-agenticai-activity-7499903730197364737-sgCm",
+    "publicUrl": "https://www.linkedin.com/posts/crystalsvalentine_aitransformation-aistrategy-agenticai-activity-7499903730197364737-sgCm",
+    "publishedTextSha256": "809e6d3e5c4ef2956d840c7c792dc97ce2a16fc27e426fd17398a627154eb16b",
+    "verifiedAt": "2026-08-31T08:47:34Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp. LinkedIn did not expose a matching mention picker for Crystal Valentine in this root-comment composer, so the approved @Crystal Valentine text rendered as plain text rather than a profile link."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

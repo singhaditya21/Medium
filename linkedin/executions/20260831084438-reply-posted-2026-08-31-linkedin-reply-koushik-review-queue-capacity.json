@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831084438-reply-posted-2026-08-31-linkedin-reply-koushik-review-queue-capacity",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-31T08:44:38Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T08:44:38Z",
+    "scope": "Approved N1, L1, L2 and L3 exactly as written"
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-31-linkedin-reply-koushik-review-queue-capacity",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500083764333723648&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7499861873891328000%2C7500082958381502464%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500082958381502464%2Curn%3Ali%3Aactivity%3A7499861873891328000%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7499861873891328000%2C7500083716334075905%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500083716334075905%2Curn%3Ali%3Aactivity%3A7499861873891328000%29",
+    "publicUrl": "https://www.linkedin.com/posts/koushik-lahiri-5a356125_healthcare-doesnt-need-more-ai-pilots-it-share-7499861870812717056-ZvJu/",
+    "publishedTextSha256": "f2b6e19c5fe29dd6ac279a84016edf942ec99c657ac0a295c354c4205eb42195",
+    "verifiedAt": "2026-08-31T08:44:38Z",
+    "verification": "The signed-in LinkedIn UI rendered the approved reply under Aditya Singh with a clickable Koushik Lahiri mention and a current timestamp."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

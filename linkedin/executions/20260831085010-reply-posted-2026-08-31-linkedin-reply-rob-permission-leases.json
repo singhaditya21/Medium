@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831085010-reply-posted-2026-08-31-linkedin-reply-rob-permission-leases",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-31T08:50:10Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T08:50:10Z",
+    "scope": "Approved N1, L1, L2 and L3 exactly as written"
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-31-linkedin-reply-rob-permission-leases",
+    "targetUrl": "https://www.linkedin.com/posts/robgonda_two-weeks-ago-xai-launched-grok-bot-always-on-activity-7498710926460751872-vdKD",
+    "publicUrl": "https://www.linkedin.com/posts/robgonda_two-weeks-ago-xai-launched-grok-bot-always-on-activity-7498710926460751872-vdKD",
+    "publishedTextSha256": "b070e3e4a219d9b3c264d426f10ad729849cb8c0a3e025852c02b2f76990319a",
+    "verifiedAt": "2026-08-31T08:50:10Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved reply under Aditya Singh, nested under Rob Gonda’s comment, with a current timestamp. LinkedIn did not retain the native mention after text entry in this composer, so the approved @Rob Gonda text rendered as plain text rather than a profile link."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

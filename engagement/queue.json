@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T06:59:54Z",
+  "updatedAt": "2026-08-31T08:51:22Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -848,6 +848,86 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7499805761041133568/",
       "receiptOperationId": "20260831065745-comment-posted-robin-benign-intent-adversarial-chain",
       "postedAt": "2026-08-31T06:57:45Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-reply-koushik-review-queue-capacity",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500083764333723648&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7499861873891328000%2C7500082958381502464%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500082958381502464%2Curn%3Ali%3Aactivity%3A7499861873891328000%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7499861873891328000%2C7500083716334075905%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500083716334075905%2Curn%3Ali%3Aactivity%3A7499861873891328000%29",
+      "title": "Healthcare AI review-queue capacity",
+      "author": "Koushik Lahiri",
+      "reason": "Direct author reply on the approved healthcare-AI control thread calls for a concrete operating model for exception capacity and review SLOs.",
+      "evidence": "Revalidated in the signed-in LinkedIn UI on August 31: Koushik replied directly to Aditya Singh’s approved comment and no later Aditya reply was visible.",
+      "draftResponse": "@Koushik Lahiri, agreed. The review system has to be sized as a control surface, not a staffing afterthought. At 100,000 actions/month, a 1% escalation rate creates 1,000 cases; at eight minutes each, that is roughly 133 reviewer hours before peaks and rework. Admission control should use arrival rate, service time and consequence tier, then fail closed or degrade to recommendation-only when utilisation breaches the queue SLO.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Koushik Lahiri"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/koushik-lahiri-5a356125_healthcare-doesnt-need-more-ai-pilots-it-share-7499861870812717056-ZvJu/",
+      "receiptOperationId": "20260831084438-reply-posted-2026-08-31-linkedin-reply-koushik-review-queue-capacity",
+      "postedAt": "2026-08-31T08:44:38Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-crystal-ai-economics",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/crystalsvalentine_aitransformation-aistrategy-agenticai-activity-7499903730197364737-sgCm",
+      "title": "AI economics and operating-model cost",
+      "author": "Crystal Valentine",
+      "reason": "Fresh enterprise-AI economics discussion where quality-adjusted cost per verified outcome adds a specific operational control perspective.",
+      "evidence": "Revalidated in the signed-in LinkedIn UI on August 31: 12-hour-old post with 18 reactions and four comments; no visible Aditya Singh comment was present.",
+      "draftResponse": "@Crystal Valentine, exactly. The relevant unit is not cost per token or hours saved; it is cost per verified business outcome. I would model inference, retrieval, tool calls, human review, exception handling, rework, observability and recovery, then compare quality-adjusted cost and cycle time with the human baseline. An agent can reduce labor minutes while increasing total cost through retries, escalation and error recovery.",
+      "priorityScore": 0.86,
+      "intendedMentions": [
+        "Crystal Valentine"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/crystalsvalentine_aitransformation-aistrategy-agenticai-activity-7499903730197364737-sgCm",
+      "receiptOperationId": "20260831084734-comment-posted-2026-08-31-linkedin-comment-crystal-ai-economics",
+      "postedAt": "2026-08-31T08:47:34Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-reply-rob-permission-leases",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/robgonda_two-weeks-ago-xai-launched-grok-bot-always-on-activity-7498710926460751872-vdKD",
+      "title": "Learned skills require task-bound permission leases",
+      "author": "Rob Gonda",
+      "reason": "Direct author reply on a learned-agent skill thread where granular permissions need to become task-bound, outcome-limited authorization leases.",
+      "evidence": "Revalidated in the signed-in LinkedIn UI on August 31: the 3-day-old post had 17 reactions and eight comments; Rob’s visible reply agreed on granular permissions, and no Aditya Singh reply was visible.",
+      "draftResponse": "@Rob Gonda, agreed. Granular permissions reduce blast radius only when they are short-lived and bound to the actual task and effect. A token that can be reused across a learned skill is still standing authority. I would make leases single-use or count-bounded, attach a maximum financial, data, or production impact, and require postcondition verification—then track unauthorized effects per 1,000 runs and p95 revocation time.",
+      "priorityScore": 0.84,
+      "intendedMentions": [
+        "Rob Gonda"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/robgonda_two-weeks-ago-xai-launched-grok-bot-always-on-activity-7498710926460751872-vdKD",
+      "receiptOperationId": "20260831085010-reply-posted-2026-08-31-linkedin-reply-rob-permission-leases",
+      "postedAt": "2026-08-31T08:50:10Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-comment-logan-cyber-insurance-autonomy",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/pulse/cyber-insurance-industry-just-found-hole-our-ai-security-logan-daley-wslvc/",
+      "title": "Cyber insurance and exposure-weighted autonomy",
+      "author": "Logan Daley",
+      "reason": "High-engagement discussion about agent-caused losses without conventional unauthorized access, where exposure-weighted autonomy and recoverability add a material risk lens.",
+      "evidence": "Revalidated in the signed-in LinkedIn UI on August 31: 3-day-old cyber-insurance discussion with 134 reactions, 42 comments and 16 reposts; no Aditya Singh comment was visible in the currently loaded thread.",
+      "draftResponse": "@Logan Daley, the underwriting shift should move from agent inventory to exposure-weighted autonomy. Two firms can each run 100 agents but have radically different loss profiles if one fleet can only recommend while the other can move money, alter identity, or touch production. I would price and govern maximum authorized loss, standing-credential exposure, independent-approval coverage, immutable-receipt coverage, and p95 revocation time.",
+      "priorityScore": 0.85,
+      "intendedMentions": [
+        "Logan Daley"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/pulse/cyber-insurance-industry-just-found-hole-our-ai-security-logan-daley-wslvc/",
+      "receiptOperationId": "20260831085122-comment-posted-2026-08-31-linkedin-comment-logan-cyber-insurance-autonomy",
+      "postedAt": "2026-08-31T08:51:22Z"
     }
   ]
 }
