@@ -34,6 +34,15 @@ LINKEDIN_AGENT_REQUIRED_FILES = (
     "prompts/drafting.md",
     "evaluations/quality-gates.md",
 )
+MEDIUM_AGENT_ROOT = ROOT / "medium" / "agents"
+MEDIUM_AGENT_REQUIRED_FILES = (
+    "README.md",
+    "policy.md",
+    "runbooks/overnight-cycle.md",
+    "prompts/story-research.md",
+    "prompts/audit-and-conversation.md",
+    "evaluations/quality-gates.md",
+)
 ACTION_TO_CANDIDATE = {
     "comment_posted": "comment",
     "reply_posted": "reply",
@@ -151,6 +160,55 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
     for relative_path in LINKEDIN_AGENT_REQUIRED_FILES:
         if not (LINKEDIN_AGENT_ROOT / relative_path).is_file():
             errors.append(f"LinkedIn agent documentation is missing {relative_path}")
+
+    medium_agent_system = strategy.get("mediumAgentSystem", {})
+    expected_medium_roles = [
+        "catalog_and_gap_analysis",
+        "source_and_story_opportunity_research",
+        "story_architecture_and_visual_planning",
+        "editorial_claims_and_policy_review",
+        "performance_and_retention_audit",
+        "distribution_and_publication_fit",
+        "conversation_research_and_response_drafting",
+        "growth_experiment_planning",
+        "approval_receipts_and_reporting",
+    ]
+    if medium_agent_system.get("schemaVersion") != 1:
+        errors.append("Medium agent system schemaVersion must be 1")
+    if medium_agent_system.get("orchestration") != "codex_heartbeat" or medium_agent_system.get("usesOpenAIAPI") is not False:
+        errors.append("Medium agent system must use Codex heartbeat without an OpenAI API")
+    if medium_agent_system.get("executionMode") != "research_and_prepare_only":
+        errors.append("Medium agent system must operate in research-and-prepare mode")
+    if medium_agent_system.get("scheduledHoursIST") != [23, 1, 3, 5, 7]:
+        errors.append("Medium agent system must run at 11 PM, 1 AM, 3 AM, 5 AM, and 7 AM IST")
+    if medium_agent_system.get("roles") != expected_medium_roles:
+        errors.append("Medium agent system roles do not match the approved nine-role design")
+    expected_medium_limits = {
+        "maximumOwnedStoryAudits": 3,
+        "maximumStoryBriefs": 2,
+        "maximumPrimarySourcesPerStoryBrief": 5,
+        "maximumPublicationFitCandidates": 3,
+        "maximumSourceSpecificMediumStories": 5,
+        "maximumResponseCandidatesForConfirmation": 2,
+    }
+    if medium_agent_system.get("perCycleLimits") != expected_medium_limits:
+        errors.append("Medium agent per-cycle limits do not preserve focused, policy-compliant research")
+    expected_medium_boundary = {
+        "publishOrScheduleStories": False,
+        "materiallyEditPublicStories": False,
+        "sendSubscriberEmail": False,
+        "submitToPublication": False,
+        "postResponses": False,
+        "clapHighlightOrFollow": False,
+        "changePaywallOrProfile": False,
+        "requireExactUserApproval": True,
+        "requireVisibleVerification": True,
+    }
+    if medium_agent_system.get("approvalBoundary") != expected_medium_boundary:
+        errors.append("Medium agent system must preserve the exact approval and verification boundary")
+    for relative_path in MEDIUM_AGENT_REQUIRED_FILES:
+        if not (MEDIUM_AGENT_ROOT / relative_path).is_file():
+            errors.append(f"Medium agent documentation is missing {relative_path}")
     return strategy, errors
 
 

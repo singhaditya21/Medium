@@ -1,6 +1,6 @@
 # Repository inventory and categorization
 
-Snapshot: 31 August 2026. This inventory covers the 444 tracked files in this repository. Generated working directories are listed separately because they are deliberately ignored by Git.
+Snapshot: 31 August 2026. This inventory covers the 450 tracked files in this repository. Generated working directories are listed separately because they are deliberately ignored by Git.
 
 ## 1. Root project and public-site metadata
 
@@ -102,7 +102,7 @@ Suggested category: **measurement evidence**. New two-hourly agent summaries may
 
 Suggested category: **shared engagement state**. This is the canonical location for scoring, approval state, candidate priority, duplicate prevention, and relationship timing. Future agents must read it before creating a draft and must not duplicate it in a private parallel queue.
 
-## 8. LinkedIn evidence and future agent workspace
+## 8. LinkedIn evidence and agent workspace
 
 | Path | Count | Category |
 | --- | ---: | --- |
@@ -125,7 +125,7 @@ linkedin/agents/
   evaluations/       # deterministic review criteria
 ```
 
-## 9. Medium publishing control plane
+## 9. Medium publishing control plane and agent workspace
 
 | Path | Count | Category |
 | --- | ---: | --- |
@@ -137,6 +137,19 @@ linkedin/agents/
 
 Suggested category: **Medium control and evidence plane**. It shares the approval-gated approach with LinkedIn, but must remain independently auditable.
 
+The non-API Medium agent workspace is under `medium/agents/`:
+
+```text
+medium/agents/
+  README.md          # Medium roles and state ownership
+  policy.md          # AI disclosure, anti-spam, approval, and privacy limits
+  prompts/           # story-research and audit/conversation instructions
+  runbooks/          # 11 PM–7 AM IST overnight cycle
+  evaluations/       # quality gates for briefs, audits, and response candidates
+```
+
+These agents may prepare stories and recommendations. They must not publish, schedule, send subscriber email, submit, clap, follow, highlight, or respond without exact user approval.
+
 ## 10. Generated local workspaces
 
 The following folders exist locally but are ignored by Git and must remain regenerable:
@@ -145,10 +158,10 @@ The following folders exist locally but are ignored by Git and must remain regen
 
 Suggested category: **ephemeral generated output**. Do not treat these folders as canonical agent state.
 
-## Guardrails for the LinkedIn agent build
+## Guardrails for the LinkedIn and Medium agent builds
 
 1. Keep public site, story sources, analytics, engagement state, and verified receipts separate.
 2. Keep drafts local and unapproved; never commit credentials, cookies, browser state, or private message URLs.
-3. Read `engagement/strategy.json`, `engagement/queue.json`, and `engagement/linkedin-relationship-watchlist.json` before any research packet is prepared.
-4. Put only verified user-approved actions in `linkedin/executions/` or `linkedin/message-executions/`.
+3. Read `engagement/strategy.json` and `engagement/queue.json` before any research packet is prepared. LinkedIn also requires the relationship watchlist; Medium also requires story/release, publication, execution, and metrics evidence.
+4. Put only verified user-approved actions in their platform's immutable receipt folders.
 5. Use Codex recurring automation and the signed-in Chrome session; do not add an OpenAI API key or an API-backed daemon.
