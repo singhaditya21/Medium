@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260831100445-reply-posted-2026-08-31-linkedin-reply-crystal-valentine-versioned-outcome-contract",
+  "action": "reply_posted",
+  "recordedAt": "2026-08-31T10:04:45Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-08-31T10:04:45Z",
+    "scope": "Approved."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-08-31-linkedin-reply-crystal-valentine-versioned-outcome-contract",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500122301426987008/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500122301426987008/",
+    "publishedTextSha256": "2d7f7cf2d3372a26e1c8a1d88decf1bb9fb86e5316aff4decfd3c16896e92f39",
+    "verifiedAt": "2026-08-31T10:04:45Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved threaded reply under Aditya Singh with a current timestamp beneath Crystal Valentine’s reply; native reply context and author mention were preserved."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

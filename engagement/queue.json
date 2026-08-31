@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T09:44:44Z",
+  "updatedAt": "2026-08-31T10:04:45Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1062,6 +1062,24 @@
       "responseUrl": "https://www.linkedin.com/pulse/ai-control-plane-building-trust-governance-agentic-enterprise-khan-id0jf/",
       "receiptOperationId": "20260831094444-reply-posted-2026-08-31-linkedin-reply-farrukh-ahmed-khan-receipt-coverage",
       "postedAt": "2026-08-31T09:44:44Z"
+    },
+    {
+      "id": "2026-08-31-linkedin-reply-crystal-valentine-versioned-outcome-contract",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500122301426987008/",
+      "title": "Versioned outcome contracts for AI economics",
+      "author": "Crystal Valentine",
+      "reason": "Replying to Crystal’s substantive extension of the verified-business-outcome discussion, which adds drift and operating-economics context.",
+      "evidence": "Crystal replied to Aditya’s comment and argued that changing business conditions, policies, models, data, tools and integrations require ongoing verification of outcome quality, risk and cost.",
+      "draftResponse": "Exactly. The outcome contract itself needs to be versioned: expected business effect, acceptable quality and risk band, cost envelope, evidence requirement and recovery trigger. A model can be technically healthy while the decision is no longer economically or policy-valid; material changes in data, tools, policy or business conditions should therefore trigger outcome re-verification, not just a model-health check.",
+      "priorityScore": 0.92,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500122301426987008/",
+      "receiptOperationId": "20260831100445-reply-posted-2026-08-31-linkedin-reply-crystal-valentine-versioned-outcome-contract",
+      "postedAt": "2026-08-31T10:04:45Z"
     }
   ]
 }
