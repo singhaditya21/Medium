@@ -25,6 +25,15 @@ from validate_medium_bridge import (
 STRATEGY_PATH = ROOT / "engagement" / "strategy.json"
 EXECUTIONS_DIR = ROOT / "linkedin" / "executions"
 MESSAGE_EXECUTIONS_DIR = ROOT / "linkedin" / "message-executions"
+LINKEDIN_AGENT_ROOT = ROOT / "linkedin" / "agents"
+LINKEDIN_AGENT_REQUIRED_FILES = (
+    "README.md",
+    "policy.md",
+    "runbooks/two-hourly-cycle.md",
+    "prompts/research.md",
+    "prompts/drafting.md",
+    "evaluations/quality-gates.md",
+)
 ACTION_TO_CANDIDATE = {
     "comment_posted": "comment",
     "reply_posted": "reply",
@@ -96,6 +105,52 @@ def validate_strategy() -> tuple[dict[str, Any], list[str]]:
     }
     if strategy.get("automationPolicy") != expected_policy:
         errors.append("automationPolicy must preserve the signed-in confirmation and credential boundary")
+
+    agent_system = strategy.get("linkedinAgentSystem", {})
+    expected_roles = [
+        "signal_triage",
+        "relationship_context",
+        "opportunity_research",
+        "comment_and_reply_drafting",
+        "dm_drafting",
+        "post_drafting",
+        "performance_analysis",
+        "approval_and_receipts",
+    ]
+    if agent_system.get("schemaVersion") != 1:
+        errors.append("LinkedIn agent system schemaVersion must be 1")
+    if agent_system.get("orchestration") != "codex_heartbeat" or agent_system.get("usesOpenAIAPI") is not False:
+        errors.append("LinkedIn agent system must use Codex heartbeat without an OpenAI API")
+    if agent_system.get("runIntervalHours") != 2 or agent_system.get("executionMode") != "research_and_prepare_only":
+        errors.append("LinkedIn agent system must run every two hours in research-and-prepare mode")
+    if agent_system.get("roles") != expected_roles:
+        errors.append("LinkedIn agent system roles do not match the approved eight-role design")
+    research_targets = agent_system.get("researchTargetsPerRollingDay", {})
+    if research_targets != {"commentOpportunities": 50, "dmProspects": 50}:
+        errors.append("LinkedIn agent rolling-day research targets must remain 50 comments and 50 DM prospects")
+    cycle_limits = agent_system.get("perCycleLimits", {})
+    expected_limits = {
+        "maximumSourceSpecificProfilesOrPosts": 5,
+        "maximumPostDrafts": 1,
+        "maximumCommentOrReplyCandidatesForConfirmation": 5,
+        "maximumDmDrafts": 5,
+    }
+    if cycle_limits != expected_limits:
+        errors.append("LinkedIn agent per-cycle limits do not preserve focused research and review capacity")
+    expected_boundary = {
+        "publishPosts": False,
+        "postCommentsOrReplies": False,
+        "sendMessages": False,
+        "reactOrFollow": False,
+        "connectOrRepost": False,
+        "requireExactUserApproval": True,
+        "requireVisibleVerification": True,
+    }
+    if agent_system.get("approvalBoundary") != expected_boundary:
+        errors.append("LinkedIn agent system must preserve the exact approval and verification boundary")
+    for relative_path in LINKEDIN_AGENT_REQUIRED_FILES:
+        if not (LINKEDIN_AGENT_ROOT / relative_path).is_file():
+            errors.append(f"LinkedIn agent documentation is missing {relative_path}")
     return strategy, errors
 
 

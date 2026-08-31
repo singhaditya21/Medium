@@ -69,6 +69,50 @@
     "requireVisibleResultVerification": true,
     "storeCredentialsOrBrowserState": false
   },
+  "linkedinAgentSystem": {
+    "schemaVersion": 1,
+    "orchestration": "codex_heartbeat",
+    "usesOpenAIAPI": false,
+    "runIntervalHours": 2,
+    "executionMode": "research_and_prepare_only",
+    "roles": [
+      "signal_triage",
+      "relationship_context",
+      "opportunity_research",
+      "comment_and_reply_drafting",
+      "dm_drafting",
+      "post_drafting",
+      "performance_analysis",
+      "approval_and_receipts"
+    ],
+    "inputs": [
+      "engagement/strategy.json",
+      "engagement/queue.json",
+      "engagement/linkedin-relationship-watchlist.json",
+      "linkedin/executions/",
+      "linkedin/message-executions/",
+      "analytics/"
+    ],
+    "researchTargetsPerRollingDay": {
+      "commentOpportunities": 50,
+      "dmProspects": 50
+    },
+    "perCycleLimits": {
+      "maximumSourceSpecificProfilesOrPosts": 5,
+      "maximumPostDrafts": 1,
+      "maximumCommentOrReplyCandidatesForConfirmation": 5,
+      "maximumDmDrafts": 5
+    },
+    "approvalBoundary": {
+      "publishPosts": false,
+      "postCommentsOrReplies": false,
+      "sendMessages": false,
+      "reactOrFollow": false,
+      "connectOrRepost": false,
+      "requireExactUserApproval": true,
+      "requireVisibleVerification": true
+    }
+  },
   "platformPolicyUrls": {
     "medium": "https://help.medium.com/hc/en-us/articles/213477928-Medium-Rules",
     "linkedin": "https://www.linkedin.com/help/linkedin/answer/a1341387"
