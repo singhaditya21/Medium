@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901105944-reply-posted-linkedin-praveen-seller-control-loop",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-01T10:59:44Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T10:58:00Z",
+    "scope": "User approved N1, N2 and N3 exactly as listed in the immediately preceding notification batch."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-01-linkedin-reply-praveen-seller-control-loop",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500495953452457985/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500495953452457985/",
+    "publishedTextSha256": "3d67188e2a2ba85db463dd71fbd342b90fef5a3ce753d4b2b65db96fe01cadec",
+    "verifiedAt": "2026-09-01T10:59:44Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved threaded reply under Aditya Singh with a current timestamp on Praveen Shahi's public source post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
