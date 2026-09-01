@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T10:00:11Z",
+  "updatedAt": "2026-09-01T10:23:41Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1460,6 +1460,23 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500484062202126337/",
       "receiptOperationId": "20260901100011-reply-posted-linkedin-shobha-governance-staleness",
       "postedAt": "2026-09-01T10:00:11Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-reply-praveen-seller-control-loop",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500495953452457985/",
+      "title": "Seller enablement requires a closed-loop decision product",
+      "author": "Praveen Shahi",
+      "reason": "Answers a fresh author mention by translating seller control into an instrumented decision workflow instead of a passive RevOps measurement layer.",
+      "evidence": "Signed-in notification audit found Praveen’s nine-minute response on the existing autonomous-GTM thread. He distinguished tracking GTM metrics from delivering trusted information to sellers in time to change outcomes. The thread showed 14 impressions when inspected.",
+      "draftResponse": "Praveen, that distinction is the heart of the operating model. Seller control requires a closed-loop decision product: the signal arrives inside the workflow, explains why it matters, exposes the evidence and recommended next action, and lets the seller accept, modify or reject it. I would track time-to-usable-signal, seller acceptance rate, action completion after the signal and pipeline movement per accepted recommendation; otherwise RevOps observes the system without changing it.",
+      "priorityScore": 0.97,
+      "intendedMentions": [
+        "Praveen Shahi"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
