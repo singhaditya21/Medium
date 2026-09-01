@@ -1096,7 +1096,10 @@
       "intendedMentions": [
         "Praveen Shahi"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500171518534930432/",
+      "receiptOperationId": "20260901052210-comment-posted-linkedin-praveen-shahi-gtm-operations",
+      "postedAt": "2026-09-01T05:22:10Z"
     },
     {
       "id": "2026-09-01-linkedin-reply-samvad-privilege-graph",
@@ -1113,7 +1116,10 @@
       "intendedMentions": [
         "Samvad G"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
+      "receiptOperationId": "20260901052210-reply-posted-linkedin-samvad-privilege-graph",
+      "postedAt": "2026-09-01T05:22:10Z"
     }
   ]
 }

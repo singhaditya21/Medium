@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901052210-comment-posted-linkedin-praveen-shahi-gtm-operations",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T05:22:10Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T05:22:10Z",
+    "scope": "User approved L1, D1 and L2 exactly as written."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-08-31-linkedin-comment-praveen-shahi-gtm-operations",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500171518534930432/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500171518534930432/",
+    "publishedTextSha256": "274cc5a016371990507faa82c0b15ccb7c9a41151baebb144bc02b58b9f19005",
+    "verifiedAt": "2026-09-01T05:22:10Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp on Praveen Shahi's post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

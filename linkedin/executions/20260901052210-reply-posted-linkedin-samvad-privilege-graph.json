@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901052210-reply-posted-linkedin-samvad-privilege-graph",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-01T05:22:10Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T05:22:10Z",
+    "scope": "User approved L1, D1 and L2 exactly as written."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-01-linkedin-reply-samvad-privilege-graph",
+    "targetUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
+    "publicUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
+    "publishedTextSha256": "def3c017a964cd61589b1140e3beeed6e934298b1d2016f724ba85eaaabd0091",
+    "verifiedAt": "2026-09-01T05:22:10Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved threaded reply under Aditya Singh beneath Samvad G's comment."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
