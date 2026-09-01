@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901100011-reply-posted-linkedin-shobha-governance-staleness",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-01T10:00:11Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T09:59:00Z",
+    "scope": "User approved the immediately preceding S1 action exactly as written."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-01-linkedin-reply-shobha-governance-staleness",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500484062202126337/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500484062202126337/",
+    "publishedTextSha256": "c03dcd01aaf81c1bb818e719306c51a47befdcfd5f4709d9823d5ef902e0b55c",
+    "verifiedAt": "2026-09-01T10:00:11Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved threaded reply under Aditya Singh with a current timestamp and a clickable Shobha Shah mention."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

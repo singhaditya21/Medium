@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T09:57:45Z",
+  "updatedAt": "2026-09-01T10:00:11Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1456,7 +1456,10 @@
       "intendedMentions": [
         "Shobha Shah"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500484062202126337/",
+      "receiptOperationId": "20260901100011-reply-posted-linkedin-shobha-governance-staleness",
+      "postedAt": "2026-09-01T10:00:11Z"
     }
   ]
 }
