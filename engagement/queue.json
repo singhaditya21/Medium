@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T10:59:44Z",
+  "updatedAt": "2026-09-01T12:00:58Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1480,6 +1480,57 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500495953452457985/",
       "receiptOperationId": "20260901105944-reply-posted-linkedin-praveen-seller-control-loop",
       "postedAt": "2026-09-01T10:59:44Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-comment-antrixsh-cross-layer-guardrails",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/antrixshgupta/recent-activity/all/",
+      "title": "Seven guardrail layers across the AI agent execution stack",
+      "author": "Antrixsh Gupta",
+      "reason": "Strong fit with production agent security and opportunity to turn a layer diagram into measurable cross-layer controls.",
+      "evidence": "8-hour public post covers prompts, memory, retrieval, tools, runtime and outputs across seven guardrail layers; 42 comments and 24 reposts visible; no prior Aditya comment visible.",
+      "draftResponse": "Antrixsh, seven guardrail layers become a production control system only when failures propagate across layers instead of being logged in isolation. A suspicious retrieval should narrow tool authority; an ambiguous tool effect should block memory promotion and trigger verification or recovery. I would measure cross-layer policy coverage, prohibited-path escape rate, receipt completeness and p95 containment time.",
+      "priorityScore": 0.93,
+      "intendedMentions": [
+        "Antrixsh Gupta"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-01-linkedin-comment-elvis-plugin-supply-chain",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/omarsar/recent-activity/all/",
+      "title": "Claude Code plugin ecosystem: 78% functionally coupled co-changes",
+      "author": "Elvis S.",
+      "reason": "High-fit evidence that natural-language skills and implementation code are becoming one governed software artifact.",
+      "evidence": "12-hour public post; 1,926 repositories, 8,351 plugins, 2,018 marketplaces, 77,773 commits, 8.8x activity growth, 78% functional coupling; 16 reactions, 2 comments, 1 repost; no prior Aditya comment visible.",
+      "draftResponse": "Elvis, the 78% functional coupling between instruction-file and implementation changes makes natural-language skills part of the software supply chain, not documentation. I would version the instruction, tool policy, executable code and evaluation suite as one deployable artifact, then track change-failure rate, rollback time and the share of production actions tied to a reproducible artifact digest.",
+      "priorityScore": 0.9,
+      "intendedMentions": [
+        "Elvis S."
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-01-linkedin-comment-abhishek-graduated-autonomy",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/abhishek-dwivedi1/recent-activity/all/",
+      "title": "Insurance: from automation to graduated autonomy",
+      "author": "Abhishek Dwivedi",
+      "reason": "Direct fit with action-level risk, human approval, verification and recovery in regulated workflows.",
+      "evidence": "4-hour public insurance operating-model post; asks where autonomy shifts first and argues different actions need different oversight; 4 reactions and 1 comment visible; no prior Aditya comment visible.",
+      "draftResponse": "Abhishek, graduated autonomy should be defined by the consequence of the action, not the sophistication of the model. I would map each insurance action class to evidence requirements, approval thresholds, maximum customer or financial impact, a verification SLO and a recovery path—then report straight-through completion alongside false-allow rate, escalation precision and p95 reversal time.",
+      "priorityScore": 0.92,
+      "intendedMentions": [
+        "Abhishek Dwivedi"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
