@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T16:34:31Z",
+  "updatedAt": "2026-09-01T05:14:06Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1095,6 +1095,23 @@
       "priorityScore": 0.86,
       "intendedMentions": [
         "Praveen Shahi"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-01-linkedin-reply-samvad-privilege-graph",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
+      "title": "Run-time risk scoring needs a continuously evaluated privilege graph",
+      "author": "Samvad G",
+      "reason": "Samvad asked a specific architecture question in response to the published account comment: dynamic run scoring versus a continuously evaluated privilege graph.",
+      "evidence": "Reviewed in the signed-in LinkedIn notifications at 14:40 IST: Samvad replied to Aditya Singh’s comment with a substantive question about modelling risk on reachable edges dynamically per agent run or through a continuously evaluated privilege graph.",
+      "draftResponse": "I would use both: the continuously evaluated privilege graph is the system of record, and the run-specific score is the authorization decision. The graph should type identities, tools, artifacts, workflows, data domains and trust assertions; each edge needs a lease, delegation depth, sensitivity, reversibility and verification state. At action time, recompute risk when an artifact hash, tool version, identity lease or upstream trust assertion changes. I would track maximum reachable privilege per run, critical paths without an independent postcondition, stale trust-edge rate and p95 time to revoke every affected path. A static graph becomes stale; a per-run score without the graph misses systemic blast radius.",
+      "priorityScore": 0.91,
+      "intendedMentions": [
+        "Samvad G"
       ],
       "state": "ready_for_confirmation"
     }
