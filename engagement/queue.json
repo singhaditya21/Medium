@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T07:54:57Z",
+  "updatedAt": "2026-09-01T09:51:25Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1400,6 +1400,46 @@
       "responseUrl": "https://www.linkedin.com/in/carloderossi/recent-activity/all/",
       "receiptOperationId": "20260901075457-comment-posted-linkedin-carlo-runtime-trust-layer",
       "postedAt": "2026-09-01T07:54:57Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-reply-manas-contract-receipt",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/in/manasjain/recent-activity/all/",
+      "title": "Data-contract authorization surface reply",
+      "author": "Manas Jain",
+      "reason": "Replies to a fresh author mention by turning data-contract freshness into an auditable authorization-to-receipt chain.",
+      "evidence": "Read-only notification audit identified a fresh substantive author mention on the existing data-contract thread. The signed-in UI showed the exact reply under Aditya Singh immediately after posting.",
+      "draftResponse": "Exactly. Once trust conditions govern whether an action may execute, the contract becomes part of the authorization surface—not only context. The useful next step is a contract-to-receipt chain: cite the contract version and freshness at decision time, then attach it to the action’s postcondition and exception trail. That makes the decision both explainable and enforceable.",
+      "priorityScore": 0.96,
+      "intendedMentions": [
+        "Manas Jain"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/manasjain/recent-activity/all/",
+      "receiptOperationId": "20260901095125-reply-posted-linkedin-manas-contract-receipt",
+      "postedAt": "2026-09-01T09:51:25Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-reply-varun-business-effect",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500475265567842304/",
+      "title": "Action-contract business-effect verification reply",
+      "author": "Varun Chouhan",
+      "reason": "Replies to a fresh author mention by separating workflow-graph correctness from business-effect correctness.",
+      "evidence": "Read-only notification audit identified a fresh substantive author mention on the existing action-contract thread. The signed-in UI showed the exact reply under Aditya Singh immediately after posting.",
+      "draftResponse": "Well put. This separation lets teams test two different things: graph correctness and business-effect correctness. A run can take the intended path and still fail the outcome because a downstream tool, policy, or state assumption changed; postcondition and rollback tests close that gap.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Varun Chouhan"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500475265567842304/",
+      "receiptOperationId": "20260901095125-reply-posted-linkedin-varun-business-effect",
+      "postedAt": "2026-09-01T09:51:25Z"
     }
   ]
 }

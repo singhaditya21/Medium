@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901095125-reply-posted-linkedin-varun-business-effect",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-01T09:51:25Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T09:50:17Z",
+    "scope": "User approved M2 exactly as written."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-01-linkedin-reply-varun-business-effect",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500475265567842304/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500475265567842304/",
+    "publishedTextSha256": "f69b72d6aa45f98bbfd3a991fd7c1fa2db37d6a4da50b66e280dedd056becfbd",
+    "verifiedAt": "2026-09-01T09:51:25Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved threaded reply under Aditya Singh with a current timestamp on Varun Chouhan's public source post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

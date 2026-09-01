@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901095125-reply-posted-linkedin-manas-contract-receipt",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-01T09:51:25Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T09:50:17Z",
+    "scope": "User approved M1 exactly as written."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-01-linkedin-reply-manas-contract-receipt",
+    "targetUrl": "https://www.linkedin.com/in/manasjain/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/manasjain/recent-activity/all/",
+    "publishedTextSha256": "e7698ca65fd927917b2ef92562bc8abd0b45f8172c33c54220d5528e7df4da11",
+    "verifiedAt": "2026-09-01T09:51:25Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved threaded reply under Aditya Singh with a current timestamp on Manas Jain's public source post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
