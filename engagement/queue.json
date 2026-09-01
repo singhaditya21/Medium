@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T09:51:25Z",
+  "updatedAt": "2026-09-01T09:57:45Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1440,6 +1440,23 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500475265567842304/",
       "receiptOperationId": "20260901095125-reply-posted-linkedin-varun-business-effect",
       "postedAt": "2026-09-01T09:51:25Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-reply-shobha-governance-staleness",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500484062202126337/",
+      "title": "AI-governance early-warning indicator",
+      "author": "Shobha Shah",
+      "reason": "Answers a fresh author question with an operating metric that connects control freshness to the pace of material system change.",
+      "evidence": "Signed-in notification audit found Shobha’s 31-minute reply on the existing governance-cadence thread. She agreed with the operating-cadence argument and asked which metric is the strongest early-warning indicator of stale AI governance. The source thread showed 16 impressions when inspected.",
+      "draftResponse": "The earliest warning is control freshness relative to change velocity: the share of material model, data, tool, policy or operating-context changes that reach production before their risk assessment and evidence are refreshed. I would pair it with p95 decision-to-mitigation lead time for change-triggered issues. A governance model is stale when its evidence ages faster than the system it governs.",
+      "priorityScore": 0.96,
+      "intendedMentions": [
+        "Shobha Shah"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
