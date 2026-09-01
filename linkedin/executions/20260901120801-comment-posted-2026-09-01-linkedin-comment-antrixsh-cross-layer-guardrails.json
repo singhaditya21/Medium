@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901120801-comment-posted-2026-09-01-linkedin-comment-antrixsh-cross-layer-guardrails",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T12:08:01Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 38,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T12:08:01Z",
+    "scope": "User approved L1, L2 and L3 exactly as written in the immediately preceding LinkedIn batch."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-antrixsh-cross-layer-guardrails",
+    "targetUrl": "https://www.linkedin.com/in/antrixshgupta/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/antrixshgupta/recent-activity/all/",
+    "publishedTextSha256": "c844be046e0be8b61c34d688c0ca7dfb703507518aa6a77927778b916ad8a230",
+    "verifiedAt": "2026-09-01T12:08:01Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp on Antrixsh Gupta’s seven-guardrail-layers source post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901120803-comment-posted-2026-09-01-linkedin-comment-elvis-plugin-supply-chain",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T12:08:03Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 38,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T12:08:03Z",
+    "scope": "User approved L1, L2 and L3 exactly as written in the immediately preceding LinkedIn batch."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-elvis-plugin-supply-chain",
+    "targetUrl": "https://www.linkedin.com/in/omarsar/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/omarsar/recent-activity/all/",
+    "publishedTextSha256": "551986e9da134aaac739a817c1c89c44a9b82b46b826b70954accaf6c0a0fe33",
+    "verifiedAt": "2026-09-01T12:08:03Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp on Elvis S.’s plugin-ecosystem source post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

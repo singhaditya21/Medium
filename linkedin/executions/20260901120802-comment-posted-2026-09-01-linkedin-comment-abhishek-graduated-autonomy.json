@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901120802-comment-posted-2026-09-01-linkedin-comment-abhishek-graduated-autonomy",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T12:08:02Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 38,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T12:08:02Z",
+    "scope": "User approved L1, L2 and L3 exactly as written in the immediately preceding LinkedIn batch."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-abhishek-graduated-autonomy",
+    "targetUrl": "https://www.linkedin.com/in/abhishek-dwivedi1/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/abhishek-dwivedi1/recent-activity/all/",
+    "publishedTextSha256": "8d0527fd944e3284b188cba46125b5c75a7a7f8e6b40acdc8e3c5cd47e18b4c5",
+    "verifiedAt": "2026-09-01T12:08:02Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp on Abhishek Dwivedi’s graduated-autonomy source post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

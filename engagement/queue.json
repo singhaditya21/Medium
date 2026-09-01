@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T12:00:58Z",
+  "updatedAt": "2026-09-01T12:08:03Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1496,7 +1496,10 @@
       "intendedMentions": [
         "Antrixsh Gupta"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/antrixshgupta/recent-activity/all/",
+      "receiptOperationId": "20260901120801-comment-posted-2026-09-01-linkedin-comment-antrixsh-cross-layer-guardrails",
+      "postedAt": "2026-09-01T12:08:01Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-elvis-plugin-supply-chain",
@@ -1513,7 +1516,10 @@
       "intendedMentions": [
         "Elvis S."
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/omarsar/recent-activity/all/",
+      "receiptOperationId": "20260901120803-comment-posted-2026-09-01-linkedin-comment-elvis-plugin-supply-chain",
+      "postedAt": "2026-09-01T12:08:03Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-abhishek-graduated-autonomy",
@@ -1530,7 +1536,10 @@
       "intendedMentions": [
         "Abhishek Dwivedi"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/abhishek-dwivedi1/recent-activity/all/",
+      "receiptOperationId": "20260901120802-comment-posted-2026-09-01-linkedin-comment-abhishek-graduated-autonomy",
+      "postedAt": "2026-09-01T12:08:02Z"
     }
   ]
 }
