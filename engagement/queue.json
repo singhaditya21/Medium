@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T07:50:06Z",
+  "updatedAt": "2026-09-01T07:54:57Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1336,7 +1336,10 @@
       "intendedMentions": [
         "Deepika Manchanda"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/deepikamanchanda/recent-activity/all/",
+      "receiptOperationId": "20260901075457-reply-posted-linkedin-deepika-audit-receipts",
+      "postedAt": "2026-09-01T07:54:57Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-varun-action-contract",
@@ -1353,7 +1356,10 @@
       "intendedMentions": [
         "Varun Chouhan"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/varun-chouhan2424/recent-activity/all/",
+      "receiptOperationId": "20260901075457-comment-posted-linkedin-varun-action-contract",
+      "postedAt": "2026-09-01T07:54:57Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-manas-data-contract-action-boundary",
@@ -1370,7 +1376,10 @@
       "intendedMentions": [
         "Manas Jain"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/manasjain/recent-activity/all/",
+      "receiptOperationId": "20260901075457-comment-posted-linkedin-manas-data-contract-action-boundary",
+      "postedAt": "2026-09-01T07:54:57Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-carlo-runtime-trust-layer",
@@ -1387,7 +1396,10 @@
       "intendedMentions": [
         "Carlo De Rossi"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/carloderossi/recent-activity/all/",
+      "receiptOperationId": "20260901075457-comment-posted-linkedin-carlo-runtime-trust-layer",
+      "postedAt": "2026-09-01T07:54:57Z"
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901075457-comment-posted-linkedin-carlo-runtime-trust-layer",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T07:54:57Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T07:54:57Z",
+    "scope": "User approved the immediately preceding R1, C1, C2 and C3 actions exactly as written."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-carlo-runtime-trust-layer",
+    "targetUrl": "https://www.linkedin.com/in/carloderossi/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/carloderossi/recent-activity/all/",
+    "publishedTextSha256": "226993a944af2f89659e9da0f1e0f97895471ba2caa0b306946fd50d71bbc3b0",
+    "verifiedAt": "2026-09-01T07:54:57Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp on Carlo De Rossi's verified public source post. LinkedIn did not offer a selectable native mention for the author."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

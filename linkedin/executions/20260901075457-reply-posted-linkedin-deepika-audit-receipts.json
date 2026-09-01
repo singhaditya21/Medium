@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901075457-reply-posted-linkedin-deepika-audit-receipts",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-01T07:54:57Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T07:54:57Z",
+    "scope": "User approved the immediately preceding R1, C1, C2 and C3 actions exactly as written."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-01-linkedin-reply-deepika-audit-receipts",
+    "targetUrl": "https://www.linkedin.com/in/deepikamanchanda/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/deepikamanchanda/recent-activity/all/",
+    "publishedTextSha256": "baa122011c6b33e4a493f655347b61082685ade55c062a727af383b99cb409ce",
+    "verifiedAt": "2026-09-01T07:54:57Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved reply under Aditya Singh with a current timestamp in Deepika Manchanda's thread. The reply control preserved a native linked mention of Deepika Manchanda."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
