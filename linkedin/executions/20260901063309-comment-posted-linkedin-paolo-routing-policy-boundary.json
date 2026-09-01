@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901063309-comment-posted-linkedin-paolo-routing-policy-boundary",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T06:33:09Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T06:33:09Z",
+    "scope": "User approved W1-C1 through W1-C5 exactly as written."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-paolo-routing-policy-boundary",
+    "targetUrl": "https://www.linkedin.com/in/paoloperrone/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/paoloperrone/recent-activity/all/",
+    "publishedTextSha256": "2bd61ca29c5c139fc508c749edafef7c9b9c07c64c84e99fb8a345b0124b80f6",
+    "verifiedAt": "2026-09-01T06:33:09Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh on Paolo Perrone's verified public source post. LinkedIn did not offer a selectable native mention for the author."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

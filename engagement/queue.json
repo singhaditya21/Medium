@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T06:30:17Z",
+  "updatedAt": "2026-09-01T06:33:09Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1236,7 +1236,10 @@
       "intendedMentions": [
         "Shobha Shah"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/shobha-shah/recent-activity/all/",
+      "receiptOperationId": "20260901063309-comment-posted-linkedin-shobha-governance-agility",
+      "postedAt": "2026-09-01T06:33:09Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-valerie-field-evidence-loop",
@@ -1253,7 +1256,10 @@
       "intendedMentions": [
         "Valérie Bécaert"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/val%C3%A9rie-b%C3%A9caert-91b5512/recent-activity/all/",
+      "receiptOperationId": "20260901063309-comment-posted-linkedin-valerie-field-evidence-loop",
+      "postedAt": "2026-09-01T06:33:09Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-ralph-adoption-service-level",
@@ -1270,7 +1276,10 @@
       "intendedMentions": [
         "Ralph Zeller"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/ralph-zeller/recent-activity/all/",
+      "receiptOperationId": "20260901063309-comment-posted-linkedin-ralph-adoption-service-level",
+      "postedAt": "2026-09-01T06:33:09Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-paolo-routing-policy-boundary",
@@ -1287,7 +1296,10 @@
       "intendedMentions": [
         "Paolo Perrone"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/paoloperrone/recent-activity/all/",
+      "receiptOperationId": "20260901063309-comment-posted-linkedin-paolo-routing-policy-boundary",
+      "postedAt": "2026-09-01T06:33:09Z"
     },
     {
       "id": "2026-09-01-linkedin-comment-david-security-outreach-trust",
@@ -1304,7 +1316,10 @@
       "intendedMentions": [
         "David Roldán Martínez"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/davidroldanmartinez/recent-activity/all/",
+      "receiptOperationId": "20260901063309-comment-posted-linkedin-david-security-outreach-trust",
+      "postedAt": "2026-09-01T06:33:09Z"
     }
   ]
 }

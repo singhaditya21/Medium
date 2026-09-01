@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901063309-comment-posted-linkedin-ralph-adoption-service-level",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T06:33:09Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T06:33:09Z",
+    "scope": "User approved W1-C1 through W1-C5 exactly as written."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-ralph-adoption-service-level",
+    "targetUrl": "https://www.linkedin.com/in/ralph-zeller/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/ralph-zeller/recent-activity/all/",
+    "publishedTextSha256": "9ccd1ad8b3b79cecd87e650f547ae7a8aa34b27f586f68a5d881795600eb1a4b",
+    "verifiedAt": "2026-09-01T06:33:09Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh on Ralph Zeller's verified public source post. LinkedIn did not offer a selectable native mention for the author."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
