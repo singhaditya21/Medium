@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901053643-comment-posted-linkedin-prashant-banking-operating-model",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T05:36:43Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T05:36:43Z",
+    "scope": "User approved C1, C2, C3, C4 and C5 exactly as written and requested relevant people be tagged."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-prashant-banking-operating-model",
+    "targetUrl": "https://www.linkedin.com/in/prashaantchibber/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/prashaantchibber/recent-activity/all/",
+    "publishedTextSha256": "aacda5a0e5ff750c662d8e4b003b5f9d3e6c0190ec9d91723d290a790485ef01",
+    "verifiedAt": "2026-09-01T05:36:43Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp on Prashant Chibber's verified public source post. LinkedIn did not offer a selectable native mention for the author."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

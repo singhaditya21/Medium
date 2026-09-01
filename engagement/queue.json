@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T05:14:06Z",
+  "updatedAt": "2026-09-01T05:36:43Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1120,6 +1120,106 @@
       "responseUrl": "https://www.linkedin.com/posts/samvad-gour_agenticai-aisecurity-cybersecurity-share-7499863820539142144-eeMS/",
       "receiptOperationId": "20260901052210-reply-posted-linkedin-samvad-privilege-graph",
       "postedAt": "2026-09-01T05:22:10Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-comment-balaji-receipts",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/balaji-viswanathan-4392182/recent-activity/all/",
+      "title": "There is definitely some AI agent fatigue right now.",
+      "author": "Balaji Viswanathan",
+      "reason": "Adds an operating definition of accountability for agentic decisions.",
+      "evidence": "Source: 1-day public post on agent accountability; comment target was visibly verified in Balaji's public activity.",
+      "draftResponse": "@Balaji Viswanathan, accountability becomes implementable only when every consequential action carries a reconstructable receipt: intent, evidence, policy and model/tool version, authority lease, approval decision, observed postcondition and recovery path. That turns “why did it act?” into a testable operational question. I would measure trace completeness, escalation precision, false-accept rate for high-impact actions and p95 revocation time—not simply agent accuracy or infrastructure uptime.",
+      "priorityScore": 0.91,
+      "intendedMentions": [
+        "Balaji Viswanathan"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/balaji-viswanathan-4392182/recent-activity/all/",
+      "receiptOperationId": "20260901053643-comment-posted-linkedin-balaji-receipts",
+      "postedAt": "2026-09-01T05:36:43Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-comment-prashant-banking-operating-model",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/prashaantchibber/recent-activity/all/",
+      "title": "The conversation around AI in banking has shifted.",
+      "author": "Prashant Chibber",
+      "reason": "Decomposes high-level banking AI claims into measurable operating mechanisms.",
+      "evidence": "Source: 18-hour public post citing EXL's 2026 Enterprise AI Study and the 40%/37% leader gap.",
+      "draftResponse": "@Prashant Chibber, the 40% revenue-growth and 37% cost-reduction gap becomes actionable only when it is decomposed into workflow mechanisms: decision latency, exception rate, straight-through completion, run cost per completed journey and recovery time when a control fails. Banks need a matched before/after baseline for each workflow; otherwise “AI leader” results can conceal product mix, channel shift or cost-allocation effects. Which of these is mature enough to become a common board metric?",
+      "priorityScore": 0.87,
+      "intendedMentions": [
+        "Prashant Chibber"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/prashaantchibber/recent-activity/all/",
+      "receiptOperationId": "20260901053643-comment-posted-linkedin-prashant-banking-operating-model",
+      "postedAt": "2026-09-01T05:36:43Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-comment-deepika-employee-data-boundary",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/deepikamanchanda/recent-activity/all/",
+      "title": "Meet the MDM Agent",
+      "author": "Deepika Manchanda",
+      "reason": "Extends the stated human/code approval boundary with verifiable employee-record evidence.",
+      "evidence": "Source: 18-hour public MDM Agent post explicitly requiring human confirmation or code verification before record changes.",
+      "draftResponse": "@Deepika Manchanda, this is the right boundary for employee data: an agent can reconcile, propose and flag uncertainty, but a state change needs either an accountable human approval or a deterministic, independently auditable rule. I would retain a versioned evidence bundle for each field mutation—source-document hash, extraction confidence, matching rationale, approver or rule, effective date and rollback path—and report false-accept rate, exception rate and correction time. That is how the employee record becomes both useful and trustworthy.",
+      "priorityScore": 0.89,
+      "intendedMentions": [
+        "Deepika Manchanda"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/deepikamanchanda/recent-activity/all/",
+      "receiptOperationId": "20260901053643-comment-posted-linkedin-deepika-employee-data-boundary",
+      "postedAt": "2026-09-01T05:36:43Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-comment-anshuman-end-to-end-service-level",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/anshuman/recent-activity/all/",
+      "title": "AI can make one step ten times faster and leave the entire process exactly as slow as before.",
+      "author": "Anshuman Tiwari",
+      "reason": "Adds journey-level metrics to the discussion of AI bottlenecks.",
+      "evidence": "Source: 3-hour public post on local AI speed versus the end-to-end employee outcome.",
+      "draftResponse": "@Anshuman Tiwari, exactly. AI removes local effort; transformation requires the end-to-end service level to move. For every deployment I would baseline request-to-outcome p50/p95, queue age at the next human dependency, percentage of work removed rather than accelerated, and exception-recovery time. If the constraint merely moves from drafting to approval, the model’s seconds are not the user’s outcome.",
+      "priorityScore": 0.92,
+      "intendedMentions": [
+        "Anshuman Tiwari"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/anshuman/recent-activity/all/",
+      "receiptOperationId": "20260901053643-comment-posted-linkedin-anshuman-end-to-end-service-level",
+      "postedAt": "2026-09-01T05:36:43Z"
+    },
+    {
+      "id": "2026-09-01-linkedin-comment-yuxiong-data-eng-bench",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/yuxiong-he-75432112/recent-activity/all/",
+      "title": "data-eng-bench: production-grade data engineering benchmark",
+      "author": "Yuxiong He",
+      "reason": "Frames the benchmark around whole-system operational evidence and recovery.",
+      "evidence": "Source: 5-day public Snowflake AI Research post on 103 dbt tasks, 579 source tables and harness cost results.",
+      "draftResponse": "@Yuxiong He, data-eng-bench is useful because it grades materialized outcomes rather than code plausibility or plan quality. The 1.5–3.9× harness-cost spread means the operating unit is the whole agent system—model, tool policy, execution strategy and verifier—not model pass rate alone. I would add p95 recovery after a failed hidden assertion, duplicate-effect rate, and evidence coverage linking every materialized change to its ticket, tool trace and verifier result.",
+      "priorityScore": 0.88,
+      "intendedMentions": [
+        "Yuxiong He"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/yuxiong-he-75432112/recent-activity/all/",
+      "receiptOperationId": "20260901053643-comment-posted-linkedin-yuxiong-data-eng-bench",
+      "postedAt": "2026-09-01T05:36:43Z"
     }
   ]
 }

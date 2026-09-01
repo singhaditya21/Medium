@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901053643-comment-posted-linkedin-anshuman-end-to-end-service-level",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T05:36:43Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T05:36:43Z",
+    "scope": "User approved C1, C2, C3, C4 and C5 exactly as written and requested relevant people be tagged."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-anshuman-end-to-end-service-level",
+    "targetUrl": "https://www.linkedin.com/in/anshuman/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/anshuman/recent-activity/all/",
+    "publishedTextSha256": "d09d8e39ffa9a811076733b22f0fa83c7f6caa19abd00fbe547e6aceda45f3ca",
+    "verifiedAt": "2026-09-01T05:36:43Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp on Anshuman Tiwari's verified public source post. LinkedIn did not offer a selectable native mention for the author."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

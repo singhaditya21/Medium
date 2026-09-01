@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260901053643-comment-posted-linkedin-yuxiong-data-eng-bench",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-01T05:36:43Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-01T05:36:43Z",
+    "scope": "User approved C1, C2, C3, C4 and C5 exactly as written and requested relevant people be tagged."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-01-linkedin-comment-yuxiong-data-eng-bench",
+    "targetUrl": "https://www.linkedin.com/in/yuxiong-he-75432112/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/yuxiong-he-75432112/recent-activity/all/",
+    "publishedTextSha256": "c2d2436ec0b66abd31cc9c7ac427c38a93e239188f99185fa59b1aaa03d9ad45",
+    "verifiedAt": "2026-09-01T05:36:43Z",
+    "verification": "The signed-in LinkedIn UI rendered the exact approved comment under Aditya Singh with a current timestamp on Yuxiong He's verified public source post. LinkedIn did not offer a selectable native mention for the author."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
