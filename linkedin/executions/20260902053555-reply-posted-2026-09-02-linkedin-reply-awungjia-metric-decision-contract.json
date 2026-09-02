@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902053555-reply-posted-2026-09-02-linkedin-reply-awungjia-metric-decision-contract",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-02T05:35:55Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:35:55Z",
+    "scope": "User approved N1–N7 and D1 exactly as written on 2026-09-02."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-02-linkedin-reply-awungjia-metric-decision-contract",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7500753120071766016?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500753120071766016%2C7500764639794847745%29&dashCommentUrn=urn%3Ali%3Afsd%5Fcomment%3A%287500764639794847745%2Curn%3Ali%3Aactivity%3A7500753120071766016%29",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7500753120071766016?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500753120071766016%2C7500764639794847745%29&dashCommentUrn=urn%3Ali%3Afsd%5Fcomment%3A%287500764639794847745%2Curn%3Ali%3Aactivity%3A7500753120071766016%29",
+    "publishedTextSha256": "d1ab474d0633f2e6ecf1bf9547f445fc33aeee78dd5eaea2d79e06a2dc4bdf7f",
+    "verifiedAt": "2026-09-02T05:35:55Z",
+    "verification": "Rendered reply appeared under Aditya Singh with a current timestamp; Awungjia T.’s comment showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

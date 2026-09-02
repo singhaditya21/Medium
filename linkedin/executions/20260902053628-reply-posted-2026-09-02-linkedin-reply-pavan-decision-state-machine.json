@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902053628-reply-posted-2026-09-02-linkedin-reply-pavan-decision-state-machine",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-02T05:36:28Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:36:28Z",
+    "scope": "User approved N1–N7 and D1 exactly as written on 2026-09-02."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-02-linkedin-reply-pavan-decision-state-machine",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7498941183755333632?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7498941183755333632%2C7499163410757140480%29&dashCommentUrn=urn%3Ali%3Afsd%5Fcomment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7498941183755333632%2C7500570821225115648%29&dashReplyUrn=urn%3Ali%3Afsd%5Fcomment%3A%287500570821225115648%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7498941183755333632?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7498941183755333632%2C7499163410757140480%29&dashCommentUrn=urn%3Ali%3Afsd%5Fcomment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7498941183755333632%2C7500570821225115648%29&dashReplyUrn=urn%3Ali%3Afsd%5Fcomment%3A%287500570821225115648%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+    "publishedTextSha256": "eec06d924713e2988dd499943d76f65f2b2d168711e972f6186e20c414771f9f",
+    "verifiedAt": "2026-09-02T05:36:28Z",
+    "verification": "Rendered reply appeared under Aditya Singh with a current timestamp; Pavan Kumar B’s comment showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

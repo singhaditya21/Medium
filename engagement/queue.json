@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T05:22:21Z",
+  "updatedAt": "2026-09-02T05:36:46Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1556,7 +1556,10 @@
       "intendedMentions": [
         "Awungjia T."
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7500753120071766016?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500753120071766016%2C7500764639794847745%29&dashCommentUrn=urn%3Ali%3Afsd%5Fcomment%3A%287500764639794847745%2Curn%3Ali%3Aactivity%3A7500753120071766016%29",
+      "receiptOperationId": "20260902053555-reply-posted-2026-09-02-linkedin-reply-awungjia-metric-decision-contract",
+      "postedAt": "2026-09-02T05:35:55Z"
     },
     {
       "id": "2026-09-02-linkedin-reply-praveen-sme-intervention-loop",
@@ -1573,7 +1576,10 @@
       "intendedMentions": [
         "Praveen Shahi"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500638165867720704&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500171518534930432%2C7500421731426217986%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500421731426217986%2Curn%3Ali%3Aactivity%3A7500171518534930432%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7500171518534930432%2C7500638150537637888%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500638150537637888%2Curn%3Ali%3Aactivity%3A7500171518534930432%29&highlightedUpdateTrackingId=1DplYub3SW2KaOd7B2wzKA%3D%3D",
+      "receiptOperationId": "20260902053612-reply-posted-2026-09-02-linkedin-reply-praveen-sme-intervention-loop",
+      "postedAt": "2026-09-02T05:36:12Z"
     },
     {
       "id": "2026-09-02-linkedin-reply-pavan-decision-state-machine",
@@ -1590,7 +1596,10 @@
       "intendedMentions": [
         "Pavan Kumar B"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7498941183755333632?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7498941183755333632%2C7499163410757140480%29&dashCommentUrn=urn%3Ali%3Afsd%5Fcomment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7498941183755333632%2C7500570821225115648%29&dashReplyUrn=urn%3Ali%3Afsd%5Fcomment%3A%287500570821225115648%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+      "receiptOperationId": "20260902053628-reply-posted-2026-09-02-linkedin-reply-pavan-decision-state-machine",
+      "postedAt": "2026-09-02T05:36:28Z"
     },
     {
       "id": "2026-09-02-linkedin-reply-prashant-stp-controlled-denominator",
@@ -1607,7 +1616,10 @@
       "intendedMentions": [
         "Prashant Chibber"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500546042774495233&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7500146363062476800%2C7500425548892901376%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500425548892901376%2Curn%3Ali%3AugcPost%3A7500146363062476800%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7500146363062476800%2C7500545908887977985%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500545908887977985%2Curn%3Ali%3AugcPost%3A7500146363062476800%29&highlightedUpdateTrackingId=5ase0RhHQEy6KJjwBv05XA%3D%3D",
+      "receiptOperationId": "20260902053646-reply-posted-2026-09-02-linkedin-reply-prashant-stp-controlled-denominator",
+      "postedAt": "2026-09-02T05:36:46Z"
     }
   ]
 }

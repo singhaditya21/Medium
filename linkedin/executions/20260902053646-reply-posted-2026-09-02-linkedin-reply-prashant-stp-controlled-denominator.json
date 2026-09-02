@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902053646-reply-posted-2026-09-02-linkedin-reply-prashant-stp-controlled-denominator",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-02T05:36:46Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:36:46Z",
+    "scope": "User approved N1–N7 and D1 exactly as written on 2026-09-02."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-02-linkedin-reply-prashant-stp-controlled-denominator",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500546042774495233&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7500146363062476800%2C7500425548892901376%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500425548892901376%2Curn%3Ali%3AugcPost%3A7500146363062476800%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7500146363062476800%2C7500545908887977985%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500545908887977985%2Curn%3Ali%3AugcPost%3A7500146363062476800%29&highlightedUpdateTrackingId=5ase0RhHQEy6KJjwBv05XA%3D%3D",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500546042774495233&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7500146363062476800%2C7500425548892901376%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500425548892901376%2Curn%3Ali%3AugcPost%3A7500146363062476800%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7500146363062476800%2C7500545908887977985%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500545908887977985%2Curn%3Ali%3AugcPost%3A7500146363062476800%29&highlightedUpdateTrackingId=5ase0RhHQEy6KJjwBv05XA%3D%3D",
+    "publishedTextSha256": "86136d037248fd6a38c88b2a8c5a764eafe00e53458cb4651201aa05e8f446fa",
+    "verifiedAt": "2026-09-02T05:36:46Z",
+    "verification": "Rendered reply appeared under Aditya Singh with a current timestamp and linked Prashant Chibber mention; Prashant’s reply showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

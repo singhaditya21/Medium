@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902053707-message-posted-in-pavan8855",
+  "action": "message_posted",
+  "recordedAt": "2026-09-02T05:37:07Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:37:07Z",
+    "scope": "User approved N1–N7 and D1 exactly as written on 2026-09-02."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/pavan8855/",
+    "messageTextSha256": "797f4207246fec408a4e13f15c397a0579bb2ce0c24f79a1d37738ab9c74a649",
+    "verifiedAt": "2026-09-02T05:37:07Z",
+    "verification": "Pavan Kumar B conversation rendered the exact approved message under Aditya Singh at 11:05 AM, with LinkedIn showing the sent timestamp."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

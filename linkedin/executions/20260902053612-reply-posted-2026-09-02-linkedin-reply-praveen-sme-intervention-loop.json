@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902053612-reply-posted-2026-09-02-linkedin-reply-praveen-sme-intervention-loop",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-02T05:36:12Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:36:12Z",
+    "scope": "User approved N1–N7 and D1 exactly as written on 2026-09-02."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-02-linkedin-reply-praveen-sme-intervention-loop",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500638165867720704&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500171518534930432%2C7500421731426217986%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500421731426217986%2Curn%3Ali%3Aactivity%3A7500171518534930432%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7500171518534930432%2C7500638150537637888%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500638150537637888%2Curn%3Ali%3Aactivity%3A7500171518534930432%29&highlightedUpdateTrackingId=1DplYub3SW2KaOd7B2wzKA%3D%3D",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500638165867720704&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500171518534930432%2C7500421731426217986%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500421731426217986%2Curn%3Ali%3Aactivity%3A7500171518534930432%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7500171518534930432%2C7500638150537637888%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500638150537637888%2Curn%3Ali%3Aactivity%3A7500171518534930432%29&highlightedUpdateTrackingId=1DplYub3SW2KaOd7B2wzKA%3D%3D",
+    "publishedTextSha256": "ae4f7152a5302a1c825a91c6b0cbc66b1278eab884b6b612ef5d13a27d5bc176",
+    "verifiedAt": "2026-09-02T05:36:12Z",
+    "verification": "Rendered reply appeared under Aditya Singh with a current timestamp; Praveen Shahi’s latest comment showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
