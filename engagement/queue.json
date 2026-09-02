@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T09:29:22Z",
+  "updatedAt": "2026-09-02T10:25:46Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1840,6 +1840,23 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500085585689178112/",
       "receiptOperationId": "20260902092922-reply-posted-2026-09-02-linkedin-reply-ralph-decision-sla",
       "postedAt": "2026-09-02T09:29:22Z"
+    },
+    {
+      "id": "2026-09-02-linkedin-reply-zulu-operating-evidence-capstone",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/in/zulumthulisi-uca/recent-activity/all/",
+      "title": "Turn AI leadership certification into operating-evidence capstones",
+      "author": "Zulu Mthulisi",
+      "reason": "Zulu replied directly within the last hour, endorsed the board-ready evidence model, and connected it to the MZ-UCA programme. A concrete capstone design and question can deepen a relevant new relationship.",
+      "evidence": "Signed-in LinkedIn inspection showed Zulu’s one-hour-old direct reply stating that certification is a baseline while operating evidence proves competence, and that MZ-UCA is developing professionals who can justify, govern, measure and own AI outcomes. The reply has not yet been liked or answered by the user.",
+      "draftResponse": "Thank you, Zulu. The MZ-UCA direction becomes especially interesting if learners must produce an auditable deployment artifact, not just pass an exam: a use-case value ledger, risk tier, authority matrix, pre/post-condition tests and recovery drill. A strong capstone KPI could be 100% reconstructability of consequential decisions within a defined incident SLO. Which of those artifacts are you planning to include in the programme?",
+      "priorityScore": 0.93,
+      "intendedMentions": [
+        "Zulu Mthulisi"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
