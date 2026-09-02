@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902105606-reply-posted-2026-09-02-linkedin-reply-zulu-operating-evidence-capstone",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-02T10:56:06Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T10:56:06Z",
+    "scope": "User approved N1 exactly as written, including the Like, on 2026-09-02."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-02-linkedin-reply-zulu-operating-evidence-capstone",
+    "targetUrl": "https://www.linkedin.com/in/zulumthulisi-uca/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+    "publishedTextSha256": "e540412cf5e3eef5c79be468282783617c0fc21668fa1c617fe2bf04b36a74f7",
+    "verifiedAt": "2026-09-02T10:56:06Z",
+    "verification": "Rendered threaded reply appeared under Aditya Singh with a current timestamp and clickable Zulu Mthulisi mention; Zulu Mthulisi’s parent reply showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

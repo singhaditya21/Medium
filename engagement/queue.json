@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T10:25:46Z",
+  "updatedAt": "2026-09-02T10:56:06Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1856,7 +1856,10 @@
       "intendedMentions": [
         "Zulu Mthulisi"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+      "receiptOperationId": "20260902105606-reply-posted-2026-09-02-linkedin-reply-zulu-operating-evidence-capstone",
+      "postedAt": "2026-09-02T10:56:06Z"
     }
   ]
 }
