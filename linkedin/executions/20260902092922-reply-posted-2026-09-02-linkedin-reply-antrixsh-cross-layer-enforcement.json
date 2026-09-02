@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902092922-reply-posted-2026-09-02-linkedin-reply-antrixsh-cross-layer-enforcement",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-02T09:29:22Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T09:29:22Z",
+    "scope": "User approved N1 and N2 exactly as written on 2026-09-02."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-02-linkedin-reply-antrixsh-cross-layer-enforcement",
+    "targetUrl": "https://www.linkedin.com/in/antrixshgupta/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500391718706601984/",
+    "publishedTextSha256": "311e7843e3a78d664a4afdd608b3ff2ccf4febdc3fdccf649672a6089b4a5a14",
+    "verifiedAt": "2026-09-02T09:29:22Z",
+    "verification": "Rendered threaded reply appeared under Aditya Singh with a current timestamp and clickable Antrixsh Gupta mention; Antrixsh Gupta’s parent reply retained the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

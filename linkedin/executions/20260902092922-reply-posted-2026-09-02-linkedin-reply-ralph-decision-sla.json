@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902092922-reply-posted-2026-09-02-linkedin-reply-ralph-decision-sla",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-02T09:29:22Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T09:29:22Z",
+    "scope": "User approved N1 and N2 exactly as written on 2026-09-02."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-02-linkedin-reply-ralph-decision-sla",
+    "targetUrl": "https://www.linkedin.com/in/ralph-zeller/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500085585689178112/",
+    "publishedTextSha256": "0bfd41ccf7b333bce0c311fa95ddd98d45b52b66b6cd9a6dd8734d8ac5294a97",
+    "verifiedAt": "2026-09-02T09:29:22Z",
+    "verification": "Rendered threaded reply appeared under Aditya Singh with a current timestamp and clickable Ralph Zeller mention; Ralph Zeller’s parent reply retained the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

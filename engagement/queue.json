@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T09:10:05Z",
+  "updatedAt": "2026-09-02T09:29:22Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1816,7 +1816,10 @@
       "intendedMentions": [
         "Antrixsh Gupta"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500391718706601984/",
+      "receiptOperationId": "20260902092922-reply-posted-2026-09-02-linkedin-reply-antrixsh-cross-layer-enforcement",
+      "postedAt": "2026-09-02T09:29:22Z"
     },
     {
       "id": "2026-09-02-linkedin-reply-ralph-decision-sla",
@@ -1833,7 +1836,10 @@
       "intendedMentions": [
         "Ralph Zeller"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500085585689178112/",
+      "receiptOperationId": "20260902092922-reply-posted-2026-09-02-linkedin-reply-ralph-decision-sla",
+      "postedAt": "2026-09-02T09:29:22Z"
     }
   ]
 }
