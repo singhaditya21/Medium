@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T05:57:42Z",
+  "updatedAt": "2026-09-02T07:42:45Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1720,6 +1720,74 @@
       "responseUrl": "https://www.linkedin.com/in/bramrolvink/recent-activity/all/",
       "receiptOperationId": "20260902055742-comment-posted-2026-09-02-linkedin-comment-bram-governed-feedback-loop-moat",
       "postedAt": "2026-09-02T05:57:42Z"
+    },
+    {
+      "id": "2026-09-02-linkedin-comment-rishabh-ai-answer-share",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/rishabhmariwala/recent-activity/all/",
+      "title": "AI answer share as the next consumer discovery metric",
+      "author": "Rishabh Mariwala",
+      "reason": "A four-hour consumer-AI post has strong executive discussion and provides a concrete 92% adoption signal that can be converted into an operating measurement framework.",
+      "evidence": "The public post cited an NIQ study saying 92% of surveyed urban Indian shoppers used at least one AI tool in the previous month; 77 reactions, 40 comments and one repost were visible.",
+      "draftResponse": "@Rishabh Mariwala, the 92% figure suggests AI visibility needs its own measurement stack. Brands will need to know not only whether they appear in answers, but under which intents, evidence, comparisons and confidence. A practical scorecard could track answer share across 50–100 high-value queries, citation and source coverage, recommendation rank, factual error rate and conversion from AI-referred sessions. The strategic moat may be machine-readable product truth—availability, claims, reviews, ingredients and service levels—kept current enough for agents to trust.",
+      "priorityScore": 0.88,
+      "intendedMentions": [
+        "Rishabh Mariwala"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-02-linkedin-comment-quantorus-decision-latency",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/company/quantorusworld/posts/",
+      "title": "Bank data platforms need decision-level outcome metrics",
+      "author": "Quantorus",
+      "reason": "A fresh banking-data post contains specific scale and latency numbers that support a value-and-governance extension aligned to the user’s financial-services expertise.",
+      "evidence": "The post cited 1.5 PB of data, 44 business areas, 120-plus sources, 1,200 reports and dashboards, and a reduction in insight delivery from roughly 30 hours to 45 minutes or less.",
+      "draftResponse": "@Quantorus, the 30-hours-to-45-minutes shift is roughly a 97.5% latency reduction, but the value case becomes board-ready only when decision outcomes move too. For a bank, I would connect source freshness, data-quality exceptions and lineage coverage to credit turnaround time, fraud loss avoided, collection cure rate and cost per decision. A 1.5 PB platform spanning 44 business areas and 120+ sources becomes an AI foundation when every consequential output has a governed semantic definition, accountable owner and reconstructable evidence path.",
+      "priorityScore": 0.9,
+      "intendedMentions": [
+        "Quantorus"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-02-linkedin-comment-fredy-erp-commit-boundary",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/fredysantoso/recent-activity/all/",
+      "title": "ERP agents concentrate risk at the commit boundary",
+      "author": "Fredy Santoso",
+      "reason": "A fresh agentic-ERP post raises observability, rate-limiting and rollback questions where the user can add an action-level control-plane design.",
+      "evidence": "The post contrasted copilots with agents that commit ERP transactions, cited 600-plus Oracle agents, and asked how to correlate agent actions with integration runs and source-system transactions.",
+      "draftResponse": "@Fredy Santoso, the missing unit of observability is the business action chain, not the agent run. A single correlation ID should link intent, policy decision, leased authority, model and tool calls, iFlow execution, ERP transaction, postcondition and compensation. I would track receipt completeness, false-commit rate, p95 containment time and rollback success by action class. That matters more than “600 agents”: risk concentrates at the commit boundary where a nondeterministic decision becomes durable financial or operational state.",
+      "priorityScore": 0.94,
+      "intendedMentions": [
+        "Fredy Santoso"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-02-linkedin-comment-zulu-ai-leadership-evidence",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/zulumthulisi-uca/recent-activity/all/",
+      "title": "AI leadership credentials need operating evidence",
+      "author": "Zulu Mthulisi",
+      "reason": "A fresh AI-business-strategy certification discussion is directly relevant to enterprise adoption, governance, value realization and organizational readiness.",
+      "evidence": "The post described a new AWS AI Business Strategist certification aimed at governance, business cases, readiness and scaling, with roughly six months of recommended AI exposure.",
+      "draftResponse": "@Zulu Mthulisi, the certification is a useful signal, but enterprise AI leadership should ultimately be tested through operating evidence. A strong capstone would require a board-ready scorecard that connects a use case to baseline economics, risk tier, delegated authority, control thresholds, accountable owners, workforce change and a tested recovery SLO. Six months of exposure may establish vocabulary; durable competence comes from repeated ownership of decisions and outcomes.",
+      "priorityScore": 0.84,
+      "intendedMentions": [
+        "Zulu Mthulisi"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
