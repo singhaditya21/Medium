@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T12:08:03Z",
+  "updatedAt": "2026-09-02T05:22:21Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1540,6 +1540,74 @@
       "responseUrl": "https://www.linkedin.com/in/abhishek-dwivedi1/recent-activity/all/",
       "receiptOperationId": "20260901120802-comment-posted-2026-09-01-linkedin-comment-abhishek-graduated-autonomy",
       "postedAt": "2026-09-01T12:08:02Z"
+    },
+    {
+      "id": "2026-09-02-linkedin-reply-awungjia-metric-decision-contract",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7500753120071766016?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500753120071766016%2C7500764639794847745%29&dashCommentUrn=urn%3Ali%3Afsd%5Fcomment%3A%287500764639794847745%2Curn%3Ali%3Aactivity%3A7500753120071766016%29",
+      "title": "A board-ready AI metric needs a decision contract",
+      "author": "Awungjia T.",
+      "reason": "High-specificity comment on the user’s newly live Enterprise AI Control Plane Part 2 post; replying clarifies the operational contract behind a board metric.",
+      "evidence": "Awungjia argued that every measure needs an owner, baseline, observation period, threshold, intervention authority, and tested recovery path.",
+      "draftResponse": "Exactly, Awungjia. I would formalize that as a metric-to-decision contract: metric definition, baseline window, decision threshold, accountable owner, delegated intervention authority, and a tested recovery SLO. The board-level measure becomes operational only when a threshold crossing produces a predictable action and a verifiable receipt—not another review meeting.",
+      "priorityScore": 0.96,
+      "intendedMentions": [
+        "Awungjia T."
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-02-linkedin-reply-praveen-sme-intervention-loop",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500638165867720704&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500171518534930432%2C7500421731426217986%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500421731426217986%2Curn%3Ali%3Aactivity%3A7500171518534930432%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7500171518534930432%2C7500638150537637888%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500638150537637888%2Curn%3Ali%3Aactivity%3A7500171518534930432%29&highlightedUpdateTrackingId=1DplYub3SW2KaOd7B2wzKA%3D%3D",
+      "title": "Signals diagnose leakage; SME-owned interventions change it",
+      "author": "Praveen Shahi",
+      "reason": "Praveen challenged the prior framing and distinguished signal tracking from the commercial interventions needed to increase topline or reduce OPEX.",
+      "evidence": "Praveen said signal tracking can locate leakage but sales and growth SMEs must design and combine interventions, while signals delimit or enable those experiments.",
+      "draftResponse": "Agreed, Praveen—the signal is diagnostic, not curative. Closing the loop requires an SME-owned intervention portfolio: define the leakage mechanism, select one or more plays, set eligibility and stop rules, run controlled combinations, and use the signals to reallocate effort. I would measure incremental pipeline or gross-margin lift per intervention, time from signal to seller action, experiment win rate, and OPEX per recovered opportunity. That keeps autonomy subordinate to commercial judgment rather than multiplying activity.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Praveen Shahi"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-02-linkedin-reply-pavan-decision-state-machine",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7498941183755333632?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7498941183755333632%2C7499163410757140480%29&dashCommentUrn=urn%3Ali%3Afsd%5Fcomment%3A%287499163410757140480%2Curn%3Ali%3Aactivity%3A7498941183755333632%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7498941183755333632%2C7500570821225115648%29&dashReplyUrn=urn%3Ali%3Afsd%5Fcomment%3A%287500570821225115648%2Curn%3Ali%3Aactivity%3A7498941183755333632%29",
+      "title": "Preserve failed and prevented paths in the decision chain",
+      "author": "Pavan Kumar B",
+      "reason": "Pavan extended the action-receipt model with a tamper-evident decision ID and preservation of denied, interrupted, expired, and overridden attempts.",
+      "evidence": "Pavan argued that audit records need the controls that fired and the prevented paths, not only executed outcomes.",
+      "draftResponse": "Exactly, Pavan. The failed and prevented paths are part of the evidence, not operational noise. I would model the decision ID as an append-only state machine—proposed, authorized, denied, expired, executed, verified, compensated, or overridden—with each transition signed by the responsible policy, human, or tool. Audit completeness then becomes the share of consequential decisions whose full causal chain, including non-execution, can be reconstructed.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Pavan Kumar B"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-02-linkedin-reply-prashant-stp-controlled-denominator",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7500546042774495233&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7500146363062476800%2C7500425548892901376%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500425548892901376%2Curn%3Ali%3AugcPost%3A7500146363062476800%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7500146363062476800%2C7500545908887977985%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500545908887977985%2Curn%3Ali%3AugcPost%3A7500146363062476800%29&highlightedUpdateTrackingId=5ase0RhHQEy6KJjwBv05XA%3D%3D",
+      "title": "STP needs a controlled denominator and cohort segmentation",
+      "author": "Prashant Chibber",
+      "reason": "Prashant proposed STP plus exception rate as a board metric and placed latency, run cost, and recovery time underneath it as operating explainers.",
+      "evidence": "Prashant emphasized that STP must exceed risk and control thresholds and be segmented by product, channel, region, and customer demographic.",
+      "draftResponse": "I agree with that hierarchy, Prashant. STP paired with exception rate is board-legible, but the denominator and control gate matter: completed eligible journeys that met policy, quality, and customer-outcome thresholds—not simply transactions that avoided a human touch. Segmenting by product, channel, region, and customer cohort prevents the aggregate from hiding adverse-selection or service-quality pockets; latency, unit economics, and recovery time then explain the movement.",
+      "priorityScore": 0.94,
+      "intendedMentions": [
+        "Prashant Chibber"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
