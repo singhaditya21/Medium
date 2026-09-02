@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902090130-comment-posted-2026-09-02-linkedin-comment-fredy-erp-commit-boundary",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-02T09:01:30Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T09:01:30Z",
+    "scope": "User approved all four exactly as written, including the Likes, on 2026-09-02."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-02-linkedin-comment-fredy-erp-commit-boundary",
+    "targetUrl": "https://www.linkedin.com/in/fredysantoso/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/fredysantoso/recent-activity/all/",
+    "publishedTextSha256": "3546f561f4c75a5509c8939da4a38c834c958fb94da0141d533041e2acbddc89",
+    "verifiedAt": "2026-09-02T09:01:30Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp and clickable Fredy Santoso mention; the target post showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

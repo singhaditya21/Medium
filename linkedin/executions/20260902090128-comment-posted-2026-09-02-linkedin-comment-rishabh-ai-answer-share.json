@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902090128-comment-posted-2026-09-02-linkedin-comment-rishabh-ai-answer-share",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-02T09:01:28Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T09:01:28Z",
+    "scope": "User approved all four exactly as written, including the Likes, on 2026-09-02."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-02-linkedin-comment-rishabh-ai-answer-share",
+    "targetUrl": "https://www.linkedin.com/in/rishabhmariwala/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/rishabhmariwala/recent-activity/all/",
+    "publishedTextSha256": "1a28b2a46397f21959e067f2e8a22d857a103d7ab4247a0f6b861b5538a2d477",
+    "verifiedAt": "2026-09-02T09:01:28Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp and clickable Rishabh Mariwala mention; the target post showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

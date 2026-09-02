@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902090131-comment-posted-2026-09-02-linkedin-comment-zulu-ai-leadership-evidence",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-02T09:01:31Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T09:01:31Z",
+    "scope": "User approved all four exactly as written, including the Likes, on 2026-09-02."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-02-linkedin-comment-zulu-ai-leadership-evidence",
+    "targetUrl": "https://www.linkedin.com/in/zulumthulisi-uca/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/zulumthulisi-uca/recent-activity/all/",
+    "publishedTextSha256": "cef04a6ee49f30ffe16a160280339d1b5edc63b6944011830dd0e34f1384e782",
+    "verifiedAt": "2026-09-02T09:01:31Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp and clickable Zulu Mthulisi mention; the target post showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

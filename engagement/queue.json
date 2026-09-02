@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T07:42:45Z",
+  "updatedAt": "2026-09-02T09:01:31Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1736,7 +1736,10 @@
       "intendedMentions": [
         "Rishabh Mariwala"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/rishabhmariwala/recent-activity/all/",
+      "receiptOperationId": "20260902090128-comment-posted-2026-09-02-linkedin-comment-rishabh-ai-answer-share",
+      "postedAt": "2026-09-02T09:01:28Z"
     },
     {
       "id": "2026-09-02-linkedin-comment-quantorus-decision-latency",
@@ -1753,7 +1756,10 @@
       "intendedMentions": [
         "Quantorus"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/company/quantorusworld/posts/",
+      "receiptOperationId": "20260902090129-comment-posted-2026-09-02-linkedin-comment-quantorus-decision-latency",
+      "postedAt": "2026-09-02T09:01:29Z"
     },
     {
       "id": "2026-09-02-linkedin-comment-fredy-erp-commit-boundary",
@@ -1770,7 +1776,10 @@
       "intendedMentions": [
         "Fredy Santoso"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/fredysantoso/recent-activity/all/",
+      "receiptOperationId": "20260902090130-comment-posted-2026-09-02-linkedin-comment-fredy-erp-commit-boundary",
+      "postedAt": "2026-09-02T09:01:30Z"
     },
     {
       "id": "2026-09-02-linkedin-comment-zulu-ai-leadership-evidence",
@@ -1787,7 +1796,10 @@
       "intendedMentions": [
         "Zulu Mthulisi"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/zulumthulisi-uca/recent-activity/all/",
+      "receiptOperationId": "20260902090131-comment-posted-2026-09-02-linkedin-comment-zulu-ai-leadership-evidence",
+      "postedAt": "2026-09-02T09:01:31Z"
     }
   ]
 }

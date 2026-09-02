@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902090129-comment-posted-2026-09-02-linkedin-comment-quantorus-decision-latency",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-02T09:01:29Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T09:01:29Z",
+    "scope": "User approved all four exactly as written, including the Likes, on 2026-09-02."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-02-linkedin-comment-quantorus-decision-latency",
+    "targetUrl": "https://www.linkedin.com/company/quantorusworld/posts/",
+    "publicUrl": "https://www.linkedin.com/company/quantorusworld/posts/",
+    "publishedTextSha256": "b083699c08da0006b69692c67852b87e45bd750e2b0113500caa8e4377c7f016",
+    "verifiedAt": "2026-09-02T09:01:29Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp and clickable Quantorus company mention; the target post showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
