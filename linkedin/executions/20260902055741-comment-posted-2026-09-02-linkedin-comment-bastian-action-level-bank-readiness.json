@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902055741-comment-posted-2026-09-02-linkedin-comment-bastian-action-level-bank-readiness",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-02T05:57:41Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:57:41Z",
+    "scope": "User approved O1–O5 exactly as written, including Likes, on 2026-09-02."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-02-linkedin-comment-bastian-action-level-bank-readiness",
+    "targetUrl": "https://www.linkedin.com/in/bastian-lossen-645896/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/bastian-lossen-645896/recent-activity/all/",
+    "publishedTextSha256": "b811f1cb54be908e42eee221a0f653d2f8e945a850e2b8fbdd15f68efb91b0d5",
+    "verifiedAt": "2026-09-02T05:57:41Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp and clickable Bastian Lossen mention; the target post showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

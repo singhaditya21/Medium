@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902055742-comment-posted-2026-09-02-linkedin-comment-jasmeet-workload-placement-portfolio",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-02T05:57:42Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:57:42Z",
+    "scope": "User approved O1–O5 exactly as written, including Likes, on 2026-09-02."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-02-linkedin-comment-jasmeet-workload-placement-portfolio",
+    "targetUrl": "https://www.linkedin.com/in/jasmeetsbajaj/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/jasmeetsbajaj/recent-activity/all/",
+    "publishedTextSha256": "74869e633f6bf1232280c82f6730474408004fe9e13b20cd2f6d8a0bffe291e2",
+    "verifiedAt": "2026-09-02T05:57:42Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp and clickable Dr. Jasmeet S. Bajaj mention; the target post showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

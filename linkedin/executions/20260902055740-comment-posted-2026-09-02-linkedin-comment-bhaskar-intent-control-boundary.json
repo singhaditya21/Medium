@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902055740-comment-posted-2026-09-02-linkedin-comment-bhaskar-intent-control-boundary",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-02T05:57:40Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:57:40Z",
+    "scope": "User approved O1–O5 exactly as written, including Likes, on 2026-09-02."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-02-linkedin-comment-bhaskar-intent-control-boundary",
+    "targetUrl": "https://www.linkedin.com/in/drbhaskarghosh/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/drbhaskarghosh/recent-activity/all/",
+    "publishedTextSha256": "0fe08ae881dd185da195cfe7667838fd24af8ad8931690fd0379ad9e3a3530a5",
+    "verifiedAt": "2026-09-02T05:57:40Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp and clickable Bhaskar Ghosh mention; the target post showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

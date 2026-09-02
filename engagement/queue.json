@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T05:42:10Z",
+  "updatedAt": "2026-09-02T05:57:42Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1636,7 +1636,10 @@
       "intendedMentions": [
         "Radhika Saigal"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/radhika-saigal-48a6a612/recent-activity/all/",
+      "receiptOperationId": "20260902055740-comment-posted-2026-09-02-linkedin-comment-radhika-workflow-value-ledger",
+      "postedAt": "2026-09-02T05:57:40Z"
     },
     {
       "id": "2026-09-02-linkedin-comment-bhaskar-intent-control-boundary",
@@ -1653,7 +1656,10 @@
       "intendedMentions": [
         "Bhaskar Ghosh"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/drbhaskarghosh/recent-activity/all/",
+      "receiptOperationId": "20260902055740-comment-posted-2026-09-02-linkedin-comment-bhaskar-intent-control-boundary",
+      "postedAt": "2026-09-02T05:57:40Z"
     },
     {
       "id": "2026-09-02-linkedin-comment-bastian-action-level-bank-readiness",
@@ -1670,7 +1676,10 @@
       "intendedMentions": [
         "Bastian Lossen"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/bastian-lossen-645896/recent-activity/all/",
+      "receiptOperationId": "20260902055741-comment-posted-2026-09-02-linkedin-comment-bastian-action-level-bank-readiness",
+      "postedAt": "2026-09-02T05:57:41Z"
     },
     {
       "id": "2026-09-02-linkedin-comment-jasmeet-workload-placement-portfolio",
@@ -1687,7 +1696,10 @@
       "intendedMentions": [
         "Dr. Jasmeet S. Bajaj"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/jasmeetsbajaj/recent-activity/all/",
+      "receiptOperationId": "20260902055742-comment-posted-2026-09-02-linkedin-comment-jasmeet-workload-placement-portfolio",
+      "postedAt": "2026-09-02T05:57:42Z"
     },
     {
       "id": "2026-09-02-linkedin-comment-bram-governed-feedback-loop-moat",
@@ -1704,7 +1716,10 @@
       "intendedMentions": [
         "Bram Rolvink"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/bramrolvink/recent-activity/all/",
+      "receiptOperationId": "20260902055742-comment-posted-2026-09-02-linkedin-comment-bram-governed-feedback-loop-moat",
+      "postedAt": "2026-09-02T05:57:42Z"
     }
   ]
 }

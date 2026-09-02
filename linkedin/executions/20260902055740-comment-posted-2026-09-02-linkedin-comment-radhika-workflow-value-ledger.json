@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260902055740-comment-posted-2026-09-02-linkedin-comment-radhika-workflow-value-ledger",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-02T05:57:40Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-02T05:57:40Z",
+    "scope": "User approved O1–O5 exactly as written, including Likes, on 2026-09-02."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-02-linkedin-comment-radhika-workflow-value-ledger",
+    "targetUrl": "https://www.linkedin.com/in/radhika-saigal-48a6a612/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/radhika-saigal-48a6a612/recent-activity/all/",
+    "publishedTextSha256": "0eea349e8c2c955c1771d2edd40c496e93b7d353c691407b64801945d9784de1",
+    "verifiedAt": "2026-09-02T05:57:40Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp and clickable Radhika Saigal mention; the target post showed the selected Like state."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
