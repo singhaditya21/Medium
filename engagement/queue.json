@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T09:01:31Z",
+  "updatedAt": "2026-09-02T09:10:05Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1800,6 +1800,40 @@
       "responseUrl": "https://www.linkedin.com/in/zulumthulisi-uca/recent-activity/all/",
       "receiptOperationId": "20260902090131-comment-posted-2026-09-02-linkedin-comment-zulu-ai-leadership-evidence",
       "postedAt": "2026-09-02T09:01:31Z"
+    },
+    {
+      "id": "2026-09-02-linkedin-reply-antrixsh-cross-layer-enforcement",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/in/antrixshgupta/recent-activity/all/",
+      "title": "Cross-layer guardrail enforcement and measurable readiness gates",
+      "author": "Antrixsh Gupta",
+      "reason": "Antrixsh replied directly to the user four hours ago, affirming that policy coverage and containment time make cross-layer enforcement measurable. A concrete gate design advances the technical discussion.",
+      "evidence": "Signed-in LinkedIn notification and thread inspection showed Antrixsh’s direct reply: Cross-layer enforcement makes guardrails operationally measurable. Policy coverage and containment time provide strong signals for production readiness. The reply is four hours old, the user has already liked it, and no user reply is present.",
+      "draftResponse": "Exactly, Antrixsh. The production test is whether a breach in one layer automatically changes authority in the next: retrieval trust below threshold should revoke write tools, require human review and block memory persistence. I would set readiness gates at 100% receipt coverage for consequential actions, zero prohibited-path escapes in adversarial tests and a p95 containment SLO measured from detection to privilege revocation—not merely alert generation.",
+      "priorityScore": 0.91,
+      "intendedMentions": [
+        "Antrixsh Gupta"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-02-linkedin-reply-ralph-decision-sla",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/in/ralph-zeller/recent-activity/all/",
+      "title": "Manager decision SLA for AI transformation KPIs",
+      "author": "Ralph Zeller",
+      "reason": "Ralph replied directly to the user fifteen hours ago and agreed that KPI baselines and manager accountability support execution. A decision-SLA framing turns the agreement into a more operational relationship-building exchange.",
+      "evidence": "Signed-in LinkedIn notification and thread inspection showed Ralph’s direct reply: very valid and concrete point! Baselining KPIs and accountability to managers are strong ways to support execution! The user has already liked the reply and has not replied.",
+      "draftResponse": "Thank you, Ralph. I would add a decision SLA to the baseline: when a KPI breaches its threshold, the accountable manager should have a defined intervention window and evidence trail. That makes execution measurable as threshold breach → owner action → verified workflow outcome, rather than letting the scorecard become passive reporting.",
+      "priorityScore": 0.82,
+      "intendedMentions": [
+        "Ralph Zeller"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
