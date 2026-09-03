@@ -15,7 +15,7 @@ import requests
 from lxml import etree, html
 from PIL import Image
 
-from build_site import DATA_DIR, ROOT, SERIES, SITE_URL, clean_url, load_stories
+from build_site import DATA_DIR, ROOT, SERIES, SITE_URL, clean_url, is_editorial_draft, load_stories
 
 
 TECHNICAL_FIGURE_CONTRACTS = {
@@ -214,21 +214,22 @@ def main() -> None:
     try:
         feed = etree.parse(str(ROOT / "feed.xml"))
         entries = feed.xpath("//*[local-name()='entry']")
-        if len(entries) != len(stories):
-            errors.append(f"Atom entry count {len(entries)} does not match story count {len(stories)}")
+        expected_feed_count = sum(not is_editorial_draft(story) for story in stories)
+        if len(entries) != expected_feed_count:
+            errors.append(f"Atom entry count {len(entries)} does not match published story count {expected_feed_count}")
     except (OSError, etree.XMLSyntaxError) as exc:
         errors.append(f"invalid Atom feed: {exc}")
     try:
         rss = etree.parse(str(ROOT / "rss.xml"))
         items = rss.xpath("//item")
-        if len(items) != len(stories):
-            errors.append(f"RSS item count {len(items)} does not match story count {len(stories)}")
+        if len(items) != expected_feed_count:
+            errors.append(f"RSS item count {len(items)} does not match published story count {expected_feed_count}")
     except (OSError, etree.XMLSyntaxError) as exc:
         errors.append(f"invalid RSS feed: {exc}")
     try:
         json_feed = json.loads((ROOT / "feed.json").read_text(encoding="utf-8"))
-        if len(json_feed.get("items", [])) != len(stories):
-            errors.append("JSON Feed item count does not match story count")
+        if len(json_feed.get("items", [])) != expected_feed_count:
+            errors.append("JSON Feed item count does not match published story count")
     except (OSError, json.JSONDecodeError) as exc:
         errors.append(f"invalid JSON Feed: {exc}")
 

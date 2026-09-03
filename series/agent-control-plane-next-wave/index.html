@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d2425">
+  <meta name="author" content="Aditya Singh">
+  <meta name="description" content="Editorial drafts extending production-agent engineering into transactions, retries, verification, policy, observability, degradation, incidents, rollout, data boundaries, and Revenue Operations.">
+  <meta property="og:title" content="Agent Control Plane: Next Wave — Aditya Singh">
+  <meta property="og:description" content="Editorial drafts extending production-agent engineering into transactions, retries, verification, policy, observability, degradation, incidents, rollout, data boundaries, and Revenue Operations.">
+  <meta property="og:url" content="https://singhaditya21.github.io/Medium/series/agent-control-plane-next-wave/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://singhaditya21.github.io/Medium/assets/images/your-ai-agent-needs-a-transaction-boundary/figure-01.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://singhaditya21.github.io/Medium/series/agent-control-plane-next-wave/">
+  <link rel="alternate" type="application/atom+xml" title="Aditya Singh essays" href="../../feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Aditya Singh essays" href="../../rss.xml">
+  <link rel="alternate" type="application/feed+json" title="Aditya Singh essays" href="../../feed.json">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/styles.css?v=d0c27ba2d0c5">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Agent Control Plane: Next Wave", "description": "Editorial drafts extending production-agent engineering into transactions, retries, verification, policy, observability, degradation, incidents, rollout, data boundaries, and Revenue Operations.", "url": "https://singhaditya21.github.io/Medium/series/agent-control-plane-next-wave/", "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-transaction-boundary/", "name": "Your AI Agent Needs a Transaction Boundary"}, {"@type": "ListItem", "position": 2, "url": "https://singhaditya21.github.io/Medium/articles/the-hardest-agent-failure-is-an-ambiguous-success/", "name": "The Hardest Agent Failure Is an Ambiguous Success"}, {"@type": "ListItem", "position": 3, "url": "https://singhaditya21.github.io/Medium/articles/an-agent-retry-is-a-new-risk-decision/", "name": "An Agent Retry Is a New Risk Decision"}, {"@type": "ListItem", "position": 4, "url": "https://singhaditya21.github.io/Medium/articles/your-verifier-must-not-trust-the-agent/", "name": "Your Verifier Must Not Trust the Agent"}, {"@type": "ListItem", "position": 5, "url": "https://singhaditya21.github.io/Medium/articles/the-agent-policy-engine-is-a-compiler/", "name": "The Agent Policy Engine Is a Compiler, Not a Prompt"}, {"@type": "ListItem", "position": 6, "url": "https://singhaditya21.github.io/Medium/articles/ai-agent-observability-is-not-logging/", "name": "AI Agent Observability Is Not Logging"}, {"@type": "ListItem", "position": 7, "url": "https://singhaditya21.github.io/Medium/articles/every-agent-needs-a-safe-degradation-ladder/", "name": "Every Agent Needs a Safe Degradation Ladder"}, {"@type": "ListItem", "position": 8, "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-fencing-token/", "name": "Your AI Agent Needs a Fencing Token"}, {"@type": "ListItem", "position": 9, "url": "https://singhaditya21.github.io/Medium/articles/who-owns-an-ai-agent-incident/", "name": "Who Owns an AI Agent Incident?"}, {"@type": "ListItem", "position": 10, "url": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-change-budget/", "name": "Your AI Agent Needs a Change Budget"}, {"@type": "ListItem", "position": 11, "url": "https://singhaditya21.github.io/Medium/articles/an-agents-context-window-is-a-data-boundary/", "name": "An Agent's Context Window Is a Data Boundary"}, {"@type": "ListItem", "position": 12, "url": "https://singhaditya21.github.io/Medium/articles/revenue-operations-needs-an-agent-decision-ledger/", "name": "Revenue Operations Needs an Agent Decision Ledger"}]}}</script>
+
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('as-theme')||'light'}catch(e){}</script>
+  <title>Agent Control Plane: Next Wave — Aditya Singh</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+
+<header class="site-header">
+  <a class="brand" href="../../index.html" aria-label="AS — Aditya Singh essays home">
+    <span class="brand-mark">AS</span><span class="brand-name">Aditya Singh</span>
+  </a>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="../../index.html#stories">Stories</a>
+    <a href="../../series/">Series</a>
+    <a href="../../rss.xml">RSS</a>
+    <a href="https://medium.com/@singhaditya21_89007" target="_blank" rel="noopener noreferrer">Medium ↗</a>
+    <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle>
+      <span aria-hidden="true">◐</span>
+    </button>
+  </nav>
+</header>
+
+<main id="main" class="series-page">
+  <a class="back-link" href="../">← All series</a>
+  <header class="series-hero"><p class="eyebrow">Reading series · 12 stories</p><h1>Agent Control Plane: Next Wave</h1><p>Editorial drafts extending production-agent engineering into transactions, retries, verification, policy, observability, degradation, incidents, rollout, data boundaries, and Revenue Operations.</p></header>
+  <section class="series-story-list" aria-label="Stories in reading order">
+<article class="series-story">
+  <span class="series-number">01</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/your-ai-agent-needs-a-transaction-boundary/">Your AI Agent Needs a Transaction Boundary</a></h2>
+  <p>A production blueprint for binding AI-agent intent to one durable transaction across prepare, authorize, execute, verify, and compensate phases.</p>
+  <a class="read-link" href="../../articles/your-ai-agent-needs-a-transaction-boundary/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">02</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/the-hardest-agent-failure-is-an-ambiguous-success/">The Hardest Agent Failure Is an Ambiguous Success</a></h2>
+  <p>A production architecture for classifying and resolving ambiguous AI-agent outcomes across partial commits, asynchronous effects, stale reads, and compensation.</p>
+  <a class="read-link" href="../../articles/the-hardest-agent-failure-is-an-ambiguous-success/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">03</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/an-agent-retry-is-a-new-risk-decision/">An Agent Retry Is a New Risk Decision</a></h2>
+  <p>A risk-priced retry architecture for AI agents using semantic idempotency, ambiguity budgets, retry amplification limits, and effect-aware escalation.</p>
+  <a class="read-link" href="../../articles/an-agent-retry-is-a-new-risk-decision/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">04</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/your-verifier-must-not-trust-the-agent/">Your Verifier Must Not Trust the Agent</a></h2>
+  <p>A technical design for independent AI-agent verification using separate identities, data paths, assertions, evidence quality, and recovery gates.</p>
+  <a class="read-link" href="../../articles/your-verifier-must-not-trust-the-agent/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">05</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/the-agent-policy-engine-is-a-compiler/">The Agent Policy Engine Is a Compiler, Not a Prompt</a></h2>
+  <p>A policy-as-code architecture for compiling enterprise AI-agent rules into typed decisions, obligations, tests, and enforceable capabilities.</p>
+  <a class="read-link" href="../../articles/the-agent-policy-engine-is-a-compiler/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">06</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/ai-agent-observability-is-not-logging/">AI Agent Observability Is Not Logging</a></h2>
+  <p>A business-effect observability architecture for AI agents linking traces, decisions, authority, evidence, outcomes, cost, and recovery.</p>
+  <a class="read-link" href="../../articles/ai-agent-observability-is-not-logging/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">07</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/every-agent-needs-a-safe-degradation-ladder/">Every Agent Needs a Safe Degradation Ladder</a></h2>
+  <p>A control-plane blueprint for moving AI agents through autonomous, reviewed, recommend-only, read-only, and contained operating modes.</p>
+  <a class="read-link" href="../../articles/every-agent-needs-a-safe-degradation-ladder/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">08</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/your-ai-agent-needs-a-fencing-token/">Your AI Agent Needs a Fencing Token</a></h2>
+  <p>A production design for monotonic fencing tokens that prevent stale AI-agent workers, leases, queues, and retries from committing business effects.</p>
+  <a class="read-link" href="../../articles/your-ai-agent-needs-a-fencing-token/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">09</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/who-owns-an-ai-agent-incident/">Who Owns an AI Agent Incident?</a></h2>
+  <p>An AI-agent incident-command architecture defining roles, clocks, decision rights, evidence, containment, reconciliation, and recovery gates.</p>
+  <a class="read-link" href="../../articles/who-owns-an-ai-agent-incident/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">10</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/your-ai-agent-needs-a-change-budget/">Your AI Agent Needs a Change Budget</a></h2>
+  <p>A canary and change-budget model for AI agents using authority-weighted exposure, evidence windows, cohort controls, and automatic rollback.</p>
+  <a class="read-link" href="../../articles/your-ai-agent-needs-a-change-budget/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">11</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/an-agents-context-window-is-a-data-boundary/">An Agent&#x27;s Context Window Is a Data Boundary</a></h2>
+  <p>A governed context architecture for enterprise AI agents using purpose-bound retrieval, policy filtering, provenance, minimization, residency, and deletion evidence.</p>
+  <a class="read-link" href="../../articles/an-agents-context-window-is-a-data-boundary/">Read essay <span>→</span></a></div>
+</article>
+<article class="series-story">
+  <span class="series-number">12</span>
+  <div><p class="card-meta">3 Sep 2026 · 6 min read</p>
+  <h2><a href="../../articles/revenue-operations-needs-an-agent-decision-ledger/">Revenue Operations Needs an Agent Decision Ledger</a></h2>
+  <p>A RevOps decision-ledger architecture linking evidence, agent proposals, human approvals, commercial authority, CRM effects, and revenue outcomes.</p>
+  <a class="read-link" href="../../articles/revenue-operations-needs-an-agent-decision-ledger/">Read essay <span>→</span></a></div>
+</article></section>
+</main>
+
+<footer class="site-footer">
+  <div><span class="brand-mark small">AS</span><p>Enterprise AI, agent architecture, and responsible systems.</p></div>
+  <p>© <span data-year></span> Aditya Singh. Independent essays, also available on <a href="https://medium.com/@singhaditya21_89007" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+</footer>
+  </div>
+  <script src="../../assets/site.js?v=d0c27ba2d0c5" defer></script>
+</body>
+</html>

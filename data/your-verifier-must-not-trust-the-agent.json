@@ -1,0 +1,370 @@
+{
+  "author": "Aditya Singh",
+  "id": "effd4fe4d23e",
+  "slug": "your-verifier-must-not-trust-the-agent",
+  "title": "Your Verifier Must Not Trust the Agent",
+  "subtitle": "Independent postcondition evidence is the boundary between a claimed success and a proven business effect.",
+  "description": "A technical design for independent AI-agent verification using separate identities, data paths, assertions, evidence quality, and recovery gates.",
+  "canonical": "https://singhaditya21.github.io/Medium/articles/your-verifier-must-not-trust-the-agent/",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/your-verifier-must-not-trust-the-agent/",
+  "publishedAt": "2026-09-03T12:00:00.000Z",
+  "modifiedAt": "2026-09-03T12:00:00.000Z",
+  "status": "editorial_draft",
+  "statusLabel": "Editorial draft",
+  "readTime": "6 min read",
+  "wordCount": 1136,
+  "tags": [
+    "AI agents",
+    "Verification",
+    "AI governance",
+    "Reliability",
+    "Enterprise architecture"
+  ],
+  "heroImage": "assets/images/your-verifier-must-not-trust-the-agent/figure-01.svg",
+  "heroAlt": "Six-stage independent verifier architecture separating approved intent, effect execution, evidence acquisition, comparison, decision, and recovery.",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The agent says the customer record was updated, the tool says the call succeeded, and the trace shows no exception. None of those statements proves that the approved business state exists.",
+      "text": "The agent says the customer record was updated, the tool says the call succeeded, and the trace shows no exception. None of those statements proves that the approved business state exists."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A verifier that consumes the agent's summary, uses the same credential, calls the same abstraction, and asks the same model whether the outcome looks right is not independent. It is a second opinion produced inside the first failure domain.",
+      "text": "A verifier that consumes the agent's summary, uses the same credential, calls the same abstraction, and asks the same model whether the outcome looks right is not independent. It is a second opinion produced inside the first failure domain."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Verification should share the approved intent with execution—but not its identity, evidence path, implementation, or incentive to call the action successful.",
+      "text": "Verification should share the approved intent with execution—but not its identity, evidence path, implementation, or incentive to call the action successful."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-verifier-must-not-trust-the-agent/figure-01.svg",
+      "alt": "Six-stage independent verifier architecture separating approved intent, effect execution, evidence acquisition, comparison, decision, and recovery.",
+      "caption": "Figure 1. Execution and proof share intent but use different identities and evidence paths. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Correlated verification creates confident false closure",
+      "text": "Correlated verification creates confident false closure"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Execution and verification fail together when they share cached data, a tool adapter, a parsing assumption, or a broad principal. A malformed adapter can translate both the write and the read incorrectly. A compromised agent can shape the verifier's prompt. A stale replica can confirm a state that never reached the authoritative ledger.",
+      "text": "Execution and verification fail together when they share cached data, a tool adapter, a parsing assumption, or a broad principal. A malformed adapter can translate both the write and the read incorrectly. A compromised agent can shape the verifier's prompt. A stale replica can confirm a state that never reached the authoritative ledger."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The verification contract must therefore name the assertion, evidence authority, observation deadline, acceptable lag, and independence class. The verifier evaluates a structured postcondition—not the persuasiveness of the agent's explanation.",
+      "text": "The verification contract must therefore name the assertion, evidence authority, observation deadline, acceptable lag, and independence class. The verifier evaluates a structured postcondition—not the persuasiveness of the agent's explanation."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Separate the proposal, effect, and evidence planes",
+      "text": "Separate the proposal, effect, and evidence planes"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The proposal plane defines the intended delta. The effect plane executes through a narrow gateway. The evidence plane uses a different service identity and, where material, a different authoritative interface such as an immutable ledger, database change feed, or provider reconciliation API.",
+      "text": "The proposal plane defines the intended delta. The effect plane executes through a narrow gateway. The evidence plane uses a different service identity and, where material, a different authoritative interface such as an immutable ledger, database change feed, or provider reconciliation API."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A verification service compares intended and observed state, checks freshness and provenance, and emits one of four outcomes: verified, violated, inconclusive, or expired. Only verified closes success. Violation invokes recovery; inconclusive preserves ambiguity; expiry transfers ownership to a defined human queue.",
+      "text": "A verification service compares intended and observed state, checks freshness and provenance, and emits one of four outcomes: verified, violated, inconclusive, or expired. Only verified closes success. Violation invokes recovery; inconclusive preserves ambiguity; expiry transfers ownership to a defined human queue."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-verifier-must-not-trust-the-agent/figure-02.svg",
+      "alt": "Eight-state verification lifecycle distinguishing verified, violated, inconclusive, and expired outcomes before resolution.",
+      "caption": "Figure 2. Inconclusive evidence preserves uncertainty instead of manufacturing success. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Score verification independence explicitly",
+      "text": "Score verification independence explicitly"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A simple independence score makes correlated controls visible:",
+      "text": "A simple independence score makes correlated controls visible:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "I_verify = w_id × sep(identity) + w_path × sep(data_path)\n         + w_impl × sep(implementation) + w_auth × authority(source)\n         - w_corr × shared_failure_modes\nclose_success only if I_verify ≥ I_min ∧ freshness ≤ F_max ∧ assertion = true",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The score is ordinal unless its weights are empirically calibrated. Its value is architectural: a verifier using the same model, adapter, cache, and credential should not silently receive a high-assurance label.",
+      "text": "The score is ordinal unless its weights are empirically calibrated. Its value is architectural: a verifier using the same model, adapter, cache, and credential should not silently receive a high-assurance label."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Independence dimension",
+        "Weak pattern",
+        "Stronger pattern"
+      ],
+      "rows": [
+        [
+          "Identity",
+          "Agent reuses executor token",
+          "Verifier-only read principal"
+        ],
+        [
+          "Path",
+          "Same tool wrapper",
+          "Authoritative reconciliation endpoint"
+        ],
+        [
+          "Implementation",
+          "Same generated parser",
+          "Typed, separately tested assertion"
+        ],
+        [
+          "Evidence",
+          "Agent narrative",
+          "Versioned source observation"
+        ],
+        [
+          "Ownership",
+          "Agent closes itself",
+          "Control service owns terminal state"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Compile verification into an assertion",
+      "text": "Compile verification into an assertion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The expected outcome should be machine-testable and bound to the approved action:",
+      "text": "The expected outcome should be machine-testable and bound to the approved action:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "assertion_id: verify_quote_771_v43\naction_id: act_01K...\nsource:\n  system: billing-ledger\n  interface: adjustment-by-action-id\n  max_lag_seconds: 45\nexpect:\n  account_id: A-1902\n  discount_bps: 800\n  occurrences: 1\noutcomes: [verified, violated, inconclusive, expired]\non_violation: freeze_and_compensate",
+      "language": "yaml"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Assertions should be generated from a reviewed schema, not free-form reasoning. Property-based tests can vary versions, delays, duplicates, and partial state to confirm the verifier fails closed when evidence is missing or contradictory.",
+      "text": "Assertions should be generated from a reviewed schema, not free-form reasoning. Property-based tests can vary versions, delays, duplicates, and partial state to confirm the verifier fails closed when evidence is missing or contradictory."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Measure proof coverage and correlation",
+      "text": "Measure proof coverage and correlation"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Receipt coverage alone is insufficient if most receipts close on low-quality evidence. Track independent verification coverage by risk tier, inconclusive age, false closure discovered by later reconciliation, shared-dependency concentration, and assertion drift after schema changes.",
+      "text": "Receipt coverage alone is insufficient if most receipts close on low-quality evidence. Track independent verification coverage by risk tier, inconclusive age, false closure discovered by later reconciliation, shared-dependency concentration, and assertion drift after schema changes."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The illustrative gate shows perfect receipt creation but a breach in high-independence coverage. That is exactly the condition a receipt-count dashboard would hide.",
+      "text": "The illustrative gate shows perfect receipt creation but a breach in high-independence coverage. That is exactly the condition a receipt-count dashboard would hide."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-verifier-must-not-trust-the-agent/figure-03.svg",
+      "alt": "Five-metric verification scorecard showing a breach in high-risk independent proof despite complete receipt creation.",
+      "caption": "Figure 3. Receipt count passes while meaningful proof coverage fails. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Operating signal",
+        "Decision use",
+        "Failure interpretation"
+      ],
+      "rows": [
+        [
+          "Independent proof coverage",
+          "Gate authority by risk tier",
+          "Execution is closing on correlated evidence"
+        ],
+        [
+          "False closure",
+          "Trigger incident and retrospective",
+          "Verifier accepted an incorrect outcome"
+        ],
+        [
+          "Inconclusive age",
+          "Escalate unresolved actions",
+          "Observation path or recovery capacity is weak"
+        ],
+        [
+          "Shared-failure concentration",
+          "Add alternate evidence paths",
+          "Verifier is not meaningfully independent"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure-injection before production",
+      "text": "Failure-injection before production"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A design review cannot prove <strong>The component that performs an effect cannot be the sole source that proves it.</strong> The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition.",
+      "text": "A design review cannot prove The component that performs an effect cannot be the sole source that proves it. The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Injected fault",
+        "Experiment",
+        "Required evidence"
+      ],
+      "rows": [
+        [
+          "Delayed or reordered work",
+          "Pause the path after EXECUTE and release it after VERIFIED",
+          "The stale path cannot manufacture terminal success"
+        ],
+        [
+          "Authority becomes stale",
+          "Advance policy, mode, ownership, or resource version before effect commit",
+          "The final gateway rejects the old decision context"
+        ],
+        [
+          "Evidence is missing or corrupted",
+          "Remove one authoritative observation or change its digest",
+          "The outcome remains violated, inconclusive, or owned—never guessed"
+        ],
+        [
+          "Recovery itself fails",
+          "Interrupt compensation, handoff, or receipt closure",
+          "The action stays visible with an owner, deadline, and next legal transition"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk.",
+      "text": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Three questions for the architecture review",
+      "text": "Three questions for the architecture review"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is truth decided?</strong> Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent.",
+      "text": "Where is truth decided? Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is authority finally enforced?</strong> Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action.",
+      "text": "Where is authority finally enforced? Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>What blocks promotion?</strong> Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry.",
+      "text": "What blocks promotion? Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "A practical implementation sequence",
+      "text": "A practical implementation sequence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1. Name the business postcondition.</strong> Replace ‘tool succeeded’ with one typed assertion on authoritative state.",
+      "text": "1. Name the business postcondition. Replace ‘tool succeeded’ with one typed assertion on authoritative state."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>2. Create a separate verifier identity.</strong> Grant read-only access only to the evidence required for that assertion.",
+      "text": "2. Create a separate verifier identity. Grant read-only access only to the evidence required for that assertion."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>3. Break the shared failure modes.</strong> Use fault injection to corrupt adapters, delay replicas, and forge executor responses while proving the verifier refuses false closure.",
+      "text": "3. Break the shared failure modes. Use fault injection to corrupt adapters, delay replicas, and forge executor responses while proving the verifier refuses false closure."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Primary references and boundaries",
+      "text": "Primary references and boundaries"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The <a href=\"https://airc.nist.gov/\">NIST AI Resource Center</a> supports testing, evaluation, verification, and validation practices, while the <a href=\"https://airc.nist.gov/airmf-resources/airmf/5-sec-core/\">AI RMF Core</a> calls for documented validity, reliability, safety, monitoring, and response. The independence model here is a proposed engineering pattern, not a NIST requirement.",
+      "text": "The NIST AI Resource Center supports testing, evaluation, verification, and validation practices, while the AI RMF Core calls for documented validity, reliability, safety, monitoring, and response. The independence model here is a proposed engineering pattern, not a NIST requirement."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Independent does not mean infallible. Every evidence source has lag, compromise, and modeling risk. The design makes those dependencies explicit and prevents the agent from being judge of its own effect.",
+      "text": "Independent does not mean infallible. Every evidence source has lag, compromise, and modeling risk. The design makes those dependencies explicit and prevents the agent from being judge of its own effect."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The operating conclusion",
+      "text": "The operating conclusion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A production agent should be able to say, ‘I attempted the action.’ Only an independent control path should be allowed to say, ‘The approved state now exists, exactly once, in the authoritative system.’",
+      "text": "A production agent should be able to say, ‘I attempted the action.’ Only an independent control path should be allowed to say, ‘The approved state now exists, exactly once, in the authoritative system.’"
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "If your agent's tool adapter lied, which separate system would detect the lie?",
+      "text": "If your agent's tool adapter lied, which separate system would detect the lie?"
+    }
+  ]
+}

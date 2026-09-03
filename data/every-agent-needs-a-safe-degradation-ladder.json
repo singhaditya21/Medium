@@ -1,0 +1,370 @@
+{
+  "author": "Aditya Singh",
+  "id": "1cbff029718e",
+  "slug": "every-agent-needs-a-safe-degradation-ladder",
+  "title": "Every Agent Needs a Safe Degradation Ladder",
+  "subtitle": "Production resilience means reducing authority deliberately before the system reaches an emergency stop.",
+  "description": "A control-plane blueprint for moving AI agents through autonomous, reviewed, recommend-only, read-only, and contained operating modes.",
+  "canonical": "https://singhaditya21.github.io/Medium/articles/every-agent-needs-a-safe-degradation-ladder/",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/every-agent-needs-a-safe-degradation-ladder/",
+  "publishedAt": "2026-09-03T12:00:00.000Z",
+  "modifiedAt": "2026-09-03T12:00:00.000Z",
+  "status": "editorial_draft",
+  "statusLabel": "Editorial draft",
+  "readTime": "6 min read",
+  "wordCount": 1103,
+  "tags": [
+    "AI agents",
+    "Resilience",
+    "Incident response",
+    "AI governance",
+    "Enterprise architecture"
+  ],
+  "heroImage": "assets/images/every-agent-needs-a-safe-degradation-ladder/figure-01.svg",
+  "heroAlt": "Six-stage safe degradation control-plane architecture from sensing and mode decisions through epoch propagation, enforcement, and recovery.",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Most agent platforms expose two operational modes: enabled and disabled. Real incidents do not arrive in binary form. Retrieval quality drifts, a verifier lags, a model route degrades, an approver queue saturates, or one tool starts returning ambiguous outcomes.",
+      "text": "Most agent platforms expose two operational modes: enabled and disabled. Real incidents do not arrive in binary form. Retrieval quality drifts, a verifier lags, a model route degrades, an approver queue saturates, or one tool starts returning ambiguous outcomes."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A kill switch is essential for containment, but it is the last rung. A safe degradation ladder lets the control plane remove classes of authority as evidence weakens—preserving useful work without pretending the original autonomy contract still holds.",
+      "text": "A kill switch is essential for containment, but it is the last rung. A safe degradation ladder lets the control plane remove classes of authority as evidence weakens—preserving useful work without pretending the original autonomy contract still holds."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Degradation should reduce reachable consequence monotonically, with explicit entry signals, exit evidence, and independent enforcement.",
+      "text": "Degradation should reduce reachable consequence monotonically, with explicit entry signals, exit evidence, and independent enforcement."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-agent-needs-a-safe-degradation-ladder/figure-01.svg",
+      "alt": "Six-stage safe degradation control-plane architecture from sensing and mode decisions through epoch propagation, enforcement, and recovery.",
+      "caption": "Figure 1. A signed mode epoch coordinates the reduction of authority across effect boundaries. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Feature flags do not define a safety state",
+      "text": "Feature flags do not define a safety state"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Turning off one planner while queued work, cached credentials, delegated agents, or direct tool tokens remain active can create the appearance of safety. A mode must be enforced at every effect boundary and attached to an epoch so stale workers cannot commit under an earlier state.",
+      "text": "Turning off one planner while queued work, cached credentials, delegated agents, or direct tool tokens remain active can create the appearance of safety. A mode must be enforced at every effect boundary and attached to an epoch so stale workers cannot commit under an earlier state."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Recovery is equally risky. If operators re-enable autonomy because error rate looks normal for five minutes, unresolved effects and verifier backlogs may return with it. Exit needs a proof bundle: root cause bounded, ambiguous actions reconciled, controls healthy, canary passed, and accountable authority recorded.",
+      "text": "Recovery is equally risky. If operators re-enable autonomy because error rate looks normal for five minutes, unresolved effects and verifier backlogs may return with it. Exit needs a proof bundle: root cause bounded, ambiguous actions reconciled, controls healthy, canary passed, and accountable authority recorded."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Make operating mode a control-plane primitive",
+      "text": "Make operating mode a control-plane primitive"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A mode controller ingests effect SLOs, dependency health, policy changes, drift signals, incident commands, and reviewer capacity. It advances a signed mode epoch and distributes it to schedulers, workers, gateways, queues, and verifiers. Each enforcement point rejects authority issued under an older or more permissive epoch.",
+      "text": "A mode controller ingests effect SLOs, dependency health, policy changes, drift signals, incident commands, and reviewer capacity. It advances a signed mode epoch and distributes it to schedulers, workers, gateways, queues, and verifiers. Each enforcement point rejects authority issued under an older or more permissive epoch."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A five-rung ladder is a useful start: autonomous bounded action; mandatory human review; recommend-only output; read-only investigation; and contained. Each action class maps to permitted effects in each mode. Higher-risk actions can degrade earlier than routine internal work.",
+      "text": "A five-rung ladder is a useful start: autonomous bounded action; mandatory human review; recommend-only output; read-only investigation; and contained. Each action class maps to permitted effects in each mode. Higher-risk actions can degrade earlier than routine internal work."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-agent-needs-a-safe-degradation-ladder/figure-02.svg",
+      "alt": "Eight-state degradation and restoration flow moving from bounded autonomy through reviewed, recommend-only, read-only, contained, reconciliation, canary, and restore.",
+      "caption": "Figure 2. The ladder preserves useful work while consequence is reduced monotonically. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Choose the least restrictive safe mode",
+      "text": "Choose the least restrictive safe mode"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Mode selection can be expressed as constrained utility:",
+      "text": "Mode selection can be expressed as constrained utility:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "m* = argmax_m Utility(m)\nsubject to: Exposure(m) ≤ RiskBudget\n            VerificationCapacity(m) ≥ RequiredProof(m)\n            AmbiguityAge(m) ≤ Deadline(m)\nand ReachableAuthority(m_down) ⊆ ReachableAuthority(m_up)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The subset condition prevents a lower rung from accidentally adding a path. Utility includes retained service value; exposure includes action scope, rate, reversibility, and dependency uncertainty.",
+      "text": "The subset condition prevents a lower rung from accidentally adding a path. Utility includes retained service value; exposure includes action scope, rate, reversibility, and dependency uncertainty."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mode",
+        "Allowed behavior",
+        "Default trigger"
+      ],
+      "rows": [
+        [
+          "Autonomous",
+          "Bounded reversible effects",
+          "All production gates healthy"
+        ],
+        [
+          "Reviewed",
+          "Material effects after approval",
+          "Drift or verifier pressure"
+        ],
+        [
+          "Recommend-only",
+          "Plans and evidence packets",
+          "Policy/data uncertainty"
+        ],
+        [
+          "Read-only",
+          "Observe and diagnose",
+          "Mutation path unreliable"
+        ],
+        [
+          "Contained",
+          "Reject all effect commits",
+          "Credible compromise or uncontrolled harm"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Bind every capability to a mode epoch",
+      "text": "Bind every capability to a mode epoch"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Enforcement should compare both authority and current operating mode:",
+      "text": "Enforcement should compare both authority and current operating mode:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "{\n  \"lease_id\": \"lease_91\",\n  \"action_class\": \"crm.material_write\",\n  \"mode\": \"reviewed\",\n  \"mode_epoch\": 1842,\n  \"issued_after_approval\": \"apr_52\",\n  \"max_uses\": 1,\n  \"expires_in_seconds\": 90\n}\n\naccept iff lease.mode_epoch == control.current_epoch\n       and action in control.allowed[lease.mode]",
+      "language": "json"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Queued work must be re-evaluated when the epoch changes. A message accepted under autonomous mode cannot remain pre-authorized after the system moves to recommend-only.",
+      "text": "Queued work must be re-evaluated when the epoch changes. A message accepted under autonomous mode cannot remain pre-authorized after the system moves to recommend-only."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Measure transition quality, not just availability",
+      "text": "Measure transition quality, not just availability"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Track time to effective degradation, stale-epoch rejection, residual reachable authority, work retained by lower modes, ambiguity closed before restoration, canary escape rate, and unplanned mode flapping. Availability without bounded consequence is not resilience.",
+      "text": "Track time to effective degradation, stale-epoch rejection, residual reachable authority, work retained by lower modes, ambiguity closed before restoration, canary escape rate, and unplanned mode flapping. Availability without bounded consequence is not resilience."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The synthetic scorecard shows transition speed passing while ambiguous-action closure breaches. Restoration should remain blocked even if the immediate error disappears.",
+      "text": "The synthetic scorecard shows transition speed passing while ambiguous-action closure breaches. Restoration should remain blocked even if the immediate error disappears."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/every-agent-needs-a-safe-degradation-ladder/figure-03.svg",
+      "alt": "Five-metric degradation scorecard showing insufficient ambiguity closure before restoration despite fast mode propagation.",
+      "caption": "Figure 3. Restoration remains unsafe when ambiguous actions have not been reconciled. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Operating signal",
+        "Decision use",
+        "Failure interpretation"
+      ],
+      "rows": [
+        [
+          "Mode propagation",
+          "Escalate to containment if late",
+          "Effect boundaries disagree on state"
+        ],
+        [
+          "Residual authority",
+          "Revoke paths not reduced",
+          "Degradation is cosmetic"
+        ],
+        [
+          "Useful work retained",
+          "Tune per-action mapping",
+          "Lower mode may be unnecessarily destructive"
+        ],
+        [
+          "Restore evidence",
+          "Block promotion",
+          "Recovery is outrunning reconciliation"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure-injection before production",
+      "text": "Failure-injection before production"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A design review cannot prove <strong>Every downward transition removes authority; every upward transition requires new evidence.</strong> The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition.",
+      "text": "A design review cannot prove Every downward transition removes authority; every upward transition requires new evidence. The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Injected fault",
+        "Experiment",
+        "Required evidence"
+      ],
+      "rows": [
+        [
+          "Delayed or reordered work",
+          "Pause the path after REVIEWED and release it after CONTAINED",
+          "The stale path cannot manufacture terminal success"
+        ],
+        [
+          "Authority becomes stale",
+          "Advance policy, mode, ownership, or resource version before effect commit",
+          "The final gateway rejects the old decision context"
+        ],
+        [
+          "Evidence is missing or corrupted",
+          "Remove one authoritative observation or change its digest",
+          "The outcome remains violated, inconclusive, or owned—never guessed"
+        ],
+        [
+          "Recovery itself fails",
+          "Interrupt compensation, handoff, or receipt closure",
+          "The action stays visible with an owner, deadline, and next legal transition"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk.",
+      "text": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Three questions for the architecture review",
+      "text": "Three questions for the architecture review"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is truth decided?</strong> Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent.",
+      "text": "Where is truth decided? Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is authority finally enforced?</strong> Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action.",
+      "text": "Where is authority finally enforced? Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>What blocks promotion?</strong> Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry.",
+      "text": "What blocks promotion? Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "A practical implementation sequence",
+      "text": "A practical implementation sequence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1. Enumerate effect classes.</strong> Map each tool action to the five modes and prove lower modes never add authority.",
+      "text": "1. Enumerate effect classes. Map each tool action to the five modes and prove lower modes never add authority."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>2. Introduce mode epochs.</strong> Have every gateway reject stale leases and re-evaluate queued work.",
+      "text": "2. Introduce mode epochs. Have every gateway reject stale leases and re-evaluate queued work."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>3. Exercise the ladder.</strong> Run game days for verifier lag, model drift, approver saturation, and compromised credentials before relying on full containment.",
+      "text": "3. Exercise the ladder. Run game days for verifier lag, model drift, approver saturation, and compromised credentials before relying on full containment."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Primary references and boundaries",
+      "text": "Primary references and boundaries"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Google SRE's <a href=\"https://sre.google/sre-book/embracing-risk/\">risk and error-budget guidance</a> explains controlling release velocity with reliability evidence, and its <a href=\"https://sre.google/workbook/canarying-releases/\">canarying guidance</a> describes partial, time-limited rollout and evaluation. The agent-specific authority ladder is a proposed extension.",
+      "text": "Google SRE's risk and error-budget guidance explains controlling release velocity with reliability evidence, and its canarying guidance describes partial, time-limited rollout and evaluation. The agent-specific authority ladder is a proposed extension."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Degraded modes should not be used to bypass obligations owed to customers or regulators. They are technical safety states; business continuity and legal decisions still need accountable owners.",
+      "text": "Degraded modes should not be used to bypass obligations owed to customers or regulators. They are technical safety states; business continuity and legal decisions still need accountable owners."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The operating conclusion",
+      "text": "The operating conclusion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The choice is not full autonomy or zero value. A mature control plane can retain analysis, evidence gathering, and recommendations while progressively withdrawing the authority that current evidence no longer justifies.",
+      "text": "The choice is not full autonomy or zero value. A mature control plane can retain analysis, evidence gathering, and recommendations while progressively withdrawing the authority that current evidence no longer justifies."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "When one verifier or tool degrades, can your system reduce only the affected authority—or does it keep everything running until someone pulls the plug?",
+      "text": "When one verifier or tool degrades, can your system reduce only the affected authority—or does it keep everything running until someone pulls the plug?"
+    }
+  ]
+}

@@ -50,6 +50,19 @@ TOPIC_MAP = {
     "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation": ["AI agents", "AI evaluation", "MLOps", "Enterprise AI", "AI governance"],
 }
 
+DRAFT_STATUS = "editorial_draft"
+
+
+def is_editorial_draft(story: dict[str, Any]) -> bool:
+    return story.get("status") == DRAFT_STATUS
+
+
+def display_date(story: dict[str, Any]) -> str:
+    label = date_label(story.get("publishedAt", ""))
+    if is_editorial_draft(story):
+        return f"Editorial draft · {label}" if label else "Editorial draft"
+    return label
+
 SERIES = [
     {
         "slug": "production-grade-ai-agents",
@@ -67,6 +80,37 @@ SERIES = [
             "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
             "enterprise-agent-control-tower",
             "a-2-4m-account-is-escalating",
+            "your-ai-agent-needs-a-transaction-boundary",
+            "an-agent-retry-is-a-new-risk-decision",
+            "your-verifier-must-not-trust-the-agent",
+            "the-agent-policy-engine-is-a-compiler",
+            "ai-agent-observability-is-not-logging",
+            "every-agent-needs-a-safe-degradation-ladder",
+            "who-owns-an-ai-agent-incident",
+            "your-ai-agent-needs-a-change-budget",
+            "an-agents-context-window-is-a-data-boundary",
+            "revenue-operations-needs-an-agent-decision-ledger",
+            "the-hardest-agent-failure-is-an-ambiguous-success",
+            "your-ai-agent-needs-a-fencing-token",
+        ],
+    },
+    {
+        "slug": "agent-control-plane-next-wave",
+        "title": "Agent Control Plane: Next Wave",
+        "description": "Editorial drafts extending production-agent engineering into transactions, retries, verification, policy, observability, degradation, incidents, rollout, data boundaries, and Revenue Operations.",
+        "stories": [
+            "your-ai-agent-needs-a-transaction-boundary",
+            "the-hardest-agent-failure-is-an-ambiguous-success",
+            "an-agent-retry-is-a-new-risk-decision",
+            "your-verifier-must-not-trust-the-agent",
+            "the-agent-policy-engine-is-a-compiler",
+            "ai-agent-observability-is-not-logging",
+            "every-agent-needs-a-safe-degradation-ladder",
+            "your-ai-agent-needs-a-fencing-token",
+            "who-owns-an-ai-agent-incident",
+            "your-ai-agent-needs-a-change-budget",
+            "an-agents-context-window-is-a-data-boundary",
+            "revenue-operations-needs-an-agent-decision-ledger",
         ],
     },
     {
@@ -490,7 +534,14 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
         )
 
     canonical_host = urlsplit(story["canonical"]).netloc.lower()
-    if canonical_host.endswith("medium.com"):
+    if is_editorial_draft(story):
+        source_note = f"""
+        <aside class="source-note">
+          <span>Editorial draft</span>
+          <p>This public working draft has not been imported, submitted, scheduled, or published on Medium. It requires human technical review before release.</p>
+          <a href="{escape(story['canonical'], quote=True)}">Canonical draft URL</a>
+        </aside>"""
+    elif canonical_host.endswith("medium.com"):
         source_note = f"""
         <aside class="source-note">
           <span>Original publication</span>
@@ -546,7 +597,7 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
   <a class="back-link" href="../../index.html#stories">← All stories</a>
   <article>
     <header class="article-header">
-      <div class="eyebrow">{date_label(story.get("publishedAt", ""))} <span>·</span> {escape(story.get("readTime", ""))}</div>
+      <div class="eyebrow">{display_date(story)} <span>·</span> {escape(story.get("readTime", ""))}</div>
       <h1>{escape(story["title"])}</h1>
       <p class="article-deck">{escape(story.get("subtitle") or story_summary(story))}</p>
       <div class="article-byline">
@@ -574,7 +625,6 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
         "@type": "Article",
         "headline": story["title"],
         "description": story_summary(story),
-        "datePublished": story.get("publishedAt", ""),
         "dateModified": story.get("publishedAt", ""),
         "author": {"@type": "Person", "name": AUTHOR, "url": MEDIUM_PROFILE},
         "publisher": {"@type": "Person", "name": AUTHOR, "url": SITE_URL},
@@ -583,6 +633,11 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
         "mainEntityOfPage": {"@type": "WebPage", "@id": page_url},
         "url": page_url,
     }
+    if is_editorial_draft(story):
+        schema["dateCreated"] = story.get("publishedAt", "")
+        schema["creativeWorkStatus"] = "Draft"
+    else:
+        schema["datePublished"] = story.get("publishedAt", "")
     if clean_url(story.get("canonical", "")) != page_url:
         schema["isBasedOn"] = clean_url(story["canonical"])
     page = document(
@@ -614,7 +669,7 @@ def render_index(stories: list[dict[str, Any]]) -> None:
     <img src="{escape(image_src, quote=True)}" alt="{escape(story.get('heroAlt', ''), quote=True)}" loading="lazy" decoding="async">
   </a>
   <div class="story-card-copy">
-    <div class="card-meta"><time datetime="{iso_date(story.get('publishedAt', ''))}">{date_label(story.get('publishedAt', ''))}</time><span>·</span><span>{escape(story.get('readTime', ''))}</span></div>
+    <div class="card-meta"><time datetime="{iso_date(story.get('publishedAt', ''))}">{display_date(story)}</time><span>·</span><span>{escape(story.get('readTime', ''))}</span></div>
     <h2><a href="articles/{story['slug']}/">{escape(story['title'])}</a></h2>
     <p>{escape(story_summary(story))}</p>
     <div class="topic-row">{tag_chips(story['tags'])}</div>
@@ -786,11 +841,12 @@ def render_supporting_files(stories: list[dict[str, Any]]) -> None:
     (ROOT / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}sitemap.xml\n", encoding="utf-8")
 
-    updated = stories[0].get("publishedAt") or datetime.now(timezone.utc).isoformat()
+    feed_stories = [story for story in stories if not is_editorial_draft(story)]
+    updated = feed_stories[0].get("publishedAt") if feed_stories else datetime.now(timezone.utc).isoformat()
     atom_entries = []
     rss_items = []
     json_items = []
-    for story in stories:
+    for story in feed_stories:
         page_url = story["pageUrl"]
         summary = story_summary(story)
         published = story.get("publishedAt", "")
@@ -854,6 +910,7 @@ def render_supporting_files(stories: list[dict[str, Any]]) -> None:
             "pageUrl": f"{SITE_URL}articles/{story['slug']}/",
             "trackedUrl": tracked_story_url(story),
             "series": [series["slug"] for series in series_for_story(story["slug"])],
+            "status": story.get("status", "published_archive"),
         }
         for story in stories
     ]

@@ -1,0 +1,370 @@
+{
+  "author": "Aditya Singh",
+  "id": "a2c824d0843c",
+  "slug": "who-owns-an-ai-agent-incident",
+  "title": "Who Owns an AI Agent Incident?",
+  "subtitle": "A production incident model for command, business truth, authority containment, customer impact, and evidence preservation.",
+  "description": "An AI-agent incident-command architecture defining roles, clocks, decision rights, evidence, containment, reconciliation, and recovery gates.",
+  "canonical": "https://singhaditya21.github.io/Medium/articles/who-owns-an-ai-agent-incident/",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/who-owns-an-ai-agent-incident/",
+  "publishedAt": "2026-09-03T12:00:00.000Z",
+  "modifiedAt": "2026-09-03T12:00:00.000Z",
+  "status": "editorial_draft",
+  "statusLabel": "Editorial draft",
+  "readTime": "6 min read",
+  "wordCount": 1115,
+  "tags": [
+    "AI agents",
+    "Incident response",
+    "AI governance",
+    "SRE",
+    "Enterprise operations"
+  ],
+  "heroImage": "assets/images/who-owns-an-ai-agent-incident/figure-01.svg",
+  "heroAlt": "Six-cell AI-agent incident command architecture covering command, containment, business truth, remediation, evidence preservation, and recovery.",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "At 02:13, an agent begins sending duplicate renewal notices. Security revokes the workload identity. Platform engineering stops the workers. Sales operations says forty-seven accounts may already be affected. Legal asks what customers received. Everyone owns part of the system; no one owns the incident truth.",
+      "text": "At 02:13, an agent begins sending duplicate renewal notices. Security revokes the workload identity. Platform engineering stops the workers. Sales operations says forty-seven accounts may already be affected. Legal asks what customers received. Everyone owns part of the system; no one owns the incident truth."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "AI-agent incidents cross conventional boundaries because model behavior, data quality, policy, identity, workflow state, external tools, and business consequences can fail together. The response needs one command structure with separate technical and business workstreams.",
+      "text": "AI-agent incidents cross conventional boundaries because model behavior, data quality, policy, identity, workflow state, external tools, and business consequences can fail together. The response needs one command structure with separate technical and business workstreams."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Contain the authority quickly, but assign equal ownership to reconstructing and repairing the business effects already in motion.",
+      "text": "Contain the authority quickly, but assign equal ownership to reconstructing and repairing the business effects already in motion."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/who-owns-an-ai-agent-incident/figure-01.svg",
+      "alt": "Six-cell AI-agent incident command architecture covering command, containment, business truth, remediation, evidence preservation, and recovery.",
+      "caption": "Figure 1. Incident command separates authority containment from reconstruction of business truth. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Stopping compute does not close the incident",
+      "text": "Stopping compute does not close the incident"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An agent incident can remain economically active after every process is dead. Messages may be queued, credits pending, quotes changed, downstream jobs scheduled, and customers acting on incorrect information. The response must track both time to containment and time to business truth.",
+      "text": "An agent incident can remain economically active after every process is dead. Messages may be queued, credits pending, quotes changed, downstream jobs scheduled, and customers acting on incorrect information. The response must track both time to containment and time to business truth."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A generic severity label also hides scope. The commander needs a live action inventory by principal, resource, effect class, authority epoch, attempt state, observed postcondition, customer exposure, and recovery owner. If the inventory is incomplete, confidence must not be rounded up to certainty.",
+      "text": "A generic severity label also hides scope. The commander needs a live action inventory by principal, resource, effect class, authority epoch, attempt state, observed postcondition, customer exposure, and recovery owner. If the inventory is incomplete, confidence must not be rounded up to certainty."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Use incident command with five accountable cells",
+      "text": "Use incident command with five accountable cells"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "One incident commander owns priorities and decisions. A containment lead advances epochs and blocks new effects. A truth-and-reconciliation lead inventories committed, rejected, duplicate, ambiguous, and compensating actions. A business-impact lead coordinates domain owners and customer remediation. An evidence lead preserves timelines, policy versions, approvals, traces, and receipts.",
+      "text": "One incident commander owns priorities and decisions. A containment lead advances epochs and blocks new effects. A truth-and-reconciliation lead inventories committed, rejected, duplicate, ambiguous, and compensating actions. A business-impact lead coordinates domain owners and customer remediation. An evidence lead preserves timelines, policy versions, approvals, traces, and receipts."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Communications is a controlled output, not an improvised stream. Internal updates distinguish confirmed facts, hypotheses, unknowns, decision owners, and next checkpoints. External communication follows accountable business and legal review.",
+      "text": "Communications is a controlled output, not an improvised stream. Internal updates distinguish confirmed facts, hypotheses, unknowns, decision owners, and next checkpoints. External communication follows accountable business and legal review."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/who-owns-an-ai-agent-incident/figure-02.svg",
+      "alt": "Eight-stage incident lifecycle from effect anomaly detection through authority containment, action reconciliation, remediation, canary, and closure.",
+      "caption": "Figure 2. Technical response and business reconciliation meet at an evidence-gated closure decision. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Operate two independent recovery clocks",
+      "text": "Operate two independent recovery clocks"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A single mean-time-to-recovery metric conceals the difference between stopping new harm and resolving prior effects:",
+      "text": "A single mean-time-to-recovery metric conceals the difference between stopping new harm and resolving prior effects:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "MTTC = t(all material boundaries reject stale authority) - t(detection)\nMTTB = t(all material actions terminal or owned) - t(detection)\nResidualExposure(t) = Σ_a value_at_risk(a) × P_unresolved(a,t)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "MTTC can be short while MTTB remains long. Residual exposure should drive staffing and communication cadence after containment, because an unresolved high-value customer action may matter more than hundreds of harmless aborted tasks.",
+      "text": "MTTC can be short while MTTB remains long. Residual exposure should drive staffing and communication cadence after containment, because an unresolved high-value customer action may matter more than hundreds of harmless aborted tasks."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Role",
+        "Decision right",
+        "Evidence owned"
+      ],
+      "rows": [
+        [
+          "Incident commander",
+          "Priority, severity, closure",
+          "Decision log and objectives"
+        ],
+        [
+          "Containment lead",
+          "Epoch, revocation, block",
+          "Enforcement acknowledgements"
+        ],
+        [
+          "Truth lead",
+          "Outcome classification",
+          "Action inventory and observations"
+        ],
+        [
+          "Business-impact lead",
+          "Remediation and customer path",
+          "Exposure and communication record"
+        ],
+        [
+          "Evidence lead",
+          "Preservation and access",
+          "Immutable incident package"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Represent the incident as structured state",
+      "text": "Represent the incident as structured state"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A machine-readable incident record keeps handoffs and automation bounded:",
+      "text": "A machine-readable incident record keeps handoffs and automation bounded:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "incident: AGENT-2026-014\ncommander: role:sre-incident-commander\ncontainment_epoch: 1842\nmaterial_actions:\n  total: 1264\n  committed: 811\n  rejected: 312\n  ambiguous: 41\n  compensating: 100\nobjectives:\n  mttc_seconds: 90\n  ambiguous_owner_minutes: 15\nclosure_requires: [zero_unowned_material_actions, canary_passed, evidence_sealed]",
+      "language": "yaml"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The record should link to protected systems rather than duplicate sensitive payloads. Automated helpers may enrich it, but only named roles change severity, authorize remediation, or declare closure.",
+      "text": "The record should link to protected systems rather than duplicate sensitive payloads. Automated helpers may enrich it, but only named roles change severity, authorize remediation, or declare closure."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Measure command quality and business truth",
+      "text": "Measure command quality and business truth"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Track detection-to-declaration, MTTC, action-inventory completeness, time to owner for ambiguity, residual exposure, compensation success, decision-log completeness, and repeat incidents from unclosed actions. These metrics reveal coordination debt, not only system downtime.",
+      "text": "Track detection-to-declaration, MTTC, action-inventory completeness, time to owner for ambiguity, residual exposure, compensation success, decision-log completeness, and repeat incidents from unclosed actions. These metrics reveal coordination debt, not only system downtime."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The illustrative gate shows containment passing and business-truth ownership breaching. It is intentionally possible—and common—for the visible outage to end before the incident is actually controlled.",
+      "text": "The illustrative gate shows containment passing and business-truth ownership breaching. It is intentionally possible—and common—for the visible outage to end before the incident is actually controlled."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/who-owns-an-ai-agent-incident/figure-03.svg",
+      "alt": "Five-metric incident scorecard showing an ambiguity-ownership breach despite successful authority containment.",
+      "caption": "Figure 3. Fast containment does not compensate for unowned ambiguous effects. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Operating signal",
+        "Decision use",
+        "Failure interpretation"
+      ],
+      "rows": [
+        [
+          "MTTC",
+          "Escalate containment paths",
+          "New authority remains reachable"
+        ],
+        [
+          "Inventory completeness",
+          "Widen discovery before closure",
+          "Impact statement may be understated"
+        ],
+        [
+          "Ambiguity ownership",
+          "Add domain responders",
+          "Business truth has no accountable path"
+        ],
+        [
+          "Residual exposure",
+          "Prioritize remediation and communication",
+          "Contained incident is still economically active"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure-injection before production",
+      "text": "Failure-injection before production"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A design review cannot prove <strong>One commander; explicit workstream owners; two clocks—authority containment and business-truth closure.</strong> The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition.",
+      "text": "A design review cannot prove One commander; explicit workstream owners; two clocks—authority containment and business-truth closure. The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Injected fault",
+        "Experiment",
+        "Required evidence"
+      ],
+      "rows": [
+        [
+          "Delayed or reordered work",
+          "Pause the path after DECLARE and release it after RECONCILE",
+          "The stale path cannot manufacture terminal success"
+        ],
+        [
+          "Authority becomes stale",
+          "Advance policy, mode, ownership, or resource version before effect commit",
+          "The final gateway rejects the old decision context"
+        ],
+        [
+          "Evidence is missing or corrupted",
+          "Remove one authoritative observation or change its digest",
+          "The outcome remains violated, inconclusive, or owned—never guessed"
+        ],
+        [
+          "Recovery itself fails",
+          "Interrupt compensation, handoff, or receipt closure",
+          "The action stays visible with an owner, deadline, and next legal transition"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk.",
+      "text": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Three questions for the architecture review",
+      "text": "Three questions for the architecture review"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is truth decided?</strong> Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent.",
+      "text": "Where is truth decided? Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is authority finally enforced?</strong> Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action.",
+      "text": "Where is authority finally enforced? Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>What blocks promotion?</strong> Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry.",
+      "text": "What blocks promotion? Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "A practical implementation sequence",
+      "text": "A practical implementation sequence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1. Pre-assign the command roles.</strong> Name backups and decision rights before the first incident.",
+      "text": "1. Pre-assign the command roles. Name backups and decision rights before the first incident."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>2. Build the action inventory query.</strong> Join workflow, authority, gateway, verifier, and domain records by action ID.",
+      "text": "2. Build the action inventory query. Join workflow, authority, gateway, verifier, and domain records by action ID."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>3. Run a business-effect game day.</strong> Contain the fleet, then reconcile ambiguous customer and financial actions under a timed exercise.",
+      "text": "3. Run a business-effect game day. Contain the fleet, then reconcile ambiguous customer and financial actions under a timed exercise."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Primary references and boundaries",
+      "text": "Primary references and boundaries"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<a href=\"https://csrc.nist.gov/pubs/sp/800/61/r3/final\">NIST SP 800-61 Rev. 3</a> integrates incident response across cybersecurity risk management, detection, response, and recovery. The dual-clock and business-effect cells here adapt incident-command principles to agent systems.",
+      "text": "NIST SP 800-61 Rev. 3 integrates incident response across cybersecurity risk management, detection, response, and recovery. The dual-clock and business-effect cells here adapt incident-command principles to agent systems."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is an operating model, not legal advice. Notification duties, evidence holds, customer remedies, and regulatory escalation vary by organization and jurisdiction and require the relevant accountable functions.",
+      "text": "This is an operating model, not legal advice. Notification duties, evidence holds, customer remedies, and regulatory escalation vary by organization and jurisdiction and require the relevant accountable functions."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The operating conclusion",
+      "text": "The operating conclusion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An AI-agent incident is closed only when authority is contained, material effects are known, harmed states are repaired or owned, evidence is preserved, and recovery has earned back its scope. Killing the process completes only the first sentence.",
+      "text": "An AI-agent incident is closed only when authority is contained, material effects are known, harmed states are repaired or owned, evidence is preserved, and recovery has earned back its scope. Killing the process completes only the first sentence."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Who in your organization can declare both the agent stopped and the business state reconciled?",
+      "text": "Who in your organization can declare both the agent stopped and the business state reconciled?"
+    }
+  ]
+}

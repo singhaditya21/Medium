@@ -1,0 +1,42 @@
+{
+  "capturedAt": "2026-09-03T14:22:25+05:30",
+  "source": "signed-in Medium Stories dashboard and repository release receipts",
+  "account": "Aditya Singh",
+  "profile": "https://medium.com/@singhaditya21_89007",
+  "summary": {
+    "published": 11,
+    "scheduled": 3,
+    "unscheduledMediumDrafts": 0,
+    "unlisted": 0,
+    "approvedPublishedSubmissions": 3,
+    "newGitHubPagesEditorialDrafts": 12
+  },
+  "published": [
+    {"title": "Model Routing Is Capital Allocation", "publishedLabel": "3 Sep 2026", "url": "https://medium.com/@singhaditya21_89007/model-routing-is-capital-allocation-8ee7ebb8b0ae", "publication": null},
+    {"title": "Your Multi-Agent System Is a Distributed System", "publishedLabel": "31 Aug 2026", "url": "https://medium.com/@singhaditya21_89007/your-multi-agent-system-is-a-distributed-system-0c456a0fe664", "publication": null},
+    {"title": "Human Approval Is a Queueing System", "publishedLabel": "28 Aug 2026", "url": "https://medium.com/@singhaditya21_89007/human-approval-is-a-queueing-system-0c2858baa088", "publication": null},
+    {"title": "Every AI Agent Action Needs a Receipt", "publishedLabel": "26 Aug 2026", "url": "https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5", "publication": null},
+    {"title": "Your AI Agent’s Memory Is a Database, Not a Prompt", "publishedLabel": "23 Aug 2026", "url": "https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef", "publication": null},
+    {"title": "A $2.4M Account Is Escalating. Should the AI Agent Act?", "publishedLabel": "21 Aug 2026", "url": "https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b", "publication": "Artificial Intelligence in Plain English"},
+    {"title": "AI Agent Identity Is Not Enough", "publishedLabel": "20 Aug 2026", "url": "https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155", "publication": "Artificial Intelligence in Plain English"},
+    {"title": "What an Agent Actually Costs", "publishedLabel": "19 Aug 2026", "url": "https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5", "publication": null},
+    {"title": "The Enterprise Agent Control Tower: A Production Architecture", "publishedLabel": "19 Aug 2026", "url": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438", "publication": null},
+    {"title": "How to Build an Agentic CRM: A Reference Architecture", "publishedLabel": "18 Aug 2026", "url": "https://medium.com/ai-in-plain-english/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae", "publication": "Artificial Intelligence in Plain English"},
+    {"title": "Why Traditional CRM Will Die Without Agentic AI", "publishedLabel": "16 May 2026", "url": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4", "publication": null}
+  ],
+  "scheduled": [
+    {"title": "Your AI Agent Needs a Real Kill Switch", "scheduleAt": "2026-09-07T14:00:00+05:30", "publication": null, "subscriberEmail": true, "paywall": false},
+    {"title": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation", "scheduleAt": "2026-09-10T14:00:00+05:30", "publication": null, "subscriberEmail": true, "paywall": false},
+    {"title": "Your AI Agent Should Not Have a Standing Role", "scheduleAt": "2026-09-14T14:00:00+05:30", "publication": null, "subscriberEmail": true, "paywall": false}
+  ],
+  "submissions": [
+    {"title": "How to Build an Agentic CRM: A Reference Architecture", "publication": "Artificial Intelligence in Plain English", "status": "approved_and_published"},
+    {"title": "A $2.4M Account Is Escalating. Should the AI Agent Act?", "publication": "Artificial Intelligence in Plain English", "status": "approved_and_published"},
+    {"title": "AI Agent Identity Is Not Enough", "publication": "Artificial Intelligence in Plain English", "status": "approved_and_published"}
+  ],
+  "notes": [
+    "Medium displays a Drafts count of 3, but those records are the same three scheduled stories; no unscheduled draft row is present.",
+    "The initial dashboard can render schedule times as 08:30 before the Scheduled tab hydrates; the verified Scheduled view shows 14:00 IST, which is the same instant.",
+    "No Medium action was performed during this audit."
+  ]
+}

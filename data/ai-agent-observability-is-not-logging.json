@@ -1,0 +1,370 @@
+{
+  "author": "Aditya Singh",
+  "id": "b82e6819ab6f",
+  "slug": "ai-agent-observability-is-not-logging",
+  "title": "AI Agent Observability Is Not Logging",
+  "subtitle": "A trace explains execution; an effect graph explains what the agent changed, why, under whose authority, and whether it was right.",
+  "description": "A business-effect observability architecture for AI agents linking traces, decisions, authority, evidence, outcomes, cost, and recovery.",
+  "canonical": "https://singhaditya21.github.io/Medium/articles/ai-agent-observability-is-not-logging/",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-observability-is-not-logging/",
+  "publishedAt": "2026-09-03T12:00:00.000Z",
+  "modifiedAt": "2026-09-03T12:00:00.000Z",
+  "status": "editorial_draft",
+  "statusLabel": "Editorial draft",
+  "readTime": "6 min read",
+  "wordCount": 1137,
+  "tags": [
+    "AI agents",
+    "Observability",
+    "OpenTelemetry",
+    "Enterprise architecture",
+    "Reliability"
+  ],
+  "heroImage": "assets/images/ai-agent-observability-is-not-logging/figure-01.svg",
+  "heroAlt": "Six-stage AI-agent observability architecture from instrumentation and correlation through business-effect observation, aggregation, and investigation.",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A million agent log lines can explain token counts, prompts, latency, and tool responses while leaving one executive question unanswered: what changed in the business, and was that change authorized and correct?",
+      "text": "A million agent log lines can explain token counts, prompts, latency, and tool responses while leaving one executive question unanswered: what changed in the business, and was that change authorized and correct?"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Traditional telemetry follows requests through software. Agent observability must also follow intent through decisions, authority, effects, verification, economic outcomes, and recovery. The unit is not a model call. It is a consequential business action.",
+      "text": "Traditional telemetry follows requests through software. Agent observability must also follow intent through decisions, authority, effects, verification, economic outcomes, and recovery. The unit is not a model call. It is a consequential business action."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Instrument the agent as a distributed system, but operate it as a portfolio of business effects.",
+      "text": "Instrument the agent as a distributed system, but operate it as a portfolio of business effects."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/ai-agent-observability-is-not-logging/figure-01.svg",
+      "alt": "Six-stage AI-agent observability architecture from instrumentation and correlation through business-effect observation, aggregation, and investigation.",
+      "caption": "Figure 1. Execution telemetry is joined to decision, authority, effect, and economic evidence. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Technical success can conceal business failure",
+      "text": "Technical success can conceal business failure"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A green trace may end after the CRM returns success, before billing rejects the downstream adjustment. A red span may describe a harmless retry that the idempotency ledger safely absorbed. Without action identity and effect semantics, operational dashboards confuse software events with business outcomes.",
+      "text": "A green trace may end after the CRM returns success, before billing rejects the downstream adjustment. A red span may describe a harmless retry that the idempotency ledger safely absorbed. Without action identity and effect semantics, operational dashboards confuse software events with business outcomes."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Telemetry also becomes dangerous when prompts, retrieved documents, and customer data are copied indiscriminately into logs. Observability needs a data contract: identifiers and digests by default, risk-tiered payload capture, purpose limits, access controls, retention, and redaction tests.",
+      "text": "Telemetry also becomes dangerous when prompts, retrieved documents, and customer data are copied indiscriminately into logs. Observability needs a data contract: identifiers and digests by default, risk-tiered payload capture, purpose limits, access controls, retention, and redaction tests."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Join four graphs around one action identifier",
+      "text": "Join four graphs around one action identifier"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The execution graph contains traces and spans. The decision graph contains evidence, model route, policy, approval, and authority. The effect graph contains intended and observed state changes. The economic graph contains cost, latency, conditional loss, and realized value. A durable action ID and versioned links connect them.",
+      "text": "The execution graph contains traces and spans. The decision graph contains evidence, model route, policy, approval, and authority. The effect graph contains intended and observed state changes. The economic graph contains cost, latency, conditional loss, and realized value. A durable action ID and versioned links connect them."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Collectors transform high-volume telemetry into action-level facts. A receipt store holds the compact proof core; trace storage supports debugging; a metric pipeline produces SLOs; an investigation view reconstructs the causal path without exposing raw sensitive context to every operator.",
+      "text": "Collectors transform high-volume telemetry into action-level facts. A receipt store holds the compact proof core; trace storage supports debugging; a metric pipeline produces SLOs; an investigation view reconstructs the causal path without exposing raw sensitive context to every operator."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/ai-agent-observability-is-not-logging/figure-02.svg",
+      "alt": "Eight-stage telemetry flow connecting intent, decision, authority, trace, business effect, economics, SLO evaluation, and recovery.",
+      "caption": "Figure 2. Stable action identity turns distributed signals into a reconstructable business narrative. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Define an effect observability coverage ratio",
+      "text": "Define an effect observability coverage ratio"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Coverage should reward terminal business evidence, not log volume:",
+      "text": "Coverage should reward terminal business evidence, not log volume:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "Coverage_effect = Σ_a risk_weight(a) × 1[trace ∧ decision ∧ authority ∧ outcome] / Σ_a risk_weight(a)\nAmbiguity_load = Σ_{a ∈ unresolved} exposure(a) × age_weight(a)",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A low-risk summary and a binding credit should not contribute equally. The second term prioritizes unresolved actions by both economic exposure and age, preventing thousands of trivial traces from hiding a few material unknowns.",
+      "text": "A low-risk summary and a binding credit should not contribute equally. The second term prioritizes unresolved actions by both economic exposure and age, preventing thousands of trivial traces from hiding a few material unknowns."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Graph",
+        "Minimum node",
+        "Join key"
+      ],
+      "rows": [
+        [
+          "Execution",
+          "span + attempt",
+          "trace_id + action_id"
+        ],
+        [
+          "Decision",
+          "evidence + policy + route",
+          "decision_id + action_id"
+        ],
+        [
+          "Authority",
+          "lease + approver",
+          "lease_id + action_id"
+        ],
+        [
+          "Effect",
+          "expected + observed state",
+          "resource_version + action_id"
+        ],
+        [
+          "Economic",
+          "cost + value + loss",
+          "action_id + outcome_window"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Use semantic attributes for agent actions",
+      "text": "Use semantic attributes for agent actions"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A span can carry safe correlation fields without copying the full prompt:",
+      "text": "A span can carry safe correlation fields without copying the full prompt:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "agent.action.id = act_01K...\nagent.workflow.id = renewal_771\nagent.action.class = material_write\nagent.policy.digest = sha256:...\nagent.authority.lease_id = lease_91\nagent.resource.type = crm.quote\nagent.resource.version.expected = 42\nagent.effect.status = inconclusive\nagent.evidence.bundle_digest = sha256:...",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Attribute names should be governed, cardinality-aware, and privacy-reviewed. High-cardinality IDs may belong in traces and logs rather than metric labels; metrics aggregate by bounded dimensions such as action class, risk tier, route, and outcome.",
+      "text": "Attribute names should be governed, cardinality-aware, and privacy-reviewed. High-cardinality IDs may belong in traces and logs rather than metric labels; metrics aggregate by bounded dimensions such as action class, risk tier, route, and outcome."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Build SLOs on effects, not calls",
+      "text": "Build SLOs on effects, not calls"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Useful SLOs include verified-effect rate, duplicate-effect rate, p99 ambiguity age, authority-to-effect latency, policy-denial accuracy, recovery completion, cost per verified outcome, and evidence coverage. Technical latency and error rate remain necessary drivers, not final outcomes.",
+      "text": "Useful SLOs include verified-effect rate, duplicate-effect rate, p99 ambiguity age, authority-to-effect latency, policy-denial accuracy, recovery completion, cost per verified outcome, and evidence coverage. Technical latency and error rate remain necessary drivers, not final outcomes."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The illustrative scorecard shows a trace-coverage pass and an effect-coverage breach. This is the expected diagnostic value: observability can reveal that instrumentation is present while operational truth is incomplete.",
+      "text": "The illustrative scorecard shows a trace-coverage pass and an effect-coverage breach. This is the expected diagnostic value: observability can reveal that instrumentation is present while operational truth is incomplete."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/ai-agent-observability-is-not-logging/figure-03.svg",
+      "alt": "Five-metric observability scorecard showing a risk-weighted effect coverage breach despite near-complete trace coverage.",
+      "caption": "Figure 3. Technical trace coverage can pass while business-effect evidence remains below the production gate. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Operating signal",
+        "Decision use",
+        "Failure interpretation"
+      ],
+      "rows": [
+        [
+          "Effect coverage",
+          "Gate higher autonomy",
+          "Actions lack terminal business evidence"
+        ],
+        [
+          "Correlation lag",
+          "Tune collectors and joins",
+          "Incidents cannot be reconstructed quickly"
+        ],
+        [
+          "Ambiguity load",
+          "Prioritize by exposure and age",
+          "Unresolved consequence is accumulating"
+        ],
+        [
+          "Payload policy violations",
+          "Stop capture and investigate",
+          "Telemetry is creating privacy or security risk"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure-injection before production",
+      "text": "Failure-injection before production"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A design review cannot prove <strong>Every material span must resolve to an action; every material action must resolve to an observed effect or owned ambiguity.</strong> The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition.",
+      "text": "A design review cannot prove Every material span must resolve to an action; every material action must resolve to an observed effect or owned ambiguity. The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Injected fault",
+        "Experiment",
+        "Required evidence"
+      ],
+      "rows": [
+        [
+          "Delayed or reordered work",
+          "Pause the path after DECISION and release it after EFFECT",
+          "The stale path cannot manufacture terminal success"
+        ],
+        [
+          "Authority becomes stale",
+          "Advance policy, mode, ownership, or resource version before effect commit",
+          "The final gateway rejects the old decision context"
+        ],
+        [
+          "Evidence is missing or corrupted",
+          "Remove one authoritative observation or change its digest",
+          "The outcome remains violated, inconclusive, or owned—never guessed"
+        ],
+        [
+          "Recovery itself fails",
+          "Interrupt compensation, handoff, or receipt closure",
+          "The action stays visible with an owner, deadline, and next legal transition"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk.",
+      "text": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Three questions for the architecture review",
+      "text": "Three questions for the architecture review"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is truth decided?</strong> Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent.",
+      "text": "Where is truth decided? Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is authority finally enforced?</strong> Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action.",
+      "text": "Where is authority finally enforced? Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>What blocks promotion?</strong> Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry.",
+      "text": "What blocks promotion? Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "A practical implementation sequence",
+      "text": "A practical implementation sequence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1. Create one action semantic convention.</strong> Standardize identifiers and bounded attributes across planner, policy, gateway, verifier, and recovery services.",
+      "text": "1. Create one action semantic convention. Standardize identifiers and bounded attributes across planner, policy, gateway, verifier, and recovery services."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>2. Join one material workflow end to end.</strong> Show the trace, authority, intended delta, observed effect, cost, and owner in one investigation view.",
+      "text": "2. Join one material workflow end to end. Show the trace, authority, intended delta, observed effect, cost, and owner in one investigation view."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>3. Set effect SLOs.</strong> Use risk-weighted coverage and ambiguity age to control rollout rather than optimizing log completeness alone.",
+      "text": "3. Set effect SLOs. Use risk-weighted coverage and ambiguity age to control rollout rather than optimizing log completeness alone."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Primary references and boundaries",
+      "text": "Primary references and boundaries"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<a href=\"https://opentelemetry.io/docs/concepts/signals/\">OpenTelemetry signals</a> cover traces, metrics, logs, and baggage; its <a href=\"https://opentelemetry.io/docs/concepts/observability-primer/\">observability primer</a> explains distributed traces and instrumentation. The effect, decision, authority, and economic graph is an extension proposed for agent operations.",
+      "text": "OpenTelemetry signals cover traces, metrics, logs, and baggage; its observability primer explains distributed traces and instrumentation. The effect, decision, authority, and economic graph is an extension proposed for agent operations."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is not a recommendation to place sensitive evidence in telemetry. Store minimal correlation and policy-safe digests in operational signals; retrieve protected evidence through access-controlled systems when an investigation requires it.",
+      "text": "This is not a recommendation to place sensitive evidence in telemetry. Store minimal correlation and policy-safe digests in operational signals; retrieve protected evidence through access-controlled systems when an investigation requires it."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The operating conclusion",
+      "text": "The operating conclusion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Logs tell you that software spoke. Traces tell you where the request travelled. Agent observability must tell you which approved business effect occurred, whether it matched intent, what it cost, and who owns what remains unknown.",
+      "text": "Logs tell you that software spoke. Traces tell you where the request travelled. Agent observability must tell you which approved business effect occurred, whether it matched intent, what it cost, and who owns what remains unknown."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Can your observability platform answer ‘what business state changed?’ without reading the agent's prose?",
+      "text": "Can your observability platform answer ‘what business state changed?’ without reading the agent's prose?"
+    }
+  ]
+}

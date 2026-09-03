@@ -1,0 +1,370 @@
+{
+  "author": "Aditya Singh",
+  "id": "c27f15808200",
+  "slug": "your-ai-agent-needs-a-change-budget",
+  "title": "Your AI Agent Needs a Change Budget",
+  "subtitle": "Control rollout by cumulative authority and exposure—not only by how many requests received the new version.",
+  "description": "A canary and change-budget model for AI agents using authority-weighted exposure, evidence windows, cohort controls, and automatic rollback.",
+  "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-change-budget/",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-change-budget/",
+  "publishedAt": "2026-09-03T12:00:00.000Z",
+  "modifiedAt": "2026-09-03T12:00:00.000Z",
+  "status": "editorial_draft",
+  "statusLabel": "Editorial draft",
+  "readTime": "6 min read",
+  "wordCount": 1102,
+  "tags": [
+    "AI agents",
+    "Canary releases",
+    "MLOps",
+    "Risk management",
+    "Enterprise AI"
+  ],
+  "heroImage": "assets/images/your-ai-agent-needs-a-change-budget/figure-01.svg",
+  "heroAlt": "Six-stage authority-weighted AI-agent release architecture covering manifest, cohort segmentation, change budget, evaluation, gating, and promotion.",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A 1% agent canary sounds conservative until that 1% contains the largest customers, the broadest permissions, or the only irreversible actions in the workflow. Traffic percentage is a software deployment measure; authority-weighted exposure is the production safety measure.",
+      "text": "A 1% agent canary sounds conservative until that 1% contains the largest customers, the broadest permissions, or the only irreversible actions in the workflow. Traffic percentage is a software deployment measure; authority-weighted exposure is the production safety measure."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Every change—model, prompt, retrieval policy, tool adapter, authorization rule, verifier, or workflow graph—consumes a finite change budget. The control plane should allocate that budget across cohorts, action classes, and time while evidence accumulates.",
+      "text": "Every change—model, prompt, retrieval policy, tool adapter, authorization rule, verifier, or workflow graph—consumes a finite change budget. The control plane should allocate that budget across cohorts, action classes, and time while evidence accumulates."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Roll out agent capability in units of reachable consequence, and spend the budget only where counterfactual evidence can detect harm.",
+      "text": "Roll out agent capability in units of reachable consequence, and spend the budget only where counterfactual evidence can detect harm."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-change-budget/figure-01.svg",
+      "alt": "Six-stage authority-weighted AI-agent release architecture covering manifest, cohort segmentation, change budget, evaluation, gating, and promotion.",
+      "caption": "Figure 1. The release controller prices cumulative authority rather than raw request share. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Request-count canaries misprice heterogeneous risk",
+      "text": "Request-count canaries misprice heterogeneous risk"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Two actions can consume one request each while differing by six orders of magnitude in exposure. A summary draft and a binding commercial amendment should not contribute equally to canary size. Nor should a low-risk test population justify a high-risk rollout whose data and authority distribution is different.",
+      "text": "Two actions can consume one request each while differing by six orders of magnitude in exposure. A summary draft and a binding commercial amendment should not contribute equally to canary size. Nor should a low-risk test population justify a high-risk rollout whose data and authority distribution is different."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Agent changes also interact. A stronger model paired with a stale verifier or broader retrieval scope may increase effective authority even if each component passed in isolation. The release unit must name the full route bundle and the policies it depends on.",
+      "text": "Agent changes also interact. A stronger model paired with a stale verifier or broader retrieval scope may increase effective authority even if each component passed in isolation. The release unit must name the full route bundle and the policies it depends on."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Create an authority-weighted release controller",
+      "text": "Create an authority-weighted release controller"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A change manifest identifies model, prompts, tools, schemas, policies, verification, and recovery versions. A cohort planner samples by risk tier and action class. The budget service computes cumulative exposure. Shadow and counterfactual evaluators compare candidate and control before effect authority expands.",
+      "text": "A change manifest identifies model, prompts, tools, schemas, policies, verification, and recovery versions. A cohort planner samples by risk tier and action class. The budget service computes cumulative exposure. Shadow and counterfactual evaluators compare candidate and control before effect authority expands."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "At runtime, a gate tracks outcome quality, policy violations, ambiguous effects, tail loss, latency, cost, and distribution shift. It can hold, reduce, or roll back the cohort. Rollback advances an epoch so already-issued authority does not survive the release decision.",
+      "text": "At runtime, a gate tracks outcome quality, policy violations, ambiguous effects, tail loss, latency, cost, and distribution shift. It can hold, reduce, or roll back the cohort. Rollback advances an epoch so already-issued authority does not survive the release decision."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-change-budget/figure-02.svg",
+      "alt": "Eight-stage evidence-gated rollout flow from offline tests and shadowing through canaries, hold, expansion, rollback, and general availability.",
+      "caption": "Figure 2. Each cohort earns expansion with outcome, risk, and rollback evidence. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Define canary size as exposure",
+      "text": "Define canary size as exposure"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Let every action contribute an authority-weighted exposure unit:",
+      "text": "Let every action contribute an authority-weighted exposure unit:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "Exposure(C) = Σ_{a∈C} value(a) × irreversibility(a) × scope(a) × uncertainty(a)\nBudget_remaining = B_period - Σ Exposure(changes)\npromote iff ΔQuality_LCB ≥ 0 ∧ ΔLoss_UCB ≤ L_max ∧ Exposure(next) ≤ Budget_remaining",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "LCB and UCB denote conservative confidence bounds. The equation prevents promotion on an attractive average when uncertainty around quality or loss still crosses the operating limit.",
+      "text": "LCB and UCB denote conservative confidence bounds. The equation prevents promotion on an attractive average when uncertainty around quality or loss still crosses the operating limit."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Release dimension",
+        "Evidence",
+        "Promotion blocker"
+      ],
+      "rows": [
+        [
+          "Capability",
+          "Scenario and mutation tests",
+          "Critical invariant failure"
+        ],
+        [
+          "Cohort",
+          "Representative risk distribution",
+          "Coverage gap"
+        ],
+        [
+          "Effect",
+          "Independent postconditions",
+          "Ambiguity or duplicate"
+        ],
+        [
+          "Economics",
+          "Cost and conditional loss",
+          "Tail budget breach"
+        ],
+        [
+          "Control",
+          "Rollback and epoch proof",
+          "Stale authority accepted"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Version the entire change surface",
+      "text": "Version the entire change surface"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The release manifest should make hidden coupling inspectable:",
+      "text": "The release manifest should make hidden coupling inspectable:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "release: agent-route-2026.09.03-rc2\nmodel: route-bundle-17\nprompt: planner-42\nretrieval_policy: evidence-11\ntool_contracts: crm-v8\npolicy_bundle: pricing-2026.09.3\nverifier: quote-assertions-v6\nrecovery: compensation-v4\ncohort:\n  risk_tiers: [low, moderate]\n  exposure_budget_units: 250\nrollback:\n  advance_epoch: true",
+      "language": "yaml"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Any material component change creates a new manifest. This makes causal analysis possible when performance moves and prevents a prompt rollback from leaving a changed policy or adapter in place.",
+      "text": "Any material component change creates a new manifest. This makes causal analysis possible when performance moves and prevents a prompt rollback from leaving a changed policy or adapter in place."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Track budget burn and evidence quality",
+      "text": "Track budget burn and evidence quality"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Monitor exposure consumed, evidence earned per exposure unit, cohort representativeness, worst-segment quality, ambiguity, conditional tail loss, rollback time, and stale-authority rejection. The best rollout maximizes learning per unit of consequence, not raw traffic.",
+      "text": "Monitor exposure consumed, evidence earned per exposure unit, cohort representativeness, worst-segment quality, ambiguity, conditional tail loss, rollback time, and stale-authority rejection. The best rollout maximizes learning per unit of consequence, not raw traffic."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The synthetic gate shows overall quality passing while the worst-segment lower bound breaches. Global averages must not authorize expansion over an underserved or high-risk cohort.",
+      "text": "The synthetic gate shows overall quality passing while the worst-segment lower bound breaches. Global averages must not authorize expansion over an underserved or high-risk cohort."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-change-budget/figure-03.svg",
+      "alt": "Five-metric change-budget scorecard showing a worst-segment quality breach despite positive overall quality.",
+      "caption": "Figure 3. A favorable global average cannot override a failing segment-level confidence bound. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Operating signal",
+        "Decision use",
+        "Failure interpretation"
+      ],
+      "rows": [
+        [
+          "Exposure budget burn",
+          "Hold competing changes",
+          "Too much consequence changed at once"
+        ],
+        [
+          "Evidence per exposure",
+          "Redesign cohort",
+          "Canary is risky but uninformative"
+        ],
+        [
+          "Worst-segment bound",
+          "Block expansion",
+          "Average hides localized harm"
+        ],
+        [
+          "Rollback enforcement",
+          "Contain on breach",
+          "Candidate authority persists after decision"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure-injection before production",
+      "text": "Failure-injection before production"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A design review cannot prove <strong>No cohort expansion unless its own risk-weighted evidence passes and cumulative exposure remains inside budget.</strong> The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition.",
+      "text": "A design review cannot prove No cohort expansion unless its own risk-weighted evidence passes and cumulative exposure remains inside budget. The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Injected fault",
+        "Experiment",
+        "Required evidence"
+      ],
+      "rows": [
+        [
+          "Delayed or reordered work",
+          "Pause the path after SHADOW and release it after HOLD",
+          "The stale path cannot manufacture terminal success"
+        ],
+        [
+          "Authority becomes stale",
+          "Advance policy, mode, ownership, or resource version before effect commit",
+          "The final gateway rejects the old decision context"
+        ],
+        [
+          "Evidence is missing or corrupted",
+          "Remove one authoritative observation or change its digest",
+          "The outcome remains violated, inconclusive, or owned—never guessed"
+        ],
+        [
+          "Recovery itself fails",
+          "Interrupt compensation, handoff, or receipt closure",
+          "The action stays visible with an owner, deadline, and next legal transition"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk.",
+      "text": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Three questions for the architecture review",
+      "text": "Three questions for the architecture review"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is truth decided?</strong> Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent.",
+      "text": "Where is truth decided? Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is authority finally enforced?</strong> Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action.",
+      "text": "Where is authority finally enforced? Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>What blocks promotion?</strong> Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry.",
+      "text": "What blocks promotion? Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "A practical implementation sequence",
+      "text": "A practical implementation sequence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1. Build manifests for current releases.</strong> Capture every component that can change agent behavior or authority.",
+      "text": "1. Build manifests for current releases. Capture every component that can change agent behavior or authority."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>2. Define exposure units.</strong> Start ordinal if needed, but include value, reversibility, scope, and uncertainty.",
+      "text": "2. Define exposure units. Start ordinal if needed, but include value, reversibility, scope, and uncertainty."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>3. Run cohort-specific gates.</strong> Promote only when representative segments pass conservative outcome and rollback evidence.",
+      "text": "3. Run cohort-specific gates. Promote only when representative segments pass conservative outcome and rollback evidence."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Primary references and boundaries",
+      "text": "Primary references and boundaries"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Google SRE defines <a href=\"https://sre.google/workbook/canarying-releases/\">canarying</a> as a partial, time-limited deployment evaluated against a control, and describes gradual rollout with verification in <a href=\"https://sre.google/sre-book/reliable-product-launches/\">reliable product launches</a>. Authority-weighted exposure is an agent-specific extension.",
+      "text": "Google SRE defines canarying as a partial, time-limited deployment evaluated against a control, and describes gradual rollout with verification in reliable product launches. Authority-weighted exposure is an agent-specific extension."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Exposure units need not claim exact monetary truth. An ordinal, documented model can still be superior to raw request percentage if it reliably distinguishes reversible internal work from concentrated material authority.",
+      "text": "Exposure units need not claim exact monetary truth. An ordinal, documented model can still be superior to raw request percentage if it reliably distinguishes reversible internal work from concentrated material authority."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The operating conclusion",
+      "text": "The operating conclusion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The right question is not ‘what percentage of traffic has the new agent?’ It is ‘how much consequential authority has changed, what evidence has that exposure bought, and can we revoke it before the loss budget is exhausted?’",
+      "text": "The right question is not ‘what percentage of traffic has the new agent?’ It is ‘how much consequential authority has changed, what evidence has that exposure bought, and can we revoke it before the loss budget is exhausted?’"
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Would your current 1% canary still look small after weighting the actions by value, reversibility, and permission scope?",
+      "text": "Would your current 1% canary still look small after weighting the actions by value, reversibility, and permission scope?"
+    }
+  ]
+}

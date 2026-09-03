@@ -1,0 +1,370 @@
+{
+  "author": "Aditya Singh",
+  "id": "e1403dea658b",
+  "slug": "the-hardest-agent-failure-is-an-ambiguous-success",
+  "title": "The Hardest Agent Failure Is an Ambiguous Success",
+  "subtitle": "When the system says ‘done’ but the business state is partial, duplicated, delayed, or impossible to prove.",
+  "description": "A production architecture for classifying and resolving ambiguous AI-agent outcomes across partial commits, asynchronous effects, stale reads, and compensation.",
+  "canonical": "https://singhaditya21.github.io/Medium/articles/the-hardest-agent-failure-is-an-ambiguous-success/",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/the-hardest-agent-failure-is-an-ambiguous-success/",
+  "publishedAt": "2026-09-03T12:00:00.000Z",
+  "modifiedAt": "2026-09-03T12:00:00.000Z",
+  "status": "editorial_draft",
+  "statusLabel": "Editorial draft",
+  "readTime": "6 min read",
+  "wordCount": 1083,
+  "tags": [
+    "AI agents",
+    "Failure engineering",
+    "Distributed systems",
+    "Verification",
+    "Reliability"
+  ],
+  "heroImage": "assets/images/the-hardest-agent-failure-is-an-ambiguous-success/figure-01.svg",
+  "heroAlt": "Six-stage outcome-resolution architecture from expected postconditions and independent evidence through classification, recovery, and receipt closure.",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Clear failures are operationally generous. They stop the workflow and give an operator something concrete to inspect. Ambiguous success is worse: the API accepted the request, part of the workflow progressed, downstream state will settle later, and every dashboard chooses a different definition of done.",
+      "text": "Clear failures are operationally generous. They stop the workflow and give an operator something concrete to inspect. Ambiguous success is worse: the API accepted the request, part of the workflow progressed, downstream state will settle later, and every dashboard chooses a different definition of done."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Agents amplify this ambiguity because they chain tools, reinterpret responses, and continue planning. A plausible success narrative can be generated before authoritative systems agree on the business outcome.",
+      "text": "Agents amplify this ambiguity because they chain tools, reinterpret responses, and continue planning. A plausible success narrative can be generated before authoritative systems agree on the business outcome."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Success is not a status code. It is a verified postcondition reached before an economic deadline, with every partial effect accounted for.",
+      "text": "Success is not a status code. It is a verified postcondition reached before an economic deadline, with every partial effect accounted for."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/the-hardest-agent-failure-is-an-ambiguous-success/figure-01.svg",
+      "alt": "Six-stage outcome-resolution architecture from expected postconditions and independent evidence through classification, recovery, and receipt closure.",
+      "caption": "Figure 1. Outcome resolution is an independent service, not a planner self-assessment. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "One success label collapses four distinct states",
+      "text": "One success label collapses four distinct states"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A command can be accepted but not committed, committed but not propagated, partially committed across systems, or committed more than once. A stale read can make a good effect look absent; an optimistic tool adapter can make a rejected effect look complete. Collapsing these states prevents correct retry and recovery.",
+      "text": "A command can be accepted but not committed, committed but not propagated, partially committed across systems, or committed more than once. A stale read can make a good effect look absent; an optimistic tool adapter can make a rejected effect look complete. Collapsing these states prevents correct retry and recovery."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The workflow needs an outcome taxonomy and evidence precedence. Provider acceptance, durable workflow state, authoritative resource version, downstream ledger state, and customer-visible effect are separate observations with different lag and authority.",
+      "text": "The workflow needs an outcome taxonomy and evidence precedence. Provider acceptance, durable workflow state, authoritative resource version, downstream ledger state, and customer-visible effect are separate observations with different lag and authority."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Create an outcome-resolution service",
+      "text": "Create an outcome-resolution service"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The service starts with a typed intended postcondition and a completion deadline. It collects observations from independent systems, applies source-specific lag models, and classifies the action as confirmed success, confirmed failure, partial, duplicate, delayed, inconsistent, or unknown.",
+      "text": "The service starts with a typed intended postcondition and a completion deadline. It collects observations from independent systems, applies source-specific lag models, and classifies the action as confirmed success, confirmed failure, partial, duplicate, delayed, inconsistent, or unknown."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A policy maps each class to wait, re-observe, reconcile, compensate, freeze, or human decision. The agent can provide hypotheses, but only the resolution service advances terminal state and seals the receipt.",
+      "text": "A policy maps each class to wait, re-observe, reconcile, compensate, freeze, or human decision. The agent can provide hypotheses, but only the resolution service advances terminal state and seals the receipt."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/the-hardest-agent-failure-is-an-ambiguous-success/figure-02.svg",
+      "alt": "Eight-state ambiguous-success flow distinguishing accepted, pending, partial, inconsistent, duplicate, confirmed, recovery, and closed outcomes.",
+      "caption": "Figure 2. Accepted, pending, partial, inconsistent, and duplicate are separate operational states. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Use evidence age and consequence to choose the next observation",
+      "text": "Use evidence age and consequence to choose the next observation"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For observation source <code>s</code>, prioritize information value net of delay and query cost:",
+      "text": "For observation source s, prioritize information value net of delay and query cost:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "VOI(s,t) = ExpectedReduction[OutcomeEntropy | observe(s,t)]\n           - C_query(s) - C_delay(t)\nresolve when posterior confidence crosses class threshold AND required authoritative assertions hold",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Confidence alone cannot override a mandatory assertion. The model helps order observations; policy defines which facts are indispensable for commercial or safety closure.",
+      "text": "Confidence alone cannot override a mandatory assertion. The model helps order observations; policy defines which facts are indispensable for commercial or safety closure."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Outcome class",
+        "Evidence pattern",
+        "Permitted transition"
+      ],
+      "rows": [
+        [
+          "Pending",
+          "Within known propagation lag",
+          "Wait and observe"
+        ],
+        [
+          "Partial",
+          "Subset of assertions true",
+          "Complete or compensate"
+        ],
+        [
+          "Inconsistent",
+          "Authoritative sources disagree",
+          "Freeze and reconcile"
+        ],
+        [
+          "Duplicate",
+          "Count exceeds one",
+          "Contain and compensate"
+        ],
+        [
+          "Confirmed",
+          "All required assertions hold",
+          "Seal success receipt"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Represent success as a set of assertions",
+      "text": "Represent success as a set of assertions"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A compound business action needs more than one boolean:",
+      "text": "A compound business action needs more than one boolean:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "outcome_contract: renewal-adjustment-v3\ndeadline_seconds: 300\nassertions:\n  - source: crm-primary\n    expect: quote.version == 43 and quote.discount_bps == 800\n  - source: billing-ledger\n    expect: count(adjustment where action_id == A) == 1\n  - source: communication-log\n    expect: message.approval_ref == approval_id\nterminal_success: all(assertions)\non_deadline: freeze_and_assign_owner",
+      "language": "yaml"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Each assertion carries an evidence source, lag allowance, and failure owner. The contract is versioned with the action so later schema changes cannot silently redefine success.",
+      "text": "Each assertion carries an evidence source, lag allowance, and failure owner. The contract is versioned with the action so later schema changes cannot silently redefine success."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Make ambiguity visible as inventory",
+      "text": "Make ambiguity visible as inventory"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Track ambiguous actions by class, age, exposure, dependency, and owner; partial-to-terminal time; duplicate discovery lag; false closures reopened later; and compensation success. The backlog should behave like an incident queue, not a log-search exercise.",
+      "text": "Track ambiguous actions by class, age, exposure, dependency, and owner; partial-to-terminal time; duplicate discovery lag; false closures reopened later; and compensation success. The backlog should behave like an incident queue, not a log-search exercise."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The synthetic gate shows p95 resolution passing but false closure breaching. One action closed incorrectly is more serious than a slightly slower but honest unknown.",
+      "text": "The synthetic gate shows p95 resolution passing but false closure breaching. One action closed incorrectly is more serious than a slightly slower but honest unknown."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/the-hardest-agent-failure-is-an-ambiguous-success/figure-03.svg",
+      "alt": "Five-metric ambiguity scorecard showing a false-closure breach despite fast typical resolution and complete ownership.",
+      "caption": "Figure 3. One false closure can fail the gate even when latency and recovery averages pass. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Operating signal",
+        "Decision use",
+        "Failure interpretation"
+      ],
+      "rows": [
+        [
+          "False closure",
+          "Incident and control review",
+          "Success criteria or evidence path failed"
+        ],
+        [
+          "Partial duration",
+          "Escalate domain owner",
+          "Cross-system completion is stuck"
+        ],
+        [
+          "Source inconsistency",
+          "Freeze related authority",
+          "Authoritative systems disagree"
+        ],
+        [
+          "Ambiguous exposure",
+          "Prioritize by consequence",
+          "Unknown state is economically material"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure-injection before production",
+      "text": "Failure-injection before production"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A design review cannot prove <strong>A workflow cannot claim success while a material observation remains inconsistent or outside its evidence deadline.</strong> The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition.",
+      "text": "A design review cannot prove A workflow cannot claim success while a material observation remains inconsistent or outside its evidence deadline. The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Injected fault",
+        "Experiment",
+        "Required evidence"
+      ],
+      "rows": [
+        [
+          "Delayed or reordered work",
+          "Pause the path after PENDING and release it after DUPLICATE",
+          "The stale path cannot manufacture terminal success"
+        ],
+        [
+          "Authority becomes stale",
+          "Advance policy, mode, ownership, or resource version before effect commit",
+          "The final gateway rejects the old decision context"
+        ],
+        [
+          "Evidence is missing or corrupted",
+          "Remove one authoritative observation or change its digest",
+          "The outcome remains violated, inconclusive, or owned—never guessed"
+        ],
+        [
+          "Recovery itself fails",
+          "Interrupt compensation, handoff, or receipt closure",
+          "The action stays visible with an owner, deadline, and next legal transition"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk.",
+      "text": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Three questions for the architecture review",
+      "text": "Three questions for the architecture review"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is truth decided?</strong> Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent.",
+      "text": "Where is truth decided? Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is authority finally enforced?</strong> Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action.",
+      "text": "Where is authority finally enforced? Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>What blocks promotion?</strong> Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry.",
+      "text": "What blocks promotion? Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "A practical implementation sequence",
+      "text": "A practical implementation sequence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1. Define one compound success contract.</strong> List each required business assertion and its authoritative source.",
+      "text": "1. Define one compound success contract. List each required business assertion and its authoritative source."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>2. Preserve non-terminal states.</strong> Prevent adapters and agents from flattening accepted, pending, partial, and unknown into success.",
+      "text": "2. Preserve non-terminal states. Prevent adapters and agents from flattening accepted, pending, partial, and unknown into success."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>3. Fault-test evidence lag.</strong> Delay replicas, duplicate downstream messages, and partially commit workflows while verifying correct classification and ownership.",
+      "text": "3. Fault-test evidence lag. Delay replicas, duplicate downstream messages, and partially commit workflows while verifying correct classification and ownership."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Primary references and boundaries",
+      "text": "Primary references and boundaries"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "AWS's <a href=\"https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/\">idempotent API guidance</a> discusses late requests, retries, and semantic intent. <a href=\"https://www.rfc-editor.org/rfc/rfc9110.html\">RFC 9110</a> distinguishes request-method semantics from application-specific outcomes. The compound outcome taxonomy is a proposed agent control.",
+      "text": "AWS's idempotent API guidance discusses late requests, retries, and semantic intent. RFC 9110 distinguishes request-method semantics from application-specific outcomes. The compound outcome taxonomy is a proposed agent control."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Evidence can remain uncertain beyond the deadline. The correct response is owned ambiguity and controlled recovery—not a fabricated terminal label.",
+      "text": "Evidence can remain uncertain beyond the deadline. The correct response is owned ambiguity and controlled recovery—not a fabricated terminal label."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The operating conclusion",
+      "text": "The operating conclusion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The most dangerous agent success is the one nobody can independently reproduce. Make success a contract over observable business state, preserve every non-terminal class, and let recovery begin before ambiguity becomes history.",
+      "text": "The most dangerous agent success is the one nobody can independently reproduce. Make success a contract over observable business state, preserve every non-terminal class, and let recovery begin before ambiguity becomes history."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Which of your agent workflows can return success before all downstream business assertions are observable?",
+      "text": "Which of your agent workflows can return success before all downstream business assertions are observable?"
+    }
+  ]
+}

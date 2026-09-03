@@ -1,5 +1,269 @@
 [
   {
+    "slug": "an-agents-context-window-is-a-data-boundary",
+    "title": "An Agent's Context Window Is a Data Boundary",
+    "description": "A governed context architecture for enterprise AI agents using purpose-bound retrieval, policy filtering, provenance, minimization, residency, and deletion evidence.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Data governance",
+      "Privacy",
+      "RAG",
+      "Enterprise architecture"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/an-agents-context-window-is-a-data-boundary/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/an-agents-context-window-is-a-data-boundary/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/an-agents-context-window-is-a-data-boundary/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=an-agents-context-window-is-a-data-boundary",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "the-agent-policy-engine-is-a-compiler",
+    "title": "The Agent Policy Engine Is a Compiler, Not a Prompt",
+    "description": "A policy-as-code architecture for compiling enterprise AI-agent rules into typed decisions, obligations, tests, and enforceable capabilities.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Policy as code",
+      "Authorization",
+      "AI governance",
+      "Enterprise architecture"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/the-agent-policy-engine-is-a-compiler/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/the-agent-policy-engine-is-a-compiler/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/the-agent-policy-engine-is-a-compiler/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=the-agent-policy-engine-is-a-compiler",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "ai-agent-observability-is-not-logging",
+    "title": "AI Agent Observability Is Not Logging",
+    "description": "A business-effect observability architecture for AI agents linking traces, decisions, authority, evidence, outcomes, cost, and recovery.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Observability",
+      "OpenTelemetry",
+      "Enterprise architecture",
+      "Reliability"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/ai-agent-observability-is-not-logging/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-observability-is-not-logging/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-observability-is-not-logging/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=ai-agent-observability-is-not-logging",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "your-ai-agent-needs-a-fencing-token",
+    "title": "Your AI Agent Needs a Fencing Token",
+    "description": "A production design for monotonic fencing tokens that prevent stale AI-agent workers, leases, queues, and retries from committing business effects.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Distributed systems",
+      "Fencing tokens",
+      "Authorization",
+      "Reliability"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-fencing-token/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-fencing-token/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-fencing-token/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-ai-agent-needs-a-fencing-token",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "the-hardest-agent-failure-is-an-ambiguous-success",
+    "title": "The Hardest Agent Failure Is an Ambiguous Success",
+    "description": "A production architecture for classifying and resolving ambiguous AI-agent outcomes across partial commits, asynchronous effects, stale reads, and compensation.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Failure engineering",
+      "Distributed systems",
+      "Verification",
+      "Reliability"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/the-hardest-agent-failure-is-an-ambiguous-success/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/the-hardest-agent-failure-is-an-ambiguous-success/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/the-hardest-agent-failure-is-an-ambiguous-success/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=the-hardest-agent-failure-is-an-ambiguous-success",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "an-agent-retry-is-a-new-risk-decision",
+    "title": "An Agent Retry Is a New Risk Decision",
+    "description": "A risk-priced retry architecture for AI agents using semantic idempotency, ambiguity budgets, retry amplification limits, and effect-aware escalation.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Reliability",
+      "Retries",
+      "Distributed systems",
+      "Risk management"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/an-agent-retry-is-a-new-risk-decision/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/an-agent-retry-is-a-new-risk-decision/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/an-agent-retry-is-a-new-risk-decision/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=an-agent-retry-is-a-new-risk-decision",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "your-ai-agent-needs-a-transaction-boundary",
+    "title": "Your AI Agent Needs a Transaction Boundary",
+    "description": "A production blueprint for binding AI-agent intent to one durable transaction across prepare, authorize, execute, verify, and compensate phases.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Distributed systems",
+      "Transactions",
+      "Enterprise architecture",
+      "Reliability"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-transaction-boundary/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-transaction-boundary/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-transaction-boundary/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-ai-agent-needs-a-transaction-boundary",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "your-ai-agent-needs-a-change-budget",
+    "title": "Your AI Agent Needs a Change Budget",
+    "description": "A canary and change-budget model for AI agents using authority-weighted exposure, evidence windows, cohort controls, and automatic rollback.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Canary releases",
+      "MLOps",
+      "Risk management",
+      "Enterprise AI"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-change-budget/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-change-budget/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-change-budget/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-ai-agent-needs-a-change-budget",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "who-owns-an-ai-agent-incident",
+    "title": "Who Owns an AI Agent Incident?",
+    "description": "An AI-agent incident-command architecture defining roles, clocks, decision rights, evidence, containment, reconciliation, and recovery gates.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Incident response",
+      "AI governance",
+      "SRE",
+      "Enterprise operations"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/who-owns-an-ai-agent-incident/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/who-owns-an-ai-agent-incident/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/who-owns-an-ai-agent-incident/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=who-owns-an-ai-agent-incident",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "revenue-operations-needs-an-agent-decision-ledger",
+    "title": "Revenue Operations Needs an Agent Decision Ledger",
+    "description": "A RevOps decision-ledger architecture linking evidence, agent proposals, human approvals, commercial authority, CRM effects, and revenue outcomes.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "Revenue operations",
+      "AI agents",
+      "CRM",
+      "Decision intelligence",
+      "Enterprise architecture"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/revenue-operations-needs-an-agent-decision-ledger/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/revenue-operations-needs-an-agent-decision-ledger/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/revenue-operations-needs-an-agent-decision-ledger/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=revenue-operations-needs-an-agent-decision-ledger",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "every-agent-needs-a-safe-degradation-ladder",
+    "title": "Every Agent Needs a Safe Degradation Ladder",
+    "description": "A control-plane blueprint for moving AI agents through autonomous, reviewed, recommend-only, read-only, and contained operating modes.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Resilience",
+      "Incident response",
+      "AI governance",
+      "Enterprise architecture"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/every-agent-needs-a-safe-degradation-ladder/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/every-agent-needs-a-safe-degradation-ladder/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/every-agent-needs-a-safe-degradation-ladder/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=every-agent-needs-a-safe-degradation-ladder",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
+    "slug": "your-verifier-must-not-trust-the-agent",
+    "title": "Your Verifier Must Not Trust the Agent",
+    "description": "A technical design for independent AI-agent verification using separate identities, data paths, assertions, evidence quality, and recovery gates.",
+    "publishedAt": "2026-09-03T12:00:00.000Z",
+    "readTime": "6 min read",
+    "tags": [
+      "AI agents",
+      "Verification",
+      "AI governance",
+      "Reliability",
+      "Enterprise architecture"
+    ],
+    "canonical": "https://singhaditya21.github.io/Medium/articles/your-verifier-must-not-trust-the-agent/",
+    "pageUrl": "https://singhaditya21.github.io/Medium/articles/your-verifier-must-not-trust-the-agent/",
+    "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-verifier-must-not-trust-the-agent/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-verifier-must-not-trust-the-agent",
+    "series": [
+      "production-grade-ai-agents",
+      "agent-control-plane-next-wave"
+    ],
+    "status": "editorial_draft"
+  },
+  {
     "slug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
     "title": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
     "description": "A technical and business blueprint for proving an enterprise AI agent is ready for bounded production authority using claims, executable scenarios, stateful tool simulation, failure injection, adversarial tests, shadow evidence, confidence bounds, canaries, attestations, drift, and rollback.",
@@ -18,7 +282,8 @@
     "series": [
       "production-grade-ai-agents",
       "agent-systems-engineering"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "your-ai-agent-needs-a-real-kill-switch",
@@ -39,7 +304,8 @@
     "series": [
       "production-grade-ai-agents",
       "agent-systems-engineering"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "model-routing-is-capital-allocation",
@@ -61,7 +327,8 @@
       "production-grade-ai-agents",
       "ai-unit-economics",
       "agent-systems-engineering"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "your-multi-agent-system-is-a-distributed-system",
@@ -82,7 +349,8 @@
     "series": [
       "production-grade-ai-agents",
       "agent-systems-engineering"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "human-approval-is-a-queueing-system",
@@ -103,7 +371,8 @@
     "series": [
       "production-grade-ai-agents",
       "agent-systems-engineering"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "every-ai-agent-action-needs-a-receipt",
@@ -124,7 +393,8 @@
     "series": [
       "production-grade-ai-agents",
       "agent-systems-engineering"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "your-ai-agents-memory-is-a-database-not-a-prompt",
@@ -145,7 +415,8 @@
     "series": [
       "production-grade-ai-agents",
       "agent-systems-engineering"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "your-ai-agent-should-not-have-a-standing-role",
@@ -165,7 +436,8 @@
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-should-not-have-a-standing-role/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=your-ai-agent-should-not-have-a-standing-role",
     "series": [
       "production-grade-ai-agents"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "a-2-4m-account-is-escalating",
@@ -186,7 +458,8 @@
     "series": [
       "production-grade-ai-agents",
       "agentic-crm"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "ai-agent-identity-is-not-enough",
@@ -204,7 +477,8 @@
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=ai-agent-identity-is-not-enough",
     "series": [
       "production-grade-ai-agents"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "what-an-agent-actually-costs",
@@ -222,7 +496,8 @@
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=what-an-agent-actually-costs",
     "series": [
       "ai-unit-economics"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "enterprise-agent-control-tower",
@@ -240,7 +515,8 @@
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=enterprise-agent-control-tower",
     "series": [
       "production-grade-ai-agents"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "agentic-crm-reference-architecture",
@@ -258,7 +534,8 @@
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=agentic-crm-reference-architecture",
     "series": [
       "agentic-crm"
-    ]
+    ],
+    "status": "published_archive"
   },
   {
     "slug": "traditional-crm-agentic-ai",
@@ -276,6 +553,7 @@
     "trackedUrl": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/?utm_source=github_pages&utm_medium=referral&utm_campaign=evergreen_archive&utm_content=traditional-crm-agentic-ai",
     "series": [
       "agentic-crm"
-    ]
+    ],
+    "status": "published_archive"
   }
 ]

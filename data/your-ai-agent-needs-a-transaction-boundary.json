@@ -1,0 +1,370 @@
+{
+  "author": "Aditya Singh",
+  "id": "cb47b1f7f53b",
+  "slug": "your-ai-agent-needs-a-transaction-boundary",
+  "title": "Your AI Agent Needs a Transaction Boundary",
+  "subtitle": "How idempotency, version checks, durable intent, and compensation keep one plan from becoming several business effects.",
+  "description": "A production blueprint for binding AI-agent intent to one durable transaction across prepare, authorize, execute, verify, and compensate phases.",
+  "canonical": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-transaction-boundary/",
+  "sourceUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-transaction-boundary/",
+  "publishedAt": "2026-09-03T12:00:00.000Z",
+  "modifiedAt": "2026-09-03T12:00:00.000Z",
+  "status": "editorial_draft",
+  "statusLabel": "Editorial draft",
+  "readTime": "6 min read",
+  "wordCount": 1187,
+  "tags": [
+    "AI agents",
+    "Distributed systems",
+    "Transactions",
+    "Enterprise architecture",
+    "Reliability"
+  ],
+  "heroImage": "assets/images/your-ai-agent-needs-a-transaction-boundary/figure-01.svg",
+  "heroAlt": "Six-stage AI-agent transaction architecture separating proposal, preparation, authorization, execution, observation, and closure.",
+  "blocks": [
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "An agent approves one concession, calls one CRM API, times out once, retries once, and creates two downstream credits. Every model response can be reasonable while the business result is wrong.",
+      "text": "An agent approves one concession, calls one CRM API, times out once, retries once, and creates two downstream credits. Every model response can be reasonable while the business result is wrong."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The defect is not primarily linguistic. The system let a probabilistic planner cross a transactional boundary without a stable action identity, a version precondition, or a durable record of whether the first effect committed. A production agent needs a transaction protocol around its tools, even when the underlying business systems cannot participate in one database transaction.",
+      "text": "The defect is not primarily linguistic. The system let a probabilistic planner cross a transactional boundary without a stable action identity, a version precondition, or a durable record of whether the first effect committed. A production agent needs a transaction protocol around its tools, even when the underlying business systems cannot participate in one database transaction."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "The agent may propose a transaction. It must not be the component that decides whether an ambiguous transaction happened, retries it, and certifies its own result.",
+      "text": "The agent may propose a transaction. It must not be the component that decides whether an ambiguous transaction happened, retries it, and certifies its own result."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-transaction-boundary/figure-01.svg",
+      "alt": "Six-stage AI-agent transaction architecture separating proposal, preparation, authorization, execution, observation, and closure.",
+      "caption": "Figure 1. The transaction coordinator encloses a probabilistic planner with deterministic authority and effect controls. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The dangerous state is neither success nor failure",
+      "text": "The dangerous state is neither success nor failure"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Remote calls have a third outcome: <strong>unknown</strong>. A client can lose the response after the server commits. Treating that timeout as failure causes a duplicate; treating it as success may conceal a rejected action. The workflow must preserve ambiguity as a first-class state until authoritative observation resolves it.",
+      "text": "Remote calls have a third outcome: unknown. A client can lose the response after the server commits. Treating that timeout as failure causes a duplicate; treating it as success may conceal a rejected action. The workflow must preserve ambiguity as a first-class state until authoritative observation resolves it."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A transaction boundary also needs semantic stability. Reusing an idempotency key with a changed amount is not a retry; it is a different intent. The gateway should hash the normalized command and reject the same action identifier when principal, resource, expected version, policy digest, or material payload changes.",
+      "text": "A transaction boundary also needs semantic stability. Reusing an idempotency key with a changed amount is not a retry; it is a different intent. The gateway should hash the normalized command and reject the same action identifier when principal, resource, expected version, policy digest, or material payload changes."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Put a durable action coordinator between planning and effects",
+      "text": "Put a durable action coordinator between planning and effects"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The coordinator stores a prepared intent before it exposes an execution token. It binds the accountable principal, agent workload, target resource, expected version, normalized payload hash, policy decision, approval reference, deadline, and compensation class. The effect gateway then accepts only a current, unused transaction capability.",
+      "text": "The coordinator stores a prepared intent before it exposes an execution token. It binds the accountable principal, agent workload, target resource, expected version, normalized payload hash, policy decision, approval reference, deadline, and compensation class. The effect gateway then accepts only a current, unused transaction capability."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "After the call, an independent observer reads the authoritative postcondition. A matching effect closes the action as committed. A proven absence can permit a policy-controlled retry. A divergent effect enters compensation or manual reconciliation. The planner receives the outcome; it does not manufacture it.",
+      "text": "After the call, an independent observer reads the authoritative postcondition. A matching effect closes the action as committed. A proven absence can permit a policy-controlled retry. A divergent effect enters compensation or manual reconciliation. The planner receives the outcome; it does not manufacture it."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-transaction-boundary/figure-02.svg",
+      "alt": "Eight-state transaction flow retaining unknown outcomes until independent observation or compensation closes the action.",
+      "caption": "Figure 2. Unknown is a durable state rather than an excuse for an immediate retry. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Price ambiguity, not just failure",
+      "text": "Price ambiguity, not just failure"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "For action <code>a</code>, a useful retry decision compares the expected cost of waiting, retrying, and escalating:",
+      "text": "For action a, a useful retry decision compares the expected cost of waiting, retrying, and escalating:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "choose d* = argmin_d { C_delay(d) + P_dup(d) × L_dup + P_miss(d) × L_miss + C_review(d) }\nsubject to: digest_same ∧ authority_current ∧ version_valid",
+      "language": "text"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The probabilities are calibrated from gateway and reconciliation evidence, not model confidence. A $5 internal task and a binding $250,000 credit should have different ambiguity deadlines, duplicate-loss estimates, and escalation paths.",
+      "text": "The probabilities are calibrated from gateway and reconciliation evidence, not model confidence. A $5 internal task and a binding $250,000 credit should have different ambiguity deadlines, duplicate-loss estimates, and escalation paths."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Boundary object",
+        "Required field",
+        "Why it exists"
+      ],
+      "rows": [
+        [
+          "Intent",
+          "action_id + payload_digest",
+          "Separates a retry from changed intent"
+        ],
+        [
+          "Concurrency",
+          "expected_resource_version",
+          "Rejects stale writes"
+        ],
+        [
+          "Authority",
+          "single_use capability + expiry",
+          "Bounds when the effect may occur"
+        ],
+        [
+          "Outcome",
+          "observed_postcondition",
+          "Proves business state independently"
+        ],
+        [
+          "Recovery",
+          "compensation_class + owner",
+          "Prevents ownerless ambiguity"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Make the gateway contract explicit",
+      "text": "Make the gateway contract explicit"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A tool wrapper should require the transaction context rather than accepting an unstructured instruction:",
+      "text": "A tool wrapper should require the transaction context rather than accepting an unstructured instruction:"
+    },
+    {
+      "type": "html",
+      "tag": "pre",
+      "html": "",
+      "text": "{\n  \"action_id\": \"act_01K...\",\n  \"principal\": \"seller:4821\",\n  \"resource\": \"quote:771\",\n  \"expected_version\": 42,\n  \"command\": {\"set_discount_bps\": 800},\n  \"command_digest\": \"sha256:...\",\n  \"authority\": {\"lease_id\": \"lease_91\", \"max_uses\": 1},\n  \"postcondition\": {\"discount_bps\": 800, \"version\": 43}\n}",
+      "language": "json"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The gateway must atomically claim the action identifier before mutation, retain the first result, compare subsequent payload digests, and expose an observation endpoint. An HTTP 200 is transport evidence; the postcondition is business evidence.",
+      "text": "The gateway must atomically claim the action identifier before mutation, retain the first result, compare subsequent payload digests, and expose an observation endpoint. An HTTP 200 is transport evidence; the postcondition is business evidence."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Operate the boundary with tail metrics",
+      "text": "Operate the boundary with tail metrics"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The core SLOs are duplicate-effect rate, stale-version rejection, p95 and p99 ambiguity age, compensation completion, and receipt closure. Mean latency is secondary when the economic exposure sits in a small tail of unresolved actions.",
+      "text": "The core SLOs are duplicate-effect rate, stale-version rejection, p95 and p99 ambiguity age, compensation completion, and receipt closure. Mean latency is secondary when the economic exposure sits in a small tail of unresolved actions."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "The illustrative scorecard deliberately contains one breach: p99 ambiguity age. A system can achieve zero observed duplicates in a small window and still be unsafe because unresolved actions remain economically live for too long.",
+      "text": "The illustrative scorecard deliberately contains one breach: p99 ambiguity age. A system can achieve zero observed duplicates in a small window and still be unsafe because unresolved actions remain economically live for too long."
+    },
+    {
+      "type": "figure",
+      "src": "assets/images/your-ai-agent-needs-a-transaction-boundary/figure-03.svg",
+      "alt": "Five-row transaction control scorecard comparing duplicate effects, version rejection, ambiguity age, and compensation targets.",
+      "caption": "Figure 3. Tail ambiguity can breach even when duplicate-effect and compensation measures pass. Editorial architecture diagram; illustrative values; not production data."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Operating signal",
+        "Decision use",
+        "Failure interpretation"
+      ],
+      "rows": [
+        [
+          "Duplicate-effect rate",
+          "Stop autonomy when non-zero for material actions",
+          "Idempotency or reconciliation defect"
+        ],
+        [
+          "Ambiguity age by risk",
+          "Escalate before economic deadline",
+          "Unknown effects are accumulating"
+        ],
+        [
+          "Version-conflict rate",
+          "Diagnose stale planning and contention",
+          "Evidence-to-execution gap is too long"
+        ],
+        [
+          "Compensation completion",
+          "Gate wider rollout",
+          "Recovery is not keeping pace"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Failure-injection before production",
+      "text": "Failure-injection before production"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "A design review cannot prove <strong>Persist intent before authority; observe the effect before declaring success.</strong> The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition.",
+      "text": "A design review cannot prove Persist intent before authority; observe the effect before declaring success. The pre-production harness must interrupt the system at the transitions where ownership, authority, evidence, and business state can disagree. The objective is not to maximize a generic pass rate. It is to demonstrate that every material fault produces a bounded state, a named owner, and an admissible recovery transition."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Injected fault",
+        "Experiment",
+        "Required evidence"
+      ],
+      "rows": [
+        [
+          "Delayed or reordered work",
+          "Pause the path after PREPARED and release it after UNKNOWN",
+          "The stale path cannot manufacture terminal success"
+        ],
+        [
+          "Authority becomes stale",
+          "Advance policy, mode, ownership, or resource version before effect commit",
+          "The final gateway rejects the old decision context"
+        ],
+        [
+          "Evidence is missing or corrupted",
+          "Remove one authoritative observation or change its digest",
+          "The outcome remains violated, inconclusive, or owned—never guessed"
+        ],
+        [
+          "Recovery itself fails",
+          "Interrupt compensation, handoff, or receipt closure",
+          "The action stays visible with an owner, deadline, and next legal transition"
+        ]
+      ]
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk.",
+      "text": "Run the matrix at concurrency, with realistic dependency lag and with the same policy and gateway versions used in the candidate release. Report p95 and p99 resolution alongside the worst unresolved example. Averages can demonstrate throughput; they cannot erase a single material breach. Promotion should require replayable evidence for the controls, not a slide stating that the team considered the risk."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Three questions for the architecture review",
+      "text": "Three questions for the architecture review"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is truth decided?</strong> Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent.",
+      "text": "Where is truth decided? Name the authoritative source and the exact component permitted to advance the workflow into a terminal state. If the answer is ‘the agent interprets the tool response,’ the boundary is not yet independent."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>Where is authority finally enforced?</strong> Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action.",
+      "text": "Where is authority finally enforced? Follow the command through every queue, adapter, cache, provider, and downstream effect. A policy decision is useful only when the last material write boundary can reject a stale, changed, or excessive action."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>What blocks promotion?</strong> Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry.",
+      "text": "What blocks promotion? Convert the scorecard into executable gates with owners and expiry. A breached tail metric must reduce scope, hold the cohort, or enter an approved exception path; it cannot remain decorative telemetry."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "A practical implementation sequence",
+      "text": "A practical implementation sequence"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>1. Wrap one material command.</strong> Choose a single CRM or billing mutation and require action IDs, expected versions, and postconditions.",
+      "text": "1. Wrap one material command. Choose a single CRM or billing mutation and require action IDs, expected versions, and postconditions."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>2. Build the ambiguity ledger.</strong> Persist unknown outcomes with owners, deadlines, evidence, and allowed next transitions.",
+      "text": "2. Build the ambiguity ledger. Persist unknown outcomes with owners, deadlines, evidence, and allowed next transitions."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<strong>3. Prove recovery under fault injection.</strong> Drop responses after commit, reorder observations, replay requests, and show that the same intent never becomes two effects.",
+      "text": "3. Prove recovery under fault injection. Drop responses after commit, reorder observations, replay requests, and show that the same intent never becomes two effects."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "Primary references and boundaries",
+      "text": "Primary references and boundaries"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "<a href=\"https://www.rfc-editor.org/rfc/rfc9110.html\">RFC 9110</a> defines HTTP idempotency semantics. AWS's <a href=\"https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/\">Making retries safe with idempotent APIs</a> explains client request identifiers, semantic equivalence, and atomic recording. These sources do not prescribe this agent protocol; they support its distributed-systems foundations.",
+      "text": "RFC 9110 defines HTTP idempotency semantics. AWS's Making retries safe with idempotent APIs explains client request identifiers, semantic equivalence, and atomic recording. These sources do not prescribe this agent protocol; they support its distributed-systems foundations."
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "This design does not claim a general exactly-once network guarantee. It creates an auditable, domain-specific effect contract using deduplication, concurrency control, observation, and compensation.",
+      "text": "This design does not claim a general exactly-once network guarantee. It creates an auditable, domain-specific effect contract using deduplication, concurrency control, observation, and compensation."
+    },
+    {
+      "type": "html",
+      "tag": "h2",
+      "html": "The operating conclusion",
+      "text": "The operating conclusion"
+    },
+    {
+      "type": "html",
+      "tag": "p",
+      "html": "Agent reliability begins where generated text ends. If the system cannot distinguish prepared intent, granted authority, attempted execution, observed effect, and completed recovery, it does not have a transaction boundary. It has optimism distributed across APIs.",
+      "text": "Agent reliability begins where generated text ends. If the system cannot distinguish prepared intent, granted authority, attempted execution, observed effect, and completed recovery, it does not have a transaction boundary. It has optimism distributed across APIs."
+    },
+    {
+      "type": "html",
+      "tag": "blockquote",
+      "html": "Which agent action in your estate currently turns a timeout into an unsafe guess?",
+      "text": "Which agent action in your estate currently turns a timeout into an unsafe guess?"
+    }
+  ]
+}

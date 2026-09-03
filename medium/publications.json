@@ -2,78 +2,34 @@
   "$schema": "./publications.schema.json",
   "schemaVersion": 1,
   "mediumProfile": "https://medium.com/@singhaditya21_89007",
-  "verifiedAt": "2026-08-21",
+  "verifiedAt": "2026-09-03",
   "verificationMethod": "signed_in_medium_published_stories",
   "stories": [
-    {
-      "storySlug": "every-ai-agent-action-needs-a-receipt",
-      "status": "not_published",
-      "mediumUrl": null
-    },
-    {
-      "storySlug": "human-approval-is-a-queueing-system",
-      "status": "not_published",
-      "mediumUrl": null
-    },
-    {
-      "storySlug": "your-multi-agent-system-is-a-distributed-system",
-      "status": "not_published",
-      "mediumUrl": null
-    },
-    {
-      "storySlug": "model-routing-is-capital-allocation",
-      "status": "not_published",
-      "mediumUrl": null
-    },
-    {
-      "storySlug": "your-ai-agent-needs-a-real-kill-switch",
-      "status": "not_published",
-      "mediumUrl": null
-    },
-    {
-      "storySlug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
-      "status": "not_published",
-      "mediumUrl": null
-    },
-    {
-      "storySlug": "a-2-4m-account-is-escalating",
-      "status": "published",
-      "mediumUrl": "https://medium.com/@singhaditya21_89007/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b"
-    },
-    {
-      "storySlug": "agentic-crm-reference-architecture",
-      "status": "published",
-      "mediumUrl": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae"
-    },
-    {
-      "storySlug": "ai-agent-identity-is-not-enough",
-      "status": "published",
-      "mediumUrl": "https://medium.com/@singhaditya21_89007/ai-agent-identity-authorization-use-cases-59992dc9e155"
-    },
-    {
-      "storySlug": "enterprise-agent-control-tower",
-      "status": "published",
-      "mediumUrl": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438"
-    },
-    {
-      "storySlug": "traditional-crm-agentic-ai",
-      "status": "published",
-      "mediumUrl": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4"
-    },
-    {
-      "storySlug": "what-an-agent-actually-costs",
-      "status": "published",
-      "mediumUrl": "https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5"
-    },
-    {
-      "storySlug": "your-ai-agent-should-not-have-a-standing-role",
-      "status": "not_published",
-      "mediumUrl": null
-    },
-    {
-      "storySlug": "your-ai-agents-memory-is-a-database-not-a-prompt",
-      "status": "not_published",
-      "mediumUrl": null
-    }
+    {"storySlug": "model-routing-is-capital-allocation", "status": "published", "mediumUrl": "https://medium.com/@singhaditya21_89007/model-routing-is-capital-allocation-8ee7ebb8b0ae"},
+    {"storySlug": "your-multi-agent-system-is-a-distributed-system", "status": "published", "mediumUrl": "https://medium.com/@singhaditya21_89007/your-multi-agent-system-is-a-distributed-system-0c456a0fe664"},
+    {"storySlug": "human-approval-is-a-queueing-system", "status": "published", "mediumUrl": "https://medium.com/@singhaditya21_89007/human-approval-is-a-queueing-system-0c2858baa088"},
+    {"storySlug": "every-ai-agent-action-needs-a-receipt", "status": "published", "mediumUrl": "https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5"},
+    {"storySlug": "your-ai-agents-memory-is-a-database-not-a-prompt", "status": "published", "mediumUrl": "https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef"},
+    {"storySlug": "a-2-4m-account-is-escalating", "status": "published", "mediumUrl": "https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b"},
+    {"storySlug": "ai-agent-identity-is-not-enough", "status": "published", "mediumUrl": "https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155"},
+    {"storySlug": "what-an-agent-actually-costs", "status": "published", "mediumUrl": "https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5"},
+    {"storySlug": "enterprise-agent-control-tower", "status": "published", "mediumUrl": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438"},
+    {"storySlug": "agentic-crm-reference-architecture", "status": "published", "mediumUrl": "https://medium.com/ai-in-plain-english/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae"},
+    {"storySlug": "traditional-crm-agentic-ai", "status": "published", "mediumUrl": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4"},
+    {"storySlug": "your-ai-agent-needs-a-real-kill-switch", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "your-ai-agent-should-not-have-a-standing-role", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "your-ai-agent-needs-a-transaction-boundary", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "an-agent-retry-is-a-new-risk-decision", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "your-verifier-must-not-trust-the-agent", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "the-agent-policy-engine-is-a-compiler", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "ai-agent-observability-is-not-logging", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "every-agent-needs-a-safe-degradation-ladder", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "who-owns-an-ai-agent-incident", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "your-ai-agent-needs-a-change-budget", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "an-agents-context-window-is-a-data-boundary", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "revenue-operations-needs-an-agent-decision-ledger", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "the-hardest-agent-failure-is-an-ambiguous-success", "status": "not_published", "mediumUrl": null},
+    {"storySlug": "your-ai-agent-needs-a-fencing-token", "status": "not_published", "mediumUrl": null}
   ]
 }
