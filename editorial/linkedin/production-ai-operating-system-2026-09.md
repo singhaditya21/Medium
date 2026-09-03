@@ -1,6 +1,6 @@
 # Production AI Operating System — LinkedIn campaign
 
-Status: **prepared for exact approval; not scheduled**
+Status: **quality-updated and prepared for exact approval; not scheduled**
 
 This campaign extends the existing five-part Enterprise AI Control Plane sequence without changing its schedule. All times are Asia/Kolkata (IST). Every quantitative value described as illustrative or synthetic comes from the corresponding repository story and figure program; it is not presented as observed production performance.
 
@@ -8,9 +8,12 @@ Publishing settings for every post:
 
 - Audience: Anyone
 - Comments: enabled
-- Media: three images in the listed order
-- Link: included as plain text in the post body
+- Media: one three-page, 4:5 PDF document carousel
+- Carousel structure: metric-first cover, simplified control architecture, operating evidence and decision rule
+- Link: included as plain text in the post body; generated URL preview must be removed before the PDF is attached
+- Document accessibility: selectable vector text, high-contrast labels, descriptive document title
 - Native mentions: none; organizations are named only where they are substantively relevant
+- Public-link gate: confirm the destination is publicly readable immediately before scheduling
 - Approval: exact action-time confirmation required before scheduling
 
 ## L1 — Authority should exist only for the transaction
@@ -18,16 +21,15 @@ Publishing settings for every post:
 - Schedule: Friday, 18 September 2026 at 08:45 IST
 - Source: `your-ai-agent-should-not-have-a-standing-role`
 - Link: https://medium.com/@singhaditya21_89007/165cf6e0c3db
-- Media:
-  1. `assets/images/your-ai-agent-should-not-have-a-standing-role/figure-03.png` — Just-in-time permission-lease control plane from evidence and policy through execution, verification and recovery.
-  2. `assets/images/your-ai-agent-should-not-have-a-standing-role/figure-11.png` — Synthetic exposure heatmap across credential lifetime and resource scope.
-  3. `assets/images/your-ai-agent-should-not-have-a-standing-role/figure-23.png` — Synthetic p95 latency budget for the end-to-end permission path.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-01-permission-leases.pdf`
+- Carousel title: `Permission Leases: Reduce Reachable Authority`
+- Pages: transaction-level authority hook; three-plane permission architecture; lease scope and latency scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 1/10
->
 > An eight-hour standing role and a 90-second permission lease can authorize the same CRM update. They do not create the same loss surface.
+>
+> Production AI Operating System | 1 of 10
 >
 > In this illustrative renewal path, authority is reduced to:
 >
@@ -50,23 +52,22 @@ Exact post text:
 >
 > Which standing agent permission would you convert into a one-use transaction first?
 >
-> #AgenticAI #ZeroTrust #IdentitySecurity #EnterpriseArchitecture #AIGovernance
+> #ZeroTrust #IdentitySecurity #AIGovernance #AgenticAI
 
 ## L2 — Human approval is a capacity-constrained risk service
 
 - Schedule: Monday, 21 September 2026 at 14:00 IST
 - Source: `human-approval-is-a-queueing-system`
 - Link: https://medium.com/@singhaditya21_89007/0c2858baa088
-- Media:
-  1. `assets/images/human-approval-is-a-queueing-system/figure-02.png` — Approval decision-service architecture with risk, eligibility, routing, review and outcome calibration.
-  2. `assets/images/human-approval-is-a-queueing-system/figure-06.png` — Erlang-C wait-time sensitivity by qualified reviewers and arrival rate.
-  3. `assets/images/human-approval-is-a-queueing-system/figure-15.png` — Synthetic automation-threshold frontier balancing review, delay and residual loss.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-02-human-approval-queue.pdf`
+- Carousel title: `Human Approval Is a Queueing System`
+- Pages: utilization hook; intake-queue-decision architecture; queueing and review-value scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 2/10
->
 > A 97% approval rate can coexist with a broken approval system.
+>
+> Production AI Operating System | 2 of 10
 >
 > Consider the illustrative operating day in this model:
 >
@@ -87,23 +88,22 @@ Exact post text:
 >
 > Does your human-approval dashboard measure approval rate—or risk-weighted waiting time and false autonomy?
 >
-> #HumanInTheLoop #OperationsResearch #AgenticAI #RiskManagement #EnterpriseAI
+> #HumanInTheLoop #OperationsResearch #RiskManagement
 
 ## L3 — A trace is not a receipt
 
 - Schedule: Wednesday, 23 September 2026 at 08:45 IST
 - Source: `every-ai-agent-action-needs-a-receipt`
 - Link: https://medium.com/@singhaditya21_89007/906fc2c6ddb5
-- Media:
-  1. `assets/images/every-ai-agent-action-needs-a-receipt/figure-02.png` — Signed action-receipt control plane spanning preparation, execution, verification and recovery.
-  2. `assets/images/every-ai-agent-action-needs-a-receipt/figure-06.png` — Digest chain, Merkle inclusion and independently timestamped batch root.
-  3. `assets/images/every-ai-agent-action-needs-a-receipt/figure-15.png` — Synthetic monthly receipt-storage and verification cost model.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-03-action-receipts.pdf`
+- Carousel title: `A Trace Is Not an Action Receipt`
+- Pages: ambiguity-age hook; prepare-execute-prove architecture; receipt operating scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 3/10
->
 > A tool returned 200. The trace ended successfully. The business effect is still unproven.
+>
+> Production AI Operating System | 3 of 10
 >
 > In the illustrative incident, an AI agent applies an 8% exception to a $2.4M renewal. A timeout triggers a retry. CRM records one changed quote, billing sees two adjustment requests and the customer receives one message with no visible approval reference.
 >
@@ -119,23 +119,22 @@ Exact post text:
 >
 > Can your current audit trail prove the approved delta and the independently observed postcondition without reconstructing six systems?
 >
-> #Auditability #AgenticAI #DistributedSystems #EnterpriseArchitecture #AIGovernance
+> #Auditability #DistributedSystems #AIGovernance
 
 ## L4 — Multi-agent fluency is not distributed coordination
 
 - Schedule: Friday, 25 September 2026 at 14:00 IST
 - Source: `your-multi-agent-system-is-a-distributed-system`
 - Link: https://medium.com/@singhaditya21_89007/0c456a0fe664
-- Media:
-  1. `assets/images/your-multi-agent-system-is-a-distributed-system/figure-02.png` — Multi-agent renewal topology governed by a durable workflow and domain APIs.
-  2. `assets/images/your-multi-agent-system-is-a-distributed-system/figure-07.png` — Fencing-token sequence preventing a stale owner from committing after takeover.
-  3. `assets/images/your-multi-agent-system-is-a-distributed-system/figure-17.png` — Synthetic coordination SLO scorecard with explicit breaches.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-04-multi-agent-coordination.pdf`
+- Carousel title: `Multi-Agent Systems Need Distributed-System Controls`
+- Pages: invariant hook; coordination, messaging and effect architecture; tail-risk scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 4/10
->
 > Five agents exchanging articulate messages do not create one reliable workflow.
+>
+> Production AI Operating System | 4 of 10
 >
 > A consequential multi-agent system needs eight explicit invariants:
 >
@@ -158,23 +157,22 @@ Exact post text:
 >
 > Which invariant fails first in your multi-agent design: ownership, uniqueness, ordering or recovery?
 >
-> #MultiAgentSystems #DistributedSystems #AgenticAI #ReliabilityEngineering #EnterpriseArchitecture
+> #MultiAgentSystems #DistributedSystems #ReliabilityEngineering #AgenticAI
 
 ## L5 — Model routing is a portfolio decision
 
 - Schedule: Monday, 28 September 2026 at 08:45 IST
 - Source: `model-routing-is-capital-allocation`
 - Link: https://medium.com/@singhaditya21_89007/8ee7ebb8b0ae
-- Media:
-  1. `assets/images/model-routing-is-capital-allocation/figure-02.png` — Risk-aware routing control plane with policy filtering and portfolio optimisation.
-  2. `assets/images/model-routing-is-capital-allocation/figure-06.png` — Synthetic quality-cost Pareto frontier identifying dominated routes.
-  3. `assets/images/model-routing-is-capital-allocation/figure-17.png` — Synthetic routing scorecard across quality, latency, cost, calibration, policy and tail loss.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-05-model-routing.pdf`
+- Carousel title: `Model Routing Is Capital Allocation`
+- Pages: workflow-cost hook; filter-optimize-account architecture; route-ledger and breach scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 5/10
->
 > “Cheap model for easy work, large model for hard work” is not a production routing policy.
+>
+> Production AI Operating System | 5 of 10
 >
 > A short request can change a $2.4M quote. A long request can draft an internal summary. Difficulty is not exposure.
 >
@@ -198,23 +196,22 @@ Exact post text:
 >
 > Does your router optimise tokens—or verified business outcomes under an explicit risk budget?
 >
-> #ModelRouting #AIEconomics #FinOps #AgenticAI #EnterpriseAI
+> #ModelRouting #AIEconomics #FinOps
 
 ## L6 — A kill switch must stop effects, not dashboards
 
 - Schedule: Wednesday, 30 September 2026 at 14:00 IST
 - Source: `your-ai-agent-needs-a-real-kill-switch`
 - Link: https://medium.com/@singhaditya21_89007/f7c50791894d
-- Media:
-  1. `assets/images/your-ai-agent-needs-a-real-kill-switch/figure-02.png` — Multi-layer containment architecture across identity, workload, network, tools, queues and effect gateways.
-  2. `assets/images/your-ai-agent-needs-a-real-kill-switch/figure-05.png` — Synthetic p99 revocation-latency waterfall against a 90-second stop-time objective.
-  3. `assets/images/your-ai-agent-needs-a-real-kill-switch/figure-17.png` — Synthetic containment scorecard covering enforcement, inventory, ambiguity and recovery.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-06-kill-switch.pdf`
+- Carousel title: `A Real AI-Agent Kill Switch`
+- Pages: command-versus-containment hook; revoke-enforce-reconcile architecture; containment scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 6/10
->
 > A kill-switch API can respond in 200 ms while the agent keeps creating effects for 10 minutes.
+>
+> Production AI Operating System | 6 of 10
 >
 > The operating metric is not button latency. It is time from the first credible containment trigger to independent proof that every material effect boundary rejects stale authority.
 >
@@ -235,23 +232,22 @@ Exact post text:
 >
 > What does your emergency stop prove: process termination, authority rejection or verified business-state containment?
 >
-> #AISecurity #IncidentResponse #AgenticAI #ReliabilityEngineering #EnterpriseArchitecture
+> #AISecurity #IncidentResponse #ReliabilityEngineering
 
 ## L7 — Benchmark accuracy is not production authority
 
 - Schedule: Friday, 2 October 2026 at 08:45 IST
 - Source: `do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation`
 - Link: https://medium.com/@singhaditya21_89007/44beb06b346a
-- Media:
-  1. `assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-02.png` — Production evaluation architecture joining versioned artifacts, scenarios, evidence and promotion gates.
-  2. `assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-12.png` — Six-stage authority ladder from shadow mode to a bounded production contract.
-  3. `assets/images/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/figure-14.png` — Analytical rule-of-three curve for zero observed critical failures.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-07-production-evaluation.pdf`
+- Carousel title: `Production Evaluation Before Production Authority`
+- Pages: uncertainty-bound hook; version-evaluate-promote architecture; statistical and authority-stage scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 7/10
->
 > A 94% benchmark score can hide a production-unsafe agent.
+>
+> Production AI Operating System | 7 of 10
 >
 > In the reference collections scenario, the missing tests are not exotic: stale promises, conflicting CRM and ledger state, policy change mid-workflow, timeout after a payment is accepted and an attachment attempting to redirect the agent.
 >
@@ -267,23 +263,22 @@ Exact post text:
 >
 > Which production claim has the weakest evidence in your current agent release: action safety, policy compliance, recovery or mature business outcome?
 >
-> #AIEvaluation #AgenticAI #MLOps #ResponsibleAI #EnterpriseAI
+> #AIEvaluation #MLOps #ResponsibleAI #AgenticAI
 
 ## L8 — Agent memory needs freshness and deletion SLOs
 
 - Schedule: Monday, 5 October 2026 at 14:00 IST
 - Source: `your-ai-agents-memory-is-a-database-not-a-prompt`
 - Link: https://medium.com/@singhaditya21_89007/74f5e24f49ef
-- Media:
-  1. `assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-02.png` — Six-plane enterprise memory control architecture.
-  2. `assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-10.png` — Synthetic freshness-decay curves for four memory classes.
-  3. `assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-17.png` — Synthetic memory SLO scorecard including provenance, retrieval, poisoning and deletion.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-08-agent-memory.pdf`
+- Carousel title: `Agent Memory Needs Database Controls`
+- Pages: retrieval-versus-deletion hook; write-read-lifecycle architecture; class-specific freshness scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 8/10
->
 > A memory system can achieve 104 ms p95 retrieval and still be unsafe.
+>
+> Production AI Operating System | 8 of 10
 >
 > Retrieval latency says nothing about whether the returned assertion is current, attributable, permitted for this purpose, contradicted by a stronger source or actually deletable.
 >
@@ -304,23 +299,22 @@ Exact post text:
 >
 > Which memory SLO would expose more risk in your system: stale admission, poison admission, deletion latency or as-of replay?
 >
-> #AgentMemory #DataGovernance #RAG #AgenticAI #AIGovernance
+> #AgentMemory #DataGovernance #RAG
 
 ## L9 — A $288,000 delta is not “tool use”
 
 - Schedule: Wednesday, 7 October 2026 at 08:45 IST
 - Source: `a-2-4m-account-is-escalating`
 - Link: https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/
-- Media:
-  1. `assets/images/human-approval-is-a-queueing-system/figure-11.png` — Approval packet binding an exact delta, evidence, uncertainty, policy and recovery.
-  2. `assets/images/your-ai-agent-should-not-have-a-standing-role/figure-18.png` — Independent executor gates before a protected business mutation.
-  3. `assets/images/every-ai-agent-action-needs-a-receipt/figure-12.png` — Reconciliation decision tree for an ambiguous outcome.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-09-crm-risk-workflow.pdf`
+- Carousel title: `A $288K CRM Decision Needs an Authority Boundary`
+- Pages: exposure-and-deadline hook; prepare-decide-act architecture; exact-delta control scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 9/10
->
 > At 09:12, an agent identifies a $2.4M renewal at risk. The response deadline is 11:00. Procurement asks for a 12% discount.
+>
+> Production AI Operating System | 9 of 10
 >
 > That proposed delta is $288,000 before margin, precedent, term or contingent-credit effects. Calling it “tool use” erases the business decision.
 >
@@ -346,23 +340,22 @@ Exact post text:
 >
 > Where does your CRM platform draw the boundary between recommendation and contractual commitment?
 >
-> #AgenticCRM #RevenueOperations #AgenticAI #AIGovernance #EnterpriseArchitecture
+> #RevenueOperations #AgenticCRM #AIGovernance #AgenticAI
 
 ## L10 — Price the verified outcome, not the model call
 
 - Schedule: Friday, 9 October 2026 at 14:00 IST
 - Source: `what-an-agent-actually-costs` with the companion routing architecture
 - Link: https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5
-- Media:
-  1. `assets/images/model-routing-is-capital-allocation/figure-02.png` — Risk-aware routing architecture connecting action, policy, evidence, verification and portfolio state.
-  2. `assets/images/model-routing-is-capital-allocation/figure-03.png` — High-resolution workflow-cost ledger beyond input and output tokens.
-  3. `assets/images/model-routing-is-capital-allocation/figure-13.png` — Retry and tool-cost waterfall from nominal call to completed workflow.
+- Document carousel: `output/pdf/linkedin/production-ai-operating-system-10-verified-outcome-economics.pdf`
+- Carousel title: `Price the Verified Outcome, Not the Model Call`
+- Pages: cost-share hook; unique attempt-control-outcome architecture; verified-outcome economics scorecard.
 
 Exact post text:
 
-> Production AI Operating System — 10/10
->
 > Inference is 20.8% of this illustrative agent bill. Human review and the always-on control plane are 68.4%.
+>
+> Production AI Operating System | 10 of 10
 >
 > The model assumes 40,000 attempted business objectives per month:
 >
@@ -384,5 +377,4 @@ Exact post text:
 >
 > Can your agent business case price all eight cost lines and the verified-outcome denominator today?
 >
-> #AIEconomics #FinOps #AgenticAI #ValueRealization #EnterpriseAI
-
+> #AIEconomics #FinOps #ValueRealization
