@@ -65,6 +65,7 @@ Suggested category: **deployable public artifact**. LinkedIn-agent working state
 | `editorial/seven-story-continuation.md` | 1 | Forward editorial planning |
 | `editorial/phase-2/*.md` | 8 | Revision batch, distribution package, and approved phase-two copy |
 | `editorial/phase-2/drafts/*.md` | 5 | Working editorial variants |
+| `editorial/linkedin/*.md` | 1 | Exact-copy LinkedIn campaign packages with schedules, source links, media order, alt text, and approval state |
 
 Suggested category: **editorial source of truth**. Agents may cite this material when drafting, but must not overwrite it without an explicit editorial request.
 
