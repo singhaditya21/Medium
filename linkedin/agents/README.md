@@ -29,7 +29,7 @@ LinkedIn runs only at **10 PM, 12 AM, 2 AM, 4 AM, and 6 AM IST**. Shared cross-p
 - `engagement/strategy.json` is the operating policy and cadence contract.
 - `engagement/queue.json` is the only persistent comment/reply approval queue.
 - `engagement/linkedin-relationship-watchlist.json` is the relationship timing source of truth.
-- `linkedin/executions/` and `linkedin/message-executions/` are immutable execution evidence.
+- `linkedin/executions/`, `linkedin/message-executions/`, and `linkedin/schedule-executions/` are immutable execution evidence.
 - Unapproved DM text and post drafts are presented in the approval brief. They are not committed unless the user explicitly asks to retain a draft.
 
 Read [`policy.md`](policy.md) before every cycle and follow [`runbooks/two-hourly-cycle.md`](runbooks/two-hourly-cycle.md).

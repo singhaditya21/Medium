@@ -1,6 +1,6 @@
 # Production AI Operating System — LinkedIn campaign
 
-Status: **quality-updated and prepared for exact approval; not scheduled**
+Status: **scheduled and visibly verified in LinkedIn on 3 September 2026**
 
 This campaign extends the existing five-part Enterprise AI Control Plane sequence without changing its schedule. All times are Asia/Kolkata (IST). Every quantitative value described as illustrative or synthetic comes from the corresponding repository story and figure program; it is not presented as observed production performance.
 
@@ -15,6 +15,13 @@ Publishing settings for every post:
 - Native mentions: none; organizations are named only where they are substantively relevant
 - Public-link gate: confirm the destination is publicly readable immediately before scheduling
 - Approval: exact action-time confirmation required before scheduling
+
+Execution record:
+
+- Receipt: `linkedin/schedule-executions/20260903080420-campaign-scheduled-production-ai-operating-system.json`
+- Verification: LinkedIn's scheduled-post ledger displayed all ten campaign dates and all ten matching document titles after submission.
+- Ledger context: 15 scheduled posts were visible in total—five pre-existing posts plus this ten-post campaign.
+- Privacy: no private scheduler URLs, credentials, cookies, or browser state were retained.
 
 ## L1 — Authority should exist only for the transaction
 

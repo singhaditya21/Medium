@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://singhaditya21.github.io/Medium/linkedin/schedule-execution.schema.json",
+  "title": "Signed-in LinkedIn campaign scheduling receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "operationId",
+    "action",
+    "recordedAt",
+    "executionSurface",
+    "initiatedBy",
+    "userConfirmation",
+    "campaignPath",
+    "result",
+    "secretsStored",
+    "githubActionsPerformedLinkedInAction"
+  ],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"const": 1},
+    "operationId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
+    "action": {"const": "campaign_scheduled"},
+    "recordedAt": {"type": "string", "format": "date-time"},
+    "executionSurface": {"const": "user_initiated_signed_in_linkedin_ui"},
+    "initiatedBy": {"const": "user"},
+    "userConfirmation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["obtained", "scope"],
+      "properties": {
+        "obtained": {"const": true},
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "campaignPath": {"type": "string", "minLength": 1},
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "ledgerEntryCount", "verifiedAt", "verification", "posts"],
+      "properties": {
+        "status": {"const": "scheduled"},
+        "ledgerEntryCount": {"type": "integer", "minimum": 1},
+        "verifiedAt": {"type": "string", "format": "date-time"},
+        "verification": {"type": "string", "minLength": 1},
+        "posts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "carouselTitle", "scheduleAt", "audience", "comments", "carouselPages", "pdfPath", "pdfSha256"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^L[0-9]+$"},
+              "carouselTitle": {"type": "string", "minLength": 1},
+              "scheduleAt": {"type": "string", "format": "date-time"},
+              "audience": {"const": "Anyone"},
+              "comments": {"const": "enabled"},
+              "carouselPages": {"const": 3},
+              "pdfPath": {"type": "string", "minLength": 1},
+              "pdfSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            }
+          }
+        }
+      }
+    },
+    "secretsStored": {"const": false},
+    "githubActionsPerformedLinkedInAction": {"const": false}
+  }
+}

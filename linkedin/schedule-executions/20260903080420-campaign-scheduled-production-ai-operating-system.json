@@ -1,0 +1,34 @@
+{
+  "$schema": "../schedule-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260903080420-campaign-scheduled-production-ai-operating-system",
+  "action": "campaign_scheduled",
+  "recordedAt": "2026-09-03T08:04:20Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "userConfirmation": {
+    "obtained": true,
+    "scope": "The user confirmed scheduling L1 through L10 with the exact approved dates, copy, settings, and three-page document carousels listed in the campaign package."
+  },
+  "campaignPath": "editorial/linkedin/production-ai-operating-system-2026-09.md",
+  "result": {
+    "status": "scheduled",
+    "ledgerEntryCount": 15,
+    "verifiedAt": "2026-09-03T08:04:20Z",
+    "verification": "LinkedIn's signed-in scheduled-post ledger displayed all ten approved campaign dates and all ten matching document titles; five older scheduled posts were also present.",
+    "posts": [
+      {"id": "L1", "carouselTitle": "Permission Leases: Reduce Reachable Authority", "scheduleAt": "2026-09-18T08:45:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-01-permission-leases.pdf", "pdfSha256": "7c1d615183ed8ce4fdcaa266d204c6d6cabfbf45d06e7b5f6f85411ccd4e024b"},
+      {"id": "L2", "carouselTitle": "Human Approval Is a Queueing System", "scheduleAt": "2026-09-21T14:00:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-02-human-approval-queue.pdf", "pdfSha256": "e3ef8b22e02774c7fdcd463d4030eb102eed22fbf617c7b06d83179004fdaa6b"},
+      {"id": "L3", "carouselTitle": "A Trace Is Not an Action Receipt", "scheduleAt": "2026-09-23T08:45:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-03-action-receipts.pdf", "pdfSha256": "052996b5516112c160cc721fbb64de22c18ac70413c8853603ce6a4f2bbefd34"},
+      {"id": "L4", "carouselTitle": "Multi-Agent Systems Need Distributed-System Controls", "scheduleAt": "2026-09-25T14:00:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-04-multi-agent-coordination.pdf", "pdfSha256": "5c75fdc4ac6864552529523bbb7332fc2e63531677a0343d217463587e67f858"},
+      {"id": "L5", "carouselTitle": "Model Routing Is Capital Allocation", "scheduleAt": "2026-09-28T08:45:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-05-model-routing.pdf", "pdfSha256": "32b5a0119c06f63f252b04dc80df4923c55d1155376861c25a589c8caf8037bd"},
+      {"id": "L6", "carouselTitle": "A Real AI-Agent Kill Switch", "scheduleAt": "2026-09-30T14:00:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-06-kill-switch.pdf", "pdfSha256": "13363e02307a0dcc26ec21b1431f2deec61691227a70bf022dd84d09e721f322"},
+      {"id": "L7", "carouselTitle": "Production Evaluation Before Production Authority", "scheduleAt": "2026-10-02T08:45:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-07-production-evaluation.pdf", "pdfSha256": "441064656dca401abbf1a2e1e680feb7571e6521c257f1d41346d7128da01a0c"},
+      {"id": "L8", "carouselTitle": "Agent Memory Needs Database Controls", "scheduleAt": "2026-10-05T14:00:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-08-agent-memory.pdf", "pdfSha256": "a734c562c0b4a3fa68f7751241bca706ff3c4782704601435064b2ce2d6ea6f6"},
+      {"id": "L9", "carouselTitle": "A $288K CRM Decision Needs an Authority Boundary", "scheduleAt": "2026-10-07T08:45:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-09-crm-risk-workflow.pdf", "pdfSha256": "517e0f853c5a81638620a4ff6920859c0d4fa9e556017389ad2409d453fcba39"},
+      {"id": "L10", "carouselTitle": "Price the Verified Outcome, Not the Model Call", "scheduleAt": "2026-10-09T14:00:00+05:30", "audience": "Anyone", "comments": "enabled", "carouselPages": 3, "pdfPath": "output/pdf/linkedin/production-ai-operating-system-10-verified-outcome-economics.pdf", "pdfSha256": "e86aa56ba3b3fac0359b8dd5dc5548cde3d7f273efca38491004a54c623e6aec"}
+    ]
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

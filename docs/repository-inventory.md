@@ -119,10 +119,11 @@ These logical roles run only as hooks inside the existing LinkedIn and Medium sc
 | Path | Count | Category |
 | --- | ---: | --- |
 | `output/pdf/linkedin/*.pdf` | 10 | Release-ready, three-page LinkedIn document carousels generated from the approved campaign package |
-| `linkedin/execution.schema.json`, `linkedin/message-execution.schema.json` | 2 | Receipt contracts |
-| `linkedin/executions/*.json` | 49 | Verified, approved public comment/reply receipts |
-| `linkedin/message-executions/*.json` | 14 | Verified, approved DM receipts |
-| `linkedin/executions/README.md`, `linkedin/message-executions/README.md` | 2 | Receipt guidance |
+| `linkedin/execution.schema.json`, `linkedin/message-execution.schema.json`, `linkedin/schedule-execution.schema.json` | 3 | Receipt contracts |
+| `linkedin/executions/*.json` | 88 | Verified, approved public comment/reply receipts |
+| `linkedin/message-executions/*.json` | 16 | Verified, approved DM receipts |
+| `linkedin/schedule-executions/*.json` | 1 | Verified, approved campaign scheduling receipts without private scheduler URLs |
+| `linkedin/executions/README.md`, `linkedin/message-executions/README.md`, `linkedin/schedule-executions/README.md` | 3 | Receipt guidance |
 
 Suggested category: **LinkedIn release artifacts and immutable receipts**. Carousels remain editable only through their deterministic builder; do not place agent prompts, candidate research, browser information, cookies, or drafts here.
 
