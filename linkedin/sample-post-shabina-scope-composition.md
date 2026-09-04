@@ -4,6 +4,8 @@ Status: sample only — not published or scheduled
 
 Native mention required at posting: `@Shabina Abba Noormohamed`
 
+Recommended attachment: premium V2 MP4
+
 ## Post copy
 
 @Shabina Abba Noormohamed drew an important architectural boundary in our exchange today:
@@ -42,7 +44,15 @@ Where should composed-effect evaluation live in your architecture: the planner, 
 
 #AgenticAI #AIGovernance #ZeroTrust #IdentitySecurity #EnterpriseAI #AIArchitecture
 
-## Visual package
+## Recommended premium V2 visual package
+
+- LinkedIn video: `assets/images/linkedin-shabina-scope-composition-cheatsheet-v2/scope-composition-control-plane-v2.mp4`
+- Animated preview: `assets/images/linkedin-shabina-scope-composition-cheatsheet-v2/scope-composition-control-plane-v2.gif`
+- Static cover: `assets/images/linkedin-shabina-scope-composition-cheatsheet-v2/scope-composition-control-plane-v2-poster.png`
+
+The 24-second V2 uses six progressive scenes: architectural boundary, cryptographic capability chain, three-clock governance, composed-effect graph, action-level lease, and independent verification plus recovery. Illustrative policy values and the proposed composite-risk functional are explicitly identified as examples rather than observed AuthHub results.
+
+## Legacy V1 fallback
 
 - LinkedIn video: `assets/images/linkedin-shabina-scope-composition-cheatsheet/scope-attenuation-composed-action-safety.mp4`
 - Animated preview: `assets/images/linkedin-shabina-scope-composition-cheatsheet/scope-attenuation-composed-action-safety.gif`
