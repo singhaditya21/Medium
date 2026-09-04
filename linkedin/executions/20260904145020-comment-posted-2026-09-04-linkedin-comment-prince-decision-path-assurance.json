@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904145020-comment-posted-2026-09-04-linkedin-comment-prince-decision-path-assurance",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T14:50:20Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T14:50:20Z",
+    "scope": "User approved all five exact LinkedIn actions as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-prince-decision-path-assurance",
+    "targetUrl": "https://www.linkedin.com/pulse/from-copilots-autonomous-agents-governance-problem-we-prince-sidana-nj1kf/",
+    "publicUrl": "https://www.linkedin.com/pulse/from-copilots-autonomous-agents-governance-problem-we-prince-sidana-nj1kf/",
+    "publishedTextSha256": "50f5e1323064b31477118267e5325dd6c8138a61c8bd13399bf194b1ab5cc38f",
+    "verifiedAt": "2026-09-04T14:50:20Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Prince Sidana mention on the intended article."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

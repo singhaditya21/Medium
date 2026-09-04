@@ -1,6 +1,6 @@
 # LinkedIn growth cycle — 4 September 2026
 
-Status: prepared; public actions require exact action-time confirmation.
+Status: completed; all five public actions were exactly approved, posted and visibly verified on 4 September 2026.
 
 ## Live account snapshot
 
@@ -29,13 +29,23 @@ Design direction: white background, black typography, deep-blue control-path acc
 
 ## Current engagement batch
 
-The five exact candidates are recorded in `engagement/queue.json`:
+The five exact candidates are recorded as posted in `engagement/queue.json`:
 
 1. Reply to Praveen Shahi on the Amoris deal-closure pivot — score 0.99
 2. Comment on Prince Sidana's agent decision-path article — score 0.97
 3. Comment on Katharina Koerner's builder threat-modelling framework — score 0.95
 4. Comment on Andreas Neidhart-Lau's public-sector AI maturity framework — score 0.93
 5. Comment on DJ Patil's 10% regional-processing premium question — score 0.90
+
+## Verified execution results
+
+- Praveen Shahi reply: rendered under Aditya Singh with a current timestamp and a native Praveen Shahi mention in the intended nested thread.
+- Prince Sidana comment: rendered under Aditya Singh with a current timestamp and a native Prince Sidana mention on the intended article.
+- Katharina Koerner comment: rendered under Aditya Singh with a current timestamp and a native Katharina Koerner mention; the visible comment count increased from 20 to 21.
+- Andreas Neidhart-Lau comment: rendered under Aditya Singh with a current timestamp and a native Andreas Neidhart-Lau mention; the visible comment count increased from 2 to 3.
+- DJ Patil comment: rendered under Aditya Singh with a one-second timestamp and a native DJ Patil mention; the visible comment count increased from 9 to 10.
+
+Each action has a matching receipt under `linkedin/executions/`. No substantive unread LinkedIn DMs were found during this cycle.
 
 ## Fourteen-day operating targets
 

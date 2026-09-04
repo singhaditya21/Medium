@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904145021-comment-posted-2026-09-04-linkedin-comment-katharina-threat-model-release-gates",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T14:50:21Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T14:50:21Z",
+    "scope": "User approved all five exact LinkedIn actions as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-katharina-threat-model-release-gates",
+    "targetUrl": "https://www.linkedin.com/posts/katharina-koerner-privacyengineering_ai-simplified-threat-modeling-for-builders-activity-7500957345544478720-fPVJ",
+    "publicUrl": "https://www.linkedin.com/posts/katharina-koerner-privacyengineering_ai-simplified-threat-modeling-for-builders-activity-7500957345544478720-fPVJ",
+    "publishedTextSha256": "c535bc335b64ff01409a5a92c2ddbe161ada5866d35e8566f4d153beb2cf713b",
+    "verifiedAt": "2026-09-04T14:50:21Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp and a clickable Katharina Koerner mention on the intended post; the visible comment count increased from 20 to 21."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

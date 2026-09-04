@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T14:31:25Z",
+  "updatedAt": "2026-09-04T14:50:22Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2356,7 +2356,10 @@
       "intendedMentions": [
         "Praveen Shahi"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501647050472820736&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501528518376386561&replyUrn=7501647043577262080&dashCommentUrn=urn:li:fsd_comment:(7501528518376386561,urn:li:ugcPost:7501297696704753664)&dashReplyUrn=urn:li:fsd_comment:(7501647043577262080,urn:li:ugcPost:7501297696704753664)",
+      "receiptOperationId": "20260904145019-reply-posted-2026-09-04-linkedin-reply-praveen-amoris-deal-closure-pivot",
+      "postedAt": "2026-09-04T14:50:19Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-prince-decision-path-assurance",
@@ -2373,7 +2376,10 @@
       "intendedMentions": [
         "Prince Sidana"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/pulse/from-copilots-autonomous-agents-governance-problem-we-prince-sidana-nj1kf/",
+      "receiptOperationId": "20260904145020-comment-posted-2026-09-04-linkedin-comment-prince-decision-path-assurance",
+      "postedAt": "2026-09-04T14:50:20Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-katharina-threat-model-release-gates",
@@ -2390,7 +2396,10 @@
       "intendedMentions": [
         "Katharina Koerner"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/katharina-koerner-privacyengineering_ai-simplified-threat-modeling-for-builders-activity-7500957345544478720-fPVJ",
+      "receiptOperationId": "20260904145021-comment-posted-2026-09-04-linkedin-comment-katharina-threat-model-release-gates",
+      "postedAt": "2026-09-04T14:50:21Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-andreas-ai-maturity-decision-controls",
@@ -2407,7 +2416,10 @@
       "intendedMentions": [
         "Andreas Neidhart-Lau"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/andreas-neidhart_report-activity-7501089114159681536-AH3s",
+      "receiptOperationId": "20260904145021-comment-posted-2026-09-04-linkedin-comment-andreas-ai-maturity-decision-controls",
+      "postedAt": "2026-09-04T14:50:21Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-dj-regional-processing-economics",
@@ -2424,7 +2436,10 @@
       "intendedMentions": [
         "DJ Patil"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501375443070099456/",
+      "receiptOperationId": "20260904145022-comment-posted-2026-09-04-linkedin-comment-dj-regional-processing-economics",
+      "postedAt": "2026-09-04T14:50:22Z"
     }
   ]
 }
