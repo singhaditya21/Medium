@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904102544-comment-posted-2026-09-04-linkedin-comment-rakesh-production-agent-tail-risk",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T10:25:44Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T10:25:44Z",
+    "scope": "User approved C1, C2 and C3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-rakesh-production-agent-tail-risk",
+    "targetUrl": "https://www.linkedin.com/posts/rakeshgohel01_aiagents-agenticai-generativeai-share-7500893185171271680-3sJl/",
+    "publicUrl": "https://www.linkedin.com/posts/rakeshgohel01_aiagents-agenticai-generativeai-share-7500893185171271680-3sJl/",
+    "publishedTextSha256": "cf0ec112f8ca1876938efb5466edb420ecee0273c2496c29325705b47075f1a3",
+    "verifiedAt": "2026-09-04T10:25:44Z",
+    "verification": "LinkedIn rendered the exact approved Rakesh Gohel comment under Aditya Singh with a current timestamp on the target post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

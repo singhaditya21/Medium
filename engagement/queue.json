@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T10:13:58Z",
+  "updatedAt": "2026-09-04T10:25:45Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2286,6 +2286,60 @@
       "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501562942031781889&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501561433529384961&replyUrn=7501562935622664192&dashCommentUrn=urn:li:fsd_comment:(7501561433529384961,urn:li:activity:7501243855439257600)&dashReplyUrn=urn:li:fsd_comment:(7501562935622664192,urn:li:activity:7501243855439257600)",
       "receiptOperationId": "20260904101358-reply-posted-2026-09-04-linkedin-reply-peter-planted-exception-recall",
       "postedAt": "2026-09-04T10:13:58Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-cobus-headcount-forecast-gap",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/cobusgreyling_it-seems-lule-the-ai-job-cut-story-keeps-share-7501345349282729984-hid3/",
+      "title": "Separate headcount outcomes from task and capacity change",
+      "author": "Cobus Greyling",
+      "reason": "The post contrasts forecast and reported AI headcount changes with unusually clear numerical gaps, creating a strong opportunity to add an operating-metric interpretation.",
+      "evidence": "The post reports expected versus actual decreases of 32% versus 14%, little or no change of 43% versus 66%, increases of 13% versus 7%, and a renewed 39% expectation of declines.",
+      "draftResponse": "Cobus, the forecast gap is substantial: expected decreases were 32% versus 14% reported—18 percentage points lower—while little or no change reached 66% versus 43% expected. The missing operating metric is task mix: hours automated, redeployed capacity, cycle-time change and output per FTE can shift well before headcount. Would the forecast error shrink if companies separated role redesign and reduced backfilling from actual layoffs?",
+      "priorityScore": 0.95,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/cobusgreyling_it-seems-lule-the-ai-job-cut-story-keeps-share-7501345349282729984-hid3/",
+      "receiptOperationId": "20260904102544-comment-posted-2026-09-04-linkedin-comment-cobus-headcount-forecast-gap",
+      "postedAt": "2026-09-04T10:25:44Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-rakesh-production-agent-tail-risk",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/rakeshgohel01_aiagents-agenticai-generativeai-share-7500893185171271680-3sJl/",
+      "title": "Gate production agents on tail risk and recovery",
+      "author": "Rakesh Gohel",
+      "reason": "The post distinguishes the agent loop, validation and recovery, and the surrounding production control plane; the approved comment adds compounding risk and measurable release gates.",
+      "evidence": "The post argues that 95% task accuracy does not imply 95% production readiness and identifies validation, recovery, monitoring, audit logs, rate limits, secrets, guardrails and incident handling as necessary layers.",
+      "draftResponse": "Rakesh, the 95/5 framing becomes more severe when actions compound: at 100 material actions per day, a 5% failure rate produces roughly five exceptions daily before recovery. I would gate production on harmful-action rate, independent postcondition coverage, mean time to containment and recovery success—not task accuracy alone. Which layer owns the authority to revoke an agent mid-workflow: validation or the surrounding control plane?",
+      "priorityScore": 0.96,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/rakeshgohel01_aiagents-agenticai-generativeai-share-7500893185171271680-3sJl/",
+      "receiptOperationId": "20260904102544-comment-posted-2026-09-04-linkedin-comment-rakesh-production-agent-tail-risk",
+      "postedAt": "2026-09-04T10:25:44Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-andreas-workflow-outcome-funnel",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501344636276281344/",
+      "title": "Replace licence counts with a workflow-outcome conversion funnel",
+      "author": "Andreas Horn",
+      "reason": "The post challenges a 20,000-licence rollout as an AI strategy and argues for experiment deadlines; the approved comment supplies a board-level adoption-to-outcome scorecard.",
+      "evidence": "The post states that licences, accounts and training measure access rather than changed work, and contrasts a deadline to learn whether an experiment works with a promised deployment outcome.",
+      "draftResponse": "Andreas, 20,000 licences measures procurement reach, not workflow change. A stronger board scorecard is eligible users → weekly active users → completed target workflows → verified outcomes, with cost per changed workflow, cycle-time reduction, correction rate and realised value as the conversion metrics. What minimum percentage of licensed users completing the target workflow would justify the next rollout tranche?",
+      "priorityScore": 0.96,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501344636276281344/",
+      "receiptOperationId": "20260904102545-comment-posted-2026-09-04-linkedin-comment-andreas-workflow-outcome-funnel",
+      "postedAt": "2026-09-04T10:25:45Z"
     }
   ]
 }

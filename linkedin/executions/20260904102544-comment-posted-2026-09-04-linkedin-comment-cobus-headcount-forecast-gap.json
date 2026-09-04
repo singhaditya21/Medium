@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904102544-comment-posted-2026-09-04-linkedin-comment-cobus-headcount-forecast-gap",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T10:25:44Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T10:25:44Z",
+    "scope": "User approved C1, C2 and C3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-cobus-headcount-forecast-gap",
+    "targetUrl": "https://www.linkedin.com/posts/cobusgreyling_it-seems-lule-the-ai-job-cut-story-keeps-share-7501345349282729984-hid3/",
+    "publicUrl": "https://www.linkedin.com/posts/cobusgreyling_it-seems-lule-the-ai-job-cut-story-keeps-share-7501345349282729984-hid3/",
+    "publishedTextSha256": "2d809bbdc4bd5d77365d12d5ae2ad2e5d9fbe83e9c6df548f99df78e52d57e87",
+    "verifiedAt": "2026-09-04T10:25:44Z",
+    "verification": "LinkedIn rendered the exact approved Cobus Greyling comment under Aditya Singh with a current timestamp on the target post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904102545-comment-posted-2026-09-04-linkedin-comment-andreas-workflow-outcome-funnel",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T10:25:45Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T10:25:45Z",
+    "scope": "User approved C1, C2 and C3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-andreas-workflow-outcome-funnel",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501344636276281344/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501344636276281344/",
+    "publishedTextSha256": "ae4ad2b9f53374c86c2011179f76e2a1d7e4bc0e57a56ef9419a475a9d9da8fe",
+    "verifiedAt": "2026-09-04T10:25:45Z",
+    "verification": "LinkedIn rendered the exact approved Andreas Horn comment under Aditya Singh with a current timestamp on the target post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
