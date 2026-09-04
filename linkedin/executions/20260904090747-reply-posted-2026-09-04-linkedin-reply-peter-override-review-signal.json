@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904090747-reply-posted-2026-09-04-linkedin-reply-peter-override-review-signal",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-04T09:07:47Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T09:07:47Z",
+    "scope": "User approved N1, N2, O1, O2 and O3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-04-linkedin-reply-peter-override-review-signal",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501562942031781889&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501561433529384961&replyUrn=7501562935622664192&dashCommentUrn=urn:li:fsd_comment:(7501561433529384961,urn:li:activity:7501243855439257600)&dashReplyUrn=urn:li:fsd_comment:(7501562935622664192,urn:li:activity:7501243855439257600)",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501562942031781889&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501561433529384961&replyUrn=7501562935622664192&dashCommentUrn=urn:li:fsd_comment:(7501561433529384961,urn:li:activity:7501243855439257600)&dashReplyUrn=urn:li:fsd_comment:(7501562935622664192,urn:li:activity:7501243855439257600)",
+    "publishedTextSha256": "55db7a3b77dc19de4a72af2ac50619ddffd6c02fa24104b14aaf36ab1ed77eb5",
+    "verifiedAt": "2026-09-04T09:07:47Z",
+    "verification": "LinkedIn rendered the approved reply under Aditya Singh with a current timestamp and a clickable Peter Cheyne mention in the nested reply thread."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

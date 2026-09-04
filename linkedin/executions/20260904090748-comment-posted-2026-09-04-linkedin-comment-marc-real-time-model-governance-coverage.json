@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904090748-comment-posted-2026-09-04-linkedin-comment-marc-real-time-model-governance-coverage",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T09:07:48Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T09:07:48Z",
+    "scope": "User approved N1, N2, O1, O2 and O3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-marc-real-time-model-governance-coverage",
+    "targetUrl": "https://www.linkedin.com/posts/marc-beukes_modelgovernance-modelops-aigovernance-share-7501562787958079488-WngT/",
+    "publicUrl": "https://www.linkedin.com/posts/marc-beukes_modelgovernance-modelops-aigovernance-share-7501562787958079488-WngT/",
+    "publishedTextSha256": "7c29f070593946242e15bf6cd48a44e026ed3f50574809b8a37326ee66840bfe",
+    "verifiedAt": "2026-09-04T09:07:48Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp on Marc Beukes post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

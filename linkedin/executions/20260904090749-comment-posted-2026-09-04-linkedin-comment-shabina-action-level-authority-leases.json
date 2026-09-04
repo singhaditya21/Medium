@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904090749-comment-posted-2026-09-04-linkedin-comment-shabina-action-level-authority-leases",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T09:07:49Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T09:07:49Z",
+    "scope": "User approved N1, N2, O1, O2 and O3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-shabina-action-level-authority-leases",
+    "targetUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM",
+    "publicUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM",
+    "publishedTextSha256": "a8397c60515d5c16d73e6ad5f52b3c681e41c6e3ec82cc0440cb763ae6a6fe65",
+    "verifiedAt": "2026-09-04T09:07:49Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp on Shabina Abba Noormohamed post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904090750-comment-posted-2026-09-04-linkedin-comment-soren-mcp-verifiable-action-contract",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T09:07:50Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T09:07:50Z",
+    "scope": "User approved N1, N2, O1, O2 and O3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-soren-mcp-verifiable-action-contract",
+    "targetUrl": "https://www.linkedin.com/posts/sorenhl_ai-skaber-f%C3%B8rst-for-alvor-v%C3%A6rdi-n%C3%A5r-den-activity-7501562121688702978-Lepy",
+    "publicUrl": "https://www.linkedin.com/posts/sorenhl_ai-skaber-f%C3%B8rst-for-alvor-v%C3%A6rdi-n%C3%A5r-den-activity-7501562121688702978-Lepy",
+    "publishedTextSha256": "32007a71e0c58a0a3887ccc5b39f0314a669566fa9b82d079741e7a47850eaf8",
+    "verifiedAt": "2026-09-04T09:07:50Z",
+    "verification": "LinkedIn rendered the exact approved comment under Aditya Singh with a current timestamp on Soren Heide Larsen post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

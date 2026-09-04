@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T08:59:07Z",
+  "updatedAt": "2026-09-04T09:07:50Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2072,7 +2072,10 @@
       "intendedMentions": [
         "Peter Cheyne"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501562942031781889&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501561433529384961&replyUrn=7501562935622664192&dashCommentUrn=urn:li:fsd_comment:(7501561433529384961,urn:li:activity:7501243855439257600)&dashReplyUrn=urn:li:fsd_comment:(7501562935622664192,urn:li:activity:7501243855439257600)",
+      "receiptOperationId": "20260904090747-reply-posted-2026-09-04-linkedin-reply-peter-override-review-signal",
+      "postedAt": "2026-09-04T09:07:47Z"
     },
     {
       "id": "2026-09-04-linkedin-reply-lallit-memory-retirement-ownership",
@@ -2089,7 +2092,10 @@
       "intendedMentions": [
         "LALLIT SHARMAA"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501557164013162497/?commentUrn=urn:li:comment:7501559225341468672&dashCommentUrn=urn:li:fsd_comment:(7501559225341468672,urn:li:activity:7501557164013162497)",
+      "receiptOperationId": "20260904090747-reply-posted-2026-09-04-linkedin-reply-lallit-memory-retirement-ownership",
+      "postedAt": "2026-09-04T09:07:47Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-marc-real-time-model-governance-coverage",
@@ -2106,7 +2112,10 @@
       "intendedMentions": [
         "Marc Beukes"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/marc-beukes_modelgovernance-modelops-aigovernance-share-7501562787958079488-WngT/",
+      "receiptOperationId": "20260904090748-comment-posted-2026-09-04-linkedin-comment-marc-real-time-model-governance-coverage",
+      "postedAt": "2026-09-04T09:07:48Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-shabina-action-level-authority-leases",
@@ -2123,7 +2132,10 @@
       "intendedMentions": [
         "Shabina Abba Noormohamed"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM",
+      "receiptOperationId": "20260904090749-comment-posted-2026-09-04-linkedin-comment-shabina-action-level-authority-leases",
+      "postedAt": "2026-09-04T09:07:49Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-soren-mcp-verifiable-action-contract",
@@ -2140,7 +2152,10 @@
       "intendedMentions": [
         "Søren Heide Larsen"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/sorenhl_ai-skaber-f%C3%B8rst-for-alvor-v%C3%A6rdi-n%C3%A5r-den-activity-7501562121688702978-Lepy",
+      "receiptOperationId": "20260904090750-comment-posted-2026-09-04-linkedin-comment-soren-mcp-verifiable-action-contract",
+      "postedAt": "2026-09-04T09:07:50Z"
     }
   ]
 }
