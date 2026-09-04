@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904101357-reply-posted-2026-09-04-linkedin-reply-shabina-semantic-composition",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-04T10:13:57Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T10:13:57Z",
+    "scope": "User approved the Shabina reply and connection acceptance, and the Peter reply exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-04-linkedin-reply-shabina-semantic-composition",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501580045031829504&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501566343037562881&replyUrn=7501579998147878915&dashCommentUrn=urn:li:fsd_comment:(7501566343037562881,urn:li:activity:7501562427889836032)&dashReplyUrn=urn:li:fsd_comment:(7501579998147878915,urn:li:activity:7501562427889836032)",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501580045031829504&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501566343037562881&replyUrn=7501579998147878915&dashCommentUrn=urn:li:fsd_comment:(7501566343037562881,urn:li:activity:7501562427889836032)&dashReplyUrn=urn:li:fsd_comment:(7501579998147878915,urn:li:activity:7501562427889836032)",
+    "publishedTextSha256": "cc28aeddfd469d9aa45c8125bc352b16041c0c1fb8702cb8db3b6fd71fe282e4",
+    "verifiedAt": "2026-09-04T10:13:57Z",
+    "verification": "LinkedIn rendered the exact approved reply under Aditya Singh with a current timestamp and a clickable Shabina Abba Noormohamed mention in the nested reply thread."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

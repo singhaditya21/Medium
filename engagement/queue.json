@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T09:44:27Z",
+  "updatedAt": "2026-09-04T10:13:58Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2246,6 +2246,46 @@
       "responseUrl": "https://www.linkedin.com/in/tania-davids-ab444a269/recent-activity/all/",
       "receiptOperationId": "20260904094427-comment-posted-2026-09-04-linkedin-comment-tania-tax-transformation-outcome-kpis",
       "postedAt": "2026-09-04T09:44:27Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-reply-shabina-semantic-composition",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501580045031829504&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501566343037562881&replyUrn=7501579998147878915&dashCommentUrn=urn:li:fsd_comment:(7501566343037562881,urn:li:activity:7501562427889836032)&dashReplyUrn=urn:li:fsd_comment:(7501579998147878915,urn:li:activity:7501562427889836032)",
+      "title": "Test composed authority, not only delegated hops",
+      "author": "Shabina Abba Noormohamed",
+      "reason": "Shabina answered the action-level lease question with a concrete scope-attenuation invariant; the approved reply adds the distinct semantic-composition failure mode and operating metrics.",
+      "evidence": "Shabina stated that each delegated scope is a strict subset of its delegator, described three validation clocks, and said the chain cannot expand.",
+      "draftResponse": "Scope attenuation gives a strong per-hop invariant. The remaining failure mode is semantic composition: several individually permitted operations can still produce a higher-consequence business effect when chained. I would test maximum effective authority across the call graph, blocked scope-expansion rate and postcondition violations per 10,000 leased actions. Does AuthHub evaluate the composed transaction before execution, or only validate each delegated hop?",
+      "priorityScore": 0.99,
+      "intendedMentions": [
+        "Shabina Abba Noormohamed"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501580045031829504&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501566343037562881&replyUrn=7501579998147878915&dashCommentUrn=urn:li:fsd_comment:(7501566343037562881,urn:li:activity:7501562427889836032)&dashReplyUrn=urn:li:fsd_comment:(7501579998147878915,urn:li:activity:7501562427889836032)",
+      "receiptOperationId": "20260904101357-reply-posted-2026-09-04-linkedin-reply-shabina-semantic-composition",
+      "postedAt": "2026-09-04T10:13:57Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-reply-peter-planted-exception-recall",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501562942031781889&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501561433529384961&replyUrn=7501562935622664192&dashCommentUrn=urn:li:fsd_comment:(7501561433529384961,urn:li:activity:7501243855439257600)&dashReplyUrn=urn:li:fsd_comment:(7501562935622664192,urn:li:activity:7501243855439257600)",
+      "title": "Measure reviewer engagement with planted exceptions",
+      "author": "Peter Cheyne",
+      "reason": "Peter argued that zero overrides can signal that humans stopped reading; the approved reply converts that insight into a measurable reviewer-effectiveness diagnostic.",
+      "evidence": "Peter replied that if nobody is overriding, the humans have stopped reading. The visible thread showed 113 reactions, 55 comments, and 54 impressions on the original approved comment before this reply.",
+      "draftResponse": "Exactly. A zero-override rate is not proof of accuracy; it can signal reviewer disengagement. I would pair override rate with planted-exception recall, median decision time and override precision. If reviewers miss seeded high-risk cases while approvals remain near 100%, the human is a ceremonial control rather than an effective one.",
+      "priorityScore": 0.99,
+      "intendedMentions": [
+        "Peter Cheyne"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501562942031781889&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501561433529384961&replyUrn=7501562935622664192&dashCommentUrn=urn:li:fsd_comment:(7501561433529384961,urn:li:activity:7501243855439257600)&dashReplyUrn=urn:li:fsd_comment:(7501562935622664192,urn:li:activity:7501243855439257600)",
+      "receiptOperationId": "20260904101358-reply-posted-2026-09-04-linkedin-reply-peter-planted-exception-recall",
+      "postedAt": "2026-09-04T10:13:58Z"
     }
   ]
 }

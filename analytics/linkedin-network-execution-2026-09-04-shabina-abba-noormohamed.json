@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "executedAt": "2026-09-04T10:13:58Z",
+  "timezone": "Asia/Kolkata",
+  "status": "verified",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "userConfirmation": {
+    "obtained": true,
+    "scope": "User approved the Shabina reply and connection acceptance exactly as written."
+  },
+  "person": {
+    "name": "Shabina Abba Noormohamed",
+    "profileUrl": "https://www.linkedin.com/in/shabina-abba-noormohamed-3a59b8413/",
+    "headline": "CEO and Founder at AuthHub - FGA for Healthcare & Enterprise"
+  },
+  "actions": [
+    {
+      "action": "connection_invitation_accepted",
+      "status": "verified",
+      "verification": "LinkedIn displayed ‘Shabina is now a connection’ after accepting the inbound invitation."
+    },
+    {
+      "action": "public_reply_posted",
+      "status": "verified",
+      "receiptOperationId": "20260904101357-reply-posted-2026-09-04-linkedin-reply-shabina-semantic-composition"
+    }
+  ],
+  "notes": [
+    "The accepted invitation followed a substantive public exchange about consequence-tiered governance, scope attenuation and action-level authority leases.",
+    "No credentials, cookies, browser state or private URLs are stored."
+  ],
+  "secretsStored": false
+}

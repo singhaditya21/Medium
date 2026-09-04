@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-31T10:04:45Z",
+  "updatedAt": "2026-09-04T10:13:58Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -59,6 +59,15 @@
       "lastMeaningfulTouch": "2026-08-31",
       "nextReviewOn": "2026-09-14",
       "nextActionRule": "No follow-up on the prior comment; consider a new post only if it has a distinct AI-security or insurance angle."
+    },
+    {
+      "name": "Shabina Abba Noormohamed",
+      "profileUrl": "https://www.linkedin.com/in/shabina-abba-noormohamed-3a59b8413/",
+      "themes": ["non-human identities", "scope attenuation", "agent authorization", "runtime governance"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-04",
+      "nextReviewOn": "2026-09-11",
+      "nextActionRule": "Respond if Shabina answers the semantic-composition question; otherwise inspect one new, directly relevant AuthHub or agent-authorization post after the review date."
     }
   ]
 }
