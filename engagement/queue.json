@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T10:25:45Z",
+  "updatedAt": "2026-09-04T14:31:25Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2340,6 +2340,91 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501344636276281344/",
       "receiptOperationId": "20260904102545-comment-posted-2026-09-04-linkedin-comment-andreas-workflow-outcome-funnel",
       "postedAt": "2026-09-04T10:25:45Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-reply-praveen-amoris-deal-closure-pivot",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501647050472820736&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501528518376386561&replyUrn=7501647043577262080&dashCommentUrn=urn:li:fsd_comment:(7501528518376386561,urn:li:ugcPost:7501297696704753664)&dashReplyUrn=urn:li:fsd_comment:(7501647043577262080,urn:li:ugcPost:7501297696704753664)",
+      "title": "Turn the Amoris pivot into a measurable deal-closure operating model",
+      "author": "Praveen Shahi",
+      "reason": "A new direct reply advances an established collaboration discussion and explicitly offers revised Businessnext designs and pivots.",
+      "evidence": "Praveen says Amoris is pivoting around deal closure and revenue leakage, and proposes sharing a revised collaboration design over the weekend.",
+      "draftResponse": "Praveen, that pivot is much sharper. The operating test for Amoris is whether it converts existing demand into verified revenue without adding another workflow layer: time-to-next-best-action, stage conversion, leakage recovered and seller hours returned. Send the revised design when ready; for the Businessnext collaboration, I suggest we map one deal-closure journey end to end and identify where judgment, evidence and execution currently separate.",
+      "priorityScore": 0.99,
+      "intendedMentions": [
+        "Praveen Shahi"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-prince-decision-path-assurance",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/pulse/from-copilots-autonomous-agents-governance-problem-we-prince-sidana-nj1kf/",
+      "title": "Evaluate the agent decision path, not only its final answer",
+      "author": "Prince Sidana",
+      "reason": "A two-hour-old article asks exactly how enterprises should evaluate an agent's full decision path and directly matches the account's action-receipt positioning.",
+      "evidence": "Prince distinguishes copilots from agents that access data, invoke tools and change business systems, then asks how to evaluate the path rather than only the output.",
+      "draftResponse": "Prince, evaluating the final answer misses the risk surface. I would score each decision path across evidence quality, policy compliance, authority validity and verified outcome; a single failed gate should stop the action even when the response looks correct. The practical test is whether an auditor can reconstruct why the agent acted, what it was permitted to do and whether the system of record changed as intended.",
+      "priorityScore": 0.97,
+      "intendedMentions": [
+        "Prince Sidana"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-katharina-threat-model-release-gates",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/katharina-koerner-privacyengineering_ai-simplified-threat-modeling-for-builders-activity-7500957345544478720-fPVJ",
+      "title": "Turn lightweight AI threat modelling into measurable release gates",
+      "author": "Katharina Koerner",
+      "reason": "Her practical threat-modelling framework for small AI teams maps directly to the account's control, testing and evidence themes.",
+      "evidence": "Katharina proposes Risk → Control → Test → Evidence, concrete agent failure scenarios and a 30-minute break-it exercise for small teams.",
+      "draftResponse": "Katharina, Risk → Control → Test → Evidence is the right compression for a five-person team. I would add one quantitative pass/fail condition per control: harmful-action rate, unauthorized-tool-call escape rate, planted-attack recall and p95 containment time. The 30-minute break-it session becomes durable governance when every failure is converted into a regression test and release gate.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Katharina Koerner"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-andreas-ai-maturity-decision-controls",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/andreas-neidhart_report-activity-7501089114159681536-AH3s",
+      "title": "Measure AI maturity by governed decisions, not installed components",
+      "author": "Andreas Neidhart-Lau",
+      "reason": "The public-sector AI maturity framework has strong early discussion quality and leaves room for an action-level maturity measure.",
+      "evidence": "The post covers mission alignment, MLOps, modular architecture, governed data and explainability using a 55-page UNESCO framework, with 28 reactions and two comments during review.",
+      "draftResponse": "Andreas, architecture maturity should be scored by the decisions it can govern, not the components installed. For each high-impact use case, I would require five gates: governed data lineage, action-scoped authority, independent postcondition verification, bounded recovery and named accountability—then track verified-action coverage and p95 containment time. That separates operational AI maturity from platform maturity.",
+      "priorityScore": 0.93,
+      "intendedMentions": [
+        "Andreas Neidhart-Lau"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-dj-regional-processing-economics",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501375443070099456/",
+      "title": "Test the 10% regional-processing premium against full compliant workload cost",
+      "author": "DJ Patil",
+      "reason": "The post opens a current, quantitative discussion about regional processing economics that fits the account's model-routing and cost-per-verified-outcome pillar.",
+      "evidence": "DJ questions a 10% token premium for regional processing and asks whether open models plus self-management provide better economics.",
+      "draftResponse": "DJ, the percentage is the questionable part: residency infrastructure is closer to a capacity-and-compliance cost than a value that should scale linearly with every token. I would compare the 10% premium with the full alternative—reserved regional capacity, operations headcount, audit evidence, egress, incident response and latency—and express both as cost per compliant verified workload. Has anyone seen the premium flatten at committed volume?",
+      "priorityScore": 0.9,
+      "intendedMentions": [
+        "DJ Patil"
+      ],
+      "state": "proposed"
     }
   ]
 }
