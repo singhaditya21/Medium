@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T08:50:41Z",
+  "updatedAt": "2026-09-04T08:59:07Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2056,6 +2056,91 @@
       "responseUrl": "https://www.linkedin.com/posts/codingagents-aievaluation-softwareengineering-share-7501241893343645697-fUVa/",
       "receiptOperationId": "20260904085041-comment-posted-2026-09-04-linkedin-comment-xpert-ground-truth-detection-power",
       "postedAt": "2026-09-04T08:50:41Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-reply-peter-override-review-signal",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501562942031781889&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501561433529384961&replyUrn=7501562935622664192&dashCommentUrn=urn:li:fsd_comment:(7501561433529384961,urn:li:activity:7501243855439257600)&dashReplyUrn=urn:li:fsd_comment:(7501562935622664192,urn:li:activity:7501243855439257600)",
+      "title": "Override rate as evidence that human review is still functioning",
+      "author": "Peter Cheyne",
+      "reason": "Peter replied directly to the approved comment and sharpened the review-quality argument; a prompt, diagnostic response can deepen a live exchange on a highly relevant post.",
+      "evidence": "Peter replied 3 minutes before review: I think if nobody is overriding, the humans have stopped reading. The post showed 83 reactions and 36 comments.",
+      "draftResponse": "Exactly. A zero-override rate is not proof of alignment; it may be a review-failure signal. I would treat overrides as a diagnostic distribution: track acceptance without edit, material override rate, reviewer dwell time and false-negative escapes. If overrides collapse while decision volume rises, independently sample decisions to test whether the queue has become ceremonial.",
+      "priorityScore": 0.98,
+      "intendedMentions": [
+        "Peter Cheyne"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-reply-lallit-memory-retirement-ownership",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501557164013162497/?commentUrn=urn:li:comment:7501559225341468672&dashCommentUrn=urn:li:fsd_comment:(7501559225341468672,urn:li:activity:7501557164013162497)",
+      "title": "Memory retirement and ownership in governed HR workflows",
+      "author": "LALLIT SHARMAA",
+      "reason": "Lallit added a substantive governance observation to the newly published memory post; replying can convert an early comment into a domain-specific conversation.",
+      "evidence": "Lallit argued that retrieval without provenance, versioning and controlled retirement makes flawed or outdated knowledge more persistent. His profile reflects 25 years in HR leadership and transformation.",
+      "draftResponse": "Agreed, Lallit—the failure mode is retrieval improving faster than retirement. In HR workflows, I would assign a named memory owner and track provenance coverage, stale-assertion exposure rate, correction propagation latency and verified-deletion completion; otherwise an outdated policy becomes easier to retrieve and harder to challenge. Would you place accountability with HR process ownership, data governance or a joint control?",
+      "priorityScore": 0.96,
+      "intendedMentions": [
+        "LALLIT SHARMAA"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-marc-real-time-model-governance-coverage",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/marc-beukes_modelgovernance-modelops-aigovernance-share-7501562787958079488-WngT/",
+      "title": "Continuous model governance requires decision-bound inventory coverage",
+      "author": "Marc Beukes",
+      "reason": "Fresh banking and insurance ModelOps post asks how organisations know which models influence decisions; the user can contribute concrete control metrics.",
+      "evidence": "Marc distinguishes static governance from real-time operations and asks about inventory, ownership, validation, bias, drift and business impact across credit, pricing, fraud and legacy decision engines.",
+      "draftResponse": "Marc, visibility becomes governable only when inventory is bound to the decisions and actions each model can influence. I would track inventory coverage for consequential decisions, percentage with a named owner and current validation, change-to-revalidation latency and p95 time to disable a failing model path; otherwise continuous monitoring can still terminate in a manual governance queue. Which metric do your banking clients struggle to evidence first?",
+      "priorityScore": 0.93,
+      "intendedMentions": [
+        "Marc Beukes"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-shabina-action-level-authority-leases",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM",
+      "title": "Add action-level authority leases to consequence-tiered agent governance",
+      "author": "Shabina Abba Noormohamed",
+      "reason": "Her freshly published tiered NHI governance post directly intersects the standing-role and leased-authority content pillar.",
+      "evidence": "Shabina proposes four NHI tiers and contrasts a temporary development bot with an agent able to move £10m, arguing governance should be proportional to consequence.",
+      "draftResponse": "Shabina, consequence-based tiers are the right axis, but identity risk and action risk can diverge during a session. I would calculate an action-level risk score from financial impact, reversibility, data sensitivity and propagation depth, then issue a short-lived authority lease for that specific action; track lease duration, privilege utilisation, denial precision and p95 revocation time. How do you prevent a Tier 2 identity from accumulating Tier 0 effective authority through chained tools?",
+      "priorityScore": 0.94,
+      "intendedMentions": [
+        "Shabina Abba Noormohamed"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-soren-mcp-verifiable-action-contract",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/sorenhl_ai-skaber-f%C3%B8rst-for-alvor-v%C3%A6rdi-n%C3%A5r-den-activity-7501562121688702978-Lepy",
+      "title": "MCP action layers need verifiable action contracts",
+      "author": "Søren Heide Larsen",
+      "reason": "Recent director-level post argues that connected enterprise systems need meaning, rules, permissions and actions; the user can add the missing verification and recovery layer.",
+      "evidence": "Søren says APIs provide data but AI-ready architecture also requires meaning, rules, permissions and actions, with MCP connecting legacy systems to employee, IT and customer workflows.",
+      "draftResponse": "Søren, meaning and permissions are necessary, but the action layer also needs a verifiable contract. For each state-changing MCP call, I would bind the business intent, evidence, policy version, leased authority, expected postcondition and recovery path, then measure verified-action coverage, p95 exception recovery and business outcome per automated workflow. Otherwise the architecture can move from an expensive search box to an unauditable execution box.",
+      "priorityScore": 0.9,
+      "intendedMentions": [
+        "Søren Heide Larsen"
+      ],
+      "state": "proposed"
     }
   ]
 }
