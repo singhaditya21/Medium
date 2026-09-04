@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1148,
+  "wordCount": 1139,
   "tags": [
     "Revenue operations",
     "AI agents",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/revenue-operations-needs-an-agent-decision-ledger/figure-01.svg",
       "alt": "Six-layer revenue-operations decision ledger architecture linking evidence, proposals, commercial authority, verified effects, outcomes, and learning.",
-      "caption": "Figure 1. The decision ledger complements CRM by preserving causality, authority, and outcome lineage. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. The decision ledger complements CRM by preserving causality, authority, and outcome lineage. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/revenue-operations-needs-an-agent-decision-ledger/figure-02.svg",
       "alt": "Eight-stage RevOps agent action flow from evidence snapshot and proposal through approval, execution, outcome observation, and calibration.",
-      "caption": "Figure 2. One commercial action identifier survives from evidence moment to delayed outcome analysis. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. One commercial action identifier survives from evidence moment to delayed outcome analysis. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/revenue-operations-needs-an-agent-decision-ledger/figure-03.svg",
       "alt": "Five-metric RevOps decision scorecard showing a lift-calibration breach despite strong effect verification and margin control.",
-      "caption": "Figure 3. High execution quality does not compensate for poorly calibrated value predictions. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. High execution quality does not compensate for poorly calibrated value predictions. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1103,
+  "wordCount": 1094,
   "tags": [
     "AI agents",
     "Resilience",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/every-agent-needs-a-safe-degradation-ladder/figure-01.svg",
       "alt": "Six-stage safe degradation control-plane architecture from sensing and mode decisions through epoch propagation, enforcement, and recovery.",
-      "caption": "Figure 1. A signed mode epoch coordinates the reduction of authority across effect boundaries. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. A signed mode epoch coordinates the reduction of authority across effect boundaries. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/every-agent-needs-a-safe-degradation-ladder/figure-02.svg",
       "alt": "Eight-state degradation and restoration flow moving from bounded autonomy through reviewed, recommend-only, read-only, contained, reconciliation, canary, and restore.",
-      "caption": "Figure 2. The ladder preserves useful work while consequence is reduced monotonically. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. The ladder preserves useful work while consequence is reduced monotonically. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/every-agent-needs-a-safe-degradation-ladder/figure-03.svg",
       "alt": "Five-metric degradation scorecard showing insufficient ambiguity closure before restoration despite fast mode propagation.",
-      "caption": "Figure 3. Restoration remains unsafe when ambiguous actions have not been reconciled. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Restoration remains unsafe when ambiguous actions have not been reconciled. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

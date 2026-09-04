@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1120,
+  "wordCount": 1111,
   "tags": [
     "AI agents",
     "Distributed systems",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-fencing-token/figure-01.svg",
       "alt": "Six-stage fencing-token architecture from monotonic ownership acquisition and lease binding through propagation, gateway comparison, commit, and stale rejection.",
-      "caption": "Figure 1. Fencing is enforced at the final domain write boundary. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. Fencing is enforced at the final domain write boundary. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-fencing-token/figure-02.svg",
       "alt": "Eight-state ownership handoff flow demonstrating how fence 42 prevents a resumed worker holding fence 41 from committing.",
-      "caption": "Figure 2. A resumed stale worker loses because the resource has already accepted a higher epoch. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. A resumed stale worker loses because the resource has already accepted a higher epoch. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-fencing-token/figure-03.svg",
       "alt": "Five-metric fencing scorecard showing incomplete gateway enforcement despite zero observed stale-owner accepts.",
-      "caption": "Figure 3. Observed rejection success is insufficient while any material gateway lacks fence enforcement. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Observed rejection success is insufficient while any material gateway lacks fence enforcement. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

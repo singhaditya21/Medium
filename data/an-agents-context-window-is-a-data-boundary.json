@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1151,
+  "wordCount": 1142,
   "tags": [
     "AI agents",
     "Data governance",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/an-agents-context-window-is-a-data-boundary/figure-01.svg",
       "alt": "Six-stage governed context architecture from typed purpose and authorization through constrained retrieval, qualification, minimization, and expiry.",
-      "caption": "Figure 1. Context assembly begins with purpose and policy before semantic search. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. Context assembly begins with purpose and policy before semantic search. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/an-agents-context-window-is-a-data-boundary/figure-02.svg",
       "alt": "Eight-stage context assembly flow enforcing eligible sources, trust, freshness, minimization, instruction separation, and derivative deletion.",
-      "caption": "Figure 2. Evidence remains distinct from trusted instructions throughout the action lifecycle. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Evidence remains distinct from trusted instructions throughout the action lifecycle. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/an-agents-context-window-is-a-data-boundary/figure-03.svg",
       "alt": "Five-metric context governance scorecard showing a deletion-verification breach despite strong provenance and tenant isolation.",
-      "caption": "Figure 3. Derivative deletion is a production gate, not an archival afterthought. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Derivative deletion is a production gate, not an archival afterthought. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

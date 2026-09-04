@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1115,
+  "wordCount": 1106,
   "tags": [
     "AI agents",
     "Incident response",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/who-owns-an-ai-agent-incident/figure-01.svg",
       "alt": "Six-cell AI-agent incident command architecture covering command, containment, business truth, remediation, evidence preservation, and recovery.",
-      "caption": "Figure 1. Incident command separates authority containment from reconstruction of business truth. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. Incident command separates authority containment from reconstruction of business truth. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/who-owns-an-ai-agent-incident/figure-02.svg",
       "alt": "Eight-stage incident lifecycle from effect anomaly detection through authority containment, action reconciliation, remediation, canary, and closure.",
-      "caption": "Figure 2. Technical response and business reconciliation meet at an evidence-gated closure decision. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Technical response and business reconciliation meet at an evidence-gated closure decision. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/who-owns-an-ai-agent-incident/figure-03.svg",
       "alt": "Five-metric incident scorecard showing an ambiguity-ownership breach despite successful authority containment.",
-      "caption": "Figure 3. Fast containment does not compensate for unowned ambiguous effects. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Fast containment does not compensate for unowned ambiguous effects. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

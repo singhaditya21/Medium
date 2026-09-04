@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1136,
+  "wordCount": 1127,
   "tags": [
     "AI agents",
     "Verification",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/your-verifier-must-not-trust-the-agent/figure-01.svg",
       "alt": "Six-stage independent verifier architecture separating approved intent, effect execution, evidence acquisition, comparison, decision, and recovery.",
-      "caption": "Figure 1. Execution and proof share intent but use different identities and evidence paths. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. Execution and proof share intent but use different identities and evidence paths. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/your-verifier-must-not-trust-the-agent/figure-02.svg",
       "alt": "Eight-state verification lifecycle distinguishing verified, violated, inconclusive, and expired outcomes before resolution.",
-      "caption": "Figure 2. Inconclusive evidence preserves uncertainty instead of manufacturing success. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Inconclusive evidence preserves uncertainty instead of manufacturing success. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/your-verifier-must-not-trust-the-agent/figure-03.svg",
       "alt": "Five-metric verification scorecard showing a breach in high-risk independent proof despite complete receipt creation.",
-      "caption": "Figure 3. Receipt count passes while meaningful proof coverage fails. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Receipt count passes while meaningful proof coverage fails. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

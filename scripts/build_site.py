@@ -512,7 +512,7 @@ def render_article(story: dict[str, Any], stories: list[dict[str, Any]], session
             class_attr = f' class="language-{language}"' if language else ""
             rendered.append(f"<pre><code{class_attr}>{escape(text)}</code></pre>")
         else:
-            class_name = "disclosure" if text.lower().startswith("this story was written with") else ""
+            class_name = "disclosure" if text.lower().startswith(("this story was written with", "this story was developed with")) else ""
             class_attr = f' class="{class_name}"' if class_name else ""
             rendered.append(f"<p{class_attr}>{inner}</p>")
 

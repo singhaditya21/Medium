@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1137,
+  "wordCount": 1128,
   "tags": [
     "AI agents",
     "Observability",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/ai-agent-observability-is-not-logging/figure-01.svg",
       "alt": "Six-stage AI-agent observability architecture from instrumentation and correlation through business-effect observation, aggregation, and investigation.",
-      "caption": "Figure 1. Execution telemetry is joined to decision, authority, effect, and economic evidence. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. Execution telemetry is joined to decision, authority, effect, and economic evidence. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/ai-agent-observability-is-not-logging/figure-02.svg",
       "alt": "Eight-stage telemetry flow connecting intent, decision, authority, trace, business effect, economics, SLO evaluation, and recovery.",
-      "caption": "Figure 2. Stable action identity turns distributed signals into a reconstructable business narrative. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Stable action identity turns distributed signals into a reconstructable business narrative. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/ai-agent-observability-is-not-logging/figure-03.svg",
       "alt": "Five-metric observability scorecard showing a risk-weighted effect coverage breach despite near-complete trace coverage.",
-      "caption": "Figure 3. Technical trace coverage can pass while business-effect evidence remains below the production gate. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Technical trace coverage can pass while business-effect evidence remains below the production gate. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

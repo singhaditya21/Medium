@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1083,
+  "wordCount": 1074,
   "tags": [
     "AI agents",
     "Failure engineering",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/the-hardest-agent-failure-is-an-ambiguous-success/figure-01.svg",
       "alt": "Six-stage outcome-resolution architecture from expected postconditions and independent evidence through classification, recovery, and receipt closure.",
-      "caption": "Figure 1. Outcome resolution is an independent service, not a planner self-assessment. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. Outcome resolution is an independent service, not a planner self-assessment. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/the-hardest-agent-failure-is-an-ambiguous-success/figure-02.svg",
       "alt": "Eight-state ambiguous-success flow distinguishing accepted, pending, partial, inconsistent, duplicate, confirmed, recovery, and closed outcomes.",
-      "caption": "Figure 2. Accepted, pending, partial, inconsistent, and duplicate are separate operational states. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Accepted, pending, partial, inconsistent, and duplicate are separate operational states. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/the-hardest-agent-failure-is-an-ambiguous-success/figure-03.svg",
       "alt": "Five-metric ambiguity scorecard showing a false-closure breach despite fast typical resolution and complete ownership.",
-      "caption": "Figure 3. One false closure can fail the gate even when latency and recovery averages pass. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. One false closure can fail the gate even when latency and recovery averages pass. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

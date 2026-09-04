@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1094,
+  "wordCount": 1085,
   "tags": [
     "AI agents",
     "Policy as code",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/the-agent-policy-engine-is-a-compiler/figure-01.svg",
       "alt": "Six-stage agent policy supply-chain architecture from human authoring and schemas through testing, signed bundles, decisions, and enforcement.",
-      "caption": "Figure 1. Policy is compiled into a signed artifact before it grants production authority. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. Policy is compiled into a signed artifact before it grants production authority. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/the-agent-policy-engine-is-a-compiler/figure-02.svg",
       "alt": "Eight-stage policy compilation flow converting reviewed source into runtime obligations enforced at the effect gateway.",
-      "caption": "Figure 2. Typed inputs and conflict tests precede runtime evaluation and enforcement. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Typed inputs and conflict tests precede runtime evaluation and enforcement. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/the-agent-policy-engine-is-a-compiler/figure-03.svg",
       "alt": "Five-metric policy scorecard showing a bundle adoption breach despite passing tests and decision latency.",
-      "caption": "Figure 3. Stale enforcement points can undermine an otherwise healthy policy control plane. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Stale enforcement points can undermine an otherwise healthy policy control plane. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

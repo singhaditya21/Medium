@@ -146,14 +146,14 @@ def figure(slug: str, number: int, alt: str, caption: str) -> dict:
         "type": "figure",
         "src": f"assets/images/{slug}/figure-{number:02d}.svg",
         "alt": alt,
-        "caption": f"Figure {number}. {caption} Editorial architecture diagram; illustrative values; not production data.",
+        "caption": f"Figure {number}. {caption} AI-assisted editorial architecture diagram; illustrative values; not production data.",
     }
 
 
 def story_blocks(story: dict) -> list[dict]:
     slug = story["slug"]
     blocks = [
-        p("This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."),
+        p("This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."),
         p(story["hook"][0]),
         p(story["hook"][1]),
         quote(story["thesis"]),

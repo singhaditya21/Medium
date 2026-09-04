@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1102,
+  "wordCount": 1093,
   "tags": [
     "AI agents",
     "Canary releases",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-change-budget/figure-01.svg",
       "alt": "Six-stage authority-weighted AI-agent release architecture covering manifest, cohort segmentation, change budget, evaluation, gating, and promotion.",
-      "caption": "Figure 1. The release controller prices cumulative authority rather than raw request share. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. The release controller prices cumulative authority rather than raw request share. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-change-budget/figure-02.svg",
       "alt": "Eight-stage evidence-gated rollout flow from offline tests and shadowing through canaries, hold, expansion, rollback, and general availability.",
-      "caption": "Figure 2. Each cohort earns expansion with outcome, risk, and rollback evidence. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Each cohort earns expansion with outcome, risk, and rollback evidence. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-change-budget/figure-03.svg",
       "alt": "Five-metric change-budget scorecard showing a worst-segment quality breach despite positive overall quality.",
-      "caption": "Figure 3. A favorable global average cannot override a failing segment-level confidence bound. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. A favorable global average cannot override a failing segment-level confidence bound. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

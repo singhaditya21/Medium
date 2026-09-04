@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1187,
+  "wordCount": 1178,
   "tags": [
     "AI agents",
     "Distributed systems",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-transaction-boundary/figure-01.svg",
       "alt": "Six-stage AI-agent transaction architecture separating proposal, preparation, authorization, execution, observation, and closure.",
-      "caption": "Figure 1. The transaction coordinator encloses a probabilistic planner with deterministic authority and effect controls. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. The transaction coordinator encloses a probabilistic planner with deterministic authority and effect controls. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-transaction-boundary/figure-02.svg",
       "alt": "Eight-state transaction flow retaining unknown outcomes until independent observation or compensation closes the action.",
-      "caption": "Figure 2. Unknown is a durable state rather than an excuse for an immediate retry. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Unknown is a durable state rather than an excuse for an immediate retry. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -202,7 +202,7 @@
       "type": "figure",
       "src": "assets/images/your-ai-agent-needs-a-transaction-boundary/figure-03.svg",
       "alt": "Five-row transaction control scorecard comparing duplicate effects, version rejection, ambiguity age, and compensation targets.",
-      "caption": "Figure 3. Tail ambiguity can breach even when duplicate-effect and compensation measures pass. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Tail ambiguity can breach even when duplicate-effect and compensation measures pass. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",

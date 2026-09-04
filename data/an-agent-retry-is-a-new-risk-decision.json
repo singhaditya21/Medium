@@ -12,7 +12,7 @@
   "status": "editorial_draft",
   "statusLabel": "Editorial draft",
   "readTime": "6 min read",
-  "wordCount": 1153,
+  "wordCount": 1144,
   "tags": [
     "AI agents",
     "Reliability",
@@ -26,8 +26,8 @@
     {
       "type": "html",
       "tag": "p",
-      "html": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
-      "text": "This is an editorial draft developed with AI writing and visualization assistance for human technical review before Medium publication. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
+      "html": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited.",
+      "text": "This story was developed with AI writing and visualization assistance. All incidents, thresholds, workloads, and operating values are illustrative unless a source is explicitly cited."
     },
     {
       "type": "html",
@@ -51,7 +51,7 @@
       "type": "figure",
       "src": "assets/images/an-agent-retry-is-a-new-risk-decision/figure-01.svg",
       "alt": "Six-stage effect-aware retry controller architecture spanning classification, sensing, pricing, decision, enforcement, and observation.",
-      "caption": "Figure 1. Retry authority is computed from effect semantics, dependency state, and economic exposure. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 1. Retry authority is computed from effect semantics, dependency state, and economic exposure. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -93,7 +93,7 @@
       "type": "figure",
       "src": "assets/images/an-agent-retry-is-a-new-risk-decision/figure-02.svg",
       "alt": "Eight-state retry decision flow separating safe replay, reconciliation, escalation, and evidence-based closure after a timeout.",
-      "caption": "Figure 2. Timeout is an input to classification, not an automatic instruction to call again. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 2. Timeout is an input to classification, not an automatic instruction to call again. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "html",
@@ -197,7 +197,7 @@
       "type": "figure",
       "src": "assets/images/an-agent-retry-is-a-new-risk-decision/figure-03.svg",
       "alt": "Five-metric retry scorecard showing an amplification breach despite passing business-effect safeguards.",
-      "caption": "Figure 3. Fleet amplification can breach before material duplicates appear. Editorial architecture diagram; illustrative values; not production data."
+      "caption": "Figure 3. Fleet amplification can breach before material duplicates appear. AI-assisted editorial architecture diagram; illustrative values; not production data."
     },
     {
       "type": "table",
