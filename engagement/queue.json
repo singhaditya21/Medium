@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-02T10:56:06Z",
+  "updatedAt": "2026-09-04T06:42:28Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1860,6 +1860,106 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
       "receiptOperationId": "20260902105606-reply-posted-2026-09-02-linkedin-reply-zulu-operating-evidence-capstone",
       "postedAt": "2026-09-02T10:56:06Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-reply-sandeep-board-operating-model",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500753120071766016/?commentUrn=urn:li:comment:7501526223408308225&dashCommentUrn=urn:li:fsd_comment:(7501526223408308225,urn:li:activity:7500753120071766016)",
+      "title": "Board-level operating model for AI outcomes",
+      "author": "Sandeep N Belgur",
+      "reason": "Direct reply to the user on AI operating-model measurement; the response advances the discussion with explicit governance and resilience metrics.",
+      "evidence": "Signed-in LinkedIn thread showed Sandeep discussing the measurable operating-model shift for enterprise AI and inviting a board-level framework.",
+      "draftResponse": "Exactly, Sandeep. The operating-model shift becomes measurable when every use case has a pre-AI baseline, an accountable process owner and explicit continue, constrain and rollback thresholds. At board level, I would pair cost per verified outcome with override rate and p95 recovery time—three numbers that expose value, control quality and resilience together.",
+      "priorityScore": 0.96,
+      "intendedMentions": [
+        "Sandeep N Belgur"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500753120071766016/?commentUrn=urn:li:comment:7501526223408308225&dashCommentUrn=urn:li:fsd_comment:(7501526223408308225,urn:li:activity:7500753120071766016)",
+      "receiptOperationId": "20260904064225-reply-posted-2026-09-04-linkedin-reply-sandeep-board-operating-model",
+      "postedAt": "2026-09-04T06:42:25Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-technavik-time-to-value",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501304576835407872/",
+      "title": "Separate implementation time-to-live from time-to-value",
+      "author": "Technavik Solutions",
+      "reason": "The implementation roundtable invites a measurable distinction between deployment speed, adoption, rework and realized workflow value.",
+      "evidence": "Signed-in LinkedIn post showed an active implementation roundtable discussion with four comments before the approved response.",
+      "draftResponse": "Time-to-live and time-to-value should be separate clocks. I would score an AI-enabled implementation on time to first verified outcome, 30/60/90-day adoption depth, exception and rework rate, and realized value per workflow; the AI layer earns trust only if it shortens the first metric without degrading the other three. Which measure created the most disagreement across the roundtable?",
+      "priorityScore": 0.91,
+      "intendedMentions": [
+        "Technavik Solutions"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501304576835407872/",
+      "receiptOperationId": "20260904064226-comment-posted-2026-09-04-linkedin-comment-technavik-time-to-value",
+      "postedAt": "2026-09-04T06:42:26Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-praveen-ai-gtm-handoffs",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501297697757511681/",
+      "title": "Instrument the four AI GTM conversion gates",
+      "author": "Praveen Shahi",
+      "reason": "The high-participation AI GTM discussion provides an opportunity to locate value leakage at cross-functional handoffs.",
+      "evidence": "Signed-in LinkedIn post referenced more than 100 participants and a discussion spanning product, solutions, marketing and sales.",
+      "draftResponse": "Praveen, the 100+ participant format matters because AI GTM usually leaks value at the handoffs between product, solutions, marketing and sales—not inside a single function. I would instrument four conversion gates: qualified business problem, technically feasible workflow, accountable economic owner and verified production outcome. Which handoff created the widest gap between product readiness and revenue readiness in the room?",
+      "priorityScore": 0.93,
+      "intendedMentions": [
+        "Praveen Shahi"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501297697757511681/",
+      "receiptOperationId": "20260904064227-comment-posted-2026-09-04-linkedin-comment-praveen-ai-gtm-handoffs",
+      "postedAt": "2026-09-04T06:42:27Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-tanvi-hiring-signal-market",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500033880825950208/",
+      "title": "Replace polished prose with verifiable hiring signals",
+      "author": "Tanvi Agrawal",
+      "reason": "The hiring discussion presents concrete evidence of signal collapse and supports a measurable alternative assessment design.",
+      "evidence": "Signed-in LinkedIn post cited 400 applications and 95% near-identical case answers, with 34 comments before the approved response.",
+      "draftResponse": "Tanvi, 400 applications and 95% near-identical case answers point to a broken signalling market, not only a candidate-effort problem. I would treat polished prose as a low-signal feature and weight role-specific evidence, decision rationale and one verifiable work sample instead—then track reviewer minutes per qualified candidate, false-reject rate and interview pass-through. That tests whether the process rewards genuine fit rather than merely penalising tool use.",
+      "priorityScore": 0.9,
+      "intendedMentions": [
+        "Tanvi Agrawal"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500033880825950208/",
+      "receiptOperationId": "20260904064228-comment-posted-2026-09-04-linkedin-comment-tanvi-hiring-signal-market",
+      "postedAt": "2026-09-04T06:42:28Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-yuvraj-accepted-plan-agency",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501111227985764352/",
+      "title": "Measure agency preservation in conversational planning",
+      "author": "Yuvraj Barsara",
+      "reason": "The product design explicitly preserves user acceptance before tasks land, enabling an evidence-based autonomy and agency discussion.",
+      "evidence": "Signed-in LinkedIn post described the Buddy conversational planner and its rule that no suggested task is added until the user accepts it.",
+      "draftResponse": "Yuvraj, “nothing lands on your day until you accept” is the strongest product-control decision in this design. I would measure accepted-plan rate, edit distance between suggested and accepted tasks, completion lift versus manual planning and override frequency; together, those four metrics show whether conversation reduces planning friction without taking agency away from the user.",
+      "priorityScore": 0.89,
+      "intendedMentions": [
+        "Yuvraj Barsara"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501111227985764352/",
+      "receiptOperationId": "20260904064228-comment-posted-2026-09-04-linkedin-comment-yuvraj-accepted-plan-agency",
+      "postedAt": "2026-09-04T06:42:28Z"
     }
   ]
 }

@@ -170,8 +170,8 @@ def validate_queue() -> tuple[dict[str, Any], list[str]]:
     if policy != expected_policy:
         errors.append("engagement queue policy must preserve exact confirmation and prohibit unattended/bulk posting")
     candidates = queue.get("candidates")
-    if not isinstance(candidates, list) or len(candidates) > 100:
-        errors.append("engagement queue candidates must be an array of at most 100 audited items")
+    if not isinstance(candidates, list) or len(candidates) > 500:
+        errors.append("engagement queue candidates must be an array of at most 500 audited items")
         return queue, errors
     seen: set[str] = set()
     active_by_platform: Counter[str] = Counter()

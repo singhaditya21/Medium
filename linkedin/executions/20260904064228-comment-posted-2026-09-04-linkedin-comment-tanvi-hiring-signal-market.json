@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904064228-comment-posted-2026-09-04-linkedin-comment-tanvi-hiring-signal-market",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T06:42:28Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T06:42:28Z",
+    "scope": "User approved N1 and C1-C4 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-tanvi-hiring-signal-market",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500033880825950208/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500033880825950208/",
+    "publishedTextSha256": "844a9c93ca92e76087af85107c728d41ad92926289d30bc5feb7f02385a6dabb",
+    "verifiedAt": "2026-09-04T06:42:28Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp; the post comment count increased from 34 to 35."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

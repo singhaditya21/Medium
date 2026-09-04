@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904064227-comment-posted-2026-09-04-linkedin-comment-praveen-ai-gtm-handoffs",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T06:42:27Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T06:42:27Z",
+    "scope": "User approved N1 and C1-C4 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-praveen-ai-gtm-handoffs",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501297697757511681/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501297697757511681/",
+    "publishedTextSha256": "bee03d66429dcf6f6371d898117cfc12651dd9910a026f464c0c115fceb4a6c4",
+    "verifiedAt": "2026-09-04T06:42:27Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp; the post comment count increased to one."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

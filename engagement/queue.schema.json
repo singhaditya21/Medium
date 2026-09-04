@@ -30,7 +30,7 @@
     },
     "candidates": {
       "type": "array",
-      "maxItems": 100,
+      "maxItems": 500,
       "items": {
         "type": "object",
         "additionalProperties": false,

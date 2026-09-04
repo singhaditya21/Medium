@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904064226-comment-posted-2026-09-04-linkedin-comment-technavik-time-to-value",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T06:42:26Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T06:42:26Z",
+    "scope": "User approved N1 and C1-C4 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-technavik-time-to-value",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501304576835407872/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501304576835407872/",
+    "publishedTextSha256": "97f1f6519aa08e2c15cfdf3420244f73e10bb430e907ef53c392cc5c98433227",
+    "verifiedAt": "2026-09-04T06:42:26Z",
+    "verification": "Rendered comment appeared under Aditya Singh with a current timestamp; the post comment count increased from four to five."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
