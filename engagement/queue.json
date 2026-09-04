@@ -2351,7 +2351,7 @@
       "author": "Praveen Shahi",
       "reason": "A new direct reply advances an established collaboration discussion and explicitly offers revised Businessnext designs and pivots.",
       "evidence": "Praveen says Amoris is pivoting around deal closure and revenue leakage, and proposes sharing a revised collaboration design over the weekend.",
-      "draftResponse": "Praveen, that pivot is much sharper. The operating test for Amoris is whether it converts existing demand into verified revenue without adding another workflow layer: time-to-next-best-action, stage conversion, leakage recovered and seller hours returned. Send the revised design when ready; for the Businessnext collaboration, I suggest we map one deal-closure journey end to end and identify where judgment, evidence and execution currently separate.",
+      "draftResponse": "@Praveen Shahi, that pivot is much sharper. The operating test for Amoris is whether it converts existing demand into verified revenue without adding another workflow layer: time-to-next-best-action, stage conversion, leakage recovered and seller hours returned. Send the revised design when ready; for the Businessnext collaboration, I suggest we map one deal-closure journey end to end and identify where judgment, evidence and execution currently separate.",
       "priorityScore": 0.99,
       "intendedMentions": [
         "Praveen Shahi"
@@ -2368,7 +2368,7 @@
       "author": "Prince Sidana",
       "reason": "A two-hour-old article asks exactly how enterprises should evaluate an agent's full decision path and directly matches the account's action-receipt positioning.",
       "evidence": "Prince distinguishes copilots from agents that access data, invoke tools and change business systems, then asks how to evaluate the path rather than only the output.",
-      "draftResponse": "Prince, evaluating the final answer misses the risk surface. I would score each decision path across evidence quality, policy compliance, authority validity and verified outcome; a single failed gate should stop the action even when the response looks correct. The practical test is whether an auditor can reconstruct why the agent acted, what it was permitted to do and whether the system of record changed as intended.",
+      "draftResponse": "@Prince Sidana, evaluating the final answer misses the risk surface. I would score each decision path across evidence quality, policy compliance, authority validity and verified outcome; a single failed gate should stop the action even when the response looks correct. The practical test is whether an auditor can reconstruct why the agent acted, what it was permitted to do and whether the system of record changed as intended.",
       "priorityScore": 0.97,
       "intendedMentions": [
         "Prince Sidana"
@@ -2385,7 +2385,7 @@
       "author": "Katharina Koerner",
       "reason": "Her practical threat-modelling framework for small AI teams maps directly to the account's control, testing and evidence themes.",
       "evidence": "Katharina proposes Risk → Control → Test → Evidence, concrete agent failure scenarios and a 30-minute break-it exercise for small teams.",
-      "draftResponse": "Katharina, Risk → Control → Test → Evidence is the right compression for a five-person team. I would add one quantitative pass/fail condition per control: harmful-action rate, unauthorized-tool-call escape rate, planted-attack recall and p95 containment time. The 30-minute break-it session becomes durable governance when every failure is converted into a regression test and release gate.",
+      "draftResponse": "@Katharina Koerner, Risk → Control → Test → Evidence is the right compression for a five-person team. I would add one quantitative pass/fail condition per control: harmful-action rate, unauthorized-tool-call escape rate, planted-attack recall and p95 containment time. The 30-minute break-it session becomes durable governance when every failure is converted into a regression test and release gate.",
       "priorityScore": 0.95,
       "intendedMentions": [
         "Katharina Koerner"
@@ -2402,7 +2402,7 @@
       "author": "Andreas Neidhart-Lau",
       "reason": "The public-sector AI maturity framework has strong early discussion quality and leaves room for an action-level maturity measure.",
       "evidence": "The post covers mission alignment, MLOps, modular architecture, governed data and explainability using a 55-page UNESCO framework, with 28 reactions and two comments during review.",
-      "draftResponse": "Andreas, architecture maturity should be scored by the decisions it can govern, not the components installed. For each high-impact use case, I would require five gates: governed data lineage, action-scoped authority, independent postcondition verification, bounded recovery and named accountability—then track verified-action coverage and p95 containment time. That separates operational AI maturity from platform maturity.",
+      "draftResponse": "@Andreas Neidhart-Lau, architecture maturity should be scored by the decisions it can govern, not the components installed. For each high-impact use case, I would require five gates: governed data lineage, action-scoped authority, independent postcondition verification, bounded recovery and named accountability—then track verified-action coverage and p95 containment time. That separates operational AI maturity from platform maturity.",
       "priorityScore": 0.93,
       "intendedMentions": [
         "Andreas Neidhart-Lau"
@@ -2419,7 +2419,7 @@
       "author": "DJ Patil",
       "reason": "The post opens a current, quantitative discussion about regional processing economics that fits the account's model-routing and cost-per-verified-outcome pillar.",
       "evidence": "DJ questions a 10% token premium for regional processing and asks whether open models plus self-management provide better economics.",
-      "draftResponse": "DJ, the percentage is the questionable part: residency infrastructure is closer to a capacity-and-compliance cost than a value that should scale linearly with every token. I would compare the 10% premium with the full alternative—reserved regional capacity, operations headcount, audit evidence, egress, incident response and latency—and express both as cost per compliant verified workload. Has anyone seen the premium flatten at committed volume?",
+      "draftResponse": "@DJ Patil, the percentage is the questionable part: residency infrastructure is closer to a capacity-and-compliance cost than a value that should scale linearly with every token. I would compare the 10% premium with the full alternative—reserved regional capacity, operations headcount, audit evidence, egress, incident response and latency—and express both as cost per compliant verified workload. Has anyone seen the premium flatten at committed volume?",
       "priorityScore": 0.9,
       "intendedMentions": [
         "DJ Patil"
