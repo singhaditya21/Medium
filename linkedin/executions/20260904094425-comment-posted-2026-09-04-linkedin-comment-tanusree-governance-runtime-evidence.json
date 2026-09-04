@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904094425-comment-posted-2026-09-04-linkedin-comment-tanusree-governance-runtime-evidence",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T09:44:25Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T09:44:25Z",
+    "scope": "User approved C1, C2, C3, C4 and C5 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-tanusree-governance-runtime-evidence",
+    "targetUrl": "https://www.linkedin.com/in/tanusree-de-6401a54/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/tanusree-de-6401a54/recent-activity/all/",
+    "publishedTextSha256": "0505ba88568722add6ab4a335ddfe186767beaa8de24376f854e8413c65de94c",
+    "verifiedAt": "2026-09-04T09:44:25Z",
+    "verification": "Verified under Aditya Singh with a current timestamp on Tanusree De’s intended RAIverse launch post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

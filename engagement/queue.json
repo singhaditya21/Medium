@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T09:24:19Z",
+  "updatedAt": "2026-09-04T09:44:27Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2170,7 +2170,10 @@
       "draftResponse": "Daniel, containment and logging are necessary, but logs of model reasoning do not prove that an authorised business outcome occurred. I would separate model traceability from action assurance: bind the evidence, policy version, delegated authority, tool request, observed postcondition and recovery path in one receipt, then measure verified-action coverage, human-intervention latency and p95 containment time. Where do you place independent postcondition verification in this three-control model?",
       "priorityScore": 0.93,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/daniel-%C5%BEivica-73776711/recent-activity/all/",
+      "receiptOperationId": "20260904094424-comment-posted-2026-09-04-linkedin-comment-daniel-action-assurance-liability",
+      "postedAt": "2026-09-04T09:44:24Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-tanusree-governance-runtime-evidence",
@@ -2185,7 +2188,10 @@
       "draftResponse": "Tanusree, the three-layer structure becomes operational when system-level controls can prove that policy and oversight actually governed each consequential action. I would add a runtime evidence layer that binds the inventory record, accountable owner, policy version, delegated authority, observed postcondition and recovery path, then track verified-action coverage, exception-closure time and control drift. Where does that evidence contract sit in the RAIverse framework?",
       "priorityScore": 0.93,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/tanusree-de-6401a54/recent-activity/all/",
+      "receiptOperationId": "20260904094425-comment-posted-2026-09-04-linkedin-comment-tanusree-governance-runtime-evidence",
+      "postedAt": "2026-09-04T09:44:25Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-sanjeeve-ai-native-execution-contract",
@@ -2200,7 +2206,10 @@
       "draftResponse": "Sanjeeve, the strength of a layered AI-native architecture depends on whether each layer closes against a measurable business outcome. I would add an execution contract across business capability, agent, integration and observability layers: intended action, authority lease, policy version, postcondition and recovery path, with verified-action coverage and p95 exception recovery as cross-layer KPIs. Which layer owns that contract in the proposed EA-NGAI model?",
       "priorityScore": 0.9,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/sanjeeve-kumar-gajadi-b3b52974/recent-activity/all/",
+      "receiptOperationId": "20260904094426-comment-posted-2026-09-04-linkedin-comment-sanjeeve-ai-native-execution-contract",
+      "postedAt": "2026-09-04T09:44:26Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-brad-healthcare-mvp-safety-gates",
@@ -2215,7 +2224,10 @@
       "draftResponse": "Brad, “start with the problem” is especially important in healthcare because prototype accuracy is only one gate. I would stage an MVP against four measures: workflow time removed, exception rate, clinically or operationally significant false negatives, and time to safe human recovery; deployment should advance only when the last two remain within predefined limits. How do you separate a successful demo from a pathway change that is safe to scale?",
       "priorityScore": 0.82,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/brad-french-0a64693a/recent-activity/all/",
+      "receiptOperationId": "20260904094426-comment-posted-2026-09-04-linkedin-comment-brad-healthcare-mvp-safety-gates",
+      "postedAt": "2026-09-04T09:44:26Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-tania-tax-transformation-outcome-kpis",
@@ -2230,7 +2242,10 @@
       "draftResponse": "Tania, shifting tax from transaction volume to strategic value needs an equally explicit measurement change. I would track close-cycle time, percentage of exceptions resolved before filing, forecast variance attributable to tax data, and hours moved from reconciliation to decision support; those measures show whether automation actually changes the operating model. Which of these is hardest to establish consistently across African jurisdictions?",
       "priorityScore": 0.78,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/in/tania-davids-ab444a269/recent-activity/all/",
+      "receiptOperationId": "20260904094427-comment-posted-2026-09-04-linkedin-comment-tania-tax-transformation-outcome-kpis",
+      "postedAt": "2026-09-04T09:44:27Z"
     }
   ]
 }

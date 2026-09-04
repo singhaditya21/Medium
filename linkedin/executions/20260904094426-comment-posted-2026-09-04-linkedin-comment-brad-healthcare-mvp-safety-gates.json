@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904094426-comment-posted-2026-09-04-linkedin-comment-brad-healthcare-mvp-safety-gates",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T09:44:26Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T09:44:26Z",
+    "scope": "User approved C1, C2, C3, C4 and C5 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-brad-healthcare-mvp-safety-gates",
+    "targetUrl": "https://www.linkedin.com/in/brad-french-0a64693a/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/brad-french-0a64693a/recent-activity/all/",
+    "publishedTextSha256": "f0ce0d6a33a93c2d2cddfe47da6535d88b4df6428a3d36ccfb93617295750afa",
+    "verifiedAt": "2026-09-04T09:44:26Z",
+    "verification": "Verified under Aditya Singh with a current timestamp on Brad French’s intended healthcare MVP post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

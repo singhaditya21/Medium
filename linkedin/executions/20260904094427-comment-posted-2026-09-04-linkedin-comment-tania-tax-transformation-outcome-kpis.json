@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904094427-comment-posted-2026-09-04-linkedin-comment-tania-tax-transformation-outcome-kpis",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T09:44:27Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T09:44:27Z",
+    "scope": "User approved C1, C2, C3, C4 and C5 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-tania-tax-transformation-outcome-kpis",
+    "targetUrl": "https://www.linkedin.com/search/results/content/?keywords=enterprise%20AI%20governance&origin=SWITCH_SEARCH_VERTICAL&sortBy=%22date_posted%22",
+    "publicUrl": "https://www.linkedin.com/in/tania-davids-ab444a269/recent-activity/all/",
+    "publishedTextSha256": "b7f7be9dd37f8a4b7f1c4cac1a15cd2d26283cc8ae4db727ed182c532eee314d",
+    "verifiedAt": "2026-09-04T09:44:27Z",
+    "verification": "Verified under Aditya Singh with a current timestamp on Tania Davids’s intended Future of Tax in Africa post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

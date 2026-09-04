@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904094424-comment-posted-2026-09-04-linkedin-comment-daniel-action-assurance-liability",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T09:44:24Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T09:44:24Z",
+    "scope": "User approved C1, C2, C3, C4 and C5 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-daniel-action-assurance-liability",
+    "targetUrl": "https://www.linkedin.com/in/daniel-%C5%BEivica-73776711/recent-activity/all/",
+    "publicUrl": "https://www.linkedin.com/in/daniel-%C5%BEivica-73776711/recent-activity/all/",
+    "publishedTextSha256": "b904d407e6782b8ed8154d4fe011d281627d5028029222a61f14f98681f4382d",
+    "verifiedAt": "2026-09-04T09:44:24Z",
+    "verification": "Verified under Aditya Singh with a current timestamp on Daniel Živica’s intended autonomous-model liability post."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
