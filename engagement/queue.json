@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T08:19:38Z",
+  "updatedAt": "2026-09-04T08:50:41Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1976,7 +1976,10 @@
       "intendedMentions": [
         "Praveen Shahi"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7501535845175382016&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501297696704753664%2C7501528518376386561%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501528518376386561%2Curn%3Ali%3AugcPost%3A7501297696704753664%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501297696704753664%2C7501535789210636288%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287501535789210636288%2Curn%3Ali%3AugcPost%3A7501297696704753664%29",
+      "receiptOperationId": "20260904085038-reply-posted-2026-09-04-linkedin-reply-praveen-gtm-ontology-calibration",
+      "postedAt": "2026-09-04T08:50:38Z"
     },
     {
       "id": "2026-09-04-linkedin-reply-jasmeet-triggered-placement-review",
@@ -1993,7 +1996,10 @@
       "intendedMentions": [
         "Dr. Jasmeet S. Bajaj"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500100091123507201/",
+      "receiptOperationId": "20260904085038-reply-posted-2026-09-04-linkedin-reply-jasmeet-triggered-placement-review",
+      "postedAt": "2026-09-04T08:50:38Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-peter-human-boundary-consequence",
@@ -2010,7 +2016,10 @@
       "intendedMentions": [
         "Peter Cheyne"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/petercheyne_most-teams-start-by-listing-what-to-automate-activity-7501243855439257600-0iPp",
+      "receiptOperationId": "20260904085039-comment-posted-2026-09-04-linkedin-comment-peter-human-boundary-consequence",
+      "postedAt": "2026-09-04T08:50:39Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-deepchat-approval-evidence-contract",
@@ -2025,7 +2034,10 @@
       "draftResponse": "Code-level approval is necessary but not sufficient: it protects the commit boundary, yet the approver can still be shown incomplete or biased evidence. For pricing and inventory changes, I would bind each approval to an evidence snapshot, policy version, maximum impact, expiry and verified postcondition, then measure false-approve rate, approval latency and p95 rollback time. The trust question moves, but it becomes explicit and auditable.",
       "priorityScore": 0.88,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/deepfridaytalk-agenticcommerce-ai-share-7501552693077774336-T-Nq/",
+      "receiptOperationId": "20260904085040-comment-posted-2026-09-04-linkedin-comment-deepchat-approval-evidence-contract",
+      "postedAt": "2026-09-04T08:50:40Z"
     },
     {
       "id": "2026-09-04-linkedin-comment-xpert-ground-truth-detection-power",
@@ -2040,7 +2052,10 @@
       "draftResponse": "The scale is useful—2,880 assets, 28,800 documents, ~288,000 pages and 13 gates—but corpus size should not be the headline KPI. I would report mutation-test detection rate for missing tenant predicates and PII leaks, cross-artifact contradiction rate, contamination checks, evaluator agreement and performance by unseen architecture pattern. That separates coverage volume from whether the benchmark can expose consequential agent failures.",
       "priorityScore": 0.91,
       "intendedMentions": [],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/codingagents-aievaluation-softwareengineering-share-7501241893343645697-fUVa/",
+      "receiptOperationId": "20260904085041-comment-posted-2026-09-04-linkedin-comment-xpert-ground-truth-detection-power",
+      "postedAt": "2026-09-04T08:50:41Z"
     }
   ]
 }

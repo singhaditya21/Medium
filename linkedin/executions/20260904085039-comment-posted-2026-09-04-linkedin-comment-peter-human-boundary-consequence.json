@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904085039-comment-posted-2026-09-04-linkedin-comment-peter-human-boundary-consequence",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T08:50:39Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T08:50:39Z",
+    "scope": "User approved N1, N2, C1, C2 and C3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-peter-human-boundary-consequence",
+    "targetUrl": "https://www.linkedin.com/posts/petercheyne_most-teams-start-by-listing-what-to-automate-activity-7501243855439257600-0iPp",
+    "publicUrl": "https://www.linkedin.com/posts/petercheyne_most-teams-start-by-listing-what-to-automate-activity-7501243855439257600-0iPp",
+    "publishedTextSha256": "d8ecb5645efc8a1934e55973c133e0191c3d7262f41d6606bae9d81553348830",
+    "verifiedAt": "2026-09-04T08:50:39Z",
+    "verification": "The approved comment is publicly visible under Aditya Singh with the exact text and the post comment count increased from 20 to 21."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

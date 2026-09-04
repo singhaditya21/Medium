@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904085040-comment-posted-2026-09-04-linkedin-comment-deepchat-approval-evidence-contract",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-04T08:50:40Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T08:50:40Z",
+    "scope": "User approved N1, N2, C1, C2 and C3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-04-linkedin-comment-deepchat-approval-evidence-contract",
+    "targetUrl": "https://www.linkedin.com/posts/deepfridaytalk-agenticcommerce-ai-share-7501552693077774336-T-Nq/",
+    "publicUrl": "https://www.linkedin.com/posts/deepfridaytalk-agenticcommerce-ai-share-7501552693077774336-T-Nq/",
+    "publishedTextSha256": "3f610f2a715e67243019edf1a2e54ed02b0023342b81c7d2f21564bbc8a9d22c",
+    "verifiedAt": "2026-09-04T08:50:40Z",
+    "verification": "The approved comment is publicly visible under Aditya Singh with exact text and LinkedIn shows one comment."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

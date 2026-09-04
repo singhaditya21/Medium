@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904085038-reply-posted-2026-09-04-linkedin-reply-jasmeet-triggered-placement-review",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-04T08:50:38Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T08:50:38Z",
+    "scope": "User approved N1, N2, C1, C2 and C3 exactly as written on 2026-09-04."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-04-linkedin-reply-jasmeet-triggered-placement-review",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500100091123507201/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500100091123507201/",
+    "publishedTextSha256": "2711deefc5ca785a55a7dfe3f1b99bdaafe7c08dcbdfb161e3e23c99eaa6e1a4",
+    "verifiedAt": "2026-09-04T08:50:38Z",
+    "verification": "The approved reply is publicly visible under Aditya Singh with the Dr. Jasmeet S. Bajaj mention and exact approved body."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
