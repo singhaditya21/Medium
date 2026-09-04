@@ -1,6 +1,8 @@
-# Sample LinkedIn post: Scope attenuation and composed-action safety
+# Published LinkedIn post: Scope attenuation and composed-action safety
 
-Status: sample only — not published or scheduled
+Status: published on 2026-09-04
+
+Public URL: https://www.linkedin.com/feed/update/urn:li:activity:7501596302342922240/
 
 Native mention required at posting: `@Shabina Abba Noormohamed`
 
@@ -8,41 +10,47 @@ Recommended attachment: premium V2 MP4
 
 ## Post copy
 
-@Shabina Abba Noormohamed drew an important architectural boundary in our exchange today:
+@Shabina Abba Noormohamed — your distinction today between runtime delegation safety and planning-time transaction composition stayed with me. I took the creative liberty of turning our exchange into the animated control-plane cheatsheet below.
 
-**Scope attenuation is an execution-time invariant. Composed-transaction evaluation is a planning-time problem.**
+My takeaway from your explanation of AuthHub is a precise runtime contract:
 
-A production authorization design needs both.
+• every capability scope is a strict subset of its delegator;
+• event-time structural change suspends access;
+• attestation-time refreshes evidence;
+• execution-time rechecks admissibility; and
+• increasing chain length shortens the re-attestation cadence.
 
-The delegation invariant is cryptographic:
+Formally, for every delegation hop:
 
-`Sᵢ₊₁ ⊂ Sᵢ` for every hop.
+Sᵢ₊₁ ⊂ Sᵢ
 
-An agent can delegate less authority, never more. Event-time changes suspend access. Attestation-time revalidates changed conditions. Execution-time rechecks admissibility before an action proceeds. Longer chains should shorten the re-attestation interval rather than inherit the cadence of a quiet individual link.
+The validator should also bind the signature, audience, expiry, parent_jti, maximum delegation depth and policy hash. That prevents a descendant from manufacturing authority, extending its TTL or erasing its lineage.
 
-But per-hop compliance does not prove that the combined business effect is safe.
+The second problem is different: individually permitted actions can compose into an impermissible business consequence.
 
-Three individually permitted actions—such as a CRM commercial delta, a service-priority change and a customer commitment—can compose into a consequence larger than any single tool call. The planner therefore needs an effect graph and a composite-risk gate:
+A CRM price override, a service-priority change and a customer SLA commitment may each pass independently while their combined effect breaches the transaction’s consequence budget.
 
-`Rᴄ = 1 − ∏(1−rᵢ) + λX + μI + νD`
+The animation extends the discussion with an illustrative planning-time risk functional:
 
-where `X` represents cross-domain interaction, `I` irreversibility and `D` propagation depth.
+Rcomp = 1 − ∏(1−rᵢ) + λX·X + λI·I + λD·D + λC·C
 
-The runtime should issue an action-level lease only when:
+The runtime issues a short-lived, action-specific permission lease only when:
 
-- every delegated scope narrows;
-- attestations remain fresh;
-- composite risk stays within the consequence budget;
-- compound postconditions are declared; and
-- the recovery class is admissible.
+• every delegated scope narrows;
+• attestations remain fresh;
+• composite risk remains within budget;
+• compound postconditions are declared; and
+• the recovery class is admissible.
 
-Then independent verification—not the agent’s own success message—closes the receipt.
+An independent verifier then binds the intent, lease, policy, pre-state, action, post-state and verifier identity into a signed receipt.
 
-The animated cheatsheet separates these two control planes and shows where they join.
+If a postcondition fails: revoke, compensate and verify again.
 
-Where should composed-effect evaluation live in your architecture: the planner, the policy decision point or an independent transaction-risk service?
+Shabina, I would value your view: should composed-effect evaluation remain inside the planner, sit alongside the policy decision point, or become an independent transaction-risk service?
 
-#AgenticAI #AIGovernance #ZeroTrust #IdentitySecurity #EnterpriseAI #AIArchitecture
+Creative note: the AuthHub details above reflect Shabina’s public explanation. The composition, lease and receipt extensions are my conceptual control model—not claims about the current AuthHub implementation.
+
+#AgenticAI #AIGovernance #ZeroTrust #IdentitySecurity #AIArchitecture #EnterpriseAI
 
 ## Recommended premium V2 visual package
 
