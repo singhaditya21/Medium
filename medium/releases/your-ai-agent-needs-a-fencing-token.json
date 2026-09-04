@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "your-ai-agent-needs-a-fencing-token",
+  "operation": "import_to_private_draft",
+  "topics": ["AI Agents", "Distributed Systems", "Fencing Tokens", "Authorization", "Reliability"],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-fencing-token/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

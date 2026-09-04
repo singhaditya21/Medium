@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "who-owns-an-ai-agent-incident",
+  "operation": "import_to_private_draft",
+  "topics": ["AI Agents", "Incident Response", "AI Governance", "SRE", "Enterprise Operations"],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/who-owns-an-ai-agent-incident/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

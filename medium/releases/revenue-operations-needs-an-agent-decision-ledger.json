@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "revenue-operations-needs-an-agent-decision-ledger",
+  "operation": "import_to_private_draft",
+  "topics": ["Revenue Operations", "AI Agents", "CRM", "Decision Intelligence", "Enterprise Architecture"],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/revenue-operations-needs-an-agent-decision-ledger/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

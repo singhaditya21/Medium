@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "every-agent-needs-a-safe-degradation-ladder",
+  "operation": "import_to_private_draft",
+  "topics": ["AI Agents", "Resilience", "Incident Response", "AI Governance", "Enterprise Architecture"],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/every-agent-needs-a-safe-degradation-ladder/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

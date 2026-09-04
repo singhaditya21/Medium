@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "an-agent-retry-is-a-new-risk-decision",
+  "operation": "import_to_private_draft",
+  "topics": ["AI Agents", "Reliability", "Retries", "Distributed Systems", "Risk Management"],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/an-agent-retry-is-a-new-risk-decision/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

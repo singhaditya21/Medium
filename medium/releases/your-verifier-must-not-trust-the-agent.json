@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "your-verifier-must-not-trust-the-agent",
+  "operation": "import_to_private_draft",
+  "topics": ["AI Agents", "Verification", "AI Governance", "Reliability", "Enterprise Architecture"],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/your-verifier-must-not-trust-the-agent/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}

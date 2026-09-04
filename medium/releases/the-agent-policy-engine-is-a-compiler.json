@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "storySlug": "the-agent-policy-engine-is-a-compiler",
+  "operation": "import_to_private_draft",
+  "topics": ["AI Agents", "Policy As Code", "Authorization", "AI Governance", "Enterprise Architecture"],
+  "canonicalUrl": "https://singhaditya21.github.io/Medium/articles/the-agent-policy-engine-is-a-compiler/",
+  "publication": null,
+  "subscriberEmail": false,
+  "paywall": false,
+  "scheduleAt": null,
+  "humanReviewRequired": true,
+  "requiresFinalConfirmation": true,
+  "allowUnattendedPublish": false
+}
