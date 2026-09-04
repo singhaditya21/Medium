@@ -1,230 +1,879 @@
 {
-  "surface": "dashboard",
+  "surface": "report",
   "manifest": {
     "version": 1,
-    "surface": "dashboard",
-    "title": "Medium Engagement Baseline",
-    "description": "A source-backed snapshot of audience reach, reading depth, and story-level retention for Aditya Singh's Medium catalog.",
-    "generatedAt": "2026-08-28T16:26:27Z",
+    "surface": "report",
+    "title": "Medium Story Performance Scorecard",
+    "description": "An action-oriented review of every published and scheduled Medium story, using current lifetime metrics and account-specific decision thresholds.",
+    "generatedAt": "2026-09-04T06:06:54Z",
     "cards": [
       {
-        "id": "presentations",
-        "description": "Times Medium presented the catalog during August 2026.",
-        "dataset": "account_summary",
-        "sourceId": "medium_august_summary",
-        "metrics": [{"label": "Presentations · Aug", "field": "presentations", "format": "number"}]
+        "id": "lifetime_reads",
+        "description": "Total reads across the 11 published stories; this is a portfolio sum of lifetime story counts.",
+        "dataset": "portfolio_summary",
+        "sourceId": "scorecard_summary",
+        "metrics": [
+          {
+            "label": "Lifetime reads",
+            "field": "lifetime_reads",
+            "format": "number"
+          },
+          {
+            "label": "Δ on Aug 31 catalog",
+            "field": "delta_common_reads_vs_previous",
+            "format": "number",
+            "signed": true
+          }
+        ]
       },
       {
-        "id": "views",
-        "description": "Story views recorded by Medium during August 2026.",
-        "dataset": "account_summary",
-        "sourceId": "medium_august_summary",
-        "metrics": [{"label": "Views · Aug", "field": "views", "format": "number"}]
+        "id": "portfolio_read_ratio",
+        "description": "Lifetime reads divided by lifetime views across the published catalog.",
+        "dataset": "portfolio_summary",
+        "sourceId": "scorecard_summary",
+        "metrics": [
+          {
+            "label": "Portfolio read ratio",
+            "field": "portfolio_read_ratio",
+            "format": "percent"
+          },
+          {
+            "label": "Views",
+            "field": "lifetime_views",
+            "format": "number"
+          }
+        ]
       },
       {
-        "id": "reads",
-        "description": "Reads recorded by Medium during August 2026.",
-        "dataset": "account_summary",
-        "sourceId": "medium_august_summary",
-        "metrics": [{"label": "Reads · Aug", "field": "reads", "format": "number"}]
+        "id": "stories_with_reads",
+        "description": "Published stories that have produced at least one lifetime read.",
+        "dataset": "portfolio_summary",
+        "sourceId": "scorecard_summary",
+        "metrics": [
+          {
+            "label": "Stories with a read",
+            "field": "stories_with_reads",
+            "format": "number"
+          },
+          {
+            "label": "Share of catalog",
+            "field": "stories_with_reads_share",
+            "format": "percent"
+          }
+        ]
       },
       {
-        "id": "followers",
-        "description": "Lifetime Medium followers at snapshot time.",
-        "dataset": "account_summary",
-        "sourceId": "medium_audience_lifetime",
-        "metrics": [{"label": "Followers · lifetime", "field": "followers", "format": "number"}]
+        "id": "checkpoint_pass_rate",
+        "description": "Stories at least seven days old meeting the account-specific floor of 5 presentations, 3 views and 1 read.",
+        "dataset": "portfolio_summary",
+        "sourceId": "scorecard_summary",
+        "metrics": [
+          {
+            "label": "7-day floor pass",
+            "field": "checkpoint_7d_pass_rate",
+            "format": "percent"
+          },
+          {
+            "label": "Eligible stories",
+            "field": "eligible_7d_stories",
+            "format": "number"
+          }
+        ]
       },
       {
-        "id": "subscribers",
-        "description": "Lifetime Medium email subscribers at snapshot time.",
-        "dataset": "account_summary",
-        "sourceId": "medium_audience_lifetime",
-        "metrics": [{"label": "Subscribers · lifetime", "field": "email_subscribers", "format": "number"}]
+        "id": "september_reads",
+        "description": "Reads recorded from September 1 through September 4, 2026 UTC; this is a partial-month actual.",
+        "dataset": "portfolio_summary",
+        "sourceId": "medium_current_stats",
+        "metrics": [
+          {
+            "label": "September reads",
+            "field": "september_reads",
+            "format": "number"
+          },
+          {
+            "label": "September views",
+            "field": "september_views",
+            "format": "number"
+          }
+        ]
       }
     ],
     "charts": [
       {
-        "id": "august_funnel",
-        "title": "Reach is leaking before a story becomes a read",
-        "subtitle": "August 2026 account totals; stages are ordered, not additive.",
-        "intent": "funnel",
-        "question": "Where does the current-month audience funnel narrow?",
-        "rationale": "An ordered bar chart preserves exact counts while making stage loss visible.",
-        "comparisonContext": {
-          "denominator": "Medium account activity in August 2026",
-          "grain": "funnel stage",
-          "unit": "events"
-        },
-        "type": "bar",
-        "dataset": "august_funnel",
-        "sourceId": "medium_august_summary",
-        "encodings": {
-          "x": {"field": "stage", "type": "ordinal", "label": "Stage"},
-          "y": {"field": "count", "type": "quantitative", "label": "Count", "format": "number"},
-          "tooltip": [
-            {"field": "count", "type": "quantitative", "label": "Count", "format": "number"},
-            {"field": "share_of_presentations", "type": "quantitative", "label": "Share of presentations", "format": "percent"}
-          ]
-        },
-        "valueFormat": "number",
-        "layout": "half",
-        "labels": {"values": "all"},
-        "palette": {"kind": "sequential", "name": "blue"},
-        "settings": {"sort": "custom", "showValues": true}
-      },
-      {
-        "id": "story_retention",
-        "title": "CRM architecture stories retain the largest share of viewers",
-        "subtitle": "Lifetime story read ratios as displayed by Medium; small samples limit inference.",
+        "id": "lifetime_reads_by_story",
+        "title": "Lifetime reads by published story",
+        "subtitle": "The top three stories contribute 14 of 17 lifetime reads; no story has reached 20 views.",
         "intent": "comparison",
-        "question": "Which published stories convert views into reads most consistently?",
-        "rationale": "A sorted horizontal bar chart keeps nine long story labels readable.",
+        "question": "Which published stories have converted available traffic into reads?",
+        "rationale": "A sorted horizontal bar keeps long story titles readable and makes the portfolio concentration visible.",
         "comparisonContext": {
-          "denominator": "Views for each story over its Medium lifetime",
-          "grain": "story",
-          "unit": "read ratio"
+          "denominator": "Lifetime story reads",
+          "grain": "published story",
+          "unit": "reads"
         },
         "type": "horizontalBar",
         "dataset": "story_lifetime",
-        "sourceId": "medium_story_lifetime",
+        "sourceId": "scorecard_inputs",
         "encodings": {
-          "x": {"field": "story", "type": "nominal", "label": "Story"},
-          "y": {"field": "read_ratio", "type": "quantitative", "label": "Read ratio", "format": "percent"},
+          "x": {
+            "field": "story",
+            "type": "nominal",
+            "label": "Story"
+          },
+          "y": {
+            "field": "reads",
+            "type": "quantitative",
+            "label": "Reads",
+            "format": "number"
+          },
           "tooltip": [
-            {"field": "views", "type": "quantitative", "label": "Views", "format": "number"},
-            {"field": "reads", "type": "quantitative", "label": "Reads", "format": "number"}
+            {
+              "field": "presentations",
+              "type": "quantitative",
+              "label": "Presentations",
+              "format": "number"
+            },
+            {
+              "field": "views",
+              "type": "quantitative",
+              "label": "Views",
+              "format": "number"
+            },
+            {
+              "field": "read_ratio",
+              "type": "quantitative",
+              "label": "Read ratio",
+              "format": "percent"
+            },
+            {
+              "field": "review_lane",
+              "type": "nominal",
+              "label": "Review lane"
+            }
           ]
         },
-        "valueFormat": "percent",
-        "layout": "half",
-        "labels": {"values": "all"},
-        "palette": {"kind": "sequential", "name": "blue"},
-        "settings": {"sort": "descending", "showValues": true}
+        "valueFormat": "number",
+        "layout": "full",
+        "labels": {
+          "values": "all"
+        },
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "settings": {
+          "sort": "descending",
+          "showValues": true
+        }
       }
     ],
     "tables": [
       {
-        "id": "story_detail",
-        "title": "Lifetime story detail",
-        "subtitle": "Exact captured values from the Medium story statistics table.",
+        "id": "published_story_scorecard",
+        "title": "Published story scorecard",
+        "subtitle": "Lifetime metrics captured September 4, 2026; review lane applies the account-specific decision rules.",
         "dataset": "story_lifetime",
-        "sourceId": "medium_story_lifetime",
-        "defaultSort": {"field": "read_ratio", "direction": "desc"},
+        "sourceId": "scorecard_inputs",
+        "defaultSort": {
+          "field": "reads",
+          "direction": "desc"
+        },
         "density": "dense",
         "layout": "full",
         "columns": [
-          {"field": "story", "label": "Story", "type": "text"},
-          {"field": "presentations", "label": "Presentations", "format": "number"},
-          {"field": "views", "label": "Views", "format": "number"},
-          {"field": "reads", "label": "Reads", "format": "number"},
-          {"field": "read_ratio", "label": "Read ratio", "format": "percent"}
+          {
+            "field": "story",
+            "label": "Story",
+            "type": "text"
+          },
+          {
+            "field": "published_at",
+            "label": "Published",
+            "type": "date"
+          },
+          {
+            "field": "publication",
+            "label": "Placement",
+            "type": "text"
+          },
+          {
+            "field": "presentations",
+            "label": "Presentations",
+            "format": "number"
+          },
+          {
+            "field": "views",
+            "label": "Views",
+            "format": "number"
+          },
+          {
+            "field": "reads",
+            "label": "Reads",
+            "format": "number"
+          },
+          {
+            "field": "read_ratio",
+            "label": "Read ratio",
+            "format": "percent"
+          },
+          {
+            "field": "delta_views_vs_previous",
+            "label": "Δ views",
+            "format": "number",
+            "movement": true
+          },
+          {
+            "field": "delta_reads_vs_previous",
+            "label": "Δ reads",
+            "format": "number",
+            "movement": true
+          },
+          {
+            "field": "checkpoint_7d",
+            "label": "7-day floor",
+            "type": "text"
+          },
+          {
+            "field": "evidence_maturity",
+            "label": "Evidence",
+            "type": "text"
+          },
+          {
+            "field": "review_lane",
+            "label": "Review lane",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "scheduled_story_checkpoints",
+        "title": "Scheduled story checkpoints",
+        "subtitle": "Scheduled Medium releases and the next three measurement checkpoints, all in IST.",
+        "dataset": "scheduled_stories",
+        "sourceId": "medium_inventory",
+        "defaultSort": {
+          "field": "scheduled_at",
+          "direction": "asc"
+        },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "story",
+            "label": "Story",
+            "type": "text"
+          },
+          {
+            "field": "scheduled_at",
+            "label": "Release",
+            "type": "text"
+          },
+          {
+            "field": "subscriber_email",
+            "label": "Email",
+            "type": "text"
+          },
+          {
+            "field": "paywall",
+            "label": "Paywall",
+            "type": "text"
+          },
+          {
+            "field": "checkpoint_48h",
+            "label": "48-hour",
+            "type": "text"
+          },
+          {
+            "field": "checkpoint_7d",
+            "label": "7-day",
+            "type": "text"
+          },
+          {
+            "field": "checkpoint_28d",
+            "label": "28-day",
+            "type": "text"
+          }
         ]
       }
     ],
     "sources": [
-      {"id": "medium_august_summary", "label": "Medium Stats · August summary", "path": "analytics/engagement-baseline.json"},
-      {"id": "medium_audience_lifetime", "label": "Medium Audience · lifetime", "path": "analytics/engagement-baseline.json"},
-      {"id": "medium_story_lifetime", "label": "Medium Stats · story lifetime", "path": "analytics/engagement-baseline.json"}
+      {
+        "id": "scorecard_summary",
+        "label": "Medium portfolio scorecard summary",
+        "path": "analytics/snapshots/2026-09-04.json",
+        "query": {
+          "engine": "sqlite",
+          "language": "sql",
+          "sql": "WITH current_doc(doc) AS (\n  SELECT CAST(readfile('analytics/snapshots/2026-09-04.json') AS TEXT)\n), previous_doc(doc) AS (\n  SELECT CAST(readfile('analytics/snapshots/2026-08-31.json') AS TEXT)\n), story AS (\n  SELECT json_extract(value, '$.slug') AS slug,\n         json_extract(value, '$.presentations') AS presentations,\n         json_extract(value, '$.views') AS views,\n         json_extract(value, '$.reads') AS reads\n  FROM current_doc, json_each(current_doc.doc, '$.scopes.storyLifetime')\n), prior AS (\n  SELECT json_extract(value, '$.slug') AS slug,\n         json_extract(value, '$.reads') AS reads\n  FROM previous_doc, json_each(previous_doc.doc, '$.scopes.storyLifetime')\n)\nSELECT COUNT(*) AS published_stories,\n       SUM(presentations) AS lifetime_presentations,\n       SUM(views) AS lifetime_views,\n       SUM(reads) AS lifetime_reads,\n       SUM(reads) * 1.0 / NULLIF(SUM(views), 0) AS portfolio_read_ratio,\n       SUM(CASE WHEN reads > 0 THEN 1 ELSE 0 END) AS stories_with_reads,\n       SUM(CASE WHEN slug NOT IN ('model-routing-is-capital-allocation', 'your-multi-agent-system-is-a-distributed-system') THEN 1 ELSE 0 END) AS eligible_7d_stories,\n       SUM(CASE WHEN slug NOT IN ('model-routing-is-capital-allocation', 'your-multi-agent-system-is-a-distributed-system') AND presentations >= 5 AND views >= 3 AND reads >= 1 THEN 1 ELSE 0 END) AS checkpoint_7d_passes,\n       (SELECT SUM(story.reads) FROM story JOIN prior USING (slug)) - (SELECT SUM(reads) FROM prior) AS delta_common_reads_vs_previous\nFROM story",
+          "description": "Portfolio totals and the account-specific seven-day checkpoint calculated from the latest signed-in story snapshot.",
+          "executed_at": "2026-09-04T06:06:54Z",
+          "tables_used": [
+            "analytics/snapshots/2026-09-04.json",
+            "analytics/snapshots/2026-08-31.json"
+          ],
+          "filters": [
+            "Account: @singhaditya21_89007",
+            "Published Medium stories",
+            "Seven-day eligibility as of September 4, 2026"
+          ],
+          "metric_definitions": [
+            "Portfolio read ratio = sum of lifetime reads divided by sum of lifetime views across published stories.",
+            "Seven-day checkpoint pass = at least 5 presentations, 3 views, and 1 read for a story published at least 7 calendar days before capture."
+          ]
+        }
+      },
+      {
+        "id": "scorecard_inputs",
+        "label": "Medium story scorecard inputs",
+        "path": "analytics/snapshots/2026-09-04.json",
+        "query": {
+          "engine": "sqlite",
+          "language": "sql",
+          "sql": "WITH current_doc(doc) AS (\n  SELECT CAST(readfile('analytics/snapshots/2026-09-04.json') AS TEXT)\n), previous_doc(doc) AS (\n  SELECT CAST(readfile('analytics/snapshots/2026-08-31.json') AS TEXT)\n), current_rows AS (\n  SELECT json_extract(value, '$.story') AS story,\n         json_extract(value, '$.slug') AS slug,\n         json_extract(value, '$.presentations') AS presentations,\n         json_extract(value, '$.views') AS views,\n         json_extract(value, '$.reads') AS reads,\n         CASE WHEN json_extract(value, '$.views') = 0 THEN 0 ELSE json_extract(value, '$.reads') * 1.0 / json_extract(value, '$.views') END AS read_ratio\n  FROM current_doc, json_each(current_doc.doc, '$.scopes.storyLifetime')\n), previous_rows AS (\n  SELECT json_extract(value, '$.slug') AS slug,\n         json_extract(value, '$.views') AS views,\n         json_extract(value, '$.reads') AS reads\n  FROM previous_doc, json_each(previous_doc.doc, '$.scopes.storyLifetime')\n)\nSELECT current_rows.*,\n       current_rows.views - previous_rows.views AS delta_views_vs_previous,\n       current_rows.reads - previous_rows.reads AS delta_reads_vs_previous\nFROM current_rows\nLEFT JOIN previous_rows USING (slug)",
+          "description": "Reproducible story-level scorecard generated from the current signed-in Medium snapshot, the prior snapshot, and the reviewed Medium content inventory.",
+          "executed_at": "2026-09-04T06:06:54Z",
+          "tables_used": [
+            "analytics/snapshots/2026-09-04.json",
+            "analytics/snapshots/2026-08-31.json",
+            "analytics/medium-content-inventory-2026-09-03.json"
+          ],
+          "filters": [
+            "Account: @singhaditya21_89007",
+            "Published Medium stories only for performance metrics",
+            "Scheduled Medium stories shown separately"
+          ],
+          "metric_definitions": [
+            "Portfolio read ratio = sum of lifetime reads divided by sum of lifetime views across published stories.",
+            "Story read ratio = lifetime reads divided by lifetime views; zero when views are zero.",
+            "Seven-day checkpoint pass = at least 5 presentations, 3 views, and 1 read for a story published at least 7 calendar days before capture.",
+            "Evidence maturity is Nascent below 5 views, Early from 5 through 19 views, and Decision-ready at 20 or more views.",
+            "Review lanes are diagnostic rules for this account, not universal Medium benchmarks."
+          ]
+        }
+      },
+      {
+        "id": "medium_current_stats",
+        "label": "Medium Stats · September 2026 and story lifetime",
+        "path": "analytics/snapshots/2026-09-04.json",
+        "query": {
+          "engine": "sqlite",
+          "language": "sql",
+          "sql": "WITH source(doc) AS (SELECT CAST(readfile('analytics/snapshots/2026-09-04.json') AS TEXT)) SELECT json_extract(doc, '$.scopes.currentMonth.presentations') AS september_presentations, json_extract(doc, '$.scopes.currentMonth.views') AS september_views, json_extract(doc, '$.scopes.currentMonth.reads') AS september_reads, json_extract(doc, '$.scopes.audienceLifetime.followers') AS followers, json_extract(doc, '$.scopes.audienceLifetime.emailSubscribers') AS email_subscribers FROM source",
+          "description": "Read-only capture from the signed-in Medium Stories and Audience statistics pages.",
+          "executed_at": "2026-09-04T06:06:54Z",
+          "tables_used": [
+            "Medium Stats > Stories",
+            "Medium Stats > Audience"
+          ],
+          "filters": [
+            "September 1–4, 2026 UTC for monthly totals",
+            "Lifetime for story rows and audience totals"
+          ],
+          "metric_definitions": [
+            "Presentations = Medium's tracked suggestions of a story on eligible Medium surfaces.",
+            "Views = readers who accessed a story and remained for at least five seconds.",
+            "Reads = readers who remained for at least thirty seconds."
+          ]
+        }
+      },
+      {
+        "id": "medium_inventory",
+        "label": "Medium content inventory · September 3, 2026",
+        "path": "analytics/medium-content-inventory-2026-09-03.json",
+        "query": {
+          "engine": "sqlite",
+          "language": "sql",
+          "sql": "WITH inventory(doc) AS (SELECT CAST(readfile('analytics/medium-content-inventory-2026-09-03.json') AS TEXT)) SELECT json_extract(value, '$.title') AS story, json_extract(value, '$.scheduleAt') AS scheduled_at, json_extract(value, '$.subscriberEmail') AS subscriber_email, json_extract(value, '$.paywall') AS paywall FROM inventory, json_each(inventory.doc, '$.scheduled')",
+          "description": "Reviewed published and scheduled Medium story inventory with public URLs, publication placement, schedule, subscriber-email and paywall state.",
+          "executed_at": "2026-09-03T14:22:25+05:30",
+          "tables_used": [
+            "analytics/medium-content-inventory-2026-09-03.json"
+          ],
+          "filters": [
+            "Published and scheduled Medium stories"
+          ]
+        }
+      },
+      {
+        "id": "medium_metric_definitions",
+        "label": "Medium Help Center · Stats definitions",
+        "href": "https://help.medium.com/hc/en-us/articles/215108608-Stats",
+        "query": {
+          "engine": "official documentation",
+          "description": "Medium's current definitions and update cadence for presentations, views, reads, followers and subscribers.",
+          "executed_at": "2026-09-04T06:06:54Z",
+          "tables_used": [
+            "Medium Help Center > Stats"
+          ]
+        }
+      }
     ],
     "blocks": [
       {
-        "id": "decision_readout",
+        "id": "report_title",
         "type": "markdown",
-        "sourceId": "medium_story_lifetime",
-        "body": "## Decision readout\n\nReach is still sparse, so the immediate growth constraint is discovery rather than catalog depth. The strongest retention appears in the two CRM architecture stories, but every story has a very small sample. Treat the ranking as a direction for testing—not causal proof."
+        "body": "# Medium Story Performance Scorecard"
       },
-      {"id": "headline_metrics", "type": "metric-strip", "cardIds": ["presentations", "views", "reads", "followers", "subscribers"]},
-      {"id": "funnel_chart", "type": "chart", "chartId": "august_funnel", "layout": "half"},
-      {"id": "retention_chart", "type": "chart", "chartId": "story_retention", "layout": "half"},
-      {"id": "detail_table", "type": "table", "tableId": "story_detail", "layout": "full"},
       {
-        "id": "methodology",
+        "id": "executive_summary",
         "type": "markdown",
-        "sourceId": "medium_story_lifetime",
-        "body": "## Scope and caveats\n\n- **August funnel:** account totals for August 2026.\n- **Story table:** lifetime totals per story, not an August subset.\n- **Read ratio:** reads divided by views, preserved at the displayed rounding.\n- **Audience cadence:** the Audience dashboard updates daily and may lag the public profile.\n- **Decision rule:** do not interpret ranking changes until each story has a materially larger view denominator."
+        "body": "## Executive Summary\n\n- **Only 5 of 11 published stories have produced a read.** The catalog has 75 lifetime presentations, 53 views and 17 reads, for a 32.1% portfolio read ratio.\n- **Reading is concentrated in three proven stories.** The two CRM architecture stories and *Why Traditional CRM Will Die Without Agentic AI* contribute 14 of 17 reads (82.4%).\n- **Four mature stories require intervention, but no body rewrite is yet evidence-backed.** Five of nine seven-day-eligible stories meet the provisional floor; no story has reached the 20-view minimum used here for a confident retention decision.\n- **September discovery has not converted yet.** The partial month shows 8 views and 0 reads, while the audience remains 3 followers and 2 email subscribers."
+      },
+      {
+        "id": "headline_metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "lifetime_reads",
+          "portfolio_read_ratio",
+          "stories_with_reads",
+          "checkpoint_pass_rate",
+          "september_reads"
+        ]
+      },
+      {
+        "id": "portfolio_concentration",
+        "type": "markdown",
+        "sourceId": "scorecard_inputs",
+        "body": "## Three stories carry most reading depth\n\n**The working pattern is concrete architecture with a bounded enterprise problem.** *How to Build an Agentic CRM* and *Why Traditional CRM Will Die Without Agentic AI* have 5 reads each; *The Enterprise Agent Control Tower* has 4. Together they generate 82.4% of all lifetime reads. Reuse their faster problem framing, concrete system boundary and navigable architecture pattern in the next releases—but treat the result as a directional signal because every story has fewer than 20 views."
+      },
+      {
+        "id": "lifetime_reads_chart",
+        "type": "chart",
+        "chartId": "lifetime_reads_by_story",
+        "layout": "full"
+      },
+      {
+        "id": "intervention_lanes",
+        "type": "markdown",
+        "sourceId": "scorecard_inputs",
+        "body": "## Four mature stories need different fixes\n\n- **Distribution:** *Your AI Agent’s Memory Is a Database, Not a Prompt* has 3 presentations, 1 view and 0 reads. Audit topics, visibility and publication fit before changing its body.\n- **Packaging:** *Human Approval Is a Queueing System* has 5 presentations and 0 views; the $2.4M escalation story has 6 presentations and 0 views. Their title, subtitle and hero are the first testable levers.\n- **Early retention signal:** *Every AI Agent Action Needs a Receipt* has 9 views and 0 reads. Inspect its traffic and first screen now, but wait for 20 views before a structural rewrite.\n- **Monitor:** *Model Routing Is Capital Allocation* and *Your Multi-Agent System Is a Distributed System* are still inside their first seven days and should remain unchanged until their checkpoints."
+      },
+      {
+        "id": "published_story_table",
+        "type": "table",
+        "tableId": "published_story_scorecard",
+        "layout": "full"
+      },
+      {
+        "id": "scheduled_pipeline",
+        "type": "markdown",
+        "sourceId": "medium_inventory",
+        "body": "## Three scheduled stories have clean measurement gates\n\nAll three scheduled releases have subscriber email enabled and paywall disabled. Capture the same presentation → view → read funnel at 48 hours, 7 days and 28 days; do not mix their pre-publication state into the published-story scorecard."
+      },
+      {
+        "id": "scheduled_story_table",
+        "type": "table",
+        "tableId": "scheduled_story_checkpoints",
+        "layout": "full"
+      },
+      {
+        "id": "recommended_next_steps",
+        "type": "markdown",
+        "body": "## Recommended next steps\n\n1. Audit the topics, visibility and publication eligibility of the Memory story.\n2. Prepare one title/subtitle/hero test each for Human Approval and the $2.4M escalation story; apply only after reviewing exact variants.\n3. Inspect detailed traffic sources and the first screen of Action Receipt; hold the body until it reaches 20 views or a seven-day review confirms the same signal.\n4. Copy the structural strengths of the three read leaders into the scheduled stories without changing their approved thesis or schedule.\n5. Refresh this scorecard after every 48-hour, 7-day and 28-day checkpoint."
+      },
+      {
+        "id": "further_questions",
+        "type": "markdown",
+        "body": "## Further questions\n\n- Which traffic sources produced the nine Action Receipt views?\n- Do feed clickthrough, story-attributed follows or story-attributed subscribers appear once Medium has enough data?\n- Does the next scheduled release generate its first read within seven days?"
+      },
+      {
+        "id": "caveats",
+        "type": "markdown",
+        "body": "## Caveats and assumptions\n\n- September is a partial month; it is not compared with the complete August period.\n- Story metrics are lifetime values, while September totals are monthly; the two scopes are not reconciled.\n- Views divided by presentations is not Medium feed clickthrough because views can originate outside tracked presentation surfaces.\n- All performance rates are directional: no story has reached 20 views.\n- The 5-presentation, 3-view, 1-read seven-day floor and 20-view retention gate are account-specific operating thresholds, not Medium benchmarks.\n- The 12 GitHub-only future stories are excluded because they are not yet Medium stories."
       }
     ]
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-28T16:26:27Z",
+    "generatedAt": "2026-09-04T06:06:54Z",
     "status": "ready",
     "datasets": {
-      "account_summary": [
-        {"period": "August 2026", "presentations": 58, "views": 35, "reads": 12, "followers": 2, "email_subscribers": 2}
-      ],
-      "august_funnel": [
-        {"stage": "Presentations", "count": 58, "share_of_presentations": 1.0, "stage_order": 1},
-        {"stage": "Views", "count": 35, "share_of_presentations": 0.6034, "stage_order": 2},
-        {"stage": "Reads", "count": 12, "share_of_presentations": 0.2069, "stage_order": 3}
+      "portfolio_summary": [
+        {
+          "published_stories": 11,
+          "scheduled_stories": 3,
+          "lifetime_presentations": 75,
+          "lifetime_views": 53,
+          "lifetime_reads": 17,
+          "portfolio_read_ratio": 0.3208,
+          "stories_with_reads": 5,
+          "stories_with_reads_share": 0.4545,
+          "zero_read_stories": 6,
+          "eligible_7d_stories": 9,
+          "checkpoint_7d_passes": 5,
+          "checkpoint_7d_pass_rate": 0.5556,
+          "top_three_reads": 14,
+          "top_three_read_share": 0.8235,
+          "delta_common_reads_vs_previous": 0,
+          "september_presentations": 3,
+          "september_views": 8,
+          "september_reads": 0,
+          "followers": 3,
+          "email_subscribers": 2
+        }
       ],
       "story_lifetime": [
-        {"story": "Why Traditional CRM Will Die Without Agentic AI", "slug": "traditional-crm-agentic-ai", "presentations": 4, "views": 6, "reads": 5, "read_ratio": 0.83},
-        {"story": "How to Build an Agentic CRM: A Reference Architecture", "slug": "agentic-crm-reference-architecture", "presentations": 11, "views": 8, "reads": 5, "read_ratio": 0.63},
-        {"story": "The Enterprise Agent Control Tower: A Production Architecture", "slug": "enterprise-agent-control-tower", "presentations": 8, "views": 8, "reads": 4, "read_ratio": 0.5},
-        {"story": "What an Agent Actually Costs", "slug": "what-an-agent-actually-costs", "presentations": 7, "views": 3, "reads": 1, "read_ratio": 0.33},
-        {"story": "AI Agent Identity Is Not Enough", "slug": "ai-agent-identity-is-not-enough", "presentations": 11, "views": 11, "reads": 2, "read_ratio": 0.18},
-        {"story": "A $2.4M Account Is Escalating. Should the AI Agent Act?", "slug": "a-2-4m-account-is-escalating", "presentations": 5, "views": 0, "reads": 0, "read_ratio": 0.0},
-        {"story": "Your AI Agent's Memory Is a Database, Not a Prompt", "slug": "your-ai-agents-memory-is-a-database-not-a-prompt", "presentations": 3, "views": 0, "reads": 0, "read_ratio": 0.0},
-        {"story": "Every AI Agent Action Needs a Receipt", "slug": "every-ai-agent-action-needs-a-receipt", "presentations": 3, "views": 5, "reads": 0, "read_ratio": 0.0},
-        {"story": "Human Approval Is a Queueing System", "slug": "human-approval-is-a-queueing-system", "presentations": 3, "views": 0, "reads": 0, "read_ratio": 0.0}
+        {
+          "story": "How to Build an Agentic CRM: A Reference Architecture",
+          "slug": "agentic-crm-reference-architecture",
+          "published_at": "2026-08-18",
+          "age_days": 17,
+          "publication": "Artificial Intelligence in Plain English",
+          "public_url": "https://medium.com/ai-in-plain-english/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+          "presentations": 13,
+          "views": 10,
+          "reads": 5,
+          "read_ratio": 0.5,
+          "views_per_presentation": 0.7692,
+          "delta_views_vs_previous": 0,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Pass",
+          "evidence_maturity": "Early (5–19 views)",
+          "review_lane": "Strong baseline",
+          "priority": "P3",
+          "next_action": "Reuse the structure and internal-navigation pattern in the next related story."
+        },
+        {
+          "story": "Why Traditional CRM Will Die Without Agentic AI",
+          "slug": "traditional-crm-agentic-ai",
+          "published_at": "2026-05-16",
+          "age_days": 111,
+          "publication": "Independent",
+          "public_url": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4",
+          "presentations": 8,
+          "views": 6,
+          "reads": 5,
+          "read_ratio": 0.8333,
+          "views_per_presentation": 0.75,
+          "delta_views_vs_previous": 0,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Pass",
+          "evidence_maturity": "Early (5–19 views)",
+          "review_lane": "Strong baseline",
+          "priority": "P3",
+          "next_action": "Reuse the structure and internal-navigation pattern in the next related story."
+        },
+        {
+          "story": "The Enterprise Agent Control Tower: A Production Architecture",
+          "slug": "enterprise-agent-control-tower",
+          "published_at": "2026-08-19",
+          "age_days": 16,
+          "publication": "Independent",
+          "public_url": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438",
+          "presentations": 9,
+          "views": 8,
+          "reads": 4,
+          "read_ratio": 0.5,
+          "views_per_presentation": 0.8889,
+          "delta_views_vs_previous": 0,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Pass",
+          "evidence_maturity": "Early (5–19 views)",
+          "review_lane": "Strong baseline",
+          "priority": "P3",
+          "next_action": "Reuse the structure and internal-navigation pattern in the next related story."
+        },
+        {
+          "story": "AI Agent Identity Is Not Enough",
+          "slug": "ai-agent-identity-is-not-enough",
+          "published_at": "2026-08-20",
+          "age_days": 15,
+          "publication": "Artificial Intelligence in Plain English",
+          "public_url": "https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155",
+          "presentations": 12,
+          "views": 11,
+          "reads": 2,
+          "read_ratio": 0.1818,
+          "views_per_presentation": 0.9167,
+          "delta_views_vs_previous": 0,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Pass",
+          "evidence_maturity": "Early (5–19 views)",
+          "review_lane": "Retention watch",
+          "priority": "P2",
+          "next_action": "Monitor to 20 views, then test the opening if the ratio remains below 20%."
+        },
+        {
+          "story": "What an Agent Actually Costs",
+          "slug": "what-an-agent-actually-costs",
+          "published_at": "2026-08-19",
+          "age_days": 16,
+          "publication": "Independent",
+          "public_url": "https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5",
+          "presentations": 7,
+          "views": 4,
+          "reads": 1,
+          "read_ratio": 0.25,
+          "views_per_presentation": 0.5714,
+          "delta_views_vs_previous": 1,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Pass",
+          "evidence_maturity": "Nascent (<5 views)",
+          "review_lane": "Working baseline",
+          "priority": "P3",
+          "next_action": "Preserve the body and continue qualified distribution."
+        },
+        {
+          "story": "Every AI Agent Action Needs a Receipt",
+          "slug": "every-ai-agent-action-needs-a-receipt",
+          "published_at": "2026-08-26",
+          "age_days": 9,
+          "publication": "Independent",
+          "public_url": "https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5",
+          "presentations": 5,
+          "views": 9,
+          "reads": 0,
+          "read_ratio": 0.0,
+          "views_per_presentation": 1.8,
+          "delta_views_vs_previous": 4,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Miss",
+          "evidence_maturity": "Early (5–19 views)",
+          "review_lane": "Retention signal · low sample",
+          "priority": "P1",
+          "next_action": "Inspect traffic and the first screen; wait for 20 views before a structural rewrite."
+        },
+        {
+          "story": "Your Multi-Agent System Is a Distributed System",
+          "slug": "your-multi-agent-system-is-a-distributed-system",
+          "published_at": "2026-08-31",
+          "age_days": 4,
+          "publication": "Independent",
+          "public_url": "https://medium.com/@singhaditya21_89007/your-multi-agent-system-is-a-distributed-system-0c456a0fe664",
+          "presentations": 4,
+          "views": 3,
+          "reads": 0,
+          "read_ratio": 0.0,
+          "views_per_presentation": 0.75,
+          "delta_views_vs_previous": null,
+          "delta_reads_vs_previous": null,
+          "checkpoint_7d": "Not due",
+          "evidence_maturity": "Nascent (<5 views)",
+          "review_lane": "Monitor · pre-7d",
+          "priority": "P2",
+          "next_action": "Capture the seven-day checkpoint before diagnosing the story."
+        },
+        {
+          "story": "Model Routing Is Capital Allocation",
+          "slug": "model-routing-is-capital-allocation",
+          "published_at": "2026-09-03",
+          "age_days": 1,
+          "publication": "Independent",
+          "public_url": "https://medium.com/@singhaditya21_89007/model-routing-is-capital-allocation-8ee7ebb8b0ae",
+          "presentations": 3,
+          "views": 1,
+          "reads": 0,
+          "read_ratio": 0.0,
+          "views_per_presentation": 0.3333,
+          "delta_views_vs_previous": null,
+          "delta_reads_vs_previous": null,
+          "checkpoint_7d": "Not due",
+          "evidence_maturity": "Nascent (<5 views)",
+          "review_lane": "Monitor · <48h",
+          "priority": "P2",
+          "next_action": "Capture the 48-hour checkpoint; make no packaging or body change yet."
+        },
+        {
+          "story": "Your AI Agent's Memory Is a Database, Not a Prompt",
+          "slug": "your-ai-agents-memory-is-a-database-not-a-prompt",
+          "published_at": "2026-08-23",
+          "age_days": 12,
+          "publication": "Independent",
+          "public_url": "https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef",
+          "presentations": 3,
+          "views": 1,
+          "reads": 0,
+          "read_ratio": 0.0,
+          "views_per_presentation": 0.3333,
+          "delta_views_vs_previous": 1,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Miss",
+          "evidence_maturity": "Nascent (<5 views)",
+          "review_lane": "Distribution priority",
+          "priority": "P1",
+          "next_action": "Audit topics, visibility and publication fit before changing the story body."
+        },
+        {
+          "story": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+          "slug": "a-2-4m-account-is-escalating",
+          "published_at": "2026-08-21",
+          "age_days": 14,
+          "publication": "Artificial Intelligence in Plain English",
+          "public_url": "https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b",
+          "presentations": 6,
+          "views": 0,
+          "reads": 0,
+          "read_ratio": 0.0,
+          "views_per_presentation": 0.0,
+          "delta_views_vs_previous": 0,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Miss",
+          "evidence_maturity": "Nascent (<5 views)",
+          "review_lane": "Packaging priority",
+          "priority": "P1",
+          "next_action": "Test the title, subtitle and hero because presentations exist but opens do not."
+        },
+        {
+          "story": "Human Approval Is a Queueing System",
+          "slug": "human-approval-is-a-queueing-system",
+          "published_at": "2026-08-28",
+          "age_days": 7,
+          "publication": "Independent",
+          "public_url": "https://medium.com/@singhaditya21_89007/human-approval-is-a-queueing-system-0c2858baa088",
+          "presentations": 5,
+          "views": 0,
+          "reads": 0,
+          "read_ratio": 0.0,
+          "views_per_presentation": 0.0,
+          "delta_views_vs_previous": 0,
+          "delta_reads_vs_previous": 0,
+          "checkpoint_7d": "Miss",
+          "evidence_maturity": "Nascent (<5 views)",
+          "review_lane": "Packaging priority",
+          "priority": "P1",
+          "next_action": "Test the title, subtitle and hero because presentations exist but opens do not."
+        }
+      ],
+      "scheduled_stories": [
+        {
+          "story": "Your AI Agent Needs a Real Kill Switch",
+          "scheduled_at": "Sep 7, 2026 · 2:00 PM IST",
+          "subscriber_email": "On",
+          "paywall": "Off",
+          "checkpoint_48h": "Sep 9, 2026 · 2:00 PM IST",
+          "checkpoint_7d": "Sep 14, 2026 · 2:00 PM IST",
+          "checkpoint_28d": "Oct 5, 2026 · 2:00 PM IST"
+        },
+        {
+          "story": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
+          "scheduled_at": "Sep 10, 2026 · 2:00 PM IST",
+          "subscriber_email": "On",
+          "paywall": "Off",
+          "checkpoint_48h": "Sep 12, 2026 · 2:00 PM IST",
+          "checkpoint_7d": "Sep 17, 2026 · 2:00 PM IST",
+          "checkpoint_28d": "Oct 8, 2026 · 2:00 PM IST"
+        },
+        {
+          "story": "Your AI Agent Should Not Have a Standing Role",
+          "scheduled_at": "Sep 14, 2026 · 2:00 PM IST",
+          "subscriber_email": "On",
+          "paywall": "Off",
+          "checkpoint_48h": "Sep 16, 2026 · 2:00 PM IST",
+          "checkpoint_7d": "Sep 21, 2026 · 2:00 PM IST",
+          "checkpoint_28d": "Oct 12, 2026 · 2:00 PM IST"
+        }
       ]
     }
   },
   "sources": [
     {
-      "id": "medium_august_summary",
-      "label": "Medium Stats · August summary",
-      "path": "analytics/engagement-baseline.json",
+      "id": "scorecard_summary",
+      "label": "Medium portfolio scorecard summary",
+      "path": "analytics/snapshots/2026-09-04.json",
       "query": {
-        "engine": "duckdb",
+        "engine": "sqlite",
         "language": "sql",
-        "sql": "SELECT scopes.currentMonth.presentations AS presentations, scopes.currentMonth.views AS views, scopes.currentMonth.reads AS reads FROM read_json_auto('analytics/engagement-baseline.json')",
-        "description": "Read-only capture of the signed-in Medium account summary for August 2026.",
-        "executed_at": "2026-08-28T16:26:27Z",
-        "tables_used": ["Medium Stats > August summary"],
-        "filters": ["Account: @singhaditya21_89007", "Period: August 2026"],
+        "sql": "WITH current_doc(doc) AS (\n  SELECT CAST(readfile('analytics/snapshots/2026-09-04.json') AS TEXT)\n), previous_doc(doc) AS (\n  SELECT CAST(readfile('analytics/snapshots/2026-08-31.json') AS TEXT)\n), story AS (\n  SELECT json_extract(value, '$.slug') AS slug,\n         json_extract(value, '$.presentations') AS presentations,\n         json_extract(value, '$.views') AS views,\n         json_extract(value, '$.reads') AS reads\n  FROM current_doc, json_each(current_doc.doc, '$.scopes.storyLifetime')\n), prior AS (\n  SELECT json_extract(value, '$.slug') AS slug,\n         json_extract(value, '$.reads') AS reads\n  FROM previous_doc, json_each(previous_doc.doc, '$.scopes.storyLifetime')\n)\nSELECT COUNT(*) AS published_stories,\n       SUM(presentations) AS lifetime_presentations,\n       SUM(views) AS lifetime_views,\n       SUM(reads) AS lifetime_reads,\n       SUM(reads) * 1.0 / NULLIF(SUM(views), 0) AS portfolio_read_ratio,\n       SUM(CASE WHEN reads > 0 THEN 1 ELSE 0 END) AS stories_with_reads,\n       SUM(CASE WHEN slug NOT IN ('model-routing-is-capital-allocation', 'your-multi-agent-system-is-a-distributed-system') THEN 1 ELSE 0 END) AS eligible_7d_stories,\n       SUM(CASE WHEN slug NOT IN ('model-routing-is-capital-allocation', 'your-multi-agent-system-is-a-distributed-system') AND presentations >= 5 AND views >= 3 AND reads >= 1 THEN 1 ELSE 0 END) AS checkpoint_7d_passes,\n       (SELECT SUM(story.reads) FROM story JOIN prior USING (slug)) - (SELECT SUM(reads) FROM prior) AS delta_common_reads_vs_previous\nFROM story",
+        "description": "Portfolio totals and the account-specific seven-day checkpoint calculated from the latest signed-in story snapshot.",
+        "executed_at": "2026-09-04T06:06:54Z",
+        "tables_used": [
+          "analytics/snapshots/2026-09-04.json",
+          "analytics/snapshots/2026-08-31.json"
+        ],
+        "filters": [
+          "Account: @singhaditya21_89007",
+          "Published Medium stories",
+          "Seven-day eligibility as of September 4, 2026"
+        ],
         "metric_definitions": [
-          "Presentations = Medium's displayed count of story presentations during August 2026.",
-          "Views = Medium's displayed count of story views during August 2026.",
-          "Reads = Medium's displayed count of reads during August 2026."
+          "Portfolio read ratio = sum of lifetime reads divided by sum of lifetime views across published stories.",
+          "Seven-day checkpoint pass = at least 5 presentations, 3 views, and 1 read for a story published at least 7 calendar days before capture."
         ]
       }
     },
     {
-      "id": "medium_audience_lifetime",
-      "label": "Medium Audience · lifetime",
-      "path": "analytics/engagement-baseline.json",
+      "id": "scorecard_inputs",
+      "label": "Medium story scorecard inputs",
+      "path": "analytics/snapshots/2026-09-04.json",
       "query": {
-        "engine": "duckdb",
+        "engine": "sqlite",
         "language": "sql",
-        "sql": "SELECT scopes.audienceLifetime.followers AS followers, scopes.audienceLifetime.emailSubscribers AS email_subscribers FROM read_json_auto('analytics/engagement-baseline.json')",
-        "description": "Read-only capture of the signed-in Medium audience totals.",
-        "executed_at": "2026-08-28T16:26:27Z",
-        "tables_used": ["Medium Stats > Audience"],
-        "filters": ["Account: @singhaditya21_89007", "Scope: lifetime"],
+        "sql": "WITH current_doc(doc) AS (\n  SELECT CAST(readfile('analytics/snapshots/2026-09-04.json') AS TEXT)\n), previous_doc(doc) AS (\n  SELECT CAST(readfile('analytics/snapshots/2026-08-31.json') AS TEXT)\n), current_rows AS (\n  SELECT json_extract(value, '$.story') AS story,\n         json_extract(value, '$.slug') AS slug,\n         json_extract(value, '$.presentations') AS presentations,\n         json_extract(value, '$.views') AS views,\n         json_extract(value, '$.reads') AS reads,\n         CASE WHEN json_extract(value, '$.views') = 0 THEN 0 ELSE json_extract(value, '$.reads') * 1.0 / json_extract(value, '$.views') END AS read_ratio\n  FROM current_doc, json_each(current_doc.doc, '$.scopes.storyLifetime')\n), previous_rows AS (\n  SELECT json_extract(value, '$.slug') AS slug,\n         json_extract(value, '$.views') AS views,\n         json_extract(value, '$.reads') AS reads\n  FROM previous_doc, json_each(previous_doc.doc, '$.scopes.storyLifetime')\n)\nSELECT current_rows.*,\n       current_rows.views - previous_rows.views AS delta_views_vs_previous,\n       current_rows.reads - previous_rows.reads AS delta_reads_vs_previous\nFROM current_rows\nLEFT JOIN previous_rows USING (slug)",
+        "description": "Reproducible story-level scorecard generated from the current signed-in Medium snapshot, the prior snapshot, and the reviewed Medium content inventory.",
+        "executed_at": "2026-09-04T06:06:54Z",
+        "tables_used": [
+          "analytics/snapshots/2026-09-04.json",
+          "analytics/snapshots/2026-08-31.json",
+          "analytics/medium-content-inventory-2026-09-03.json"
+        ],
+        "filters": [
+          "Account: @singhaditya21_89007",
+          "Published Medium stories only for performance metrics",
+          "Scheduled Medium stories shown separately"
+        ],
         "metric_definitions": [
-          "Followers = current lifetime Medium followers at capture time.",
-          "Subscribers = current lifetime Medium email subscribers at capture time."
+          "Portfolio read ratio = sum of lifetime reads divided by sum of lifetime views across published stories.",
+          "Story read ratio = lifetime reads divided by lifetime views; zero when views are zero.",
+          "Seven-day checkpoint pass = at least 5 presentations, 3 views, and 1 read for a story published at least 7 calendar days before capture.",
+          "Evidence maturity is Nascent below 5 views, Early from 5 through 19 views, and Decision-ready at 20 or more views.",
+          "Review lanes are diagnostic rules for this account, not universal Medium benchmarks."
         ]
       }
     },
     {
-      "id": "medium_story_lifetime",
-      "label": "Medium Stats · story lifetime",
-      "path": "analytics/engagement-baseline.json",
+      "id": "medium_current_stats",
+      "label": "Medium Stats · September 2026 and story lifetime",
+      "path": "analytics/snapshots/2026-09-04.json",
       "query": {
-        "engine": "duckdb",
+        "engine": "sqlite",
         "language": "sql",
-        "sql": "SELECT item.story, item.slug, item.presentations, item.views, item.reads, item.readRatio AS read_ratio FROM read_json_auto('analytics/engagement-baseline.json') AS source, UNNEST(source.scopes.storyLifetime) AS rows(item)",
-        "description": "Read-only capture of lifetime presentations, views, reads, and read ratios for the nine Medium-published stories.",
-        "executed_at": "2026-08-28T16:26:27Z",
-        "tables_used": ["Medium Stats > Stories"],
-        "filters": ["Account: @singhaditya21_89007", "Scope: lifetime", "Stories: published on Medium at capture time"],
+        "sql": "WITH source(doc) AS (SELECT CAST(readfile('analytics/snapshots/2026-09-04.json') AS TEXT)) SELECT json_extract(doc, '$.scopes.currentMonth.presentations') AS september_presentations, json_extract(doc, '$.scopes.currentMonth.views') AS september_views, json_extract(doc, '$.scopes.currentMonth.reads') AS september_reads, json_extract(doc, '$.scopes.audienceLifetime.followers') AS followers, json_extract(doc, '$.scopes.audienceLifetime.emailSubscribers') AS email_subscribers FROM source",
+        "description": "Read-only capture from the signed-in Medium Stories and Audience statistics pages.",
+        "executed_at": "2026-09-04T06:06:54Z",
+        "tables_used": [
+          "Medium Stats > Stories",
+          "Medium Stats > Audience"
+        ],
+        "filters": [
+          "September 1–4, 2026 UTC for monthly totals",
+          "Lifetime for story rows and audience totals"
+        ],
         "metric_definitions": [
-          "Read ratio = reads divided by views for a story, preserved at Medium's displayed rounding.",
-          "Story presentations, views, and reads are lifetime values and are not reconciled to the August account totals."
+          "Presentations = Medium's tracked suggestions of a story on eligible Medium surfaces.",
+          "Views = readers who accessed a story and remained for at least five seconds.",
+          "Reads = readers who remained for at least thirty seconds."
+        ]
+      }
+    },
+    {
+      "id": "medium_inventory",
+      "label": "Medium content inventory · September 3, 2026",
+      "path": "analytics/medium-content-inventory-2026-09-03.json",
+      "query": {
+        "engine": "sqlite",
+        "language": "sql",
+        "sql": "WITH inventory(doc) AS (SELECT CAST(readfile('analytics/medium-content-inventory-2026-09-03.json') AS TEXT)) SELECT json_extract(value, '$.title') AS story, json_extract(value, '$.scheduleAt') AS scheduled_at, json_extract(value, '$.subscriberEmail') AS subscriber_email, json_extract(value, '$.paywall') AS paywall FROM inventory, json_each(inventory.doc, '$.scheduled')",
+        "description": "Reviewed published and scheduled Medium story inventory with public URLs, publication placement, schedule, subscriber-email and paywall state.",
+        "executed_at": "2026-09-03T14:22:25+05:30",
+        "tables_used": [
+          "analytics/medium-content-inventory-2026-09-03.json"
+        ],
+        "filters": [
+          "Published and scheduled Medium stories"
+        ]
+      }
+    },
+    {
+      "id": "medium_metric_definitions",
+      "label": "Medium Help Center · Stats definitions",
+      "href": "https://help.medium.com/hc/en-us/articles/215108608-Stats",
+      "query": {
+        "engine": "official documentation",
+        "description": "Medium's current definitions and update cadence for presentations, views, reads, followers and subscribers.",
+        "executed_at": "2026-09-04T06:06:54Z",
+        "tables_used": [
+          "Medium Help Center > Stats"
         ]
       }
     }
@@ -232,6 +881,6 @@
   "package_info": {
     "root": "analytics",
     "manifestPath": "analytics/engagement-dashboard.artifact.json",
-    "snapshotPath": "analytics/engagement-dashboard.artifact.json"
+    "snapshotPath": "analytics/snapshots/2026-09-04.json"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260904060654-stats-captured-2026-09-04",
+  "action": "stats_captured",
+  "recordedAt": "2026-09-04T06:06:54Z",
+  "executionSurface": "user_initiated_signed_in_medium_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-04T06:06:54Z",
+    "scope": "Build a metric statistic for reviewing all Medium stories using a read-only signed-in Medium stats capture."
+  },
+  "result": {
+    "status": "stats_captured",
+    "snapshotPath": "analytics/snapshots/2026-09-04.json",
+    "verifiedAt": "2026-09-04T06:06:54Z",
+    "verification": "Signed-in Medium Stats showed September totals of 3 presentations, 8 views and 0 reads; Audience showed 3 lifetime followers and 2 email subscribers. The lifetime table contained all 11 published stories with 75 presentations, 53 views and 17 reads in aggregate."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedMediumAction": false
+}

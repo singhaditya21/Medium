@@ -57,7 +57,7 @@ python scripts/validate_engagement_automation.py
 python scripts/generate_engagement_review.py
 ```
 
-Generated working directories are ignored by Git. The source-backed dashboard is kept in `analytics/engagement-dashboard.html`; it is an operator artifact and is deliberately excluded from the GitHub Pages deployment.
+Generated working directories are ignored by Git. The canonical all-story scorecard is kept in `analytics/engagement-dashboard.artifact.json`; the metrics workflow packages that validated report manifest, the exact story-level CSV, the scheduled-checkpoint CSV, and the latest reviewed Medium snapshot. The older `analytics/engagement-dashboard.html` is retained only as a historical August snapshot and is no longer packaged as current evidence.
 
 ## Privacy-friendly analytics
 

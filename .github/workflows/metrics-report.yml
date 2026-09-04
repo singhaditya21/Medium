@@ -36,8 +36,8 @@ jobs:
           cp medium-continuation-report/snapshot-history.csv metrics-report/snapshot-history.csv
           cp medium-continuation-report/engagement-queue.csv metrics-report/engagement-queue.csv
           cp medium-continuation-report/summary.md metrics-report/signed-in-bridge-summary.md
-      - name: Include source-backed dashboard
-        run: cp analytics/engagement-dashboard.html metrics-report/engagement-dashboard.html
+      - name: Include latest reviewed Medium snapshot
+        run: cp analytics/engagement-baseline.json metrics-report/latest-medium-snapshot.json
       - name: Upload metrics review
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
