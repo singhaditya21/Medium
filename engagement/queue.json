@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T06:42:28Z",
+  "updatedAt": "2026-09-04T08:19:38Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -1960,6 +1960,87 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501111227985764352/",
       "receiptOperationId": "20260904064228-comment-posted-2026-09-04-linkedin-comment-yuvraj-accepted-plan-agency",
       "postedAt": "2026-09-04T06:42:28Z"
+    },
+    {
+      "id": "2026-09-04-linkedin-reply-praveen-gtm-ontology-calibration",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7501535845175382016&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=INAPP&showCommentBox=true&commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501297696704753664%2C7501528518376386561%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501528518376386561%2Curn%3Ali%3AugcPost%3A7501297696704753664%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501297696704753664%2C7501535789210636288%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287501535789210636288%2Curn%3Ali%3AugcPost%3A7501297696704753664%29",
+      "title": "Calibrate a shared GTM ontology before instrumenting conversion gates",
+      "author": "Praveen Shahi",
+      "reason": "Praveen directly challenged the earlier measurement framing and described an evidence-backed judgement layer for aligning product, marketing, sales and RevOps.",
+      "evidence": "His one-hour reply said the room had not yet reached a shared understanding of GTM and that he was gathering evidence to refine the offering and architecture before pitching.",
+      "draftResponse": "That is an important correction, Praveen: before instrumenting conversion gates, the team needs a shared GTM ontology. I would make your evidence-backed judgement layer a calibration loop—capture the hypothesis, source evidence, confidence, chosen intervention and realized outcome, then track inter-functional disagreement rate, time-to-alignment and forecast error. Which decision exposed the largest gap between product, marketing, sales and RevOps?",
+      "priorityScore": 0.97,
+      "intendedMentions": [
+        "Praveen Shahi"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-reply-jasmeet-triggered-placement-review",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500100091123507201/",
+      "title": "Make workload-placement reviews event-triggered as well as quarterly",
+      "author": "Dr. Jasmeet S. Bajaj",
+      "reason": "The author endorsed quarterly review of workload placement; a trigger-based control loop advances the discussion with operational thresholds.",
+      "evidence": "The 22-hour author reply agreed that continuous quarterly reviews are essential so the reported 30–40%, 20–25% and 10–15% optimization layers do not erode as needs change.",
+      "draftResponse": "Agreed. I would make the quarterly review trigger-based as well: reopen placement when p95 utilisation variance, egress share, recovery objectives, regulatory requirements or cost per workload outcome breaches a threshold. That turns FinOps from a periodic savings exercise into a governed portfolio control loop.",
+      "priorityScore": 0.86,
+      "intendedMentions": [
+        "Dr. Jasmeet S. Bajaj"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-peter-human-boundary-consequence",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/in/petercheyne/recent-activity/all/",
+      "title": "Define the human-agent boundary by consequence as well as task structure",
+      "author": "Peter Cheyne",
+      "reason": "The post is highly aligned with agent authority, human accountability and operating-model design, and already has a substantive discussion.",
+      "evidence": "The 20-hour post reported that one leadership team reduced a presumed twelve human-only responsibilities to four; it had 67 reactions and 20 comments, and no Aditya Singh comment was visible.",
+      "draftResponse": "Peter, the “four, not twelve” outcome is useful because it suggests the boundary can be made explicit. I would classify work by consequence as well as trigger, rules and output: irreversible customer, financial or legal actions need an accountable human decision; bounded reversible actions can run under leased authority with postcondition checks. Then track human-retained decision share, override precision and p95 recovery time.",
+      "priorityScore": 0.94,
+      "intendedMentions": [
+        "Peter Cheyne"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-deepchat-approval-evidence-contract",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/deepfridaytalk-agenticcommerce-ai-share-7501552693077774336-T-Nq/",
+      "title": "Code-level approval still needs an evidence-bound decision contract",
+      "author": "DeepChatBI",
+      "reason": "The fresh merchant-agent post asks precisely where trust should sit when pricing and inventory decisions require enforced human approval.",
+      "evidence": "The source distinguishes visible reasoning from approved action and describes code-enforced approval for price changes; it was newly published and had no visible prior Aditya Singh interaction.",
+      "draftResponse": "Code-level approval is necessary but not sufficient: it protects the commit boundary, yet the approver can still be shown incomplete or biased evidence. For pricing and inventory changes, I would bind each approval to an evidence snapshot, policy version, maximum impact, expiry and verified postcondition, then measure false-approve rate, approval latency and p95 rollback time. The trust question moves, but it becomes explicit and auditable.",
+      "priorityScore": 0.88,
+      "intendedMentions": [],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-04-linkedin-comment-xpert-ground-truth-detection-power",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/codingagents-aievaluation-softwareengineering-share-7501241893343645697-fUVa/",
+      "title": "Measure benchmark detection power, not corpus volume alone",
+      "author": "XpertSystems.ai",
+      "reason": "The post provides unusually detailed quantitative evidence about a synthetic SaaS engineering corpus and invites a rigorous agent-evaluation contribution.",
+      "evidence": "The post cites 2,880 assets, 28,800 documents, approximately 288,000 pages, 2,880 source packages and 13 automated quality gates, with no visible prior Aditya Singh interaction.",
+      "draftResponse": "The scale is useful—2,880 assets, 28,800 documents, ~288,000 pages and 13 gates—but corpus size should not be the headline KPI. I would report mutation-test detection rate for missing tenant predicates and PII leaks, cross-artifact contradiction rate, contamination checks, evaluator agreement and performance by unseen architecture pattern. That separates coverage volume from whether the benchmark can expose consequential agent failures.",
+      "priorityScore": 0.91,
+      "intendedMentions": [],
+      "state": "proposed"
     }
   ]
 }
