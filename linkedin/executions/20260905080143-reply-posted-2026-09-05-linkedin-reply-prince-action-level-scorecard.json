@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905080143-reply-posted-2026-09-05-linkedin-reply-prince-action-level-scorecard",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-05T08:01:43Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T08:01:43Z",
+    "scope": "User approved N1, N2, N3 and N4 exactly as written on 2026-09-05."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-05-linkedin-reply-prince-action-level-scorecard",
+    "targetUrl": "https://www.linkedin.com/pulse/from-copilots-autonomous-agents-governance-problem-we-prince-sidana-nj1kf/",
+    "publicUrl": "https://www.linkedin.com/pulse/from-copilots-autonomous-agents-governance-problem-we-prince-sidana-nj1kf/",
+    "publishedTextSha256": "0b13935ceabe93a5a266a9116217cd1c2ed1a9317a903218ef4cbd0ddadcf348",
+    "verifiedAt": "2026-09-05T08:01:43Z",
+    "verification": "LinkedIn rendered the exact approved reply under Aditya Singh with a current timestamp and a clickable Prince Sidana mention in the intended nested thread."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

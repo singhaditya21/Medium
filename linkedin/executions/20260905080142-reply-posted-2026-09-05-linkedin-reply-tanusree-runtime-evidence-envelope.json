@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905080142-reply-posted-2026-09-05-linkedin-reply-tanusree-runtime-evidence-envelope",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-05T08:01:42Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T08:01:42Z",
+    "scope": "User approved N1, N2, N3 and N4 exactly as written on 2026-09-05."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-05-linkedin-reply-tanusree-runtime-evidence-envelope",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7501674426317320192&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7501674426317320192&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true",
+    "publishedTextSha256": "b75fe2e6184ca0073fee254e4a03a716776ba1f771012bfc57ea187e6eb4a3cf",
+    "verifiedAt": "2026-09-05T08:01:42Z",
+    "verification": "LinkedIn rendered the exact approved reply under Aditya Singh with a current timestamp and a clickable Tanusree De mention in the intended nested thread."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
