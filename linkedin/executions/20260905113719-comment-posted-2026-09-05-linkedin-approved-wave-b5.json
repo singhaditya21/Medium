@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905113719-comment-posted-2026-09-05-linkedin-approved-wave-b5",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-05T11:37:19Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T11:37:19Z",
+    "scope": "User said Approved. immediately after the chat displayed exact B1-B6 targets, text and intended mentions. Approval preceded execution. Timestamps reflect receipt transcription, not independently captured approval/click times."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-05-linkedin-approved-wave-b5",
+    "targetUrl": "https://www.linkedin.com/pulse/implementing-agentic-medallion-practitioners-playbook-vineet-kumar-hzqyc/",
+    "publicUrl": "https://www.linkedin.com/pulse/implementing-agentic-medallion-practitioners-playbook-vineet-kumar-hzqyc/",
+    "publishedTextSha256": "bf8481242fab96401c4a05d8918fe2431f42363eec98bbfb801fe6f6c108e654",
+    "verifiedAt": "2026-09-05T11:37:19Z",
+    "verification": "Exact approved article comment visibly published under Aditya Singh and persisted after reload. Native Vineet Kumar mention resolved to /in/vineetk1103/. Comment urn:li:comment:(ugcPost:7472297604232421377,7501966418515722240). Article changed from no comments to one. No reaction or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

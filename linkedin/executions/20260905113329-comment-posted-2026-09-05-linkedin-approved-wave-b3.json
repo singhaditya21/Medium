@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905113329-comment-posted-2026-09-05-linkedin-approved-wave-b3",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-05T11:33:29Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T11:33:29Z",
+    "scope": "User said Approved. immediately after the chat displayed exact B1-B6 targets, text and intended mentions. Approval preceded execution. Timestamps reflect receipt transcription, not independently captured approval/click times."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-05-linkedin-approved-wave-b3",
+    "targetUrl": "https://www.linkedin.com/posts/taranjeet-singh-236273170_ai-agenticai-aisecurity-share-7501667046129164289-wRNb/",
+    "publicUrl": "https://www.linkedin.com/posts/taranjeet-singh-236273170_ai-agenticai-aisecurity-share-7501667046129164289-wRNb/",
+    "publishedTextSha256": "690777b68d7cc9d19fbdf9cc4c08cefd324c5ab969d030dd9fa4ea6124ff0668",
+    "verifiedAt": "2026-09-05T11:33:29Z",
+    "verification": "Exact approved comment visibly published under Aditya Singh and persisted after reload. Native Taranjeet Singh mention resolved to /in/taranjeet-singh-236273170/. Comment urn:li:comment:(activity:7501667048209494016,7501965482980372480). Thread count increased from one to two comments. No reaction or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

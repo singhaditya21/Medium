@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905113934-comment-posted-2026-09-05-linkedin-approved-wave-b6",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-05T11:39:34Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T11:39:34Z",
+    "scope": "User said Approved. immediately after the chat displayed exact B1-B6 targets, text and intended mentions. Approval preceded execution. Timestamps reflect receipt transcription, not independently captured approval/click times."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-05-linkedin-approved-wave-b6",
+    "targetUrl": "https://www.linkedin.com/pulse/data-montages-21-from-agent-ready-context-manas-jain-ucntf/",
+    "publicUrl": "https://www.linkedin.com/pulse/data-montages-21-from-agent-ready-context-manas-jain-ucntf/",
+    "publishedTextSha256": "d275429dfec83fe5e083f7c0cae1c8062b53bdeeeda2c262485064bbfa50a031",
+    "verifiedAt": "2026-09-05T11:39:34Z",
+    "verification": "Exact approved article comment visibly published under Aditya Singh and persisted after reload. Native Manas Jain mention resolved to /in/manasjain/. Comment urn:li:comment:(ugcPost:7501888868258963456,7501966904136208384). Article changed from no comments to one. No reaction or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

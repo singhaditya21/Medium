@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905113531-comment-posted-2026-09-05-linkedin-approved-wave-b4",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-05T11:35:31Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T11:35:31Z",
+    "scope": "User said Approved. immediately after the chat displayed exact B1-B6 targets, text and intended mentions. Approval preceded execution. Timestamps reflect receipt transcription, not independently captured approval/click times."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-05-linkedin-approved-wave-b4",
+    "targetUrl": "https://www.linkedin.com/posts/ajayikemi_ai-governance-looks-much-simpler-on-paper-share-7501298237308452864-pdqH/",
+    "publicUrl": "https://www.linkedin.com/posts/ajayikemi_ai-governance-looks-much-simpler-on-paper-share-7501298237308452864-pdqH/",
+    "publishedTextSha256": "b9853a7550311b8ddd8bc6320a8a6d071ad9f64996282424be7f6e4beb96d96a",
+    "verifiedAt": "2026-09-05T11:35:31Z",
+    "verification": "Approved body visibly posted under Aditya Singh and persisted after reload. LinkedIn expands the chosen native name from Kemi Ajayi to Kemi Ajayi, Ph.D., CISA, AIGP; all body wording is unchanged, and the stored response hash includes that actual rendered name. Native mention resolved to /in/ajayikemi/. Comment urn:li:comment:(activity:7501298240277913600,7501966041116442624). No reaction or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905113929-comment-posted-2026-09-05-linkedin-approved-wave-b2",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-05T11:39:29Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T11:39:29Z",
+    "scope": "User said Approved. immediately after the chat displayed exact B1-B6 targets, text and intended mentions. Approval preceded execution. Timestamps reflect receipt transcription, not independently captured approval/click times."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-05-linkedin-approved-wave-b2",
+    "targetUrl": "https://www.linkedin.com/posts/kunjeshparekh_cifqa-a-deterministic-tool-grounded-multi-agent-share-7501929820579307520-Eq97/",
+    "publicUrl": "https://www.linkedin.com/posts/kunjeshparekh_cifqa-a-deterministic-tool-grounded-multi-agent-share-7501929820579307520-Eq97/",
+    "publishedTextSha256": "f058d763c9448eb909254e825bd9aeccfaaab247166a1ce85aaa8f9c2741c35e",
+    "verifiedAt": "2026-09-05T11:39:29Z",
+    "verification": "Exact approved comment visibly published under Aditya Singh and rechecked after navigating back to the public post. Native Kunjesh Parekh mention resolved to /in/kunjeshparekh/. Comment urn:li:comment:(activity:7501929823754321920,7501964917416116224). It showed 3 impressions at approximately eight minutes; this is an early UI observation, not a reach forecast. No reaction or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

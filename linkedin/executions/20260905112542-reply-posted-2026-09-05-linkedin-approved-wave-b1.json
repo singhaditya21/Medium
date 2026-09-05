@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905112542-reply-posted-2026-09-05-linkedin-approved-wave-b1",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-05T11:25:42Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T11:25:42Z",
+    "scope": "User said Approved. immediately after the chat displayed exact B1-B6 targets, text and intended mentions. Approval preceded execution. Timestamps reflect receipt transcription, not independently captured approval/click times."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-05-linkedin-approved-wave-b1",
+    "targetUrl": "https://www.linkedin.com/posts/abhishekb123_before-you-automate-anything-do-this-math-ugcPost-7501609193779621888-ZXLW/",
+    "publicUrl": "https://www.linkedin.com/posts/abhishekb123_before-you-automate-anything-do-this-math-ugcPost-7501609193779621888-ZXLW/",
+    "publishedTextSha256": "8839d4cfc9d151dfe2daabfc97e2ca9ff7d84b84df373822ddc5c6925d23997d",
+    "verifiedAt": "2026-09-05T11:25:42Z",
+    "verification": "Posted via the reply control on Abhishek’s specific response to A3. Visible under Aditya Singh with current timestamp, exact approved text, and three total thread comments. Rechecked after reload: reply persisted and Abhishek Bhattacharjee was a native profile link to linkedin.com/in/abhishekb123/. No reaction or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
