@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-04T14:50:22Z",
+  "updatedAt": "2026-09-05T07:52:24Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2440,6 +2440,74 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501375443070099456/",
       "receiptOperationId": "20260904145022-comment-posted-2026-09-04-linkedin-comment-dj-regional-processing-economics",
       "postedAt": "2026-09-04T14:50:22Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-reply-shabina-consequence-class-clock",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/posts/adityasinghiitr_agenticai-aigovernance-zerotrust-ugcPost-7501596262446751744-osuN/",
+      "title": "Composed-effect evaluation and consequence classes",
+      "author": "Shabina Abba Noormohamed",
+      "reason": "Shabina answered the post question with a concrete service boundary and added a categorical consequence-class safeguard that merits a technical follow-up.",
+      "evidence": "Shabina recommends a composed-effect service alongside the policy decision point, operating on its own clock and returning a worst-case consequence class so a scalar risk score cannot mask a regulatory breach.",
+      "draftResponse": "@Shabina Abba Noormohamed, the consequence-class refinement closes a real gap: a scalar can rank likelihood or expected loss, but it must not average away a categorical boundary such as regulatory breach, irreversible customer harm or privileged-data exposure. I would have the composed-effect service return both R_comp and a non-compensable consequence class, with lease issuance requiring the policy decision point and transaction-risk service to pass independently against the same policy epoch; disagreement fails closed and produces a reviewable receipt. Your distinct-service-with-its-own-clock framing also creates three useful controls: policy age at decision, p95 revalidation latency and consequence-class override rate.",
+      "priorityScore": 0.99,
+      "intendedMentions": [
+        "Shabina Abba Noormohamed"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-05-linkedin-reply-tanusree-runtime-evidence-envelope",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7501674426317320192&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true",
+      "title": "Runtime evidence contract inside RAIverse",
+      "author": "Tanusree De",
+      "reason": "Tanusree located the proposed evidence contract inside System-Level Operationalization and connected it to RAIsentry, creating a precise opportunity to deepen the control model.",
+      "evidence": "Tanusree describes runtime evidence as immutable accountability telemetry binding inventory, policy, owner, delegated authority and recovery path to the inference output.",
+      "draftResponse": "@Tanusree De, placing the evidence contract inside System-Level Operationalization is exactly the right boundary. RAIsentry becomes materially stronger if every consequential inference produces a tamper-evident execution envelope—inventory ID, policy hash, accountable owner, authority lease, pre-state, observed postcondition, recovery class and verifier identity—then reports verified-action coverage, exception-closure time and policy-to-runtime drift. Does RAIsentry treat prevented and failed actions as first-class evidence alongside completed ones, so auditors can reconstruct both execution and control efficacy?",
+      "priorityScore": 0.98,
+      "intendedMentions": [
+        "Tanusree De"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-05-linkedin-reply-prince-action-level-scorecard",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/pulse/from-copilots-autonomous-agents-governance-problem-we-prince-sidana-nj1kf/",
+      "title": "Action-level agent evaluation scorecard",
+      "author": "Prince Sidana",
+      "reason": "Prince explicitly endorsed evaluating the whole decision path, so a concise operating scorecard advances the discussion without repeating the original comment.",
+      "evidence": "Prince says the next evolution of agent evaluation is moving from scoring the final answer to evaluating the entire decision path.",
+      "draftResponse": "@Prince Sidana, exactly—the evaluation unit should be the consequential action, not the conversational turn. A production scorecard can require four independent passes: evidence sufficiency, policy compliance, authority validity and postcondition verification, then track verified-action coverage, prohibited-path escape rate, p95 containment time and human-override accuracy. That turns agent quality from a model metric into an auditable operating-control metric.",
+      "priorityScore": 0.96,
+      "intendedMentions": [
+        "Prince Sidana"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-05-linkedin-reply-praveen-email-operating-inputs",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7501677792317558784&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true",
+      "title": "Inputs for the GTM operating-model follow-up",
+      "author": "Praveen Shahi",
+      "reason": "Praveen committed to continue by email; a compact reply makes the requested evidence package explicit and gives the offline conversation a measurable starting point.",
+      "evidence": "Praveen agreed with the operating-model framing and said he would connect by email about the same topic.",
+      "draftResponse": "@Praveen Shahi, sounds good. When you write, include the target deal-closure journey, current handoff points, system-of-record owner and a baseline for stage conversion or revenue leakage; those four inputs will let us distinguish a feature request from an operating-model intervention. I will map the judgment, evidence and execution gaps against them so the next conversation starts with a measurable problem statement.",
+      "priorityScore": 0.88,
+      "intendedMentions": [
+        "Praveen Shahi"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
