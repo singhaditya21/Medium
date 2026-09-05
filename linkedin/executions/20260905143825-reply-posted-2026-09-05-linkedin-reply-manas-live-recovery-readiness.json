@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905143825-reply-posted-2026-09-05-linkedin-reply-manas-live-recovery-readiness",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-05T14:38:25Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T14:38:25Z",
+    "scope": "User approved N1 and N2 exactly as displayed with 'Approved + Lets close the multiple linkedin tabs, that are overloading chrome.' Approval applies only to these two threaded replies; no additional engagement action was authorized or executed."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-05-linkedin-reply-manas-live-recovery-readiness",
+    "targetUrl": "https://www.linkedin.com/pulse/data-montages-21-from-agent-ready-context-manas-jain-ucntf/",
+    "publicUrl": "https://www.linkedin.com/pulse/data-montages-21-from-agent-ready-context-manas-jain-ucntf/",
+    "publishedTextSha256": "f13237f88a739d0498bd32badc64802c2b7001e91fc599709c859c87522c3eaf",
+    "verifiedAt": "2026-09-05T14:38:25Z",
+    "verification": "Rechecked source response urn:li:comment:(ugcPost:7501888868258963456,7501983691599093760); used its Reply control. Exact approved N2 text was visibly posted under Aditya Singh (You), timestamp 1s, as urn:li:comment:(ugcPost:7501888868258963456,7502010042100015104). Refreshed and confirmed persistence; native Manas Jain mention resolved to /in/manasjain/. Receipt timestamps reflect record transcription after live verification."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

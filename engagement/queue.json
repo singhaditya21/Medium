@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-05T11:39:34Z",
+  "updatedAt": "2026-09-05T14:38:25Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2855,6 +2855,46 @@
       "responseUrl": "https://www.linkedin.com/pulse/data-montages-21-from-agent-ready-context-manas-jain-ucntf/",
       "receiptOperationId": "20260905113934-comment-posted-2026-09-05-linkedin-approved-wave-b6",
       "postedAt": "2026-09-05T11:39:34Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-reply-zulu-blind-capstone-controls",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+      "title": "Blind assessment with clean controls and false-rejection measurement",
+      "author": "ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ",
+      "reason": "Fresh direct response to an already verified comment; a distinct substantive continuation is prepared for exact approval.",
+      "evidence": "Fresh notification and public thread confirmed a new approximately 40-minute-old response to A10: Zulu will introduce missing approval, stale policy and failed recovery cases and measure evidence completeness, reconstruction time and false passes. Target reply urn:li:comment:(activity:7500819054870536193,7501989248422731778). No subsequent user reply appeared.",
+      "draftResponse": "ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ, I’d add a clean control case alongside those three injected failures, with the assessor blind to which case they receive. Otherwise an assessment can look strong simply by rejecting everything. Report false passes and false rejections separately, then compare assessor agreement across the same evidence packs.",
+      "priorityScore": 0.97,
+      "intendedMentions": [
+        "ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+      "receiptOperationId": "20260905143824-reply-posted-2026-09-05-linkedin-reply-zulu-blind-capstone-controls",
+      "postedAt": "2026-09-05T14:38:24Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-reply-manas-live-recovery-readiness",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/pulse/data-montages-21-from-agent-ready-context-manas-jain-ucntf/",
+      "title": "Live recovery readiness as an authorization precondition",
+      "author": "Manas Jain",
+      "reason": "Fresh direct response to an already verified comment; a distinct substantive continuation is prepared for exact approval.",
+      "evidence": "Fresh notification and public article thread confirmed Manas replied to B6 approximately one hour ago, endorsing recovery capability as part of authorization and stronger requirements for greater irreversibility. Target reply urn:li:comment:(ugcPost:7501888868258963456,7501983691599093760). No subsequent user reply appeared.",
+      "draftResponse": "Manas Jain, I’d make that principle dynamic: authorization should depend on whether the recovery path is available now, not only whether it passed a drill last quarter. If the compensating service is down or the accountable operator cannot meet the containment window, an otherwise reversible action may need to pause. Two useful measures are actions executed with degraded recovery readiness and time to revoke authority after recovery capability is lost.",
+      "priorityScore": 0.9675,
+      "intendedMentions": [
+        "Manas Jain"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/pulse/data-montages-21-from-agent-ready-context-manas-jain-ucntf/",
+      "receiptOperationId": "20260905143825-reply-posted-2026-09-05-linkedin-reply-manas-live-recovery-readiness",
+      "postedAt": "2026-09-05T14:38:25Z"
     }
   ]
 }

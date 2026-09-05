@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905143824-reply-posted-2026-09-05-linkedin-reply-zulu-blind-capstone-controls",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-05T14:38:24Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T14:38:24Z",
+    "scope": "User approved N1 and N2 exactly as displayed with 'Approved + Lets close the multiple linkedin tabs, that are overloading chrome.' Approval applies only to these two threaded replies; no additional engagement action was authorized or executed."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-05-linkedin-reply-zulu-blind-capstone-controls",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+    "publishedTextSha256": "90775bab6e584721e348d93cb35e61b288ff43a365e6601dde3e74b2a8b326e0",
+    "verifiedAt": "2026-09-05T14:38:24Z",
+    "verification": "Rechecked source response urn:li:comment:(activity:7500819054870536193,7501989248422731778); used its Reply control. Exact approved N1 text was visibly posted under Aditya Singh (You), timestamp 1s, as urn:li:comment:(activity:7500819054870536193,7502010425966837760). Refreshed and confirmed persistence; native Zulu mention resolved to /in/zulumthulisi-uca/. Receipt timestamps reflect record transcription after live verification."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
