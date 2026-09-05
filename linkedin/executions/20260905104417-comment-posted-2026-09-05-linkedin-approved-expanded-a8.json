@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905104417-comment-posted-2026-09-05-linkedin-approved-expanded-a8",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-05T10:44:17Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T10:44:17Z",
+    "scope": "User: All Approved, go ahead and post. This approved A1 through A10 in the immediately preceding chat review before any action. Native-profile display-name normalization only; no other text changes. Receipt confirmation timestamp is transcription time; approval preceded all actions."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-05-linkedin-approved-expanded-a8",
+    "targetUrl": "https://www.linkedin.com/posts/gireesh-shrimali-32a8a3_how-to-make-ai-environment-positive-ugcPost-7501645984066641920-ldfj/",
+    "publicUrl": "https://www.linkedin.com/posts/gireesh-shrimali-32a8a3_how-to-make-ai-environment-positive-ugcPost-7501645984066641920-ldfj/",
+    "publishedTextSha256": "01273edf0dbfa88d579a4c22b8732d197667f857a8acd88aef7add66e1083242",
+    "verifiedAt": "2026-09-05T10:44:17Z",
+    "verification": "The signed-in LinkedIn UI rendered the approved response body under Aditya Singh with a current timestamp in the intended post/article. The native mention resolved to https://www.linkedin.com/in/gireesh-shrimali-32a8a3/. Public URL is the verified source post/article, not an invented comment permalink. Rendered DOM comment identifier: urn:li:comment:(ugcPost:7501645984066641920,7501951029207347201)."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

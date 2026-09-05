@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905104423-reply-posted-2026-09-05-linkedin-approved-expanded-a10",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-05T10:44:23Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T10:44:23Z",
+    "scope": "User: All Approved, go ahead and post. This approved A1 through A10 in the immediately preceding chat review before any action. Native-profile display-name normalization only; no other text changes. Receipt confirmation timestamp is transcription time; approval preceded all actions."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-05-linkedin-approved-expanded-a10",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+    "publishedTextSha256": "4ad825c193071e702894ee77013e7a4cf83ca258aacd2ee6f0df61c09df433df",
+    "verifiedAt": "2026-09-05T10:44:23Z",
+    "verification": "The signed-in LinkedIn UI rendered the approved response body under Aditya Singh with a current timestamp in the intended reply thread. The native mention resolved to https://www.linkedin.com/in/zulumthulisi-uca/. Public URL is the verified source post/article, not an invented comment permalink. Native mention display expands the approved shortened salutation to ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ; the remainder is unchanged. Rendered DOM comment identifier: urn:li:comment:(activity:7500819054870536193,7501951964864487424)."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

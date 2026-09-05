@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-05T08:57:45Z",
+  "updatedAt": "2026-09-05T10:44:23Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2534,7 +2534,207 @@
       "draftResponse": "Mike Goerlich, the plan-versus-execution split is right, and per-hop re-evaluation is still not sufficient: composed effect is a property of the in-flight action set, not of any single hop. Every hop can pass a live check while the transaction's aggregate consequence crosses a budget no individual call violated—a price override, a priority change and an SLA commitment is the ordinary case. I would hold the consequence budget per transaction rather than per call, evaluate it against a categorical worst-case class rather than a scalar, and refuse the lease when that class is inadmissible even when every delegated scope is valid now. Measured through composed-breach escape rate, budget-exhaustion latency and postcondition verification coverage. On your retry point: when a retry fires or a new actor enters mid-transaction, should the budget reset, carry, or invalidate the remaining plan?",
       "priorityScore": 0.93,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "skipped"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a1",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM/",
+      "title": "Reply to Mike Goerlich in Shabina's tiered-governance discussion",
+      "author": "Mike Goerlich",
+      "reason": "User-approved expanded review item A1; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Reply to Mike's comment about planning-time evaluation, changing business state, retries and new actors. His comment was approximately 18 hours old when inspected. Shabina has responded to him; the user has not. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Mike Goerlich, your retry example points to an implementation contract: one transaction ID must carry the consequence budget across retries and parallel actors. I would atomically reserve that budget before issuing each lease, retain the reservation while the outcome is unknown, and reconcile it against verified effects rather than reset exposure on a retry. Three useful tests are duplicate business effects, aggregate budget overruns and p95 reconciliation time.",
+      "priorityScore": 0.9675,
+      "intendedMentions": [
+        "Mike Goerlich"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM/",
+      "receiptOperationId": "20260905104355-reply-posted-2026-09-05-linkedin-approved-expanded-a1",
+      "postedAt": "2026-09-05T10:43:55Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a2",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501926227725873153&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+      "title": "Comment on Gaurav Sarda's new role",
+      "author": "Gaurav Sarda",
+      "reason": "User-approved expanded review item A2; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Source: approximately one-hour-old announcement about greenfield, AI-first insurance infrastructure at Mahindra Manulife Insurance Limited. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Congratulations, Gaurav Sarda. A greenfield insurer offers a rare chance to design customer journeys, data ownership and recovery controls together from day one. Which journey do you see becoming the first proof point for the platform—issuance, servicing or claims?",
+      "priorityScore": 0.84,
+      "intendedMentions": [
+        "Gaurav Sarda"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501926227725873153&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+      "receiptOperationId": "20260905104359-comment-posted-2026-09-05-linkedin-approved-expanded-a2",
+      "postedAt": "2026-09-05T10:43:59Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a3",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501609194878382080&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+      "title": "Comment on Abhishek Bhattacharjee's automation economics",
+      "author": "Abhishek Bhattacharjee",
+      "reason": "User-approved expanded review item A3; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Source: approximately 22-hour-old post; its illustrative calculation is five people × three hours/week × $25/hour × 52 weeks = $19,500/year. The 780 hours below is arithmetic from that example, not an observed saving. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Abhishek Bhattacharjee, your example puts 780 hours a year in scope, valued at $19,500 before implementation and ongoing costs. I would distinguish capacity released from cash saved, then measure net hours after exception handling, missed follow-ups recovered and cost per completed workflow. That makes the choice between a rule, an API and an agent an economic decision tied to the actual bottleneck.",
+      "priorityScore": 0.9025,
+      "intendedMentions": [
+        "Abhishek Bhattacharjee"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501609194878382080&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+      "receiptOperationId": "20260905104402-comment-posted-2026-09-05-linkedin-approved-expanded-a3",
+      "postedAt": "2026-09-05T10:44:02Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a4",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/",
+      "title": "Comment on the bottom-up ontology article shared by Prukalpa",
+      "author": "Prukalpa ⚡",
+      "reason": "User-approved expanded review item A4; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Source: published 4 September; article explicitly credits Emily Winks. It describes a prototype with 32,237 claims and missing validity, expiry and supersession semantics. Do not imply the proposed design is already in production. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Prukalpa ⚡, Emily's example of 32,237 claims makes the time dimension especially important: when a definition was valid in the business and when the platform learned it are different facts. I would bind each approval to a definition version, business scope and valid-time interval, so a late correction does not silently rewrite the basis of an earlier decision. Historical-decision replay and expired-approval leakage would make useful acceptance tests for the next iteration.",
+      "priorityScore": 0.93,
+      "intendedMentions": [
+        "Prukalpa ⚡"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/",
+      "receiptOperationId": "20260905104405-comment-posted-2026-09-05-linkedin-approved-expanded-a4",
+      "postedAt": "2026-09-05T10:44:05Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a5",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/",
+      "title": "Reply to Abhijit Ghosh on authority over business definitions",
+      "author": "Abhijit Ghosh",
+      "reason": "User-approved expanded review item A5; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Reply specifically to Abhijit's approximately four-hour-old comment beginning “Bottom-up is the right place to start and the wrong place to finish,” about conflicting definitions and empowered decision-makers. Not a second top-level comment. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Abhijit Ghosh, your disagreement inventory needs decision rights, but not necessarily one enterprise-wide winner for every term. Two win-rate definitions can coexist if each carries an accountable owner, explicit denominator, business scope and effective period; an agent should ask for clarification when it cannot determine which applies. I would track unresolved high-impact conflicts, time to adjudication and answers issued without an authoritative definition.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Abhijit Ghosh"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/",
+      "receiptOperationId": "20260905104408-reply-posted-2026-09-05-linkedin-approved-expanded-a5",
+      "postedAt": "2026-09-05T10:44:08Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a6",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/anuragsirish_%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%BC%F0%9D%97%B1%F0%9D%98%86-%F0%9D%97%B1%F0%9D%97%B2%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%B4%F0%9D%97%BB%F0%9D%98%80-%F0%9D%97%AE-%F0%9D%97%B0%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%B1-share-7501220757109329922-IM-s/",
+      "title": "Comment on Anurag Karuparti's eight Azure architecture patterns",
+      "author": "Anurag(Anu) Karuparti",
+      "reason": "User-approved expanded review item A6; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "The public short link was opened and verified to resolve to Anurag's architecture-patterns post, share 7501220757109329922. Approximately one-day-old source; inspected visible comments and prior local activity for duplicates. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Anurag(Anu) Karuparti, I would attach a measurable operating limit to each pattern: p95 read-model lag for CQRS, oldest-message age for event-driven systems, and tested RPO/RTO for multi-region recovery. In an agent workflow, a stale read model should not be the sole basis for authorizing a write; consequential preconditions need validation against authoritative state at commit. Those limits make architecture selection something a team can test, not just diagram.",
+      "priorityScore": 0.8775,
+      "intendedMentions": [
+        "Anurag(Anu) Karuparti"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/anuragsirish_%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%BC%F0%9D%97%B1%F0%9D%98%86-%F0%9D%97%B1%F0%9D%97%B2%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%B4%F0%9D%97%BB%F0%9D%98%80-%F0%9D%97%AE-%F0%9D%97%B0%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%B1-share-7501220757109329922-IM-s/",
+      "receiptOperationId": "20260905104411-comment-posted-2026-09-05-linkedin-approved-expanded-a6",
+      "postedAt": "2026-09-05T10:44:11Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a7",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/fivosaresti_top-gtm-tools-for-every-position-on-your-share-7501599357004054528-rLiI/",
+      "title": "Comment on Fivos Aresti's GTM tool map",
+      "author": "Fivos Aresti",
+      "reason": "User-approved expanded review item A7; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Source: approximately 22-hour-old post mapping tools across GTM engineering, RevOps, SDR and AE roles. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Fivos Aresti, the repeated tools across four roles make record ownership an important missing column. For every enrichment, routing and outreach handoff, define who may write which CRM fields, how fresh the evidence must be and who owns the exception; then track duplicate-contact rate, routing latency and accepted-opportunity conversion. A stack becomes a revenue system when those handoffs remain reliable through a failed sync.",
+      "priorityScore": 0.91,
+      "intendedMentions": [
+        "Fivos Aresti"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/fivosaresti_top-gtm-tools-for-every-position-on-your-share-7501599357004054528-rLiI/",
+      "receiptOperationId": "20260905104414-comment-posted-2026-09-05-linkedin-approved-expanded-a7",
+      "postedAt": "2026-09-05T10:44:14Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a8",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/gireesh-shrimali-32a8a3_how-to-make-ai-environment-positive-ugcPost-7501645984066641920-ldfj/",
+      "title": "Comment on Gireesh Shrimali's environment-positive AI framework",
+      "author": "Gireesh Shrimali",
+      "reason": "User-approved expanded review item A8; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Source: approximately 19-hour-old post on demonstrable benefits, additionality, lifecycle accounting, rebound effects and climate/nature outcomes. Draft responds to the post, not the attached document, which was not read in full. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Gireesh Shrimali, I would keep carbon, water and ecosystem impacts as separate decision criteria rather than collapse them into one net-positive score. For each deployment, compare the outcome with a credible non-AI baseline over the same period, including training, inference, hardware and rebound effects. Reporting avoided emissions alongside local water impacts and uncertainty ranges would make the trade-offs visible instead of allowing one benefit to conceal another harm.",
+      "priorityScore": 0.8425,
+      "intendedMentions": [
+        "Gireesh Shrimali"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/gireesh-shrimali-32a8a3_how-to-make-ai-environment-positive-ugcPost-7501645984066641920-ldfj/",
+      "receiptOperationId": "20260905104417-comment-posted-2026-09-05-linkedin-approved-expanded-a8",
+      "postedAt": "2026-09-05T10:44:17Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a9",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/karan-dhundia-486a1330_humanmagic-leadership-ai-share-7501489496409149440-Eiqt/",
+      "title": "Comment on Karan Dhundia's AI and mentoring post",
+      "author": "Karan Dhundia",
+      "reason": "User-approved expanded review item A9; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Source: approximately one-day-old post connecting his daughter's ChatGPT question with workplace learning and human mentoring. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "Karan Dhundia, a practical mentoring habit could be to ask a colleague for their working hypothesis before opening the AI answer, then explain what evidence would change your own view. The debrief can focus on the disagreement rather than simply checking whether the tool was right. A useful test a week later: can the colleague explain the reasoning in a new situation without the same prompt?",
+      "priorityScore": 0.8625,
+      "intendedMentions": [
+        "Karan Dhundia"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/karan-dhundia-486a1330_humanmagic-leadership-ai-share-7501489496409149440-Eiqt/",
+      "receiptOperationId": "20260905104420-comment-posted-2026-09-05-linkedin-approved-expanded-a9",
+      "postedAt": "2026-09-05T10:44:20Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-approved-expanded-a10",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+      "title": "Reply to Zulu Mthulisi about MZ-UCA's governance capstone",
+      "author": "ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ",
+      "reason": "User-approved expanded review item A10; detailed source context in engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+      "evidence": "Reply to the author's approximately two-day-old response saying he plans to include all five governance artifacts and incorporate reconstructability. The refreshed thread showed this as the latest reply; no later user response was visible. Select the native mention for ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ. Source and absence of a duplicate rechecked immediately before execution. Native profile mention and rendered user comment visibly verified.",
+      "draftResponse": "ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ, the five-artifact package would make a strong capstone if another assessor can reconstruct the decision without the learner narrating it. I would define the 100% target against an explicit set of required evidence, then inject a missing approval, stale policy and failed recovery step to test whether the assessment detects each gap. Report evidence completeness, reconstruction time and false passes separately: complete documentation is not yet proof that the controls worked.",
+      "priorityScore": 0.9125,
+      "intendedMentions": [
+        "ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/",
+      "receiptOperationId": "20260905104423-reply-posted-2026-09-05-linkedin-approved-expanded-a10",
+      "postedAt": "2026-09-05T10:44:23Z"
     }
   ]
 }

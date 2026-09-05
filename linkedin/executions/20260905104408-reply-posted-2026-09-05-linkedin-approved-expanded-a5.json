@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905104408-reply-posted-2026-09-05-linkedin-approved-expanded-a5",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-05T10:44:08Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T10:44:08Z",
+    "scope": "User: All Approved, go ahead and post. This approved A1 through A10 in the immediately preceding chat review before any action. Native-profile display-name normalization only; no other text changes. Receipt confirmation timestamp is transcription time; approval preceded all actions."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-05-linkedin-approved-expanded-a5",
+    "targetUrl": "https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/",
+    "publicUrl": "https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/",
+    "publishedTextSha256": "e7a48153de8e4da00a9a97d0d0cc7c102816b3c7360550002d08019345f59d70",
+    "verifiedAt": "2026-09-05T10:44:08Z",
+    "verification": "The signed-in LinkedIn UI rendered the approved response body under Aditya Singh with a current timestamp in the intended reply thread. The native mention resolved to https://www.linkedin.com/in/abhijit-ghosh-data/. Public URL is the verified source post/article, not an invented comment permalink. Rendered DOM comment identifier: urn:li:comment:(ugcPost:7501652963082493952,7501952373159010304)."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

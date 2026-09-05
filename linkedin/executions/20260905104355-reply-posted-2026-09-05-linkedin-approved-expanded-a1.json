@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905104355-reply-posted-2026-09-05-linkedin-approved-expanded-a1",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-05T10:43:55Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T10:43:55Z",
+    "scope": "User: All Approved, go ahead and post. This approved A1 through A10 in the immediately preceding chat review before any action. Native-profile display-name normalization only; no other text changes. Receipt confirmation timestamp is transcription time; approval preceded all actions."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-05-linkedin-approved-expanded-a1",
+    "targetUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM/",
+    "publicUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM/",
+    "publishedTextSha256": "5e68625fd844afb9d3043182b08be20d21eb50c8c7bbff4b7299268dfe50fe21",
+    "verifiedAt": "2026-09-05T10:43:55Z",
+    "verification": "The signed-in LinkedIn UI rendered the approved response body under Aditya Singh with a current timestamp in the intended reply thread. The native mention resolved to https://www.linkedin.com/in/michaelgoerlich/. Public URL is the verified source post/article, not an invented comment permalink. Rendered DOM comment identifier: urn:li:comment:(activity:7501562427889836032,7501948567377305600)."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

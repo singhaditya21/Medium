@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260905104411-comment-posted-2026-09-05-linkedin-approved-expanded-a6",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-05T10:44:11Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-05T10:44:11Z",
+    "scope": "User: All Approved, go ahead and post. This approved A1 through A10 in the immediately preceding chat review before any action. Native-profile display-name normalization only; no other text changes. Receipt confirmation timestamp is transcription time; approval preceded all actions."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-05-linkedin-approved-expanded-a6",
+    "targetUrl": "https://www.linkedin.com/posts/anuragsirish_%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%BC%F0%9D%97%B1%F0%9D%98%86-%F0%9D%97%B1%F0%9D%97%B2%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%B4%F0%9D%97%BB%F0%9D%98%80-%F0%9D%97%AE-%F0%9D%97%B0%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%B1-share-7501220757109329922-IM-s/",
+    "publicUrl": "https://www.linkedin.com/posts/anuragsirish_%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%BC%F0%9D%97%B1%F0%9D%98%86-%F0%9D%97%B1%F0%9D%97%B2%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%B4%F0%9D%97%BB%F0%9D%98%80-%F0%9D%97%AE-%F0%9D%97%B0%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%B1-share-7501220757109329922-IM-s/",
+    "publishedTextSha256": "c1ececb34c96c4285774746cc2a14fc443d5389fdc9df1a656c8b6b1ac8b2845",
+    "verifiedAt": "2026-09-05T10:44:11Z",
+    "verification": "The signed-in LinkedIn UI rendered the approved response body under Aditya Singh with a current timestamp in the intended post/article. The native mention resolved to https://www.linkedin.com/in/anuragsirish/. Public URL is the verified source post/article, not an invented comment permalink. Native mention display expands the approved shortened salutation to Anurag(Anu) Karuparti; the remainder is unchanged. Rendered DOM comment identifier: urn:li:comment:(activity:7501240135653621760,7501950580634849282)."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

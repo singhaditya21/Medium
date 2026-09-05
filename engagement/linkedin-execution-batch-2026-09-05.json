@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "status": "all_ten_visibly_verified",
+  "reviewFile": "engagement/linkedin-review-2026-09-05-expanded-drafts.md",
+  "recordedAt": "2026-09-05T10:42:02Z",
+  "approval": "User: All Approved, go ahead and post. This approved A1 through A10 in the immediately preceding chat review before any action.",
+  "githubIssueNumber": 36,
+  "notes": [
+    "All ten actions were performed through the existing signed-in Chrome session, not GitHub Actions.",
+    "A4 and A5 were separated by A6, A7, A8, A9 and A10, rather than posted back-to-back.",
+    "Native LinkedIn mentions render Prukalpa ⚡, Anurag(Anu) Karuparti and ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ in place of the draft's shortened salutations. All other wording is unchanged.",
+    "Public result URLs below identify the verified post or article. Where captured, comment URNs additionally identify the precise comment; no invented comment permalink is used.",
+    "Recorded timestamps are receipt transcription times, not independently captured click timestamps. User approval and live verification occurred before receipt transcription.",
+    "Research exceeded five candidates for this explicitly approved batch; recurring schedules and preparation caps remain unchanged."
+  ],
+  "actions": [
+    {"id":"A1","author":"Mike Goerlich","action":"reply","direction":"outbound","publicUrl":"https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM/","commentUrn":"urn:li:comment:(activity:7501562427889836032,7501948567377305600)","nativeMention":"https://www.linkedin.com/in/michaelgoerlich/","relevance":1.0,"discussionQuality":0.95,"uniqueContribution":0.95,"recency":0.95},
+    {"id":"A2","author":"Gaurav Sarda","action":"comment","direction":"outbound","publicUrl":"https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501926227725873153&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true","nativeMention":"https://www.linkedin.com/in/sardagaurav/","relevance":0.9,"discussionQuality":0.7,"uniqueContribution":0.75,"recency":1.0},
+    {"id":"A3","author":"Abhishek Bhattacharjee","action":"comment","direction":"outbound","publicUrl":"https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501609194878382080&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true","nativeMention":"https://www.linkedin.com/in/abhishekb123/","relevance":0.95,"discussionQuality":0.8,"uniqueContribution":0.9,"recency":0.95},
+    {"id":"A4","author":"Prukalpa ⚡","action":"comment","direction":"outbound","publicUrl":"https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/","commentUrn":"urn:li:comment:(ugcPost:7501652963082493952,7501950229940985856)","nativeMention":"https://www.linkedin.com/in/prukalpa/","draftSalutation":"Prukalpa","relevance":0.95,"discussionQuality":0.95,"uniqueContribution":0.9,"recency":0.9},
+    {"id":"A5","author":"Abhijit Ghosh","action":"reply","direction":"outbound","publicUrl":"https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/","commentUrn":"urn:li:comment:(ugcPost:7501652963082493952,7501952373159010304)","nativeMention":"https://www.linkedin.com/in/abhijit-ghosh-data/","relevance":0.95,"discussionQuality":0.95,"uniqueContribution":0.9,"recency":1.0},
+    {"id":"A6","author":"Anurag(Anu) Karuparti","action":"comment","direction":"outbound","publicUrl":"https://www.linkedin.com/posts/anuragsirish_%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%AF%F0%9D%97%BC%F0%9D%97%B1%F0%9D%98%86-%F0%9D%97%B1%F0%9D%97%B2%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%B4%F0%9D%97%BB%F0%9D%98%80-%F0%9D%97%AE-%F0%9D%97%B0%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%B1-share-7501220757109329922-IM-s/","commentUrn":"urn:li:comment:(activity:7501240135653621760,7501950580634849282)","nativeMention":"https://www.linkedin.com/in/anuragsirish/","draftSalutation":"Anurag","relevance":0.9,"discussionQuality":0.85,"uniqueContribution":0.9,"recency":0.85},
+    {"id":"A7","author":"Fivos Aresti","action":"comment","direction":"outbound","publicUrl":"https://www.linkedin.com/posts/fivosaresti_top-gtm-tools-for-every-position-on-your-share-7501599357004054528-rLiI/","commentUrn":"urn:li:comment:(activity:7501599358749020160,7501950809304391682)","nativeMention":"https://www.linkedin.com/in/fivosaresti/","relevance":1.0,"discussionQuality":0.8,"uniqueContribution":0.85,"recency":0.95},
+    {"id":"A8","author":"Gireesh Shrimali","action":"comment","direction":"outbound","publicUrl":"https://www.linkedin.com/posts/gireesh-shrimali-32a8a3_how-to-make-ai-environment-positive-ugcPost-7501645984066641920-ldfj/","commentUrn":"urn:li:comment:(ugcPost:7501645984066641920,7501951029207347201)","nativeMention":"https://www.linkedin.com/in/gireesh-shrimali-32a8a3/","relevance":0.8,"discussionQuality":0.85,"uniqueContribution":0.8,"recency":0.95},
+    {"id":"A9","author":"Karan Dhundia","action":"comment","direction":"outbound","publicUrl":"https://www.linkedin.com/posts/karan-dhundia-486a1330_humanmagic-leadership-ai-share-7501489496409149440-Eiqt/","commentUrn":"urn:li:comment:(activity:7501489497386233856,7501951273622102016)","nativeMention":"https://www.linkedin.com/in/karan-dhundia-486a1330/","relevance":0.85,"discussionQuality":0.9,"uniqueContribution":0.85,"recency":0.85},
+    {"id":"A10","author":"ᴢᴜʟᴜ ᴍᴛʜᴜʟɪꜱɪ","action":"reply","direction":"inbound","publicUrl":"https://www.linkedin.com/feed/update/urn:li:activity:7500819054870536193/","commentUrn":"urn:li:comment:(activity:7500819054870536193,7501951964864487424)","nativeMention":"https://www.linkedin.com/in/zulumthulisi-uca/","draftSalutation":"Zulu","relevance":0.95,"discussionQuality":1.0,"uniqueContribution":0.95,"recency":0.7}
+  ],
+  "secretsStored": false
+}
