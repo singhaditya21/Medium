@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-05T08:01:44Z",
+  "updatedAt": "2026-09-05T08:57:45Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2520,6 +2520,21 @@
       "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7501677792317558784&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true",
       "receiptOperationId": "20260905080144-reply-posted-2026-09-05-linkedin-reply-praveen-email-operating-inputs",
       "postedAt": "2026-09-05T08:01:44Z"
+    },
+    {
+      "id": "2026-09-05-linkedin-reply-mike-goerlich-planning-time-chain-governance-vs-execut",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM",
+      "title": "Planning-time chain governance vs execution-time consequence governance",
+      "author": "Mike Goerlich",
+      "reason": "Mike Goerlich and Shabina Abba Noormohamed converged on separating plan-time scope from execution-time re-evaluation, but neither addressed composed effect across the in-flight action set; this is the exact gap the transaction-boundary and permission-lease work covers, in a live thread with an IAM specialist and the AuthHub founder.",
+      "evidence": "Mike Goerlich commented 17h ago that between plan and consequence 'context can change, business state can change, another actor can enter, a retry can occur'; Shabina replied 15h ago that AuthHub re-evaluates scope against live context on every hop.",
+      "draftResponse": "Mike Goerlich, the plan-versus-execution split is right, and per-hop re-evaluation is still not sufficient: composed effect is a property of the in-flight action set, not of any single hop. Every hop can pass a live check while the transaction's aggregate consequence crosses a budget no individual call violated—a price override, a priority change and an SLA commitment is the ordinary case. I would hold the consequence budget per transaction rather than per call, evaluate it against a categorical worst-case class rather than a scalar, and refuse the lease when that class is inadmissible even when every delegated scope is valid now. Measured through composed-breach escape rate, budget-exhaustion latency and postcondition verification coverage. On your retry point: when a retry fires or a new actor enters mid-transaction, should the budget reset, carry, or invalidate the remaining plan?",
+      "priorityScore": 0.93,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
     }
   ]
 }
