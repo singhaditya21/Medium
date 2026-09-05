@@ -1,0 +1,260 @@
+{
+  "status": "automated_checks_passed_visual_review_required",
+  "posts": [
+    {
+      "id": "S01",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        2,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "fd3694ae0a627afb39f69626d6846c01c4d33f2f72d0def984a7cf0b7bec2a80",
+      "gifSha256": "1424720687a0319cd577a4562cffa2f4edd56a2c3d0f52b936415a8df35fffb2",
+      "mp4Bytes": 1026745,
+      "gifBytes": 1439449
+    },
+    {
+      "id": "S02",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "39819f96feab277b7422fdffa2046ac6394129411dd389a66053f21be2fb5488",
+      "gifSha256": "831fc9b4f0ad80359daa0f53252d9bea4f2905412a02b9669530e6de07f13087",
+      "mp4Bytes": 1027884,
+      "gifBytes": 1441153
+    },
+    {
+      "id": "S03",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "51330825184cea31af597fa8d0feb2ffb1f9a58500447e86e4753ce5cec71850",
+      "gifSha256": "d9af22a61fa79436310f0528b8206999d3d0beab07c315a316bcdf85fd97c629",
+      "mp4Bytes": 1052497,
+      "gifBytes": 1474017
+    },
+    {
+      "id": "S04",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "d7f744c6b36f893fef44ed94724dfea7d49da5e34721ea140b01e59fdfee8b3a",
+      "gifSha256": "b97345f6c11235220c291e501e1e099ae358f5f0f300dfafecf12dd36f419d41",
+      "mp4Bytes": 1063675,
+      "gifBytes": 1447764
+    },
+    {
+      "id": "S05",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        2,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "f1ce8a8b2d1ead539b8130c85fa503a99d3f0ca2abf5566b5617dc6a6e31e6ae",
+      "gifSha256": "cd9ba1345ccd7743b473bd6a4e7820126832b6922a2e203c9aa3511bf939a9db",
+      "mp4Bytes": 1042960,
+      "gifBytes": 1445419
+    },
+    {
+      "id": "S06",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "5d3e36c605929d728d11a9d81c580121d1a4645a58b6178118438df6fcfdb287",
+      "gifSha256": "70a41bed26c994ab7e1cdedea9b099c91bc18bb467b1261c33eabe521dd4d0c8",
+      "mp4Bytes": 1041545,
+      "gifBytes": 1443647
+    },
+    {
+      "id": "S07",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        2,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "30a66e86087092ff3dc095d5868f6827028e781a32b6734b3736dd27d30de6e7",
+      "gifSha256": "cfe2797a21df8194c985074a588ea06d9bf39cb9e72284bf68f3477161e0f29a",
+      "mp4Bytes": 1050417,
+      "gifBytes": 1462278
+    },
+    {
+      "id": "S08",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        2,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "00195e860614778e823cadf632cf18cef5b51e27b14f2a0b3b1e16e569115778",
+      "gifSha256": "6fcb7b78c48637618d8e75cf030f760e33640d455a5323565cdd1d00dba4faa6",
+      "mp4Bytes": 1068284,
+      "gifBytes": 1428405
+    },
+    {
+      "id": "S09",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "1036396835a84aaa551cd142fa2e6b70259e14c41a0b19f0ade3f2ea144fc5aa",
+      "gifSha256": "8d973337ad7640207aed0d99470c7a2e54efda23c2f2db484f96b8b9cc41455d",
+      "mp4Bytes": 1044622,
+      "gifBytes": 1470839
+    },
+    {
+      "id": "S10",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        2,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "5be67fe5c0572ff1afbcb4d4caeb26b0893169fde6a2e513479b0df30152215c",
+      "gifSha256": "2a7079862bfec2d21f015bb79d781fa31bda98b0fc1a6cb2cffb345459094f23",
+      "mp4Bytes": 1080482,
+      "gifBytes": 1474055
+    },
+    {
+      "id": "S11",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        2,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "732c7f5ad01694db8d84756a6ebe691d75ed4f417f0cb6f9b6785f8547b4ce50",
+      "gifSha256": "a7cbda3afe585bab9878e0fc22613b589a89892195c91353bafbdb0ae7823692",
+      "mp4Bytes": 1060155,
+      "gifBytes": 1477264
+    },
+    {
+      "id": "S12",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "7a07e3e8fc9f09eae9d0078f24df6a093e23c112dcfa37a7d30f05605187fda2",
+      "gifSha256": "d0685653a634386e43ad8259d30b2e58262346695610c5577fb9c5ab7a3a7194",
+      "mp4Bytes": 1062079,
+      "gifBytes": 1497087
+    },
+    {
+      "id": "S13",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "e89950df72e1500a614a462432b321d75bf0d30b9ccbc46c9df3630b6046f196",
+      "gifSha256": "93971a9325ea20ba5584a72e032ccd0c805bc2c0b8a7f88cf776841afb98cdb5",
+      "mp4Bytes": 1068703,
+      "gifBytes": 1474045
+    },
+    {
+      "id": "S14",
+      "mp4Frames": 864,
+      "gifFrames": 360,
+      "seconds": 36,
+      "uniqueIntraSceneSamples": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "mp4Sha256": "b485a4706186e0e9b85de9226d6e41e8673fcfbea384a875a6ebb139c0a115ce",
+      "gifSha256": "82ad42e686d42d8b68a25a449a631a7ad8a22e61bbe27ae72c8960639bb88cee",
+      "mp4Bytes": 1068818,
+      "gifBytes": 1497594
+    }
+  ],
+  "overflowCount": 0,
+  "wilsonLower95": 0.855643147117504,
+  "livePostsChanged": 0
+}

@@ -1,0 +1,1504 @@
+{
+  "status": "prepared_not_applied",
+  "reference": "https://www.linkedin.com/feed/update/urn:li:activity:7501596302342922240/",
+  "preserve": [
+    "text",
+    "links",
+    "native_mentions",
+    "hashtags",
+    "audience",
+    "comments",
+    "scheduled_time"
+  ],
+  "posts": [
+    {
+      "id": "S01",
+      "slug": "sop-execution",
+      "short": "SOP EXECUTION",
+      "schedule": "2026-09-07T08:45:00+05:30",
+      "media": "text only",
+      "title": "A perfect answer can hide a wrong action",
+      "subtitle": "A correction must change state, confirmation and the resulting write.",
+      "metric": "5/5 vs 1/5",
+      "metric_label": "Language quality versus operational safety in the scheduled example",
+      "flow": [
+        "Input",
+        "Correct",
+        "Version",
+        "Confirm",
+        "Write",
+        "Verify"
+      ],
+      "lanes": [
+        [
+          "STATE",
+          [
+            "Observation",
+            "Correction",
+            "Supersession"
+          ]
+        ],
+        [
+          "CONTROL",
+          [
+            "SOP contract",
+            "Confirmation",
+            "Tool order"
+          ]
+        ],
+        [
+          "EVIDENCE",
+          [
+            "Trace",
+            "Postcondition",
+            "Owner"
+          ]
+        ]
+      ],
+      "principle": "Evaluate the state transition, not just the conversation.",
+      "score_rows": [
+        [
+          "Quality score",
+          "5 / 5",
+          "EXAMPLE"
+        ],
+        [
+          "Safety score",
+          "1 / 5",
+          "EXAMPLE"
+        ],
+        [
+          "SOP contracts",
+          "~15",
+          "MODEL"
+        ]
+      ],
+      "decision_rule": "Invalidate the previous value, reconfirm the correction, then verify the write.",
+      "chart": [
+        [
+          "Language quality",
+          5
+        ],
+        [
+          "Operational safety",
+          1
+        ]
+      ],
+      "unit": "score / 5",
+      "domain": 5,
+      "formula": "safe_write = current_version AND confirmed_delta AND valid_policy",
+      "contract": [
+        "action: apply_correction",
+        "supersedes: observation_v1",
+        "new_value: 1000 mg [example]",
+        "confirmation: exact_new_value",
+        "precondition: current_version",
+        "postcondition: observed_write"
+      ],
+      "failure": [
+        "Correction arrives after confirmation",
+        "Invalidate v1 and its old approval",
+        "Reconfirm v2 before any write"
+      ],
+      "question": "Does your evaluation prove that corrections supersede prior state?",
+      "note": "Illustrated failure case from scheduled copy; not clinical guidance.",
+      "chart_title": "Two evaluation dimensions",
+      "chart_note": "Attributed example in scheduled post; scores are not production measurements."
+    },
+    {
+      "id": "S02",
+      "slug": "account-escalation",
+      "short": "CRM AUTHORITY",
+      "schedule": "2026-09-09T14:00:00+05:30",
+      "media": "Medium link preview",
+      "title": "Evidence is not permission to execute",
+      "subtitle": "The account is worth $2.4M. Authority belongs to the exact action.",
+      "metric": "$2.4M",
+      "metric_label": "Illustrative account value, not the loss of every candidate action",
+      "flow": [
+        "Signals",
+        "Evidence",
+        "Risk",
+        "Approve",
+        "Lease",
+        "Verify"
+      ],
+      "lanes": [
+        [
+          "PREPARE",
+          [
+            "Support",
+            "Contract",
+            "Quote"
+          ]
+        ],
+        [
+          "DECIDE",
+          [
+            "Expected loss",
+            "Policy",
+            "Human gate"
+          ]
+        ],
+        [
+          "COMMIT",
+          [
+            "Bound lease",
+            "CRM version",
+            "Verifier"
+          ]
+        ]
+      ],
+      "principle": "A recommendation can be correct and still lack authority.",
+      "score_rows": [
+        [
+          "Account value",
+          "$2.4M",
+          "SCENARIO"
+        ],
+        [
+          "Control stages",
+          "6",
+          "CONTRACT"
+        ],
+        [
+          "Lease scope",
+          "1 action",
+          "BOUND"
+        ]
+      ],
+      "decision_rule": "Release the exact approved delta only after the evidence, risk and policy gates pass.",
+      "chart": [
+        [
+          "Requested 12% delta",
+          288000
+        ],
+        [
+          "Approved 8% example",
+          192000
+        ]
+      ],
+      "unit": "USD on $2.4M renewal",
+      "domain": 320000,
+      "formula": "action_gate = evidence AND policy AND required_approval",
+      "contract": [
+        "resource: one_named_quote",
+        "delta: exact_approved_change",
+        "evidence_hash: current_pack",
+        "policy_epoch: current",
+        "use_limit: 1",
+        "recovery: declared_before_act"
+      ],
+      "failure": [
+        "Quote changes after human approval",
+        "Reject the stale resource version",
+        "Reassess evidence and request a new lease"
+      ],
+      "question": "Where does recommendation become a contractual commitment?",
+      "note": "Conceptual CRM workflow; values are illustrative, not an actual customer account.",
+      "chart_title": "Commercial delta by scenario",
+      "chart_note": "Source-story illustration: request and approval example are distinct cases."
+    },
+    {
+      "id": "S03",
+      "slug": "model-serving-boundary",
+      "short": "MODEL SERVING",
+      "schedule": "2026-09-11T08:45:00+05:30",
+      "media": "text only",
+      "title": "Separate selection from execution routing",
+      "subtitle": "Keep a stable client contract while routing moves closer to the workload.",
+      "metric": "5 capabilities",
+      "metric_label": "Interface, routing, safe rollout, isolation and outcome observability",
+      "flow": [
+        "Client",
+        "Contract",
+        "Select",
+        "Route",
+        "Model",
+        "Observe"
+      ],
+      "lanes": [
+        [
+          "CONTROL",
+          [
+            "Model catalog",
+            "Selection",
+            "Release policy"
+          ]
+        ],
+        [
+          "DATA",
+          [
+            "Stable API",
+            "Local router",
+            "Serving pool"
+          ]
+        ],
+        [
+          "ASSURE",
+          [
+            "Shadow",
+            "Canary",
+            "Rollback"
+          ]
+        ]
+      ],
+      "principle": "A model change should not force every client to change.",
+      "score_rows": [
+        [
+          "Interface",
+          "Stable",
+          "CONTRACT"
+        ],
+        [
+          "Rollout",
+          "Canary",
+          "CONTROL"
+        ],
+        [
+          "Rollback",
+          "Measured",
+          "SLO"
+        ]
+      ],
+      "decision_rule": "Move the routing decision near the data plane while preserving a versioned client interface.",
+      "chart": null,
+      "formula": "route = eligible(model, policy, context, deadline)",
+      "contract": [
+        "client_contract: versioned",
+        "model_selection: control_plane",
+        "routing: near_data_plane",
+        "isolation: workload_boundary",
+        "rollout: shadow_then_canary",
+        "rollback: known_good_version"
+      ],
+      "failure": [
+        "A canary violates its declared SLO",
+        "Route traffic to the known-good version",
+        "Isolate the failing serving pool"
+      ],
+      "question": "Which shared dependency expands your platform's blast radius?",
+      "note": "Conceptual architecture inspired by the scheduled post; no new Netflix claims.",
+      "chart_title": "Release controls before scale",
+      "chart_note": "Architecture comparison, not a revalidation of third-party performance claims."
+    },
+    {
+      "id": "S04",
+      "slug": "attention-runway",
+      "short": "ATTENTION RUNWAY",
+      "schedule": "2026-09-16T08:45:00+05:30",
+      "media": "text only",
+      "title": "Engineering attention is not free",
+      "subtitle": "Repeated reporting competes with product-building capacity.",
+      "metric": "$1.8M / year",
+      "metric_label": "Opportunity cost in the scheduled thought experiment, not cash savings",
+      "flow": [
+        "Question",
+        "Definition",
+        "Source",
+        "Reconcile",
+        "Answer",
+        "Decide"
+      ],
+      "lanes": [
+        [
+          "DEMAND",
+          [
+            "Executive question",
+            "Metric owner",
+            "Priority"
+          ]
+        ],
+        [
+          "TRUST",
+          [
+            "CRM + finance",
+            "Shared definition",
+            "Reconcile"
+          ]
+        ],
+        [
+          "CAPACITY",
+          [
+            "Self-service",
+            "Product time",
+            "Decision review"
+          ]
+        ]
+      ],
+      "principle": "Measure capacity returned to product work, not automation count.",
+      "score_rows": [
+        [
+          "Engineers",
+          "80",
+          "ASSUMED"
+        ],
+        [
+          "Annual cost each",
+          "$180K",
+          "ASSUMED"
+        ],
+        [
+          "Reporting share",
+          "12.5%",
+          "ASSUMED"
+        ]
+      ],
+      "decision_rule": "Treat recurring data requests as an owned service with a trusted-answer objective.",
+      "chart": [
+        [
+          "Product / other capacity",
+          12600000
+        ],
+        [
+          "Repeated reporting",
+          1800000
+        ]
+      ],
+      "unit": "USD / year, capacity cost",
+      "domain": 14400000,
+      "formula": "80 x $180,000 x (1/8) = $1,800,000 / year",
+      "contract": [
+        "metric: one_owned_definition",
+        "source_versions: explicit",
+        "freshness: business_relevant",
+        "answer_owner: accountable",
+        "decision_time: measured",
+        "capacity_returned: tracked"
+      ],
+      "failure": [
+        "CRM and finance disagree on a metric",
+        "Preserve both definitions and owners",
+        "Resolve before issuing a trusted answer"
+      ],
+      "question": "What share of engineering capacity actually builds the product?",
+      "note": "Thought experiment from scheduled copy; opportunity cost is not realized savings.",
+      "chart_title": "Annual engineering capacity cost",
+      "chart_note": "80 engineers \u00d7 $180,000/year; one-eighth assigned to repeated reporting."
+    },
+    {
+      "id": "S05",
+      "slug": "permission-leases",
+      "short": "PERMISSION LEASES",
+      "title": "Authority should exist only for the transaction",
+      "subtitle": "The same CRM update can have radically different loss surfaces.",
+      "metric": "100% -> 0.35%",
+      "metric_label": "Modeled reachable authority after scope, value, time and use constraints",
+      "flow": [
+        "Evidence",
+        "Policy",
+        "Approval",
+        "Lease",
+        "Execute",
+        "Verify"
+      ],
+      "lanes": [
+        [
+          "DECISION",
+          [
+            "Evidence",
+            "Policy",
+            "Risk",
+            "Approval"
+          ]
+        ],
+        [
+          "AUTHORITY",
+          [
+            "Bound lease",
+            "Signer",
+            "One-use token"
+          ]
+        ],
+        [
+          "EXECUTION",
+          [
+            "Effect gateway",
+            "CRM",
+            "Verifier",
+            "Recovery"
+          ]
+        ]
+      ],
+      "principle": "Identity says who is present. A lease proves what may happen now.",
+      "evidence_title": "The lease is narrow; the control path stays complete",
+      "evidence_banner": "90 seconds, one resource, one approved delta, one use",
+      "score_rows": [
+        [
+          "Credential lifetime",
+          "90 s",
+          "BOUND"
+        ],
+        [
+          "Resources",
+          "1 quote",
+          "BOUND"
+        ],
+        [
+          "Permitted uses",
+          "1",
+          "BOUND"
+        ],
+        [
+          "End-to-end p95",
+          "307 ms",
+          "PASS <= 350"
+        ],
+        [
+          "Mutation + verify",
+          "185 ms",
+          "60% OF PATH"
+        ],
+        [
+          "Standing-role reach",
+          "100%",
+          "REMOVED"
+        ]
+      ],
+      "decision_rule": "Issue authority only after evidence, policy and approval bind the exact field delta.",
+      "schedule": "2026-09-18T08:45:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Standing-role reach",
+          100
+        ],
+        [
+          "Constrained lease",
+          0.35
+        ]
+      ],
+      "unit": "% modeled reachable authority",
+      "domain": 100,
+      "formula": "allow = signature AND scope AND expiry AND unused",
+      "contract": [
+        "resource: quote/771",
+        "delta: discount 0% -> 8%",
+        "ttl: 90 seconds",
+        "use_limit: 1",
+        "expected_version: bound",
+        "verifier: independent"
+      ],
+      "failure": [
+        "Replay of an already consumed lease",
+        "Reject at the effect gateway",
+        "Record denial; do not repeat the mutation"
+      ],
+      "question": "Which standing role can become one-use authority?",
+      "chart_title": "Operating evidence comparison",
+      "chart_note": "Synthetic examples from the corresponding approved campaign and source story.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S06",
+      "slug": "human-approval-queue",
+      "short": "HUMAN APPROVAL",
+      "title": "Approval is a capacity-constrained risk service",
+      "subtitle": "A 97% approval rate can coexist with an unstable review system.",
+      "metric": "42 / 50 = 84%",
+      "metric_label": "Illustrative arrival rate, hourly capacity and reviewer utilization",
+      "flow": [
+        "Proposal",
+        "Risk",
+        "Eligibility",
+        "Queue",
+        "Reviewer",
+        "Outcome"
+      ],
+      "lanes": [
+        [
+          "INTAKE",
+          [
+            "Proposal",
+            "Risk score",
+            "Policy class"
+          ]
+        ],
+        [
+          "QUEUE",
+          [
+            "Priority",
+            "Eligibility",
+            "Deadline",
+            "Assignment"
+          ]
+        ],
+        [
+          "DECISION",
+          [
+            "Evidence packet",
+            "Reviewer",
+            "Outcome ledger"
+          ]
+        ]
+      ],
+      "principle": "Risk-weighted waiting time matters more than the aggregate approval rate.",
+      "evidence_title": "Two more arrivals can change the operating regime",
+      "evidence_banner": "At 52 arrivals/hour, five reviewers cannot stabilize the queue",
+      "score_rows": [
+        [
+          "Wait at 42/hour",
+          "4.8 min",
+          "M/M/5"
+        ],
+        [
+          "Value of review",
+          "$505",
+          "PER ACTION"
+        ],
+        [
+          "Modeled cost minimum",
+          "~60%",
+          "REVIEW RATE"
+        ]
+      ],
+      "decision_rule": "Route by loss, deadline and reviewer qualification; expire authority when the SLA expires.",
+      "schedule": "2026-09-21T14:00:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Arrival rate",
+          42
+        ],
+        [
+          "Review capacity",
+          50
+        ],
+        [
+          "Overload example",
+          52
+        ]
+      ],
+      "unit": "decisions / hour",
+      "domain": 60,
+      "formula": "rho = lambda / (c x mu); stability requires rho < 1",
+      "contract": [
+        "reviewers: 5 qualified",
+        "mean_service: 6 minutes",
+        "capacity: 50 decisions/hour",
+        "arrival_example: 42/hour",
+        "deadline: action_specific",
+        "on_expiry: no_authority"
+      ],
+      "failure": [
+        "52 arrivals/hour exceed 50/hour capacity",
+        "Apply a declared overload / expiry policy",
+        "Never turn timeout into automatic approval"
+      ],
+      "question": "Do you measure risk-weighted waiting time?",
+      "chart_title": "Operating evidence comparison",
+      "chart_note": "Synthetic M/M/5: Poisson arrivals, exponential six-minute service, five identical servers.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S07",
+      "slug": "action-receipts",
+      "short": "ACTION RECEIPTS",
+      "title": "A trace is not proof of the business effect",
+      "subtitle": "HTTP 200 and a successful span do not establish one authoritative outcome.",
+      "metric": "31 min > 15 min",
+      "metric_label": "Illustrative p99 ambiguity age versus the operating objective",
+      "flow": [
+        "Intent",
+        "Evidence",
+        "Authority",
+        "Request",
+        "Observe",
+        "Seal"
+      ],
+      "lanes": [
+        [
+          "PREPARE",
+          [
+            "Intent",
+            "Evidence",
+            "Policy",
+            "Approval"
+          ]
+        ],
+        [
+          "EXECUTE",
+          [
+            "Authority",
+            "Stable action ID",
+            "Effect boundary"
+          ]
+        ],
+        [
+          "PROVE",
+          [
+            "Verifier",
+            "Receipt chain",
+            "Recovery"
+          ]
+        ]
+      ],
+      "principle": "Timeout is an ambiguous state, not permission to repeat the side effect.",
+      "evidence_title": "Receipt coverage can pass while ambiguity control fails",
+      "evidence_banner": "One stable action ID from proposal through verified terminal state",
+      "score_rows": [
+        [
+          "Receipt coverage",
+          "100%",
+          "PASS"
+        ],
+        [
+          "Seal latency p95",
+          "38 ms",
+          "PASS <= 45"
+        ],
+        [
+          "Effect verification",
+          "99.995%",
+          "PASS"
+        ],
+        [
+          "Ambiguity age p99",
+          "31 min",
+          "BREACH > 15"
+        ],
+        [
+          "Signed core",
+          "3.2 KB",
+          "PER ACTION"
+        ],
+        [
+          "Monthly actions",
+          "10M",
+          "MODEL"
+        ]
+      ],
+      "decision_rule": "Seal only after independent observation; otherwise reconcile, compensate or freeze.",
+      "schedule": "2026-09-23T08:45:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Ambiguity objective",
+          15
+        ],
+        [
+          "Illustrative p99",
+          31
+        ]
+      ],
+      "unit": "minutes; ambiguity age",
+      "domain": 35,
+      "formula": "seal = observed_effect AND valid_authority AND lineage",
+      "contract": [
+        "action_id: stable_across_retry",
+        "intent_hash: bound",
+        "approval_hash: bound",
+        "authority_jti: bound",
+        "effect: independently_observed",
+        "recovery_state: explicit"
+      ],
+      "failure": [
+        "Request times out after possible commit",
+        "Mark AMBIGUOUS; retain the action ID",
+        "Reconcile external truth before retry"
+      ],
+      "question": "Can a receipt prove the effect without six-system reconstruction?",
+      "chart_title": "Operating evidence comparison",
+      "chart_note": "Synthetic examples from the corresponding approved campaign and source story.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S08",
+      "slug": "multi-agent-coordination",
+      "short": "MULTI-AGENT SYSTEMS",
+      "title": "Fluent agents do not create reliable coordination",
+      "subtitle": "Distributed workflows need invariants, fenced ownership and explicit recovery.",
+      "metric": "8 invariants",
+      "metric_label": "Ownership, uniqueness, causality, durability, authority, proof, lineage and recovery",
+      "flow": [
+        "Event",
+        "Workflow",
+        "Owner epoch",
+        "Domain API",
+        "Verify",
+        "Recover"
+      ],
+      "lanes": [
+        [
+          "CONTROL",
+          [
+            "Durable workflow",
+            "Owner epoch",
+            "Fencing token"
+          ]
+        ],
+        [
+          "MESSAGING",
+          [
+            "Version",
+            "Causal precondition",
+            "Idempotency"
+          ]
+        ],
+        [
+          "EFFECTS",
+          [
+            "Domain API",
+            "Verifier",
+            "Saga recovery"
+          ]
+        ]
+      ],
+      "principle": "Agents propose. Durable coordination owns state, ordering and terminal truth.",
+      "evidence_title": "Average success hides the unsafe tail",
+      "evidence_banner": "Zero duplicates is not enough when ambiguity and compensation miss their gates",
+      "score_rows": [
+        [
+          "Duplicate effects",
+          "0",
+          "PASS"
+        ],
+        [
+          "Stale-owner accepts",
+          "0",
+          "PASS"
+        ],
+        [
+          "Causal rejects",
+          "100%",
+          "PASS"
+        ],
+        [
+          "Receipt coverage",
+          "100%",
+          "PASS"
+        ],
+        [
+          "Saga recovery",
+          "99.7%",
+          "PASS"
+        ],
+        [
+          "Ambiguity age p99",
+          "24 min",
+          "BREACH > 10"
+        ]
+      ],
+      "decision_rule": "No action commits without the current owner epoch, idempotency key and verified postcondition.",
+      "schedule": "2026-09-25T14:00:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Ambiguity objective",
+          10
+        ],
+        [
+          "Illustrative p99",
+          24
+        ]
+      ],
+      "unit": "minutes; ambiguity age",
+      "domain": 30,
+      "formula": "commit = current_epoch AND unique_action AND causal_version",
+      "contract": [
+        "workflow_id: durable",
+        "owner_epoch: monotonic",
+        "action_key: stable",
+        "causal_version: checked",
+        "postcondition: verified",
+        "saga_owner: assigned"
+      ],
+      "failure": [
+        "A disconnected owner returns with stale work",
+        "Fence the old epoch at commit",
+        "The current owner reconciles the workflow"
+      ],
+      "question": "Which invariant fails first: ownership, uniqueness or recovery?",
+      "chart_title": "Operating evidence comparison",
+      "chart_note": "Synthetic examples from the corresponding approved campaign and source story.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S09",
+      "slug": "model-routing",
+      "short": "MODEL ROUTING",
+      "title": "Model routing is a portfolio decision",
+      "subtitle": "Difficulty is not exposure; optimize the whole route bundle.",
+      "metric": "$0.186 / workflow",
+      "metric_label": "Illustrative completed-workflow cost across model, tools, verification, retries and recovery",
+      "flow": [
+        "Action",
+        "Policy",
+        "Evidence",
+        "Route",
+        "Execute",
+        "Verify"
+      ],
+      "lanes": [
+        [
+          "FILTER",
+          [
+            "Privacy",
+            "Authority",
+            "Quality floor",
+            "Deadline"
+          ]
+        ],
+        [
+          "OPTIMIZE",
+          [
+            "Model",
+            "Context",
+            "Tools",
+            "Retries"
+          ]
+        ],
+        [
+          "ACCOUNT",
+          [
+            "Verification",
+            "Expected loss",
+            "CVaR95"
+          ]
+        ]
+      ],
+      "principle": "Eliminate noncompliant routes first; optimize value only inside the feasible set.",
+      "evidence_title": "Token price is only one line in the route ledger",
+      "evidence_banner": "Critical quality can pass while calibration and tail loss breach",
+      "score_rows": [
+        [
+          "Workflow total",
+          "$0.186",
+          "MODEL"
+        ],
+        [
+          "Model I/O share",
+          "26.3%",
+          "OF TOTAL"
+        ],
+        [
+          "ECE calibration",
+          "0.047",
+          "BREACH > .030"
+        ]
+      ],
+      "decision_rule": "Choose the lowest-risk feasible route per task class, then recalibrate on verified outcomes.",
+      "schedule": "2026-09-28T08:45:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Model I/O",
+          0.049
+        ],
+        [
+          "Tools",
+          0.047
+        ],
+        [
+          "Verification",
+          0.039
+        ],
+        [
+          "Retries",
+          0.025
+        ],
+        [
+          "Delay / recovery / route",
+          0.026
+        ]
+      ],
+      "unit": "USD / completed workflow",
+      "domain": 0.05,
+      "formula": "choose r in feasible_routes; minimize cost + delay + risk",
+      "contract": [
+        "route: model+context+tools",
+        "privacy: hard_constraint",
+        "authority: hard_constraint",
+        "quality_floor: task_class",
+        "tail_loss: CVaR95",
+        "feedback: verified_outcomes"
+      ],
+      "failure": [
+        "Low-cost route violates a quality or policy gate",
+        "Remove it from the feasible set",
+        "Optimize cost only among eligible routes"
+      ],
+      "question": "Does your router price the full verified workflow?",
+      "chart_title": "Full workflow cost components",
+      "chart_note": "Synthetic examples from the corresponding approved campaign and source story.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S10",
+      "slug": "kill-switch",
+      "short": "CONTAINMENT",
+      "title": "A kill switch must stop effects, not dashboards",
+      "subtitle": "Fast command acceptance is irrelevant if stale authority still commits.",
+      "metric": "200 ms != containment",
+      "metric_label": "A responsive API can coexist with minutes of continued business exposure",
+      "flow": [
+        "Trigger",
+        "Epoch",
+        "Propagate",
+        "Fence",
+        "Inventory",
+        "Prove"
+      ],
+      "lanes": [
+        [
+          "REVOKE",
+          [
+            "Signed epoch",
+            "Identity",
+            "Scheduler",
+            "Workload"
+          ]
+        ],
+        [
+          "ENFORCE",
+          [
+            "Network",
+            "Tool gateway",
+            "Queue",
+            "Data"
+          ]
+        ],
+        [
+          "RECONCILE",
+          [
+            "Inventory",
+            "Verifier",
+            "Recovery owner"
+          ]
+        ]
+      ],
+      "principle": "Stopping new authority and establishing business truth are different clocks.",
+      "evidence_title": "Containment ends only when every effect has a disposition",
+      "evidence_banner": "The modeled stop path fits 90 seconds, but local enforcement still breaches",
+      "score_rows": [
+        [
+          "In-flight actions",
+          "1,264",
+          "INVENTORY"
+        ],
+        [
+          "Command accept p99",
+          "2.1 s",
+          "PASS <= 3"
+        ],
+        [
+          "Total stop budget",
+          "85 s",
+          "PASS <= 90"
+        ],
+        [
+          "Local enforcement",
+          "41 s",
+          "BREACH > 30"
+        ],
+        [
+          "Inventory complete",
+          "99.96%",
+          "PASS"
+        ],
+        [
+          "Ambiguity closure",
+          "96.8%",
+          "BREACH < 99"
+        ]
+      ],
+      "decision_rule": "Fence every effect boundary, then reconcile committed, cancelled and unresolved actions separately.",
+      "schedule": "2026-09-30T14:00:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Local-enforcement target",
+          30
+        ],
+        [
+          "Illustrative enforcement",
+          41
+        ]
+      ],
+      "unit": "seconds; local enforcement",
+      "domain": 45,
+      "formula": "accept_effect = presented_epoch == current_epoch",
+      "contract": [
+        "containment_epoch: signed",
+        "effect_gate: fail_closed",
+        "in_flight: 1264 actions",
+        "command_p99: 2.1 seconds",
+        "stop_budget: 85 seconds",
+        "truth: independently_reconciled"
+      ],
+      "failure": [
+        "Worker continues after a containment trigger",
+        "New epoch rejects stale effect authority",
+        "Inventory and reconcile every in-flight action"
+      ],
+      "question": "What proves your emergency stop actually stopped effects?",
+      "chart_title": "Operating evidence comparison",
+      "chart_note": "Synthetic examples from the corresponding approved campaign and source story.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S11",
+      "slug": "production-evaluation",
+      "short": "PRODUCTION EVALUATION",
+      "title": "Benchmark accuracy is not production authority",
+      "subtitle": "Promote the deployable system, not an isolated model score.",
+      "metric": "92.6% -> 85.6%",
+      "metric_label": "Point estimate versus 95% Wilson lower bound for 88 successes in 95 cases",
+      "flow": [
+        "Artifact",
+        "Scenario",
+        "Evidence",
+        "Gate",
+        "Canary",
+        "Contract"
+      ],
+      "lanes": [
+        [
+          "VERSION",
+          [
+            "Model",
+            "Prompt",
+            "Retrieval",
+            "Policy"
+          ]
+        ],
+        [
+          "EVALUATE",
+          [
+            "Scenario suite",
+            "Adversarial",
+            "Recovery"
+          ]
+        ],
+        [
+          "PROMOTE",
+          [
+            "Evidence packet",
+            "Authority stage",
+            "Rollback"
+          ]
+        ]
+      ],
+      "principle": "A point estimate cannot authorize risk when the uncertainty bound misses the floor.",
+      "evidence_title": "Zero observed failures is not zero risk",
+      "evidence_banner": "The rule of three gives an approximate upper failure rate of 3/n",
+      "score_rows": [
+        [
+          "Benchmark headline",
+          "94%",
+          "INSUFFICIENT"
+        ],
+        [
+          "Critical cohort",
+          "88 / 95",
+          "OBSERVED"
+        ],
+        [
+          "Point estimate",
+          "92.6%",
+          "PASS"
+        ],
+        [
+          "95% lower bound",
+          "85.6%",
+          "FAIL < 92"
+        ],
+        [
+          "10,000 clean trials",
+          "~0.03%",
+          "UPPER RATE"
+        ],
+        [
+          "Authority stages",
+          "6",
+          "PROGRESSIVE"
+        ]
+      ],
+      "decision_rule": "Expand authority only when cohort evidence, uncertainty and recovery gates all pass.",
+      "schedule": "2026-10-02T08:45:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Point estimate",
+          92.63157894736842
+        ],
+        [
+          "95% Wilson lower bound",
+          85.5643147117504
+        ],
+        [
+          "Required floor",
+          92
+        ]
+      ],
+      "unit": "% verified successes, n=95",
+      "domain": 100,
+      "formula": "promote = cohort_bound >= floor AND recovery_gate",
+      "contract": [
+        "critical_cohort: 88 / 95",
+        "confidence: 95% two_sided",
+        "lower_bound: Wilson",
+        "production_floor: 92%",
+        "zero_failures: not_zero_risk",
+        "authority: staged_promotion"
+      ],
+      "failure": [
+        "Point estimate passes; uncertainty bound fails",
+        "Hold the current authority stage",
+        "Collect representative evidence before promotion"
+      ],
+      "question": "Which production claim has the weakest evidence?",
+      "chart_title": "Critical-cohort evidence and floor",
+      "chart_note": "88 successes / 95 independent representative cases; 95% two-sided Wilson interval.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S12",
+      "slug": "agent-memory",
+      "short": "AGENT MEMORY",
+      "title": "Memory needs freshness and deletion SLOs",
+      "subtitle": "Fast retrieval says nothing about truth, permission or reversibility.",
+      "metric": "104 ms + 31 h",
+      "metric_label": "Retrieval passes while deletion p99 breaches the 24-hour objective",
+      "flow": [
+        "Ingest",
+        "Provenance",
+        "Trust",
+        "Retrieve",
+        "Decide",
+        "Delete"
+      ],
+      "lanes": [
+        [
+          "WRITE",
+          [
+            "Sources",
+            "Version",
+            "Provenance",
+            "Trust"
+          ]
+        ],
+        [
+          "READ",
+          [
+            "Purpose",
+            "Freshness",
+            "Conflict",
+            "Retrieval"
+          ]
+        ],
+        [
+          "LIFECYCLE",
+          [
+            "Decision artifact",
+            "Reverse lineage",
+            "Deletion receipt"
+          ]
+        ]
+      ],
+      "principle": "Memory is governed state with provenance, purpose and lifecycle controls.",
+      "evidence_title": "One freshness threshold cannot govern every memory class",
+      "evidence_banner": "Six-hour prices and 180-day contract terms decay on different clocks",
+      "score_rows": [
+        [
+          "Price half-life",
+          "6 h",
+          "CLASS"
+        ],
+        [
+          "Case status",
+          "24 h",
+          "CLASS"
+        ],
+        [
+          "Account risk",
+          "7 d",
+          "CLASS"
+        ],
+        [
+          "Contract term",
+          "180 d",
+          "CLASS"
+        ],
+        [
+          "Poison admission",
+          "1",
+          "BREACH"
+        ],
+        [
+          "Deletion p99",
+          "31 h",
+          "BREACH > 24"
+        ]
+      ],
+      "decision_rule": "Retrieve only assertions that are current, attributable, permitted and conflict-resolved.",
+      "schedule": "2026-10-05T14:00:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Deletion objective",
+          24
+        ],
+        [
+          "Illustrative deletion p99",
+          31
+        ]
+      ],
+      "unit": "hours; derivative deletion",
+      "domain": 36,
+      "formula": "admit = provenance AND purpose AND freshness AND trust",
+      "contract": [
+        "assertion: typed_version",
+        "valid_time: domain_specific",
+        "purpose: authorized",
+        "conflicts: preserved",
+        "derivatives: reverse_lineage",
+        "deletion: completion_receipt"
+      ],
+      "failure": [
+        "Poisoned memory crosses an admission boundary",
+        "Narrow the affected read and action classes",
+        "Reconcile derivatives before deletion is complete"
+      ],
+      "question": "Which memory SLO exposes risk that latency hides?",
+      "chart_title": "Operating evidence comparison",
+      "chart_note": "Synthetic examples from the corresponding approved campaign and source story.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S13",
+      "slug": "crm-risk-workflow",
+      "short": "AGENTIC CRM",
+      "title": "A $288,000 delta is not tool use",
+      "subtitle": "A model recommendation becomes a commercial decision at the effect boundary.",
+      "metric": "$288K in 108 min",
+      "metric_label": "Twelve percent of a $2.4M renewal inside the illustrative response window",
+      "flow": [
+        "Signals",
+        "Evidence",
+        "Risk",
+        "Approval",
+        "Execute",
+        "Verify"
+      ],
+      "lanes": [
+        [
+          "PREPARE",
+          [
+            "Support",
+            "Contract",
+            "Quote",
+            "Customer"
+          ]
+        ],
+        [
+          "DECIDE",
+          [
+            "Conflict set",
+            "Risk model",
+            "Policy",
+            "Approval"
+          ]
+        ],
+        [
+          "ACT",
+          [
+            "One-use lease",
+            "Version check",
+            "Verifier",
+            "Recovery"
+          ]
+        ]
+      ],
+      "principle": "Model confidence informs the proposal; it never becomes commercial authority.",
+      "evidence_title": "Nine observable states separate recommendation from commitment",
+      "evidence_banner": "Approve the exact field delta, resource version, validity window and recovery path",
+      "score_rows": [
+        [
+          "Renewal value",
+          "$2.4M",
+          "EXPOSURE"
+        ],
+        [
+          "Requested discount",
+          "12%",
+          "PROPOSAL"
+        ],
+        [
+          "Proposed delta",
+          "$288K",
+          "AT RISK"
+        ],
+        [
+          "Decision window",
+          "108 min",
+          "DEADLINE"
+        ],
+        [
+          "Approved example",
+          "8%",
+          "EXACT DELTA"
+        ],
+        [
+          "Control states",
+          "9",
+          "OBSERVABLE"
+        ]
+      ],
+      "decision_rule": "If evidence or quote version changes, invalidate the approval and recompute the decision.",
+      "schedule": "2026-10-07T08:45:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Requested 12% discount",
+          288000
+        ],
+        [
+          "Approved 8% example",
+          192000
+        ]
+      ],
+      "unit": "USD on $2.4M renewal",
+      "domain": 320000,
+      "formula": "commit = approved_delta AND expected_quote_version",
+      "contract": [
+        "renewal: $2.4M",
+        "request: 12% = $288K",
+        "approval_example: 8%",
+        "resource: one_named_quote",
+        "expected_version: exact",
+        "retry: reconcile_before_act"
+      ],
+      "failure": [
+        "Evidence or quote version changes after approval",
+        "Invalidate the old decision and lease",
+        "Recompute risk before a commercial commitment"
+      ],
+      "question": "Where does your CRM enforce the commitment boundary?",
+      "chart_title": "Operating evidence comparison",
+      "chart_note": "Synthetic examples from the corresponding approved campaign and source story.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    },
+    {
+      "id": "S14",
+      "slug": "verified-outcome-economics",
+      "short": "AGENT ECONOMICS",
+      "title": "Price the verified outcome, not the model call",
+      "subtitle": "The denominator and control plane dominate the economics of production agents.",
+      "metric": "20.8% vs 68.4%",
+      "metric_label": "Inference share versus human review plus always-on control-plane share",
+      "flow": [
+        "Attempt",
+        "Model",
+        "Tools",
+        "Review",
+        "Verify",
+        "Unit cost"
+      ],
+      "lanes": [
+        [
+          "ATTEMPT",
+          [
+            "Evidence",
+            "Inference",
+            "Tools",
+            "Retries"
+          ]
+        ],
+        [
+          "CONTROL",
+          [
+            "Evaluation",
+            "Approval",
+            "Containment",
+            "Platform"
+          ]
+        ],
+        [
+          "OUTCOME",
+          [
+            "Postcondition",
+            "Verified count",
+            "Unit economics"
+          ]
+        ]
+      ],
+      "principle": "Every attempt is billed; only independently verified outcomes enter the denominator.",
+      "evidence_title": "Verification rate is the largest modeled cost lever",
+      "evidence_banner": "$0.9502 per attempt becomes $1.135 per verified outcome",
+      "score_rows": [
+        [
+          "Monthly attempts",
+          "40,000",
+          "MODEL"
+        ],
+        [
+          "Inference",
+          "$0.1980",
+          "20.8%"
+        ],
+        [
+          "Human review",
+          "$0.4125",
+          "43.4%"
+        ],
+        [
+          "Tier-0 platform",
+          "$0.2375",
+          "25.0%"
+        ],
+        [
+          "Verified rate",
+          "83.7%",
+          "DENOMINATOR"
+        ],
+        [
+          "Unit cost",
+          "$1.135",
+          "VERIFIED"
+        ]
+      ],
+      "decision_rule": "Optimize verification, reviewer minutes and route quality before negotiating token price.",
+      "schedule": "2026-10-09T14:00:00+05:30",
+      "media": "3-page PDF",
+      "chart": [
+        [
+          "Inference",
+          0.198
+        ],
+        [
+          "Human review",
+          0.4125
+        ],
+        [
+          "Tier-0 control plane",
+          0.2375
+        ],
+        [
+          "Other operating costs",
+          0.1022
+        ]
+      ],
+      "unit": "USD / attempted objective",
+      "domain": 0.45,
+      "formula": "cost_per_verified = cost_per_attempt / verified_rate",
+      "contract": [
+        "attempts_per_month: 40000",
+        "cost_per_attempt: $0.9502",
+        "verified_rate: 0.837",
+        "verified_unit_cost: $1.135",
+        "review: $0.4125 / attempt",
+        "control_plane: $0.2375 / attempt"
+      ],
+      "failure": [
+        "Cheap tokens raise retries and failed verification",
+        "Recompute cost per verified outcome",
+        "Reject a route whose denominator destroys savings"
+      ],
+      "question": "Can your business case price the verified denominator?",
+      "chart_title": "Full workflow cost components",
+      "chart_note": "Synthetic examples from the corresponding approved campaign and source story.",
+      "note": "Illustrative / synthetic operating model. Not observed production results."
+    }
+  ]
+}
