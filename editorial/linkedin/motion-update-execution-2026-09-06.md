@@ -1,8 +1,8 @@
 # Approved scheduled-media update — execution checkpoint
 
-Initially recorded: 6 September 2026, 17:23 IST (11:53 UTC). Updated: 20:08 IST (14:38 UTC).
+Initially recorded: 6 September 2026, 17:23 IST (11:53 UTC). Updated: 21:10 IST (15:40 UTC).
 
-Status: **S01–S04 saved media verified. S05 save submitted once, persisted-state verification blocked. S06–S14 not edited.** Verified items are documented in [the partial media-update receipt](../../linkedin/media-executions/2026-09-06-s01-s04.md). This checkpoint also includes incomplete attempts; do not treat those as successful receipts.
+Status: **S01–S12 saved media verified. S13 saved once with a success notification, but reopened verification is blocked. S14 untouched.** Verified items are documented in the [S01–S04 receipt](../../linkedin/media-executions/2026-09-06-s01-s04.md) and [S05–S12 receipt](../../linkedin/media-executions/2026-09-06-s05-s12.md). This checkpoint also includes incomplete attempts; do not treat those as successful receipts.
 
 ## Authority and exact assets
 
@@ -40,15 +40,27 @@ After the user reported opening the tab, the existing LinkedIn tab was located a
 - LinkedIn briefly displayed **Upload already in progress** when opening a composer immediately after S03's save. Closed that informational dialog, allowed processing to finish, then verified S03 from its original scheduled entry. No second save or new post was created.
 - After S05, page-level controls again reported an unattached debugger. A fresh-tab recovery attempt timed out before returning a controllable tab; the tab inventory showed no additional usable recovery tab. Native Chrome inspection again returned only a sidebar fragment. No S06–S14 actions were attempted.
 
-## Next steps
+### Lock-related recovery checkpoint — before the user's unlock
 
 Latest recovery attempt: a clean tab briefly restored access to S05's existing editor and showed the original September 18, 08:45 schedule and caption, but timed out before saved-video verification. No new upload or save was performed. Attempts to close the two stale LinkedIn tabs could not be confirmed. Native control then explicitly reported that **the Mac is locked and automatic unlock failed**. Manual Mac unlock is required before continuing; browser reconnection alone is not sufficient while the host is locked. S01–S04 remain verified, S05 remains submitted/unverified, and S06–S14 remain untouched.
 
-1. Restore control of the existing signed-in LinkedIn Chrome tab with user assistance.
-2. Before any new save or upload, inspect S05's September 18, 08:45 IST entry and reconcile its saved video, original text and settings. Do not retry S05 blindly.
-3. S01–S04 have already been verified; do not upload or save them again. If S05 is correct, extend the verified receipt; otherwise report the observed state before choosing recovery.
-4. Recheck and perform S06–S14's approved media-only updates one at a time, verifying each saved entry. The remaining nine entries are untouched.
-5. Do not delete/recreate entries, change schedules or substitute formats without separate user direction.
+### Execution after the user unlocked the Mac — through 21:10 IST
+
+- Reopened S05's existing September 18, 08:45 editor. The saved video, Remove media control, Anyone audience, original schedule and exact caption were present. No second save or upload was made. The full stable-markup comparison timed out, so this check does not claim a second successful HTML comparison.
+- S06–S12: opened each existing scheduled entry, captured its original caption, removed only the PDF and selected that entry's exact approved MP4 through the native file picker. Original captions, links, hashtags, Anyone audience and times matched before saving. Each Schedule button was clicked once. Each post was then reopened from its original schedule entry and the saved video, original caption and time were verified. S06's upload preview was played and visibly showed its matching 42/50 = 84% queueing animation. S07–S12 saved verification establishes video presence, not a claim that each saved video was played end-to-end.
+- S13: the original October 7, 08:45 caption and Anyone audience were captured. Replaced only its PDF with `s13-crm-risk-workflow/motion.mp4` (SHA-256 `e89950df72e1500a614a462432b321d75bf0d30b9ccbc46c9df3630b6046f196`). Exact caption, original schedule and video presence passed the pre-save check. Clicked Schedule once and LinkedIn displayed **Post scheduled.** Opening the composer to verify it then showed **Upload already in progress**. Dismissed that informational warning; no retry/save was made.
+- Before S13's save, the loaded schedule list showed all 14 expected distinct times through October 9. This is not a final all-14 post-save reconciliation.
+- Chrome then returned only a partial navigation fragment and no screenshot. Reacquiring the existing tab reported **Debugger unattached**. Native reconnection, Cancel/Escape, a control-session reset and existing-tab retry did not restore access. Unlike the earlier lock checkpoint, these latest results do not explicitly establish whether the Mac locked again; the concrete blocker is unavailable native and browser control.
+- S14 was not opened or changed. No new Chrome window or tab was created during this continuation. Existing duplicate-tab closure is still unverified; unrelated tabs were left alone.
+- All 14 approved source MP4 hashes were rechecked at the checkpoint and still matched the QA manifest. Assets were not modified. No GIF was uploaded, no caption was rewritten, and no post was deleted or recreated.
+
+## Next steps
+
+1. Restore control of the existing signed-in Chrome tab; the user may need to keep the Mac unlocked with Chrome visible. Do not disable security settings or open duplicate tabs as a workaround.
+2. Reopen S13's October 7, 08:45 entry and verify its saved video, original caption and schedule before any further upload/save. Its success notification is not the missing persisted-state check. Do not retry S13 blindly.
+3. S01–S12 are already verified; do not upload or save them again.
+4. Perform S14's approved in-place MP4 replacement on its October 9, 14:00 entry, preserving all other details, then reopen and verify it.
+5. Reconcile the final 14-entry ledger, record only visibly verified outcomes, and commit/push the completion receipt. Do not delete/recreate entries, change schedules or substitute formats without separate user direction.
 
 No credentials, cookies, private scheduler URLs, browser-state exports or private message content are retained.
 
