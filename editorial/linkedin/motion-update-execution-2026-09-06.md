@@ -42,6 +42,8 @@ After the user reported opening the tab, the existing LinkedIn tab was located a
 
 ## Next steps
 
+Latest recovery attempt: a clean tab briefly restored access to S05's existing editor and showed the original September 18, 08:45 schedule and caption, but timed out before saved-video verification. No new upload or save was performed. Attempts to close the two stale LinkedIn tabs could not be confirmed. Native control then explicitly reported that **the Mac is locked and automatic unlock failed**. Manual Mac unlock is required before continuing; browser reconnection alone is not sufficient while the host is locked. S01–S04 remain verified, S05 remains submitted/unverified, and S06–S14 remain untouched.
+
 1. Restore control of the existing signed-in LinkedIn Chrome tab with user assistance.
 2. Before any new save or upload, inspect S05's September 18, 08:45 IST entry and reconcile its saved video, original text and settings. Do not retry S05 blindly.
 3. S01–S04 have already been verified; do not upload or save them again. If S05 is correct, extend the verified receipt; otherwise report the observed state before choosing recovery.
