@@ -25,6 +25,12 @@ The 14 local MP4 SHA-256 values were rechecked and match `output/linkedin/schedu
 
 ## Remaining work
 
+### Reconnection check — 6 September 2026, 19:07 IST
+
+After the user reported opening the tab, the existing LinkedIn tab was located again. Its initial native view still showed the earlier **Post scheduled.** notification, but opening the scheduled-post view again did not expose a usable ledger. Both direct tab selection and reclaiming the same existing tab returned **Debugger unattached** on page inspection. Native accessibility then returned only a sidebar fragment, and the native screenshot call reported **Screenshot unavailable**. No new upload, save, post creation, tab creation, or S02–S14 edit was performed. The status above remains unchanged; the old toast alone is not persisted-state verification.
+
+### Next steps
+
 1. Restore control of the existing signed-in LinkedIn Chrome tab with user assistance.
 2. Before any new save or upload, inspect the scheduled ledger for S01. Check that there is exactly one September 7, 08:45 IST entry and that its intended 36-second video, text, mention, audience and comment settings persisted. Do not retry S01 blindly.
 3. If S01 is correct, record a verified media-update receipt; otherwise report the exact observed state before deciding on recovery.
