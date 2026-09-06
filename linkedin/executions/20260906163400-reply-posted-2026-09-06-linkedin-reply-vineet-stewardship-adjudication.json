@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260906163400-reply-posted-2026-09-06-linkedin-reply-vineet-stewardship-adjudication",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-06T16:34:00Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-06T16:34:00Z",
+    "scope": "User replied Approved. immediately after exact N1 and N2 wording and targets were shown. Source context was rechecked before execution and wording was unchanged. Confirmation timestamp is receipt transcription time; approval preceded execution."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-06-linkedin-reply-vineet-stewardship-adjudication",
+    "targetUrl": "https://www.linkedin.com/pulse/implementing-agentic-medallion-practitioners-playbook-vineet-kumar-hzqyc/",
+    "publicUrl": "https://www.linkedin.com/pulse/implementing-agentic-medallion-practitioners-playbook-vineet-kumar-hzqyc/",
+    "publishedTextSha256": "c2948a53b8d888bc52a72dd12d7c7d679eba16e67b81b963602cc76133e3be3a",
+    "verifiedAt": "2026-09-06T16:34:00Z",
+    "verification": "Posted once through Reply on Vineet Kumar's author response to the user's existing comment. LinkedIn rendered the exact approved body under Aditya Singh (You) with timestamp now and clickable Vineet Kumar mention resolving to /in/vineetk1103/. Screenshot and editor checks retained the native mention. A reload was initiated and its initial snapshot retained the reply, but later control failed; no independent post-reload persistence claim is made. Public URL is the verified source article, not an invented comment permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

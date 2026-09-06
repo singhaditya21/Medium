@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260906163937-reply-posted-2026-09-06-linkedin-reply-gaurav-issuance-end-to-end",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-06T16:39:37Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-06T16:39:37Z",
+    "scope": "The user said Approved after the exact N1 and N2 threaded replies and targets were shown. Approval covers this exact N2 reply with Gaurav Sarda as sole native mention; no reactions, follows, DMs or schedule changes. Receipt timestamps describe recording in the approved execution turn, not reconstructed exact click times."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-06-linkedin-reply-gaurav-issuance-end-to-end",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501926227725873153&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501926227725873153&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+    "publishedTextSha256": "f2e0cd58b6978d63bd0a8f2c4e8d582b15de724485c2249fd30d71ce99830656",
+    "verifiedAt": "2026-09-06T16:39:37Z",
+    "verification": "Reopened the verified public source, read our original issuance/servicing/claims question and Gaurav author response, and found no duplicate approved reply in the conversation. Used Reply on Gaurav response, retained the native mention, confirmed the exact composer body and submitted once. After loading completed, LinkedIn rendered Aditya Singh / You, timestamp now, exact approved text and clickable Gaurav Sarda mention resolving to /in/sardagaurav/. The composer cleared and parent reply count changed from 1 to 2. This is authoritative visible posted-result verification, not a claim of an independent reload check. Public result URL is the source post; no reply permalink was invented."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
