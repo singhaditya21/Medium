@@ -1,6 +1,8 @@
 # Scheduled LinkedIn motion upgrade — 5 September 2026
 
-Status: **preparation authorized; no scheduled post has been changed.**
+Preparation status on 5 September: **preparation authorized; no scheduled post changed during preparation.**
+
+Execution update on 6 September: the user approved S01–S14. S01's media-only save was acknowledged by LinkedIn, but final persisted-state verification is blocked by browser control. S02–S14 have not been edited. See [execution checkpoint](motion-update-execution-2026-09-06.md). The rest of this document records the original preparation audit.
 
 The signed-in LinkedIn scheduled-post list was inspected through its final entry. It contains **14 posts**, not 15: three text-only posts, one Medium link preview and ten three-page PDF documents. No scheduled entry currently shows a video. Dates below are 2026, Asia/Kolkata.
 
