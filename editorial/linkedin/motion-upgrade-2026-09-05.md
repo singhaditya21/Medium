@@ -2,7 +2,7 @@
 
 Preparation status on 5 September: **preparation authorized; no scheduled post changed during preparation.**
 
-Execution update on 6 September: the user approved S01–S14. S01's media-only save was acknowledged by LinkedIn, but final persisted-state verification is blocked by browser control. S02–S14 have not been edited. See [execution checkpoint](motion-update-execution-2026-09-06.md). The rest of this document records the original preparation audit.
+Execution update on 6 September, 20:08 IST: the user approved S01–S14. **S01–S04 saved MP4s are verified; S05 was submitted once but saved-state verification is blocked; S06–S14 are untouched.** See [execution checkpoint](motion-update-execution-2026-09-06.md) and [partial verified receipt](../../linkedin/media-executions/2026-09-06-s01-s04.md). The rest of this document records the original preparation audit, not the latest live state.
 
 The signed-in LinkedIn scheduled-post list was inspected through its final entry. It contains **14 posts**, not 15: three text-only posts, one Medium link preview and ten three-page PDF documents. No scheduled entry currently shows a video. Dates below are 2026, Asia/Kolkata.
 
