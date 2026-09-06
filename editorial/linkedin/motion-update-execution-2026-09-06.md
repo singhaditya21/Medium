@@ -1,8 +1,8 @@
 # Approved scheduled-media update — execution checkpoint
 
-Initially recorded: 6 September 2026, 17:23 IST (11:53 UTC). Updated: 21:10 IST (15:40 UTC).
+Initially recorded: 6 September 2026, 17:23 IST (11:53 UTC). Completed: 21:43 IST (16:13 UTC).
 
-Status: **S01–S12 saved media verified. S13 saved once with a success notification, but reopened verification is blocked. S14 untouched.** Verified items are documented in the [S01–S04 receipt](../../linkedin/media-executions/2026-09-06-s01-s04.md) and [S05–S12 receipt](../../linkedin/media-executions/2026-09-06-s05-s12.md). This checkpoint also includes incomplete attempts; do not treat those as successful receipts.
+Status: **COMPLETE — S01–S14 saved MP4s verified. Final ledger reconciled: 14 entries, 14 distinct original schedule slots.** See the [completion receipt](../../linkedin/media-executions/2026-09-06-complete.md), [S01–S04 receipt](../../linkedin/media-executions/2026-09-06-s01-s04.md) and [S05–S12 receipt](../../linkedin/media-executions/2026-09-06-s05-s12.md). The recovery sections below preserve historical incomplete attempts; they are not the latest state.
 
 ## Authority and exact assets
 
@@ -54,14 +54,20 @@ Latest recovery attempt: a clean tab briefly restored access to S05's existing e
 - S14 was not opened or changed. No new Chrome window or tab was created during this continuation. Existing duplicate-tab closure is still unverified; unrelated tabs were left alone.
 - All 14 approved source MP4 hashes were rechecked at the checkpoint and still matched the QA manifest. Assets were not modified. No GIF was uploaded, no caption was rewritten, and no post was deleted or recreated.
 
-## Next steps
+### Final continuation — completed by 21:43 IST
 
-1. Restore control of the existing signed-in Chrome tab; the user may need to keep the Mac unlocked with Chrome visible. Do not disable security settings or open duplicate tabs as a workaround.
-2. Reopen S13's October 7, 08:45 entry and verify its saved video, original caption and schedule before any further upload/save. Its success notification is not the missing persisted-state check. Do not retry S13 blindly.
-3. S01–S12 are already verified; do not upload or save them again.
-4. Perform S14's approved in-place MP4 replacement on its October 9, 14:00 entry, preserving all other details, then reopen and verify it.
-5. Reconcile the final 14-entry ledger, record only visibly verified outcomes, and commit/push the completion receipt. Do not delete/recreate entries, change schedules or substitute formats without separate user direction.
+- Existing native Chrome controls were available again. No new browser window or tab was opened.
+- Reopened S13's October 7, 08:45 editor before any mutation. The original full caption, link, hashtags, Anyone audience, schedule, Remove media control and saved Video player were present. Played the saved video and visually confirmed the matching **$288K in 108 min** CRM-risk animation. No second S13 save/upload was made.
+- Opened S14's October 9, 14:00 existing editor and captured its original full caption. Its old attachment was the three-page document **Price the Verified Outcome, Not the Model Call**. Removed only that document and uploaded the approved `s14-verified-outcome-economics/motion.mp4`. The source SHA-256 was rechecked and matched `b485a4706186e0e9b85de9226d6e41e8673fcfbea384a875a6ebb139c0a115ce`.
+- S14 pre-save native caption equality passed, and Anyone audience, original October 9, 14:00 schedule and video were present. Preview playback showed the matching **20.8% vs 68.4%** animation. Clicked Schedule once; LinkedIn showed **Post scheduled.**
+- Reopened S14 from the original schedule entry. Native caption equality passed again; the saved Video player, Remove media control, Anyone audience and original scheduled time were present. Played the saved video and visually confirmed the matching economics animation.
+- After S14's save, expanded the schedule ledger through its final entry: **14 entries and 14 unique original date/time slots**, September 7 through October 9. No extra or missing slot was observed. S01–S12 were not edited again.
+- Returned to the scheduled-post list without another save. No caption, link, hashtag, mention, schedule, audience, comment permission or partnership setting was intentionally changed. Attachment-protected comment/partnership controls were left untouched, not represented as independently reread after save.
+
+## Remaining work
+
+None for the approved S01–S14 media-only batch. All fourteen updates have saved-state verification. Future publication or engagement monitoring is separate from this execution.
 
 No credentials, cookies, private scheduler URLs, browser-state exports or private message content are retained.
 
-The `linkedin-engage-network` skill's visible-result verification requirement is the reason this checkpoint is not marked complete.
+The `linkedin-engage-network` skill's visible-result verification requirement is satisfied by the individual reopened checks and final schedule reconciliation recorded in the receipts.

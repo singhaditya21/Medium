@@ -2,7 +2,7 @@
 
 Preparation status on 5 September: **preparation authorized; no scheduled post changed during preparation.**
 
-Execution update on 6 September, 21:10 IST: the user approved S01–S14. **S01–S12 saved MP4s are verified; S13 showed a save confirmation but reopened verification is blocked; S14 is untouched.** See [execution checkpoint](motion-update-execution-2026-09-06.md), [S01–S04 receipt](../../linkedin/media-executions/2026-09-06-s01-s04.md) and [S05–S12 receipt](../../linkedin/media-executions/2026-09-06-s05-s12.md). The rest of this document records the original preparation audit, not the latest live state.
+Execution completed on 6 September, 21:43 IST: **S01–S14 saved MP4s verified; all 14 original schedule slots reconciled.** No scheduled post was deleted/recreated, and original captions, links, mentions and times were retained. See [completion receipt](../../linkedin/media-executions/2026-09-06-complete.md) and [execution history](motion-update-execution-2026-09-06.md). The rest of this document records the original preparation audit, not the latest live state.
 
 The signed-in LinkedIn scheduled-post list was inspected through its final entry. It contains **14 posts**, not 15: three text-only posts, one Medium link preview and ten three-page PDF documents. No scheduled entry currently shows a video. Dates below are 2026, Asia/Kolkata.
 
@@ -57,4 +57,4 @@ Approve S01–S14's exact generated MP4 files as media-only replacements/additio
 
 The complete review gallery is `output/linkedin/scheduled-motion-2026-09-05/index.html`. All 14 GIFs and 14 MP4s have been rendered and validated; all 84 storyboard scenes have been visually reviewed. Content/layout tests and the existing engagement validator pass. S01 MP4 playback was visibly spot-checked in Chrome. The full review record, media hashes and remaining upload checks are in the package's `visual-review.md` and `qa.json`.
 
-Prepared media is not evidence of a live replacement. All 14 LinkedIn entries remain unchanged pending exact preview approval.
+At the close of preparation on September 5, all 14 LinkedIn entries were unchanged pending exact preview approval. Prepared media alone was not evidence of a live replacement. Subsequent approved execution and verification are recorded in the completion receipt above.
