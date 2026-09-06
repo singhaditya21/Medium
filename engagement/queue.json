@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-05T14:38:25Z",
+  "updatedAt": "2026-09-06T16:25:35Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2895,6 +2895,40 @@
       "responseUrl": "https://www.linkedin.com/pulse/data-montages-21-from-agent-ready-context-manas-jain-ucntf/",
       "receiptOperationId": "20260905143825-reply-posted-2026-09-05-linkedin-reply-manas-live-recovery-readiness",
       "postedAt": "2026-09-05T14:38:25Z"
+    },
+    {
+      "id": "2026-09-06-linkedin-reply-vineet-stewardship-adjudication",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/pulse/implementing-agentic-medallion-practitioners-playbook-vineet-kumar-hzqyc/",
+      "title": "Reply to Vineet Kumar on human stewardship for uncertain matches",
+      "author": "Vineet Kumar",
+      "reason": "New direct response to the user's existing conversation. Provisional until live thread and duplicate checks succeed; exact user approval required before public action.",
+      "evidence": "Refreshed September 6 notifications showed a roughly 23-minute-old mention. Vineet says probable master-data matches entering Silver need stewardship and human feedback increases trust. The adjacent like alert reproduces our prior deterministic-acceptance comment, matching posted candidate 2026-09-05-linkedin-approved-wave-b5. Notification destination identifies parent comment 7501966418515722240 and reply 7502393792876933120 on ugcPost 7472297604232421377. Source-thread navigation failed when Chrome native controls became unavailable and direct tab control reported Debugger unattached. Provisional notification-grounded draft; must inspect live reply and duplicates before promotion/execution. Score inputs relevance 1.00, discussion 0.95, contribution 0.90, recency 1.00.",
+      "draftResponse": "Vineet Kumar, agreed—the deterministic boundary should route uncertainty, not replace stewardship. I’d separate confirmed, probable and conflicting matches, require a steward’s adjudication before uncertain merges become trusted data, and retain the evidence and reviewer rationale with each override. Three useful measures are false merges that escape review, p95 stewardship turnaround and the share of overrides later reversed.",
+      "priorityScore": 0.9675,
+      "intendedMentions": [
+        "Vineet Kumar"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-06-linkedin-reply-gaurav-issuance-end-to-end",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501926227725873153&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+      "title": "Reply to Gaurav Sarda on end-to-end issuance measures",
+      "author": "Gaurav Sarda",
+      "reason": "New direct response to the user's existing conversation. Provisional until live thread and duplicate checks succeed; exact user approval required before public action.",
+      "evidence": "Refreshed September 6 notifications showed a roughly 12-hour-old mention. Gaurav says issuance will be the first proof point, but the entire experience must come together. Adjacent like alert reproduces our prior issuance/servicing/claims question, matching posted candidate 2026-09-05-linkedin-approved-expanded-a2. Existing public post URL comes from that verified receipt. Source-thread and duplicate check could not be completed after Chrome control disconnected. Provisional notification-grounded draft; inspect the actual author reply before promotion/execution. Score inputs relevance 0.95, discussion 0.90, contribution 0.90, recency 0.90.",
+      "draftResponse": "Gaurav Sarda, issuance is a useful first proof point because it exposes the handoffs across underwriting, payment and policy administration. I’d track three end-to-end measures: p95 proposal-to-policy time, first-time-right issuance and payment-to-policy mismatches. That makes faster issuance meaningful only when the customer receives a correct, serviceable policy—not when an individual component reports success.",
+      "priorityScore": 0.9175,
+      "intendedMentions": [
+        "Gaurav Sarda"
+      ],
+      "state": "proposed"
     }
   ]
 }
