@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260907053101-comment-posted-2026-09-07-linkedin-comment-janardhan-vendor-change-assurance",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-07T05:31:01Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-07T05:31:01Z",
+    "scope": "User Approved immediately following the exact O1–O4 packet. O4 top-level comment with only Janardhan Reddy CH native mention; exact approved wording."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-07-linkedin-comment-janardhan-vendor-change-assurance",
+    "targetUrl": "https://www.linkedin.com/posts/janardhanreddych_ai-aigovernance-responsibleai-share-7502214971481837568-Gxkp/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502214974581424128?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7502214974581424128%2C7502598923879104512%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502598923879104512%2Curn%3Ali%3Aactivity%3A7502214974581424128%29",
+    "publishedTextSha256": "b0865d4669c17bb725e89c0dbeb19cd62d61d1693e10709dd48d42dfccccf75c",
+    "verifiedAt": "2026-09-07T05:31:01Z",
+    "verification": "Reopened source; 14 preexisting comments including expanded replies and remaining comments checked. Two additional comments since research (Durgesh, Tariq) did not duplicate dependency-map testing proposal; no Aditya duplicate. Selected matching Director Data Management and Analytics from native suggestions. Complete composer matched approved text. Submitted once. Rendered Aditya Singh • You with now timestamp, linked Janardhan mention and cleared composer. Expanded comment; screenshot confirmed entire approved ending no accountable reviewer. Public permalink copied through UI. Receipt timestamps reflect recording time."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

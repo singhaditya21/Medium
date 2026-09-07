@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260907052121-comment-posted-2026-09-07-linkedin-comment-vishal-semantic-contract-tests",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-07T05:21:21Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-07T05:21:21Z",
+    "scope": "User Approved immediately following the exact O1–O4 packet. O1 top-level comment with only Vishal Makin native mention; exact approved wording."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-07-linkedin-comment-vishal-semantic-contract-tests",
+    "targetUrl": "https://www.linkedin.com/posts/vishal-makin_we-have-spent-years-building-data-platforms-ugcPost-7502480313709711360-fx44/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7502480313709711360?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7502480313709711360%2C7502596659697315840%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502596659697315840%2Curn%3Ali%3AugcPost%3A7502480313709711360%29",
+    "publishedTextSha256": "f7e8a90f31fa72e2068e0f9302a669e66a47330340f250f5d00dde79ee6e1982",
+    "verifiedAt": "2026-09-07T05:21:21Z",
+    "verification": "Reopened source in existing signed-in Chrome; sole preexisting Bao comment checked, no Aditya duplicate. Selected matching Principal Architect author from native mention suggestions. Complete composer matched approved wording. Submitted once. Rendered Aditya Singh • You comment with now timestamp and linked Vishal Makin mention; composer cleared, comments increased 1 to 2. Copied public comment link through visible UI. Receipt timestamps reflect recording time."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

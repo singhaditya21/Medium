@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260907052725-comment-posted-2026-09-07-linkedin-comment-pranjal-cost-per-resolved-case",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-07T05:27:25Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-07T05:27:25Z",
+    "scope": "User Approved immediately following the exact O1–O4 packet. O3 top-level comment with only Pranjal Prashar native mention; exact approved wording."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-07-linkedin-comment-pranjal-cost-per-resolved-case",
+    "targetUrl": "https://www.linkedin.com/posts/pranjalprashar_i-recently-became-an-lp-in-gai-ventures-share-7502399541841649665-yRT2/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502399545151242241?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7502399545151242241%2C7502598075933442048%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502598075933442048%2Curn%3Ali%3Aactivity%3A7502399545151242241%29",
+    "publishedTextSha256": "bada6e81f36acc1f08d765a26203aef32cc39e8ff8d2189eb6a6371380220e58",
+    "verifiedAt": "2026-09-07T05:27:25Z",
+    "verification": "Reopened source; all four existing comments rechecked, no Aditya duplicate or material context change. Selected matching Entrepreneur Investor Builder from native mention suggestions. Entire composer matched approved text including explicitly illustrative 80/20 example. Submitted once. Aditya Singh • You rendered with now timestamp, linked Pranjal mention and cleared composer. Expanded comment and screenshot confirmed full wording through genuinely been rebuilt. Public comment link copied via UI. Receipt timestamps reflect recording time."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

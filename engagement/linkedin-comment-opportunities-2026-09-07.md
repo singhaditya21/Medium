@@ -1,6 +1,23 @@
 # Fresh LinkedIn commenting opportunities — 7 September 2026
 
-Status: four comments ready for exact action-time confirmation. No comments, replies, reactions, follows, connection requests, DMs, reposts, publications or scheduling actions executed during this research turn.
+Status: all four comments approved, posted once and visibly verified on 7 September 2026. The original research packet below is preserved as historical evidence; its ready/not-approved labels describe preparation time, not the current queue state.
+
+## Approved execution results
+
+The user's subsequent “Approved.” applied to the exact O1–O4 packet. Each was submitted as one top-level comment, with only the matching author selected through LinkedIn's native mention suggestions. Complete composer text was compared with the approved draft before submission. Each result appeared under Aditya Singh with a current `now` timestamp, a linked author mention and an empty composer afterward. O2–O4 were also expanded and visually checked in screenshots because accessibility text labels truncated at 500 characters. Screenshots/browser state were not exported to the repository.
+
+| ID | Verified public result | Receipt |
+| --- | --- | --- |
+| O1 | [Vishal Makin comment](https://www.linkedin.com/feed/update/urn:li:ugcPost:7502480313709711360?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7502480313709711360%2C7502596659697315840%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502596659697315840%2Curn%3Ali%3AugcPost%3A7502480313709711360%29) | `linkedin/executions/20260907052121-comment-posted-2026-09-07-linkedin-comment-vishal-semantic-contract-tests.json` |
+| O2 | [Chris Wheeler comment](https://www.linkedin.com/feed/update/urn:li:activity:7501576842928123904?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7501576842928123904%2C7502597320178425856%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502597320178425856%2Curn%3Ali%3Aactivity%3A7501576842928123904%29) | `linkedin/executions/20260907052443-comment-posted-2026-09-07-linkedin-comment-chris-owner-continuity.json` |
+| O3 | [Pranjal Prashar comment](https://www.linkedin.com/feed/update/urn:li:activity:7502399545151242241?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7502399545151242241%2C7502598075933442048%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502598075933442048%2Curn%3Ali%3Aactivity%3A7502399545151242241%29) | `linkedin/executions/20260907052725-comment-posted-2026-09-07-linkedin-comment-pranjal-cost-per-resolved-case.json` |
+| O4 | [Janardhan Reddy CH comment](https://www.linkedin.com/feed/update/urn:li:activity:7502214974581424128?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7502214974581424128%2C7502598923879104512%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502598923879104512%2Curn%3Ali%3Aactivity%3A7502214974581424128%29) | `linkedin/executions/20260907053101-comment-posted-2026-09-07-linkedin-comment-janardhan-vendor-change-assurance.json` |
+
+- Fresh source and participant checks found no existing Aditya duplicate on any of the four. O4 had 14 comments versus 12 at research time; the new Durgesh and Tariq comments did not duplicate the dependency-map/regression-testing contribution. All 14 loaded participants, including nested replies and remaining comments, were checked.
+- Browser attachment/navigation timed out before any posting. Execution used visible native controls in the existing signed-in Chrome window. One temporary tab was reused for all four and closed afterward; existing user tabs remained open and no new Chrome instance was launched.
+- Public result URLs were obtained with Copy link to comment. The receipt timestamps are recording times, not reconstructed exact approval/click times.
+- `record_linkedin_execution.py comment-posted` recorded all four receipts and changed their queue states to `posted`; both bridge and engagement validators passed for every receipt.
+- No reactions, additional replies, connections, DMs, follows, publications, scheduling changes, notification settings or Medium actions were executed. Brian and Virendra remain awaiting inbound; today's earlier N1/N2/C1 were not repeated.
 
 ## Scope and method
 
@@ -90,4 +107,3 @@ Recommended first: O1 and O2. O3 adds workflow economics; O4 adds vendor-change 
 - Before posting, refresh each source, recheck user participation and context, insert/verify the exact native author mention, compare the entire composer with this text, and submit once.
 - Record a public execution receipt only after the exact comment is visibly rendered under the user's identity. No receipts created during preparation.
 - No existing schedules, automation prompts, notification preferences, media, profile settings or private messages changed.
-

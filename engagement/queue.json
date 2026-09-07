@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-07T04:49:18Z",
+  "updatedAt": "2026-09-07T05:31:01Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2991,7 +2991,10 @@
       "intendedMentions": [
         "Vishal Makin"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7502480313709711360?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7502480313709711360%2C7502596659697315840%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502596659697315840%2Curn%3Ali%3AugcPost%3A7502480313709711360%29",
+      "receiptOperationId": "20260907052121-comment-posted-2026-09-07-linkedin-comment-vishal-semantic-contract-tests",
+      "postedAt": "2026-09-07T05:21:21Z"
     },
     {
       "id": "2026-09-07-linkedin-comment-chris-owner-continuity",
@@ -3008,7 +3011,10 @@
       "intendedMentions": [
         "Chris Wheeler"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501576842928123904?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7501576842928123904%2C7502597320178425856%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502597320178425856%2Curn%3Ali%3Aactivity%3A7501576842928123904%29",
+      "receiptOperationId": "20260907052443-comment-posted-2026-09-07-linkedin-comment-chris-owner-continuity",
+      "postedAt": "2026-09-07T05:24:43Z"
     },
     {
       "id": "2026-09-07-linkedin-comment-pranjal-cost-per-resolved-case",
@@ -3025,7 +3031,10 @@
       "intendedMentions": [
         "Pranjal Prashar"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502399545151242241?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7502399545151242241%2C7502598075933442048%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502598075933442048%2Curn%3Ali%3Aactivity%3A7502399545151242241%29",
+      "receiptOperationId": "20260907052725-comment-posted-2026-09-07-linkedin-comment-pranjal-cost-per-resolved-case",
+      "postedAt": "2026-09-07T05:27:25Z"
     },
     {
       "id": "2026-09-07-linkedin-comment-janardhan-vendor-change-assurance",
@@ -3042,7 +3051,10 @@
       "intendedMentions": [
         "Janardhan Reddy CH"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502214974581424128?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7502214974581424128%2C7502598923879104512%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502598923879104512%2Curn%3Ali%3Aactivity%3A7502214974581424128%29",
+      "receiptOperationId": "20260907053101-comment-posted-2026-09-07-linkedin-comment-janardhan-vendor-change-assurance",
+      "postedAt": "2026-09-07T05:31:01Z"
     }
   ]
 }
