@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-06T16:39:37Z",
+  "updatedAt": "2026-09-07T04:25:08Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2935,6 +2935,40 @@
       "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7501926227725873153&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
       "receiptOperationId": "20260906163937-reply-posted-2026-09-06-linkedin-reply-gaurav-issuance-end-to-end",
       "postedAt": "2026-09-06T16:39:37Z"
+    },
+    {
+      "id": "2026-09-07-linkedin-reply-brian-decision-replay",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7496133486051901441/?commentUrn=urn:li:comment:7502500373060796416&dashCommentUrn=urn:li:fsd_comment:(7502500373060796416,urn:li:activity:7496133486051901441)",
+      "title": "Decision evidence and reproducible authorization",
+      "author": "Brian Jin",
+      "reason": "Substantive new inbound on owned identity/authority post; separates reproducible authorization from model replay. Score components: relevance 1.00, discussion 0.95, unique contribution 0.95, recency 1.00; weighted 0.9775.",
+      "evidence": "Live Sep 7 thread: Brian asks for evidence and criteria that justified an action after model/agent changes; 5h edited comment, one comment total, no existing user reply. Post has 202 impressions and 7 reactions. Public profile describes Judgment Pack Specification, versioned evidence, exceptions and abstention; no prior matching receipt/queue item found.",
+      "draftResponse": "Brian Jin, I’d capture a versioned decision package: evidence snapshots with provenance and freshness, the criteria and exceptions evaluated, the delegated-authority snapshot, and a digest of the proposed action—including missing evidence and the reason for proceeding or abstaining. Then test two things separately: whether the recorded inputs reproduce the authorization decision, and whether changed evidence should produce a different decision; neither requires regenerating identical model text. Decision-replay agreement and the share of consequential actions with complete evidence packages would be useful control metrics.",
+      "priorityScore": 0.9775,
+      "intendedMentions": [
+        "Brian Jin"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-07-linkedin-reply-virendra-linked-authorization-receipts",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500470013448085504/?commentUrn=urn:li:comment:7502482580928098304&dashCommentUrn=urn:li:fsd_comment:(7502482580928098304,urn:li:activity:7500470013448085504)",
+      "title": "Linked approval and execution receipts under revocation",
+      "author": "Virendra Vaishnav",
+      "reason": "Direct technical question on the user's receipt post; answer linked-record structure, time-of-use authorization and independent receipt authorship. Score components: relevance 1.00, discussion 1.00, unique contribution 0.95, recency 1.00; weighted 0.99.",
+      "evidence": "Live Sep 7 thread: Virendra identifies a 90-second policy-to-tool revocation gap and asks whether approver/executor use one object or two linked ones. One comment total, no user reply. Post has 167 impressions and 2 reactions. No prior matching receipt/queue item found.",
+      "draftResponse": "Virendra Vaishnav, I’d use two linked, signed records: approval binds the approver, evidence and exact action digest; execution binds that approval to the executor and the authority revalidated by the enforcement gate. Your 90-second gap is the critical test: that gate should emit the execution record, reject stale authority and record the mismatch; if the downstream effect is asynchronous, the final writer needs its own revocation check or fencing mechanism. I’d keep independently observed outcome evidence linked separately and measure post-revocation execution escapes plus p95 revocation-to-enforcement latency—an authorization receipt alone is not proof of the business effect.",
+      "priorityScore": 0.99,
+      "intendedMentions": [
+        "Virendra Vaishnav"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
