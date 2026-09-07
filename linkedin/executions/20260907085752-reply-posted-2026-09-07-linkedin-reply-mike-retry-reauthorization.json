@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260907085752-reply-posted-2026-09-07-linkedin-reply-mike-retry-reauthorization",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-07T08:57:52Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-07T08:57:52Z",
+    "scope": "User Approved immediately after exact N4 and N5 packet. N5 threaded reply to Mike only, unchanged text and sole native mention; no other actions authorized."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-07-linkedin-reply-mike-retry-reauthorization",
+    "targetUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501562427889836032?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562427889836032%2C7501668754670403584%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562427889836032%2C7502651002731421696%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501668754670403584%2Curn%3Ali%3Aactivity%3A7501562427889836032%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502651002731421696%2Curn%3Ali%3Aactivity%3A7501562427889836032%29",
+    "publishedTextSha256": "13a484152ea3769420f105c5bfc9547c95cc1a4df091111f41b2c009a92d14fb",
+    "verifiedAt": "2026-09-07T08:57:52Z",
+    "verification": "Rechecked full Shabina source and expanded Mike previous replies; newest inbound remained the retry-reauthorization clarification and no duplicate user answer appeared. Native composer matched exact approved N5 before one submission. LinkedIn rendered reply under Aditya Singh at 1s; reload persisted full exact text at 19s and clickable Mike tag /in/michaelgoerlich/. Public copy-link reply ID 7502651002731421696 matches rendered article data-id."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

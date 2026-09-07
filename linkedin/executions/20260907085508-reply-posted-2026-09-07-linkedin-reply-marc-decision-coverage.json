@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260907085508-reply-posted-2026-09-07-linkedin-reply-marc-decision-coverage",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-07T08:55:08Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-07T08:55:08Z",
+    "scope": "User Approved immediately after the exact N4 and N5 packet. N4 threaded reply to Marc only, exact wording, sole native mention; no other actions authorized."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-07-linkedin-reply-marc-decision-coverage",
+    "targetUrl": "https://www.linkedin.com/posts/marc-beukes_modelgovernance-modelops-aigovernance-share-7501562787958079488-WngT/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501562788755054592?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562788755054592%2C7501566237299220480%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562788755054592%2C7502649886677368832%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501566237299220480%2Curn%3Ali%3Aactivity%3A7501562788755054592%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502649886677368832%2Curn%3Ali%3Aactivity%3A7501562788755054592%29",
+    "publishedTextSha256": "c5c43b4cd69f561e506a61224b4b06df5f0e85f855df6ad8b317303dacc01823",
+    "verifiedAt": "2026-09-07T08:55:08Z",
+    "verification": "Source rechecked: original user comment and Marc reply only, no duplicate. Native reply composer matched exact approved text before one submission. LinkedIn rendered Aditya Singh reply at 1s; reloaded page persisted exact full wording at 17s and Marc mention resolved to /in/marc-beukes/. Parent replies increased from 1 to 2. Copy-link control returned new reply ID 7502649886677368832, matching rendered article data-id."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

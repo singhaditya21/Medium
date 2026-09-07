@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-07T08:48:33Z",
+  "updatedAt": "2026-09-07T08:57:52Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3091,7 +3091,10 @@
       "intendedMentions": [
         "Marc Beukes"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501562788755054592?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562788755054592%2C7501566237299220480%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562788755054592%2C7502649886677368832%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501566237299220480%2Curn%3Ali%3Aactivity%3A7501562788755054592%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502649886677368832%2Curn%3Ali%3Aactivity%3A7501562788755054592%29",
+      "receiptOperationId": "20260907085508-reply-posted-2026-09-07-linkedin-reply-marc-decision-coverage",
+      "postedAt": "2026-09-07T08:55:08Z"
     },
     {
       "id": "2026-09-07-linkedin-reply-mike-retry-reauthorization",
@@ -3108,7 +3111,10 @@
       "intendedMentions": [
         "Mike Goerlich"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501562427889836032?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562427889836032%2C7501668754670403584%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562427889836032%2C7502651002731421696%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501668754670403584%2Curn%3Ali%3Aactivity%3A7501562427889836032%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502651002731421696%2Curn%3Ali%3Aactivity%3A7501562427889836032%29",
+      "receiptOperationId": "20260907085752-reply-posted-2026-09-07-linkedin-reply-mike-retry-reauthorization",
+      "postedAt": "2026-09-07T08:57:52Z"
     }
   ]
 }

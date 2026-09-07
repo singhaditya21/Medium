@@ -2,7 +2,7 @@
 
 ## Result and scope
 
-Preparation only. No comments, replies, reactions, messages, follows, connection actions, publishing, scheduling, or notification-setting changes were performed. N4 and N5 require new exact user confirmation.
+The initial review was preparation only. N4 and N5 were subsequently approved, posted and independently verified; see the execution addendum below. No reactions, messages, follows, connection actions, publishing, scheduling, or notification-setting changes were performed.
 
 Refreshed the signed-in Chrome notifications and reviewed All through the rounded one-day boundary, Mentions through the two-day boundary, My posts through the three-day boundary, and Jobs through the one-day boundary (older cards were also visible). LinkedIn's relative ages are rounded and ranking is not strictly chronological; this is recent-notification triage, not a claim that the entire historical archive or DMs have been audited.
 
@@ -66,3 +66,13 @@ The LinkedIn engagement skill guided full-thread reading, duplicate checks, rele
 
 Preparation entered through `scripts/manage_engagement_queue.py`. No public execution receipt was created because no public action occurred.
 
+## Approved execution addendum — September 7, 2026
+
+The user's “Approved.” immediately followed the exact N4/N5 chat packet and authorized both replies as written. Both sources were rechecked before acting; Mike's previous replies were expanded, and no newer user answer was visible in either target thread. Native Reply controls inserted the intended mentions. Each complete composer value was compared with the approved text before a single submission.
+
+| Item | Verified outcome | Receipt |
+| --- | --- | --- |
+| N4 — Marc Beukes | Exact text under Aditya Singh at 1s; reload persisted it at 17s and resolved the mention to `/in/marc-beukes/`. New reply `7502649886677368832` beneath parent `7501566237299220480`. | `linkedin/executions/20260907085508-reply-posted-2026-09-07-linkedin-reply-marc-decision-coverage.json` |
+| N5 — Mike Goerlich | Exact text under Aditya Singh at 1s; reload persisted it at 19s and resolved the mention to `/in/michaelgoerlich/`. New reply `7502651002731421696` beneath parent `7501668754670403584`. | `linkedin/executions/20260907085752-reply-posted-2026-09-07-linkedin-reply-mike-retry-reauthorization.json` |
+
+Public permalinks copied from each published reply's own menu match the rendered reply identifiers and are stored in their receipts and queue entries. Both candidates are now `posted`. The temporary working tab was reused for both replies and closed afterward; other tabs were left intact. No remaining action is required for this approved batch. Wait for substantive inbound replies; do not send generic follow-ups.

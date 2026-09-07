@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-07T06:39:20Z",
+  "updatedAt": "2026-09-07T08:57:52Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,24 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Marc Beukes",
+      "profileUrl": "https://www.linkedin.com/in/marc-beukes/",
+      "themes": ["model governance", "decision-path coverage", "accountable ownership", "banking ModelOps"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-07",
+      "nextReviewOn": "2026-09-14",
+      "nextActionRule": "N4 exact approved decision-path/event coverage reply was posted and independently verified September 7. Wait for a substantive inbound response; do not repeat the metrics or initiate a generic follow-up, DM or connection request. Further actions require new exact approval."
+    },
+    {
+      "name": "Mike Goerlich",
+      "profileUrl": "https://www.linkedin.com/in/michaelgoerlich/",
+      "themes": ["runtime authorization", "retry safety", "transaction consequence budgets", "idempotency"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-07",
+      "nextReviewOn": "2026-09-14",
+      "nextActionRule": "N5 exact approved clarification on fresh per-attempt authority under a persistent budget was posted and independently verified September 7. Wait for a substantive inbound response; do not repeat A1 or N5, or initiate a generic follow-up or DM without new exact approval."
+    },
     {
       "name": "Abhijit Ghosh",
       "profileUrl": "https://www.linkedin.com/in/abhijit-ghosh-data/",
