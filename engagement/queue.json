@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-07T05:31:01Z",
+  "updatedAt": "2026-09-07T06:24:50Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3055,6 +3055,23 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502214974581424128?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7502214974581424128%2C7502598923879104512%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502598923879104512%2Curn%3Ali%3Aactivity%3A7502214974581424128%29",
       "receiptOperationId": "20260907053101-comment-posted-2026-09-07-linkedin-comment-janardhan-vendor-change-assurance",
       "postedAt": "2026-09-07T05:31:01Z"
+    },
+    {
+      "id": "2026-09-07-linkedin-reply-abhijit-scope-mismatch",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502603795449921538&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501877711301173248&replyUrn=7502603775317094400&dashCommentUrn=urn:li:fsd_comment:(7501877711301173248,urn:li:ugcPost:7501652963082493952)&dashReplyUrn=urn:li:fsd_comment:(7502603775317094400,urn:li:ugcPost:7501652963082493952)",
+      "title": "N3 — Reply to Abhijit on hidden scope mismatches in semantic retrieval",
+      "author": "Abhijit Ghosh",
+      "reason": "New substantive inbound challenge to the user's prior clarification proposal; closes the single-candidate blind spot with permission-aware scope resolution and adversarial tests. Score components relevance 1, discussion 1, unique contribution 0.95, recency 1; weighted score 0.99.",
+      "evidence": "Fresh notification at 29m opened; source article and full latest Abhijit reply read in signed-in Chrome, then prior replies expanded. He says Sales-only retrieval can hide alternatives and yield an authoritative definition wrong for the asker; cites stale employer surfaces as an example. Existing user A5 reply precedes this new inbound; two replies in parent thread, latest Abhijit at 34m, no newer user response. Target URL copied from observed public notification, not a claimed Copy-link permalink (clipboard read returned empty). Reply to latest Abhijit follow-up, not original top-level comment.",
+      "draftResponse": "Abhijit Ghosh, you’ve identified a blind spot in my clarification rule: one retrieved definition is not evidence of the right scope. I’d resolve the requested business scope and as-of date against an authoritative, permission-aware definition registry before retrieval, and bind the chosen definition ID/version and scope predicate to the answer; missing context should trigger clarification, not a pipeline default. I’d test identical questions across Sales, Finance and historical scopes, deliberately omit a competing definition from the index, and measure wrong-scope answers among answered test cases alongside abstention rate.",
+      "priorityScore": 0.99,
+      "intendedMentions": [
+        "Abhijit Ghosh"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
