@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-07T04:38:38Z",
+  "updatedAt": "2026-09-07T06:39:20Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,15 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Abhijit Ghosh",
+      "profileUrl": "https://www.linkedin.com/in/abhijit-ghosh-data/",
+      "themes": ["business definitions", "semantic scope", "ontology governance", "retrieval correctness"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-07",
+      "nextReviewOn": "2026-09-14",
+      "nextActionRule": "N3 exact approved reply to the new scope-mismatch challenge was posted and independently verified September 7. Wait for a substantive inbound response; do not repeat the clarification/registry proposal or initiate a DM without new exact approval."
+    },
     {
       "name": "Brian Jin",
       "profileUrl": "https://www.linkedin.com/in/brian-jin-data/",

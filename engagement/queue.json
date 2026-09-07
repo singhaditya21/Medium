@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-07T06:24:50Z",
+  "updatedAt": "2026-09-07T06:39:19Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3071,7 +3071,10 @@
       "intendedMentions": [
         "Abhijit Ghosh"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7501652963082493952?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501652963082493952%2C7501877711301173248%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501652963082493952%2C7502615851599097857%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501877711301173248%2Curn%3Ali%3AugcPost%3A7501652963082493952%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502615851599097857%2Curn%3Ali%3AugcPost%3A7501652963082493952%29",
+      "receiptOperationId": "20260907063919-reply-posted-2026-09-07-linkedin-reply-abhijit-scope-mismatch",
+      "postedAt": "2026-09-07T06:39:19Z"
     }
   ]
 }

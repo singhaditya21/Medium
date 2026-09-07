@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260907063919-reply-posted-2026-09-07-linkedin-reply-abhijit-scope-mismatch",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-07T06:39:19Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-07T06:39:19Z",
+    "scope": "User Approved N3 exactly as written, then explicitly requested handle n3 as well after the earlier unsent editor failure. One threaded reply to Abhijit latest Scoped coexistence follow-up, Abhijit only native mention, exact 632-character approved text."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-07-linkedin-reply-abhijit-scope-mismatch",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502603795449921538&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501877711301173248&replyUrn=7502603775317094400&dashCommentUrn=urn:li:fsd_comment:(7501877711301173248,urn:li:ugcPost:7501652963082493952)&dashReplyUrn=urn:li:fsd_comment:(7502603775317094400,urn:li:ugcPost:7501652963082493952)",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7501652963082493952?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501652963082493952%2C7501877711301173248%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501652963082493952%2C7502615851599097857%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501877711301173248%2Curn%3Ali%3AugcPost%3A7501652963082493952%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502615851599097857%2Curn%3Ali%3AugcPost%3A7501652963082493952%29",
+    "publishedTextSha256": "e1963a2d69f146e98ecef93aaf316a2c65fa2eec702014965dae9cc3f611c45f",
+    "verifiedAt": "2026-09-07T06:39:19Z",
+    "verification": "Reused retained Chrome article tab, brought it foreground, refreshed and expanded prior replies; no duplicate, latest Abhijit at 46m unchanged. Native Reply on latest follow-up inserted Abhijit mention. Removed automatic trailing space and pasted exact approved body; complete composer value matched approved text before clicking Reply once. UI rendered Aditya Singh Verified • You, timestamp 1s, cleared composer, parent replies increased 2 to 3. Expanded and screenshot verified full text. Copied own reply permalink via its verified menu after discarding stale clipboard target. Independent reload showed same exact reply under Aditya at 1m with resolved native link /in/abhijit-ghosh-data/, 10 total comments and 3 parent replies. Receipt timestamps reflect recording time."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

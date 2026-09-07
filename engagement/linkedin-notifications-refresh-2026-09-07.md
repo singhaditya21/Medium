@@ -1,6 +1,6 @@
 # LinkedIn notification refresh — 7 September 2026
 
-Status: N3 was subsequently approved in chat, but execution is paused because Chrome text editing did not preserve the exact approved content/mention order. No reply was submitted. The malformed unsent draft was discarded by reloading, and the clean article tab was retained for a user foreground handoff. The original preparation evidence below is historical; queue state remains ready_for_confirmation rather than falsely marked posted.
+Status: N3 approved, posted once and independently verified after reload on 7 September 2026. The earlier editor failure and preparation evidence below are retained as history. Queue state is now posted; no other public action was taken.
 
 ## Scope and evidence
 
@@ -54,3 +54,14 @@ Status: N3 was subsequently approved in chat, but execution is paused because Ch
 - Reloaded the temporary article tab to discard malformed unsent content. The fresh page again showed 9 total comments, two replies on Abhijit's parent, no N3 text and no open reply composer. The original top-level blank comment field remained. This is a failed preparation attempt, not a public execution.
 - One clean article tab retained for handoff, not a new Chrome instance. Public URL: https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/. No new receipt, unrelated action or browser-state export.
 - Next step: user brings the article tab to the foreground and unlocks the Mac if needed. Existing N3 approval still applies if exact text, recipient and context remain unchanged; recheck source and verify entire composer before submission.
+
+## Successful N3 execution — 7 September 2026
+
+- User explicitly followed up: “handle n3 as well,” retaining the prior exact approval. Reused the held article tab in the existing Chrome instance and brought it to the foreground; no additional tab created.
+- Refreshed article, expanded previous replies, and read Abhijit's unchanged latest follow-up at about 46m. Two parent replies before execution, no existing N3.
+- Used native Reply on that follow-up. Correct native mention inserted; removed the automatic trailing space before the comma, pasted the approved body and compared the entire composer against the exact 632-character draft. Clicked Reply once.
+- Aditya Singh / Verified / You rendered with timestamp 1s, empty composer and three parent replies. Expanded reply and screenshot confirmed the complete approved text. A stale copied URL pointing to Abhijit's inbound reply was rejected; the new user's reply permalink was then obtained from the verified menu through browser clipboard reading.
+- Independently reloaded the article: N3 persisted under Aditya at 1m, with full unchanged text and native mention resolved to `/in/abhijit-ghosh-data/`. Article count was 10 comments, parent thread 3 replies.
+- [Verified N3 reply](https://www.linkedin.com/feed/update/urn:li:ugcPost:7501652963082493952?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501652963082493952%2C7501877711301173248%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501652963082493952%2C7502615851599097857%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501877711301173248%2Curn%3Ali%3AugcPost%3A7501652963082493952%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502615851599097857%2Curn%3Ali%3AugcPost%3A7501652963082493952%29).
+- Receipt: `linkedin/executions/20260907063919-reply-posted-2026-09-07-linkedin-reply-abhijit-scope-mismatch.json`. Receipt timestamps are recording times. Both validators passed; no credential, private content or browser-state export.
+- Added Abhijit to awaiting-inbound watchlist. No automatic follow, connection, reaction or DM. This completion is not a fresh comprehensive notification audit.
