@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-07T06:39:19Z",
+  "updatedAt": "2026-09-07T08:48:33Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3075,6 +3075,40 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7501652963082493952?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501652963082493952%2C7501877711301173248%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7501652963082493952%2C7502615851599097857%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501877711301173248%2Curn%3Ali%3AugcPost%3A7501652963082493952%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502615851599097857%2Curn%3Ali%3AugcPost%3A7501652963082493952%29",
       "receiptOperationId": "20260907063919-reply-posted-2026-09-07-linkedin-reply-abhijit-scope-mismatch",
       "postedAt": "2026-09-07T06:39:19Z"
+    },
+    {
+      "id": "2026-09-07-linkedin-reply-marc-decision-coverage",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/posts/marc-beukes_modelgovernance-modelops-aigovernance-share-7501562787958079488-WngT/",
+      "title": "N4 — Decision-path and event coverage beyond the model register",
+      "author": "Marc Beukes",
+      "reason": "New direct inbound answers the user's governance-metric question. Adds independently sampled decision-path/event denominators and visibility gaps instead of repeating inventory/owner metrics. Score components relevance 1.00, discussionQuality 0.90, uniqueContribution 0.90, recency 1.00; weighted 0.955, conservatively scored 0.95.",
+      "evidence": "Full signed-in public source and complete two-comment thread read September 7. User's September 4 comment asks which metric banks struggle to evidence; Marc's approximately 2-hour reply identifies inventory coverage tied to decisions and ownership and an auditable model-version-to-action chain. Parent 7501566237299220480; inbound reply 7502616140498632705; activity 7501562788755054592. Only original user comment and Marc reply visible; no subsequent user reply. No existing duplicate in queue/receipts. No endorsement of underlying repost's unverified regulatory claims.",
+      "draftResponse": "Marc Beukes, I’d make the denominator independent of the model register: reconcile sampled credit/pricing decisions and their execution logs against registered model versions, named owners and current approvals. Then report two coverage rates—sampled decision paths with that complete chain, and observed decision events linked to it—so a high-volume approved model cannot hide an ungoverned low-volume path. I’d separately track missing telemetry and p95 time to assign an owner to an unmatched path; an unobserved path should stay “unknown”, not count as governed.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Marc Beukes"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-07-linkedin-reply-mike-retry-reauthorization",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/posts/shabina-abba-noormohamed-3a59b8413_ai-aiagents-nhi-activity-7501562427889836032-xPWM",
+      "title": "N5 — Fresh per-attempt authority under a persistent transaction budget",
+      "author": "Mike Goerlich",
+      "reason": "Older unresolved substantive clarification discovered in the Mentions sweep, not presented as newly received within 24 hours. Clarifies the user's budget proposal with separate business-intent/attempt identities, fresh authorization and retry tests. Score components relevance 1.00, discussionQuality 0.95, uniqueContribution 0.90, recency 0.75; weighted 0.9175, conservatively scored 0.91.",
+      "evidence": "Signed-in Shabina tiered-governance post and expanded three-reply Mike thread read September 7. Shabina describes live per-hop checks; the user's September 5 A1 proposes a persistent transaction consequence budget. Mike's subsequent 1d-labelled reply says retries need fresh evaluation and bounded attempts, not inherited authority. Parent 7501668754670403584; inbound reply 7502018930085888000; activity 7501562427889836032. Expanded previous replies show Shabina, user A1, then Mike; no later user response. Prior A1 remains posted, older superseded draft not revived.",
+      "draftResponse": "Mike Goerlich, agreed—the transaction budget persists, but the execution lease must not. I’d keep one business-intent ID, a distinct attempt ID and a freshly evaluated lease for each retry; reuse an idempotency key only for the unchanged logical operation, and reconcile an unknown outcome before permitting another write. Two fault-injection tests would make that distinction visible: revoke authority between attempts, and change the target state before retry; measure business effects after denial and retries executed without fresh authorization.",
+      "priorityScore": 0.91,
+      "intendedMentions": [
+        "Mike Goerlich"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
