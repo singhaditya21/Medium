@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-07T04:36:34Z",
+  "updatedAt": "2026-09-07T04:49:18Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2975,6 +2975,74 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500470013448085504?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500470013448085504%2C7502482580928098304%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7500470013448085504%2C7502585131786723328%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502482580928098304%2Curn%3Ali%3Aactivity%3A7500470013448085504%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502585131786723328%2Curn%3Ali%3Aactivity%3A7500470013448085504%29",
       "receiptOperationId": "20260907043634-reply-posted-2026-09-07-linkedin-reply-virendra-linked-authorization-receipts",
       "postedAt": "2026-09-07T04:36:34Z"
+    },
+    {
+      "id": "2026-09-07-linkedin-comment-vishal-semantic-contract-tests",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/vishal-makin_we-have-spent-years-building-data-platforms-ugcPost-7502480313709711360-fx44/",
+      "title": "A RevOps pilot for semantic models and ontology",
+      "author": "Vishal Makin",
+      "reason": "Direct CRM/RevOps fit; adds cross-interface executable consistency tests rather than repeating definition ownership. Score components (relevance, discussion, unique contribution, recency): 1, 0.85, 0.95, 1; weighted score 0.9525.",
+      "evidence": "Post proposes governed data -> domain products -> semantic models plus ontology -> BI, conversation and agents; asks which domain to start with in a 90-day implementation. The one existing comment recommends finance and named definition confirmation. No Aditya comment in the loaded thread or matching repository record.",
+      "draftResponse": "Vishal Makin, I’d start with quote-to-cash, where CRM opportunity, signed contract and billing records can disagree about the same customer. For the 90-day pilot, I’d run the same 10 approved business questions through the dashboard, copilot and agent, holding the as-of date and access rights constant. Cross-interface answer agreement, reconciliation latency and permission-boundary failures would tell us whether the semantic model and ontology behave as one governed system—not merely share vocabulary.",
+      "priorityScore": 0.9525,
+      "intendedMentions": [
+        "Vishal Makin"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-07-linkedin-comment-chris-owner-continuity",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/wheelerc69_an-ai-agent-can-have-valid-credentials-permission-share-7501576840986222593--M88/",
+      "title": "Decision ownership when the owner is unavailable",
+      "author": "Chris Wheeler",
+      "reason": "Adds an owner-absence/transition control rather than duplicating the active decision-record discussion. Score components (relevance, discussion, unique contribution, recency): 1, 0.95, 0.95, 0.8; weighted score 0.9375.",
+      "evidence": "Post distinguishes tool permissions and human approval from clear decision ownership; identifies five fields: owner, authority, evidence, audit, recovery. All three displayed comments read, including expanded author reply: existing discussion covers why approval was reasonable. No Aditya contribution or matching repository record found.",
+      "draftResponse": "Chris Wheeler, I’d stress-test ownership by removing the named owner from the workflow: they are on leave, have changed roles, or cannot be reached during an incident. The decision contract should specify a delegated backup with explicit limits, an escalation deadline, and which consequential actions must pause when nobody is authorized to own them. Two useful measures are actions executed without a current accountable owner and p95 time to reach an authorized decision-maker—putting a name in a register is only the starting point.",
+      "priorityScore": 0.9375,
+      "intendedMentions": [
+        "Chris Wheeler"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-07-linkedin-comment-pranjal-cost-per-resolved-case",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/pranjalprashar_i-recently-became-an-lp-in-gai-ventures-share-7502399541841649665-yRT2/",
+      "title": "Vertical AI economics after review and repair",
+      "author": "Pranjal Prashar",
+      "reason": "Adds a measurable workflow-economics test and explicitly hypothetical automation-rate example without endorsing investment claims. Score components (relevance, discussion, unique contribution, recency): 0.95, 0.65, 0.95, 1; weighted score 0.885.",
+      "evidence": "Post describes investing in gAI Ventures because insurance, lending, compliance, claims and back-office workflows can be rebuilt so agents operate while humans review/orchestrate. Four displayed comments read: investor welcome, pitch, unrelated promotional claim, congratulations. None discusses fully loaded cost per correctly resolved case. No Aditya contribution or repository duplicate found. Comment stays on operating economics, not investment endorsement.",
+      "draftResponse": "Pranjal Prashar, the unglamorous workflows need an equally unglamorous denominator: cost per correctly resolved case, not cost per agent run. For claims or back-office operations, I’d include model/tool spend, human review and exception repair, then divide by cases that actually meet the business outcome. Illustratively, 80% automation can still lose money if the remaining 20% requires expensive reconstruction; pairing that cost measure with rework rate and p95 resolution time would expose whether the workflow has genuinely been rebuilt.",
+      "priorityScore": 0.885,
+      "intendedMentions": [
+        "Pranjal Prashar"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-07-linkedin-comment-janardhan-vendor-change-assurance",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/janardhanreddych_ai-aigovernance-responsibleai-share-7502214971481837568-Gxkp/",
+      "title": "Third-party change impact as a governance test",
+      "author": "Janardhan Reddy CH",
+      "reason": "Distinct assurance mechanism for vendor/model/connector change; technical test proposals rather than unsupported regulatory claims. Score components (relevance, discussion, unique contribution, recency): 0.95, 0.8, 0.9, 0.9; weighted score 0.8925.",
+      "evidence": "Post connects third-party AI risk, regulatory change management, assurance and operational resilience. Expanded comments across the displayed thread, including replies: existing points cover provenance, owner naming, workflow controls and revocation reach. No Aditya contribution or matching repository record found. Proposed contribution is dependency-change regression testing; no legal/regulatory-compliance claim.",
+      "draftResponse": "Janardhan Reddy CH, I’d connect third-party risk and change management through an executable dependency map: which business decisions depend on each model, connector, data source and policy version? When a vendor changes one component, that map should identify the affected workflows, trigger targeted regression tests and route any required reapproval before consequential use resumes. Three useful measures are change-to-impact-detection time, affected workflows tested before release, and production changes with no accountable reviewer.",
+      "priorityScore": 0.8925,
+      "intendedMentions": [
+        "Janardhan Reddy CH"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
