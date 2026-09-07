@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260907043633-reply-posted-2026-09-07-linkedin-reply-brian-decision-replay",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-07T04:36:33Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-07T04:36:33Z",
+    "scope": "User said Approved immediately after exact N1, N2 and C1 targets/text were shown on Sep 7. This receipt covers N1 with Brian Jin as the sole native mention. Timestamps represent receipt recording during the approved execution turn, not reconstructed click times."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-07-linkedin-reply-brian-decision-replay",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7496133486051901441/?commentUrn=urn:li:comment:7502500373060796416&dashCommentUrn=urn:li:fsd_comment:(7502500373060796416,urn:li:activity:7496133486051901441)",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7496133486051901441?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7496133486051901441%2C7502500373060796416%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7496133486051901441%2C7502584412744859648%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502500373060796416%2Curn%3Ali%3Aactivity%3A7496133486051901441%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502584412744859648%2Curn%3Ali%3Aactivity%3A7496133486051901441%29",
+    "publishedTextSha256": "c848b9ea115caff1c99bfe214f0ce8dfbdf8a95b866d214460d3386a7bc01d83",
+    "verifiedAt": "2026-09-07T04:36:33Z",
+    "verification": "Refreshed the original public post; one original comment with no user reply was visible. Used Reply associated with Brian Jin, preserved LinkedIn's native mention, and compared the complete composer text to the approved draft before one submission. LinkedIn then showed Aditya Singh Author/Verified, timestamp 1s, one child comment, linked Brian Jin mention, and an empty reply composer. The result URL came from the posted reply's Copy link to comment control. Stale clipboard insertions were detected and removed before submission. No independent reload verification claimed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

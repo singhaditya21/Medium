@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-04T10:13:58Z",
+  "updatedAt": "2026-09-07T04:38:38Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,24 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Brian Jin",
+      "profileUrl": "https://www.linkedin.com/in/brian-jin-data/",
+      "themes": ["decision evidence", "Judgment Pack Specification", "authorization replay", "enterprise AI"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-07",
+      "nextReviewOn": "2026-09-14",
+      "nextActionRule": "Approved public reply and personalized connection invitation were sent September 7; invitation visibly Pending. Wait for a substantive response or acceptance. Do not resend the invitation, send a generic follow-up, or auto-follow. Any next communication requires exact user approval."
+    },
+    {
+      "name": "Virendra Vaishnav",
+      "profileUrl": "https://www.linkedin.com/in/virendrakvaishnav/",
+      "themes": ["execution-time authorization", "revocation enforcement", "linked approval and execution receipts"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-07",
+      "nextReviewOn": "2026-09-14",
+      "nextActionRule": "Approved reply answered his linked-receipt question on September 7. Wait for a substantive response; do not repeat the architecture point or initiate a DM without new exact approval."
+    },
     {
       "name": "Sriinivasa Chary (Srini)",
       "profileUrl": "https://www.linkedin.com/in/rayabandisrinivasa/",

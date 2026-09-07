@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260907043634-reply-posted-2026-09-07-linkedin-reply-virendra-linked-authorization-receipts",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-07T04:36:34Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-07T04:36:34Z",
+    "scope": "User said Approved immediately after exact N1, N2 and C1 targets/text were shown on Sep 7. This receipt covers N2 with Virendra Vaishnav as the sole native mention. Timestamps represent receipt recording during the approved execution turn, not reconstructed click times."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-07-linkedin-reply-virendra-linked-authorization-receipts",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500470013448085504/?commentUrn=urn:li:comment:7502482580928098304&dashCommentUrn=urn:li:fsd_comment:(7502482580928098304,urn:li:activity:7500470013448085504)",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500470013448085504?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500470013448085504%2C7502482580928098304%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7500470013448085504%2C7502585131786723328%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502482580928098304%2Curn%3Ali%3Aactivity%3A7500470013448085504%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502585131786723328%2Curn%3Ali%3Aactivity%3A7500470013448085504%29",
+    "publishedTextSha256": "4ac7971392a029717bfc119922ba9f56b1876ce67e5b00941cc1c9658a87761c",
+    "verifiedAt": "2026-09-07T04:36:34Z",
+    "verification": "Refreshed the original public post; one original comment with no user reply was visible. Used Reply associated with Virendra Vaishnav, preserved LinkedIn's native mention, and compared the complete composer text to the approved draft before one submission. LinkedIn then showed Aditya Singh Author/Verified, timestamp 1s, one child comment, linked Virendra Vaishnav mention, and an empty reply composer. The result URL came from the posted reply's Copy link to comment control. Stale clipboard insertions were detected and removed before submission. No independent reload verification claimed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,6 +1,6 @@
 # LinkedIn notifications and network review — 7 September 2026
 
-Status: preparation only; no public interactions, invitations, follows, subscriptions, messages or reactions executed.
+Status: N1 and N2 posted and visibly verified; C1 personalized connection invitation sent and visibly Pending after the user's exact approval. The original preparation record below is retained, followed by execution results. No additional follows, subscriptions, DMs or reactions executed.
 
 ## Scope and evidence
 
@@ -93,3 +93,30 @@ Leave pending; neither accept nor ignore without an exact approved action.
 4. Record receipts only after on-page verification. Existing drafts contain proposed control metrics, not claims of measured production results.
 5. Validate and commit/push preparation changes only; leave all scheduling and media settings unchanged.
 
+## Approved execution results — 7 September 2026
+
+The user replied **Approved** to the exact N1, N2 and C1 packet. Approval did not cover any newsletter/company invitations or additional Catch up greetings.
+
+- **N1, Brian Jin:** posted once as a child of the intended comment. The complete composer text was checked against the approved draft before submission. LinkedIn displayed Aditya Singh / Author / Verified, timestamp 1s, one child comment, the native Brian mention, and an empty composer. Receipt: `linkedin/executions/20260907043633-reply-posted-2026-09-07-linkedin-reply-brian-decision-replay.json`.
+- **N2, Virendra Vaishnav:** posted once as a child of the intended comment after the same exact-text and duplicate checks. LinkedIn displayed Aditya Singh / Author / Verified, timestamp 1s, one child comment, native Virendra mention, and an empty composer. Receipt: `linkedin/executions/20260907043634-reply-posted-2026-09-07-linkedin-reply-virendra-linked-authorization-receipts.json`.
+- Both reply result URLs were obtained using their own **Copy link to comment** controls. Pre-submission checks caught stale clipboard values and removed them before posting. No independent reload verification is claimed.
+
+### C1 connection receipt
+
+- Action: `connection_invitation_sent`; executed using the existing signed-in Chrome tab and native UI, not GitHub Actions.
+- Recipient public profile: https://www.linkedin.com/in/brian-jin-data/
+- Confirmation: the user's Approved response to the exact C1 note and recipient in the immediately preceding chat packet.
+- Observed precondition: Brian was 3rd-degree, with **Invite Brian Jin to connect** available; no pending invitation displayed.
+- Composer verification: exact approved note visible, **192/200** characters; clicked **Send invitation** once.
+- Result verification: profile displayed **Pending, click to withdraw invitation sent to Brian Jin**. This confirms sent/pending, not acceptance.
+- Recorded at: 2026-09-07T04:38:38Z (record time, not an inferred exact click timestamp).
+- Note SHA-256: `cd332c2b29c99d90f387e85bd6e9e6e6986c88fe3eb8ea2285b359eee67ec288`.
+- Private note text, message URLs, credentials and browser state are not stored in the repository. No separate DM or Follow click occurred.
+
+### Catch up completion and remaining boundaries
+
+- The previously inaccessible Catch up page was read. Its initial loaded set showed routine anniversaries at Axis Bank, UBS, Accenture, Infosys and Mashreq; birthday cards; and Rakesh Thakur's Co-Founder/CTO role change at PropZeta Global Estate Holdings LLP. No greeting, reaction, or message sent. This was a read-only review of the loaded current cards, not an exhaustive historical network audit.
+- The six newsletter/company invitations remain unchanged. No personal invitation acceptance was needed.
+- A new Notifications badge was visible while executing; this turn does not claim a fresh exhaustive notification audit after the approved batch.
+- Brian and Virendra were added to the relationship watchlist, awaiting substantive inbound engagement; no new automation or schedule changes.
+- Public receipt validation passed at 144 LinkedIn public receipts; the pre-existing GitHub tracking issue is 36. A read-only issue refresh returned HTTP 503, so no issue metadata or comments were changed.

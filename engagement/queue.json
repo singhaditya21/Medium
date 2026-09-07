@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-07T04:25:08Z",
+  "updatedAt": "2026-09-07T04:36:34Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -2951,7 +2951,10 @@
       "intendedMentions": [
         "Brian Jin"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7496133486051901441?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7496133486051901441%2C7502500373060796416%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7496133486051901441%2C7502584412744859648%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502500373060796416%2Curn%3Ali%3Aactivity%3A7496133486051901441%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502584412744859648%2Curn%3Ali%3Aactivity%3A7496133486051901441%29",
+      "receiptOperationId": "20260907043633-reply-posted-2026-09-07-linkedin-reply-brian-decision-replay",
+      "postedAt": "2026-09-07T04:36:33Z"
     },
     {
       "id": "2026-09-07-linkedin-reply-virendra-linked-authorization-receipts",
@@ -2968,7 +2971,10 @@
       "intendedMentions": [
         "Virendra Vaishnav"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7500470013448085504?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500470013448085504%2C7502482580928098304%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7500470013448085504%2C7502585131786723328%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287502482580928098304%2Curn%3Ali%3Aactivity%3A7500470013448085504%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502585131786723328%2Curn%3Ali%3Aactivity%3A7500470013448085504%29",
+      "receiptOperationId": "20260907043634-reply-posted-2026-09-07-linkedin-reply-virendra-linked-authorization-receipts",
+      "postedAt": "2026-09-07T04:36:34Z"
     }
   ]
 }
