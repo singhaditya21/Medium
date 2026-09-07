@@ -1,6 +1,6 @@
 # LinkedIn notification refresh — 7 September 2026
 
-Status: review and preparation only. One new substantive inbound response is ready for exact approval (N3). Nothing posted, replied, reacted, followed, messaged, connected, published or scheduled during this turn.
+Status: N3 was subsequently approved in chat, but execution is paused because Chrome text editing did not preserve the exact approved content/mention order. No reply was submitted. The malformed unsent draft was discarded by reloading, and the clean article tab was retained for a user foreground handoff. The original preparation evidence below is historical; queue state remains ready_for_confirmation rather than falsely marked posted.
 
 ## Scope and evidence
 
@@ -45,3 +45,12 @@ Status: review and preparation only. One new substantive inbound response is rea
 2. Select Reply on Abhijit's latest follow-up, verify native mention and the entire approved text, submit once, and verify the rendered result before recording a receipt.
 3. Do not treat approval of N3 as permission for a reaction, connection, DM or other reply.
 4. Preparation recorded through `scripts/manage_engagement_queue.py`; queue validation passed. No execution receipt created for this unposted draft.
+
+## Approved execution attempt — not posted
+
+- The user replied Approved to the exact N3 text in chat. Source refreshed; Abhijit's latest follow-up at about 39m and both prior replies were read. No duplicate or material context change found.
+- Clicked Reply on the latest Abhijit follow-up; LinkedIn inserted the correct native author mention. Pre-submission reads repeatedly showed text in the wrong position when browser editing controls were used; alternative keyboard, text-selection and visible-coordinate approaches did not produce the exact approved composer. No submit button was clicked.
+- Native Chrome returned only a partial accessibility surface, without an address bar or usable window controls. No inference that the Mac is definitely locked; request foreground Chrome/unlock if needed rather than bypassing any controls.
+- Reloaded the temporary article tab to discard malformed unsent content. The fresh page again showed 9 total comments, two replies on Abhijit's parent, no N3 text and no open reply composer. The original top-level blank comment field remained. This is a failed preparation attempt, not a public execution.
+- One clean article tab retained for handoff, not a new Chrome instance. Public URL: https://www.linkedin.com/pulse/ai-ontology-bottom-up-doesnt-mean-starting-from-scratch-prukalpa--1mcue/. No new receipt, unrelated action or browser-state export.
+- Next step: user brings the article tab to the foreground and unlocks the Mac if needed. Existing N3 approval still applies if exact text, recipient and context remain unchanged; recheck source and verify entire composer before submission.
