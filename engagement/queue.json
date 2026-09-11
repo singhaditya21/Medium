@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-07T08:57:52Z",
+  "updatedAt": "2026-09-11T07:16:43Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3115,6 +3115,40 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501562427889836032?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562427889836032%2C7501668754670403584%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7501562427889836032%2C7502651002731421696%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287501668754670403584%2Curn%3Ali%3Aactivity%3A7501562427889836032%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287502651002731421696%2Curn%3Ali%3Aactivity%3A7501562427889836032%29",
       "receiptOperationId": "20260907085752-reply-posted-2026-09-07-linkedin-reply-mike-retry-reauthorization",
       "postedAt": "2026-09-07T08:57:52Z"
+    },
+    {
+      "id": "2026-09-11-linkedin-reply-cobus-quality-adjusted-output",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7503722183420960769&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501585629244256258&replyUrn=7503722148906119170&dashCommentUrn=urn:li:fsd_comment:(7501585629244256258,urn:li:activity:7501345350662909952)&dashReplyUrn=urn:li:fsd_comment:(7503722148906119170,urn:li:activity:7501345350662909952)",
+      "title": "L1: answer the operating-metric question",
+      "author": "Cobus Greyling",
+      "reason": "Direct unanswered inbound question about which operating metric should accompany a headcount forecast. Answer with a defined output/capacity metric and case-mix guardrails, not another promotion.",
+      "evidence": "Fresh signed-in Chrome inspection 2026-09-11. Read the complete post, own original comment, author reply and all four rendered comments. Cobus's reply was labelled 23h and asks to choose hours automated, redeployed capacity, cycle time or output per FTE. No later Aditya reply was present. Scoring R=1.00 D=1.00 U=0.90 T=0.95 => 0.97. Prior original-comment receipt exists for 2026-09-04. Proposal uses no new empirical claims or reach promises.",
+      "draftResponse": "Cobus Greyling, I'd choose quality-adjusted output per FTE. Count completed cases meeting a fixed quality/SLA threshold, and include employee and contractor hours spent on review or rework when converting capacity to FTE. Compare the same measurement window and similar case mix; otherwise a shift toward easier cases can look like a productivity gain. That tests whether automation created usable throughput or moved effort into an exception queue.",
+      "priorityScore": 0.97,
+      "intendedMentions": [
+        "Cobus Greyling"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-11-linkedin-reply-abhijit-decision-arbitration",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502956366056239104&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501877711301173248&replyUrn=7502956314189344768&dashCommentUrn=urn:li:fsd_comment:(7501877711301173248,urn:li:ugcPost:7501652963082493952)&dashReplyUrn=urn:li:fsd_comment:(7502956314189344768,urn:li:ugcPost:7501652963082493952)",
+      "title": "L2: assign decision arbitration and measure its backlog",
+      "author": "Abhijit Ghosh",
+      "reason": "Substantive inbound challenge: a definition registry cannot arbitrate two locally authoritative meanings without an empowered decision owner. Extend the existing conversation with explicit ownership and governance metrics.",
+      "evidence": "Fresh signed-in Chrome inspection 2026-09-11. Read Prukalpa's complete ontology post, Abhijit's top-level comment and all six loaded replies, including both earlier Aditya replies and the later Ihe/Abhijit exchange. The unanswered challenge to Aditya was labelled 3d. No subsequent Aditya answer was present. Scoring R=1.00 D=1.00 U=0.90 T=0.70 => 0.92. September 7 reply is already posted; this targets the later arbitration challenge, not the older scope-mismatch question. p95 and owner-coverage are proposed operating metrics, not measured results.",
+      "draftResponse": "Abhijit Ghosh, I'd assign arbitration to the accountable owner of the cross-functional decision. Sales and Finance can retain their scoped definitions, while that decision gets an explicit, versioned ruling. Each escalation needs a named adjudicator, a deadline and safe interim behavior; an expired deadline must never become permission to choose. I'd split abstentions into missing context versus unresolved decision rights, then track p95 adjudication time and the share of high-impact conflicts without an empowered owner.",
+      "priorityScore": 0.92,
+      "intendedMentions": [
+        "Abhijit Ghosh"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }

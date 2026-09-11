@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-07T08:57:52Z",
+  "updatedAt": "2026-09-11T07:18:00Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -37,10 +37,10 @@
       "name": "Abhijit Ghosh",
       "profileUrl": "https://www.linkedin.com/in/abhijit-ghosh-data/",
       "themes": ["business definitions", "semantic scope", "ontology governance", "retrieval correctness"],
-      "state": "awaiting_inbound_reply",
+      "state": "awaiting_user_approval",
       "lastMeaningfulTouch": "2026-09-07",
       "nextReviewOn": "2026-09-14",
-      "nextActionRule": "N3 exact approved reply to the new scope-mismatch challenge was posted and independently verified September 7. Wait for a substantive inbound response; do not repeat the clarification/registry proposal or initiate a DM without new exact approval."
+      "nextActionRule": "A later inbound arbitration challenge was freshly verified September 11 after reading all six replies. L2 / 2026-09-11-linkedin-reply-abhijit-decision-arbitration is ready for exact user confirmation, not posted. Recheck the thread immediately before any approved reply. Do not repeat the September 7 scope-mismatch answer or initiate a DM."
     },
     {
       "name": "Brian Jin",
@@ -49,7 +49,7 @@
       "state": "awaiting_inbound_reply",
       "lastMeaningfulTouch": "2026-09-07",
       "nextReviewOn": "2026-09-14",
-      "nextActionRule": "Approved public reply and personalized connection invitation were sent September 7; invitation visibly Pending. Wait for a substantive response or acceptance. Do not resend the invitation, send a generic follow-up, or auto-follow. Any next communication requires exact user approval."
+      "nextActionRule": "Approved public reply and personalized connection invitation were sent September 7. First-degree connection status was visibly confirmed September 11, superseding the previous Pending observation. Do not resend the invitation, send a generic follow-up or auto-follow. Any next communication requires exact user approval; private-message proposals remain in chat only."
     },
     {
       "name": "Virendra Vaishnav",
