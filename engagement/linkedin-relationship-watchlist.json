@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-11T07:18:00Z",
+  "updatedAt": "2026-09-11T07:28:00Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -37,19 +37,19 @@
       "name": "Abhijit Ghosh",
       "profileUrl": "https://www.linkedin.com/in/abhijit-ghosh-data/",
       "themes": ["business definitions", "semantic scope", "ontology governance", "retrieval correctness"],
-      "state": "awaiting_user_approval",
-      "lastMeaningfulTouch": "2026-09-07",
-      "nextReviewOn": "2026-09-14",
-      "nextActionRule": "A later inbound arbitration challenge was freshly verified September 11 after reading all six replies. L2 / 2026-09-11-linkedin-reply-abhijit-decision-arbitration is ready for exact user confirmation, not posted. Recheck the thread immediately before any approved reply. Do not repeat the September 7 scope-mismatch answer or initiate a DM."
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved L2 / 2026-09-11-linkedin-reply-abhijit-decision-arbitration was posted and visibly verified September 11 with the native mention. Wait for a substantive inbound response; do not repeat the arbitration or scope-mismatch argument or initiate a DM without new exact approval."
     },
     {
       "name": "Brian Jin",
       "profileUrl": "https://www.linkedin.com/in/brian-jin-data/",
       "themes": ["decision evidence", "Judgment Pack Specification", "authorization replay", "enterprise AI"],
       "state": "awaiting_inbound_reply",
-      "lastMeaningfulTouch": "2026-09-07",
-      "nextReviewOn": "2026-09-14",
-      "nextActionRule": "Approved public reply and personalized connection invitation were sent September 7. First-degree connection status was visibly confirmed September 11, superseding the previous Pending observation. Do not resend the invitation, send a generic follow-up or auto-follow. Any next communication requires exact user approval; private-message proposals remain in chat only."
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "First-degree connection status was confirmed September 11. The exact approved D2 relationship message was sent and visibly verified that day; wording is not retained here. Wait for an inbound answer. Do not resend the invitation, send a generic follow-up or auto-follow. Any further communication requires new exact approval."
     },
     {
       "name": "Virendra Vaishnav",
@@ -104,6 +104,24 @@
       "lastMeaningfulTouch": "2026-08-31",
       "nextReviewOn": "2026-09-14",
       "nextActionRule": "No follow-up on the prior comment; consider a new post only if it has a distinct AI-security or insurance angle."
+    },
+    {
+      "name": "Cobus Greyling",
+      "profileUrl": "https://www.linkedin.com/in/cobusgreyling/",
+      "themes": ["AI operating metrics", "quality-adjusted output", "workforce redesign"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved L1 quality-adjusted-output reply was posted and visibly verified September 11 with the native mention. Wait for a substantive inbound response; do not repeat the metric proposal or initiate an unapproved DM or generic follow-up."
+    },
+    {
+      "name": "Kumar Gaurav",
+      "profileUrl": "https://www.linkedin.com/in/kumargaurav7/",
+      "themes": ["AI infrastructure", "cloud", "FinOps"],
+      "state": "connection_accepted",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved N1 accepted the existing invitation September 11; 1st-degree status was visibly verified. No DM was authorized or sent. Do not disclose employer infrastructure or purchasing context, initiate a pitch, or send a message without a separate exact approval."
     },
     {
       "name": "Shabina Abba Noormohamed",

@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-11T07:16:43Z",
+  "updatedAt": "2026-09-11T07:27:39Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3131,7 +3131,10 @@
       "intendedMentions": [
         "Cobus Greyling"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/posts/cobusgreyling_it-seems-lule-the-ai-job-cut-story-keeps-share-7501345349282729984-hid3/",
+      "receiptOperationId": "20260911072738-reply-posted-2026-09-11-linkedin-reply-cobus-quality-adjusted-output",
+      "postedAt": "2026-09-11T07:27:38Z"
     },
     {
       "id": "2026-09-11-linkedin-reply-abhijit-decision-arbitration",
@@ -3148,7 +3151,10 @@
       "intendedMentions": [
         "Abhijit Ghosh"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502956366056239104&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501877711301173248&replyUrn=7502956314189344768&dashCommentUrn=urn:li:fsd_comment:(7501877711301173248,urn:li:ugcPost:7501652963082493952)&dashReplyUrn=urn:li:fsd_comment:(7502956314189344768,urn:li:ugcPost:7501652963082493952)",
+      "receiptOperationId": "20260911072739-reply-posted-2026-09-11-linkedin-reply-abhijit-decision-arbitration",
+      "postedAt": "2026-09-11T07:27:39Z"
     }
   ]
 }

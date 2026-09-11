@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911072740-message-posted-in-acoaabkwz3mbos8hdeimfpklc9my8mzmukfwsyq",
+  "action": "message_posted",
+  "recordedAt": "2026-09-11T07:27:40Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T07:27:40Z",
+    "scope": "User said All Approved after reviewing exact L1, L2, D1, D2 and N1 on September 11, 2026. This receipt covers only D1, unchanged, sent to the approved existing conversation."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/ACoAABKWz3MBoS8HDeIMfPkLC9mY8MzMukFWsyQ",
+    "messageTextSha256": "e5050f4cbe005ca5cde5951600f3a1d47734d4e23cdaa01a8e785d24073239e2",
+    "verifiedAt": "2026-09-11T07:27:40Z",
+    "verification": "Rechecked the existing conversation for intervening messages and duplicates. LinkedIn displayed the exact approved message under Aditya Singh in the correct recipient conversation with today's timestamp 12:55 PM IST; composer cleared. No private wording or private conversation URL retained."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

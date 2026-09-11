@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911072738-reply-posted-2026-09-11-linkedin-reply-cobus-quality-adjusted-output",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-11T07:27:38Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T07:27:38Z",
+    "scope": "User said All Approved in direct response to the exact L1, L2, D1, D2 and N1 approval batch on September 11, 2026. This receipt covers only the unchanged public reply identified by its candidate ID."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-11-linkedin-reply-cobus-quality-adjusted-output",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7503722183420960769&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501585629244256258&replyUrn=7503722148906119170&dashCommentUrn=urn:li:fsd_comment:(7501585629244256258,urn:li:activity:7501345350662909952)&dashReplyUrn=urn:li:fsd_comment:(7503722148906119170,urn:li:activity:7501345350662909952)",
+    "publicUrl": "https://www.linkedin.com/posts/cobusgreyling_it-seems-lule-the-ai-job-cut-story-keeps-share-7501345349282729984-hid3/",
+    "publishedTextSha256": "a44fb4b8453d3054701dfd2e90311f1864d270322d061369f450afe1f5314465",
+    "verifiedAt": "2026-09-11T07:27:38Z",
+    "verification": "Rechecked the inbound question before posting. LinkedIn rendered the exact approved L1 text under Aditya Singh with timestamp now and a clickable Cobus Greyling profile mention in the correct parent thread. Post comments increased from 4 to 5. Public URL is the source post, not a newly copied reply permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

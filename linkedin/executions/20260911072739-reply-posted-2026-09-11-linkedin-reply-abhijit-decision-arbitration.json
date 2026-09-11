@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911072739-reply-posted-2026-09-11-linkedin-reply-abhijit-decision-arbitration",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-11T07:27:39Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T07:27:39Z",
+    "scope": "User said All Approved in direct response to the exact L1, L2, D1, D2 and N1 approval batch on September 11, 2026. This receipt covers only the unchanged public reply identified by its candidate ID."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-11-linkedin-reply-abhijit-decision-arbitration",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502956366056239104&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501877711301173248&replyUrn=7502956314189344768&dashCommentUrn=urn:li:fsd_comment:(7501877711301173248,urn:li:ugcPost:7501652963082493952)&dashReplyUrn=urn:li:fsd_comment:(7502956314189344768,urn:li:ugcPost:7501652963082493952)",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502956366056239104&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501877711301173248&replyUrn=7502956314189344768&dashCommentUrn=urn:li:fsd_comment:(7501877711301173248,urn:li:ugcPost:7501652963082493952)&dashReplyUrn=urn:li:fsd_comment:(7502956314189344768,urn:li:ugcPost:7501652963082493952)",
+    "publishedTextSha256": "6de931cefbe0b8464e66197f6433ea16fcd760518b4b2a6789d873daa1a5f1d7",
+    "verifiedAt": "2026-09-11T07:27:39Z",
+    "verification": "Rechecked the target challenge and later replies before posting. LinkedIn rendered the exact approved L2 text under Aditya Singh with timestamp now and a clickable Abhijit Ghosh profile mention in the existing parent thread. Public URL opens the target discussion, not a newly copied reply permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
