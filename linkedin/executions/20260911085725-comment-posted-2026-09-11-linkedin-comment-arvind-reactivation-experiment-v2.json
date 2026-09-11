@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911085725-comment-posted-2026-09-11-linkedin-comment-arvind-reactivation-experiment-v2",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-11T08:57:25Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T08:57:25Z",
+    "scope": "User approved B1-B3 exactly as presented in the immediately preceding approval batch; one native author mention per comment and no accompanying reaction or other action."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-11-linkedin-comment-arvind-reactivation-experiment-v2",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503863140292419584/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503863140292419584/",
+    "publishedTextSha256": "1bef282064528f8454d37c0764355be72fb9ed070d263d847bc9d015d2601779",
+    "verifiedAt": "2026-09-11T08:57:25Z",
+    "verification": "Fresh full source and newest comments checked; new Aditya Goel comment was unrelated and no duplicate Aditya Singh comment appeared. Exact B1 v2 rendered under Aditya Singh with timestamp now after one submission; native Arvind Jain mention links /in/jain-arvind/. Public source-post URL, not a copied comment permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

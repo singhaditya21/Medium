@@ -94,3 +94,34 @@ resolve the one intended native mention, compare the complete composer text with
 the approved v2 queue entry, submit once, and visibly verify before recording.
 No unapproved new communication was posted.
 
+## B1–B3 approved execution completed — 14:27–14:29 IST
+
+The user replied **Approved** to the exact three-comment batch above. The
+repository was clean, pulled with fast-forward-only (already current), and
+validated before execution. One tab in the existing signed-in Chrome session
+was used for all three; no other tabs were changed.
+
+- **B1 posted:** original post unchanged; newest comments contained a new
+  Aditya Goel comment, not a duplicate by Aditya Singh. Exact B1 v2 text rendered
+  under Aditya Singh with timestamp now and a clickable Arvind Jain mention
+  resolving to /in/jain-arvind/. Receipt:
+  `linkedin/executions/20260911085725-comment-posted-2026-09-11-linkedin-comment-arvind-reactivation-experiment-v2.json`.
+- **B2 posted:** original post and all three comments rechecked in Most recent
+  order. Exact B2 v2 text rendered under Aditya Singh with timestamp now and a
+  clickable Crystal Valentine mention resolving to /in/crystalsvalentine/.
+  Receipt:
+  `linkedin/executions/20260911085828-comment-posted-2026-09-11-linkedin-comment-crystal-provider-exit-rehearsal-v2.json`.
+- **B3 posted:** original post unchanged and no existing comments rendered.
+  Exact approved text rendered under Aditya Singh with timestamp now and a
+  clickable Adrienne Craukamp mention resolving to /in/adriennek-craukamp/.
+  Receipt:
+  `linkedin/executions/20260911085920-comment-posted-2026-09-11-linkedin-comment-adrienne-read-only-effect-boundary.json`.
+
+Each submit was clicked once, with composer wording compared against the exact
+approval first. All three queue items are now posted; skipped initial versions
+remain skipped. Public source-post URLs, not copied comment permalinks, are
+recorded. Public receipts increased from 156 to 159; this is not an engagement
+uplift claim. No reactions, follows, DMs, connections, reshares or schedule changes
+were included. No additional discovery or notification/inbox audit occurred.
+Relationship records now await meaningful inbound; next unprompted review is
+September 18. Further communications require new exact approval.

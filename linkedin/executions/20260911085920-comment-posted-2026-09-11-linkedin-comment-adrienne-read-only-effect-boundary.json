@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911085920-comment-posted-2026-09-11-linkedin-comment-adrienne-read-only-effect-boundary",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-11T08:59:20Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T08:59:20Z",
+    "scope": "User approved B1-B3 exactly as presented; one native author mention per comment and no accompanying reaction or other action."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-11-linkedin-comment-adrienne-read-only-effect-boundary",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502656568417746944/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502656568417746944/",
+    "publishedTextSha256": "6f13a02b3b46dd2de2a5be8e20f8754bcfe9613854904c8c172ecd9f945248f4",
+    "verifiedAt": "2026-09-11T08:59:20Z",
+    "verification": "Fresh complete source and empty discussion checked before composition. Exact approved B3 rendered under Aditya Singh with timestamp now after one submission; native Adrienne Craukamp mention resolves /in/adriennek-craukamp/. Public source-post URL recorded, not a copied comment permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

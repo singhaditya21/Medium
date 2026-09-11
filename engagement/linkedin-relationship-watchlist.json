@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-11T07:54:00Z",
+  "updatedAt": "2026-09-11T08:59:20Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -74,18 +74,18 @@
       "profileUrl": "https://www.linkedin.com/in/crystalsvalentine/",
       "themes": ["AI transformation", "AI economics", "operating models", "outcome verification"],
       "state": "awaiting_inbound_reply",
-      "lastMeaningfulTouch": "2026-08-31",
-      "nextReviewOn": "2026-09-07",
-      "nextActionRule": "Respond only if the current thread continues; otherwise inspect one new relevant post after the review date."
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved B2 v2 provider-exit-rehearsal comment posted and visibly verified September 11 with the native mention on activity 7501972124266586112. Wait for meaningful inbound; do not repeat the argument or send a generic follow-up or DM without new exact approval."
     },
     {
       "name": "Adrienne Craukamp",
       "profileUrl": "https://www.linkedin.com/in/adriennek-craukamp/",
       "themes": ["multi-agent governance", "independent evidence", "verifier-owned receipts"],
       "state": "awaiting_inbound_reply",
-      "lastMeaningfulTouch": "2026-08-31",
-      "nextReviewOn": "2026-09-07",
-      "nextActionRule": "Do not add to the current thread; inspect a new directly relevant post after the review date."
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved B3 read-only effect-boundary comment posted and visibly verified September 11 with the native mention on activity 7502656568417746944. Wait for meaningful inbound; do not repeat the test proposal or initiate a generic follow-up or DM without new exact approval."
     },
     {
       "name": "Farrukh Ahmed Khan",
@@ -158,6 +158,15 @@
       "lastMeaningfulTouch": "2026-09-11",
       "nextReviewOn": "2026-09-18",
       "nextActionRule": "Exact E3 sales connector acceptance-test comment posted and visibly verified September 11 without tags. Wait for meaningful inbound; no product endorsement, follow or repeated comment is authorized."
+    },
+    {
+      "name": "Arvind Jain",
+      "profileUrl": "https://www.linkedin.com/in/jain-arvind/",
+      "themes": ["CRM reactivation", "controlled outcome experiments", "embedded engineering"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved B1 v2 reactivation-experiment comment posted and visibly verified September 11 with the native mention on activity 7503863140292419584. Wait for meaningful inbound; no generic follow-up, DM or repeated experiment proposal without new exact approval."
     }
   ]
 }

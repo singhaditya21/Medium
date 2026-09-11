@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-11T07:54:30Z",
+  "updatedAt": "2026-09-11T08:59:20Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3263,7 +3263,10 @@
       "intendedMentions": [
         "Adrienne Craukamp"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502656568417746944/",
+      "receiptOperationId": "20260911085920-comment-posted-2026-09-11-linkedin-comment-adrienne-read-only-effect-boundary",
+      "postedAt": "2026-09-11T08:59:20Z"
     },
     {
       "id": "2026-09-11-linkedin-comment-arvind-reactivation-experiment-v2",
@@ -3280,7 +3283,10 @@
       "intendedMentions": [
         "Arvind Jain"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503863140292419584/",
+      "receiptOperationId": "20260911085725-comment-posted-2026-09-11-linkedin-comment-arvind-reactivation-experiment-v2",
+      "postedAt": "2026-09-11T08:57:25Z"
     },
     {
       "id": "2026-09-11-linkedin-comment-crystal-provider-exit-rehearsal-v2",
@@ -3297,7 +3303,10 @@
       "intendedMentions": [
         "Crystal Valentine"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501972124266586112/",
+      "receiptOperationId": "20260911085828-comment-posted-2026-09-11-linkedin-comment-crystal-provider-exit-rehearsal-v2",
+      "postedAt": "2026-09-11T08:58:28Z"
     }
   ]
 }

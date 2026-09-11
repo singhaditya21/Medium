@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911085828-comment-posted-2026-09-11-linkedin-comment-crystal-provider-exit-rehearsal-v2",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-11T08:58:28Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T08:58:28Z",
+    "scope": "User approved B1-B3 exactly as presented; one native author mention per comment, no accompanying reaction or other action."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-11-linkedin-comment-crystal-provider-exit-rehearsal-v2",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501972124266586112/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501972124266586112/",
+    "publishedTextSha256": "3dae8090c91ad37d696bf51420089775d35f7754c21d9471e3edf6a1e4d76521",
+    "verifiedAt": "2026-09-11T08:58:28Z",
+    "verification": "Fresh source and all three available comments read in Most recent order with no duplicate. Exact B2 v2 rendered under Aditya Singh with timestamp now after one submission; native Crystal Valentine link resolves /in/crystalsvalentine/. Public source-post URL recorded, not copied comment permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
