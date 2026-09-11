@@ -13,6 +13,7 @@ Keep a high-quality approval queue ready without continuously polling LinkedIn o
 5. Inspect up to five relevant source-specific posts or profiles only when the trigger needs discovery. Check prior interaction before creating any candidate.
 6. Score valid candidates with the repository's relevance, discussion-quality, unique-contribution, and recency formula.
 7. Draft up to one original post concept, five comments/replies, and five DMs only after a qualified signal. Retain DM and post wording only in the approval brief unless separately requested for editorial review.
+   When a repository-local LinkedIn skill supports that task, read `.agents/LINKEDIN-INTEGRATION.md` and its relevant entrypoint only. Use `linkedin-thread-monitor` for inbound triage, `linkedin-comment-drafter` or `linkedin-reply-handler` for responses, and `linkedin-humanizer` for proportionate pre-approval editing. These are drafting aids inside this cycle, never new API services, public-action permissions or schedules.
 8. Add only compliant comment/reply candidates to `engagement/queue.json` through `scripts/manage_engagement_queue.py`. Do not add low-score, duplicated, stale, or capacity-exceeding candidates.
 9. Produce a concise approval packet when there are qualifying actions: target, evidence, exact text, intended tag, score, and relationship context.
 10. If there is no material action, return a quiet status that says no action is recommended and names the next checkpoint. Do not manufacture an engagement batch.

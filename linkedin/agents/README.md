@@ -33,3 +33,12 @@ LinkedIn runs only at **10 PM, 12 AM, 2 AM, 4 AM, and 6 AM IST**. Shared cross-p
 - Unapproved DM text and post drafts are presented in the approval brief. They are not committed unless the user explicitly asks to retain a draft.
 
 Read [`policy.md`](policy.md) before every cycle and follow [`runbooks/two-hourly-cycle.md`](runbooks/two-hourly-cycle.md).
+
+## Repository-local editorial skills
+
+Eleven reviewed skills from `sergebulaev/linkedin-skills` supplement these roles.
+See [the integration contract](../../.agents/LINKEDIN-INTEGRATION.md) for the full
+skill-to-role mapping, pinned source, local adaptations and validation command.
+They use the existing Chrome and exact-approval workflow, not the upstream API
+services. They add no independent schedules. Load only the skill needed for the
+current signal; installing a skill does not make it a continuously running agent.

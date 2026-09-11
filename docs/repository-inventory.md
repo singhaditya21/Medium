@@ -2,6 +2,24 @@
 
 Snapshot: 31 August 2026. This inventory covers the 456 tracked files in this repository. Generated working directories are listed separately because they are deliberately ignored by Git.
 
+## Addendum: repository-local LinkedIn skills (11 September 2026)
+
+The counts below remain the historical 31 August snapshot, not current totals.
+
+| Path | Category | Purpose |
+| --- | --- | --- |
+| `AGENTS.md` | Repository operating instructions | Route LinkedIn work to the existing policy and local skill contract |
+| `.agents/skills/linkedin-*/` | Repository-scoped editorial skills | Eleven pinned third-party skills adapted for Chrome and exact approvals |
+| `.agents/references/` | Shared editorial references | Source guidance and the account-specific voice profile |
+| `.agents/LINKEDIN-INTEGRATION.md`, `.agents/SKILL.md` | Integration contract and shared context | Role mapping, provenance, safeguards and maintenance |
+| `.agents/LICENSE.linkedin-skills` | Third-party license | Retained upstream MIT notice |
+| `scripts/validate_linkedin_skills.py` | Offline validation | Packaging, reference resolution, disabled detector runner and cadence/approval checks |
+
+The detector runner within the installed humanizer is a fail-closed stub, not an
+active integration. These skills and references are not part of the GitHub Pages
+public-site staging allowlist. Existing job times are unchanged. Content CI now
+checks the local skills when their files change.
+
 ## 1. Root project and public-site metadata
 
 | Files | Category | Suggested ownership |

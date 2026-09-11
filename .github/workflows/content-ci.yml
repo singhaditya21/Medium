@@ -14,6 +14,8 @@ on:
       - "engagement/**"
       - "linkedin/**"
       - "medium/**"
+      - ".agents/**"
+      - "AGENTS.md"
   workflow_dispatch:
 
 permissions:
@@ -46,6 +48,7 @@ jobs:
         run: python scripts/validate_medium_bridge.py --output-dir medium-continuation-report
       - name: Validate and generate cross-platform engagement controls
         run: |
+          python scripts/validate_linkedin_skills.py
           python scripts/validate_engagement_automation.py --output-dir engagement-continuation-report
           python scripts/generate_engagement_review.py --as-of 2026-08-27T12:00:00Z --output-dir engagement-review
       - name: Upload distribution packs
