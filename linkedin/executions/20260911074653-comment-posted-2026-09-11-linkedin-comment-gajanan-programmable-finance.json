@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911074653-comment-posted-2026-09-11-linkedin-comment-gajanan-programmable-finance",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-11T07:46:53Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T07:46:53Z",
+    "scope": "User approved E1-E3 exactly as written in the preceding batch; approval applies only to these three comments and listed mentions."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-11-linkedin-comment-gajanan-programmable-finance",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504078785852416000",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504078785852416000/",
+    "publishedTextSha256": "84bbc8a277fb53811e695d4d8c1f6449525a220b7f66876624a6615cdd581bbb",
+    "verifiedAt": "2026-09-11T07:46:53Z",
+    "verification": "Fresh source and duplicate check. Exact approved E1 text rendered under Aditya Singh, timestamp now, after one submission. Native Gajanan Raut link resolves to /in/gajananraut/. Public source-post URL recorded, not a comment permalink. No reaction or follow."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

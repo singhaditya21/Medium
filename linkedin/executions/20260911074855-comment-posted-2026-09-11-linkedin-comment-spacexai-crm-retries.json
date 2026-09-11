@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911074855-comment-posted-2026-09-11-linkedin-comment-spacexai-crm-retries",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-11T07:48:55Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T07:48:55Z",
+    "scope": "User approved E1-E3 exactly as written; E3 carries no additional tags."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-11-linkedin-comment-spacexai-crm-retries",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503949398230335488",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503949398230335488/",
+    "publishedTextSha256": "5a719b665b81f97d6c92b15b29679e00e54c0923e1f72c38adc0a875232345b2",
+    "verifiedAt": "2026-09-11T07:48:55Z",
+    "verification": "Fresh source and Most recent duplicate check. Exact E3 text rendered under Aditya Singh with timestamp now after one submission. No tags, reaction or follow. Public source-post URL recorded, not a comment permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

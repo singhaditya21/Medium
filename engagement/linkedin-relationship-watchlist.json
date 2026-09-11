@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-11T07:28:00Z",
+  "updatedAt": "2026-09-11T07:54:00Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -128,9 +128,36 @@
       "profileUrl": "https://www.linkedin.com/in/shabina-abba-noormohamed-3a59b8413/",
       "themes": ["non-human identities", "scope attenuation", "agent authorization", "runtime governance"],
       "state": "awaiting_inbound_reply",
-      "lastMeaningfulTouch": "2026-09-04",
-      "nextReviewOn": "2026-09-11",
-      "nextActionRule": "Respond if Shabina answers the semantic-composition question; otherwise inspect one new, directly relevant AuthHub or agent-authorization post after the review date."
+      "lastMeaningfulTouch": "2026-09-05",
+      "nextReviewOn": "2026-09-12",
+      "nextActionRule": "September 11 receipt audit corrected the last touch to the September 5 consequence-class-clock reply (20260905080140). Her new kill-switch post was observed but no outreach drafted: preserve the seven-day minimum for unprompted public touches. Respond to substantive inbound only with new exact approval."
+    },
+    {
+      "name": "Gajanan Raut",
+      "profileUrl": "https://www.linkedin.com/in/gajananraut/",
+      "themes": ["programmable finance", "execution-time authorization", "revocation enforcement"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact E1 comment on Demat 2.0 posted and visibly verified September 11 with a native mention. Wait for meaningful inbound; no generic follow-up, DM or repeated control proposal without new exact approval."
+    },
+    {
+      "name": "Muhammad Ansad",
+      "profileUrl": "https://www.linkedin.com/in/ansadag/",
+      "themes": ["AI Office", "decision rights", "verified business outcomes"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact E2 operating-agreement comment posted and visibly verified September 11 with a native mention. Wait for meaningful inbound; no generic follow-up or DM without new exact approval."
+    },
+    {
+      "name": "SpaceXAI",
+      "profileUrl": "https://www.linkedin.com/company/spacexai/",
+      "themes": ["CRM connectors", "retry safety", "stale-write rejection"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact E3 sales connector acceptance-test comment posted and visibly verified September 11 without tags. Wait for meaningful inbound; no product endorsement, follow or repeated comment is authorized."
     }
   ]
 }

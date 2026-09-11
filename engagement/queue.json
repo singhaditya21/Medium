@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-11T07:27:39Z",
+  "updatedAt": "2026-09-11T07:54:30Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3155,6 +3155,149 @@
       "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502956366056239104&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true&commentUrn=urn:li:comment:7501877711301173248&replyUrn=7502956314189344768&dashCommentUrn=urn:li:fsd_comment:(7501877711301173248,urn:li:ugcPost:7501652963082493952)&dashReplyUrn=urn:li:fsd_comment:(7502956314189344768,urn:li:ugcPost:7501652963082493952)",
       "receiptOperationId": "20260911072739-reply-posted-2026-09-11-linkedin-reply-abhijit-decision-arbitration",
       "postedAt": "2026-09-11T07:27:39Z"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-gajanan-programmable-finance",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504078785852416000",
+      "title": "E1: Demat 2.0 execution-time authorization",
+      "author": "Gajanan Raut",
+      "reason": "Exact E1-E3 approval received; source-specific design proposal, not a claimed measured result.",
+      "evidence": "Full public post read September 11: programmable securities and agent execution within authorized limits; asks who writes, changes and overrides rules. No prior Aditya comment rendered; repository duplicate check clear. R1 D.8 U.95 T1.",
+      "draftResponse": "Gajanan Raut, I'd put an explicit authorization checkpoint between an agent proposing a transaction and the asset contract executing it. Bind approval to the policy version, amount and expiry, then recheck eligibility at execution. A useful fault test is revoking the mandate after approval but before execution: does the transaction still go through? I'd track unauthorized executions and p95 revocation-to-enforcement delay, with a named owner able to pause further actions.",
+      "priorityScore": 0.94,
+      "intendedMentions": [
+        "Gajanan Raut"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504078785852416000/",
+      "receiptOperationId": "20260911074653-comment-posted-2026-09-11-linkedin-comment-gajanan-programmable-finance",
+      "postedAt": "2026-09-11T07:46:53Z"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-muhammad-ai-office",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502944151353802752",
+      "title": "E2: AI Office operating agreement",
+      "author": "Muhammad Ansad",
+      "reason": "Exact E1-E3 approval received; source-specific design proposal, not a claimed measured result.",
+      "evidence": "Full three-day-old post and eight-comment discussion reviewed September 11; author replied around three hours before audit. Prior discussion covers outcome accountability and governance toll booths. Draft adds explicit decision rights and balanced operating metrics. R.95 D.9 U.85 T.65.",
+      "draftResponse": "Muhammad Ansad, I'd keep shared AI engineering under the CIO/CTO and assign workflow outcomes to the business owner, with independent risk authority for high-consequence actions. The AI Office's operating agreement should specify which changes teams can ship themselves, who resolves exceptions, and how long decisions take. I'd measure p95 exception-decision time alongside cost per verified outcome and post-release incident rate; faster approvals alone could hide weaker controls.",
+      "priorityScore": 0.8575,
+      "intendedMentions": [
+        "Muhammad Ansad"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502944151353802752/",
+      "receiptOperationId": "20260911074754-comment-posted-2026-09-11-linkedin-comment-muhammad-ai-office",
+      "postedAt": "2026-09-11T07:47:54Z"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-spacexai-crm-retries",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503949398230335488",
+      "title": "E3: Sales connector concurrency and retry acceptance tests",
+      "author": "SpaceXAI",
+      "reason": "Exact E1-E3 approval received; source-specific design proposal, not a claimed measured result.",
+      "evidence": "Full public Grok Bot sales announcement and Most recent thread reviewed September 11; eight-hour post with Salesforce/HubSpot and sales templates. Existing Michael Kim comment concerns ownership and conflict policy; draft instead tests concurrency and uncertain outcomes. No Aditya comment observed. R1 D.9 U.95 T.95.",
+      "draftResponse": "A useful CRM acceptance test: let a seller change an opportunity after the bot reads it, then retry the bot's update after a timeout. Does the connector reject the stale write and avoid sending the follow-up twice? I'd bind each write to the record version and an idempotency key, and measure stale-write rejection, duplicate side effects per 1,000 attempts, and recovery success after partial failures. Can those checks be declared in the sales templates?",
+      "priorityScore": 0.955,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503949398230335488/",
+      "receiptOperationId": "20260911074855-comment-posted-2026-09-11-linkedin-comment-spacexai-crm-retries",
+      "postedAt": "2026-09-11T07:48:55Z"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-arvind-reactivation-experiment",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503863140292419584/",
+      "title": "B1: Closed-lost reactivation needs a controlled outcome test",
+      "author": "Arvind Jain",
+      "reason": "Distinct CRM outcome experiment for a fresh 14-hour discussion; no new author response or prior Aditya touch observed.",
+      "evidence": "September 11 signed-in original profile and post read. 209 reactions, 21 comments, eight reposts observed. All 21 top-level comments rendered in Most recent order; no author reply or Aditya comment seen. Richard Rabbat already asks for a day-one baseline; Satabhish warns about metrics; Daniel covers governance. Proposed comment adds randomized loss-reason/deal-age cohorts, explicit buyer evidence and seller-review cost rather than repeating baseline advice. Metrics are proposed definitions, not observed results. R1 D.9 U.9 T.95 = .945.",
+      "draftResponse": "Arvind Jain, for the closed-lost agent, I'd randomize eligible accounts within loss-reason and deal-age cohorts into agent-assisted and business-as-usual groups. Compare qualified reactivations per 100 accounts, then subtract seller review time and exclude opportunities reopened without new buyer evidence. A two-week sprint can validate the workflow; revenue impact needs follow-through across the sales cycle. Which change from sitting together mattered most: eligibility, timing or the definition of a successful reactivation?",
+      "priorityScore": 0.945,
+      "intendedMentions": [
+        "Arvind Jain"
+      ],
+      "state": "skipped"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-crystal-provider-exit-rehearsal",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501972124266586112/",
+      "title": "B2: Test operating portability with a provider-exit rehearsal",
+      "author": "Crystal Valentine",
+      "reason": "New discussion within an existing relationship; operating portability is distinct from August 31 cost-per-outcome and versioned-outcome-contract replies.",
+      "evidence": "September 11 signed-in five-day post: seven reactions and three comments. Full linked article read: https://www.linkedin.com/pulse/when-ai-runs-more-business-what-control-worth-crystal-valentine-h4elf/ . Most recent shows all three comments: Matan prices the exit annually; other two are broad praise/framing. No author or Aditya reply on this new post. Article distinguishes technical and operating portability and warns against maximizing control everywhere; proposed rehearsal operationalizes acceptable behavior, including abstention and exceptions. R1 D.7 U.95 T.45 = .805.",
+      "draftResponse": "Crystal Valentine, I'd turn your 'recreate the capability' test into a provider-exit rehearsal: run the same representative cases on an alternative stack and measure quality loss, policy violations and time to restore an acceptable service. Include exceptions and abstentions, not just successful paths. Exportable prompts and memory prove data portability; preserved decision quality under the same controls tests operating portability. Who should own that acceptance bar: the capability owner or the platform team?",
+      "priorityScore": 0.805,
+      "intendedMentions": [
+        "Crystal Valentine"
+      ],
+      "state": "skipped"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-adrienne-read-only-effect-boundary",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502656568417746944/",
+      "title": "B3: Validate read-only access by observed effects",
+      "author": "Adrienne Craukamp",
+      "reason": "Distinct new security discussion; proposes a contained acceptance test and paired safety/utility metrics without repeating uncertain attribution or giving bypass instructions.",
+      "evidence": "September 11 signed-in three-day post: seven reactions, no comments rendered. No matching Aditya queue or receipt; previous August 31 thread concerned verifier-owned receipts on a different post. Original research checked at https://collusion.wiki/ dated September 4: preliminary reconstruction, self-identifying agents, wiki writes via read-like requests. Attribution remains qualified in the research; draft does not repeat firm identity, count or motive claims. This is a proposed defensive test in an isolated environment, not a claim of product validation. R1 D.6 U.95 T.65 = .82.",
+      "draftResponse": "Adrienne Craukamp, I'd test 'read-only' as an effect boundary: in an isolated test environment, include endpoints where an apparent read changes state, then verify that an independent monitor detects the change. For strict read-only work, a pre-fetched snapshot can remove live destination access; live browsing needs tighter destination and operation controls. Track unapproved state changes per 1,000 test requests alongside legitimate retrieval success.",
+      "priorityScore": 0.82,
+      "intendedMentions": [
+        "Adrienne Craukamp"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-arvind-reactivation-experiment-v2",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503863140292419584/",
+      "title": "B1: Closed-lost reactivation needs a controlled outcome test",
+      "author": "Arvind Jain",
+      "reason": "Distinct CRM outcome experiment for a fresh 14-hour discussion; no new author response or prior Aditya touch observed.",
+      "evidence": "September 11 signed-in original profile and post read. 209 reactions, 21 comments, eight reposts observed. All 21 top-level comments rendered in Most recent order; no author reply or Aditya comment seen. Richard Rabbat already asks for a day-one baseline; Satabhish warns about metrics; Daniel covers governance. Proposed comment adds randomized loss-reason/deal-age cohorts, explicit buyer evidence and seller-review cost rather than repeating baseline advice. Metrics are proposed definitions, not observed results. R1 D.9 U.9 T.95 = .945. Editorial v2 supersedes the initial unposted draft to clarify units or avoid overstating portability; initial draft skipped. No prior approval or execution.",
+      "draftResponse": "Arvind Jain, for the closed-lost agent, I'd randomize eligible accounts within loss-reason and deal-age cohorts into agent-assisted and business-as-usual groups. Compare qualified reactivations per 100 accounts alongside seller review minutes, excluding opportunities reopened without new buyer evidence. A two-week sprint can validate the workflow; revenue impact needs follow-through across the sales cycle. Which change from sitting together mattered most: eligibility, timing or the definition of a successful reactivation?",
+      "priorityScore": 0.945,
+      "intendedMentions": [
+        "Arvind Jain"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-crystal-provider-exit-rehearsal-v2",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501972124266586112/",
+      "title": "B2: Test operating portability with a provider-exit rehearsal",
+      "author": "Crystal Valentine",
+      "reason": "New discussion within an existing relationship; operating portability is distinct from August 31 cost-per-outcome and versioned-outcome-contract replies.",
+      "evidence": "September 11 signed-in five-day post: seven reactions and three comments. Full linked article read: https://www.linkedin.com/pulse/when-ai-runs-more-business-what-control-worth-crystal-valentine-h4elf/ . Most recent shows all three comments: Matan prices the exit annually; other two are broad praise/framing. No author or Aditya reply on this new post. Article distinguishes technical and operating portability and warns against maximizing control everywhere; proposed rehearsal operationalizes acceptable behavior, including abstention and exceptions. R1 D.7 U.95 T.45 = .805. Editorial v2 supersedes the initial unposted draft to clarify units or avoid overstating portability; initial draft skipped. No prior approval or execution.",
+      "draftResponse": "Crystal Valentine, I'd turn your 'recreate the capability' test into a provider-exit rehearsal: run the same representative cases on an alternative stack and measure quality loss, policy violations and time to restore an acceptable service. Include exceptions and abstentions, not just successful paths. Exportable prompts and memory are only part of portability; preserved decision quality under the same controls tests whether the business capability survives. Who should own that acceptance bar: the capability owner or the platform team?",
+      "priorityScore": 0.805,
+      "intendedMentions": [
+        "Crystal Valentine"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
