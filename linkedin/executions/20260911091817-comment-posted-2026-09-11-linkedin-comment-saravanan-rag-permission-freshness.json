@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911091817-comment-posted-2026-09-11-linkedin-comment-saravanan-rag-permission-freshness",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-11T09:18:17Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T09:18:17Z",
+    "scope": "User approved C1, C2 and C3 exactly as written in the immediately preceding chat batch, each with one native author mention and no other actions."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-11-linkedin-comment-saravanan-rag-permission-freshness",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503054774754398208/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503054774754398208/",
+    "publishedTextSha256": "125fd62198965521a7f63757897acce7c120d148150ffec0f797647931724c09",
+    "verifiedAt": "2026-09-11T09:18:17Z",
+    "verification": "Source and sole existing Dusan comment rechecked with no duplicate. Exact approved C2 text rendered under Aditya Singh with timestamp now after one submission. Native Saravanan P mention resolves to /in/saravananp80/. Public source-post URL, not a copied comment permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

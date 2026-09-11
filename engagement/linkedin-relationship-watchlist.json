@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-11T08:59:20Z",
+  "updatedAt": "2026-09-11T09:19:32Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -167,6 +167,33 @@
       "lastMeaningfulTouch": "2026-09-11",
       "nextReviewOn": "2026-09-18",
       "nextActionRule": "Exact approved B1 v2 reactivation-experiment comment posted and visibly verified September 11 with the native mention on activity 7503863140292419584. Wait for meaningful inbound; no generic follow-up, DM or repeated experiment proposal without new exact approval."
+    },
+    {
+      "name": "Ananth Nagaraj",
+      "profileUrl": "https://www.linkedin.com/in/ananth-nagaraj-gnani/",
+      "themes": ["voice AI economics", "build versus buy", "utilization break-even"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved C1 utilization break-even comment posted and visibly verified September 11 with the native mention on activity 7504057161023561728. Wait for meaningful inbound; no repeated argument, generic follow-up or DM without new exact approval."
+    },
+    {
+      "name": "Saravanan P",
+      "profileUrl": "https://www.linkedin.com/in/saravananp80/",
+      "themes": ["enterprise RAG", "permission freshness", "cache authorization"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved C2 permission-revocation test comment posted and visibly verified September 11 with the native mention on activity 7503054774754398208. Wait for meaningful inbound; no repeated test proposal, generic follow-up or DM without new exact approval."
+    },
+    {
+      "name": "Sam DuRegger",
+      "profileUrl": "https://www.linkedin.com/in/duregger/",
+      "themes": ["AI-generated requirements", "review burden", "accountable ownership"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-11",
+      "nextReviewOn": "2026-09-18",
+      "nextActionRule": "Exact approved C3 requirements review-burden comment posted and visibly verified September 11 with the native mention on activity 7503545355116904448. Wait for meaningful inbound; no repeated metric proposal, generic follow-up or DM without new exact approval."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-11T09:11:00Z",
+  "updatedAt": "2026-09-11T09:19:32Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3323,7 +3323,10 @@
       "intendedMentions": [
         "Ananth Nagaraj"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504057161023561728/",
+      "receiptOperationId": "20260911091716-comment-posted-2026-09-11-linkedin-comment-ananth-utilization-break-even",
+      "postedAt": "2026-09-11T09:17:16Z"
     },
     {
       "id": "2026-09-11-linkedin-comment-saravanan-rag-permission-freshness",
@@ -3340,7 +3343,10 @@
       "intendedMentions": [
         "Saravanan P"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503054774754398208/",
+      "receiptOperationId": "20260911091817-comment-posted-2026-09-11-linkedin-comment-saravanan-rag-permission-freshness",
+      "postedAt": "2026-09-11T09:18:17Z"
     },
     {
       "id": "2026-09-11-linkedin-comment-sam-requirements-review-burden",
@@ -3357,7 +3363,10 @@
       "intendedMentions": [
         "Sam DuRegger"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503545355116904448/",
+      "receiptOperationId": "20260911091932-comment-posted-2026-09-11-linkedin-comment-sam-requirements-review-burden",
+      "postedAt": "2026-09-11T09:19:32Z"
     }
   ]
 }

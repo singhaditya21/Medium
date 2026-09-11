@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260911091932-comment-posted-2026-09-11-linkedin-comment-sam-requirements-review-burden",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-11T09:19:32Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-11T09:19:32Z",
+    "scope": "User approved C1, C2 and C3 exactly as written in the immediately preceding chat batch, each with one native author mention and no other actions."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-11-linkedin-comment-sam-requirements-review-burden",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503545355116904448/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503545355116904448/",
+    "publishedTextSha256": "2f4179192a48af0208dff9010f6008a21d69bdb7007c16f687e58667465c6bdf",
+    "verifiedAt": "2026-09-11T09:19:32Z",
+    "verification": "Source and all seventeen rendered comments rechecked chronologically with no duplicate or material context change. Exact approved C3 text rendered under Aditya Singh with timestamp now after one submission. Native Sam DuRegger mention resolves to /in/duregger/. Public source-post URL, not a copied comment permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

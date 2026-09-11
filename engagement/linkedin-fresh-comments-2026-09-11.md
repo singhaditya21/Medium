@@ -1,6 +1,6 @@
 # LinkedIn fresh comment opportunities — September 11, 2026
 
-Status: preparation only; C1–C3 await exact action-time user approval.
+Status: C1–C3 approved, posted and visibly verified. See the execution record below.
 Research completed approximately 14:40 IST in one tab of existing signed-in Chrome.
 
 ## Scope and controls
@@ -100,4 +100,37 @@ a receipt. If context materially changes, return for revised approval. Research
 does not reset relationship last-touch dates.
 
 Queue updates were performed only through scripts/manage_engagement_queue.py.
-All three states are ready_for_confirmation, not approved or posted.
+At preparation, all three states were ready_for_confirmation, not approved or posted.
+
+## Approved execution — 14:47–14:49 IST
+
+The user replied **Approved** to the exact C1–C3 chat batch. The repository
+was clean, fast-forward pull was already current, and validation passed before
+execution. Chrome had no remaining LinkedIn tab, so one tab was created in the
+existing signed-in browser and reused for all three sources. Other tabs were
+left untouched.
+
+- C1: source and newest discussion rechecked; no duplicate or material change.
+  Exact text rendered under Aditya Singh with timestamp now and native Ananth
+  Nagaraj mention resolving to /in/ananth-nagaraj-gnani/. Receipt:
+  `linkedin/executions/20260911091716-comment-posted-2026-09-11-linkedin-comment-ananth-utilization-break-even.json`.
+- C2: source and sole Dusan comment rechecked; no duplicate or material change.
+  Exact text rendered under Aditya Singh with timestamp now and native Saravanan
+  P mention resolving to /in/saravananp80/. Receipt:
+  `linkedin/executions/20260911091817-comment-posted-2026-09-11-linkedin-comment-saravanan-rag-permission-freshness.json`.
+- C3: source and seventeen rendered comments rechecked chronologically; no
+  duplicate or material change. Exact text rendered under Aditya Singh with
+  timestamp now and native Sam DuRegger mention resolving to /in/duregger/.
+  Receipt:
+  `linkedin/executions/20260911091932-comment-posted-2026-09-11-linkedin-comment-sam-requirements-review-burden.json`.
+
+Each composer was compared with the approved text before one submit click.
+All three queue states are now posted. Receipts use the verified public source
+post URLs above, not copied comment permalinks. Tracking issue 36 is retained
+from the engagement workflow; no issue content was changed.
+
+Public receipts increased from 159 to 162; this is an execution count, not an
+engagement-uplift claim. No reactions, follows, connections, DMs, reposts,
+scheduled content or Medium settings were changed. Relationship records now
+await meaningful inbound, with the next unprompted review on September 18.
+Further communication needs new exact approval.
