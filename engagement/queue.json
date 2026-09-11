@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-11T08:59:20Z",
+  "updatedAt": "2026-09-11T09:11:00Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3307,6 +3307,57 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501972124266586112/",
       "receiptOperationId": "20260911085828-comment-posted-2026-09-11-linkedin-comment-crystal-provider-exit-rehearsal-v2",
       "postedAt": "2026-09-11T08:58:28Z"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-ananth-utilization-break-even",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504057161023561728/",
+      "title": "Voice AI build-versus-buy utilization break-even",
+      "author": "Ananth Nagaraj",
+      "reason": "Active author-led debate on full-stack voice AI economics. Adds utilization-based break-even testing rather than repeating existing cost-per-outcome or build-versus-buy assertions.",
+      "evidence": "Signed-in Chrome on 2026-09-11: 2h-old source; 64 reactions, 7 displayed comments including author reply, 10 reposts. Source and all seven rendered comments read in Most relevant/Most recent. Sanchit discusses outcomes; Tarun challenges ownership economics; Ananth replies on scalable models and cost. No Aditya Singh comment observed; no author queue history. TAM, ARR and volume are author claims, not verified or repeated in draft.",
+      "draftResponse": "Ananth Nagaraj, I'd compare owned and third-party stacks at the same resolution-quality and p95 latency bar, split by language and peak concurrency. Include training, on-call engineering and idle capacity in the owned stack; include retries and human fallback in both. The break-even curve by utilization would make the build-versus-buy argument testable. Which layer changes that curve most in your deployments: speech inference, telephony or orchestration?",
+      "priorityScore": 0.9275,
+      "intendedMentions": [
+        "Ananth Nagaraj"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-saravanan-rag-permission-freshness",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503054774754398208/",
+      "title": "RAG permission revocation across caches",
+      "author": "Saravanan P",
+      "reason": "Strong fit with agent authorization and enterprise RAG controls. Adds an explicit stale-permission test to an existing retrieval-security discussion without claiming the architecture lacks controls.",
+      "evidence": "Signed-in Chrome on 2026-09-11: 2d edited source; 41 reactions, 1 comment, 2 reposts. Full source, ingestion diagram and sole rendered Dusan Odalovic comment read. Diagram includes ACL/permissions metadata, change-data capture and re-indexing. Dusan discusses pre/post-retrieval filtering. No Aditya Singh comment observed; no author queue history. Source resolved through visible public embed link after profile activity did not yield an exact match.",
+      "draftResponse": "Saravanan P, the ACL metadata in the ingestion pattern makes permission freshness worth testing explicitly. I'd add a three-step test: warm retrieval and answer caches, revoke a user's document access, then repeat the same query. Measure revocation-to-denial latency and check retrieved chunks, cached answers and citations for exposure. Cache hits should still respect current permissions; waiting for the next embedding refresh leaves an avoidable window.",
+      "priorityScore": 0.8625,
+      "intendedMentions": [
+        "Saravanan P"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-11-linkedin-comment-sam-requirements-review-burden",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503545355116904448/",
+      "title": "AI-generated requirements and downstream clarification cost",
+      "author": "Sam DuRegger",
+      "reason": "Relevant product and operating-model discussion. Converts document-volume complaints into measurable downstream clarification and scope-rework costs while avoiding model or personal attacks.",
+      "evidence": "Signed-in Chrome on 2026-09-11: 1d edited source; 27 reactions, 17 comments. Full post and all 17 rendered comments read after chronological loading. Existing contributions cover process quality, ownership, output-volume KPIs, context stores and UI guardrails. No Aditya Singh comment or author reply observed; no author queue history. Proposed metrics are not empirical account results.",
+      "draftResponse": "Sam DuRegger, I'd measure what happens after Jira-237 is marked ready: clarification minutes per accepted ticket and the share reopened for missing scope. Compare AI-assisted and manually drafted tickets of similar complexity. Faster drafting can otherwise move work to engineers and reviewers without reducing it. Each ticket needs a named owner who can defend the problem, non-goals and acceptance test; the generated document cannot carry that accountability.",
+      "priorityScore": 0.8375,
+      "intendedMentions": [
+        "Sam DuRegger"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
