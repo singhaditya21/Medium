@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-12T15:13:01Z",
+  "updatedAt": "2026-09-12T15:19:38Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3603,7 +3603,10 @@
       "intendedMentions": [
         "Nitin Supekar"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504558735579828224%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
+      "receiptOperationId": "20260912151938-reply-posted-2026-09-12-linkedin-reply-n3-nitin-drift-triage-clarification",
+      "postedAt": "2026-09-12T15:19:38Z"
     }
   ]
 }

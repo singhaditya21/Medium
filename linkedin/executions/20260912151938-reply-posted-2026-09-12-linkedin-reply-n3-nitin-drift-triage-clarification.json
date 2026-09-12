@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912151938-reply-posted-2026-09-12-linkedin-reply-n3-nitin-drift-triage-clarification",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-12T15:19:38Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T15:19:38Z",
+    "scope": "User approved N3 exactly as displayed with the native Nitin Supekar mention only. No reaction, DM, follow, connection or additional tags authorized."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-12-linkedin-reply-n3-nitin-drift-triage-clarification",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504548612488622081%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504558735579828224%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
+    "publishedTextSha256": "a7bc1ad00650198f5e9f111aac6afde084f1d1b56015949225e721e41e7b1fe8",
+    "verifiedAt": "2026-09-12T15:19:38Z",
+    "verification": "Fresh signed-in Chrome context and duplicate check found unchanged Nitin correction and no later user reply. Exact approved N3 posted once under Aditya Singh. Clickable native Nitin Supekar profile mention visibly verified. Reloaded page, expanded See more replies and verified persistence. Copied public result https://lnkd.in/p/dcf9ndVn and opened it; resolved reply ID 7504558735579828224 and exact text verified again. No other action executed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

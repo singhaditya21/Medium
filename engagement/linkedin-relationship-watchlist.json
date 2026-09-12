@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-12T15:12:06Z",
+  "updatedAt": "2026-09-12T15:19:38Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -19,10 +19,10 @@
       "name": "Nitin Supekar",
       "profileUrl": "https://www.linkedin.com/in/nitin-supekar-748702/",
       "themes": ["agent ownership", "containment drills", "operational accountability"],
-      "state": "inbound_reply_awaiting_confirmation",
+      "state": "awaiting_inbound_reply",
       "lastMeaningfulTouch": "2026-09-12",
-      "nextReviewOn": "2026-09-12",
-      "nextActionRule": "N1 remains posted as reply 7504542155185717248. New inbound correction 7504548612488622081 reviewed around 20:40 IST September 12. N3 / 2026-09-12-linkedin-reply-n3-nitin-drift-triage-clarification is ready for new exact confirmation, not posted. It distinguishes drift assessment from incident handling. Recheck context and duplicates before any approved action; no reaction, DM, follow or connection is authorized."
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "N3 exact approved drift-triage clarification posted September 12 as reply 7504558735579828224 in response to correction 7504548612488622081. Exact wording, native Nitin mention, persistence after refresh and resolved public permalink verified. Wait for substantive inbound; no repeated argument, generic follow-up, DM, reaction or connection without new exact approval."
     },
     {
       "name": "Ritesh Kumar",
