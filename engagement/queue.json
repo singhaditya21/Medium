@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-12T12:06:24Z",
+  "updatedAt": "2026-09-12T14:06:35Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3547,6 +3547,40 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503425149027651585/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504510477041983488%2Curn%3Ali%3AugcPost%3A7503425149027651585%29",
       "receiptOperationId": "20260912120624-comment-posted-2026-09-12-linkedin-comment-c5-rida-mahveen",
       "postedAt": "2026-09-12T12:06:24Z"
+    },
+    {
+      "id": "2026-09-12-linkedin-reply-n1-nitin-drift-remediation",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504523932138426369%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
+      "title": "N1: Close the owner-to-enforcement handoff after material drift",
+      "author": "Nitin Supekar",
+      "reason": "Fresh substantive author reply to the user's approved C1; extend the answer with a testable owner-to-enforcement handoff, not another generic comment.",
+      "evidence": "Live signed-in Chrome review on 2026-09-12: author describes multiple accountable owner types, Design Intent drift routing and assignment-policy enforcement. Exact inbound reply ID 7504523932138426369 under user comment 7504507821468827648; no user follow-up observed. Public reply link https://lnkd.in/p/dGD2DwWu resolved to this target. Scoring inputs relevance=.95, discussionQuality=.95, uniqueContribution=.90, recency=1.00; weighted score=.95. Review current thread and duplicates again before approved execution.",
+      "draftResponse": "Nitin Supekar, multiple owner types and drift routing clarify the model. I'd make each material drift an owned remediation item with a deadline and an explicit decision on whether affected actions remain enabled. Track drift-to-acknowledgement separately from drift-to-enforced-resolution: a prompt alert is not proof that stale authority stopped working. The incident drill can test that owner-to-enforcement handoff.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Nitin Supekar"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-linkedin-reply-n2-ritesh-reconnect-contract",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504449972944314369/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504508555983699968%2Curn%3Ali%3Aactivity%3A7504449972944314369%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504510823042535424%2Curn%3Ali%3Aactivity%3A7504449972944314369%29",
+      "title": "N2: Reconnect safely after local enforcement loses the Control Tower",
+      "author": "Ritesh Kumar",
+      "reason": "Fresh author reply directly answers the user's C2; add a bounded reconnect failure test rather than repeat the central-governance/local-enforcement split.",
+      "evidence": "Live signed-in Chrome review on 2026-09-12: Ritesh assigns final enforcement to the local execution gateway and says stale or unavailable authority should fail safely. All four displayed post comments read. Exact inbound reply ID 7504510823042535424 under user comment 7504508555983699968; no user follow-up observed. Public link https://lnkd.in/p/dySERbeU resolved to target. Scoring inputs relevance=.95, discussionQuality=.95, uniqueContribution=.90, recency=1.00; weighted score=.95. Recheck context and duplicate replies immediately before approved execution.",
+      "draftResponse": "Ritesh Kumar, that split also needs a reconnect contract. A command queued before disconnection should not execute merely because connectivity returns. I'd revalidate authority and target state, reconcile any uncertain earlier outcome, and preserve the transaction's remaining budget. Reuse an idempotency key only for the unchanged logical operation. A useful test is disconnect, revoke, reconnect and retry: no stale write should be accepted.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Ritesh Kumar"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }

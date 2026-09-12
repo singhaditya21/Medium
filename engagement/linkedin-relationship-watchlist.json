@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-12T12:06:25Z",
+  "updatedAt": "2026-09-12T14:06:36Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -19,19 +19,19 @@
       "name": "Nitin Supekar",
       "profileUrl": "https://www.linkedin.com/in/nitin-supekar-748702/",
       "themes": ["agent ownership", "containment drills", "operational accountability"],
-      "state": "awaiting_inbound_reply",
+      "state": "inbound_reply_awaiting_confirmation",
       "lastMeaningfulTouch": "2026-09-12",
-      "nextReviewOn": "2026-09-19",
-      "nextActionRule": "C1 exact approved ownership-drill comment posted and visibly verified September 12 with native author mention, comment 7504507821468827648. Wait for substantive inbound; no repeated ownership argument, generic follow-up, DM or connection without new exact approval."
+      "nextReviewOn": "2026-09-12",
+      "nextActionRule": "Fresh substantive reply 7504523932138426369 to C1 read September 12. N1 / 2026-09-12-linkedin-reply-n1-nitin-drift-remediation is ready for exact confirmation, not posted. Recheck the inbound reply and duplicates immediately before any newly approved execution. No additional reaction, DM, follow or connection is authorized."
     },
     {
       "name": "Ritesh Kumar",
       "profileUrl": "https://www.linkedin.com/in/ritesh-kumar-6aabab19/",
       "themes": ["AI control towers", "local enforcement", "revocation latency"],
-      "state": "awaiting_inbound_reply",
+      "state": "inbound_reply_awaiting_confirmation",
       "lastMeaningfulTouch": "2026-09-12",
-      "nextReviewOn": "2026-09-19",
-      "nextActionRule": "C2 exact approved disconnected-control-tower comment posted and visibly verified September 12 with native author mention, comment 7504508555983699968. Wait for substantive inbound; no repeated enforcement argument, generic follow-up or DM without new exact approval."
+      "nextReviewOn": "2026-09-12",
+      "nextActionRule": "Fresh substantive reply 7504510823042535424 to C2 read September 12. N2 / 2026-09-12-linkedin-reply-n2-ritesh-reconnect-contract is ready for exact confirmation, not posted. Recheck the inbound reply and duplicates immediately before any newly approved execution. No additional reaction, DM, follow or connection is authorized."
     },
     {
       "name": "Nihar Ranjan Das",
