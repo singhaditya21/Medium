@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your AI Outreach Agent Needs a Contact-Policy Ledger</title><style>body{margin:0;background:#fff;color:#111;font:19px/1.65 system-ui,sans-serif}main{max-width:1020px;margin:48px auto;padding:0 28px}h1{line-height:1.15;font-size:44px}h2{color:#155cce;line-height:1.3;margin-top:2em}a{color:#155cce}img{width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f8ff;padding:24px;font-size:15px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{border:1px solid #a7bde3;padding:12px;text-align:left;vertical-align:top}figcaption,.status{font-size:15px}.status{border:2px solid #155cce;padding:18px;color:#155cce}blockquote{border-left:4px solid #155cce;margin-left:0;padding-left:22px}code{overflow-wrap:anywhere}</style><main><p class="status">EDITORIAL REVIEW ONLY · Not published or scheduled on Medium or LinkedIn</p><h1>Your AI Outreach Agent Needs a Contact-Policy Ledger</h1>
+<p>Enforce purpose, channel, suppression and frequency across every campaign and agent.</p>
+<p>This story was developed with AI writing and diagram assistance. Examples and limits are illustrative engineering policies. This article does not provide legal advice or claim that one consent model applies in every jurisdiction.</p>
+<p>Three teams each obey their own weekly email cap. A customer still receives six messages because the teams have different campaign systems and each AI agent sees a different customer identifier.</p>
+<p>The missing object is a shared contact-policy ledger: the current decision about whether a specific person may be contacted for a specific purpose, through a specific channel, under a defined organizational policy.</p>
+<h2>Do not reduce eligibility to one Boolean</h2>
+<p>A field called “consent = true” erases context. Capture the subject identity, channel, purpose, policy basis determined by the organization, evidence reference, effective time and withdrawal or suppression state. Support unknown and conflicting states explicitly.</p>
+<p>A service notification and a promotional message may follow different policies. The agent must not relabel a sales pitch as a service message to pass a gate. Classification should be constrained by approved templates, workflow context and review where required.</p>
+<p><img src="../drafts/media/your-ai-outreach-agent-needs-a-contact-policy-ledger.png" alt="Shared contact-policy ledger"></p>
+<p><em>AI-assisted reference architecture. Shared policy and frequency state are checked before a dispatch reservation.</em></p>
+<p>Legal and privacy owners determine the applicable rules. Engineering translates those decisions into a versioned contract and observable enforcement. Do not ask a language model to infer legal permission from a scraped email address or a social-media reaction.</p>
+<h2>Use one subject across systems</h2>
+<p>Resolve CRM contact IDs, mailing-list IDs and campaign identifiers through a governed identity map. Preserve uncertainty: if two possible identities carry different suppression states, do not pick the permissive one because it enables the send.</p>
+<p>Store source provenance and conflict resolution. A newer imported marketing list should not silently erase a direct suppression instruction. The policy team should define precedence and the supported reconciliation process.</p>
+<p>The registry itself contains personal data. Restrict access, minimize retention and keep detailed contact evidence out of shared debugging dashboards.</p>
+<h2>Frequency requires atomic reservations</h2>
+<p>An illustrative organizational policy allows at most two non-essential messages per person in a rolling seven-day window. Three agents checking “one message sent so far” can all decide to send unless the check and reservation are serialized.</p>
+<pre><code class="language-text">eligible =
+  identity_resolved
+  AND channel_and_purpose_allowed
+  AND no_applicable_suppression
+  AND policy_evidence_current
+
+reserve only if:
+  eligible
+  AND sent_in_window + unresolved_reservations &lt; limit
+</code></pre>
+<p>Use a rolling window defined precisely at boundary times. Release a reservation only when the action is cancelled or proven not to have been sent. An ambiguous provider outcome should not free another slot automatically.</p>
+<p>The two-message example is a design illustration, not an engagement recommendation, legal threshold or provider policy.</p>
+<h2>Treat unsubscribe as an input with operational priority</h2>
+<p><a href="https://www.rfc-editor.org/rfc/rfc8058.html">RFC 8058</a> specifies a one-click unsubscribe mechanism for email. Supporting that mechanism does not by itself establish an organization&#39;s complete permission policy.</p>
+<p>When a suppression arrives, update authoritative state and invalidate applicable queued proposals. Measure propagation to every sending path, including manual campaign tools and agents. The remaining gap is operational if an agent honors the ledger but another system bypasses it.</p>
+<p>Define the dispatch race explicitly: a suppression serialized before dispatch reservation blocks that reservation; messages already accepted by a provider may need a different remediation path. Promise only what the infrastructure can enforce.</p>
+<h2>Measure restraint as well as reach</h2>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Suppression propagation p99</td>
+<td>Slow paths keep outdated contact authority</td>
+</tr>
+<tr>
+<td>Cross-campaign cap breaches</td>
+<td>Isolated campaign limits miss cumulative contact</td>
+</tr>
+<tr>
+<td>Unknown identity holds</td>
+<td>Uncertainty is preserved instead of guessed away</td>
+</tr>
+<tr>
+<td>Purpose mismatch blocks</td>
+<td>Content is not silently reclassified to permit contact</td>
+</tr>
+<tr>
+<td>Unresolved dispatch reservations</td>
+<td>Ambiguous sends do not create extra capacity</td>
+</tr>
+</tbody></table>
+<p>The primary quality outcome is appropriate, wanted communication, not the number of addresses an agent can reach. Response rate alone can reward aggressive contact while concealing complaints and suppression failures.</p>
+<h2>Test a conflict, not just a happy path</h2>
+<p>Create one synthetic person with three campaign IDs. Allow two purposes, suppress one channel and queue concurrent proposals. Then introduce a conflicting imported record. The system should produce one explainable policy decision per proposed contact and preserve the restrictive state required by the declared policy.</p>
+<p>Finally, test a withdrawal against a long queue and verify the actual test-mail sink. A checked box in CRM is insufficient evidence that every dispatcher obeyed it.</p>
+<p>The operating question is simple: can every team and agent explain why this person received this message now, using the same current policy state?</p>
+</main></html>

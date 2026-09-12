@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CRM Entity Merges Need an Undo Graph</title><style>body{margin:0;background:#fff;color:#111;font:19px/1.65 system-ui,sans-serif}main{max-width:1020px;margin:48px auto;padding:0 28px}h1{line-height:1.15;font-size:44px}h2{color:#155cce;line-height:1.3;margin-top:2em}a{color:#155cce}img{width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f8ff;padding:24px;font-size:15px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{border:1px solid #a7bde3;padding:12px;text-align:left;vertical-align:top}figcaption,.status{font-size:15px}.status{border:2px solid #155cce;padding:18px;color:#155cce}blockquote{border-left:4px solid #155cce;margin-left:0;padding-left:22px}code{overflow-wrap:anywhere}</style><main><p class="status">EDITORIAL REVIEW ONLY · Not published or scheduled on Medium or LinkedIn</p><h1>CRM Entity Merges Need an Undo Graph</h1>
+<p>Why deduplicating customer records is a lineage operation with a recovery contract.</p>
+<p>This story was developed with AI writing and diagram assistance. Examples and numbers are illustrative; no customer records or production results are represented.</p>
+<p>Two accounts share a name and an address. An agent merges them. One record belonged to a parent company; the other represented a separately contracted subsidiary. Pipeline ownership, renewal history and an open invoice now appear under the wrong commercial identity.</p>
+<p>A high similarity score did not establish that these were the same business entity. More importantly, “undo merge” is no longer one database operation after downstream systems consume the new identifier.</p>
+<h2>Separate matching from consolidation</h2>
+<p>Matching generates a hypothesis: records A and B represent the same entity for a declared purpose. Consolidation chooses a survivor and rewrites references. Keep those as separate permissions.</p>
+<p>Define the entity type before evaluating similarity. A legal entity, billing account, household and sales territory are different concepts. Two records can be equivalent for one analytical report and still be unsafe to merge operationally.</p>
+<p><img src="../drafts/media/crm-entity-merges-need-an-undo-graph.png" alt="Recoverable CRM merge architecture"></p>
+<p><em>AI-assisted reference diagram. The merge plan preserves the lineage needed to explain and, where feasible, compensate downstream changes.</em></p>
+<p>The proposal should show identity evidence, contradictory evidence, affected objects, proposed field winners and the systems that will receive the change. A missing identifier is not positive matching evidence.</p>
+<h2>Price the asymmetry</h2>
+<p>Let p be the calibrated probability that a candidate pair represents the same entity. Let C_false be the cost of a false merge and C_missed the cost of leaving a true duplicate unresolved. Ignoring review costs and other options, merging has lower expected loss when:</p>
+<pre><code class="language-text">(1 - p) × C_false &lt; p × C_missed
+p &gt; C_false / (C_false + C_missed)
+</code></pre>
+<p>For illustrative costs of $50,000 and $200, that threshold is approximately 99.602%. It is not a recommended universal confidence cutoff. The model assumes calibrated probabilities and simplified losses; a similarity score is not automatically p.</p>
+<p>Manual review creates another option with its own cost, delay and error rate. Sensitive account classes may require review regardless of the numerical threshold.</p>
+<h2>Commit an explicit merge plan</h2>
+<p>Use immutable source identifiers, a merge action ID, expected source versions and a pre-merge snapshot protected by the normal data-access rules. Preserve aliases so downstream references can resolve deliberately rather than silently attaching to the wrong customer.</p>
+<pre><code class="language-text">merge_plan:
+  action_id: merge-demo-42
+  sources: [account-A@v12, account-B@v8]
+  survivor: account-A
+  field_resolution: approved-explicit-map
+  reparenting: approved-object-reference-list
+  downstream_consumers: [billing, support, analytics]
+  recovery_owner: assigned-human-role
+</code></pre>
+<p>This is a planning contract, not a platform API. A real implementation must also handle record locks, tenancy, permissions and fields that are prohibited from consolidation.</p>
+<p>Foreign-key constraints can preserve structural referential integrity, but they do not prove that the selected survivor is commercially correct. See <a href="https://www.postgresql.org/docs/current/ddl-constraints.html">PostgreSQL&#39;s constraint documentation</a>. Business equivalence remains an application decision.</p>
+<h2>The recovery graph grows after commit</h2>
+<p>Suppose billing creates a new invoice after the merge, support reassigns two cases and analytics updates a forecast. Recreating the original two rows does not reverse these consequences.</p>
+<p>Record a dependency graph from the merge to each downstream effect. Classify edges as automatically compensatable, human-reconcilable or irreversible. A sent customer message belongs in the last category even if the CRM row can be restored.</p>
+<p>The recovery operator should see affected objects and a proposed compensation order. Concurrent legitimate edits must not be overwritten with an old snapshot. Compare current versions and route conflicts to the responsible owner.</p>
+<h2>Test the graph before trusting the score</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Required behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Parent and subsidiary share an address</td>
+<td>Preserve legal-entity distinction</td>
+</tr>
+<tr>
+<td>One source changes during review</td>
+<td>Invalidate or recompute merge plan</td>
+</tr>
+<tr>
+<td>Consumer receives the event twice</td>
+<td>No repeated reparenting effect</td>
+</tr>
+<tr>
+<td>Billing is unavailable</td>
+<td>Visible pending downstream state</td>
+</tr>
+<tr>
+<td>Unmerge occurs after new invoice</td>
+<td>Explicit reconciliation, not blind restoration</td>
+</tr>
+</tbody></table>
+<p>Track precision on reviewed merge samples, unresolved identity conflicts, downstream reconciliation age and the proportion of merges with complete lineage. Do not optimize duplicate-count reduction without checking false merges.</p>
+<p>The <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html">transactional outbox pattern</a> can help coordinate a database change with notification of consumers. Consumers still need duplicate handling; an outbox does not make a multi-system merge automatically reversible.</p>
+<p>Start with propose-only matching on one low-risk entity class. Expand authority only after the team has demonstrated recovery on intentionally wrong synthetic merges. The meaningful readiness test is whether a false merge remains explainable and containable after downstream systems have acted.</p>
+</main></html>

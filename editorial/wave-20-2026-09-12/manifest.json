@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "status": "drafts_for_human_review_not_published_or_scheduled",
+  "createdOn": "2026-09-12",
+  "scope": "20 additional Medium publications: 12 existing GitHub-only editorial drafts + 8 new local full-text drafts. Standing Role is already scheduled and excluded.",
+  "liveInventory": {
+    "mediumPublished": 13,
+    "mediumScheduled": 1,
+    "mediumScheduledTitle": "Your AI Agent Should Not Have a Standing Role",
+    "mediumScheduledDate": "2026-09-14",
+    "linkedinScheduled": 11,
+    "linkedinLastScheduled": "2026-10-09T14:00:00+05:30",
+    "freshness": "Signed-in Chrome, 12 September 2026; list inventory only, not a full settings audit."
+  },
+  "proposedSettings": {
+    "medium": {
+      "destination": "Aditya Singh profile",
+      "publication": null,
+      "visibility": "public",
+      "subscriberEmail": true,
+      "paywall": false,
+      "aiDisclosure": "Keep the draft's opening AI-assistance disclosure and image caption disclosures.",
+      "timeZone": "Asia/Kolkata",
+      "time": "14:00",
+      "days": [
+        "Monday",
+        "Thursday"
+      ],
+      "firstDate": "2026-10-12",
+      "canonical": "Existing 12: respective GitHub Pages canonical. New 8: no public canonical yet; approve their GitHub Pages publication first if preserving archive-first workflow."
+    },
+    "linkedin": {
+      "audience": "Anyone",
+      "comments": "Anyone",
+      "nativeMentions": [],
+      "timeZone": "Asia/Kolkata",
+      "time": "08:45",
+      "timing": "The following morning after Medium publication",
+      "link": "Insert only the visibly verified public Medium URL, then show exact final text for approval.",
+      "media": "Preserve the user's animated-media preference. Existing figures and eight new static diagrams are source assets; animated MP4/GIF launch media remains to be built and approved. No static-only replacement is presumed approved."
+    }
+  },
+  "executionGates": [
+    "Human technical review of all story bodies",
+    "Complete source and visual QA, including export to Medium-supported images",
+    "Approve exact Medium body, preview, topics, canonical, email, paywall and date",
+    "Import only approved owned content; verify saved state",
+    "Publish/schedule using signed-in Chrome only",
+    "Read back resulting public URL and state",
+    "Resolve LinkedIn URL and finish animated media",
+    "Separate exact LinkedIn approval before scheduling",
+    "Use rolling scheduling windows if platform horizon limits prevent later dates"
+  ],
+  "existing": [
+    {
+      "id": "M01",
+      "slug": "your-ai-agent-needs-a-transaction-boundary",
+      "source": "data/your-ai-agent-needs-a-transaction-boundary.json",
+      "linkedinId": "NW-LI-01"
+    },
+    {
+      "id": "M02",
+      "slug": "the-hardest-agent-failure-is-an-ambiguous-success",
+      "source": "data/the-hardest-agent-failure-is-an-ambiguous-success.json",
+      "linkedinId": "NW-LI-11"
+    },
+    {
+      "id": "M03",
+      "slug": "an-agent-retry-is-a-new-risk-decision",
+      "source": "data/an-agent-retry-is-a-new-risk-decision.json",
+      "linkedinId": "NW-LI-02"
+    },
+    {
+      "id": "M04",
+      "slug": "your-verifier-must-not-trust-the-agent",
+      "source": "data/your-verifier-must-not-trust-the-agent.json",
+      "linkedinId": "NW-LI-03"
+    },
+    {
+      "id": "M05",
+      "slug": "the-agent-policy-engine-is-a-compiler",
+      "source": "data/the-agent-policy-engine-is-a-compiler.json",
+      "linkedinId": "NW-LI-04"
+    },
+    {
+      "id": "M06",
+      "slug": "ai-agent-observability-is-not-logging",
+      "source": "data/ai-agent-observability-is-not-logging.json",
+      "linkedinId": "NW-LI-05"
+    },
+    {
+      "id": "M07",
+      "slug": "every-agent-needs-a-safe-degradation-ladder",
+      "source": "data/every-agent-needs-a-safe-degradation-ladder.json",
+      "linkedinId": "NW-LI-06"
+    },
+    {
+      "id": "M08",
+      "slug": "your-ai-agent-needs-a-fencing-token",
+      "source": "data/your-ai-agent-needs-a-fencing-token.json",
+      "linkedinId": "NW-LI-12"
+    },
+    {
+      "id": "M09",
+      "slug": "who-owns-an-ai-agent-incident",
+      "source": "data/who-owns-an-ai-agent-incident.json",
+      "linkedinId": "NW-LI-07"
+    },
+    {
+      "id": "M10",
+      "slug": "your-ai-agent-needs-a-change-budget",
+      "source": "data/your-ai-agent-needs-a-change-budget.json",
+      "linkedinId": "NW-LI-08"
+    },
+    {
+      "id": "M11",
+      "slug": "an-agents-context-window-is-a-data-boundary",
+      "source": "data/an-agents-context-window-is-a-data-boundary.json",
+      "linkedinId": "NW-LI-09"
+    },
+    {
+      "id": "M12",
+      "slug": "revenue-operations-needs-an-agent-decision-ledger",
+      "source": "data/revenue-operations-needs-an-agent-decision-ledger.json",
+      "linkedinId": "NW-LI-10"
+    }
+  ],
+  "new": [
+    {
+      "id": "M13",
+      "slug": "your-agent-tool-contract-needs-a-version",
+      "title": "Your Agent Tool Contract Needs a Version",
+      "subtitle": "A deployment contract for schema drift, semantic changes and stale approvals.",
+      "topics": [
+        "AI Agents",
+        "Software Architecture",
+        "API",
+        "Reliability",
+        "AI Governance"
+      ],
+      "source": "editorial/wave-20-2026-09-12/drafts/your-agent-tool-contract-needs-a-version.md",
+      "hero": "editorial/wave-20-2026-09-12/drafts/media/your-agent-tool-contract-needs-a-version.svg",
+      "linkedinDraft": "A tool can keep the same JSON types while changing the business meaning of a field.\n\nImagine a CRM discount argument that changes from percent to currency. Structural validation can pass while the approved action changes completely.\n\nThe tool contract should bind schema, units, side effects, adapter version and response semantics. Approval must bind that same manifest digest to the exact resource and delta.\n\nAn illustrative compatibility inventory with 3 consumers, 2 adapters and 4 action classes contains 24 cells before tenant policy is added. Test a changed unit, a new notification side effect and a response that claims success without effect evidence.\n\nWhich semantic tool change would your current release checks miss?\n\n#AgenticAI #APIDesign #AIGovernance"
+    },
+    {
+      "id": "M14",
+      "slug": "shadow-mode-is-still-a-data-transfer",
+      "title": "Shadow Mode Is Still a Data Transfer",
+      "subtitle": "How to evaluate an agent without silently copying production authority, data or side effects.",
+      "topics": [
+        "AI Agents",
+        "AI Evaluation",
+        "Privacy",
+        "Site Reliability Engineering",
+        "Enterprise Architecture"
+      ],
+      "source": "editorial/wave-20-2026-09-12/drafts/shadow-mode-is-still-a-data-transfer.md",
+      "hero": "editorial/wave-20-2026-09-12/drafts/media/shadow-mode-is-still-a-data-transfer.svg",
+      "linkedinDraft": "A shadow agent can leak data or create production load without showing a single answer to a customer.\n\nSuppressing the final response leaves retrieval, external requests, logging and tool calls active unless separate controls stop them.\n\nIn an illustrative workload, 100 production requests/second with 10% mirrored traffic and 5 retrievals per shadow task adds 50 retrieval calls/second before retries.\n\nThe architecture needs minimized event copies, a separate shadow identity, simulated mutations and a hard load budget. Compare decisions using the same as-of evidence; otherwise a shadow agent may appear better because it saw later facts.\n\nIf the application ignored its shadow-mode flag, which independent boundary would still prevent production effects?\n\n#AIEvaluation #AgenticAI #PrivacyEngineering"
+    },
+    {
+      "id": "M15",
+      "slug": "your-rag-cache-needs-an-authorization-epoch",
+      "title": "Your RAG Cache Needs an Authorization Epoch",
+      "subtitle": "Fast retrieval is unsafe when permission changes cannot invalidate the answer.",
+      "topics": [
+        "RAG",
+        "Authorization",
+        "AI Agents",
+        "Data Security",
+        "Distributed Systems"
+      ],
+      "source": "editorial/wave-20-2026-09-12/drafts/your-rag-cache-needs-an-authorization-epoch.md",
+      "hero": "editorial/wave-20-2026-09-12/drafts/media/your-rag-cache-needs-an-authorization-epoch.svg",
+      "linkedinDraft": "A 70% RAG cache hit rate can coexist with an authorization failure.\n\nIn a synthetic example, 7,000 of 10,000 requests hit the cache. Twenty cached answers are served under obsolete access permissions: about 0.286% of hits.\n\nThe efficiency result does not cancel the security failure.\n\nA cached answer needs tenant and purpose binding, source dependencies and an authorization freshness contract. Recheck every protected dependency, including summaries. A cached permission epoch cannot prove that it is current if it comes from the same stale replica.\n\nTest membership removal during generation and document deletion after caching.\n\nCould a revoked reader still obtain yesterday's authorized answer from your agent?\n\n#RAG #Authorization #DataSecurity"
+    },
+    {
+      "id": "M16",
+      "slug": "multi-tenant-agents-need-fair-queues",
+      "title": "Multi-Tenant Agents Need Fair Queues",
+      "subtitle": "Contain noisy neighbors with work-weighted admission, bounded retries and tenant-level deadlines.",
+      "topics": [
+        "AI Agents",
+        "Site Reliability Engineering",
+        "Distributed Systems",
+        "SaaS",
+        "Platform Engineering"
+      ],
+      "source": "editorial/wave-20-2026-09-12/drafts/multi-tenant-agents-need-fair-queues.md",
+      "hero": "editorial/wave-20-2026-09-12/drafts/media/multi-tenant-agents-need-fair-queues.svg",
+      "linkedinDraft": "Ten agent requests can consume more capacity than one hundred ordinary requests.\n\nRequest counts miss fan-out, model work, tool latency and repair loops. Fairness should account for the scarce work, with hard caps for resources that cannot substitute for each other.\n\nConsider an illustrative platform with 120 work units/second: reserve 20 for recovery and admit normal work within the remaining 100. Child agents inherit their parent's allowance; retries keep the same identity and deadline.\n\nMeasure per-tenant p99 queue age and useful completions before deadline. An aggregate latency chart can hide a tenant that never gets a turn.\n\nWhat happens when one tenant's requests become ten times more expensive without increasing in number?\n\n#PlatformEngineering #DistributedSystems #AgenticAI"
+    },
+    {
+      "id": "M17",
+      "slug": "crm-entity-merges-need-an-undo-graph",
+      "title": "CRM Entity Merges Need an Undo Graph",
+      "subtitle": "Why deduplicating customer records is a lineage operation with a recovery contract.",
+      "topics": [
+        "Revenue Operations",
+        "CRM",
+        "Data Engineering",
+        "AI Agents",
+        "Data Quality"
+      ],
+      "source": "editorial/wave-20-2026-09-12/drafts/crm-entity-merges-need-an-undo-graph.md",
+      "hero": "editorial/wave-20-2026-09-12/drafts/media/crm-entity-merges-need-an-undo-graph.svg",
+      "linkedinDraft": "Reducing duplicate CRM records can make the customer database less correct.\n\nA parent company and a separately contracted subsidiary may share a name and address. Matching them is a hypothesis; consolidating their invoices, cases and commercial history is a consequential action.\n\nWith illustrative false-merge cost of $50,000 and missed-duplicate cost of $200, a simplified calibrated-probability model sets the merge threshold above 99.602%. A similarity score is not automatically that probability.\n\nPreserve the source versions, explicit field winners, downstream dependencies and recovery owner. An undo operation must handle new invoices and legitimate edits created after the merge.\n\nCan your CRM reverse a false merge without overwriting the business changes that followed it?\n\n#RevenueOperations #CRM #DataEngineering"
+    },
+    {
+      "id": "M18",
+      "slug": "an-agent-cannot-roll-back-a-sent-email",
+      "title": "An Agent Cannot Roll Back a Sent Email",
+      "subtitle": "Design a final dispatch boundary for recipient, payload, consent and commercial authority.",
+      "topics": [
+        "AI Agents",
+        "CRM",
+        "Software Architecture",
+        "Reliability",
+        "Customer Experience"
+      ],
+      "source": "editorial/wave-20-2026-09-12/drafts/an-agent-cannot-roll-back-a-sent-email.md",
+      "hero": "editorial/wave-20-2026-09-12/drafts/media/an-agent-cannot-roll-back-a-sent-email.svg",
+      "linkedinDraft": "An approved email can become the wrong email while it waits in a queue.\n\nChange the recipient, replace an attachment or receive a suppression request, and yesterday's approval no longer describes today's dispatch.\n\nBind the final content and recipient set. Then distinguish prepared, authorized, dispatching and outcome-known states. A timeout after provider handoff is ambiguous; it should not automatically produce a second message.\n\nFor an illustrative queue of 5,000 emails, approving the batch at 09:00 does not establish eligibility for message 4,900 at 11:00.\n\nRecord the approval moment and the dispatch commitment separately. Cancellation before handoff and correction after delivery are different operations.\n\nWhich system performs the last authoritative check before your agent contacts a customer?\n\n#AgenticAI #CustomerExperience #ReliabilityEngineering"
+    },
+    {
+      "id": "M19",
+      "slug": "your-ai-outreach-agent-needs-a-contact-policy-ledger",
+      "title": "Your AI Outreach Agent Needs a Contact-Policy Ledger",
+      "subtitle": "Enforce purpose, channel, suppression and frequency across every campaign and agent.",
+      "topics": [
+        "Revenue Operations",
+        "AI Agents",
+        "Data Governance",
+        "CRM",
+        "Customer Experience"
+      ],
+      "source": "editorial/wave-20-2026-09-12/drafts/your-ai-outreach-agent-needs-a-contact-policy-ledger.md",
+      "hero": "editorial/wave-20-2026-09-12/drafts/media/your-ai-outreach-agent-needs-a-contact-policy-ledger.svg",
+      "linkedinDraft": "Three campaigns can each obey their limits while one customer is over-contacted.\n\nThe shared decision needs a person, purpose, channel and current suppression state. Campaign-local counters are insufficient.\n\nConsider an illustrative policy allowing 2 non-essential messages in a rolling 7-day window. If 3 agents simultaneously see 1 prior send, independent checks can permit all 3. Admission needs an atomic reservation that counts unresolved sends too.\n\nThe organization must define the applicable legal and contact policies; this is an engineering example, not a legal threshold or a suggested outreach cadence.\n\nMeasure suppression propagation and cross-campaign cap breaches alongside response rate.\n\nCan every agent explain why this person received this message now, using the same authoritative policy state?\n\n#RevenueOperations #DataGovernance #CustomerExperience"
+    },
+    {
+      "id": "M20",
+      "slug": "prove-your-revops-agent-created-incremental-value",
+      "title": "Prove Your RevOps Agent Created Incremental Value",
+      "subtitle": "Design account-level holdouts that separate useful intervention from selection bias.",
+      "topics": [
+        "Revenue Operations",
+        "Experimentation",
+        "AI Agents",
+        "Business Analytics",
+        "Decision Intelligence"
+      ],
+      "source": "editorial/wave-20-2026-09-12/drafts/prove-your-revops-agent-created-incremental-value.md",
+      "hero": "editorial/wave-20-2026-09-12/drafts/media/prove-your-revops-agent-created-incremental-value.svg",
+      "linkedinDraft": "Revenue touched by an agent is not evidence of revenue created by it.\n\nIf the agent selects the healthiest accounts, better renewal results can reflect selection rather than intervention.\n\nIn a synthetic account-level trial, average contribution margin is $12,400 in treatment and $12,000 in control. The observed difference is $400, or 3.33%. Subtract $70 of incremental operating cost and the estimated net difference is $330 per assigned account.\n\nThose calculations do not establish statistical reliability. Outcome variance, account clustering, spillover and label maturity still matter.\n\nRecord eligibility and assignment before exposure. Analyse accounts by original assignment and retain safety gates in both arms.\n\nWhat would your agent's value claim look like with an eligible-account holdout and all review and correction costs included?\n\n#RevenueOperations #Experimentation #AgenticAI"
+    }
+  ]
+}

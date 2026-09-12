@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prove Your RevOps Agent Created Incremental Value</title><style>body{margin:0;background:#fff;color:#111;font:19px/1.65 system-ui,sans-serif}main{max-width:1020px;margin:48px auto;padding:0 28px}h1{line-height:1.15;font-size:44px}h2{color:#155cce;line-height:1.3;margin-top:2em}a{color:#155cce}img{width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f8ff;padding:24px;font-size:15px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{border:1px solid #a7bde3;padding:12px;text-align:left;vertical-align:top}figcaption,.status{font-size:15px}.status{border:2px solid #155cce;padding:18px;color:#155cce}blockquote{border-left:4px solid #155cce;margin-left:0;padding-left:22px}code{overflow-wrap:anywhere}</style><main><p class="status">EDITORIAL REVIEW ONLY · Not published or scheduled on Medium or LinkedIn</p><h1>Prove Your RevOps Agent Created Incremental Value</h1>
+<p>Design account-level holdouts that separate useful intervention from selection bias.</p>
+<p>This story was developed with AI writing and diagram assistance. The experiment, monetary values and sample sizes are synthetic worked examples, not business results.</p>
+<p>An agent touches the healthiest renewal accounts first. Those accounts renew at a higher rate. A dashboard credits the agent with every dollar of retained revenue.</p>
+<p>The intervention may have helped, but the comparison cannot establish that. Account selection, sales-team attention and existing customer health can produce the same pattern. A decision ledger needs an experimental design before it becomes evidence of value.</p>
+<h2>Define the intervention and the unit</h2>
+<p>Write down exactly what changes: perhaps the agent prepares an evidence-backed renewal brief and suggests a next action, while commercial decisions remain human-approved. “AI enabled” is too broad to be a treatment definition.</p>
+<p>Randomize at the account level when people and opportunities within an account can influence each other. Related subsidiaries, shared account teams or overlapping campaigns may require a larger cluster. The correct unit follows likely spillovers, not whichever identifier is easiest to hash.</p>
+<p><img src="../drafts/media/prove-your-revops-agent-created-incremental-value.png" alt="Account-level intervention experiment"></p>
+<p><em>AI-assisted reference diagram. Assignment is recorded before exposure; outcomes are evaluated after a fixed maturity window.</em></p>
+<p>Microsoft&#39;s <a href="https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage">pre-experiment guidance</a> is useful for disciplined design. The RevOps scenario here is an original application, not a reported Microsoft experiment.</p>
+<h2>Keep allocation stable and auditable</h2>
+<p>Record eligibility and assignment before the first intervention. Stratify on important pre-treatment features such as account size, renewal month and baseline risk when appropriate. Keep a versioned allocation rule; rerunning the job must not move inconvenient accounts between groups.</p>
+<pre><code class="language-text">experiment_record:
+  account_id: synthetic-account-42
+  eligibility_version: renewal-cohort-v3
+  assigned_arm: treatment
+  assigned_before_first_exposure: true
+  intervention_version: brief-assistant-v2
+  outcome_window_days: 90
+  safety_policy: unchanged-human-commercial-approval
+</code></pre>
+<p>The 90-day window is illustrative. Choose a period consistent with the actual sales cycle and fix the analysis rule before observing outcomes.</p>
+<p>Exclude legally or operationally ineligible cases before randomization. Do not weaken approval, privacy or contractual protections to create a larger treatment effect.</p>
+<h2>Count everyone assigned</h2>
+<p>Intention-to-treat analysis compares accounts by original assignment, including treatment accounts whose staff never used the agent. That estimates the effect of offering the intervention under the tested adoption conditions.</p>
+<p>An analysis restricted to enthusiastic users answers a different, selection-prone question. Track adoption separately. If noncompliance is substantial, involve an experimentation specialist before interpreting per-protocol or instrumental-variable estimates.</p>
+<p>For an illustrative trial with 200 accounts per arm, suppose average 90-day contribution margin is $12,400 in treatment and $12,000 in control. The observed difference is $400 per assigned account, or 3.33% relative to control.</p>
+<p>If treatment adds $70 per account in model, tool, review and correction cost, the estimated net difference is $330 per assigned account. This is arithmetic, not proof of a reliable positive effect. A confidence interval needs the outcome variance and valid assumptions about clustering.</p>
+<pre><code class="language-text">estimated_net_increment =
+    mean_margin_treatment - mean_margin_control
+    - incremental_operating_cost_per_assigned_account
+</code></pre>
+<p>Do not substitute booked revenue for contribution margin while leaving discounts and remediation out of cost.</p>
+<h2>Protect the comparison from contamination</h2>
+<p>Salespeople may apply an agent&#39;s recommendations to control accounts. Shared playbooks can spread the treatment. Record meaningful crossovers and consider team-level randomization if spillover is unavoidable.</p>
+<p>Also inspect sample-ratio mismatch, missing outcomes and delayed labels. A control account with an unresolved renewal is not automatically a lost renewal. Freeze an as-of dataset and define censoring rules.</p>
+<p>Repeatedly checking an ordinary significance test and stopping as soon as it looks positive inflates false-positive risk. Use a pre-specified fixed horizon or a valid sequential method.</p>
+<h2>Make safety a separate release gate</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Decision evidence</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Incremental value</td>
+<td>Difference with uncertainty, cost and outcome maturity</td>
+</tr>
+<tr>
+<td>Adoption</td>
+<td>Eligible staff actually exposed and using the intervention</td>
+</tr>
+<tr>
+<td>Commercial safety</td>
+<td>Unauthorized discounts or commitments</td>
+</tr>
+<tr>
+<td>Customer burden</td>
+<td>Complaints and unwanted contact</td>
+</tr>
+<tr>
+<td>Operational cost</td>
+<td>Review, correction, delay and unresolved work</td>
+</tr>
+</tbody></table>
+<p>A positive average cannot authorize a treatment that breaches a critical commercial or privacy constraint. Likewise, no significant effect in a small trial does not establish that the effect is exactly zero.</p>
+<p>The <a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/">Microsoft post-experiment guidance</a> emphasizes trustworthy interpretation rather than a single attractive metric. Preserve negative and inconclusive findings in the same ledger as positive ones.</p>
+<p>Before expansion, ask a harder question than “how much revenue did the agent touch?” Ask what changed because eligible accounts were offered this intervention, under the actual cost, safety and adoption conditions being tested.</p>
+</main></html>

@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Multi-Tenant Agents Need Fair Queues</title><style>body{margin:0;background:#fff;color:#111;font:19px/1.65 system-ui,sans-serif}main{max-width:1020px;margin:48px auto;padding:0 28px}h1{line-height:1.15;font-size:44px}h2{color:#155cce;line-height:1.3;margin-top:2em}a{color:#155cce}img{width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f8ff;padding:24px;font-size:15px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{border:1px solid #a7bde3;padding:12px;text-align:left;vertical-align:top}figcaption,.status{font-size:15px}.status{border:2px solid #155cce;padding:18px;color:#155cce}blockquote{border-left:4px solid #155cce;margin-left:0;padding-left:22px}code{overflow-wrap:anywhere}</style><main><p class="status">EDITORIAL REVIEW ONLY · Not published or scheduled on Medium or LinkedIn</p><h1>Multi-Tenant Agents Need Fair Queues</h1>
+<p>Contain noisy neighbors with work-weighted admission, bounded retries and tenant-level deadlines.</p>
+<p>This story was developed with AI writing and diagram assistance. All workload sizes, limits and calculations are illustrative.</p>
+<p>One tenant submits ten requests. Another submits one hundred. The first tenant consumes most of the platform because each request launches twenty tool calls, two model evaluations and a repair loop. A request-per-second limit reports fairness while the expensive tenant occupies every worker.</p>
+<p>Agent platforms need to govern admitted work, not just incoming messages.</p>
+<h2>Identify the scarce resource</h2>
+<p>The constrained resource may be model concurrency, database reads, a third-party API, human-review capacity or a dollar budget. A single global queue hides which dependency is saturated.</p>
+<p>Define a work estimate per action class. Estimates can combine measured service time, reserved tool calls and expected token cost, but keep independent hard caps where resources are not interchangeable. Ten dollars of remaining model budget cannot purchase an extra payment-provider concurrency slot.</p>
+<p><img src="../drafts/media/multi-tenant-agents-need-fair-queues.png" alt="Tenant-aware agent scheduling"></p>
+<p><em>AI-assisted reference architecture. Each admitted workflow reserves capacity before it expands into downstream work.</em></p>
+<p>The <a href="https://sre.google/sre-book/handling-overload/">Google SRE chapter on handling overload</a> discusses load shedding and admission under capacity pressure. The agent-specific extension here is to account for work that expands after admission.</p>
+<h2>Reserve first, reconcile later</h2>
+<p>An action should enter with a bounded envelope: maximum concurrent children, maximum tool attempts, deadline and cost reservation. Child agents inherit a share of the parent&#39;s budget. Creating another agent must not create another independent allowance.</p>
+<p>In an illustrative capacity model, the platform has 120 work units per second. Reserve 20 for recovery and essential control operations, leaving 100 for normal workloads. A noisy tenant limited to 25 units per second cannot consume the recovery reserve merely by opening more sessions.</p>
+<p>Unused reservations should expire or be returned when the outcome becomes terminal. An unresolved external action may retain a business-risk reservation even after its compute reservation is released. These are different ledgers.</p>
+<pre><code class="language-text">admit(task) only if:
+  task.deadline_has_useful_slack
+  AND tenant.work_inflight + estimate &lt;= tenant.work_limit
+  AND dependency.capacity_can_be_reserved
+  AND parent.remaining_budget &gt;= estimate
+  AND platform.recovery_reserve_is_preserved
+</code></pre>
+<p>Implement the reservation updates atomically. The sketch does not supply a distributed lock protocol or settlement implementation.</p>
+<h2>Choose a fairness objective</h2>
+<p>Equal request counts, equal compute time and weighted contractual shares produce different schedules. Write down the objective before selecting an algorithm.</p>
+<p>A weighted fair queue can approximate resource shares over a window while allowing unused capacity to be borrowed. Borrowing must be revocable. Otherwise a low-priority workflow can occupy long-running slots after a high-priority tenant becomes active.</p>
+<p>Cost estimates will be imperfect. Record estimated and actual work, then update future estimates by action class. Do not punish an entire tenant because one task type changed. Also cap the maximum work of an individual task so a misestimate cannot exhaust the fleet.</p>
+<h2>Stop retries from manufacturing priority</h2>
+<p>A rejected task should retain its original identity, parent budget and deadline. If every retry returns as a new high-priority request, the scheduler rewards failure.</p>
+<p>Use bounded backoff and a retry budget. Make retry admission dependency-aware: a recovery probe may be useful when the provider recovers, but hundreds of identical probes are not.</p>
+<table>
+<thead>
+<tr>
+<th>Failure injection</th>
+<th>Evidence expected</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tenant opens 1,000 parallel sessions</td>
+<td>Shared tenant cap still holds</td>
+</tr>
+<tr>
+<td>Worker fans out beyond its envelope</td>
+<td>Excess children rejected</td>
+</tr>
+<tr>
+<td>Dependency slows tenfold</td>
+<td>Queue bounded; expired work discarded safely</td>
+</tr>
+<tr>
+<td>Scheduler restarts</td>
+<td>Reservations recovered or reconciled</td>
+</tr>
+<tr>
+<td>Recovery service needs capacity</td>
+<td>Reserved control capacity remains available</td>
+</tr>
+</tbody></table>
+<p>Discarding an expired task is safe only if it has not already produced an unresolved external effect. That state belongs in the outcome resolver, not in a generic queue timeout handler.</p>
+<h2>Build the operating scorecard</h2>
+<p>Track p95 and p99 queue age per tenant and action class, admitted work share, useful completions before deadline, estimate error and retry amplification. Aggregate latency can improve while a small tenant becomes permanently starved.</p>
+<p>Define useful throughput as verified outcomes completed within their valid decision window divided by elapsed time. A workflow completed after its quote or approval expires is not a timely success.</p>
+<p>Run a replay in which one tenant&#39;s tasks become ten times more expensive while its request rate stays unchanged. If neighboring tenants breach their objectives before admission reacts, the platform&#39;s fairness unit is wrong.</p>
+<p>The design goal is precise: one tenant&#39;s exploratory agent should not consume another tenant&#39;s ability to complete a bounded business action, nor the platform&#39;s ability to recover safely.</p>
+</main></html>

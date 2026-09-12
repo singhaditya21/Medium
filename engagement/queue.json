@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-12T07:56:39Z",
+  "updatedAt": "2026-09-12T08:18:51Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3446,6 +3446,91 @@
       "draftResponse": "This response was drafted with AI assistance and reviewed by me.\n\nThe distinction between point-in-time approval and runtime risk lends itself to a concrete acceptance test. Suppose a reviewer approves an action against record version 42, but the record becomes version 43 before execution. The executor should enforce the approved precondition atomically with the write; a separate read-then-write check can still race. A mismatch should return for reassessment, not silently inherit the old approval. I'd measure stale-approval executions, revalidation latency and escalation volume. How would your approval packet express which state changes invalidate the decision?",
       "priorityScore": 0.75,
       "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-linkedin-comment-c1-nitin-supekar",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/nitin-supekar-748702_aigovernance-aiagents-aisecurity-ugcPost-7503808170163724289-Oe9t/",
+      "title": "Ownership after agent discovery",
+      "author": "Nitin Supekar",
+      "reason": "Direct enterprise-AI contribution; context checked for the expanded manual research request.",
+      "evidence": "The post distinguishes discovered, managed and approved. All six comments were read; the Jeremy/Nitin exchange already covers independently verifiable evidence. No Aditya comment or matching local receipt found.",
+      "draftResponse": "Nitin Supekar, I'd test ownership with an incident drill: can the named owner identify the agent's reachable actions, stop new authority and assign every unresolved effect? Track two ratios separately: inventoried agents with an owner, and consequential action classes with an owner who passed the drill. A register can score 100% on the first while operational accountability remains untested. How does ownership get revalidated when an agent changes application or inherits a new tool?",
+      "priorityScore": 0.905,
+      "intendedMentions": [
+        "Nitin Supekar"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-linkedin-comment-c2-ritesh-kumar",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/ritesh-kumar-6aabab19_enterpriseai-agenticai-aigovernance-share-7504449972285657088-UB-D/",
+      "title": "Control-tower enforcement during disconnection",
+      "author": "Ritesh Kumar",
+      "reason": "Direct enterprise-AI contribution; context checked for the expanded manual research request.",
+      "evidence": "Full post and one visible comment by Utkarsh read. That comment asks about interoperability. No Aditya comment or matching local receipt found.",
+      "draftResponse": "Ritesh Kumar, the control tower needs an explicit failure contract with each execution gateway. If the tower loses connectivity, which actions stop, which remain read-only and when does cached authority expire? I'd measure tested effect boundaries / total material effect boundaries, alongside p99 revocation-enforcement latency. A single dashboard can aggregate visibility, but local gateways must still reject stale authority when that dashboard is unavailable. Where would you place that enforcement responsibility?",
+      "priorityScore": 0.875,
+      "intendedMentions": [
+        "Ritesh Kumar"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-linkedin-comment-c3-nihar-ranjan-das",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/nihar-ranjan-das-299b16209_copilotstudio-microsoftcopilot-aigovernance-share-7504431760752050176-aqHL/",
+      "title": "Testing approval reuse",
+      "author": "Nihar Ranjan Das",
+      "reason": "Direct enterprise-AI contribution; context checked for the expanded manual research request.",
+      "evidence": "Full post read; no comments visible. Draft does not endorse unverified GA dates or the absolute cannot-be-bypassed claim. It proposes a test of the post's approve-for-session option.",
+      "draftResponse": "Nihar Ranjan Das, I'd test the boundary of 'approve for the session' before using it for consequential writes. Approve one email, then change the recipient, attachment, tool arguments or underlying record version. Does each material change require fresh approval? Measure unauthorized approval reuse across that test matrix, separately from approval-prompt coverage. A deterministic gate is valuable; the approved scope and its invalidation rules determine which later actions it actually covers.",
+      "priorityScore": 0.875,
+      "intendedMentions": [
+        "Nihar Ranjan Das"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-linkedin-comment-c4-galeboe-mogotsi-mba-c-cio-sa-citbp-sa",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/gmogotsi_agenticai-artificialintelligence-aigovernance-share-7503163218400555008-YZAF/",
+      "title": "Cumulative authority across agents",
+      "author": "Galeboe Mogotsi, MBA, C-CIO(SA), CITBP(SA)",
+      "reason": "Direct enterprise-AI contribution; context checked for the expanded manual research request.",
+      "evidence": "Full post and all eight displayed comments read. Existing replies cover reversibility, human review and sensitive data; none addresses shared cumulative commercial budgets. No Aditya comment or matching receipt found.",
+      "draftResponse": "Galeboe Mogotsi, I'd add cumulative authority to that readiness review. In an illustrative case, ten agents each permitted a $1,000 concession can jointly create $10,000 of exposure on one account, even if every individual action passes its limit. The account-level budget therefore needs atomic reservations across agents, with unresolved attempts retaining their reservation. Which business owner sets that aggregate limit, and which system enforces it when several agents act concurrently?",
+      "priorityScore": 0.885,
+      "intendedMentions": [
+        "Galeboe Mogotsi, MBA, C-CIO(SA), CITBP(SA)"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-linkedin-comment-c5-rida-mahveen",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/rida-mahveen-562341225_every-company-has-more-ai-agents-than-its-ugcPost-7503425149027651585-M1tM/",
+      "title": "Measuring discovery coverage",
+      "author": "Rida Mahveen",
+      "reason": "Direct enterprise-AI contribution; context checked for the expanded manual research request.",
+      "evidence": "Full post read; no comments visible. Proposed denominator is measured at known authenticated tool gateways, not a claim to know the true total of hidden agents. No matching local receipt found.",
+      "draftResponse": "Rida Mahveen, the difficult inventory metric is coverage, especially for agents that exist for minutes. I'd reconcile observed tool-calling workload identities against registered agents and report unmatched callers, ownerless callers and discovery lag. If 980 of 1,000 observed callers resolve to governed records, that is 98% coverage of the observed boundary, not proof that 98% of all agents were found. How does discovery handle short-lived agents and distinguish one logical agent from its many worker instances?",
+      "priorityScore": 0.8575,
+      "intendedMentions": [
+        "Rida Mahveen"
+      ],
       "state": "ready_for_confirmation"
     }
   ]

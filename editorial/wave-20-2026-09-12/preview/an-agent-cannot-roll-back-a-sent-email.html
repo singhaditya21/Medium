@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>An Agent Cannot Roll Back a Sent Email</title><style>body{margin:0;background:#fff;color:#111;font:19px/1.65 system-ui,sans-serif}main{max-width:1020px;margin:48px auto;padding:0 28px}h1{line-height:1.15;font-size:44px}h2{color:#155cce;line-height:1.3;margin-top:2em}a{color:#155cce}img{width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f8ff;padding:24px;font-size:15px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{border:1px solid #a7bde3;padding:12px;text-align:left;vertical-align:top}figcaption,.status{font-size:15px}.status{border:2px solid #155cce;padding:18px;color:#155cce}blockquote{border-left:4px solid #155cce;margin-left:0;padding-left:22px}code{overflow-wrap:anywhere}</style><main><p class="status">EDITORIAL REVIEW ONLY · Not published or scheduled on Medium or LinkedIn</p><h1>An Agent Cannot Roll Back a Sent Email</h1>
+<p>Design a final dispatch boundary for recipient, payload, consent and commercial authority.</p>
+<p>This story was developed with AI writing and diagram assistance. The scenario, timing and metrics are illustrative, not measured customer outcomes.</p>
+<p>A renewal agent prepares the right message for the right customer. A reviewer approves it. Before dispatch, a contact changes, an attachment is replaced and the customer withdraws from the campaign. The queued task still has a green approval flag.</p>
+<p>The final communication boundary must decide whether that exact message is still permitted to leave. Reverting a database record afterward does not remove an email from someone else&#39;s inbox.</p>
+<h2>Bind the object that was approved</h2>
+<p>Approval should cover the rendered recipient set, subject, body, attachments, commercial terms and relevant policy state. A template ID alone is insufficient if its variables can resolve differently at send time.</p>
+<p>Use protected references for attachments and a defined digest of the final approved bytes. Hashes do not provide confidentiality, and filenames do not establish attachment identity. Preserve evidence without exposing message content in broad operational logs.</p>
+<p><img src="../drafts/media/an-agent-cannot-roll-back-a-sent-email.png" alt="Final dispatch boundary"></p>
+<p><em>AI-assisted reference architecture. A durable dispatch claim separates cancellable preparation from an external handoff.</em></p>
+<p>The queue should carry the approved content reference and its expected version. Any material change requires a fresh proposal. Harmless rendering changes still need an explicit definition; do not let a model decide what “material” means without an enforceable rule.</p>
+<h2>Distinguish four states</h2>
+<p>A useful minimum state model is prepared, authorized, dispatching and outcome-known. “Dispatching” matters because the provider may have accepted the message while the caller loses the response.</p>
+<p>Cancellation is possible before the defined dispatch commitment. After handoff, the workflow can attempt provider-specific cancellation only where supported, or send a separately approved correction. Neither should be reported as a guaranteed recall.</p>
+<pre><code class="language-text">claim_dispatch(message_id):
+  atomically verify:
+    exact approved payload still selected
+    recipient and policy epochs acceptable
+    no existing dispatch claim
+    deadline and authority valid
+  record dispatching with stable external request reference
+  hand off through the governed provider adapter
+  resolve accepted / rejected / ambiguous
+</code></pre>
+<p>The database transaction cannot be atomically combined with an arbitrary external email provider. That gap is why ambiguous outcomes and reconciliation remain necessary. The <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html">AWS transactional outbox guidance</a> addresses durable event delivery, while also requiring attention to duplicate processing. It does not guarantee exactly-once recipient delivery.</p>
+<h2>Define the race you can actually prevent</h2>
+<p>A fresh consent check immediately before a network call still leaves a small interval before provider acceptance. State the system&#39;s promise: for example, withdrawal accepted before a serialized dispatch claim prevents that claim; withdrawal after the claim cancels only if the provider can still stop the handoff.</p>
+<p>That is more precise than claiming instant withdrawal across all in-flight messages. Serialize consent updates and dispatch claims against the same authoritative state when the business requirement needs that ordering.</p>
+<p>For an illustrative queue of 5,000 messages, a blanket approval at 09:00 says nothing about the eligibility of message 4,900 at 11:00. Store the approval time, dispatch time and decision evidence separately.</p>
+<h2>Resolve uncertain sends before retrying</h2>
+<p>A timeout must not automatically create a second email. Query a provider&#39;s stable message reference where available. Use provider-supported idempotency when documented, but test its retention period and scope.</p>
+<p>If the provider cannot establish whether a message was accepted, record ambiguity and use a bounded operator workflow. “No receipt yet” is not evidence of non-delivery.</p>
+<table>
+<thead>
+<tr>
+<th>Operating metric</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Payload mismatch blocks</td>
+<td>Queued content differed from approved content</td>
+</tr>
+<tr>
+<td>Withdrawal-before-claim blocks</td>
+<td>Current policy prevented dispatch</td>
+</tr>
+<tr>
+<td>Duplicate recipient deliveries</td>
+<td>One logical action produced repeated sends</td>
+</tr>
+<tr>
+<td>Ambiguity age</td>
+<td>Time since unresolved provider handoff</td>
+</tr>
+<tr>
+<td>Correction completion</td>
+<td>Approved remediation delivered and recorded</td>
+</tr>
+</tbody></table>
+<p>Do not count a blocked stale message as failed engagement. It is a correctly enforced communication boundary.</p>
+<h2>Test with harmless destinations</h2>
+<p>Use a test mail sink and synthetic addresses. Change a recipient after approval, rotate an attachment, withdraw permission during dispatch and drop the provider response after acceptance. Verify both the stored state and what the sink actually received.</p>
+<p>An email can carry a contractual representation or sensitive attachment. The engineering design should reflect that consequence even when the transport looks like a routine API call. Approval is a claim about exact content; dispatch is the moment that claim becomes externally consequential.</p>
+</main></html>
