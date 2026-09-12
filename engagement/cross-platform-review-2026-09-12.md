@@ -1,6 +1,9 @@
 # LinkedIn and Medium review — 12 September 2026
 
-Status: preparation only; no public or private outbound action executed.
+Status: the preparation pass below was followed by approval and verified
+execution of D1, D2 and L1. M1/M2 are held for approval of a disclosure revision.
+See the execution section at the end; earlier sections describe the original
+pre-approval review.
 
 ## Live coverage and limits
 
@@ -87,3 +90,47 @@ Do not reuse approvals from older batches with the same short labels.
 
 No new execution receipt was created in this review. Static validation proves
 repository consistency, not that a public action occurred.
+
+## Subsequent approved execution
+
+The user replied **All Approved** to the exact September 12 D1, D2, L1, M1 and
+M2 batch. The repository was pulled and validated before action.
+
+- D1 and D2 were sent exactly as approved after fresh recipient/context checks.
+  Both messages appeared under Aditya Singh at TODAY 1:20 PM IST. Privacy-safe
+  receipts retain only public recipient profile URLs, text hashes, confirmation
+  scope and verification metadata; no private body or conversation URL.
+- L1 was posted exactly as approved after a fresh source/duplicate check. The
+  rendered result showed Aditya Singh, a current timestamp, the complete approved
+  text and a native link to Katharina Koerner's correct public profile. The
+  displayed comment count changed from 26 to 27. The copied public comment link
+  resolved to activity 7504059026192814080 and comment 7504447350350770176.
+- No reaction, follow, connection, reshare, media or schedule change was made.
+
+Verified receipts:
+
+- `linkedin/message-executions/20260912075130-message-posted-in-brian-jin-data.json`
+- `linkedin/message-executions/20260912075131-message-posted-in-acoaabkwz3mbos8hdeimfpklc9my8mzmukfwsyq.json`
+- `linkedin/executions/20260912075604-comment-posted-2026-09-12-linkedin-comment-katharina-control-inheritance.json`
+
+### Medium disclosure hold
+
+The current official policies were checked before publication on September 12:
+[Medium responses](https://help.medium.com/hc/en-us/articles/214578008-Write-a-response)
+have their own pages and act like posts;
+[Medium's AI-content policy](https://help.medium.com/hc/en-us/articles/22576852947223-Artificial-Intelligence-AI-content-policy)
+requires disclosure for generated text. The Medium skills therefore paused
+publication of the two undisclosed drafts. Neither response was posted.
+
+The user has been asked to approve one opening sentence for each response:
+
+> This response was drafted with AI assistance and reviewed by me.
+
+The rest of each approved body is unchanged. The undisclosed entries were
+marked `skipped` through the queue helper, and successor IDs ending in
+`-disclosed` are `ready_for_confirmation`. That state is not approval. Do not
+apply the earlier All Approved message to this additional sentence; require the
+user's separate answer, then recheck each live thread before execution.
+
+No Medium execution receipt was created. The two new candidates remain within
+the response queue limit, and no other Medium settings were touched.

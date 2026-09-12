@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-12T07:45:54Z",
+  "updatedAt": "2026-09-12T07:56:39Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3383,7 +3383,10 @@
       "intendedMentions": [
         "Katharina Koerner"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504059026192814080/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504447350350770176%2Curn%3Ali%3Aactivity%3A7504059026192814080%29",
+      "receiptOperationId": "20260912075604-comment-posted-2026-09-12-linkedin-comment-katharina-control-inheritance",
+      "postedAt": "2026-09-12T07:56:04Z"
     },
     {
       "id": "2026-09-12-medium-response-ritvik-authority-stratified-evaluation",
@@ -3398,7 +3401,7 @@
       "draftResponse": "Your progressive-authority ladder suggests a useful way to make proof-of-conduct testable. Replay the same incident set in three modes: diagnosis only, recommendation with approval, and bounded execution, keeping the model and available evidence comparable. Compare handoff-error propagation and, where writes are allowed, erroneous state changes per 1,000 permitted attempts and p95 time to safe containment. Better diagnosis need not mean safer execution after authority expands. What evidence would you require before moving an agent up one rung?",
       "priorityScore": 0.71,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "skipped"
     },
     {
       "id": "2026-09-12-medium-response-srinivas-approval-state-race",
@@ -3411,6 +3414,36 @@
       "reason": "Supersedes the August 31 evidence-threshold draft. Adds a concrete state-change acceptance test to the article's existing freshness and runtime-approval argument. Evergreen source with weak recency. Components: relevance 1.00, discussion quality 0.80, unique contribution 0.90, recency 0.10.",
       "evidence": "Full June 13 article and all four response bodies read September 12, including Tim's upstream decision-model point, Mykola's ownership point and Debjit's publication invitation to the author. The article already covers evidence freshness, policy versions and approval's point-in-time nature. No Aditya response appeared. Hypothetical record versions and proposed metrics are not observed production results.",
       "draftResponse": "The distinction between point-in-time approval and runtime risk lends itself to a concrete acceptance test. Suppose a reviewer approves an action against record version 42, but the record becomes version 43 before execution. The executor should enforce the approved precondition atomically with the write; a separate read-then-write check can still race. A mismatch should return for reassessment, not silently inherit the old approval. I'd measure stale-approval executions, revalidation latency and escalation volume. How would your approval packet express which state changes invalidate the decision?",
+      "priorityScore": 0.75,
+      "intendedMentions": [],
+      "state": "skipped"
+    },
+    {
+      "id": "2026-09-12-medium-response-ritvik-authority-stratified-evaluation-disclosed",
+      "platform": "medium",
+      "action": "response",
+      "direction": "outbound",
+      "targetUrl": "https://medium.com/ai-pace/agentic-ai-governance-from-task-performance-to-behavioural-science-ce82d4be2689",
+      "title": "Evaluate conduct across the existing authority ladder",
+      "author": "Ritvik Shyam",
+      "reason": "Supersedes the August 31 draft after a fresh source check: the article already includes progressive authority. Evergreen technical opportunity, not fresh distribution. Components: relevance 1.00, discussion quality 0.60, unique contribution 0.95, recency 0.10. Disclosure revision: separate approval required before execution; original approved text was held, not posted.",
+      "evidence": "Full June 5 article and both responses read on September 12. Article discusses proof-of-conduct, long-horizon simulation caveats and progressive authority from retrieval through bounded autonomy. Existing responses concern investment before incidents and control of emergence; no Aditya response appeared. No Medium outbound receipt recorded since September 5. This is one of at most two proposed outbound responses this week. Official Medium response and AI-content guidance checked September 12: responses have their own post pages; generated text requires disclosure. Proposed opening sentence is the only wording change. https://help.medium.com/hc/en-us/articles/22576852947223-Artificial-Intelligence-AI-content-policy",
+      "draftResponse": "This response was drafted with AI assistance and reviewed by me.\n\nYour progressive-authority ladder suggests a useful way to make proof-of-conduct testable. Replay the same incident set in three modes: diagnosis only, recommendation with approval, and bounded execution, keeping the model and available evidence comparable. Compare handoff-error propagation and, where writes are allowed, erroneous state changes per 1,000 permitted attempts and p95 time to safe containment. Better diagnosis need not mean safer execution after authority expands. What evidence would you require before moving an agent up one rung?",
+      "priorityScore": 0.71,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-medium-response-srinivas-approval-state-race-disclosed",
+      "platform": "medium",
+      "action": "response",
+      "direction": "outbound",
+      "targetUrl": "https://medium.com/@srinib100/runtime-ai-governance-a-practitioners-playbook-for-governing-agentic-ai-systems-ea12fbeba674",
+      "title": "Test the race between approval and business-state change",
+      "author": "Srinivas Bommena",
+      "reason": "Supersedes the August 31 evidence-threshold draft. Adds a concrete state-change acceptance test to the article's existing freshness and runtime-approval argument. Evergreen source with weak recency. Components: relevance 1.00, discussion quality 0.80, unique contribution 0.90, recency 0.10. Disclosure revision: separate approval required before execution; original approved text was held, not posted.",
+      "evidence": "Full June 13 article and all four response bodies read September 12, including Tim's upstream decision-model point, Mykola's ownership point and Debjit's publication invitation to the author. The article already covers evidence freshness, policy versions and approval's point-in-time nature. No Aditya response appeared. Hypothetical record versions and proposed metrics are not observed production results. Official Medium response and AI-content guidance checked September 12: responses have their own post pages; generated text requires disclosure. Proposed opening sentence is the only wording change. https://help.medium.com/hc/en-us/articles/22576852947223-Artificial-Intelligence-AI-content-policy",
+      "draftResponse": "This response was drafted with AI assistance and reviewed by me.\n\nThe distinction between point-in-time approval and runtime risk lends itself to a concrete acceptance test. Suppose a reviewer approves an action against record version 42, but the record becomes version 43 before execution. The executor should enforce the approved precondition atomically with the write; a separate read-then-write check can still race. A mismatch should return for reassessment, not silently inherit the old approval. I'd measure stale-approval executions, revalidation latency and escalation volume. How would your approval packet express which state changes invalidate the decision?",
       "priorityScore": 0.75,
       "intendedMentions": [],
       "state": "ready_for_confirmation"

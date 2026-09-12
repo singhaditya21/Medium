@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912075604-comment-posted-2026-09-12-linkedin-comment-katharina-control-inheritance",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-12T07:56:04Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T07:48:53Z",
+    "scope": "User approved all five September 12 proposals; L1 exact wording and one native Katharina Koerner mention only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-12-linkedin-comment-katharina-control-inheritance",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504059026192814080/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504059026192814080/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504447350350770176%2Curn%3Ali%3Aactivity%3A7504059026192814080%29",
+    "publishedTextSha256": "8249f0457fb7d0ad4fd740f315c2e542a763fef7d833e9009ca3bede51f77a01",
+    "verifiedAt": "2026-09-12T07:56:04Z",
+    "verification": "Rechecked source and loaded discussion immediately before posting. Composer matched approved text exactly. Published comment rendered under Aditya Singh with now timestamp; linked mention resolved to katharina-koerner-privacyengineering. Count changed from 26 to 27. Copied comment link resolved to the same thread with dashCommentUrn 7504447350350770176 and the approved text still visible. No reaction or follow performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

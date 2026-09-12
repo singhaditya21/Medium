@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912075131-message-posted-in-acoaabkwz3mbos8hdeimfpklc9my8mzmukfwsyq",
+  "action": "message_posted",
+  "recordedAt": "2026-09-12T07:51:31Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T07:48:53Z",
+    "scope": "User approved all five September 12 proposals; D2 exact text only, no other action. Approval acknowledged before execution."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/ACoAABKWz3MBoS8HDeIMfPkLC9mY8MzMukFWsyQ",
+    "messageTextSha256": "8d815bd42a58a90bf3831c96f651fb4dddc776991481edfb1a728e962d40cbd2",
+    "verifiedAt": "2026-09-12T07:51:04Z",
+    "verification": "Fresh recipient and conversation check showed no duplicate. Composer exactly matched approved text before Send. The sent message then appeared under Aditya Singh with a TODAY 1:20 PM IST timestamp. No private body or private URL retained."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

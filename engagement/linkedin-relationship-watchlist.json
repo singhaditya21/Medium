@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-11T09:19:32Z",
+  "updatedAt": "2026-09-12T07:56:03Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -47,9 +47,27 @@
       "profileUrl": "https://www.linkedin.com/in/brian-jin-data/",
       "themes": ["decision evidence", "Judgment Pack Specification", "authorization replay", "enterprise AI"],
       "state": "awaiting_inbound_reply",
-      "lastMeaningfulTouch": "2026-09-11",
-      "nextReviewOn": "2026-09-18",
-      "nextActionRule": "First-degree connection status was confirmed September 11. The exact approved D2 relationship message was sent and visibly verified that day; wording is not retained here. Wait for an inbound answer. Do not resend the invitation, send a generic follow-up or auto-follow. Any further communication requires new exact approval."
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "September 12 D1 exact approved reply was sent and visibly verified in the existing conversation. Private wording is not retained here. Wait for a substantive inbound answer; no generic chaser, repeat message, invitation or automatic follow. Further communication requires new exact approval."
+    },
+    {
+      "name": "Saurabh Sisodia",
+      "profileUrl": "https://www.linkedin.com/in/ACoAABKWz3MBoS8HDeIMfPkLC9mY8MzMukFWsyQ",
+      "themes": ["enterprise AI", "production workflows"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "September 12 D2 exact approved reply was sent and visibly verified in the existing conversation. Private wording is not retained here. Wait for a substantive inbound answer; no generic chaser or additional communication without new exact approval."
+    },
+    {
+      "name": "Katharina Koerner",
+      "profileUrl": "https://www.linkedin.com/in/katharina-koerner-privacyengineering/",
+      "themes": ["AI governance", "control inheritance", "control coverage"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "September 12 L1 exact approved control-inheritance comment posted and visibly verified on activity 7504059026192814080, comment 7504447350350770176, with the native author mention. Wait for meaningful inbound; no repeat argument, follow or DM without new exact approval."
     },
     {
       "name": "Virendra Vaishnav",
