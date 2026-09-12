@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-12T08:18:51Z",
+  "updatedAt": "2026-09-12T12:06:24Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3463,7 +3463,10 @@
       "intendedMentions": [
         "Nitin Supekar"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
+      "receiptOperationId": "20260912115904-comment-posted-2026-09-12-linkedin-comment-c1-nitin-supekar",
+      "postedAt": "2026-09-12T11:59:04Z"
     },
     {
       "id": "2026-09-12-linkedin-comment-c2-ritesh-kumar",
@@ -3480,7 +3483,10 @@
       "intendedMentions": [
         "Ritesh Kumar"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504449972944314369/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504508555983699968%2Curn%3Ali%3Aactivity%3A7504449972944314369%29",
+      "receiptOperationId": "20260912115905-comment-posted-2026-09-12-linkedin-comment-c2-ritesh-kumar",
+      "postedAt": "2026-09-12T11:59:05Z"
     },
     {
       "id": "2026-09-12-linkedin-comment-c3-nihar-ranjan-das",
@@ -3497,7 +3503,10 @@
       "intendedMentions": [
         "Nihar Ranjan Das"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504431761502945280/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504509135921590272%2Curn%3Ali%3Aactivity%3A7504431761502945280%29",
+      "receiptOperationId": "20260912120108-comment-posted-2026-09-12-linkedin-comment-c3-nihar-ranjan-das",
+      "postedAt": "2026-09-12T12:01:08Z"
     },
     {
       "id": "2026-09-12-linkedin-comment-c4-galeboe-mogotsi-mba-c-cio-sa-citbp-sa",
@@ -3514,7 +3523,10 @@
       "intendedMentions": [
         "Galeboe Mogotsi, MBA, C-CIO(SA), CITBP(SA)"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503163221164380160/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504510030965284864%2Curn%3Ali%3Aactivity%3A7503163221164380160%29",
+      "receiptOperationId": "20260912120439-comment-posted-2026-09-12-linkedin-comment-c4-galeboe-mogotsi-mba-c-cio-sa-citbp-sa",
+      "postedAt": "2026-09-12T12:04:39Z"
     },
     {
       "id": "2026-09-12-linkedin-comment-c5-rida-mahveen",
@@ -3531,7 +3543,10 @@
       "intendedMentions": [
         "Rida Mahveen"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503425149027651585/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504510477041983488%2Curn%3Ali%3AugcPost%3A7503425149027651585%29",
+      "receiptOperationId": "20260912120624-comment-posted-2026-09-12-linkedin-comment-c5-rida-mahveen",
+      "postedAt": "2026-09-12T12:06:24Z"
     }
   ]
 }

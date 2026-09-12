@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912115905-comment-posted-2026-09-12-linkedin-comment-c2-ritesh-kumar",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-12T11:59:05Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T11:59:05Z",
+    "scope": "User approved C1-C5 exactly as shown in the preceding chat; C2 top-level comment with native Ritesh Kumar mention only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-12-linkedin-comment-c2-ritesh-kumar",
+    "targetUrl": "https://www.linkedin.com/posts/ritesh-kumar-6aabab19_enterpriseai-agenticai-aigovernance-share-7504449972285657088-UB-D/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504449972944314369/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504508555983699968%2Curn%3Ali%3Aactivity%3A7504449972944314369%29",
+    "publishedTextSha256": "41d9fa85568ec5c2e4ffec60c829751d176a86df8d01304a83aaa3e0b80b0880",
+    "verifiedAt": "2026-09-12T11:59:05Z",
+    "verification": "Full source and sole prior Utkarsh comment rechecked; no Aditya duplicate. Exact approved wording rendered under Aditya Singh with timestamp now and clickable Ritesh Kumar profile mention. Count rose from one to two comments. Copied comment link dFAG2MTr and resolved its full public URL in Chrome."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

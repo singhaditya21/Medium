@@ -1,6 +1,8 @@
 # LinkedIn comment research — 12 September 2026
 
-Status: preparation only. **20 distinct public post leads; five fully reviewed comment drafts, 15 preliminary leads. Nothing posted.** This is the user's expanded manual research request, not a change to recurring automation quotas, cadence, approval capacity or weekly sending limits. The quantity is a discovery backlog, not a recommendation to send 20 comments at once.
+Execution update, 12 September 2026: **C1–C5 were explicitly approved, posted and visibly verified with native author mentions.** Public results: [C1](https://lnkd.in/p/dg8DttMy), [C2](https://lnkd.in/p/dFAG2MTr), [C3](https://lnkd.in/p/d9nnfsye), [C4](https://lnkd.in/p/dH39QscR), [C5](https://lnkd.in/p/dtyE6xpa). Full resolved public URLs and text hashes are in `linkedin/executions/` and `engagement/queue.json`. No reactions, DMs, follows, connections or publishing actions were included.
+
+Original research snapshot: **20 distinct public post leads; five fully reviewed comment drafts, 15 preliminary leads.** The fifteen remain preliminary and unposted. This is the user's expanded manual research request, not a change to recurring automation quotas, cadence, approval capacity or weekly sending limits. The quantity is a discovery backlog, not a recommendation to send 20 comments at once. The exact approved drafts and original observations are preserved below for audit, not as a fresh pending approval batch.
 
 ## Evidence and scope
 

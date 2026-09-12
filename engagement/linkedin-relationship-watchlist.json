@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-12T07:56:03Z",
+  "updatedAt": "2026-09-12T12:06:25Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,51 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Nitin Supekar",
+      "profileUrl": "https://www.linkedin.com/in/nitin-supekar-748702/",
+      "themes": ["agent ownership", "containment drills", "operational accountability"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "C1 exact approved ownership-drill comment posted and visibly verified September 12 with native author mention, comment 7504507821468827648. Wait for substantive inbound; no repeated ownership argument, generic follow-up, DM or connection without new exact approval."
+    },
+    {
+      "name": "Ritesh Kumar",
+      "profileUrl": "https://www.linkedin.com/in/ritesh-kumar-6aabab19/",
+      "themes": ["AI control towers", "local enforcement", "revocation latency"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "C2 exact approved disconnected-control-tower comment posted and visibly verified September 12 with native author mention, comment 7504508555983699968. Wait for substantive inbound; no repeated enforcement argument, generic follow-up or DM without new exact approval."
+    },
+    {
+      "name": "Nihar Ranjan Das",
+      "profileUrl": "https://www.linkedin.com/in/nihar-ranjan-das-299b16209/",
+      "themes": ["approval gates", "approval invalidation", "Copilot governance"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "C3 exact approved session-approval test comment posted and visibly verified September 12 with native author mention, comment 7504509135921590272. Product release-date claims were not endorsed. Wait for substantive inbound; no repeated test proposal, generic follow-up or DM without new exact approval."
+    },
+    {
+      "name": "Galeboe Mogotsi, MBA, C-CIO(SA), CITBP(SA)",
+      "profileUrl": "https://www.linkedin.com/in/gmogotsi/",
+      "themes": ["cumulative agent authority", "shared commercial budgets", "atomic reservations"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "C4 exact approved aggregate-exposure comment posted and visibly verified September 12 with native author mention, comment 7504510030965284864. Monetary example is illustrative. Wait for substantive inbound; no repeated budget argument, generic follow-up or DM without new exact approval."
+    },
+    {
+      "name": "Rida Mahveen",
+      "profileUrl": "https://www.linkedin.com/in/rida-mahveen-562341225/",
+      "themes": ["agent inventory", "discovery coverage", "ephemeral workload identity"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "C5 exact approved observed-boundary coverage comment posted and visibly verified September 12 with native author mention, comment 7504510477041983488. Wait for substantive inbound; no repeated inventory argument, product endorsement, generic follow-up or DM without new exact approval."
+    },
     {
       "name": "Marc Beukes",
       "profileUrl": "https://www.linkedin.com/in/marc-beukes/",

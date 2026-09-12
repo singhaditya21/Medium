@@ -106,10 +106,16 @@ assert len(batch) == 5
 research = (ROOT / "engagement/linkedin-20-opportunities-2026-09-12.md").read_text()
 assert len(re.findall(r"^\| (?:C[1-5]|B\d{2}) \|", research, re.MULTILINE)) == 20
 for candidate in batch:
-    assert candidate["state"] == "ready_for_confirmation"
+    assert candidate["state"] in {"ready_for_confirmation", "posted"}
     assert candidate["draftResponse"] in research
     assert candidate["targetUrl"] in research
     assert candidate["priorityScore"] >= .70
+    if candidate["state"] == "posted":
+        receipt = json.loads((ROOT / "linkedin/executions" / (candidate["receiptOperationId"] + ".json")).read_text())
+        assert receipt["userConfirmation"]["obtained"] is True
+        assert receipt["result"]["candidateId"] == candidate["id"]
+        assert receipt["result"]["publicUrl"] == candidate["responseUrl"]
+        assert receipt["result"]["publishedTextSha256"] == hashlib.sha256(candidate["draftResponse"].encode()).hexdigest()
 
 # Verify illustrative arithmetic, not real-world estimates or causal validity.
 assert 3 * 2 * 4 == 24
@@ -121,7 +127,9 @@ assert 400 - 70 == 330
 
 print(json.dumps({
     "result": "pass", "stories": 20, "newStories": 8,
-    "linkedinDrafts": 20, "publicPostLeads": 20, "approvalReadyComments": 5,
+    "linkedinDrafts": 20, "publicPostLeads": 20,
+    "approvalReadyComments": sum(c["state"] == "ready_for_confirmation" for c in batch),
+    "verifiedPostedComments": sum(c["state"] == "posted" for c in batch),
     "newSvgPngPairsChecked": checked_images, "localLinksChecked": checked_links,
     "codeBlocksSyntaxChecked": checked_code,
     "limitation": "Structural checks only; editorial review, media finalization and approval remain."

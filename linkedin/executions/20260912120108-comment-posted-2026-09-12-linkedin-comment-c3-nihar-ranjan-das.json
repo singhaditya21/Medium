@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912120108-comment-posted-2026-09-12-linkedin-comment-c3-nihar-ranjan-das",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-12T12:01:08Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T12:01:08Z",
+    "scope": "User approved C1-C5 exactly as shown in the preceding chat; C3 top-level comment with native Nihar Ranjan Das mention only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-12-linkedin-comment-c3-nihar-ranjan-das",
+    "targetUrl": "https://www.linkedin.com/posts/nihar-ranjan-das-299b16209_copilotstudio-microsoftcopilot-aigovernance-share-7504431760752050176-aqHL/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504431761502945280/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504509135921590272%2Curn%3Ali%3Aactivity%3A7504431761502945280%29",
+    "publishedTextSha256": "37545214aee7f8adefb30b96d4affe4b516a616bce49cfb95a38d56d3d2b4808",
+    "verifiedAt": "2026-09-12T12:01:08Z",
+    "verification": "Full source rechecked; no existing comments visible before submission. Exact approved text rendered under Aditya Singh with timestamp now and clickable Nihar Ranjan Das profile link. One comment shown after submission. Copied d9nnfsye from this comment and resolved full public URL in Chrome."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

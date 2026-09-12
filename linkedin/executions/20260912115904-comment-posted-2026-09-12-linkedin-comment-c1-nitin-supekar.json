@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912115904-comment-posted-2026-09-12-linkedin-comment-c1-nitin-supekar",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-12T11:59:04Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T11:59:04Z",
+    "scope": "User approved C1-C5 exactly as shown in the preceding chat; C1 top-level comment with native Nitin Supekar mention only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-12-linkedin-comment-c1-nitin-supekar",
+    "targetUrl": "https://www.linkedin.com/posts/nitin-supekar-748702_aigovernance-aiagents-aisecurity-ugcPost-7503808170163724289-Oe9t/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
+    "publishedTextSha256": "44761551a05616f1fee4d3bdb4ac753c47948de176d93149f9eb56e69eddcbb2",
+    "verifiedAt": "2026-09-12T11:59:04Z",
+    "verification": "Full source and six prior comments rechecked; no Aditya duplicate. Exact approved wording rendered under Aditya Singh with timestamp now and clickable Nitin Supekar profile mention. Copied comment link dg8DttMy and resolved its full public URL in Chrome."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
