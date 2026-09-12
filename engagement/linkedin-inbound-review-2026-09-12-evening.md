@@ -1,6 +1,6 @@
 # LinkedIn inbound review — September 12, 2026, evening
 
-Review completed around 19:36 IST. Preparation only: no comment, reply, DM, reaction, follow, connection, post or schedule was submitted or changed in this review.
+Initial review completed around 19:36 IST. The initial review was preparation only. The subsequently approved execution is recorded in the final section below.
 
 ## Coverage and limitations
 
@@ -38,3 +38,13 @@ Both use relevance 0.95, discussion quality 0.95, unique contribution 0.90 and r
 ## Execution boundary
 
 Obtain action-time confirmation of the exact chat batch. Re-read each target before executing; stop if the thread has materially changed or a duplicate now exists. Only after visible success create the appropriate public or privacy-safe message receipt. Medium and all existing publishing schedules remain out of scope and unchanged.
+
+## Approved execution — completed September 12, around 19:52 IST
+
+User approved the exact N1, N2 and D1–D3 batch and requested relevant tags. Immediate pre-execution context and duplicate checks found no material change. Executed only the approved actions:
+
+- N1: [posted reply](https://lnkd.in/p/dtei8e4p), native Nitin Supekar mention. Reply ID `7504542155185717248` under the original C1 thread.
+- N2: [posted reply](https://lnkd.in/p/dKgUt3ef), native Ritesh Kumar mention. Reply ID `7504543266185551872` under the original C2 thread.
+- D1, D2 and D3: exact messages sent in their existing one-to-one conversations. All three rendered under the user's identity with current timestamps and persisted after refreshing and reopening each conversation. Privacy-safe message receipts contain public recipient profile, text hash, approval scope and verification only; private wording and conversation URLs are not retained.
+
+Both public replies were also re-opened after refresh to verify persistence, exact approved wording and clickable native mentions. There were no reactions, additional tags or recipients, follows, connections, attachments, new posts, Medium actions or schedule changes. The older external commitments remain unverified and unchanged. All five relationships now await substantive inbound responses.

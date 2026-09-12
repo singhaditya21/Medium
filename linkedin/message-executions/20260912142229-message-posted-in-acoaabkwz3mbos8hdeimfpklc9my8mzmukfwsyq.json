@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912142229-message-posted-in-acoaabkwz3mbos8hdeimfpklc9my8mzmukfwsyq",
+  "action": "message_posted",
+  "recordedAt": "2026-09-12T14:22:29Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T14:22:29Z",
+    "scope": "User approved N1, N2 and D1-D3 exactly as written, then requested relevant tags. This receipt covers only the exact D2 private reply in the existing one-to-one conversation; no attachments, links or additional recipients."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/ACoAABKWz3MBoS8HDeIMfPkLC9mY8MzMukFWsyQ",
+    "messageTextSha256": "ca23218f114740a42320a7204b18b1c67dc3dc4276e089be0285efb03f156ab9",
+    "verifiedAt": "2026-09-12T14:22:29Z",
+    "verification": "Immediately rechecked the recipient conversation and absence of duplicates. Exact approved message rendered under Aditya Singh at 7:49 PM IST on September 12, 2026. Refreshed inbox, reopened the same recipient and verified exact text persisted. Private wording and conversation URLs are not retained."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912141439-reply-posted-2026-09-12-linkedin-reply-n1-nitin-drift-remediation",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-12T14:14:39Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T14:14:39Z",
+    "scope": "User approved N1, N2 and D1-D3 exactly as written and requested relevant tags. This receipt covers only N1 with native Nitin Supekar mention."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-12-linkedin-reply-n1-nitin-drift-remediation",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504523932138426369%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504542155185717248%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
+    "publishedTextSha256": "2a03537c3412b4146108d19b9d245c4c8237c60d5d0df783243f9d28de544f06",
+    "verifiedAt": "2026-09-12T14:14:39Z",
+    "verification": "Rechecked unchanged inbound and no duplicate before submission. Exact reply visibly rendered under Aditya Singh with current timestamp and clickable Nitin Supekar profile link. Reloaded, expanded persisted reply and resolved its copied public permalink to reply 7504542155185717248."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

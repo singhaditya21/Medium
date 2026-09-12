@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912142229-message-posted-in-brian-jin-data",
+  "action": "message_posted",
+  "recordedAt": "2026-09-12T14:22:29Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T14:22:29Z",
+    "scope": "User approved N1, N2 and D1-D3 exactly as written, then requested relevant tags. This receipt covers only the exact D1 private reply in the existing one-to-one conversation; no attachments, links or additional recipients."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/brian-jin-data/",
+    "messageTextSha256": "90a50a456ac1fa2f9bbeb15e357e7d69ff5079e770aabcac785613f3ee5611c9",
+    "verifiedAt": "2026-09-12T14:22:29Z",
+    "verification": "Immediately rechecked the recipient conversation and absence of duplicates. Exact approved message rendered under Aditya Singh at 7:48 PM IST on September 12, 2026. Refreshed inbox, reopened the same recipient and verified exact text persisted. Private wording and conversation URLs are not retained."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

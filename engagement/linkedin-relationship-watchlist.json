@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-12T14:06:36Z",
+  "updatedAt": "2026-09-12T14:22:30Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -19,19 +19,19 @@
       "name": "Nitin Supekar",
       "profileUrl": "https://www.linkedin.com/in/nitin-supekar-748702/",
       "themes": ["agent ownership", "containment drills", "operational accountability"],
-      "state": "inbound_reply_awaiting_confirmation",
+      "state": "awaiting_inbound_reply",
       "lastMeaningfulTouch": "2026-09-12",
-      "nextReviewOn": "2026-09-12",
-      "nextActionRule": "Fresh substantive reply 7504523932138426369 to C1 read September 12. N1 / 2026-09-12-linkedin-reply-n1-nitin-drift-remediation is ready for exact confirmation, not posted. Recheck the inbound reply and duplicates immediately before any newly approved execution. No additional reaction, DM, follow or connection is authorized."
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "Evening N1 exact approved drift-remediation reply posted September 12, reply 7504542155185717248. Native Nitin mention and persistence after refresh were verified. Wait for substantive inbound; no repeated argument, generic follow-up, DM, reaction or connection without new exact approval."
     },
     {
       "name": "Ritesh Kumar",
       "profileUrl": "https://www.linkedin.com/in/ritesh-kumar-6aabab19/",
       "themes": ["AI control towers", "local enforcement", "revocation latency"],
-      "state": "inbound_reply_awaiting_confirmation",
+      "state": "awaiting_inbound_reply",
       "lastMeaningfulTouch": "2026-09-12",
-      "nextReviewOn": "2026-09-12",
-      "nextActionRule": "Fresh substantive reply 7504510823042535424 to C2 read September 12. N2 / 2026-09-12-linkedin-reply-n2-ritesh-reconnect-contract is ready for exact confirmation, not posted. Recheck the inbound reply and duplicates immediately before any newly approved execution. No additional reaction, DM, follow or connection is authorized."
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "Evening N2 exact approved reconnect-contract reply posted September 12, reply 7504543266185551872. Native Ritesh mention and persistence after refresh were verified. Wait for substantive inbound; no repeated argument, generic follow-up, DM, reaction or connection without new exact approval."
     },
     {
       "name": "Nihar Ranjan Das",
@@ -94,7 +94,7 @@
       "state": "awaiting_inbound_reply",
       "lastMeaningfulTouch": "2026-09-12",
       "nextReviewOn": "2026-09-19",
-      "nextActionRule": "September 12 D1 exact approved reply was sent and visibly verified in the existing conversation. Private wording is not retained here. Wait for a substantive inbound answer; no generic chaser, repeat message, invitation or automatic follow. Further communication requires new exact approval."
+      "nextActionRule": "Latest exact approved evening D1 sent September 12 at 19:48 IST and verified again after inbox refresh; privacy-safe receipt 20260912142229-message-posted-in-brian-jin-data. Private wording is not retained here. Wait for a substantive inbound answer; no generic chaser, repeat message, invitation or automatic follow without new exact approval."
     },
     {
       "name": "Saurabh Sisodia",
@@ -103,7 +103,7 @@
       "state": "awaiting_inbound_reply",
       "lastMeaningfulTouch": "2026-09-12",
       "nextReviewOn": "2026-09-19",
-      "nextActionRule": "September 12 D2 exact approved reply was sent and visibly verified in the existing conversation. Private wording is not retained here. Wait for a substantive inbound answer; no generic chaser or additional communication without new exact approval."
+      "nextActionRule": "Latest exact approved evening D2 sent September 12 at 19:49 IST and verified again after inbox refresh; privacy-safe receipt 20260912142229-message-posted-in-acoaabkwz3mbos8hdeimfpklc9my8mzmukfwsyq. Private wording is not retained here. Wait for substantive inbound; no generic chaser or additional communication without new exact approval."
     },
     {
       "name": "Katharina Koerner",
@@ -181,10 +181,10 @@
       "name": "Kumar Gaurav",
       "profileUrl": "https://www.linkedin.com/in/kumargaurav7/",
       "themes": ["AI infrastructure", "cloud", "FinOps"],
-      "state": "connection_accepted",
-      "lastMeaningfulTouch": "2026-09-11",
-      "nextReviewOn": "2026-09-18",
-      "nextActionRule": "Exact approved N1 accepted the existing invitation September 11; 1st-degree status was visibly verified. No DM was authorized or sent. Do not disclose employer infrastructure or purchasing context, initiate a pitch, or send a message without a separate exact approval."
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-12",
+      "nextReviewOn": "2026-09-19",
+      "nextActionRule": "Exact approved evening D3 sent September 12 at 19:50 IST and verified again after inbox refresh; privacy-safe receipt 20260912142230-message-posted-in-kumargaurav7. Private wording is not retained here. Wait for substantive inbound; do not disclose employer infrastructure or purchasing context or send additional communication without separate exact approval."
     },
     {
       "name": "Shabina Abba Noormohamed",

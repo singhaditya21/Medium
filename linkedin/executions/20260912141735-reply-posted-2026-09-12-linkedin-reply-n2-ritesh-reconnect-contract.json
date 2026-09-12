@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260912141735-reply-posted-2026-09-12-linkedin-reply-n2-ritesh-reconnect-contract",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-12T14:17:35Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-12T14:17:35Z",
+    "scope": "User approved N1, N2 and D1-D3 exactly as written and requested relevant tags. This receipt covers only N2 with native Ritesh Kumar mention."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-12-linkedin-reply-n2-ritesh-reconnect-contract",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504449972944314369/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504508555983699968%2Curn%3Ali%3Aactivity%3A7504449972944314369%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504510823042535424%2Curn%3Ali%3Aactivity%3A7504449972944314369%29",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504449972944314369/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504508555983699968%2Curn%3Ali%3Aactivity%3A7504449972944314369%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504543266185551872%2Curn%3Ali%3Aactivity%3A7504449972944314369%29",
+    "publishedTextSha256": "6a38a96b51f9e94c5f68ae7f9b1feb43de9c346e8fdd2bc79c23309e86676280",
+    "verifiedAt": "2026-09-12T14:17:35Z",
+    "verification": "Fresh context check found unchanged inbound and no duplicate. Exact approved reply rendered under Aditya Singh with current timestamp and clickable Ritesh Kumar profile link. Refreshed and expanded persisted reply, then copied and resolved direct permalink to reply 7504543266185551872."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
