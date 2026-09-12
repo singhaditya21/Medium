@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-11T09:19:32Z",
+  "updatedAt": "2026-09-12T07:45:54Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -814,7 +814,7 @@
       "draftResponse": "The move from proof-of-task to proof-of-conduct is important. I would make it operational with a longitudinal evaluation matrix: behavioral drift by run horizon, downstream-error propagation across handoffs, override quality under time pressure and recovery after contradictory context. One missing dimension is authority: identical behavior becomes materially different when one agent can only recommend and another can change business state. Every conduct metric should therefore be segmented by action class and reversibility.",
       "priorityScore": 0.74,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "skipped"
     },
     {
       "id": "2026-08-31-medium-response-srinivas-evidence-threshold",
@@ -829,7 +829,7 @@
       "draftResponse": "The distinction between permission and intent is the center of runtime governance. I would add a failure-mode test in which the agent has valid permission, a correct identity and a plausible purpose, but the supporting evidence is stale or insufficient. The policy gate then needs an evidence threshold and an outcome-verification receipt, measured through evidence-freshness coverage, false-allow rate, reviewer-escalation p95 and the percentage of consequential actions reconstructed end to end.",
       "priorityScore": 0.76,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "skipped"
     },
     {
       "id": "2026-08-31-linkedin-comment-robin-benign-intent-adversarial-chain",
@@ -3367,6 +3367,53 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503545355116904448/",
       "receiptOperationId": "20260911091932-comment-posted-2026-09-11-linkedin-comment-sam-requirements-review-burden",
       "postedAt": "2026-09-11T09:19:32Z"
+    },
+    {
+      "id": "2026-09-12-linkedin-comment-katharina-control-inheritance",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504059026192814080/",
+      "title": "Test the assumptions behind inherited AI controls",
+      "author": "Katharina Koerner",
+      "reason": "Extend the existing-control mapping discussion with a concrete inheritance test, rather than repeat execution-time governance. Score components: relevance 1.00, discussion quality 0.85, unique contribution 0.90, recency 0.90.",
+      "evidence": "Full source post read in signed-in Chrome on September 12; displayed as 1 day old. Loaded discussion includes prevention-vs-detection, ownership, control mapping and redundancy questions. No Aditya comment appeared in the loaded discussion; complete nested-thread coverage is not claimed. Prior recorded Katharina touch was September 4, outside the seven-day spacing. Recheck all rendered comments immediately before execution.",
+      "draftResponse": "Katharina Koerner, I'd make control reuse conditional on its original assumptions still holding. An existing IAM control may verify identity and access without limiting what an agent can commit inside that access. For each inherited control, record the action classes covered, enforcement point, owner, last passing test and changes that invalidate the evidence. Then measure coverage as consequential action classes with tested controls divided by total consequential action classes—not the number of framework mappings. Which existing controls survive the move from a human operator to delegated agents unchanged?",
+      "priorityScore": 0.9225,
+      "intendedMentions": [
+        "Katharina Koerner"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-medium-response-ritvik-authority-stratified-evaluation",
+      "platform": "medium",
+      "action": "response",
+      "direction": "outbound",
+      "targetUrl": "https://medium.com/ai-pace/agentic-ai-governance-from-task-performance-to-behavioural-science-ce82d4be2689",
+      "title": "Evaluate conduct across the existing authority ladder",
+      "author": "Ritvik Shyam",
+      "reason": "Supersedes the August 31 draft after a fresh source check: the article already includes progressive authority. Evergreen technical opportunity, not fresh distribution. Components: relevance 1.00, discussion quality 0.60, unique contribution 0.95, recency 0.10.",
+      "evidence": "Full June 5 article and both responses read on September 12. Article discusses proof-of-conduct, long-horizon simulation caveats and progressive authority from retrieval through bounded autonomy. Existing responses concern investment before incidents and control of emergence; no Aditya response appeared. No Medium outbound receipt recorded since September 5. This is one of at most two proposed outbound responses this week.",
+      "draftResponse": "Your progressive-authority ladder suggests a useful way to make proof-of-conduct testable. Replay the same incident set in three modes: diagnosis only, recommendation with approval, and bounded execution, keeping the model and available evidence comparable. Compare handoff-error propagation and, where writes are allowed, erroneous state changes per 1,000 permitted attempts and p95 time to safe containment. Better diagnosis need not mean safer execution after authority expands. What evidence would you require before moving an agent up one rung?",
+      "priorityScore": 0.71,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-12-medium-response-srinivas-approval-state-race",
+      "platform": "medium",
+      "action": "response",
+      "direction": "outbound",
+      "targetUrl": "https://medium.com/@srinib100/runtime-ai-governance-a-practitioners-playbook-for-governing-agentic-ai-systems-ea12fbeba674",
+      "title": "Test the race between approval and business-state change",
+      "author": "Srinivas Bommena",
+      "reason": "Supersedes the August 31 evidence-threshold draft. Adds a concrete state-change acceptance test to the article's existing freshness and runtime-approval argument. Evergreen source with weak recency. Components: relevance 1.00, discussion quality 0.80, unique contribution 0.90, recency 0.10.",
+      "evidence": "Full June 13 article and all four response bodies read September 12, including Tim's upstream decision-model point, Mykola's ownership point and Debjit's publication invitation to the author. The article already covers evidence freshness, policy versions and approval's point-in-time nature. No Aditya response appeared. Hypothetical record versions and proposed metrics are not observed production results.",
+      "draftResponse": "The distinction between point-in-time approval and runtime risk lends itself to a concrete acceptance test. Suppose a reviewer approves an action against record version 42, but the record becomes version 43 before execution. The executor should enforce the approved precondition atomically with the write; a separate read-then-write check can still race. A mismatch should return for reassessment, not silently inherit the old approval. I'd measure stale-approval executions, revalidation latency and escalation volume. How would your approval packet express which state changes invalidate the decision?",
+      "priorityScore": 0.75,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
     }
   ]
 }
