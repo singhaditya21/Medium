@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260914053114-comment-posted-2026-09-14-linkedin-comment-c1-sina-client-context",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-14T05:31:14Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-14T05:31:14Z",
+    "scope": "User replied Approved to the exact C1, C2 and C3 approval batch, including only each relevant author's native tag. No reactions, DMs, follows, connections, media or scheduling changes authorized."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-14-linkedin-comment-c1-sina-client-context",
+    "targetUrl": "https://www.linkedin.com/posts/drsinawulfmeyer0710_%F0%9D%97%A0%F0%9D%98%86-%F0%9D%97%B0%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B2%F0%9D%97%B2%F0%9D%97%BF-%F0%9D%97%B5%F0%9D%97%AE%F0%9D%98%80-%F0%9D%97%BC%F0%9D%97%BB%F0%9D%97%B2-%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%BF%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%B4%F0%9D%97%B5%F0%9D%97%B9%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2-share-7500603235234168832-gH6T/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505131996038275072/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505135691211694080%2Curn%3Ali%3Aactivity%3A7505131996038275072%29",
+    "publishedTextSha256": "e7b9ec074b2c807b86f6e9ad772480e1a023a2b2f0680c190bf5bab9fda2052b",
+    "verifiedAt": "2026-09-14T05:31:14Z",
+    "verification": "Live source context and absence of duplicates rechecked. Exact approved text posted as Aditya Singh, timestamp now, comment 7505135691211694080. Native Dr. Sina Wulfmeyer mention links to /in/drsinawulfmeyer0710/. Copied native comment link https://lnkd.in/p/gpsziJ8G and reopened it; matching comment text, identity and tag persisted."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-14T05:24:10Z",
+  "updatedAt": "2026-09-14T05:31:15Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3623,7 +3623,10 @@
       "intendedMentions": [
         "Dr. Sina Wulfmeyer"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505131996038275072/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505135691211694080%2Curn%3Ali%3Aactivity%3A7505131996038275072%29",
+      "receiptOperationId": "20260914053114-comment-posted-2026-09-14-linkedin-comment-c1-sina-client-context",
+      "postedAt": "2026-09-14T05:31:14Z"
     },
     {
       "id": "2026-09-14-linkedin-comment-c2-swapnil-release-gates",
@@ -3657,7 +3660,10 @@
       "intendedMentions": [
         "Vanessa Galhardo-Galhetas"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505132065261068288/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505135083687862272%2Curn%3Ali%3Aactivity%3A7505132065261068288%29",
+      "receiptOperationId": "20260914053115-comment-posted-2026-09-14-linkedin-comment-c3-vanessa-stop-evidence",
+      "postedAt": "2026-09-14T05:31:15Z"
     }
   ]
 }

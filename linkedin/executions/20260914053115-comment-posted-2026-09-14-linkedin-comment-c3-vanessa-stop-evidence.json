@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260914053115-comment-posted-2026-09-14-linkedin-comment-c3-vanessa-stop-evidence",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-14T05:31:15Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-14T05:31:15Z",
+    "scope": "User replied Approved to the exact C1, C2 and C3 approval batch, including only each relevant author's native tag. No reactions, DMs, follows, connections, media or scheduling changes authorized."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-14-linkedin-comment-c3-vanessa-stop-evidence",
+    "targetUrl": "https://www.linkedin.com/posts/vanessagalhardo001_artificialintelligence-aigovernance-aiagents-share-7504150514134130688-w939/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505132065261068288/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505135083687862272%2Curn%3Ali%3Aactivity%3A7505132065261068288%29",
+    "publishedTextSha256": "2a7f934c31c145adc888c9d12cf5390451a6a87d881f5bd5810f5e531ff7a89e",
+    "verifiedAt": "2026-09-14T05:31:15Z",
+    "verification": "Live source context and absence of duplicates rechecked. Exact approved text posted as Aditya Singh, timestamp now, comment 7505135083687862272. Native Vanessa Galhardo-Galhetas mention links to /in/vanessagalhardo001/. Copied native comment link https://lnkd.in/p/gqXK42Z2 and reopened it; matching comment text, identity and tag persisted."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

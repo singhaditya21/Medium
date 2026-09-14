@@ -1,6 +1,6 @@
 # LinkedIn comment review — 14 September 2026
 
-Status: preparation only; C1–C3 await exact action-time approval.
+Status: C1 and C3 posted and verified after exact approval; C2 remains unposted because the matching native author mention was unavailable.
 
 ## Coverage
 
@@ -28,4 +28,16 @@ The clarity and voice review kept one specific technical contribution per commen
 
 Approval covers only the exact selected top-level comments and intended author mentions. No reactions, follows, connections, DMs, media, links in comment bodies or scheduling changes are bundled. Before execution, refresh each source and recheck context and duplicates; select and verify the native author mention. Stop for revised approval if context or wording changes. Only visibly verified actions may receive execution receipts.
 
-No public actions were taken during this review.
+No public actions were taken during the preparation review.
+
+## Approved execution update
+
+The user replied "Approved" to the displayed exact C1–C3 batch, including each author tag.
+
+- C1: [verified comment](https://lnkd.in/p/gpsziJ8G), comment ID `7505135691211694080`. Exact wording, Aditya Singh identity, current timestamp and native Dr. Sina Wulfmeyer profile link verified. The native copied link was reopened to verify persistence.
+- C3: [verified comment](https://lnkd.in/p/gqXK42Z2), comment ID `7505135083687862272`. Exact wording, Aditya Singh identity, current timestamp and native Vanessa Galhardo-Galhetas profile link verified. The native copied link was reopened to verify persistence.
+- C2: not posted. Full-name and shorter author-name mention searches did not return the matching author. Different people were not selected. The partial unsent mention was cleared and the composer was visibly empty. Request approval to post the already approved wording with the author's name in plain text instead of a native tag; do not silently remove the tagging requirement.
+
+Receipts for C1 and C3 use the existing engagement tracking issue 36. Fresh GitHub issue metadata lookup was unavailable during execution; no issue mutations were attempted. This did not affect the visible LinkedIn verification or local receipt validation.
+
+No reactions, follows, connections, DMs, media or schedules were changed.

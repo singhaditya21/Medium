@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-14T04:42:53Z",
+  "updatedAt": "2026-09-14T05:34:17Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,24 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Dr. Sina Wulfmeyer",
+      "profileUrl": "https://www.linkedin.com/in/drsinawulfmeyer0710/",
+      "themes": ["banking agent governance", "source traceability", "entitlement changes"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-14",
+      "nextReviewOn": "2026-09-21",
+      "nextActionRule": "C1 exact approved client-context comment posted September 14, comment 7505135691211694080. Exact text, native author mention and persistence at the direct comment link were verified. Wait for substantive inbound; no duplicate metric proposal, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
+    {
+      "name": "Vanessa Galhardo-Galhetas",
+      "profileUrl": "https://www.linkedin.com/in/vanessagalhardo001/",
+      "themes": ["human oversight", "intervention timing", "containment evidence"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-14",
+      "nextReviewOn": "2026-09-21",
+      "nextActionRule": "C3 exact approved stop-evidence comment posted September 14, comment 7505135083687862272. Exact text, native author mention and persistence at the direct comment link were verified. Wait for substantive inbound; no duplicate test proposal, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
     {
       "name": "Nitin Supekar",
       "profileUrl": "https://www.linkedin.com/in/nitin-supekar-748702/",
