@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-14T06:04:36Z",
+  "status": "preparation_only_not_published_or_scheduled",
+  "request": "Cross-publish each owned Medium article as a separate full-length LinkedIn newsletter edition.",
+  "destination": {
+    "name": "The Operating AI Ledger",
+    "url": "https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/",
+    "author": "Aditya Singh",
+    "selectedByUser": true,
+    "observedSubscribers": 1386,
+    "observedFrequency": "weekly",
+    "observedEditionCount": 1
+  },
+  "liveMediumInventory": {
+    "publishedStories": 13,
+    "uniqueScheduledStories": 1,
+    "notes": [
+      "Drafts 1 and Scheduled both expose the same Standing Role story; do not double-count it.",
+      "The 20-story September 12 editorial package remains local preparation and is not part of the 13 published Medium stories."
+    ]
+  },
+  "policy": {
+    "oneStoryPerEdition": true,
+    "fullLength": true,
+    "preserveMediumState": true,
+    "preserveExistingLinkedInPosts": true,
+    "preserveExistingSchedules": true,
+    "createNewNewsletter": false,
+    "requireExactActionTimeApproval": true,
+    "allowUnattendedPublishing": false,
+    "usesOpenAIAPI": false,
+    "subscriberNotificationEffect": "Publishing can notify existing subscribers through LinkedIn's enabled channels; actual email delivery is not guaranteed.",
+    "canonical": "Keep Medium/GitHub canonical settings unchanged. Include the public Medium source link in the LinkedIn edition; do not claim a LinkedIn rel=canonical control exists."
+  },
+  "proposedCadence": {
+    "frequency": "weekly",
+    "status": "recommendation_not_approved",
+    "firstEdition": "Immediately after exact N01 approval and native editor verification",
+    "remainingEditions": "Dates and times must be shown for approval; no schedule has been created."
+  },
+  "gates": [
+    "Recheck live Medium publication state.",
+    "Reconcile full text, citations, lists, code, formulas, figures and captions against the live Medium article; do not rely solely on the archive JSON.",
+    "Compare related existing LinkedIn articles for body-level overlap, especially Passport versus Identity and Coordination Tax versus Distributed System.",
+    "Inspect existing LinkedIn drafts and scheduled editions before creating a new draft.",
+    "Show exact full edition, cover, feed introduction, destination, settings and timing for action-time confirmation.",
+    "Verify native editor formatting, image persistence and supported settings before final publication; stop if a material approved element cannot be preserved.",
+    "Verify the public edition under the selected newsletter before recording success."
+  ],
+  "pilot": {
+    "id": "N01",
+    "preview": "linkedin/newsletter-backfill-2026-09-14/N01-agentic-crm.html",
+    "state": "local_full_length_preview_for_review",
+    "exactFeedIntroduction": "A support escalation can depend on six systems before anyone can safely act.\n\nThis edition maps five operating planes and seven implementation services for agentic CRM, from an authenticated event to a verified change in a business system. It includes 10 architecture figures and a 90-day path through shadow testing and a bounded canary.\n\nIf you were to give one CRM workflow bounded autonomy tomorrow, which workflow would you choose, and what control would you insist on before switching it on?",
+    "mentions": [],
+    "hashtags": [],
+    "requestedSettings": {
+      "publicationMode": "newsletter_edition",
+      "audience": "Anyone",
+      "comments": "Anyone",
+      "timing": "Immediately after exact approval and final native verification",
+      "cover": "Existing figure 1, no replacement or new media",
+      "inlineFigures": 10,
+      "body": "Full live Medium text plus the source footer shown in the preview",
+      "newsletterNotifications": "Standard LinkedIn subscriber notification behavior; no extra invitations or DMs"
+    },
+    "sourceFidelity": {
+      "normalizedCharacters": 26642,
+      "fnv1a32": "ed653aad",
+      "liveMediumHash": "ed653aad",
+      "listCount": 5,
+      "listItemCount": 24,
+      "bodyHeadingCount": 19,
+      "figureCount": 10,
+      "localArchiveCorrections": "Restored five lists and one heading omitted from data/agentic-crm-reference-architecture.json; existing archive files were not modified.",
+      "nativeLinkedInRenderingVerified": false
+    },
+    "review": {
+      "feedIntroduction": "Clarity and factual-scope review completed; all counts refer to source structure, not invented business results. No experiential claim or detector used.",
+      "body": "Full text preserved; no style-based rewriting. Live-source fidelity is verified, not a fresh independent validation of every external claim."
+    }
+  },
+  "editions": [
+    {
+      "id": "N01",
+      "slug": "agentic-crm-reference-architecture",
+      "title": "How to Build an Agentic CRM: A Reference Architecture",
+      "mediumUrl": "https://medium.com/ai-in-plain-english/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/",
+      "liveMediumState": "published",
+      "state": "local_preview_for_review",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N02",
+      "slug": "traditional-crm-agentic-ai",
+      "title": "Why Traditional CRM Will Die Without Agentic AI",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N03",
+      "slug": "enterprise-agent-control-tower",
+      "title": "The Enterprise Agent Control Tower: A Production Architecture",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N04",
+      "slug": "ai-agent-identity-is-not-enough",
+      "title": "AI Agent Identity Is Not Enough",
+      "mediumUrl": "https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N05",
+      "slug": "a-2-4m-account-is-escalating",
+      "title": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+      "mediumUrl": "https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N06",
+      "slug": "your-ai-agents-memory-is-a-database-not-a-prompt",
+      "title": "Your AI Agent’s Memory Is a Database, Not a Prompt",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N07",
+      "slug": "every-ai-agent-action-needs-a-receipt",
+      "title": "Every AI Agent Action Needs a Receipt",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N08",
+      "slug": "human-approval-is-a-queueing-system",
+      "title": "Human Approval Is a Queueing System",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/human-approval-is-a-queueing-system-0c2858baa088",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/human-approval-is-a-queueing-system/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N09",
+      "slug": "your-multi-agent-system-is-a-distributed-system",
+      "title": "Your Multi-Agent System Is a Distributed System",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/your-multi-agent-system-is-a-distributed-system-0c456a0fe664",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/your-multi-agent-system-is-a-distributed-system/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N10",
+      "slug": "what-an-agent-actually-costs",
+      "title": "What an Agent Actually Costs",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/what-an-agent-actually-costs/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N11",
+      "slug": "model-routing-is-capital-allocation",
+      "title": "Model Routing Is Capital Allocation",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/model-routing-is-capital-allocation-8ee7ebb8b0ae",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/model-routing-is-capital-allocation/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N12",
+      "slug": "your-ai-agent-needs-a-real-kill-switch",
+      "title": "Your AI Agent Needs a Real Kill Switch",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/your-ai-agent-needs-a-real-kill-switch-f7c50791894d",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agent-needs-a-real-kill-switch/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    },
+    {
+      "id": "N13",
+      "slug": "do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation",
+      "title": "Do Not Let an AI Agent Touch Production Until It Passes This Evaluation",
+      "mediumUrl": "https://medium.com/@singhaditya21_89007/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation-44beb06b346a",
+      "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/do-not-let-an-ai-agent-touch-production-until-it-passes-this-evaluation/",
+      "liveMediumState": "published",
+      "state": "needs_live_body_reconciliation_and_preview",
+      "linkedInEditionUrl": null
+    }
+  ],
+  "held": [
+    {
+      "id": "N14",
+      "slug": "your-ai-agent-should-not-have-a-standing-role",
+      "title": "Your AI Agent Should Not Have a Standing Role",
+      "liveMediumState": "scheduled",
+      "scheduledForIST": "2026-09-14T14:00:00+05:30",
+      "state": "hold_until_medium_publication_is_visibly_verified",
+      "linkedInEditionUrl": null
+    }
+  ]
+}
+
