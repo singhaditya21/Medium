@@ -78,6 +78,8 @@ Use the [checkpoint plan](newsletter-checkpoints.json) for 48-hour, 7-day and 28
 
 At review, capture the actual collection timestamp and label late cumulative snapshots honestly. Compare like-aged editions. Choose changes based on the observed bottleneck; do not rewrite on a tiny sample or sum article views and feed impressions as unique readers.
 
+The [both-newsletter engagement activation](../newsletter-engagement-2026-09-14/plan.md) adds a same-day native readership baseline and a separate exact-approval batch for reader discussion, an RRR resurfacing post and proposed RRR metadata. It does not approve N05–N07, move T1/T2, create an additional weekly edition lane or change any automation.
+
 ## Targeted technical sources checked in this continuation
 
 - [PostgreSQL row-level locks](https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-ROWS): locks apply to retrieved rows; the missing-key reservation gap is a design inference from that behavior.

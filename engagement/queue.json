@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-14T05:56:05Z",
+  "updatedAt": "2026-09-14T08:36:19Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3705,6 +3705,38 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505138434945056768/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505140767644921856%2Curn%3Ali%3Aactivity%3A7505138434945056768%29",
       "receiptOperationId": "20260914055122-comment-posted-2026-09-14-linkedin-comment-o2-babar-approval-reconciliation",
       "postedAt": "2026-09-14T05:51:22Z"
+    },
+    {
+      "id": "2026-09-14-linkedin-author-comment-newsletter-crm-lost-response-test",
+      "platform": "linkedin",
+      "action": "author_comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505152286273253376/",
+      "title": "Aditya's launch announcement for How to Build an Agentic CRM: A Reference Architecture",
+      "author": "Aditya Singh",
+      "reason": "New edition, no reader comments. Adds a concrete failure-injection test and two separately defined measures. This is an author supplement, not a reply to an invented reader. Numbers are test inputs/metric denominator, not observed production results.",
+      "evidence": "Signed-in Chrome reviewed 2026-09-14. Full source/parent discussion and available prior user activity checked; no matching queue or receipt. See linkedin/newsletter-engagement-2026-09-14/baseline.json. Exact approval pending.",
+      "draftResponse": "To turn the architecture into an acceptance test, I would inject two copies of the same CRM event and then drop the response after the first committed write. The retry should resolve the recorded outcome, not create a second business effect; a changed record version should return for reassessment. I would measure duplicate effects per 1,000 attempted actions and the age of unresolved outcomes separately from API success rate. That test would come before any expansion of the agent's write scope.",
+      "priorityScore": 0.9025,
+      "intendedMentions": [],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-14-linkedin-comment-karthikeyan-semantic-definition-adjudication",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/pulse/how-kcs-creates-shared-business-vocabulary-semantic-palanisamy-d06be/",
+      "title": "Karthikeyan Palanisamy's KCS and shared-business-vocabulary article; top-level comment",
+      "author": "Karthikeyan Palanisamy",
+      "reason": "Relevant to CRM semantics and business decision ownership. Adds adjudication and executable conflicting examples beyond the existing comments. Published August 31; recency discounted. No self-promotional link, hashtag, product endorsement, follow or DM.",
+      "evidence": "Signed-in Chrome reviewed 2026-09-14. Full source/parent discussion and available prior user activity checked; no matching queue or receipt. See linkedin/newsletter-engagement-2026-09-14/baseline.json. Exact approval pending.",
+      "draftResponse": "Karthikeyan Palanisamy, reuse is evidence that a term is useful, but its frequency alone cannot authorize a business definition. I would promote a KCS-discovered term into the semantic layer with a named owner, an effective version and executable examples: for 'active customer', include one record Sales includes and Finance excludes, then expose the chosen definition. Track disagreement rate on an adjudicated test set and downstream decisions affected by a definition change. How do you resolve competing definitions before agents can act on them?",
+      "priorityScore": 0.805,
+      "intendedMentions": [
+        "Karthikeyan Palanisamy"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }

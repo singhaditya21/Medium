@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "status": "awaiting_exact_action_time_confirmation",
+  "account": "Aditya Singh",
+  "platform": "LinkedIn",
+  "preparedAt": "2026-09-14T08:36:19Z",
+  "actions": [
+    {
+      "id": "NL-C1",
+      "queueId": "2026-09-14-linkedin-author-comment-newsletter-crm-lost-response-test",
+      "action": "author_comment",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505152286273253376/",
+      "target": "Aditya's launch announcement for How to Build an Agentic CRM: A Reference Architecture",
+      "text": "To turn the architecture into an acceptance test, I would inject two copies of the same CRM event and then drop the response after the first committed write. The retry should resolve the recorded outcome, not create a second business effect; a changed record version should return for reassessment. I would measure duplicate effects per 1,000 attempted actions and the age of unresolved outcomes separately from API success rate. That test would come before any expansion of the agent's write scope.",
+      "mentions": [],
+      "media": [],
+      "reaction": null,
+      "timing": "After exact approval and fresh duplicate/context check",
+      "scoring": {"relevance": 1.0, "discussionQuality": 0.65, "uniqueContribution": 0.95, "recency": 1.0, "weightedTotal": 0.9025},
+      "rationale": "New edition, no reader comments. Adds a concrete failure-injection test and two separately defined measures. This is an author supplement, not a reply to an invented reader. Numbers are test inputs/metric denominator, not observed production results."
+    },
+    {
+      "id": "NL-C2",
+      "queueId": "2026-09-14-linkedin-comment-karthikeyan-semantic-definition-adjudication",
+      "action": "comment",
+      "targetUrl": "https://www.linkedin.com/pulse/how-kcs-creates-shared-business-vocabulary-semantic-palanisamy-d06be/",
+      "target": "Karthikeyan Palanisamy's KCS and shared-business-vocabulary article; top-level comment",
+      "text": "Karthikeyan Palanisamy, reuse is evidence that a term is useful, but its frequency alone cannot authorize a business definition. I would promote a KCS-discovered term into the semantic layer with a named owner, an effective version and executable examples: for 'active customer', include one record Sales includes and Finance excludes, then expose the chosen definition. Track disagreement rate on an adjudicated test set and downstream decisions affected by a definition change. How do you resolve competing definitions before agents can act on them?",
+      "mentions": ["Karthikeyan Palanisamy"],
+      "mentionRule": "Select only the matching native author mention. If unavailable, pause for exact fallback approval; do not silently substitute another person or plain-text treatment.",
+      "media": [],
+      "reaction": null,
+      "timing": "After exact approval and fresh duplicate/context check",
+      "scoring": {"relevance": 0.95, "discussionQuality": 0.85, "uniqueContribution": 0.95, "recency": 0.35, "weightedTotal": 0.805},
+      "rationale": "Relevant to CRM semantics and business decision ownership. Adds adjudication and executable conflicting examples beyond the existing comments. Published August 31; recency discounted. No self-promotional link, hashtag, product endorsement, follow or DM."
+    },
+    {
+      "id": "NL-P1",
+      "action": "schedule_new_feed_post",
+      "target": "Aditya Singh's personal LinkedIn feed; a resurfacing post for Read. Reflect. Rise., not a new newsletter edition",
+      "sourceUrl": "https://www.linkedin.com/pulse/3-minute-decision-took-3-weeks-ship-aditya-singh-kmejc/",
+      "text": "Five working days of release waiting can consume 26.7 hours of rework in a simple CRM routing scenario.\n\nThe example in my Read. Reflect. Rise. edition assumes 400 records a day, a 4% misrouting rate and 20 minutes to repair each exception:\n400 × 0.04 × 20 ÷ 60 = 5.33 rework hours per day.\nFive days at that rate = 26.7 hours.\n\nThis is modeled workload, not a measured customer result. It excludes lost opportunities and customer impact.\n\nThe useful management question is which change deserves a faster, controlled path. For a reversible routing rule, I would require a named policy owner, an approved version and a tested recovery route. Then track waiting time alongside bad changes and recovery time; a shorter queue is not a win if mistakes become harder to contain.\n\nThe full edition explains the policy and execution split:\nhttps://www.linkedin.com/pulse/3-minute-decision-took-3-weeks-ship-aditya-singh-kmejc/\n\nWhich small rule in your operation generates the most avoidable work while it waits?",
+      "scheduledAt": "2026-09-15T08:45:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "audience": "Anyone",
+      "comments": "Anyone",
+      "mentions": [],
+      "hashtags": [],
+      "media": "Existing native article preview using its current cover; no new image, animation, video or attachment upload",
+      "newsletterSubscriberEmail": "Not applicable: ordinary feed post, no new edition and no newsletter email resend",
+      "conditions": ["Recheck native calendar and recent published content for collision or duplicate before scheduling.", "If the proposed time has passed, obtain a new exact time approval.", "Preserve all existing scheduled posts and editions.", "Verify native article card title, source and cover before final scheduling; pause if the preview is wrong."]
+    },
+    {
+      "id": "NL-S1",
+      "action": "update_newsletter_metadata_only",
+      "target": "Read. Reflect. Rise.",
+      "targetUrl": "https://www.linkedin.com/newsletters/read-reflect-rise-7309472382266613760/",
+      "changes": {
+        "frequency": {"from": "Daily", "to": "Monthly"},
+        "description": {"from": "Thoughts on AI.", "to": "Operating decisions behind enterprise AI: approval bottlenecks, accountability and measurable business value."}
+      },
+      "preserve": ["Title Read. Reflect. Rise.", "Existing logo", "Subscribers", "All published editions", "Existing edition bodies, covers, comments and URLs", "Invitation controls", "The Operating AI Ledger and its schedule", "All Medium settings and schedules"],
+      "rationale": "Public Daily expectation conflicts with the observed month-long gap. Monthly is a proposed lighter editorial commitment, not a newly registered scheduler or permission to publish more editions."
+    }
+  ],
+  "globalExecutionRules": [
+    "Current request authorizes research/preparation, not these newly written public actions.",
+    "Show exact actions in chat and obtain confirmation; verify live context immediately before execution.",
+    "Comments do not authorize reactions, DMs, follows, connections, reposts or additional posts.",
+    "No autonomous publishing, OpenAI API, session export or private content retention.",
+    "Existing N05–N07 publication and T1/T2 timing approvals remain separate and pending."
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-14T08:36:19Z",
+  "collectionWindow": "2026-09-14 approximately 13:50–14:03 Asia/Kolkata",
+  "source": "Signed-in Chrome native LinkedIn newsletter pages, series analytics, edition analytics and public discussions",
+  "externalActionsExecuted": [],
+  "series": [
+    {
+      "name": "The Operating AI Ledger",
+      "publicUrl": "https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/",
+      "subscribers": 1386,
+      "publishedEditions": 2,
+      "displayedFrequency": "Weekly",
+      "description": "Metrics, controls and operating models for enterprise AI—cost, risk, oversight and verified outcomes.",
+      "nativePeriod": "Past 7 days",
+      "nativeChartDatesUtc": ["2026-09-08", "2026-09-14"],
+      "newSubscribers": 80,
+      "articleViews": 109,
+      "articleTotalsImpressions": 128,
+      "articleTotalsEngagements": 4,
+      "scheduledEditionsLastVerifiedEarlierToday": 3
+    },
+    {
+      "name": "Read. Reflect. Rise.",
+      "publicUrl": "https://www.linkedin.com/newsletters/read-reflect-rise-7309472382266613760/",
+      "subscribers": 1867,
+      "publishedEditions": 7,
+      "displayedFrequency": "Daily",
+      "description": "Thoughts on AI.",
+      "nativePeriod": "Past 7 days",
+      "newSubscribers": 11,
+      "articleViews": 15,
+      "articleTotalsImpressions": 29,
+      "articleTotalsEngagements": 0,
+      "scheduledEditionsLastVerifiedEarlierToday": 0
+    }
+  ],
+  "editions": [
+    {
+      "id": "N01",
+      "title": "How to Build an Agentic CRM: A Reference Architecture",
+      "newsletter": "The Operating AI Ledger",
+      "publicUrl": "https://www.linkedin.com/pulse/how-build-agentic-crm-reference-architecture-aditya-singh-lollc/",
+      "publicAnnouncementUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505152286273253376/",
+      "publishedDate": "2026-09-14",
+      "ageLabel": "1h",
+      "measurementType": "Early cumulative baseline, not a 48-hour checkpoint",
+      "articleViews": 107,
+      "emailSends": 1102,
+      "emailOpenRatePercent": 7,
+      "announcementImpressions": 110,
+      "announcementMembersReached": 79,
+      "inNetworkPercent": 58,
+      "outOfNetworkPercent": 42,
+      "socialEngagements": 4,
+      "reactions": 4,
+      "comments": 0,
+      "reposts": 0,
+      "saves": 0,
+      "sendsOnLinkedIn": 0,
+      "profileViewersFromPost": 0,
+      "followersFromPost": 0
+    },
+    {
+      "id": "RRR-3MIN",
+      "title": "The 3-Minute Decision That Took 3 Weeks to Ship",
+      "newsletter": "Read. Reflect. Rise.",
+      "publicUrl": "https://www.linkedin.com/pulse/3-minute-decision-took-3-weeks-ship-aditya-singh-kmejc/",
+      "publicAnnouncementUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7493985183050936320/",
+      "publishedDate": "2026-08-17",
+      "ageLabel": "4w",
+      "measurementType": "Cumulative snapshot 28 calendar days after publication; exact publication time unavailable",
+      "articleViews": 389,
+      "emailSends": 1418,
+      "emailOpenRatePercent": 21,
+      "announcementImpressions": 299,
+      "announcementMembersReached": 165,
+      "inNetworkPercent": 79,
+      "outOfNetworkPercent": 21,
+      "socialEngagements": 4,
+      "reactions": 4,
+      "comments": 0,
+      "reposts": 0,
+      "saves": 0,
+      "sendsOnLinkedIn": 0,
+      "profileViewersFromPost": 2,
+      "followersFromPost": 0,
+      "surfaceDiscrepancy": "Series and public announcement displayed 3 reactions; native post analytics displayed 4. Values are preserved by surface rather than silently reconciled."
+    }
+  ],
+  "discussionAudit": [
+    {
+      "source": "N01 announcement",
+      "result": "No reader comments visible; propose one useful author acceptance-test supplement, not an invented reader reply."
+    },
+    {
+      "source": "99.5% Accurate—and Still Wrong 500 Times",
+      "publicUrl": "https://www.linkedin.com/pulse/995-accurateand-still-wrong-500-times-aditya-singh-get5c/",
+      "result": "Two visible comments are the author's own top-level follow-up and nested reply. No reader question requires a reply. Do not add another bump or repeat its existing tags."
+    },
+    {
+      "source": "Every AI Agent Needs a Passport",
+      "publicUrl": "https://www.linkedin.com/pulse/every-ai-agent-needs-passport-aditya-singh-qrvrc/",
+      "result": "Three visible comments: Praveen Gajjala's product-alignment comment already answered by Aditya, plus a generic affirmation. Existing reactions observed, none added. No repeat reply or DM proposed."
+    },
+    {
+      "source": "RRR-3MIN announcement",
+      "result": "No reader comments visible. Prepare one distinct resurfacing post using the marginal cost of five days of waiting, not a duplicate edition."
+    },
+    {
+      "source": "How KCS creates the Shared Business Vocabulary that Semantic Layers depend on...",
+      "author": "Karthikeyan Palanisamy",
+      "publicUrl": "https://www.linkedin.com/pulse/how-kcs-creates-shared-business-vocabulary-semantic-palanisamy-d06be/",
+      "publishedDate": "2026-08-31",
+      "reactions": 6,
+      "comments": 2,
+      "reposts": 1,
+      "result": "Full source and both comments read. Existing discussion covers historic vocabulary and governed execution. No Aditya comment visible and no repository receipt match. Propose a distinct adjudication/definition-ownership test. Older evergreen source, not a breaking discussion."
+    }
+  ],
+  "limitations": [
+    "Subscriber counts are series totals, not unique people across both newsletters.",
+    "Article views, email opens, announcement impressions and members reached have different denominators; do not combine them into a reader funnel or CTR.",
+    "Email sends do not establish inbox delivery. Open rates are LinkedIn-reported, rounded and age-dependent; 7% and 21% are not a like-aged comparison.",
+    "Native Article totals engagement and impression labels are retained without inventing definitions.",
+    "The five selected sources are not an exhaustive audit of all nine editions or all LinkedIn notifications and DMs.",
+    "The native scheduling inventory was verified in the preceding same-day task, not re-audited here. No schedule changed.",
+    "No metrics change is attributed to this preparation; no public engagement action was executed."
+  ]
+}
