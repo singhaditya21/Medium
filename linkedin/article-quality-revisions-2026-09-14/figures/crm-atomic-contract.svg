@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1400" viewBox="0 0 760 1400" role="img" aria-labelledby="title desc">
+<title id="title">One domain commit, not global exactly once</title>
+<desc id="desc">A gateway sends the same bound intent to a domain service. Under one transaction the domain checks authority and record version, mutates the record, consumes approval, and records effect and outbox. A lost response is resolved by action identity. An outbox relay may duplicate delivery; each downstream effect has an independent contract. An independent verifier reconstructs the original effect from trusted correlated evidence.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10" fill="#175cd3"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#101828}.title{font-size:36px;font-weight:700}.label{font-size:23px;font-weight:700;fill:#175cd3}.head{font-size:29px;font-weight:700}.body{font-size:26px}.small{font-size:23px}.box{fill:white;stroke:#175cd3;stroke-width:2}.flow{fill:none;stroke:#175cd3;stroke-width:3;marker-end:url(#arrow)}</style>
+<rect width="760" height="1400" fill="white"/>
+<text x="36" y="44" class="label">05 / THE BUSINESS-EFFECT CONTRACT</text>
+<text x="36" y="96" class="title">One domain can commit atomically.</text>
+<text x="36" y="139" class="title">The whole workflow cannot assume it.</text>
+<rect x="36" y="177" width="688" height="115" rx="12" class="box"/>
+<text x="60" y="217" class="head">Orchestrator → gateway → domain</text>
+<text x="60" y="256" class="body">Bound intent · expected version · approval</text>
+<path d="M380 293V333" class="flow"/>
+<rect x="36" y="349" width="688" height="403" rx="16" fill="white" stroke="#175cd3" stroke-width="4"/>
+<text x="60" y="389" class="label">LOCAL DATABASE TRANSACTION</text>
+<text x="60" y="432" class="head">Check before admitting a new effect</text>
+<text x="80" y="470" class="body">Current authority + expected case version 7</text>
+<text x="80" y="508" class="body">Same key, different intent → reject</text>
+<line x1="60" x2="700" y1="534" y2="534" stroke="#175cd3"/>
+<text x="60" y="576" class="head">Commit all four, or roll them back</text>
+<text x="80" y="614" class="body">Case version 7 → 8 · consume approval</text>
+<text x="80" y="652" class="body">Durable outcome · outbox event</text>
+<text x="60" y="713" class="small">Replay resolves recorded outcome; it creates no new effect.</text>
+<path d="M380 753V793" class="flow"/>
+<rect x="36" y="809" width="688" height="127" rx="12" class="box"/>
+<text x="60" y="848" class="head">Outbox relay → downstream consumer</text>
+<text x="60" y="885" class="body">Delivery may repeat. Each business side effect</text>
+<text x="60" y="920" class="body">needs its own authority + idempotency contract.</text>
+<rect x="36" y="969" width="688" height="185" rx="12" class="box"/>
+<text x="60" y="1009" class="head">Independent verifier → evidence receipt</text>
+<text x="60" y="1048" class="body">Correlate action ID, approved delta and</text>
+<text x="60" y="1084" class="body">authoritative version/event history.</text>
+<text x="60" y="1130" class="small">Today's version 9 alone cannot reconstruct version 8.</text>
+<rect x="36" y="1186" width="688" height="135" rx="12" fill="white" stroke="#175cd3" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="60" y="1225" class="label">LIMIT OF THE GUARANTEE</text>
+<text x="60" y="1263" class="body">The gateway cannot make a remote CRM write</text>
+<text x="60" y="1299" class="body">atomic with an orchestrator-only ledger.</text>
+<text x="36" y="1365" class="small">Synthetic case trace · no cross-service exactly-once claim</text>
+</svg>

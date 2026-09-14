@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1260" viewBox="0 0 760 1260" role="img" aria-labelledby="title desc">
+<title id="title">The agent passport: enforce at the resource owner</title>
+<desc id="desc">A proposal passes gateway checks before entering a local resource-owner transaction. Current local authority, record preconditions, approval consumption, business mutation, outcome and outbox share that boundary. Remote policy remains outside it and needs a freshness or fencing contract. Verification follows commit; later revocation cannot undo the effect.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10" fill="#175cd3"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#101828}.title{font-size:36px;font-weight:700}.label{font-size:23px;font-weight:700;fill:#175cd3}.head{font-size:29px;font-weight:700}.body{font-size:26px}.small{font-size:23px}.box{fill:white;stroke:#175cd3;stroke-width:2}.flow{fill:none;stroke:#175cd3;stroke-width:3;marker-end:url(#arrow)}</style>
+<rect width="760" height="1260" fill="white"/>
+<text x="36" y="44" class="label">01 / AUTHORITY AT THE EFFECT BOUNDARY</text>
+<text x="36" y="96" class="title">Identity is not permission.</text>
+<text x="36" y="139" class="title">A precheck is not a transaction.</text>
+<rect x="36" y="171" width="688" height="121" rx="12" class="box"/>
+<text x="59" y="208" class="head">Agent proposal → Tool Gateway</text>
+<text x="59" y="246" class="body">Authenticate · validate schema · bind intent</text>
+<text x="59" y="277" class="small">No general credentials inside the reasoning process</text>
+<path d="M380 293V335" class="flow"/>
+<rect x="36" y="349" width="688" height="429" rx="16" fill="white" stroke="#175cd3" stroke-width="4"/>
+<text x="60" y="389" class="label">ONE RESOURCE-OWNER TRANSACTION</text>
+<text x="60" y="429" class="head">1. Admit or reject under current state</text>
+<text x="80" y="465" class="body">Grant binding · expiry · local policy epoch</text>
+<text x="80" y="501" class="body">Expected record version · one-use approval</text>
+<path d="M380 514V542" class="flow"/>
+<text x="60" y="585" class="head">2. Commit the effect and its evidence</text>
+<text x="80" y="622" class="body">Business mutation + approval consumption</text>
+<text x="80" y="658" class="body">Action outcome + outbox event</text>
+<line x1="60" x2="700" y1="686" y2="686" stroke="#175cd3"/>
+<text x="60" y="720" class="small">Same identity + same intent → recorded result</text>
+<text x="60" y="754" class="small">Changed intent / stale version → reject, reassess</text>
+<path d="M380 779V811" class="flow"/>
+<rect x="36" y="827" width="688" height="96" rx="12" class="box"/>
+<text x="60" y="865" class="head">Independent postcondition verification</text>
+<text x="60" y="901" class="body">Trusted versioned observation, not “HTTP 200”</text>
+<rect x="36" y="954" width="688" height="162" rx="12" fill="white" stroke="#175cd3" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="60" y="993" class="label">OUTSIDE THIS DATABASE BOUNDARY</text>
+<text x="60" y="1030" class="body">Remote revocation needs authoritative admission,</text>
+<text x="60" y="1066" class="body">resource-enforced fencing or bounded freshness.</text>
+<text x="60" y="1099" class="small">A local version predicate cannot lock remote policy.</text>
+<text x="36" y="1160" class="small">Revocation ordered before admission → blocks the effect.</text>
+<text x="36" y="1193" class="small">Revocation after commit → contain; it cannot erase history.</text>
+<text x="36" y="1230" class="small">Proposed contract · expiry at admission · not global atomicity</text>
+</svg>

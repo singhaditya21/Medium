@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1420" viewBox="0 0 760 1420" role="img" aria-labelledby="title desc">
+<title id="title">CRM execution: a timeout is an unknown outcome</title>
+<desc id="desc">Send a stable business intent. A known result proceeds to verification. A lost response enters UNKNOWN, then an authorized lookup by action ID. A found result proceeds to verification; an unresolved result allows a bounded same-key retry only under a valid domain idempotency contract. Otherwise reconcile or escalate. Missing lookup results do not prove no effect occurred.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10" fill="#175cd3"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#101828}.title{font-size:36px;font-weight:700}.label{font-size:23px;font-weight:700;fill:#175cd3}.head{font-size:29px;font-weight:700}.body{font-size:26px}.small{font-size:23px}.box{fill:white;stroke:#175cd3;stroke-width:2}.flow{fill:none;stroke:#175cd3;stroke-width:3;marker-end:url(#arrow)}</style>
+<rect width="760" height="1420" fill="white"/>
+<text x="36" y="44" class="label">04 / RECOVERY STATE MACHINE</text>
+<text x="36" y="96" class="title">The response disappeared.</text>
+<text x="36" y="139" class="title">The write may have committed.</text>
+<rect x="36" y="176" width="688" height="112" rx="12" class="box"/>
+<text x="60" y="215" class="head">SEND · stable business-action identity</text>
+<text x="60" y="254" class="body">Same tenant + principal + operation + intent</text>
+<path d="M380 289V329" class="flow"/>
+<text x="400" y="317" class="small">Response lost / timeout</text>
+<rect x="36" y="344" width="688" height="97" rx="12" class="box"/>
+<text x="60" y="383" class="head">UNKNOWN · preserve the original intent</text>
+<text x="60" y="418" class="body">Do not mark failed. Do not invent a new key.</text>
+<path d="M380 442V483" class="flow"/>
+<rect x="36" y="498" width="688" height="133" rx="12" class="box"/>
+<text x="60" y="536" class="head">RESOLVE · authorized action-ID lookup</text>
+<text x="60" y="573" class="body">Recorded result → independent verification</text>
+<text x="60" y="609" class="body">No result → still unresolved; inspect the contract</text>
+<path d="M380 632V672" class="flow"/>
+<rect x="36" y="687" width="688" height="217" rx="12" fill="white" stroke="#175cd3" stroke-width="3"/>
+<text x="60" y="725" class="label">RETRY ONLY WHEN ALL CONDITIONS HOLD</text>
+<text x="60" y="764" class="body">Domain enforces the same-intent contract</text>
+<text x="60" y="801" class="body">Identity remains within the retention horizon</text>
+<text x="60" y="838" class="body">Authority is valid for the attempted operation</text>
+<text x="60" y="877" class="head">→ Bounded SAME-KEY retry</text>
+<path d="M380 905V945" class="flow"/>
+<text x="400" y="933" class="small">Unsafe / still unresolved</text>
+<rect x="36" y="960" width="688" height="130" rx="12" class="box"/>
+<text x="60" y="998" class="head">RECONCILE OR ESCALATE</text>
+<text x="60" y="1035" class="body">Keep effect status unresolved; name the owner.</text>
+<text x="60" y="1071" class="body">Any compensation needs its own authority.</text>
+<rect x="36" y="1122" width="688" height="168" rx="12" fill="white" stroke="#175cd3" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="60" y="1161" class="label">WHEN A RESULT IS KNOWN</text>
+<text x="60" y="1199" class="body">Verify approved delta against trusted history.</text>
+<text x="60" y="1235" class="body">Verified → record completion.</text>
+<text x="60" y="1271" class="body">Mismatch / insufficient evidence → unresolved.</text>
+<text x="36" y="1334" class="small">A lookup returning nothing is not proof of no side effect.</text>
+<text x="36" y="1371" class="small">The bound limits attempts; the domain contract limits effects.</text>
+</svg>

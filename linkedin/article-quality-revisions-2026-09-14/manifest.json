@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "prepared_date": "2026-09-14",
+  "status": "review_drafts_not_applied",
+  "external_mutations": [],
+  "preservation": [
+    "original public URLs",
+    "all schedules",
+    "existing title/subtitle",
+    "featured images",
+    "publication/newsletter membership",
+    "email and paywall settings"
+  ],
+  "baseline": {
+    "path": "../newsletter-backfill-2026-09-14/N01-agentic-crm.html",
+    "sha256": "1d39e284cbf176b3c95e42e93899546ce6d1202a18c9f2d96fe0ce88905e9dde"
+  },
+  "articles": [
+    {
+      "id": "Q1",
+      "slug": "Q1-passport",
+      "title": "Every AI Agent Needs a Passport",
+      "source": "https://www.linkedin.com/pulse/every-ai-agent-needs-passport-aditya-singh-qrvrc/",
+      "summary": "Resource-owner enforcement, revocation ordering, one-use approval and a runnable failure model.",
+      "preview": "Q1-passport.html",
+      "word_count_approx": 1885,
+      "body_sha256": "21c3d2a723ab5d0caec6c0f6c16b9c78164cb36fecff92202bbd24e18a142915",
+      "preview_sha256": "afbd551f3898f6082e5839745c1eb1db56442c70fae62eae16b8b84f7c2fb085",
+      "figures": 1
+    },
+    {
+      "id": "Q2",
+      "slug": "Q2-agentic-crm",
+      "title": "How to Build an Agentic CRM: A Reference Architecture",
+      "source": "https://www.linkedin.com/pulse/how-build-agentic-crm-reference-architecture-aditya-singh-lollc/",
+      "summary": "Full architecture retained; exact retry contract, lost-response trace and two corrected diagrams.",
+      "preview": "Q2-agentic-crm.html",
+      "word_count_approx": 4956,
+      "body_sha256": "b7c1a34fd0a4d01b73d1359d81c7706fb21cf66ea14ab088d12cd996a478f706",
+      "preview_sha256": "fb7e001c436a4b7ca9cb7065f6e7c83b6491fd9c6005b9d98bcccce4974da3af",
+      "figures": 10
+    },
+    {
+      "id": "Q3",
+      "slug": "Q3-accuracy",
+      "title": "99.5% Accurate—and Still Wrong 500 Times",
+      "source": "https://www.linkedin.com/pulse/995-accurateand-still-wrong-500-times-aditya-singh-get5c/",
+      "summary": "Conditional denominators, sensitivity, independent adjudication and sampling uncertainty.",
+      "preview": "Q3-accuracy.html",
+      "word_count_approx": 1317,
+      "body_sha256": "79f701b3dfc9243663549c1e01f20e3a9e6b4b9f84a64bdf725f1ffe1272f7c3",
+      "preview_sha256": "f834f466a89c8a09c6ddb011681b7c336b4c88827de2b2a90e0cfca8881e303f",
+      "figures": 0
+    },
+    {
+      "id": "Q4",
+      "slug": "Q4-three-minute",
+      "title": "The 3-Minute Decision That Took 3 Weeks to Ship",
+      "source": "https://www.linkedin.com/pulse/3-minute-decision-took-3-weeks-ship-aditya-singh-kmejc/",
+      "summary": "Waiting versus work, 80-hour baseline versus 60-hour counterfactual, acceptance memo and recovery.",
+      "preview": "Q4-three-minute.html",
+      "word_count_approx": 1505,
+      "body_sha256": "38368df48ba6cb1a01e5c5c8483b0a1b0b9d9a40471680f71b7e80b1dedb5f3b",
+      "preview_sha256": "739f5ebb0568603f745c9924bc4288d0cfa400b69be442bd748772570b01782a",
+      "figures": 0
+    }
+  ],
+  "figures": [
+    {
+      "svg": "figures/passport-enforcement.svg",
+      "png": "figures/passport-enforcement.png",
+      "svg_sha256": "1f7b05e991157108e492ecd7f28e670735c2b6f0900fb362fabd2b06c21f1fb9",
+      "png_sha256": "88919e8341084f94497ccd5ae53f2f0fc383d3bd22ecee55cef9666a3ae76b9d",
+      "width": 2027,
+      "height": 3360
+    },
+    {
+      "svg": "figures/crm-unknown-outcome.svg",
+      "png": "figures/crm-unknown-outcome.png",
+      "svg_sha256": "bb9b1d97d2cfac9f8b3a62ad743412dc21385a9ccc96e8fc1806c9e32fd10956",
+      "png_sha256": "1c6ec219d7571c301708dead5762cf63a7f53ba4a69581522a4604558c1f244f",
+      "width": 2027,
+      "height": 3787
+    },
+    {
+      "svg": "figures/crm-atomic-contract.svg",
+      "png": "figures/crm-atomic-contract.png",
+      "svg_sha256": "32ec517c42027b43bdbcecc7223de3a7201aed59a28e2fec0d20d820dfefe461",
+      "png_sha256": "d23d075b61f75b9651ac47863e219eff167247c583314eca792d4d9a3a1e9f11",
+      "width": 2027,
+      "height": 3733
+    }
+  ]
+}

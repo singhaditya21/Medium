@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>99.5% Accurate—and Still Wrong 500 Times — revision review</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#101828;font:19px/1.75 Georgia,serif}
+main{max-width:940px;margin:auto;padding:36px 34px 90px}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.22;color:#1048a8;overflow-wrap:break-word}
+h1{font-size:42px;letter-spacing:-1px;margin:0 0 22px}h2{font-size:29px;margin:2em 0 .8em}h3{font-size:23px;margin:1.7em 0 .8em}
+p,li{overflow-wrap:break-word}p{margin:1.15em 0}a{color:#1048a8;text-underline-offset:3px}li{margin:.55em 0}figure{margin:36px 0}
+img{max-width:100%;height:auto;display:block;margin:24px auto}figcaption{font:15px/1.6 Arial,sans-serif}pre{font:14px/1.65 Menlo,Consolas,monospace;overflow:auto;padding:20px;border:1px solid #b8cdf3;border-radius:8px;background:white}
+code{font-size:.84em}pre code{font-size:inherit}table{border-collapse:collapse;width:100%;font:16px/1.5 Arial,sans-serif}th,td{border:1px solid #b8cdf3;padding:12px;text-align:left;vertical-align:top}th{color:#1048a8;background:white}
+.table-scroll{overflow-x:auto;margin:24px 0}.review{border:1px solid #175cd3;border-left:5px solid #175cd3;padding:17px 20px;margin:0 0 38px;font:14px/1.6 Arial,sans-serif}
+.review p{margin:.5em 0}.eyebrow{font:700 13px/1.5 Arial,sans-serif;letter-spacing:1.2px;color:#175cd3}nav{font:15px/1.7 Arial,sans-serif;margin-bottom:22px}
+.card{padding:24px 0;border-top:1px solid #b8cdf3}.card h2{margin:6px 0 12px}.card p{margin:8px 0}.caption{font:15px/1.6 Arial,sans-serif}.meta{font:14px/1.6 Arial,sans-serif}hr{border:0;border-top:1px solid #b8cdf3;margin:35px 0}
+@media(max-width:600px){main{padding:22px 18px 60px}body{font-size:18px;line-height:1.7}h1{font-size:32px;letter-spacing:-.5px}h2{font-size:26px}h3{font-size:22px}table{min-width:570px;font-size:15px}.review{padding:14px}.table-scroll{outline-offset:3px}pre{padding:14px}}
+@media print{.review,nav{display:none}main{padding:0}h2{break-after:avoid}figure,table{break-inside:avoid}}
+</style></head><body><main><nav><a href="index.html">← Four-article review</a> · <a href="README.md">Changes and validation</a></nav><aside class="review"><strong>REVISED DRAFT · NOT APPLIED TO LINKEDIN OR MEDIUM</strong><p>Prepared 14 September 2026. Review this exact body and its figures before approving replacement. Existing URLs, schedules, covers and publication settings are unchanged.</p><p><a href="https://www.linkedin.com/pulse/995-accurateand-still-wrong-500-times-aditya-singh-get5c/">Original published LinkedIn edition</a> · <a href="protocol.py">Local teaching model</a> · <a href="test_protocol.py">Protocol tests</a> · <a href="test_calculations.py">Arithmetic tests</a></p></aside><article><h1>99.5% Accurate—and Still Wrong 500 Times</h1>
+<h3>The human-review math missing from enterprise AI dashboards</h3>
+<p>At an assumed 100,000 AI-assisted decisions per month, 99.5% correctness implies 500 expected errors. The operating decision is whether the organization can detect and contain the consequential subset before those errors harm a customer or change an important record.</p>
+<p>This is a worked scenario, not a measured customer result. It does not establish that an evaluation-set accuracy score will carry over to production. The useful outcome is a review contract whose assumptions can be checked.</p>
+<h2>Start with the populations</h2>
+<p>Let <code>E</code> mean an incorrect decision under an independently adjudicated label. Let <code>H</code> mean that the error meets the organization&#39;s predefined high-impact criterion. Let <code>D</code> mean the end-to-end control detects that high-impact error <strong>in time to prevent the consequential effect</strong>.</p>
+<p>For a fixed operating window:</p>
+<pre><code class="language-text">Expected high-impact escapes = N × P(E) × P(H | E) × [1 − P(D | H,E)]
+</code></pre>
+<p>This uses conditional populations; it does not assume independence. The last probability includes routing into review, reviewer detection and intervention timing. If the available metric is reviewer recall only among routed cases, it is not this end-to-end probability.</p>
+<p>For example, 80% routing recall followed by 80% timely detection among routed high-impact errors gives 64% end-to-end detection under those conditional definitions. The original five-escape scenario requires <strong>80% end-to-end</strong> recall, not 80% at each stage.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th>Assumed quantity</th>
+<th align="right">Value</th>
+<th>Denominator or meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Monthly decisions</td>
+<td align="right">100,000</td>
+<td>All eligible decisions in the modeled workflow</td>
+</tr>
+<tr>
+<td>Error probability</td>
+<td align="right">0.5%</td>
+<td>Incorrect decisions / all decisions</td>
+</tr>
+<tr>
+<td>High-impact share</td>
+<td align="right">5%</td>
+<td>High-impact errors / all errors</td>
+</tr>
+<tr>
+<td>Timely end-to-end recall</td>
+<td align="right">80%</td>
+<td>High-impact errors intercepted before effect / all high-impact errors</td>
+</tr>
+<tr>
+<td>Expected escapes</td>
+<td align="right">5</td>
+<td><code>100,000 × 0.005 × 0.05 × 0.20</code></td>
+</tr>
+</tbody></table></div>
+<p>The result is an expectation. A particular month could have a different count. Neither the table nor its inputs are a deployment benchmark.</p>
+<h2>Test sensitivity before arguing over the headline</h2>
+<p>Holding the assumed error rate and severity mix constant gives 25 expected high-impact errors before intervention:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th>Timely end-to-end recall</th>
+<th align="right">Expected detections</th>
+<th align="right">Expected escapes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>50%</td>
+<td align="right">12.5</td>
+<td align="right">12.5</td>
+</tr>
+<tr>
+<td>80%</td>
+<td align="right">20</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>95%</td>
+<td align="right">23.75</td>
+<td align="right">1.25</td>
+</tr>
+</tbody></table></div>
+<p>Fractional counts are valid expectations, not observed fractions of incidents. This is sensitivity analysis, not a confidence interval. At 64% end-to-end recall in the two-stage example, expected escapes would be nine.</p>
+<p>Before reducing review coverage, ask which input the evidence supports and which remains assumed. A small change in the high-impact mix can overwhelm a small improvement in average accuracy.</p>
+<h2>Accuracy and loss answer different questions</h2>
+<p>Accuracy gives each labeled evaluation item equal weight. Business effects do not carry equal consequences. A misclassified internal note and an incorrect customer entitlement can have the same error indicator and very different recovery needs.</p>
+<p>For a per-decision model with mutually exclusive outcome categories:</p>
+<pre><code class="language-text">Expected loss = Σ P(outcome category j) × E[loss | category j]
+</code></pre>
+<p>If categories overlap, summing them can count the same loss twice. If several actions belong to the same customer incident, model that shared exposure rather than pretending the actions are independent. Report consequence bands, recovery assumptions and uncertainty separately from the expected incident count.</p>
+<p>A modeled loss avoided is not automatically realized financial benefit. The baseline, control costs and counterfactual need evidence. For elapsed waiting and released staff capacity, the companion <a href="https://www.linkedin.com/pulse/3-minute-decision-took-3-weeks-ship-aditya-singh-kmejc/">3-Minute Decision article</a> treats those distinctions explicitly.</p>
+<h2>Measure the cases the control did not surface</h2>
+<p>An evaluation using only alerts cannot estimate how many errors escaped. It samples the detector&#39;s own findings.</p>
+<p>Build a decision register containing the eligible population, time, risk tier, policy/model versions, routing result, reviewer decision, intervention time and eventual adjudication. Keep protected source evidence under controlled access rather than copying customer records into an analytics export.</p>
+<p>Then sample both reviewed and unreviewed decisions. Stratify by risk tier and other material differences, select randomly within strata, and retain each item&#39;s inclusion probability. Have qualified reviewers assess the outcome against a written rubric; independently adjudicate disagreements and record unresolved labels. Where practical, blind the adjudicator to the original system decision.</p>
+<p>A design-weighted descriptive estimate can use inverse inclusion weights <code>wᵢ = 1/πᵢ</code>:</p>
+<pre><code class="language-text">Estimated timely recall = Σ wᵢ × I(high-impact error intercepted in time)
+                         / Σ wᵢ × I(high-impact error)
+</code></pre>
+<p>This ratio estimate needs uncertainty appropriate to the actual sampling design. Do not apply a simple unweighted binomial interval to clustered, unequally sampled customer decisions and claim equivalent precision. Confirmed incidents collected outside the probability sample remain important evidence, but must not be mixed into the estimator without a defined inclusion/deduplication rule.</p>
+<p>For a genuinely independent simple binomial sample, Wilson or exact intervals can communicate uncertainty better than an unsupported point estimate, especially with few failures. <a href="https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm">NIST confidence-interval guidance</a>.</p>
+<p>One deliberately simplified calculation shows why “we saw none” is weak evidence. With zero observed failures in 100 independent trials, the one-sided 95% exact upper bound is <code>1 − 0.05^(1/100)</code>, approximately <strong>2.95%</strong>. That is a bound on the trial-level probability under the stated model, not on the size of any future loss. A deployment with dependent events needs a different design.</p>
+<p>If adjudication finds no high-impact errors, report recall as <strong>not estimable</strong>, not 100%. State the sample size, observed events and uncertainty. Choose the next sample using a precision/risk requirement rather than copying a fixed audit percentage.</p>
+<h2>Seven measures with explicit denominators</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Definition and boundary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Review coverage</td>
+<td>Reviewed decisions / eligible decisions, by risk tier and window</td>
+</tr>
+<tr>
+<td>High-impact timely recall</td>
+<td>Adjudicated high-impact errors intercepted before effect / estimated high-impact errors in the eligible population</td>
+</tr>
+<tr>
+<td>False-accept rate</td>
+<td>Reviewer-approved unacceptable decisions / adjudicated unacceptable decisions presented to review</td>
+</tr>
+<tr>
+<td>False-reject rate</td>
+<td>Reviewer-rejected acceptable decisions / adjudicated acceptable decisions presented to review</td>
+</tr>
+<tr>
+<td>Validated override precision</td>
+<td>Overrides upheld by adjudication / adjudicated overrides; show how many await adjudication</td>
+</tr>
+<tr>
+<td>Containment and recovery time</td>
+<td>Detection-to-containment and detection-to-recovery distributions, plus the age/count of unresolved cases</td>
+</tr>
+<tr>
+<td>Residual expected loss</td>
+<td>Estimated remaining loss per 1,000 eligible decisions, with assumptions/range and review minutes per 100 decisions</td>
+</tr>
+</tbody></table></div>
+<p>The false-accept definition above is different from “unacceptable outcomes among all approvals.” Both can be useful, but they answer different questions. Do not change denominators while comparing teams or releases.</p>
+<p>Report median and p95 times only when there are enough observations to interpret them. Do not remove unresolved incidents from the dashboard simply because they have no completed recovery duration; show their age alongside completed-case statistics.</p>
+<h2>Route review by consequence and ability to intervene</h2>
+<p>A low-consequence, reversible workflow may support bounded automated execution with sampling and an appeal path. A material but recoverable workflow may require risk-based routing, post-action sampling and recovery service levels. High-consequence or difficult-to-reverse actions need pre-action review with the context, expertise and authority to stop execution; some require dual control.</p>
+<p>These are operating design choices. A sales recommendation, pricing exception and regulated decision cannot share an undifferentiated human-review rule. Applicable legal requirements must be assessed separately for the specific system, role and jurisdiction.</p>
+<p>Reviewing everything can still fail if the reviewer is overloaded or cannot prevent the effect. Lower review coverage may perform better only if routing, timely detection and sampling evidence support that conclusion. Treat it as a proposition to test, not an argument to remove people.</p>
+<p>NIST&#39;s AI RMF connects measurement to deployment context and control effectiveness. Its Playbook recommends documenting human oversight, errors, overrides, response time and adjudication. Those resources inform this scorecard; they do not prescribe the numerical assumptions above. <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">AI RMF Core</a>, <a href="https://airc.nist.gov/airmf-resources/playbook/measure/">Playbook: Measure</a>.</p>
+<h2>The release decision</h2>
+<p>Before expanding autonomy, require the measurement owner to show the eligible population, sampling design, adjudication rubric and unresolved cases. Then review the estimated escape rate with its uncertainty, consequence distribution, review cost and recovery capacity.</p>
+<p>The <a href="https://github.com/singhaditya21/Medium/tree/main/linkedin/article-quality-revisions-2026-09-14">companion bundle</a> includes <code>test_calculations.py</code>, which checks the five-escape scenario, two-stage detection example, sensitivity table, waiting-cost examples and zero-failure bound. It validates arithmetic, not the assumed inputs. Run <code>python3 -m unittest -v test_calculations</code> in the companion directory.</p>
+<p><strong>Which unreviewed part of your workflow could contain consequential errors that today&#39;s dashboard cannot estimate?</strong></p>
+</article></main></body></html>

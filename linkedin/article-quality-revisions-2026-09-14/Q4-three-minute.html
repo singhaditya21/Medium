@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The 3-Minute Decision That Took 3 Weeks to Ship — revision review</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#101828;font:19px/1.75 Georgia,serif}
+main{max-width:940px;margin:auto;padding:36px 34px 90px}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.22;color:#1048a8;overflow-wrap:break-word}
+h1{font-size:42px;letter-spacing:-1px;margin:0 0 22px}h2{font-size:29px;margin:2em 0 .8em}h3{font-size:23px;margin:1.7em 0 .8em}
+p,li{overflow-wrap:break-word}p{margin:1.15em 0}a{color:#1048a8;text-underline-offset:3px}li{margin:.55em 0}figure{margin:36px 0}
+img{max-width:100%;height:auto;display:block;margin:24px auto}figcaption{font:15px/1.6 Arial,sans-serif}pre{font:14px/1.65 Menlo,Consolas,monospace;overflow:auto;padding:20px;border:1px solid #b8cdf3;border-radius:8px;background:white}
+code{font-size:.84em}pre code{font-size:inherit}table{border-collapse:collapse;width:100%;font:16px/1.5 Arial,sans-serif}th,td{border:1px solid #b8cdf3;padding:12px;text-align:left;vertical-align:top}th{color:#1048a8;background:white}
+.table-scroll{overflow-x:auto;margin:24px 0}.review{border:1px solid #175cd3;border-left:5px solid #175cd3;padding:17px 20px;margin:0 0 38px;font:14px/1.6 Arial,sans-serif}
+.review p{margin:.5em 0}.eyebrow{font:700 13px/1.5 Arial,sans-serif;letter-spacing:1.2px;color:#175cd3}nav{font:15px/1.7 Arial,sans-serif;margin-bottom:22px}
+.card{padding:24px 0;border-top:1px solid #b8cdf3}.card h2{margin:6px 0 12px}.card p{margin:8px 0}.caption{font:15px/1.6 Arial,sans-serif}.meta{font:14px/1.6 Arial,sans-serif}hr{border:0;border-top:1px solid #b8cdf3;margin:35px 0}
+@media(max-width:600px){main{padding:22px 18px 60px}body{font-size:18px;line-height:1.7}h1{font-size:32px;letter-spacing:-.5px}h2{font-size:26px}h3{font-size:22px}table{min-width:570px;font-size:15px}.review{padding:14px}.table-scroll{outline-offset:3px}pre{padding:14px}}
+@media print{.review,nav{display:none}main{padding:0}h2{break-after:avoid}figure,table{break-inside:avoid}}
+</style></head><body><main><nav><a href="index.html">← Four-article review</a> · <a href="README.md">Changes and validation</a></nav><aside class="review"><strong>REVISED DRAFT · NOT APPLIED TO LINKEDIN OR MEDIUM</strong><p>Prepared 14 September 2026. Review this exact body and its figures before approving replacement. Existing URLs, schedules, covers and publication settings are unchanged.</p><p><a href="https://www.linkedin.com/pulse/3-minute-decision-took-3-weeks-ship-aditya-singh-kmejc/">Original published LinkedIn edition</a> · <a href="protocol.py">Local teaching model</a> · <a href="test_protocol.py">Protocol tests</a> · <a href="test_calculations.py">Arithmetic tests</a></p></aside><article><h1>The 3-Minute Decision That Took 3 Weeks to Ship</h1>
+<p><em>Why business-policy changes wait in technical queues—and how to make them faster without weakening control.</em></p>
+<p>Imagine Revenue Operations agrees to route accounts with at least 200 employees to the enterprise SDR queue. The decision takes minutes. Shipping it takes 15 working days because conditions, testing, approval and release each pass through a different queue.</p>
+<p>The operating choice is which policy changes deserve a faster controlled path, and what evidence would make that path safe. Moving a risky rule faster is not an improvement if customer mistakes become harder to contain.</p>
+<p>This is an illustrative operating model, not a production case study. Its inputs are assumptions to replace with observations from your own workflow.</p>
+<h2>Account for the fifteen days without calling them labor</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th align="right">Assumed elapsed working days</th>
+<th>What still needs measurement</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Waiting for triage</td>
+<td align="right">2</td>
+<td>Queue time and triage ownership</td>
+</tr>
+<tr>
+<td>Clarifying conditions/exceptions</td>
+<td align="right">3</td>
+<td>Active work versus waiting for answers</td>
+</tr>
+<tr>
+<td>Development and review</td>
+<td align="right">2</td>
+<td>Actual engineering/reviewer touch time</td>
+</tr>
+<tr>
+<td>QA and user acceptance</td>
+<td align="right">3</td>
+<td>Active tests versus environment/reviewer waiting</td>
+</tr>
+<tr>
+<td>Approval and release window</td>
+<td align="right">5</td>
+<td>Approval waiting versus release waiting</td>
+</tr>
+<tr>
+<td>Total</td>
+<td align="right">15</td>
+<td>Business agreement to first safe production decision</td>
+</tr>
+</tbody></table></div>
+<p>These sequential stage durations sum to 15 working days. They do not imply fifteen days of engineering effort. Even a stage called development contains interruptions and waiting unless the team measures otherwise.</p>
+<p>The first diagnostic is therefore a timestamped change history and touch-time sample. If environments or decision ownership cause most waiting, a faster code generator will not remove that bottleneck.</p>
+<h2>Workload arithmetic needs a counterfactual</h2>
+<p>Assume the old rule processes 400 records per day, misroutes 4%, and each exception requires 20 minutes to identify, reassign and explain.</p>
+<pre><code class="language-text">Modeled old-rule repair workload per day = 400 × 0.04 × 20 / 60
+                                        = 5.33 hours
+Five working days at that rate           = 26.7 hours
+Fifteen working days at that rate        = 80 hours
+</code></pre>
+<p>The 80 hours describe modeled handling workload while the old rule remains in use. Calling all of it avoidable assumes the candidate eliminates every relevant misrouting, workload stays stable and no new handling cost appears. That is a stronger claim than the arithmetic establishes.</p>
+<p>For equal handling time per error, a more useful comparison is:</p>
+<pre><code class="language-text">Potential repair hours avoided = daily volume × working days
+                               × (old error rate − candidate error rate)
+                               × minutes per repair / 60
+</code></pre>
+<p>If the proposed rule reduces the assumed error rate from 4% to 1%, potential repair hours avoided across fifteen days are <strong>60</strong>, not 80. If the errors have different repair costs, calculate the old and candidate workloads separately. Subtract implementation, review and recovery costs before making a net-value claim.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th>Assumed old-rule misrouting rate</th>
+<th align="right">Repair hours during 15 days</th>
+<th align="right">Potential hours avoided if candidate rate is 1%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2%</td>
+<td align="right">40</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>4%</td>
+<td align="right">80</td>
+<td align="right">60</td>
+</tr>
+<tr>
+<td>6%</td>
+<td align="right">120</td>
+<td align="right">100</td>
+</tr>
+</tbody></table></div>
+<p>This is sensitivity analysis, not a forecast. It excludes lost opportunities and customer harm because the scenario contains no defensible estimates for them. The <a href="https://github.com/singhaditya21/Medium/tree/main/linkedin/article-quality-revisions-2026-09-14">companion calculations and tests</a> reproduce the old-rule, candidate and bad-rule examples without requiring external services.</p>
+<p>Keep four measures separate: elapsed waiting, exception-handling workload, staff capacity actually released, and expenditure actually avoided. Salaried hours freed are capacity; they become cash savings only when spending changes. Capture where that capacity goes before claiming a business result.</p>
+<h2>Decide which rules qualify for the fast lane</h2>
+<p>Engineering owns the policy platform and its safety invariants. Named business owners govern eligible policies through that platform. Business teams do not edit production code, and a friendly rule editor does not remove review.</p>
+<p>Frequently changing routing thresholds, prioritization rules and approval bands can be candidates. Logic that must share a domain transaction, security invariants and high-impact irreversible decisions may be safer in code or under a separate release process.</p>
+<p>My initial selection would require a measurable baseline, reliable inputs, a reversible outcome and an accountable destination owner. “Everyone agrees” is not a substitute for understanding affected records and recovery work.</p>
+<p>For the example, define the intended policy precisely: <code>region = EMEA AND employee_count &gt;= 200</code> routes to the enterprise SDR queue; missing data routes to a staffed manual-review queue. State how conflicting matches are resolved. Author, approver, deployer, rollback operator and evidence administrator have separate permissions where the risk warrants it.</p>
+<h2>A one-page policy-change acceptance memo</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th>Required field</th>
+<th>Evidence the approver should receive</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Decision and owner</td>
+<td>Exact eligible scope, business owner, technical owner and on-call operator</td>
+</tr>
+<tr>
+<td>Baseline and counterfactual</td>
+<td>Old/candidate error definitions, volume window, handling sample and assumptions</td>
+</tr>
+<tr>
+<td>Immutable policy artifact</td>
+<td>ID/version, environment, effective time/timezone, evaluator version, artifact hash and change reason</td>
+</tr>
+<tr>
+<td>Exact difference</td>
+<td>Changed clauses, affected population, precedence and missing-input fallback</td>
+</tr>
+<tr>
+<td>Release evidence</td>
+<td>Side-effect-free historical replay, point-in-time inputs, adjudicated disagreements and shadow results</td>
+</tr>
+<tr>
+<td>Capacity check</td>
+<td>Destination and fallback queue staffing, ownership, service objective and overload behavior</td>
+</tr>
+<tr>
+<td>Guardrails</td>
+<td>Minimum observation window/sample, unacceptable outcomes, stop authority and escalation route</td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td>Previous approved version, how affected records are enumerated, compensation permissions and a rehearsal result</td>
+</tr>
+<tr>
+<td>Go/no-go</td>
+<td>Named approver, evidence references and unresolved exceptions; no self-approval of a high-impact change</td>
+</tr>
+</tbody></table></div>
+<p>Targets must come from the workflow&#39;s baseline and risk tolerance. This template does not prescribe a universal error threshold or promise a release duration.</p>
+<h2>Keep the execution contract small and reconstructable</h2>
+<p>The control plane proposes, tests, approves and publishes an immutable policy version. The execution plane authenticates events, pins that approved version, evaluates deterministically and records the decision before safely dispatching its effects.</p>
+<p>For event deduplication, source plus event ID supplies a namespace; the receiving system still needs a tenant-aware uniqueness contract. A decision record retains the policy/evaluator versions, matched clauses, input reference, business-action identity and timestamps. <a href="https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md">CloudEvents v1.0.2 specification</a>.</p>
+<p>A transactional outbox records the decision and outgoing event in one local database transaction. Its relay can still deliver duplicates, so the receiving domain must enforce the business action&#39;s idempotency and preconditions. An outbox is not an exactly-once guarantee across a CRM, message broker and email provider. <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html">AWS transactional-outbox pattern</a>.</p>
+<p>For the full command, unknown-outcome and recovery contract, use the companion <a href="https://www.linkedin.com/pulse/how-build-agentic-crm-reference-architecture-aditya-singh-lollc/">Agentic CRM architecture</a> instead of inventing a second execution design for the policy editor.</p>
+<h2>Replay, shadow and release against explicit evidence</h2>
+<p>Replay representative historical events using the attributes available at the original decision time. Today&#39;s employee count cannot be used to reconstruct a past routing decision without acknowledging the changed information.</p>
+<p>Measure changed destinations, missing inputs, conflicting matches and workload shifts by team. Independently review a sample of disagreements. A shadow evaluator can process live input, but must be technically unable to assign records, send notifications or call a mutating API.</p>
+<p>Only then use a bounded rollout. A percentage sequence such as 5% → 25% → 100% is illustrative, not a default policy. A high-risk change may need named accounts or an internal ring. Stable account/tenant assignment prevents the same customer switching versions on each event.</p>
+<p>Define the minimum event count, observation period, technical/business limits and stop authority before starting. A release with too little evidence remains unresolved even if no incident has yet appeared.</p>
+<h2>The counterexample: a faster bad rule</h2>
+<p>Suppose the accelerated candidate raises the assumed misrouting rate from 4% to 6% because employee count is stale. At 400 records/day and 20 minutes per exception, it adds 2.67 handling hours per day. Across five days, that is <strong>13.3 extra hours</strong>, before any customer effect.</p>
+<p>A shorter change queue has made this workflow worse. Preventing it requires correct input semantics, independent outcome labels and a guarded release, not an arbitrary delay for every change.</p>
+<h2>Recovery must address past effects</h2>
+<p>Returning from policy version 18 to 17 changes future decisions. It does not undo assignments already made or notifications already sent. Record which events used version 18, assess whether reversing each effect is still appropriate, and execute any permitted compensation under its own identity, authorization and idempotency contract.</p>
+<p>Compensation can fail, and another legitimate actor may already have changed the record. Recheck current preconditions and route unsafe reversals to an owner. An email correction cannot make the original message unread.</p>
+<p>AI can help propose structured policies, identify missing cases and explain replay results. Keep its output an untrusted draft: require deterministic validation, exact human-readable differences and domain tests. Do not give that authoring service production deployment credentials.</p>
+<h2>Measure the operating change</h2>
+<p>Report time from agreement to first safe decision; waiting and active time by stage; eligible changes needing engineering rewrites; exceptions and overrides by version; change failures; time to restore policy; age of unresolved affected records; and repair workload relative to the measured candidate baseline.</p>
+<p>Pair speed with failure and recovery measures. Do not optimize “changes without engineering” independently of control compliance. For sampling and denominator design, the <a href="https://www.linkedin.com/pulse/995-accurateand-still-wrong-500-times-aditya-singh-get5c/">accuracy and human-review article</a> provides the measurement counterpart.</p>
+<p>Start with one frequent, reversible policy and require the acceptance memo before granting its faster path. The test is whether safe changes reach production sooner without transferring hidden work to customers or another team.</p>
+<p><strong>Which pending rule has a measured waiting cost, a credible candidate baseline and a recovery route strong enough to justify that first fast lane?</strong></p>
+</article></main></body></html>

@@ -83,3 +83,9 @@ Recommended next revision batch: Passport and Agentic CRM correctness first, the
 ## Measurement limits
 
 Existing views, email opens and comments do not establish reading completion. The new Ledger article's early audience is too small for a causal retention diagnosis. Evaluate technical correctness independently of popularity, then compare like-aged seven-day and 28-day engagement windows after approved revisions. Do not attribute all subsequent growth to a comment, new post or rewrite.
+
+## Follow-up: revised drafts completed
+
+After the user approved preparing the changes, the [four-article review package](../article-quality-revisions-2026-09-14/index.html) was completed with exact revised bodies, three corrected diagrams and a reproducible local companion. Sixteen protocol tests and eight arithmetic tests pass, as do the two runnable article examples and package checks. The accuracy revision clarifies that the five-escape example requires 80% **end-to-end timely interception among all high-impact errors**, not recall only within the reviewed subset. See the [change log](../article-quality-revisions-2026-09-14/README.md) and [validation record](../article-quality-revisions-2026-09-14/validation.json).
+
+These remain **review drafts**. No published LinkedIn or Medium article, original GitHub Pages body, cover, title, URL, schedule or publishing setting was changed by this follow-up. Exact live replacement remains a separate approval step.

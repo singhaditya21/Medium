@@ -1,0 +1,36 @@
+{
+  "checked_on": "2026-09-14",
+  "status": "pass_for_local_review",
+  "protocol_tests": {"passed": 16, "failed": 0},
+  "calculation_tests": {"passed": 8, "failed": 0},
+  "article_examples": {"python_executed_in_isolated_temp_directories": 2, "json_parsed": 1},
+  "package_validation": {
+    "articles": 4,
+    "new_diagrams": 3,
+    "crm_figure_positions": 10,
+    "crm_original_figures_preserved": 8,
+    "crm_original_list_items_preserved_except_approved_retry_correction": true,
+    "baseline_unchanged": true,
+    "generated_hashes_checked": true,
+    "local_references_resolve": true
+  },
+  "render_review": {
+    "new_png_figures_visually_inspected": 3,
+    "corrected_clipped_retry_annotation": true,
+    "desktop_article_preview_visually_inspected": true,
+    "phone_width_css_pixels": 390,
+    "all_four_document_scroll_widths_equal_viewport": true,
+    "all_ten_tables_have_scroll_containers": true,
+    "broken_images_observed": 0,
+    "temporary_browser_viewport_reset": true
+  },
+  "repository_engagement_validator": "passed; system Python emitted an existing LibreSSL/urllib3 compatibility warning",
+  "live_article_saves": 0,
+  "schedule_changes": 0,
+  "limitations": [
+    "Static/local review is not proof of a successful LinkedIn or Medium save.",
+    "The SQLite model is not a production IAM service, remote CRM integration or distributed revocation test.",
+    "Calculation tests do not validate the assumed business inputs or promise engagement uplift.",
+    "LinkedIn and Medium native rendering must be checked after a separately approved replacement."
+  ]
+}

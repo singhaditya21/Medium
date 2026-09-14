@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Every AI Agent Needs a Passport — revision review</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#101828;font:19px/1.75 Georgia,serif}
+main{max-width:940px;margin:auto;padding:36px 34px 90px}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.22;color:#1048a8;overflow-wrap:break-word}
+h1{font-size:42px;letter-spacing:-1px;margin:0 0 22px}h2{font-size:29px;margin:2em 0 .8em}h3{font-size:23px;margin:1.7em 0 .8em}
+p,li{overflow-wrap:break-word}p{margin:1.15em 0}a{color:#1048a8;text-underline-offset:3px}li{margin:.55em 0}figure{margin:36px 0}
+img{max-width:100%;height:auto;display:block;margin:24px auto}figcaption{font:15px/1.6 Arial,sans-serif}pre{font:14px/1.65 Menlo,Consolas,monospace;overflow:auto;padding:20px;border:1px solid #b8cdf3;border-radius:8px;background:white}
+code{font-size:.84em}pre code{font-size:inherit}table{border-collapse:collapse;width:100%;font:16px/1.5 Arial,sans-serif}th,td{border:1px solid #b8cdf3;padding:12px;text-align:left;vertical-align:top}th{color:#1048a8;background:white}
+.table-scroll{overflow-x:auto;margin:24px 0}.review{border:1px solid #175cd3;border-left:5px solid #175cd3;padding:17px 20px;margin:0 0 38px;font:14px/1.6 Arial,sans-serif}
+.review p{margin:.5em 0}.eyebrow{font:700 13px/1.5 Arial,sans-serif;letter-spacing:1.2px;color:#175cd3}nav{font:15px/1.7 Arial,sans-serif;margin-bottom:22px}
+.card{padding:24px 0;border-top:1px solid #b8cdf3}.card h2{margin:6px 0 12px}.card p{margin:8px 0}.caption{font:15px/1.6 Arial,sans-serif}.meta{font:14px/1.6 Arial,sans-serif}hr{border:0;border-top:1px solid #b8cdf3;margin:35px 0}
+@media(max-width:600px){main{padding:22px 18px 60px}body{font-size:18px;line-height:1.7}h1{font-size:32px;letter-spacing:-.5px}h2{font-size:26px}h3{font-size:22px}table{min-width:570px;font-size:15px}.review{padding:14px}.table-scroll{outline-offset:3px}pre{padding:14px}}
+@media print{.review,nav{display:none}main{padding:0}h2{break-after:avoid}figure,table{break-inside:avoid}}
+</style></head><body><main><nav><a href="index.html">← Four-article review</a> · <a href="README.md">Changes and validation</a></nav><aside class="review"><strong>REVISED DRAFT · NOT APPLIED TO LINKEDIN OR MEDIUM</strong><p>Prepared 14 September 2026. Review this exact body and its figures before approving replacement. Existing URLs, schedules, covers and publication settings are unchanged.</p><p><a href="https://www.linkedin.com/pulse/every-ai-agent-needs-passport-aditya-singh-qrvrc/">Original published LinkedIn edition</a> · <a href="protocol.py">Local teaching model</a> · <a href="test_protocol.py">Protocol tests</a> · <a href="test_calculations.py">Arithmetic tests</a></p></aside><article><h1>Every AI Agent Needs a Passport</h1>
+<p><em>A technical architecture for identity, delegated authority and accountable execution</em></p>
+<p>In an illustrative CRM incident, an agent updates 40 opportunities at 9:02. Five minutes later, Sales Operations finds that three late-stage deals were changed in error. The audit trail identifies only a shared integration account.</p>
+<p>The immediate operating questions are specific: which workload acted, whose authority it used, what change was approved, and where the next write can be stopped. A useful agent passport must make those questions answerable at the system that performs the action.</p>
+<p>The design below connects a registered identity, an attested workload credential, a time-bounded task grant and an execution receipt. They have different issuers and lifetimes. A single large token cannot replace those responsibilities.</p>
+<h2>The decision for the operating owner</h2>
+<p>Before granting write access, ask the implementation team to demonstrate one control: two workers present the same approval while a record or permission changes. Which transaction is allowed to commit, and where is that decision enforced?</p>
+<p>The owner should receive a defined action boundary, a demonstrated failure test and a named recovery operator. An inventory of agents is useful, but it does not supply that evidence.</p>
+<p>This architecture applies to workloads accessing protected data or creating external effects. An assistant summarizing public text needs less assurance than a system changing customer entitlements. The three profiles below are organization-defined examples, not industry certification levels.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th>Profile</th>
+<th>Minimum operating contract</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Observed assistant</td>
+<td>Registration, accountable ownership, workload identity and traceability</td>
+</tr>
+<tr>
+<td>Constrained operator</td>
+<td>Task-scoped grants, external enforcement, receipts and tested recovery</td>
+</tr>
+<tr>
+<td>Privileged actor</td>
+<td>Transaction-bound approval, sender-constrained credentials, independent verification, separation of duties and a defined fail-closed revocation contract</td>
+</tr>
+</tbody></table></div>
+<h2>Separate the principals before designing the token</h2>
+<p>The requesting principal is the person, service or event initiating work. The logical agent is the durable capability, such as <code>opportunity-hygiene-agent</code>. The workload instance is the process running it. The executing model is the model/version used for a reasoning step.</p>
+<p>A model can change without changing the logical agent. Two agents can use the same model while holding different permissions. Preserve those distinctions in delegation and receipts instead of collapsing every operation into an integration account.</p>
+<p>Identity answers who is calling. Authority determines what that caller may do now. The evidence must remain reconstructable after both the credential and the process have expired.</p>
+<h2>Four artifacts with different jobs</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Issuer and purpose</th>
+<th>Lifecycle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Passport manifest</td>
+<td>Registry: owner, purpose, lineage and capability envelope</td>
+<td>Versioned and periodically recertified; suspend or supersede</td>
+</tr>
+<tr>
+<td>Workload credential</td>
+<td>Workload identity system: attested runtime identity</td>
+<td>Short-lived; rotation and termination behavior specified</td>
+</tr>
+<tr>
+<td>Task grant</td>
+<td>Authorization service: subject, actor, audience, permitted action and limits</td>
+<td>Bounded lifetime; explicit revocation and delegation rules</td>
+</tr>
+<tr>
+<td>Evidence receipt</td>
+<td>Trusted execution/evidence service: requested, approved, attempted and observed outcome</td>
+<td>Retained under the organization&#39;s access and retention policy</td>
+</tr>
+</tbody></table></div>
+<p>A manifest is a claim about an approved capability, not permission for every action inside its broad envelope. Each task projects only the authority needed for that action. A receipt is evidence, not retroactive authorization.</p>
+<p>The following shortened manifest is a conceptual payload, not a published standard or a signed credential:</p>
+<pre><code class="language-json">{
+  &quot;schema_version&quot;: &quot;1.2&quot;,
+  &quot;passport_id&quot;: &quot;opportunity-hygiene&quot;,
+  &quot;version&quot;: 7,
+  &quot;agent_id&quot;: &quot;spiffe://enterprise.example/agents/revops/opportunity-hygiene&quot;,
+  &quot;owner&quot;: {
+    &quot;primary&quot;: &quot;group:revenue-platform&quot;,
+    &quot;backup&quot;: &quot;group:enterprise-operations&quot;,
+    &quot;risk_approver&quot;: &quot;group:enterprise-risk&quot;
+  },
+  &quot;business_purpose&quot;: &quot;Correct incomplete opportunity records&quot;,
+  &quot;lifecycle_state&quot;: &quot;active&quot;,
+  &quot;capabilities&quot;: [{
+    &quot;resource&quot;: &quot;crm/opportunity&quot;,
+    &quot;actions&quot;: [&quot;read&quot;, &quot;update&quot;],
+    &quot;conditions&quot;: {
+      &quot;regions&quot;: [&quot;IN&quot;, &quot;SG&quot;],
+      &quot;record_limit&quot;: 50,
+      &quot;prohibited_stages&quot;: [&quot;Closed Won&quot;, &quot;Closed Lost&quot;]
+    }
+  }],
+  &quot;policy_bundle&quot;: {&quot;id&quot;: &quot;revops-agent-policy&quot;, &quot;version&quot;: &quot;1.8.0&quot;},
+  &quot;recertification_due&quot;: &quot;2026-10-31&quot;
+}
+</code></pre>
+<p>An implementation also needs verified issuers, signature and algorithm rules, issuance/expiry, deployment evidence and the status/version chain. A mutation approval should bind the tenant, represented principal, actor, target, exact delta, record preconditions, tool version, action identifier and expiry using a specified canonical representation. Avoid signing ambiguous display text.</p>
+<h2>Seven layers, with accountable operators</h2>
+<ol>
+<li><strong>Registry.</strong> Map approved capabilities to business owners, deployments, data classes, tools and lifecycle state. Risk-based recertification follows material changes in capability or deployment assurance; it need not treat every equivalent model patch as a new business purpose.</li>
+<li><strong>Workload identity.</strong> Attest the running instance. SPIFFE distinguishes workload identifiers and SVID credentials; an SVID does not itself grant CRM authority. Explicit federation and issuer-bound trust bundles are required across trust domains. <a href="https://spiffe.io/docs/latest/spiffe-about/overview/">SPIFFE overview</a>, <a href="https://spiffe.io/docs/latest/spiffe-specs/spiffe_federation/">federation specification</a>.</li>
+<li><strong>Delegation.</strong> Preserve the represented subject and executing actor. RFC 8693 supplies token-exchange subject/actor semantics; application-specific limits still need enforcement. RFC 9396 supplies a container for authorization details, not their business meaning. A pricing-agent handoff should lose CRM write privileges and receive a pricing-specific audience. <a href="https://www.rfc-editor.org/rfc/rfc8693.html">RFC 8693</a>, <a href="https://www.rfc-editor.org/rfc/rfc9396.html">RFC 9396</a>.</li>
+<li><strong>Policy decision.</strong> Evaluate the caller, purpose, resource, impact and current approval state. Record the decision identifier and policy version. Permit, deny, require approval and permit-with-obligations are application design choices; the enforcement point must implement the result.</li>
+<li><strong>Tool enforcement.</strong> Validate each consequential command outside the model. Restrict schema, destination, values and audience. Workload credentials stay outside the reasoning environment. A prompt cannot enforce a refund limit.</li>
+<li><strong>Evidence.</strong> Join subject, actor chain, workload, action/approval hashes, policy version, command result and independent verification. Protect controlled references, detect missing receipts, and define retention, redaction and access. Traces can contain sensitive material; indiscriminate prompt logging creates another risk.</li>
+<li><strong>Revocation and degraded operation.</strong> Name the operator who can suspend grants, block tools or quarantine a deployment. Define enforcement freshness and failure behavior. A cached worker must not retain an undocumented path to write after the control interface is disabled.</li>
+</ol>
+<h2>A last-second check does not remove the race</h2>
+<p>Suppose a gateway reads “approval active.” A revocation commits before the CRM write. If the resource-owning service blindly trusts the earlier result, the write can still proceed. Moving the check closer to the write reduces elapsed time; it does not make two independent operations atomic.</p>
+<p>For a local transaction domain, the record-version condition, approval consumption, effect identity and business mutation can share an atomic boundary. The authority state used there must follow the same locking or serialization contract. A version predicate protects that record; it does not magically lock an external policy service. PostgreSQL&#39;s documentation illustrates why successive reads can see different states and how an update rechecks its row predicate. <a href="https://www.postgresql.org/docs/18/transaction-iso.html">PostgreSQL transaction isolation</a>.</p>
+<p><img src="figures/passport-enforcement.svg" alt="Resource-owner enforcement and the external-policy boundary"></p>
+<p><em>Figure 1. Proposed enforcement contract. The local commit binds the business effect, approval consumption and outcome record. External revocation needs an explicit freshness or fencing protocol; it is not inside this database transaction.</em></p>
+<p>The contract must answer two different questions:</p>
+<ul>
+<li><strong>Admission:</strong> what policy version and grant state must be valid when a new effect is admitted?</li>
+<li><strong>Ordering:</strong> if revocation races with an admitted action, which one takes precedence and what must the resource owner reject?</li>
+</ul>
+<p>In the local example, revocation committed before the serialized admission check blocks the action. Revocation ordered after a committed action cannot undo it. Expiry is checked at admission; a deployment requiring “no commit after expiry” needs a stricter completion-time contract as well. Keep that distinction visible.</p>
+<p>For distributed policy, choose and document a supported mechanism: authoritative admission, resource-enforced epochs/fencing with a defined propagation boundary, or explicitly bounded cached authority. High-risk new effects fail closed when the required state cannot be established. Short token lifetime alone is not instantaneous revocation.</p>
+<h2>Sender constraint and one-use approval are different controls</h2>
+<p>DPoP binds a proof to request context and can make a stolen access token less useful without the corresponding key. RFC 9449 describes proof-identifier tracking to reject reuse and notes the shared-state problem across servers. It also does not stop an attacker controlling the legitimate process and key. <a href="https://www.rfc-editor.org/rfc/rfc9449.html#section-11">RFC 9449 §11</a>.</p>
+<p>Rejecting the same proof twice does not establish “this business approval can create only one effect.” Two fresh proofs can accompany the same business approval. That second property requires a durable action binding and consumption rule at the mutation boundary. A retry resolving an already-recorded result is different from admitting a new mutation.</p>
+<h2>The CRM execution, made testable</h2>
+<p>Keep the illustrative policy: India and Singapore only, no Closed Won or Closed Lost records, at most 50 records, approval above 20. The manager reviews an exact diff with source evidence and recovery limits. Approval binds the batch intent and each record precondition.</p>
+<p>The resource service validates the command and current authority, then checks the expected record version and consumes the matching approval under its transaction contract. An idempotent replay returns a recorded result; a changed delta, tenant, actor or action identity is rejected. A separate verifier compares observed records with the approved diff before the receipt is marked verified.</p>
+<p>Batch semantics must be explicit. A single local transaction can make a supported batch atomic. A multi-service workflow may commit a subset; its receipt must list committed, rejected and unresolved records rather than pretending that a batch hash creates atomicity.</p>
+<p>The <a href="https://github.com/singhaditya21/Medium/tree/main/linkedin/article-quality-revisions-2026-09-14">companion bundle</a> includes <code>protocol.py</code>, a runnable teaching model of one SQLite-owned record, not an implementation of the 40-record batch, SPIFFE, OAuth, signature validation or an external CRM. It demonstrates the local boundary without hiding its limits.</p>
+<pre><code class="language-python">from protocol import Command, Domain, UnknownOutcome
+
+# Use a NEW temporary database; fixture values are synthetic.
+command = Command(&quot;IN&quot;, &quot;ops-owner&quot;, &quot;routing-agent&quot;, &quot;case-471-route-v7&quot;,
+                  &quot;case-471&quot;, 7, &quot;enterprise-support&quot;, 12)
+domain = Domain(&quot;new-teaching-demo.sqlite&quot;, clock=lambda: 100)
+domain.initialize(command, expires=200)
+try:
+    domain.execute(command, &quot;approval-1&quot;, lose_response=True)
+except UnknownOutcome:
+    result = domain.lookup(command)  # real service: separately authorize this read
+    assert result[&quot;version&quot;] == 8
+assert domain.inspect()[&quot;effects&quot;] == 1
+</code></pre>
+<p>The acceptance suite checks expiry at the boundary, wrong tenant/principal/actor, stale record versions, policy-epoch changes, revocation between a precheck and execution, changed payload with the same key, and concurrent workers using one approval. Separate connections exercise both orderings of the action/revocation race. A synthetic outbox failure checks that the record, approval and outcome roll back together. Later revocation does not erase a committed effect. Run the suite from the companion directory with <code>python3 -m unittest -v test_protocol</code>.</p>
+<p>Passing these tests is evidence about this model. It does not establish distributed revocation latency, production throughput, cryptographic security or resistance to a compromised database administrator.</p>
+<h2>Operate the control after launch</h2>
+<p>Track registered-agent coverage, overdue recertification, consequential calls passing enforcement, delegation completeness and authority granted but unused during a stated window. For revocation, measure time from the committed suspension request to the last observed admission at each enforcement point, including cache age and unreachable nodes.</p>
+<p>For outcomes, report unauthorized admissions, false denials, independently verified effects, unresolved-outcome age and recovery time. Denominators, windows and owners belong beside the metric. “Zero unauthorized actions” without the audited population says little.</p>
+<p>Treat policy releases as production changes: test representative histories, shadow new decisions, use controlled rollout and define stop authority. A policy author must not silently approve their own high-impact change or rewrite its evidence. Break-glass actions need a bounded purpose, separate authorization and review.</p>
+<p>In the first 30 days, inventory high-impact workflows and their owners. Over the next 30, separate workload identity from task authority and define the resource boundary. In the final 30, run the failure suite against one bounded workflow, exercise recovery and require independent reconstruction. These are planning phases, not a guarantee that every enterprise can finish in 90 days.</p>
+<p>A passport can make an action attributable and constrain its authority. It cannot establish that the model&#39;s recommendation is correct or the business policy is wise. Keep evaluation and postcondition verification independent.</p>
+<p><strong>For the next consequential agent action in your environment, which system can demonstrate atomic approval consumption—and which authority checks still depend on remote state?</strong></p>
+<p>For the command/recovery implementation view, see <a href="https://www.linkedin.com/pulse/how-build-agentic-crm-reference-architecture-aditya-singh-lollc/">How to Build an Agentic CRM</a>.</p>
+</article></main></body></html>
