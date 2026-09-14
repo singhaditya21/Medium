@@ -1,8 +1,8 @@
 # Medium → The Operating AI Ledger
 
-N01 is published and visibly verified in the existing newsletter. Remaining editions are preparation only; no remaining-edition schedule has been created. See the [N01 execution receipt](execution-N01.json) and [proposed continuation calendar](continuation-plan.md).
+N01 is published and visibly verified. N02–N04 are now scheduled and visibly verified in the same newsletter: September 21, September 28 and October 5, 2026, each at 14:00 IST. See the [N01 receipt](execution-N01.json), [N02–N04 scheduling receipt](execution-N02-N04.json) and [full Medium catalog audit](catalog-audit-2026-09-14.md).
 
-N02–N04 now have complete, source-reconciled previews, explicit editorial corrections and exact proposed weekly dates. See the [three-edition approval package](approval-N02-N04.md). They remain **unapproved and unscheduled**; N05–N14 remain queued. Original Medium stories and existing platform schedules are unchanged.
+The user approved the exact [three-edition package](approval-N02-N04.md). All 23 inline figures, captions, alt text and seven code examples were checked in native LinkedIn drafts; each schedule was confirmed in the native scheduled-articles list. N05–N13 remain queued; N14 is held until Medium publication is verified. Original Medium stories and existing platform schedules are unchanged. Approval previews and static validation files retain their historical pre-execution labels and hashes; the manifest and execution receipt are authoritative for current state.
 
 ## Verified scope — 14 September 2026
 
@@ -23,9 +23,9 @@ Read. Reflect. Rise. is a separate existing newsletter with 1,865 observed subsc
 | ID | Exact Medium source title | Preparation status |
 | --- | --- | --- |
 | N01 | [How to Build an Agentic CRM: A Reference Architecture](https://medium.com/ai-in-plain-english/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae) | Published in The Operating AI Ledger |
-| N02 | [Why Traditional CRM Will Die Without Agentic AI](https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4) | Reconciled and previewed; exact approval required |
-| N03 | [The Enterprise Agent Control Tower: A Production Architecture](https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438) | Reconciled and previewed; exact approval required |
-| N04 | [AI Agent Identity Is Not Enough](https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155) | Reconciled and previewed; exact approval required |
+| N02 | [Why Traditional CRM Will Die Without Agentic AI](https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4) | Scheduled September 21, 2026, 14:00 IST; verified |
+| N03 | [The Enterprise Agent Control Tower: A Production Architecture](https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438) | Scheduled September 28, 2026, 14:00 IST; verified |
+| N04 | [AI Agent Identity Is Not Enough](https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155) | Scheduled October 5, 2026, 14:00 IST; verified |
 | N05 | [A $2.4M Account Is Escalating. Should the AI Agent Act?](https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b) | Queued; live-body reconciliation required |
 | N06 | [Your AI Agent’s Memory Is a Database, Not a Prompt](https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef) | Queued; live-body reconciliation required |
 | N07 | [Every AI Agent Action Needs a Receipt](https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5) | Queued; live-body reconciliation required |
@@ -38,7 +38,7 @@ Read. Reflect. Rise. is a separate existing newsletter with 1,865 observed subsc
 
 N14 — Your AI Agent Should Not Have a Standing Role remains scheduled on Medium for 14 September 2026 at 2:00 PM IST. Hold its newsletter edition until Medium publication is verified.
 
-Recommended cadence: one edition weekly, matching the destination's current frequency. This is not a created or approved schedule. Do not send the archive as 13 simultaneous editions by default.
+N02–N04 follow the approved weekly dates, matching the destination's current frequency. Weekly slots for N05–N14 remain proposals. Do not send the archive as 13 simultaneous editions by default.
 
 ## N01 — approved and executed edition
 
@@ -68,4 +68,4 @@ The repurposing and clarity skills were applied to the short feed introduction o
 
 [LinkedIn's newsletter instructions](https://www.linkedin.com/help/linkedin/answer/a517925/create-a-newsletter-on-linkedin?lang=en) state that new editions can notify subscribers. The [FAQ](https://www.linkedin.com/help/linkedin/answer/a517914/newsletters-on-linkedin-faq?lang=en) explains channel preferences and non-redundant delivery, so email to every subscriber must not be promised. Guidance checked 14 September 2026.
 
-N01's exact publication was approved and executed. Remaining bodies, introductions, media and dates must be shown and approved before scheduling. Only visibly verified results may be marked published or scheduled. No private URLs or browser state are stored here.
+N01's publication and N02–N04's exact scheduling were approved and executed. N05 onward still require exact bodies, introductions, media and dates to be shown and approved before scheduling. Only visibly verified results may be marked published or scheduled. No private URLs or browser state are stored here.

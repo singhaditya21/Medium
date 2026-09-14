@@ -58,7 +58,7 @@ class NewsletterReviewTests(unittest.TestCase):
                     count += 1
             self.assertEqual(count, 3 if page.name.startswith("N03") else 1)
 
-    def test_publication_remains_unapproved(self):
+    def test_historical_preparation_snapshot_does_not_authorize_publication(self):
         config = json.loads((builder.PACKAGE / "approval-N02-N04.json").read_text())
         self.assertEqual(config["state"], "awaiting_exact_action_time_approval")
         self.assertFalse(config["settings"]["nativeSchedulingVerified"])
@@ -66,6 +66,34 @@ class NewsletterReviewTests(unittest.TestCase):
         self.assertEqual(config["N02"]["scheduleISO"], "2026-09-21T14:00:00+05:30")
         self.assertEqual(config["N03"]["scheduleISO"], "2026-09-28T14:00:00+05:30")
         self.assertEqual(config["N04"]["scheduleISO"], "2026-10-05T14:00:00+05:30")
+
+    def test_scheduled_receipt_matches_approved_previews_and_dates(self):
+        config = json.loads((builder.PACKAGE / "approval-N02-N04.json").read_text())
+        receipt = json.loads((builder.PACKAGE / "execution-N02-N04.json").read_text())
+        validation = json.loads((builder.PACKAGE / "validation-N02-N04.json").read_text())
+        manifest = json.loads((builder.PACKAGE / "manifest.json").read_text())
+        proofs = {item["id"]: item for item in validation["editions"]}
+        states = {item["id"]: item for item in manifest["editions"]}
+        self.assertEqual(receipt["status"], "scheduled_and_visibly_verified_not_yet_published")
+        self.assertEqual({item["id"] for item in receipt["editions"]}, {"N02", "N03", "N04"})
+        for item in receipt["editions"]:
+            eid = item["id"]
+            with self.subTest(edition=eid):
+                self.assertEqual(item["scheduledFor"], config[eid]["scheduleISO"])
+                self.assertEqual(item["approvedPreviewSHA256"], proofs[eid]["previewSHA256"])
+                self.assertTrue(item["scheduledListingVerified"])
+                self.assertIsNone(item["publicEditionUrl"])
+                self.assertEqual(states[eid]["state"], "scheduled_and_visibly_verified")
+                self.assertEqual(states[eid]["scheduledFor"], item["scheduledFor"])
+
+    def test_execution_receipt_contains_no_private_platform_urls(self):
+        raw = (builder.PACKAGE / "execution-N02-N04.json").read_text()
+        receipt = json.loads(raw)
+        self.assertFalse(receipt["secretsStored"])
+        self.assertFalse(receipt["privateUrlsStored"])
+        self.assertNotIn("linkedin.com/article/edit/", raw)
+        self.assertNotIn("medium.com/p/", raw)
+        self.assertNotIn("linkedin.com/messaging/", raw)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,9 @@
 {
   "schemaVersion": 1,
   "createdAt": "2026-09-14T06:04:36Z",
-  "status": "N01_published_N02_N04_prepared_awaiting_exact_approval_rest_queued",
+  "status": "N01_published_N02_N04_scheduled_and_verified_rest_queued",
+  "latestExecutionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
+  "latestCatalogAudit": "linkedin/newsletter-backfill-2026-09-14/catalog-audit-2026-09-14.md",
   "currentApprovalPackage": "linkedin/newsletter-backfill-2026-09-14/approval-N02-N04.md",
   "request": "Cross-publish each owned Medium article as a separate full-length LinkedIn newsletter edition.",
   "destination": {
@@ -16,8 +18,12 @@
     "publicationType": "newsletter_series_not_standalone_article"
   },
   "liveMediumInventory": {
+    "lastVerifiedAt": "2026-09-14T07:44:00Z",
+    "account": "https://medium.com/@singhaditya21_89007",
     "publishedStories": 13,
     "uniqueScheduledStories": 1,
+    "unlistedStories": 0,
+    "submissionEntriesAlreadyCountedAsPublished": 3,
     "notes": [
       "Drafts 1 and Scheduled both expose the same Standing Role story; do not double-count it.",
       "The 20-story September 12 editorial package remains local preparation and is not part of the 13 published Medium stories."
@@ -38,9 +44,9 @@
   },
   "proposedCadence": {
     "frequency": "weekly",
-    "status": "recommendation_not_approved",
-    "firstEdition": "Immediately after exact N01 approval and native editor verification",
-    "remainingEditions": "Dates and times must be shown for approval; no schedule has been created."
+    "status": "N02_N04_exact_dates_approved_and_scheduled_rest_proposal_only",
+    "firstEdition": "N01 published and verified on 14 September 2026",
+    "remainingEditions": "N02-N04 scheduled at their approved weekly dates; N05-N14 dates remain proposals requiring source QA and exact approval."
   },
   "gates": [
     "Recheck live Medium publication state.",
@@ -49,7 +55,7 @@
     "Inspect existing LinkedIn drafts and scheduled editions before creating a new draft.",
     "Show exact full edition, cover, feed introduction, destination, settings and timing for action-time confirmation.",
     "Verify native editor formatting, image persistence and supported settings before final publication; stop if a material approved element cannot be preserved.",
-    "Verify the public edition under the selected newsletter before recording success."
+    "For scheduling, verify the native success confirmation and scheduled-article row at the exact approved date/time; record scheduled, not published. Verify the public edition under the selected newsletter after release."
   ],
   "pilot": {
     "id": "N01",
@@ -107,9 +113,11 @@
       "mediumUrl": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/",
       "liveMediumState": "published",
-      "state": "prepared_awaiting_exact_action_time_approval",
+      "state": "scheduled_and_visibly_verified",
       "preview": "linkedin/newsletter-backfill-2026-09-14/N02-traditional-crm-agentic-ai.html",
       "proposedSchedule": "2026-09-21T14:00:00+05:30",
+      "scheduledFor": "2026-09-21T14:00:00+05:30",
+      "executionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
       "linkedInEditionUrl": null
     },
     {
@@ -119,9 +127,11 @@
       "mediumUrl": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/",
       "liveMediumState": "published",
-      "state": "prepared_awaiting_exact_action_time_approval",
+      "state": "scheduled_and_visibly_verified",
       "preview": "linkedin/newsletter-backfill-2026-09-14/N03-enterprise-agent-control-tower.html",
       "proposedSchedule": "2026-09-28T14:00:00+05:30",
+      "scheduledFor": "2026-09-28T14:00:00+05:30",
+      "executionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
       "linkedInEditionUrl": null
     },
     {
@@ -131,9 +141,11 @@
       "mediumUrl": "https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/",
       "liveMediumState": "published",
-      "state": "prepared_awaiting_exact_action_time_approval",
+      "state": "scheduled_and_visibly_verified",
       "preview": "linkedin/newsletter-backfill-2026-09-14/N04-ai-agent-identity-is-not-enough.html",
       "proposedSchedule": "2026-10-05T14:00:00+05:30",
+      "scheduledFor": "2026-10-05T14:00:00+05:30",
+      "executionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
       "linkedInEditionUrl": null
     },
     {

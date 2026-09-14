@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "action": "linkedin_newsletter_editions_scheduled",
+  "recordedAt": "2026-09-14T07:44:00Z",
+  "executionSurface": "user_initiated_signed_in_chrome",
+  "status": "scheduled_and_visibly_verified_not_yet_published",
+  "newsletter": {
+    "name": "The Operating AI Ledger",
+    "url": "https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/",
+    "nativeEditorSelectionVerified": true,
+    "eachAnnouncementPreviewIdentifiedNewsletter": true,
+    "existingWeeklyFrequencyUnchanged": true
+  },
+  "approval": {
+    "obtained": true,
+    "userInstruction": "Medium.com has lot many other articles also, what about them and schedule the above.",
+    "scope": "Previously displayed exact N02-N04 approval package, complete bodies and approved corrections, original first-figure covers, 23 inline figures, captions and alt text, exact announcement introductions, Anyone + Subscribers, comments On and exact weekly dates.",
+    "package": "linkedin/newsletter-backfill-2026-09-14/approval-N02-N04.json",
+    "historicalPreparationArtifactsPreserved": true,
+    "note": "The approval JSON, previews and static validation report retain their pre-execution state and fingerprints. This receipt and manifest supersede their status labels; no publication authority is embedded in a builder or test."
+  },
+  "duplicateCheck": {
+    "publishedArticlesReviewedBeforeExecution": 9,
+    "existingDraftsReviewedBeforeExecution": 3,
+    "scheduledArticlesBeforeExecution": 0,
+    "exactN02N04DuplicateFound": false,
+    "relatedBodyComparison": "Existing Evolution of CRM draft and Passport article were reviewed as distinct bodies in the source-reconciliation audit.",
+    "scheduledArticlesAfterExecution": 3,
+    "draftsAfterExecution": 3,
+    "originalDraftTitlesAndModifiedDatesUnchanged": true,
+    "scopeLimit": "Native article manager and selected newsletter. Ordinary feed-post schedules were not re-audited in this execution; no ordinary feed post or its schedule was changed."
+  },
+  "settings": {
+    "publicationType": "newsletter_edition_not_standalone_article",
+    "nativeAudience": "Anyone + Subscribers",
+    "nativeCommentControl": "On",
+    "brandPartnership": false,
+    "timeZoneDisplayed": "India Standard Time, based on your location",
+    "mentions": [],
+    "hashtags": [],
+    "notifications": "Standard LinkedIn newsletter behavior; actual subscriber inbox delivery is not verified or guaranteed."
+  },
+  "editions": [
+    {
+      "id": "N02",
+      "title": "Why Traditional CRM Will Die Without Agentic AI",
+      "scheduledFor": "2026-09-21T14:00:00+05:30",
+      "nativeScheduledRow": "Posting Mon, Sep 21 at 2:00 PM",
+      "scheduleSuccessDialogVerified": true,
+      "scheduledListingVerified": true,
+      "approvedPreviewSHA256": "95c1d1abbdd4c57f8de1bb3aef6f1588ecb6d5a291c3f9e91f71b713a08d0839",
+      "inlineFiguresVerified": 7,
+      "primaryHeadingsVerified": 29,
+      "blockquotesVerified": 2,
+      "bodySectionsAndSourceLinksVerified": true,
+      "captionsAndAltTextVerified": true,
+      "reloadPersistenceVerified": true,
+      "exactAnnouncementVerified": true,
+      "publicEditionUrl": null
+    },
+    {
+      "id": "N03",
+      "title": "The Enterprise Agent Control Tower: A Production Architecture",
+      "scheduledFor": "2026-09-28T14:00:00+05:30",
+      "nativeScheduledRow": "Posting Mon, Sep 28 at 2:00 PM",
+      "scheduleSuccessDialogVerified": true,
+      "scheduledListingVerified": true,
+      "approvedPreviewSHA256": "5f9cca7b5d8f00b8eb855038c736df60d928e04e819ce8b0d91ea45c204a9412",
+      "inlineFiguresVerified": 10,
+      "primaryHeadingsVerified": 16,
+      "secondaryHeadingsVerified": 7,
+      "codeBlocksExactIncludingWhitespace": 6,
+      "approvedTextBlocksCompared": 141,
+      "bodySectionsAndSourceLinksVerified": true,
+      "captionsAndAltTextVerified": true,
+      "reloadPersistenceVerified": true,
+      "exactAnnouncementVerified": true,
+      "publicEditionUrl": null
+    },
+    {
+      "id": "N04",
+      "title": "AI Agent Identity Is Not Enough",
+      "scheduledFor": "2026-10-05T14:00:00+05:30",
+      "nativeScheduledRow": "Posting Mon, Oct 5 at 2:00 PM",
+      "scheduleSuccessDialogVerified": true,
+      "scheduledListingVerified": true,
+      "approvedPreviewSHA256": "4218994ef1155bfb2bb66b190847c2c7ceb89894401acf0741fb7c8cbc8303ac",
+      "inlineFiguresVerified": 6,
+      "chartPanelsWithinFivePlates": 20,
+      "codeBlocksExactIncludingWhitespace": 1,
+      "approvedTextBlocksCompared": 123,
+      "bodySectionsAndSourceLinksVerified": true,
+      "captionsAndAltTextVerified": true,
+      "reloadPersistenceVerified": true,
+      "finalBodyComparisonMissingBlocks": 0,
+      "exactAnnouncementVerified": true,
+      "optionalCoverCredit": "Blank; full approved figure caption and AI-assistance credit remain intact on the inline figure. Native optional cover-credit field truncated the long caption, so the truncated extra copy was removed.",
+      "publicEditionUrl": null
+    }
+  ],
+  "editorQA": "Native paste and asynchronous image/cover updates were inspected. N03 insertion races and an N04 heading/caption focus error were repaired inside unscheduled drafts. Final text, captions, alt text, source links, code and schedule previews were checked before the corresponding Schedule action.",
+  "preserved": {
+    "mediumStoriesAndSchedules": true,
+    "existingLinkedInPostsAndSchedules": true,
+    "originalLinkedInDrafts": true,
+    "otherNewsletter": true
+  },
+  "secretsStored": false,
+  "privateUrlsStored": false,
+  "githubActionsPerformedLinkedInAction": false,
+  "publicReleaseVerificationRemaining": true
+}

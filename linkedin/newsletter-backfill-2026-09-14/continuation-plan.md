@@ -1,8 +1,8 @@
-# Newsletter continuation — proposal, not a live schedule
+# Newsletter continuation — confirmed first batch, remaining proposals
 
-Prepared 14 September 2026. N01 is published; all dates below are proposed placeholders pending source QA, live duplicate/collision checks and exact action-time approval. No remaining story has been scheduled by this plan.
+Updated 14 September 2026. N01 is published. N02–N04 are now scheduled and visibly verified at the dates below. All other dates remain proposed placeholders pending source QA, duplicate/collision checks and exact action-time approval.
 
-Continuation update: N02–N04 now have complete source-reconciled previews and [one exact approval package](approval-N02-N04.md). The proposed dates below are unchanged. N04's comparison with the existing Passport article is complete: related subject, different body/use cases. Native scheduling and final collision checks remain pending approval.
+Continuation update: the user approved the [exact N02–N04 package](approval-N02-N04.md), and its unchanged dates were executed through signed-in Chrome. See the [verified scheduling receipt](execution-N02-N04.json). N04's comparison with the existing Passport article is complete: related subject, different body/use cases. Ordinary feed-post schedules were not re-audited or changed in this execution.
 
 ## Correct publication objects
 
@@ -23,11 +23,11 @@ These dates are editorial proposals, not optimal-time claims. Ordinary scheduled
 
 Each row is a full newsletter edition, not a short link post or new newsletter. N04's body-level comparison is complete; N09 still needs comparison with existing coordination articles. N14 remains held until Medium publication is visibly confirmed.
 
-| ID | Edition | Proposed LinkedIn date, 14:00 IST |
+| ID | Edition | LinkedIn date, 14:00 IST (N02–N04 confirmed; others proposed) |
 | --- | --- | --- |
-| N02 | Why Traditional CRM Will Die Without Agentic AI | 2026-09-21 |
-| N03 | The Enterprise Agent Control Tower: A Production Architecture | 2026-09-28 |
-| N04 | AI Agent Identity Is Not Enough | 2026-10-05 |
+| N02 | Why Traditional CRM Will Die Without Agentic AI | 2026-09-21 — scheduled, verified |
+| N03 | The Enterprise Agent Control Tower: A Production Architecture | 2026-09-28 — scheduled, verified |
+| N04 | AI Agent Identity Is Not Enough | 2026-10-05 — scheduled, verified |
 | N05 | A $2.4M Account Is Escalating. Should the AI Agent Act? | 2026-10-12 |
 | N06 | Your AI Agent’s Memory Is a Database, Not a Prompt | 2026-10-19 |
 | N07 | Every AI Agent Action Needs a Receipt | 2026-10-26 |
@@ -94,4 +94,4 @@ Track separately: newsletter series subscribers; edition article views and avail
 
 ## Next approval batch
 
-Prepare N02–N04 full native-ready previews first, complete the N04 body-overlap check, and show their exact dates/settings. In parallel editorial planning, prioritize M01–M03 for the LinkedIn-first lane. Neither batch is publish/schedule-ready yet. The immediate decision is whether to retain one weekly edition or approve the proposed two-lane cadence; exact content approvals still follow.
+N02–N04 are complete. Prepare N05–N07 full native-ready previews next, reconcile live Medium bodies, check duplicate/overlap and the complete live calendar, and show exact dates/settings for approval. Prioritize M01–M03 if the user chooses a LinkedIn-first new-story lane. Neither future batch is publish/schedule-ready yet. A second weekly lane remains an unapproved cadence change; exact content approvals still follow.
