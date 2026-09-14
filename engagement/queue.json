@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-12T15:19:38Z",
+  "updatedAt": "2026-09-14T05:24:10Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3607,6 +3607,57 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503808170163724289/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287504507821468827648%2Curn%3Ali%3AugcPost%3A7503808170163724289%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287504558735579828224%2Curn%3Ali%3AugcPost%3A7503808170163724289%29",
       "receiptOperationId": "20260912151938-reply-posted-2026-09-12-linkedin-reply-n3-nitin-drift-triage-clarification",
       "postedAt": "2026-09-12T15:19:38Z"
+    },
+    {
+      "id": "2026-09-14-linkedin-comment-c1-sina-client-context",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/drsinawulfmeyer0710_%F0%9D%97%A0%F0%9D%98%86-%F0%9D%97%B0%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B2%F0%9D%97%B2%F0%9D%97%BF-%F0%9D%97%B5%F0%9D%97%AE%F0%9D%98%80-%F0%9D%97%BC%F0%9D%97%BB%F0%9D%97%B2-%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%BF%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%B4%F0%9D%97%B5%F0%9D%97%B9%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2-share-7500603235234168832-gH6T/",
+      "title": "Data to trust: Single Client View and banking agents",
+      "author": "Dr. Sina Wulfmeyer",
+      "reason": "Enterprise-AI data governance fit; adds an entitlement-change test and a traceability metric to the author's three-business-line example.",
+      "evidence": "Signed-in Chrome review on 2026-09-14: author describes unifying client data across Private Banking, Asset Management and Investment Banking, then building governance, security and audit trails for banking agents. Visible age 6m; expanded comment area showed no existing comments. No author or target match in queue, watchlist or public execution receipts. Proposed metrics are design suggestions, not observed results. Score components relevance=1.00, discussionQuality=0.65, uniqueContribution=0.90, recency=1.00.",
+      "draftResponse": "Dr. Sina Wulfmeyer, the Single Client View example makes me separate identity resolution from permission to use the resolved data. Across those three business lines, I'd want every agent answer traceable to a source version and the access decision that allowed its use. One useful metric: answers with both records / all answers. How do you handle a source entitlement changing after client data has entered an agent's context?",
+      "priorityScore": 0.8925,
+      "intendedMentions": [
+        "Dr. Sina Wulfmeyer"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-14-linkedin-comment-c2-swapnil-release-gates",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/ca-swapnil-vikas-rege-09b17737_sapbusinessai-agenticai-digitaltransformation-share-7494746572493234177-VWdg/",
+      "title": "AI-native SAP development: delivery metrics and release gates",
+      "author": "CA Swapnil Vikas Rege",
+      "reason": "Connects AI-assisted development to end-to-end delivery and authorization testing; does not endorse the source's unverified forecasts or productivity claims.",
+      "evidence": "Signed-in Chrome review on 2026-09-14: post discusses smaller AI-assisted SAP teams, RAP extensions and governance. Visible age 6m; expanded comment area showed no existing comments. No author or target match in queue, watchlist or public execution receipts. Proposed metrics and denied-operation test are suggestions, not claims about SAP product behavior. Score components relevance=0.90, discussionQuality=0.60, uniqueContribution=0.90, recency=1.00.",
+      "draftResponse": "CA Swapnil Vikas Rege, for an AI-generated RAP extension, I'd measure request-to-production lead time alongside reviewer minutes per accepted change and change failure rate. Faster generation could simply move the queue into security review or testing. A concrete test is whether an operation denied through the normal application remains denied when invoked by the agent. Which of those checks would you make a release gate before changing the team model?",
+      "priorityScore": 0.845,
+      "intendedMentions": [
+        "CA Swapnil Vikas Rege"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-14-linkedin-comment-c3-vanessa-stop-evidence",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/vanessagalhardo001_artificialintelligence-aigovernance-aiagents-share-7504150514134130688-w939/",
+      "title": "Meaningful human oversight: demonstrate intervention and stopping",
+      "author": "Vanessa Galhardo-Galhetas",
+      "reason": "Adds a measurable intervention-time constraint and stop drill to the author's explicit concern about human time, information and authority.",
+      "evidence": "Signed-in Chrome review on 2026-09-14: post asks about agent autonomy, authority, escalation, containment and accountability, and says human oversight requires time, information and authority. Visible age 6m; expanded comment area showed no existing comments. No author or target match in queue, watchlist or public execution receipts. Does not repeat the post's news claims or risk probabilities. Score components relevance=1.00, discussionQuality=0.70, uniqueContribution=0.95, recency=1.00.",
+      "draftResponse": "Vanessa Galhardo-Galhetas, your point about giving the human time and authority suggests a testable control: detection time + decision time + stop-propagation time must fit inside the window before an irreversible action. I'd measure the end-to-end p95 in a drill and count actions that still complete after the stop request. If that window is too short, approval needs to happen before execution. Would you ask for that demonstrated stop in the board's evidence pack?",
+      "priorityScore": 0.915,
+      "intendedMentions": [
+        "Vanessa Galhardo-Galhetas"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
