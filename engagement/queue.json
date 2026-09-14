@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-14T08:36:19Z",
+  "updatedAt": "2026-09-14T09:23:18Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3719,7 +3719,10 @@
       "draftResponse": "To turn the architecture into an acceptance test, I would inject two copies of the same CRM event and then drop the response after the first committed write. The retry should resolve the recorded outcome, not create a second business effect; a changed record version should return for reassessment. I would measure duplicate effects per 1,000 attempted actions and the age of unresolved outcomes separately from API success rate. That test would come before any expansion of the agent's write scope.",
       "priorityScore": 0.9025,
       "intendedMentions": [],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505152286273253376/",
+      "receiptOperationId": "20260914091243-author-comment-posted-2026-09-14-linkedin-author-comment-newsletter-crm-lost-response-test",
+      "postedAt": "2026-09-14T09:12:43Z"
     },
     {
       "id": "2026-09-14-linkedin-comment-karthikeyan-semantic-definition-adjudication",
@@ -3736,7 +3739,10 @@
       "intendedMentions": [
         "Karthikeyan Palanisamy"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/pulse/how-kcs-creates-shared-business-vocabulary-semantic-palanisamy-d06be/",
+      "receiptOperationId": "20260914092318-comment-posted-2026-09-14-linkedin-comment-karthikeyan-semantic-definition-adjudication",
+      "postedAt": "2026-09-14T09:23:18Z"
     }
   ]
 }

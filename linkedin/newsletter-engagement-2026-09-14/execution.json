@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "status": "executed_with_mention_exception",
+  "recordedAt": "2026-09-14T09:29:11Z",
+  "platform": "LinkedIn",
+  "account": "Aditya Singh",
+  "executionSurface": "user_initiated_signed_in_chrome_ui",
+  "approvalArtifact": "approval.json",
+  "userConfirmation": {
+    "obtained": true,
+    "scope": "The user approved the four proposed actions and relevant tagging, then instructed Continue. No additional public actions, article-body edits or old pending schedule changes were authorized.",
+    "exactApprovalTimestampKnown": false
+  },
+  "actions": [
+    {
+      "id": "NL-C1",
+      "status": "posted_verified",
+      "receipt": "../executions/20260914091243-author-comment-posted-2026-09-14-linkedin-author-comment-newsletter-crm-lost-response-test.json",
+      "publicTargetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505152286273253376/",
+      "verification": "Exact 499-character comment visible under Aditya Singh as Author and persisted after reload. No reaction or mention added. Parent announcement URL, not a direct comment permalink."
+    },
+    {
+      "id": "NL-C2",
+      "status": "text_posted_verified_mention_unresolved",
+      "receipt": "../executions/20260914092318-comment-posted-2026-09-14-linkedin-comment-karthikeyan-semantic-definition-adjudication.json",
+      "publicTargetUrl": "https://www.linkedin.com/pulse/how-kcs-creates-shared-business-vocabulary-semantic-palanisamy-d06be/",
+      "verification": "Exact 551-character text visible once under Aditya Singh, persisted after reload, and thread count increased from two to three. Correct native author suggestion was selected before submission, but the published name was plain text. One in-place correction reselected the same matching author without altering wording; no clickable profile link persisted. No duplicate comment or extra engagement action.",
+      "intendedMentionProfile": "https://www.linkedin.com/in/knowledge-manager-karthik/",
+      "nativeMentionVerified": false,
+      "fallbackApproved": false,
+      "nextAction": "Report the exception. Do not claim tagged completion or silently treat plain text as an approved fallback. No further public correction/removal without resolving scope with the user."
+    },
+    {
+      "id": "NL-P1",
+      "status": "scheduled_verified",
+      "sourceUrl": "https://www.linkedin.com/pulse/3-minute-decision-took-3-weeks-ship-aditya-singh-kmejc/",
+      "publicPostUrl": null,
+      "scheduledAt": "2026-09-15T08:45:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "audience": "Anyone",
+      "comments": "Anyone",
+      "mentions": [],
+      "hashtags": [],
+      "approvedTextRef": "approval.json#NL-P1",
+      "media": "Native preview for The 3-Minute Decision That Took 3 Weeks to Ship using the existing cover; no upload",
+      "newsletterEmail": "Not applicable: ordinary feed post, not an edition or email resend",
+      "verification": "Exact text, Anyone audience, Anyone comments, matching preview title/cover and Tue Sep 15 8:45 AM shown before final Schedule click. LinkedIn displayed Post scheduled. Saved queue subsequently showed the new post first with Posting Tue, Sep 15, 2026 at 8:45 AM, full approved wording (URL displayed as native lnkd.in shortening) and correct article card. Native aggregate scheduling count increased from 14 to 15; this is not a newsletter-edition count. Earliest pre-existing item remained Sep 16 8:45 AM."
+    },
+    {
+      "id": "NL-S1",
+      "status": "metadata_saved_verified",
+      "publicTargetUrl": "https://www.linkedin.com/newsletters/read-reflect-rise-7309472382266613760/",
+      "frequency": "Monthly",
+      "description": "Operating decisions behind enterprise AI: approval bottlenecks, accountability and measurable business value.",
+      "verification": "Saved native newsletter settings and reloaded the public series page. Monthly and exact 109-character description persisted. Title, logo, 1,867 subscribers and seven editions unchanged at verification. No edition body edited or published, no email resent, no automation created."
+    }
+  ],
+  "preserved": [
+    "All existing LinkedIn feed and newsletter schedules",
+    "All existing edition bodies, titles, covers and URLs",
+    "The Operating AI Ledger newsletter settings",
+    "All Medium settings and schedules",
+    "Separate pending N05–N07 publication and T1/T2 timing proposals"
+  ],
+  "secretsStored": false,
+  "privateContentStored": false,
+  "openAiApiUsed": false,
+  "githubActionsPerformedPublicActions": false,
+  "qualityReview": "article-quality-review.md"
+}

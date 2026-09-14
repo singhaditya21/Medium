@@ -15,3 +15,11 @@
 - No skill, automation or platform schedule file was changed. Exact N05–N07 and T1/T2 approvals remain pending separately.
 
 Before any approved action: refresh the exact target, recheck duplicates and live calendar, resolve the intended native author tag, verify the article card and settings, then verify the rendered result. A static pass does not establish that any public action succeeded.
+
+## Subsequent approved execution
+
+See [execution.json](execution.json), which supersedes the preparation-only status above. Two exact comment texts were visibly verified. NL-C2 is not fully complete: its intended native mention did not persist after selection and one in-place correction. The receipt and relationship watchlist explicitly retain this exception; plain-text fallback is not represented as approved.
+
+The new RRR feed post was confirmed by LinkedIn's Post scheduled alert and saved queue entry for September 15, 2026 at 08:45 IST. Exact wording, matching existing cover preview, Anyone audience and Anyone comments were checked before scheduling. Saved queue wording matches except LinkedIn's normal native URL shortening. Existing schedules were not edited; native total increased from 14 to 15 objects.
+
+RRR Monthly frequency and exact description were saved and verified after reload. Article bodies and Medium state were not changed. The focused four-article quality review proposes corrections and acceptance tests, not completed rewrites or causal engagement findings.

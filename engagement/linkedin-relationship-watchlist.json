@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-14T05:56:12Z",
+  "updatedAt": "2026-09-14T09:23:18Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,15 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Karthikeyan Palanisamy",
+      "profileUrl": "https://www.linkedin.com/in/knowledge-manager-karthik/",
+      "themes": ["KCS", "semantic definitions", "business ownership and adjudication"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-14",
+      "nextReviewOn": "2026-09-21",
+      "nextActionRule": "NL-C2 exact text is visibly posted once on the KCS semantic-vocabulary article. LinkedIn did not retain the native author mention after selection and one in-place correction; the mention requirement is unresolved, not an approved plain-text fallback. Do not duplicate the comment or send a follow-up, DM, reaction, follow or connection. Wait for substantive inbound and report the mention exception to the user."
+    },
     {
       "name": "Sara Joseph",
       "profileUrl": "https://www.linkedin.com/in/sara-joseph-164743410/",

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260914091243-author-comment-posted-2026-09-14-linkedin-author-comment-newsletter-crm-lost-response-test",
+  "action": "author_comment_posted",
+  "recordedAt": "2026-09-14T09:12:43Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-14T09:12:43Z",
+    "scope": "User approved NL-C1, NL-C2, NL-P1 and NL-S1 with Go ahead with the actions and then Continue. NL-C1 exact author comment only; no reaction or extra tag."
+  },
+  "result": {
+    "status": "author_comment_posted",
+    "candidateId": "2026-09-14-linkedin-author-comment-newsletter-crm-lost-response-test",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505152286273253376/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505152286273253376/",
+    "publishedTextSha256": "33d5f6902b06a23d2fc07c6abdefef5bdee352044e996e8d47756fdb13480828",
+    "verifiedAt": "2026-09-14T09:12:43Z",
+    "verification": "Exact approved NL-C1 text rendered under Aditya Singh Author and persisted after page reload before interruption and again after resume. One comment shown, age 16m at latest verification. Public URL is the announcement containing the comment, not a direct comment permalink. No duplicate submission. Recording timestamp is later than actual posting."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

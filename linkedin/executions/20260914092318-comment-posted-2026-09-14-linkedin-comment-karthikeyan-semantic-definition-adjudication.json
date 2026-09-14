@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260914092318-comment-posted-2026-09-14-linkedin-comment-karthikeyan-semantic-definition-adjudication",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-14T09:23:18Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-14T09:23:18Z",
+    "scope": "User approved NL-C2 exact text and native author mention in this task and then instructed Continue. Confirmation timestamp is the receipt recording proxy, not the original approval instant."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-14-linkedin-comment-karthikeyan-semantic-definition-adjudication",
+    "targetUrl": "https://www.linkedin.com/pulse/how-kcs-creates-shared-business-vocabulary-semantic-palanisamy-d06be/",
+    "publicUrl": "https://www.linkedin.com/pulse/how-kcs-creates-shared-business-vocabulary-semantic-palanisamy-d06be/",
+    "publishedTextSha256": "d3451d5f61d0954eb8e6cdb2e57f45f9035e46f9431c7f58cb791087df40ceaa",
+    "verifiedAt": "2026-09-14T09:23:18Z",
+    "verification": "Exact approved text visibly posted once under Aditya Singh; thread increased from two to three comments and persisted after reload. Native matching author suggestion was selected, but the published name rendered as plain text. One in-place edit reselected the matching native author; the saved rendering still had no clickable author link. Text posting verified; native mention requirement remains unresolved and no fallback is claimed as approved. Public URL is the parent article, not a direct comment permalink. No reaction, follow, DM or duplicate comment."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,6 +1,6 @@
 # Both-newsletter engagement activation — 14 September 2026
 
-Preparation is complete; **no public action, schedule change or automation change has been executed**. The exact batch is in [approval.json](approval.json). Native observations and their limitations are in [baseline.json](baseline.json).
+The user subsequently approved this batch. [Execution record](execution.json): both comment texts are posted, NL-P1 is scheduled for September 15 at 08:45 IST, and NL-S1 metadata is saved. **NL-C2's clickable author mention did not persist and remains unresolved.** No article-body edits or automation changes were made. The original exact preparation batch remains in [approval.json](approval.json); its pending status is historical, superseded by the execution record. Native baseline observations and limitations are in [baseline.json](baseline.json). Article-quality recommendations are in [article-quality-review.md](article-quality-review.md).
 
 ## Reader evidence
 
@@ -73,4 +73,4 @@ N05–N07 remain separate publication approvals. T1/T2 remain separate timing-on
 
 The LinkedIn planning, thread-monitor, engagement-analysis and repurposing skills informed the distinct audience roles, duplicate checks and source-based drafts. Their upstream API, bulk-engagement, unsupported algorithm and invented-experience instructions were not used. The local execution contract controls all actions.
 
-No claim is made that the active Codex model was changed. No OpenAI API was used. No private messages, private URLs, subscriber lists, credentials or browser state were saved. Only public-target preparation and aggregate observations are recorded here.
+No claim is made that the active Codex model was changed. No OpenAI API was used. No private messages, private URLs, subscriber lists, credentials or browser state were saved. Only public-target preparation, verified action outcomes and aggregate observations are recorded here.
