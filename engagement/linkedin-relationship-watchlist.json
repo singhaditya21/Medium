@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-14T05:34:17Z",
+  "updatedAt": "2026-09-14T05:40:46Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,15 @@
     ]
   },
   "relationships": [
+    {
+      "name": "CA Swapnil Vikas Rege",
+      "profileUrl": "https://www.linkedin.com/in/ca-swapnil-vikas-rege-09b17737/",
+      "themes": ["AI-assisted SAP delivery", "release gates", "authorization testing"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-14",
+      "nextReviewOn": "2026-09-21",
+      "nextActionRule": "C2 exact approved release-gate comment posted September 14, comment 7505138123031359488. The user separately approved using the author's name as plain text because the matching native mention was unavailable. Exact wording, Aditya Singh identity and persistence at the direct public comment link were verified. Wait for substantive inbound; no repeated test proposal, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
     {
       "name": "Dr. Sina Wulfmeyer",
       "profileUrl": "https://www.linkedin.com/in/drsinawulfmeyer0710/",

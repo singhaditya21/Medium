@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260914054045-comment-posted-2026-09-14-linkedin-comment-c2-swapnil-release-gates",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-14T05:40:45Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-14T05:40:45Z",
+    "scope": "User explicitly said Go ahead with C2 in response to the request to post the same approved wording using the author's name as plain text instead of a native tag. No reactions, DMs, follows, connections, media or scheduling changes authorized."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-14-linkedin-comment-c2-swapnil-release-gates",
+    "targetUrl": "https://www.linkedin.com/posts/ca-swapnil-vikas-rege-09b17737_sapbusinessai-agenticai-digitaltransformation-share-7494746572493234177-VWdg/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505132003218915328/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505138123031359488%2Curn%3Ali%3Aactivity%3A7505132003218915328%29",
+    "publishedTextSha256": "34d3e6e3a2696a3469bab459bb360c29007f721de7bfa627dd64d30e05cff076",
+    "verifiedAt": "2026-09-14T05:40:45Z",
+    "verification": "Refreshed source and expanded comment area before execution; approved context unchanged and no duplicate visible. Exact approved text posted as Aditya Singh, timestamp now, comment 7505138123031359488. Author name rendered as plain text with no native mention, as explicitly approved. Copied native comment link https://lnkd.in/p/gyT9Fut5 and reopened it; exact comment text and user identity persisted at the resolved public link."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,6 +1,6 @@
 # LinkedIn comment review — 14 September 2026
 
-Status: C1 and C3 posted and verified after exact approval; C2 remains unposted because the matching native author mention was unavailable.
+Status: C1, C2 and C3 posted and verified after exact approval. C1 and C3 have native author tags; C2 uses the author's name as plain text following separate approval.
 
 ## Coverage
 
@@ -36,7 +36,7 @@ The user replied "Approved" to the displayed exact C1–C3 batch, including each
 
 - C1: [verified comment](https://lnkd.in/p/gpsziJ8G), comment ID `7505135691211694080`. Exact wording, Aditya Singh identity, current timestamp and native Dr. Sina Wulfmeyer profile link verified. The native copied link was reopened to verify persistence.
 - C3: [verified comment](https://lnkd.in/p/gqXK42Z2), comment ID `7505135083687862272`. Exact wording, Aditya Singh identity, current timestamp and native Vanessa Galhardo-Galhetas profile link verified. The native copied link was reopened to verify persistence.
-- C2: not posted. Full-name and shorter author-name mention searches did not return the matching author. Different people were not selected. The partial unsent mention was cleared and the composer was visibly empty. Request approval to post the already approved wording with the author's name in plain text instead of a native tag; do not silently remove the tagging requirement.
+- C2: initially held because full-name and shorter author-name mention searches did not return the matching author. Different people were not selected and the partial unsent mention was cleared. The user then explicitly approved the same wording with the author's name as plain text. [Verified comment](https://lnkd.in/p/gyT9Fut5), comment ID `7505138123031359488`: source refreshed, no duplicate visible, exact text and Aditya Singh identity verified. The native copied comment link was reopened to confirm persistence. No native author tag was added or claimed.
 
 Receipts for C1 and C3 use the existing engagement tracking issue 36. Fresh GitHub issue metadata lookup was unavailable during execution; no issue mutations were attempted. This did not affect the visible LinkedIn verification or local receipt validation.
 

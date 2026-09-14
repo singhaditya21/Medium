@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-14T05:31:15Z",
+  "updatedAt": "2026-09-14T05:40:45Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3640,10 +3640,11 @@
       "evidence": "Signed-in Chrome review on 2026-09-14: post discusses smaller AI-assisted SAP teams, RAP extensions and governance. Visible age 6m; expanded comment area showed no existing comments. No author or target match in queue, watchlist or public execution receipts. Proposed metrics and denied-operation test are suggestions, not claims about SAP product behavior. Score components relevance=0.90, discussionQuality=0.60, uniqueContribution=0.90, recency=1.00.",
       "draftResponse": "CA Swapnil Vikas Rege, for an AI-generated RAP extension, I'd measure request-to-production lead time alongside reviewer minutes per accepted change and change failure rate. Faster generation could simply move the queue into security review or testing. A concrete test is whether an operation denied through the normal application remains denied when invoked by the agent. Which of those checks would you make a release gate before changing the team model?",
       "priorityScore": 0.845,
-      "intendedMentions": [
-        "CA Swapnil Vikas Rege"
-      ],
-      "state": "ready_for_confirmation"
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505132003218915328/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505138123031359488%2Curn%3Ali%3Aactivity%3A7505132003218915328%29",
+      "receiptOperationId": "20260914054045-comment-posted-2026-09-14-linkedin-comment-c2-swapnil-release-gates",
+      "postedAt": "2026-09-14T05:40:45Z"
     },
     {
       "id": "2026-09-14-linkedin-comment-c3-vanessa-stop-evidence",
