@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "platform": "linkedin",
+  "recordedAt": "2026-09-14T04:42:53Z",
+  "collectionDateIST": "2026-09-14",
+  "captureMethod": "Read-only signed-in Chrome; existing tab reused. Metrics are displayed cumulative post totals at collection, not exact-window historical totals.",
+  "trigger": "due_measurement_checkpoint",
+  "heartbeatTriggeredAt": "2026-09-13T16:38:35.838Z",
+  "posts": [
+    {
+      "id": "S01",
+      "title": "The Enterprise AI Control Plane - Part 3/5",
+      "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7502332472563773440/",
+      "scheduledAt": "2026-09-07T08:45:00+05:30",
+      "checkpointHours": 168,
+      "checkpointDueAt": "2026-09-14T08:45:00+05:30",
+      "collectionTiming": "Collected after the seven-day checkpoint; approximately 169 hours after the verified schedule.",
+      "metrics": {
+        "impressions": 165,
+        "membersReached": 113,
+        "inNetworkPercent": 52,
+        "outOfNetworkPercent": 48,
+        "videoViews": 54,
+        "watchTimeSeconds": 461,
+        "displayedAverageWatchTimeSeconds": 8,
+        "profileViewersFromPost": 0,
+        "followersGainedFromPost": 0,
+        "socialEngagements": 3,
+        "reactions": 2,
+        "comments": 0,
+        "reposts": 0,
+        "saves": 1,
+        "sendsOnLinkedIn": 0
+      },
+      "sourceMediaDurationSeconds": 36,
+      "nextCheckpointAt": "2026-10-05T08:45:00+05:30",
+      "nextCheckpointHours": 672
+    },
+    {
+      "id": "S03",
+      "title": "The Enterprise AI Control Plane - Part 4/5",
+      "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7504014621004038144/",
+      "scheduledAt": "2026-09-11T08:45:00+05:30",
+      "checkpointHours": 48,
+      "checkpointDueAt": "2026-09-13T08:45:00+05:30",
+      "collectionTiming": "Late 48-hour review collected approximately 73 hours after the verified schedule; do not label these exact 48-hour totals.",
+      "metrics": {
+        "impressions": 94,
+        "membersReached": 70,
+        "inNetworkPercent": 38,
+        "outOfNetworkPercent": 62,
+        "videoViews": 32,
+        "watchTimeSeconds": 246,
+        "displayedAverageWatchTimeSeconds": 7,
+        "profileViewersFromPost": 0,
+        "followersGainedFromPost": 0,
+        "socialEngagements": 1,
+        "reactions": 1,
+        "comments": 0,
+        "reposts": 0,
+        "saves": 0,
+        "sendsOnLinkedIn": 0
+      },
+      "sourceMediaDurationSeconds": 36,
+      "nextCheckpointAt": "2026-09-18T08:45:00+05:30",
+      "nextCheckpointHours": 168
+    }
+  ],
+  "interpretation": [
+    "Both posts have observed out-of-network exposure; zero distribution is not supported.",
+    "Average watch time is short relative to the 36-second source media, but rounded averages are not completion rates or retention curves.",
+    "No matched-window multi-post comparison or causal claim about animation is supported by this snapshot.",
+    "No rewrite, media replacement, boost or schedule change is recommended for execution in this cycle; continue measurement."
+  ],
+  "privacy": {
+    "privateMessagesStored": false,
+    "privateUrlsStored": false,
+    "credentialsOrBrowserStateStored": false
+  },
+  "publicActionsExecuted": 0
+}

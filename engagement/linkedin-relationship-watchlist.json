@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-12T15:19:38Z",
+  "updatedAt": "2026-09-14T04:42:53Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -181,10 +181,10 @@
       "name": "Kumar Gaurav",
       "profileUrl": "https://www.linkedin.com/in/kumargaurav7/",
       "themes": ["AI infrastructure", "cloud", "FinOps"],
-      "state": "awaiting_inbound_reply",
+      "state": "inbound_reply_awaiting_confirmation",
       "lastMeaningfulTouch": "2026-09-12",
-      "nextReviewOn": "2026-09-19",
-      "nextActionRule": "Exact approved evening D3 sent September 12 at 19:50 IST and verified again after inbox refresh; privacy-safe receipt 20260912142230-message-posted-in-kumargaurav7. Private wording is not retained here. Wait for substantive inbound; do not disclose employer infrastructure or purchasing context or send additional communication without separate exact approval."
+      "nextReviewOn": "2026-09-14",
+      "nextActionRule": "Fresh inbound reviewed September 14; one exact DM proposal is in the chat only and awaits new action-time approval. Private wording and conversation links are not retained here. Recheck current context and duplicates before any approved send; preserve employer infrastructure and procurement confidentiality. No reaction, follow, connection, meeting or other communication is authorized."
     },
     {
       "name": "Shabina Abba Noormohamed",
