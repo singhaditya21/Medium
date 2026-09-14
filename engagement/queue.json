@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-14T05:40:45Z",
+  "updatedAt": "2026-09-14T05:47:15Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3665,6 +3665,40 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505132065261068288/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505135083687862272%2Curn%3Ali%3Aactivity%3A7505132065261068288%29",
       "receiptOperationId": "20260914053115-comment-posted-2026-09-14-linkedin-comment-c3-vanessa-stop-evidence",
       "postedAt": "2026-09-14T05:31:15Z"
+    },
+    {
+      "id": "2026-09-14-linkedin-comment-o1-sara-shadow-adjudication",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/sara-joseph-164743410_the-worst-way-to-evaluate-a-logistics-ai-share-7505138809844518914-VeN9/",
+      "title": "Logistics AI vendor evaluation: parallel-test adjudication",
+      "author": "Sara Joseph",
+      "reason": "Adds independent adjudication and consequence-sensitive metrics to the author's specific 30-day logistics evaluation and 150% load test; no vendor-promotion keyword response.",
+      "evidence": "Signed-in Chrome review on 2026-09-14: post recommends real carrier/API and EDI-versus-portal exceptions, TMS write-back checks, 150% peak-volume testing, audit trails and a 30-day parallel run. Opened native copied public post link and expanded comments; no existing comments were rendered. No author or target match in queue, relationship watchlist or public execution receipts. Source numbers 30 days and 150% are the author's proposed test parameters. Per-1,000 and p95 are proposed measures, not observed results. Score: relevance=.90, discussionQuality=.65, uniqueContribution=.90, recency=1.00.",
+      "draftResponse": "Sara Joseph, I'd add an independent adjudication step to the 30-day parallel run. Agreement with an operator can still conceal a shared error, so disagreements should be judged against shipment evidence with the recommendation's origin hidden. At 150% volume, I'd track unsafe proposed TMS write-backs per 1,000 eligible actions as well as p95 exception age. Would you keep write-backs in shadow mode until that review is complete?",
+      "priorityScore": 0.8575,
+      "intendedMentions": [
+        "Sara Joseph"
+      ],
+      "state": "ready_for_confirmation"
+    },
+    {
+      "id": "2026-09-14-linkedin-comment-o2-babar-approval-reconciliation",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/babar-ali-khan-326343346_artificialintelligence-aiagents-generativeai-share-7505138433741398016-Xmcw/",
+      "title": "AI content workflow: version-bound approval and retry reconciliation",
+      "author": "Babar Ali khan",
+      "reason": "Directly answers the author's question about adding human approval, scheduling or analytics, then adds a version-binding and ambiguous-timeout acceptance test.",
+      "evidence": "Signed-in Chrome review on 2026-09-14: author describes a form-to-research-to-image-to-LinkedIn workflow and explicitly asks whether to add human approval, content scheduling or performance analytics. Visible age 5m. Opened native copied public post link and expanded comments; no existing comments were rendered. No author or target match in queue, relationship watchlist or public execution receipts. Comment proposes safeguards and a metric; it does not claim the workflow has been tested or endorse unattended publishing or any particular transport. Score: relevance=.85, discussionQuality=.80, uniqueContribution=.90, recency=1.00.",
+      "draftResponse": "Babar Ali khan, I'd prioritize human approval ahead of scheduling or analytics. Bind that approval to one version of the exact text, generated image and destination; regeneration should invalidate it. Then test a timeout after the platform accepts a post: does rerunning the workflow reconcile the first publication or create a second? Duplicate publications per approved request would be a useful acceptance metric.",
+      "priorityScore": 0.8775,
+      "intendedMentions": [
+        "Babar Ali khan"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
