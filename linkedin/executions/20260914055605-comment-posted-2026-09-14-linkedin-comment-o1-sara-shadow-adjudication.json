@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260914055605-comment-posted-2026-09-14-linkedin-comment-o1-sara-shadow-adjudication",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-14T05:56:05Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-14T05:48:39Z",
+    "scope": "User replied Go ahead, approved to the exact O1 and O2 batch including only their native author tags. No reaction, DM, follow, connection, media or schedule change authorized."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-14-linkedin-comment-o1-sara-shadow-adjudication",
+    "targetUrl": "https://www.linkedin.com/posts/sara-joseph-164743410_the-worst-way-to-evaluate-a-logistics-ai-share-7505138809844518914-VeN9/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505138811610218496/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505141985293541376%2Curn%3Ali%3Aactivity%3A7505138811610218496%29",
+    "publishedTextSha256": "43828600d923f9b2acf1b6292cda1ab30168e05320cbd1e2f5e127a2c887190f",
+    "verifiedAt": "2026-09-14T05:56:05Z",
+    "verification": "Fresh source and expanded comments checked with no duplicate. Exact approved O1 text posted once as Aditya Singh with a native Sara Joseph profile mention matching the post author. Comment 7505141985293541376 visibly rendered; native copied public link https://lnkd.in/p/gGEgPecD reopened and confirmed the comment persisted with the exact text and author identity."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

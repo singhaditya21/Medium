@@ -1,6 +1,6 @@
 # LinkedIn opportunities — 14 September 2026, second research batch
 
-Status: O1 and O2 are ready for exact action-time confirmation. Nothing posted during this research cycle.
+Status: O1 and O2 were posted after the user's exact batch approval. Nothing was posted during the preceding research-only cycle.
 
 ## Coverage
 
@@ -24,3 +24,14 @@ Exact drafts, native author-mention intentions and score components are in `enga
 Scores are editorial prioritization judgments under `engagement/strategy.json`, not predictions of reach or replies. The clarity review preserved one compact paragraph and proposed metrics rather than fabricated results; no detector or external publishing service was used. The source's request to comment a promotional keyword was not followed.
 
 Approval must cover the exact comment and author mention only. Recheck context, duplicates and the native profile match immediately before execution. No reactions, DMs, follows, connections, reshares, media or schedule changes are bundled. Do not invent a tag or silently replace it if the matching profile is unavailable.
+
+## Approved execution — 14 September 2026
+
+The user replied "Go ahead, approved." Both source threads were rechecked for context and duplicates before execution. The exact approved wording was posted as Aditya Singh with the matching native author mention. Each native copied comment link was reopened to verify persistence, identity and text.
+
+| ID | Verified public comment | Receipt |
+| --- | --- | --- |
+| O1 | [Sara Joseph](https://lnkd.in/p/gGEgPecD) | `linkedin/executions/20260914055605-comment-posted-2026-09-14-linkedin-comment-o1-sara-shadow-adjudication.json` |
+| O2 | [Babar Ali khan](https://lnkd.in/p/g2Mta6m8) | `linkedin/executions/20260914055122-comment-posted-2026-09-14-linkedin-comment-o2-babar-approval-reconciliation.json` |
+
+No reactions, DMs, follows, connections, reshares, media or schedule changes were performed. Both relationships are now awaiting substantive inbound replies; no automatic follow-up is authorized.

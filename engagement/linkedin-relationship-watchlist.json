@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-14T05:40:46Z",
+  "updatedAt": "2026-09-14T05:56:12Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,24 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Sara Joseph",
+      "profileUrl": "https://www.linkedin.com/in/sara-joseph-164743410/",
+      "themes": ["logistics AI evaluation", "independent adjudication", "TMS write-back safety"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-14",
+      "nextReviewOn": "2026-09-21",
+      "nextActionRule": "O1 exact approved shadow-adjudication comment posted September 14, comment 7505141985293541376. Exact text, native author mention and persistence at the direct public comment link were verified. Wait for substantive inbound; no duplicate metric proposal, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
+    {
+      "name": "Babar Ali khan",
+      "profileUrl": "https://www.linkedin.com/in/babar-ali-khan-326343346/",
+      "themes": ["version-bound approval", "publication reconciliation", "duplicate prevention"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-14",
+      "nextReviewOn": "2026-09-21",
+      "nextActionRule": "O2 exact approved approval-reconciliation comment posted September 14, comment 7505140767644921856. Exact text, native author mention and persistence at the direct public comment link were verified. Wait for substantive inbound; no duplicate test proposal, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
     {
       "name": "CA Swapnil Vikas Rege",
       "profileUrl": "https://www.linkedin.com/in/ca-swapnil-vikas-rege-09b17737/",

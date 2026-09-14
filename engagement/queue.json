@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-14T05:47:15Z",
+  "updatedAt": "2026-09-14T05:56:05Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3681,7 +3681,10 @@
       "intendedMentions": [
         "Sara Joseph"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505138811610218496/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505141985293541376%2Curn%3Ali%3Aactivity%3A7505138811610218496%29",
+      "receiptOperationId": "20260914055605-comment-posted-2026-09-14-linkedin-comment-o1-sara-shadow-adjudication",
+      "postedAt": "2026-09-14T05:56:05Z"
     },
     {
       "id": "2026-09-14-linkedin-comment-o2-babar-approval-reconciliation",
@@ -3698,7 +3701,10 @@
       "intendedMentions": [
         "Babar Ali khan"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505138434945056768/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505140767644921856%2Curn%3Ali%3Aactivity%3A7505138434945056768%29",
+      "receiptOperationId": "20260914055122-comment-posted-2026-09-14-linkedin-comment-o2-babar-approval-reconciliation",
+      "postedAt": "2026-09-14T05:51:22Z"
     }
   ]
 }
