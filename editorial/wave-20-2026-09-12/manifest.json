@@ -1,6 +1,9 @@
 {
   "schemaVersion": 1,
   "status": "drafts_for_human_review_not_published_or_scheduled",
+  "publicationOrderSupersededOn": "2026-09-14",
+  "publicationOrderSupersededBy": "linkedin/newsletter-backfill-2026-09-14/continuation-plan.md",
+  "currentPublicationOrder": "LinkedIn newsletter edition first; Medium mirror only after the LinkedIn edition is visibly published and exact Medium settings are approved. Earlier proposedSettings timing is historical and must not be executed.",
   "createdOn": "2026-09-12",
   "scope": "20 additional Medium publications: 12 existing GitHub-only editorial drafts + 8 new local full-text drafts. Standing Role is already scheduled and excluded.",
   "liveInventory": {

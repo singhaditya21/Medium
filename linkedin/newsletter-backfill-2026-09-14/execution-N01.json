@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "action": "linkedin_newsletter_edition_published",
+  "recordedAt": "2026-09-14T06:41:16Z",
+  "executionSurface": "user_initiated_signed_in_chrome",
+  "id": "N01",
+  "title": "How to Build an Agentic CRM: A Reference Architecture",
+  "publicEditionUrl": "https://www.linkedin.com/pulse/how-build-agentic-crm-reference-architecture-aditya-singh-lollc/",
+  "publicAnnouncementUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505152286273253376/",
+  "newsletter": {
+    "name": "The Operating AI Ledger",
+    "url": "https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/",
+    "editionCountBefore": 1,
+    "editionCountAfter": 2,
+    "observedSubscribers": 1386
+  },
+  "approval": {
+    "obtained": true,
+    "scope": "Exact N01 full-length preview, first-figure cover, ten original inline figures, captions and alt text, approved 497-character announcement, immediate newsletter publication, public audience and comments enabled; no additional social action."
+  },
+  "duplicateCheck": {
+    "publishedArticlesReviewed": 8,
+    "existingDraftsReviewed": 3,
+    "scheduledArticles": 0,
+    "n01MatchFound": false,
+    "scope": "Native article manager and both existing newsletters. This is not an inventory of scheduled feed posts."
+  },
+  "verification": {
+    "publicNewsletterHeader": true,
+    "seriesListing": true,
+    "announcementText": true,
+    "publicInlineFigures": 10,
+    "sourceFooterLink": true,
+    "headingHierarchy": true,
+    "primaryHeadings": 10,
+    "secondaryHeadings": 9,
+    "lists": 5,
+    "listItems": 24,
+    "bodyAndCaptionFidelity": true,
+    "normalizedBodyAndFooterCharacters": 26723,
+    "normalizedBodyAndFooterFNV1a32": "155bc502",
+    "approvedPreviewSha256": "1d39e284cbf176b3c95e42e93899546ce6d1202a18c9f2d96fe0ce88905e9dde",
+    "reloadBeforePublication": {
+      "textPreserved": true,
+      "figuresPreserved": 10,
+      "captionsExact": true,
+      "altTextExact": true,
+      "allInlineImagesHostedOnLinkedIn": true
+    }
+  },
+  "settings": {
+    "nativeAudience": "Anyone + Subscribers",
+    "nativeCommentControl": "On",
+    "brandPartnership": false,
+    "timing": "Published immediately",
+    "mentions": [],
+    "hashtags": [],
+    "notifications": "Standard LinkedIn newsletter delivery; individual email delivery not verified or guaranteed."
+  },
+  "preserved": {
+    "mediumStories": true,
+    "existingSchedules": true,
+    "otherNewsletter": true
+  },
+  "secretsStored": false,
+  "privateUrlsStored": false,
+  "githubActionsPerformedLinkedInAction": false,
+  "recorderNote": "Separate newsletter receipt; record_linkedin_execution.py supports engagement comments/replies only. No comment-queue record was fabricated."
+}

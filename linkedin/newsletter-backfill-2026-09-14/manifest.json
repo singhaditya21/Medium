@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "createdAt": "2026-09-14T06:04:36Z",
-  "status": "preparation_only_not_published_or_scheduled",
+  "status": "N01_published_remaining_editions_require_preparation_and_exact_approval",
   "request": "Cross-publish each owned Medium article as a separate full-length LinkedIn newsletter edition.",
   "destination": {
     "name": "The Operating AI Ledger",
@@ -10,7 +10,9 @@
     "selectedByUser": true,
     "observedSubscribers": 1386,
     "observedFrequency": "weekly",
-    "observedEditionCount": 1
+    "observedEditionCount": 2,
+    "lastVerifiedOn": "2026-09-14",
+    "publicationType": "newsletter_series_not_standalone_article"
   },
   "liveMediumInventory": {
     "publishedStories": 13,
@@ -51,7 +53,8 @@
   "pilot": {
     "id": "N01",
     "preview": "linkedin/newsletter-backfill-2026-09-14/N01-agentic-crm.html",
-    "state": "local_full_length_preview_for_review",
+    "state": "published_and_visibly_verified",
+    "executionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N01.json",
     "exactFeedIntroduction": "A support escalation can depend on six systems before anyone can safely act.\n\nThis edition maps five operating planes and seven implementation services for agentic CRM, from an authenticated event to a verified change in a business system. It includes 10 architecture figures and a 90-day path through shadow testing and a bounded canary.\n\nIf you were to give one CRM workflow bounded autonomy tomorrow, which workflow would you choose, and what control would you insist on before switching it on?",
     "mentions": [],
     "hashtags": [],
@@ -74,7 +77,11 @@
       "bodyHeadingCount": 19,
       "figureCount": 10,
       "localArchiveCorrections": "Restored five lists and one heading omitted from data/agentic-crm-reference-architecture.json; existing archive files were not modified.",
-      "nativeLinkedInRenderingVerified": false
+      "nativeLinkedInRenderingVerified": true,
+      "reloadPersistenceVerified": true,
+      "nativeHeadingHierarchyPreserved": true,
+      "normalizedBodyWithSourceFooterCharacters": 26723,
+      "normalizedBodyWithSourceFooterFNV1a32": "155bc502"
     },
     "review": {
       "feedIntroduction": "Clarity and factual-scope review completed; all counts refer to source structure, not invented business results. No experiential claim or detector used.",
@@ -89,8 +96,8 @@
       "mediumUrl": "https://medium.com/ai-in-plain-english/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/agentic-crm-reference-architecture/",
       "liveMediumState": "published",
-      "state": "local_preview_for_review",
-      "linkedInEditionUrl": null
+      "state": "published_and_visibly_verified",
+      "linkedInEditionUrl": "https://www.linkedin.com/pulse/how-build-agentic-crm-reference-architecture-aditya-singh-lollc/"
     },
     {
       "id": "N02",
@@ -225,4 +232,3 @@
     }
   ]
 }
-
