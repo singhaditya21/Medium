@@ -2,6 +2,8 @@
 
 Prepared 14 September 2026. N01 is published; all dates below are proposed placeholders pending source QA, live duplicate/collision checks and exact action-time approval. No remaining story has been scheduled by this plan.
 
+Continuation update: N02–N04 now have complete source-reconciled previews and [one exact approval package](approval-N02-N04.md). The proposed dates below are unchanged. N04's comparison with the existing Passport article is complete: related subject, different body/use cases. Native scheduling and final collision checks remain pending approval.
+
 ## Correct publication objects
 
 - **Newsletter:** The Operating AI Ledger, the existing named series and subscriber audience.
@@ -19,7 +21,7 @@ These dates are editorial proposals, not optimal-time claims. Ordinary scheduled
 
 ## Medium catalog backfill
 
-Each row is a full newsletter edition, not a short link post or new newsletter. N04 and N09 also need body-level comparison with existing identity / coordination articles. N14 remains held until Medium publication is visibly confirmed.
+Each row is a full newsletter edition, not a short link post or new newsletter. N04's body-level comparison is complete; N09 still needs comparison with existing coordination articles. N14 remains held until Medium publication is visibly confirmed.
 
 | ID | Edition | Proposed LinkedIn date, 14:00 IST |
 | --- | --- | --- |
@@ -93,4 +95,3 @@ Track separately: newsletter series subscribers; edition article views and avail
 ## Next approval batch
 
 Prepare N02–N04 full native-ready previews first, complete the N04 body-overlap check, and show their exact dates/settings. In parallel editorial planning, prioritize M01–M03 for the LinkedIn-first lane. Neither batch is publish/schedule-ready yet. The immediate decision is whether to retain one weekly edition or approve the proposed two-lane cadence; exact content approvals still follow.
-

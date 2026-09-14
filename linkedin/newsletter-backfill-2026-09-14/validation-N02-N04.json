@@ -1,0 +1,161 @@
+{
+  "mode": "local_preparation_only",
+  "nativeLinkedInVerified": false,
+  "editions": [
+    {
+      "id": "N02",
+      "sourceFidelityPassed": true,
+      "sourceFNV1a32": "fcd8fdf2",
+      "expectedFNV1a32": "fcd8fdf2",
+      "sourceCharacters": 8934,
+      "sourceBlocks": 136,
+      "figures": 7,
+      "sourceListCount": 21,
+      "restoredCodeBlocks": 0,
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N02-traditional-crm-agentic-ai.html",
+      "previewSHA256": "95c1d1abbdd4c57f8de1bb3aef6f1588ecb6d5a291c3f9e91f71b713a08d0839",
+      "proposedChanges": 3,
+      "nativeRenderingVerified": false,
+      "openingNotes": 1,
+      "proposedListCount": 21,
+      "plainTextListsRepaired": false,
+      "illustrativeJSONRepaired": false,
+      "media": [
+        {
+          "path": "assets/images/traditional-crm-agentic-ai/figure-01.webp",
+          "sha256": "10cea0e716f692306e61066e27f44ebb1ada1f2123c192291e587f572a064bd3"
+        },
+        {
+          "path": "assets/images/traditional-crm-agentic-ai/figure-02.png",
+          "sha256": "326e2daa11eb2c685dc5b6f2e13d2caf3d2f8145cfecff600f648bf8a6fa3035"
+        },
+        {
+          "path": "assets/images/traditional-crm-agentic-ai/figure-03.png",
+          "sha256": "9f136eceaa4e89bfc0e602e4ca345b242bcc25763e84dcb51517cb9020b3e072"
+        },
+        {
+          "path": "assets/images/traditional-crm-agentic-ai/figure-04.png",
+          "sha256": "55ce52c006a7e07691c9a06fe41b86c3d68eecf6ac029b5d9534d244400bc899"
+        },
+        {
+          "path": "assets/images/traditional-crm-agentic-ai/figure-05.png",
+          "sha256": "8b460b19165abc15d2be9b7145fca5fe8caf2b5cc0d3813b8084aa02b0703d57"
+        },
+        {
+          "path": "assets/images/traditional-crm-agentic-ai/figure-06.png",
+          "sha256": "9a62f422fba99dc630094c4985d8c5a037f6906cc96ef57b91c447ac8234335d"
+        },
+        {
+          "path": "assets/images/traditional-crm-agentic-ai/figure-07.png",
+          "sha256": "40bb9a0fad4c9c0e26d596ce5cfe421571a23dc6b23bf30cce37646399656b11"
+        }
+      ]
+    },
+    {
+      "id": "N03",
+      "sourceFidelityPassed": true,
+      "sourceFNV1a32": "117585fc",
+      "expectedFNV1a32": "117585fc",
+      "sourceCharacters": 30385,
+      "sourceBlocks": 150,
+      "figures": 10,
+      "sourceListCount": 16,
+      "restoredCodeBlocks": 6,
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N03-enterprise-agent-control-tower.html",
+      "previewSHA256": "5f9cca7b5d8f00b8eb855038c736df60d928e04e819ce8b0d91ea45c204a9412",
+      "proposedChanges": 0,
+      "nativeRenderingVerified": false,
+      "openingNotes": 1,
+      "proposedListCount": 16,
+      "plainTextListsRepaired": false,
+      "illustrativeJSONRepaired": false,
+      "media": [
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-01.webp",
+          "sha256": "f76301443d27f81ca61d5524f6ff8c2ad26e16f18989206361e7af21d10619a8"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-02.png",
+          "sha256": "e639536f44297c4db5694b33924f99e440c53ba7936168d3aaa6cac349039f0d"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-03.png",
+          "sha256": "6f45378f88dd168e144dcf122b0430c80a1bc390f44384133dc474b252373cfc"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-04.png",
+          "sha256": "dcec4a603ea48f7e4ffda743fcefbee25f9becc514ee3f07a57f3e9324229d9b"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-05.png",
+          "sha256": "50a9882499256b9db40554cabb5257003281ed2e80f1a9f434bd6a102b58c235"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-06.png",
+          "sha256": "08e3f68a5f4982d5f81f99fa7d30148d313509d583906aa8593e452f0a99d6ce"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-07.png",
+          "sha256": "2e1878a0481e4b6bcbb93cb6a611df0ec5ae71b2bb74300cf696d7e9efe6ddcb"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-08.png",
+          "sha256": "25fbf5107700bdb6cbd596d62a7e426e0592b8e9dc099694cacd495e85fa867d"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-09.png",
+          "sha256": "42cefd5e7d232e98d87aa123f4ea68a8b9861b94b2cedca03f6da5c0ee9e27d0"
+        },
+        {
+          "path": "assets/images/enterprise-agent-control-tower/figure-10.png",
+          "sha256": "c42c3d25ed4daa71747c2d0e9183254d6983d9b29e19d6d8bdb7acad609c3a11"
+        }
+      ]
+    },
+    {
+      "id": "N04",
+      "sourceFidelityPassed": true,
+      "sourceFNV1a32": "c78d80a6",
+      "expectedFNV1a32": "c78d80a6",
+      "sourceCharacters": 27236,
+      "sourceBlocks": 129,
+      "figures": 6,
+      "sourceListCount": 0,
+      "restoredCodeBlocks": 0,
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N04-ai-agent-identity-is-not-enough.html",
+      "previewSHA256": "4218994ef1155bfb2bb66b190847c2c7ceb89894401acf0741fb7c8cbc8303ac",
+      "proposedChanges": 1,
+      "nativeRenderingVerified": false,
+      "openingNotes": 0,
+      "proposedListCount": 8,
+      "plainTextListsRepaired": true,
+      "illustrativeJSONRepaired": true,
+      "media": [
+        {
+          "path": "linkedin/newsletter-backfill-2026-09-14/media/N04/figure-01.webp",
+          "sha256": "61389fa6f2fb9b100d93c8d8e44d872c0cac4e8961036bc7d7d3dc5c04b6a1b0"
+        },
+        {
+          "path": "linkedin/newsletter-backfill-2026-09-14/media/N04/figure-02.webp",
+          "sha256": "cfb32248d35e1f4706b1965461c6cefb90ead692ef5e67f5856abcbb1e58b901"
+        },
+        {
+          "path": "linkedin/newsletter-backfill-2026-09-14/media/N04/figure-03.webp",
+          "sha256": "941a70012aab3d0145fb95cd49a71d8e555bf0bd96314efd48433c73a411610a"
+        },
+        {
+          "path": "linkedin/newsletter-backfill-2026-09-14/media/N04/figure-04.webp",
+          "sha256": "d8d2465556eaa9fd9749e97c0ad6266d4e306a5afbc211748eaf0b420d518196"
+        },
+        {
+          "path": "linkedin/newsletter-backfill-2026-09-14/media/N04/figure-05.webp",
+          "sha256": "371775cfc5084268ff6712f7e3cc0dd02bceec68c7f42cea61cb7abbd371e5cf"
+        },
+        {
+          "path": "linkedin/newsletter-backfill-2026-09-14/media/N04/figure-06.webp",
+          "sha256": "e6a1c8d4576dcd4c5344e2562328514f2826eaa90033dd17a4f5cea6694f0f21"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "observedOn": "2026-09-14",
+  "method": "Public story body read in signed-in Chrome; no platform state, private draft body or private URL exported.",
+  "N02": {
+    "sourceHash": "fcd8fdf2",
+    "sourceCharacters": 8934,
+    "sourceBlocks": 136,
+    "subtitle": "The End of Static Enterprise Systems",
+    "figureTextInSource": false,
+    "tagRepairs": [
+      ["Traditional CRM systems are passive systems of record — not active systems of execution.", "blockquote"],
+      ["Data quality stops being an analytics problem and becomes an operational survival problem.", "blockquote"]
+    ],
+    "lists": [
+      ["The architecture assumes:", "ul", ["humans initiate actions", "humans interpret data", "humans make decisions", "humans execute workflows", "humans monitor escalations", "humans resolve exceptions"]],
+      ["Modern enterprises generate:", "ul", ["millions of customer interactions", "thousands of SLA events", "real-time operational risks", "cross-system dependencies", "dynamic workflows", "unstructured data streams"]],
+      ["Instead, enterprises built:", "ul", ["workflow engines", "BPM layers", "macros", "RPA bots", "notification systems", "integration middleware"]],
+      ["Examples include:", "ul", ["email drafting", "call summarization", "recommendation engines", "knowledge suggestions", "forecasting assistance"], 1],
+      ["An enterprise support case still requires:", "ul", ["workflow interpretation", "SLA evaluation", "backend orchestration", "policy validation", "escalation management", "cross-system synchronization"]],
+      ["Sales Agents", "ul", ["lead qualification", "follow-up execution", "pricing coordination", "pipeline risk management"]],
+      ["Customer Service Agents", "ul", ["autonomous case resolution", "sentiment-aware escalation", "SLA monitoring", "root cause identification"]],
+      ["Revenue Operations Agents", "ul", ["contract governance", "renewal prediction", "billing anomaly detection", "revenue leakage prevention"]],
+      ["Delivery Governance Agents", "ul", ["resource allocation optimization", "utilization balancing", "delivery risk prediction", "operational escalation management"]],
+      ["Compliance Agents", "ul", ["audit validation", "policy enforcement", "approval chain monitoring", "data retention governance"]],
+      ["Autonomous systems introduce entirely new operational risks:", "ul", ["hallucinated actions", "incorrect escalations", "unauthorized workflow execution", "compliance violations", "cascading automation failures", "cross-agent conflicts"]],
+      ["Future enterprise CRM stacks will require:", "ul", ["agent identity management", "confidence scoring", "rollback frameworks", "human-in-the-loop approvals", "observability systems", "execution tracing", "policy-aware orchestration"]],
+      ["This acts as:", "ul", ["an orchestration center", "an observability platform", "an AI governance layer", "an execution monitoring system"]],
+      ["The AI Control Tower will manage:", "ul", ["agent workflows", "execution approvals", "model routing", "policy enforcement", "enterprise risk controls", "operational telemetry"]],
+      ["Future CRM architecture will require:", "ul", ["real-time data validation", "semantic data layers", "vectorized enterprise memory", "entity resolution systems", "contextual retrieval frameworks", "continuous synchronization pipelines"]],
+      ["For years, enterprises attempted to solve operational inefficiency using:", "ul", ["BPM tools", "workflow builders", "robotic process automation", "rule engines"]],
+      ["But these systems struggle with:", "ul", ["unstructured inputs", "dynamic reasoning", "contextual adaptation", "exception handling", "probabilistic decision-making"]],
+      ["Customer operations now intersect with:", "ul", ["ERP", "finance", "Delivery", "ITSM", "Procurement", "Workforce management", "Compliance", "AI governance"]],
+      ["This is why the future architecture of CRM will increasingly converge with:", "ul", ["orchestration platform.", "event-driven systems", "AI execution engines", "enterprise memory systems", "operational intelligence platforms"]],
+      ["The future enterprise will increasingly rely on:", "ul", ["Autonomous execution", "AI orchestration", "Multi-agent collaboration", "Continuous operational reasoning"]],
+      ["References & Industry Signals", "ul", ["Gartner CRM & CX Technology Trends 2025", "Salesforce Agentforce Strategy", "Microsoft Dynamics Copilot Evolution", "Gartner Agentic AI Forecasts", "Enterprise Multi-Agent Research Papers", "Autonomous Enterprise Architecture Studies", "AI Governance & Observability Research"]]
+    ],
+    "insertions": []
+  },
+  "N03": {
+    "sourceHash": "117585fc",
+    "sourceCharacters": 30385,
+    "sourceBlocks": 150,
+    "figureTextInSource": true,
+    "lists": [
+      ["The hard questions began after the error:", "ul", ["Which agent, prompt, model, policy and tool versions were involved?", "On whose behalf did the agent act?", "Which evidence did it use, and what did it fail to retrieve?", "Did any other workflow use the same identity or prompt version?", "Could the company disable this path without stopping every agent?", "Was the customer email reversible, or did it require a compensating action?"]],
+      ["I separate the architecture into five operating capabilities:", "ol", ["Fleet registry — what agents exist, why they exist, who owns them and which versions are live.", "Identity and delegation — which workload is acting, on whose behalf and with what temporary authority.", "Runtime enforcement — which evidence, tools, destinations, values and actions are permitted now.", "Telemetry and evaluation — what occurred from objective to outcome, and whether it was correct.", "Incident and change operations — how the enterprise limits blast radius, recovers and turns failures into release gates."]],
+      ["An agent needs two identities:", "ul", ["a durable workload identity representing the registered agent version;", "a short-lived delegated identity describing the user, service or business process on whose behalf it acts."]],
+      ["The identity broker mints short-lived credentials only after the policy decision. A concrete workload identity is spiffe://enterprise.example/prod/agents/renewal-risk/v3.4.1. The resulting capability can carry:", "ul", ["agent and version;", "delegated principal;", "allowed tool and operation;", "record or tenant scope;", "maximum monetary value;", "destination allowlist;", "expiry and nonce;", "policy decision ID;", "trace and workflow IDs."]],
+      ["Policy Enforcement Points apply that decision at several boundaries:", "ul", ["retrieval, before sensitive data enters the context pack;", "agent-to-agent delegation, before one workload expands the task;", "human approval, before consequential work resumes;", "tool execution, before a side effect reaches an enterprise system;", "egress, before data leaves a trusted zone."]],
+      ["The trace also needs business-specific events that generic model telemetry will never infer:", "ul", ["evidence freshness and provenance;", "plan risk and confidence;", "approval outcome and reviewer role;", "command idempotency key;", "expected and observed postcondition;", "compensation or human takeover;", "business outcome and attribution window."]],
+      ["The release path should include:", "ol", ["Contract tests for schemas, permissions, tool constraints and deterministic fallbacks.", "Offline task evaluations built from representative, de-identified work.", "Policy and adversarial tests covering prompt injection, privilege expansion, memory poisoning and unsafe delegation. OWASP’s agentic-AI threat work provides a useful threat-model starting point, but the cases still need to reflect the organisation’s actual tools and authority boundaries.", "Shadow execution in which the agent proposes actions but cannot change production state.", "Bounded canary limited by segment, tool, value, geography or autonomy tier.", "Continuous production evaluation using sampled traces, outcome signals and calibrated graders."]],
+      ["Outcome", "ul", ["verified task-success rate;", "business KPI improvement against the existing baseline;", "cost per verified outcome;", "time from trigger to verified state."]],
+      ["Reliability", "ul", ["tool-call success and postcondition-verification rate;", "duplicate side-effect rate;", "retry, timeout and partial-failure rate;", "P50 and P95 workflow latency."]],
+      ["Safety and control", "ul", ["harmful-action and policy-violation rate;", "permit, deny and approval-required distribution;", "human override and escalation rate;", "unverified-completion rate;", "privilege or destination exceptions."]],
+      ["Operations", "ul", ["mean time to detect, contain and recover;", "percentage of agents with current owners and manifests;", "expired identities, policy exceptions and overdue reauthorisations;", "incidents converted into regression evaluations."]],
+      ["Containment should be granular:", "ol", ["Suspend one agent version.", "Revoke one model, prompt or policy combination.", "Disable one tool binding or destination.", "Move one workflow to recommendation-only mode.", "Isolate one tenant, segment or data source.", "Stop the wider agent fleet."]],
+      ["Days 0–30: establish identity and inventory", "ul", ["Register production agents, owners, purposes, versions and action boundaries.", "Map agent-to-agent, data, model and tool dependencies.", "Define the minimum manifest and common correlation identifiers.", "Identify three containment scopes and assign incident authority.", "Select one consequential workflow as the reference implementation. Exit gate: every in-scope production agent has a current owner, manifest, workload identity and dependency record."]],
+      ["Days 31–60: enforce and trace one workflow", "ul", ["Introduce workload identity and short-lived delegated capabilities.", "Place Policy Enforcement Points at retrieval and tool execution.", "Emit the canonical trace from objective through postcondition verification.", "Create offline, policy and adversarial evaluation suites.", "Run the workflow in shadow mode and review disagreements weekly. Exit gate: every proposed write produces a policy decision, trace, idempotency key and verifiable expected postcondition."]],
+      ["Days 61–90: operate a bounded production canary", "ul", ["Release a narrow action set with explicit value and destination limits.", "Connect live alerts to an owned incident runbook.", "Exercise version, tool and workflow containment.", "Publish the first outcome, reliability, safety and cost scorecard.", "Convert every material override or incident into a regression case. Exit gate: the team has exercised containment and recovery, met the canary error budget and demonstrated that one affected release can be isolated without stopping the fleet."]],
+      ["The control tower is successful when it can answer six questions continuously:", "ol", ["What agents are running?", "Who owns them and on whose behalf are they acting?", "What are they permitted to retrieve, decide and change?", "What happened from objective to verified outcome?", "Is the fleet improving business results within its risk and cost budgets?", "How quickly can the enterprise contain a failure without stopping everything else?"]]
+    ],
+    "insertions": [
+      {"before": "Traditional application observability asks whether a service is available, fast and error-free. Agent operations must ask a wider set of questions.", "tag": "h2", "text": "Why conventional application monitoring is not enough"},
+      {"before": "The manifest should also carry data classifications, retention rules, approved model families, regions, dependency versions, escalation paths and an expiry or reauthorisation date.", "tag": "pre", "text": "agent_id: revenue.renewal-risk\nversion: 3.4.1\nbusiness_owner: vp-revenue-operations\ntechnical_owner: enterprise-ai-platform\nrisk_owner: commercial-governance"},
+      {"before": "The manifest should also carry data classifications, retention rules, approved model families, regions, dependency versions, escalation paths and an expiry or reauthorisation date.", "tag": "pre", "text": "purpose: propose and execute bounded renewal-retention actions\nautonomy_tier: execute_with_approval\nallowed_data:\n  - crm.account.read\n  - contracts.entitlement.read\n  - support.case_summary.read\nallowed_tools:\n  - crm.create_internal_task\n  - cpq.create_draft_quote\nprohibited_actions:\n  - cpq.approve_discount\n  - email.send_external\nbudgets:\n  max_run_seconds: 45\n  max_model_cost_usd: 0.80\n  max_tool_calls: 12\nrelease:\n  prompt_version: renewal-plan-18\n  policy_bundle: commercial-policy-42\n  evaluation_suite: renewal-regression-9"},
+      {"before": "The delegate runs under its own workload identity. It retrieves only the evidence permitted for that task and returns a schema-valid result. The parent can use the result in a plan, but it cannot treat the delegate’s recommendation as execution permission.", "tag": "pre", "text": "{\n  \"task_id\": \"task-4421\",\n  \"parent_agent\": \"revenue.renewal-risk@3.4.1\",\n  \"delegate_agent\": \"commercial.margin-analysis@2.1.0\",\n  \"objective\": \"calculate permitted discount range\",\n  \"evidence_refs\": [\"contract:8821\", \"margin-policy:42\"],\n  \"allowed_outputs\": [\"discount_range\", \"reason_codes\"],\n  \"prohibited_actions\": [\"create_quote\", \"send_email\"],\n  \"max_hops\": 1,\n  \"deadline_ms\": 3000,\n  \"trace_id\": \"tr-927b\"\n}"},
+      {"before": "Policy Enforcement Points apply that decision at several boundaries:", "tag": "pre", "text": "{\n  \"decision\": \"permit | deny | approval_required | permit_with_constraints\",\n  \"decision_id\": \"pd-829f\",\n  \"policy_bundle\": \"commercial-policy-42\",\n  \"constraints\": {\n    \"discount_percent_max\": 8,\n    \"allowed_fields\": [\"quote_name\", \"expiry_date\", \"line_items\"],\n    \"destination\": \"cpq-prod\",\n    \"expires_at\": \"2026-08-18T09:15:00Z\"\n  },\n  \"reason_codes\": [\"MARGIN_FLOOR\", \"EXTERNAL_COMMITMENT_REQUIRES_APPROVAL\"]\n}"},
+      {"before": "Execution then moves through explicit states: proposed → policy evaluated → approval pending → authorised → executing → applied → verified. Failure is not one bucket. A transaction can be rejected, expired, failed before a side effect, applied but unverified, compensating or quarantined.", "tag": "pre", "text": "{\n  \"workflow_id\": \"wf-8821\",\n  \"agent\": \"renewal-risk@3.4.1\",\n  \"principal\": \"user:account-manager-42\",\n  \"objective\": \"retain account 8821\",\n  \"evidence_refs\": [\"contract:8821@v7\", \"margin-policy:42\"],\n  \"policy_decision\": \"pd-829f\",\n  \"capability_id\": \"cap-771\",\n  \"idempotency_key\": \"quote-8821-v12\",\n  \"expected_postcondition\": \"discount_percent <= 8\",\n  \"compensation_plan\": \"quarantine_quote\"\n}"},
+      {"before": "Every span should inherit a correlation set: workflow ID, trace ID, tenant, business objective, agent ID and version, policy decision ID and data-handling classification.", "tag": "pre", "text": "workflow renewal_retention\n├── context.resolve_account\n├── retrieval.contract_terms\n├── retrieval.support_history\n├── agent.invoke renewal-risk v3.4.1\n│   ├── model.generate plan\n│   └── plan.validate_schema\n├── policy.evaluate commercial-policy-42\n├── human.approval discount_exception\n├── tool.execute cpq.create_draft_quote\n├── state.verify quote_created_with_expected_terms\n└── outcome.observe renewal_stage_advanced"}
+    ]
+  },
+  "N04": {
+    "sourceHash": "c78d80a6",
+    "sourceCharacters": 27236,
+    "sourceBlocks": 129,
+    "subtitle": "Five enterprise use cases show how to bind a human principal, agent identity, policy decision, scoped credential, tool action, and audit receipt",
+    "figureTextInSource": true,
+    "lists": [],
+    "insertions": [],
+    "append": [
+      {"tag": "p", "text": "Continue the production AI-agent series"},
+      {"tag": "p", "text": "How to Build an Agentic CRM: A Reference Architecture", "href": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae"},
+      {"tag": "p", "text": "The Enterprise Agent Control Tower: A Production Architecture", "href": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438"},
+      {"tag": "p", "text": "Which control is hardest to implement in your production environment: evidence, bounded authority, approval, verification, or recovery?"}
+    ]
+  }
+}

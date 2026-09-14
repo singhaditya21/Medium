@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "createdAt": "2026-09-14T06:04:36Z",
-  "status": "N01_published_remaining_editions_require_preparation_and_exact_approval",
+  "status": "N01_published_N02_N04_prepared_awaiting_exact_approval_rest_queued",
+  "currentApprovalPackage": "linkedin/newsletter-backfill-2026-09-14/approval-N02-N04.md",
   "request": "Cross-publish each owned Medium article as a separate full-length LinkedIn newsletter edition.",
   "destination": {
     "name": "The Operating AI Ledger",
@@ -106,7 +107,9 @@
       "mediumUrl": "https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/traditional-crm-agentic-ai/",
       "liveMediumState": "published",
-      "state": "needs_live_body_reconciliation_and_preview",
+      "state": "prepared_awaiting_exact_action_time_approval",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N02-traditional-crm-agentic-ai.html",
+      "proposedSchedule": "2026-09-21T14:00:00+05:30",
       "linkedInEditionUrl": null
     },
     {
@@ -116,7 +119,9 @@
       "mediumUrl": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/enterprise-agent-control-tower/",
       "liveMediumState": "published",
-      "state": "needs_live_body_reconciliation_and_preview",
+      "state": "prepared_awaiting_exact_action_time_approval",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N03-enterprise-agent-control-tower.html",
+      "proposedSchedule": "2026-09-28T14:00:00+05:30",
       "linkedInEditionUrl": null
     },
     {
@@ -126,7 +131,9 @@
       "mediumUrl": "https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/ai-agent-identity-is-not-enough/",
       "liveMediumState": "published",
-      "state": "needs_live_body_reconciliation_and_preview",
+      "state": "prepared_awaiting_exact_action_time_approval",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N04-ai-agent-identity-is-not-enough.html",
+      "proposedSchedule": "2026-10-05T14:00:00+05:30",
       "linkedInEditionUrl": null
     },
     {

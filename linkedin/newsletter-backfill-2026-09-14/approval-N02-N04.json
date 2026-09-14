@@ -1,0 +1,77 @@
+{
+  "state": "awaiting_exact_action_time_approval",
+  "destination": "https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/",
+  "publicationType": "newsletter_edition",
+  "settings": {
+    "audience": "Anyone + Subscribers",
+    "comments": "On",
+    "notifications": "Standard LinkedIn newsletter notifications; no guaranteed email delivery or separate manual messages",
+    "cover": "Existing first source figure for each edition; no creative replacement",
+    "mentions": [],
+    "hashtags": [],
+    "preserveMediumAndExistingLinkedInState": true,
+    "nativeSchedulingVerified": false
+  },
+  "N02": {
+    "scheduleLabel": "21 September 2026, 2:00 PM IST",
+    "scheduleISO": "2026-09-21T14:00:00+05:30",
+    "feedIntroduction": "CRM can record every interaction and still leave the important work unfinished.\n\nThis edition examines the move from systems of record to bounded execution across five enterprise agent roles. Seven architecture figures connect orchestration, memory, tools, governance and human approval.\n\nThe practical question is not whether every workflow needs an agent. It is which decision benefits from reasoning, and which action should remain deterministic.\n\nWhere does your CRM still hand the hardest part back to a person?",
+    "openingNotes": ["Republication note — September 2026: This essay presents an architectural thesis, not a prediction that every CRM product or workflow engine will disappear. Agent reasoning should complement deterministic workflows and independently enforced controls. The vendor comparison and Gartner forecasts below have been clarified against their primary sources."],
+    "reviewNotes": [
+      "Full source body restored, including 21 lists missing from the archive. Seven existing images retained; archive captions and alt text are explicit accessibility additions because the live images have no captions or alt text.",
+      "Three factual paragraphs are corrected below: Microsoft also announced autonomous agents; Gartner's 2028 adoption forecast is dated and its 2027 cancellation forecast is distinguished from an observed failure rate.",
+      "One dated opening note frames the original strong title and workflow-replacement argument as the author's thesis. No Medium changes are included."
+    ],
+    "replacements": [
+      {
+        "before": "According to Gartner research, 33% of enterprise applications are expected to include agentic AI capabilities by 2028, while autonomous decision-making inside enterprise systems is projected to rise sharply over the next three years. (Reuters)",
+        "after": "In its June 25, 2025 forecast, Gartner projected that 33% of enterprise software applications would include agentic AI by 2028 and that at least 15% of day-to-day work decisions would be made autonomously through agentic AI by then. These are forecasts, not observed adoption rates. (Gartner)",
+        "html": "In its June 25, 2025 forecast, Gartner projected that 33% of enterprise software applications would include agentic AI by 2028 and that at least 15% of day-to-day work decisions would be made autonomously through agentic AI by then. These are forecasts, not observed adoption rates. (<a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027\">Gartner</a>)"
+      },
+      {
+        "before": "Salesforce’s Agentforce strategy is positioning autonomous agents as operational workers, while Microsoft’s Copilot strategy focuses more heavily on embedded assistance within productivity flows. (FinancialContent)",
+        "after": "Salesforce positions Agentforce around autonomous task execution. Microsoft also announced ten autonomous Dynamics 365 agents and autonomous-agent capabilities in Copilot Studio on October 21, 2024. The architectural distinction is therefore assistance versus bounded execution within a workflow, not a clean Salesforce-versus-Microsoft divide. (Salesforce; Microsoft)",
+        "html": "Salesforce positions Agentforce around autonomous task execution. Microsoft also announced ten autonomous Dynamics 365 agents and autonomous-agent capabilities in Copilot Studio on October 21, 2024. The architectural distinction is therefore assistance versus bounded execution within a workflow, not a clean Salesforce-versus-Microsoft divide. (<a href=\"https://www.salesforce.com/agentforce/\">Salesforce</a>; <a href=\"https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2024/10/21/transform-work-with-autonomous-agents-across-your-business-processes/\">Microsoft</a>)"
+      },
+      {
+        "before": "Reuters recently reported Gartner’s projection that over 40% of current agentic AI initiatives may fail due to unclear business value, weak governance, and immature execution models. (Reuters)",
+        "after": "Gartner's June 25, 2025 forecast projected cancellation of more than 40% of agentic AI projects by the end of 2027, citing rising costs, unclear business value or inadequate risk controls. Cancellation is not the same as a measured production failure rate. (Gartner)",
+        "html": "Gartner's June 25, 2025 forecast projected cancellation of more than 40% of agentic AI projects by the end of 2027, citing rising costs, unclear business value or inadequate risk controls. Cancellation is not the same as a measured production failure rate. (<a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027\">Gartner</a>)"
+      }
+    ]
+  },
+  "N03": {
+    "scheduleLabel": "28 September 2026, 2:00 PM IST",
+    "scheduleISO": "2026-09-28T14:00:00+05:30",
+    "feedIntroduction": "An API can return 200 while an agent makes an unauthorized commercial commitment.\n\nThis edition follows an illustrative renewal incident through five operating capabilities: fleet registry, identity and delegation, runtime enforcement, telemetry and evaluation, and incident operations.\n\nTen architecture figures, six code and trace blocks, and a 90-day implementation path show how to connect a proposed action to a verified outcome.\n\nCould your team contain one faulty agent version without stopping the rest of the fleet?",
+    "openingNotes": ["Scenario note: The renewal incident, account identifiers, discount limits, budgets and timelines in this reference architecture are illustrative design examples, not reported customer outcomes or performance benchmarks."],
+    "reviewNotes": [
+      "Restored 16 source lists, six complete code/trace blocks and one omitted heading. All ten existing figures, captions and source links are retained.",
+      "The new opening note explicitly labels the scenario and numerical settings as illustrative. No other body rewrite or new image is proposed.",
+      "JSON objects are examples; the policy decision alternatives are descriptive, not a production schema or executable control service. Native editor code and image persistence must be verified before scheduling."
+    ],
+    "replacements": []
+  },
+  "N04": {
+    "scheduleLabel": "5 October 2026, 2:00 PM IST",
+    "scheduleISO": "2026-10-05T14:00:00+05:30",
+    "feedIntroduction": "A valid agent identity does not prove that a particular discount, payment or privileged grant is authorized.\n\nThis edition applies a transaction-level authority envelope to five workflows: CRM pricing, payments, refunds, production deployment and access governance.\n\nIt includes an illustrative JSON receipt and 20 simulation charts across five plates. The modeled results are not production benchmarks; their purpose is to make scope, credential lifetime, review cost and revocation trade-offs explicit.\n\nWhich boundary is hardest to enforce in your environment?",
+    "openingNotes": [],
+    "repairPlaintextLists": true,
+    "repairIllustrativeJSON": true,
+    "figureDirectory": "linkedin/newsletter-backfill-2026-09-14/media/N04",
+    "reviewNotes": [
+      "Distinct from Every AI Agent Needs a Passport in Read. Reflect. Rise.: this edition adds five business use cases and 20 reference-simulation charts, not a duplicate body.",
+      "All six source images are retained using observed 1,400-pixel Medium assets instead of the archive's 700–720-pixel copies. Five are four-chart plates; the architecture image is additional.",
+      "Plaintext bullets become native lists; the receipt's smart quotes and Markdown fence are replaced by valid, formatted JSON without changing its fields or values.",
+      "Clarify that the final chart's 210,000 label is approximate: the five stated workload inputs sum to 212,000. The charts and other modeled values are preserved, not independently rerun.",
+      "Existing AI-assistance disclosure, author experience paragraph, source references and related-story links remain intact. Preservation is not independent verification of the experience claim."
+    ],
+    "replacements": [
+      {
+        "before": "Over 90 days, standing grants accumulate to 18.2 active privileged entitlements per user; time-bound grants reach 7.3; transaction-scoped grants with mandatory revocation remain near 4.5. The final matrix checks whether the organization can prove what happened across 210,000 modeled monthly actions. Average field completeness is 96.8%, but CRM revocation evidence is only 62%. One weak cell is more actionable than a reassuring aggregate score.",
+        "after": "Over 90 days, standing grants accumulate to 18.2 active privileged entitlements per user; time-bound grants reach 7.3; transaction-scoped grants with mandatory revocation remain near 4.5. The final matrix checks whether the organization can prove what happened across approximately 210,000 modeled monthly actions; the five stated workload inputs sum to 212,000, so the chart's 210,000 label should be read as approximate. Average field completeness is 96.8%, but CRM revocation evidence is only 62%. One weak cell is more actionable than a reassuring aggregate score."
+      }
+    ]
+  }
+}

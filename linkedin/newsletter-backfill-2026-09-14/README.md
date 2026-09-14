@@ -2,6 +2,8 @@
 
 N01 is published and visibly verified in the existing newsletter. Remaining editions are preparation only; no remaining-edition schedule has been created. See the [N01 execution receipt](execution-N01.json) and [proposed continuation calendar](continuation-plan.md).
 
+N02–N04 now have complete, source-reconciled previews, explicit editorial corrections and exact proposed weekly dates. See the [three-edition approval package](approval-N02-N04.md). They remain **unapproved and unscheduled**; N05–N14 remain queued. Original Medium stories and existing platform schedules are unchanged.
+
 ## Verified scope — 14 September 2026
 
 The user selected [The Operating AI Ledger](https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/) for separate full-length editions of the Medium catalog. It is an existing weekly newsletter with 1,386 observed subscribers. It now has two editions: the existing [99.5% Accurate—and Still Wrong 500 Times](https://www.linkedin.com/pulse/995-accurateand-still-wrong-500-times-aditya-singh-get5c) and the newly published [How to Build an Agentic CRM: A Reference Architecture](https://www.linkedin.com/pulse/how-build-agentic-crm-reference-architecture-aditya-singh-lollc/).
@@ -21,9 +23,9 @@ Read. Reflect. Rise. is a separate existing newsletter with 1,865 observed subsc
 | ID | Exact Medium source title | Preparation status |
 | --- | --- | --- |
 | N01 | [How to Build an Agentic CRM: A Reference Architecture](https://medium.com/ai-in-plain-english/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae) | Published in The Operating AI Ledger |
-| N02 | [Why Traditional CRM Will Die Without Agentic AI](https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4) | Queued; live-body reconciliation required |
-| N03 | [The Enterprise Agent Control Tower: A Production Architecture](https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438) | Queued; live-body reconciliation required |
-| N04 | [AI Agent Identity Is Not Enough](https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155) | Queued; live-body reconciliation required |
+| N02 | [Why Traditional CRM Will Die Without Agentic AI](https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4) | Reconciled and previewed; exact approval required |
+| N03 | [The Enterprise Agent Control Tower: A Production Architecture](https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438) | Reconciled and previewed; exact approval required |
+| N04 | [AI Agent Identity Is Not Enough](https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155) | Reconciled and previewed; exact approval required |
 | N05 | [A $2.4M Account Is Escalating. Should the AI Agent Act?](https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b) | Queued; live-body reconciliation required |
 | N06 | [Your AI Agent’s Memory Is a Database, Not a Prompt](https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef) | Queued; live-body reconciliation required |
 | N07 | [Every AI Agent Action Needs a Receipt](https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5) | Queued; live-body reconciliation required |
