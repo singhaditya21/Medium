@@ -1,0 +1,198 @@
+{
+  "mode": "review_plan_only_no_scheduler_registered",
+  "metricsCollected": false,
+  "editions": [
+    {
+      "id": "N01",
+      "title": "How to Build an Agentic CRM: A Reference Architecture",
+      "anchor": "2026-09-14T06:41:16Z",
+      "anchorType": "publication_observation_proxy",
+      "publicEditionUrl": "https://www.linkedin.com/pulse/how-build-agentic-crm-reference-architecture-aditya-singh-lollc/",
+      "checkpoints": [
+        {
+          "hours": 48,
+          "dueAt": "2026-09-16T06:41:16+00:00",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        },
+        {
+          "hours": 168,
+          "dueAt": "2026-09-21T06:41:16+00:00",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        },
+        {
+          "hours": 672,
+          "dueAt": "2026-10-12T06:41:16+00:00",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        }
+      ]
+    },
+    {
+      "id": "N02",
+      "title": "Why Traditional CRM Will Die Without Agentic AI",
+      "anchor": "2026-09-21T14:00:00+05:30",
+      "anchorType": "scheduled_release_requires_public_verification",
+      "publicEditionUrl": null,
+      "checkpoints": [
+        {
+          "hours": 48,
+          "dueAt": "2026-09-23T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        },
+        {
+          "hours": 168,
+          "dueAt": "2026-09-28T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        },
+        {
+          "hours": 672,
+          "dueAt": "2026-10-19T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        }
+      ]
+    },
+    {
+      "id": "N03",
+      "title": "The Enterprise Agent Control Tower: A Production Architecture",
+      "anchor": "2026-09-28T14:00:00+05:30",
+      "anchorType": "scheduled_release_requires_public_verification",
+      "publicEditionUrl": null,
+      "checkpoints": [
+        {
+          "hours": 48,
+          "dueAt": "2026-09-30T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        },
+        {
+          "hours": 168,
+          "dueAt": "2026-10-05T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        },
+        {
+          "hours": 672,
+          "dueAt": "2026-10-26T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        }
+      ]
+    },
+    {
+      "id": "N04",
+      "title": "AI Agent Identity Is Not Enough",
+      "anchor": "2026-10-05T14:00:00+05:30",
+      "anchorType": "scheduled_release_requires_public_verification",
+      "publicEditionUrl": null,
+      "checkpoints": [
+        {
+          "hours": 48,
+          "dueAt": "2026-10-07T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        },
+        {
+          "hours": 168,
+          "dueAt": "2026-10-12T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        },
+        {
+          "hours": 672,
+          "dueAt": "2026-11-02T14:00:00+05:30",
+          "collectedAt": null,
+          "seriesSubscribers": null,
+          "editionViews": null,
+          "availableReadingMetric": null,
+          "announcementImpressions": null,
+          "announcementComments": null,
+          "mediumPresentations": null,
+          "mediumViews": null,
+          "mediumReads": null
+        }
+      ]
+    }
+  ]
+}

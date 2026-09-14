@@ -1,8 +1,12 @@
 # Medium → The Operating AI Ledger
 
+## Current continuation — N05–N07 ready for exact review
+
+The next three full local editions are prepared: **N05 October 12, N06 October 19, N07 October 26**, all proposed at 14:00 IST. They are **not scheduled**. See the [exact approval packet and previews](approval-N05-N07.md), [live audit](audit-N05-N07.json) and [current future plan](future-execution-plan.md). Their 66 existing figures and 24 code/formula blocks were retained. Two existing feed/newsletter timing collisions are proposed for separate timing-only approval. The optional second weekly lane remains held.
+
 N01 is published and visibly verified. N02–N04 are now scheduled and visibly verified in the same newsletter: September 21, September 28 and October 5, 2026, each at 14:00 IST. See the [N01 receipt](execution-N01.json), [N02–N04 scheduling receipt](execution-N02-N04.json) and [full Medium catalog audit](catalog-audit-2026-09-14.md).
 
-The user approved the exact [three-edition package](approval-N02-N04.md). All 23 inline figures, captions, alt text and seven code examples were checked in native LinkedIn drafts; each schedule was confirmed in the native scheduled-articles list. N05–N13 remain queued; N14 is held until Medium publication is verified. Original Medium stories and existing platform schedules are unchanged. Approval previews and static validation files retain their historical pre-execution labels and hashes; the manifest and execution receipt are authoritative for current state.
+The user approved the exact [three-edition package](approval-N02-N04.md). All 23 inline figures, captions, alt text and seven code examples were checked in native LinkedIn drafts; each schedule was confirmed in the native scheduled-articles list. N05–N07 are now prepared locally for exact approval; N08–N13 remain queued; N14 is held until Medium publication is verified. Original Medium stories and existing platform schedules are unchanged. Approval previews and static validation files retain their historical pre-execution labels and hashes; the manifest and execution receipt are authoritative for current state.
 
 ## Verified scope — 14 September 2026
 
@@ -26,9 +30,9 @@ Read. Reflect. Rise. is a separate existing newsletter with 1,865 observed subsc
 | N02 | [Why Traditional CRM Will Die Without Agentic AI](https://medium.com/@singhaditya21_89007/why-traditional-crm-will-die-without-agentic-ai-6b097803a1f4) | Scheduled September 21, 2026, 14:00 IST; verified |
 | N03 | [The Enterprise Agent Control Tower: A Production Architecture](https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438) | Scheduled September 28, 2026, 14:00 IST; verified |
 | N04 | [AI Agent Identity Is Not Enough](https://medium.com/ai-in-plain-english/ai-agent-identity-authorization-use-cases-59992dc9e155) | Scheduled October 5, 2026, 14:00 IST; verified |
-| N05 | [A $2.4M Account Is Escalating. Should the AI Agent Act?](https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b) | Queued; live-body reconciliation required |
-| N06 | [Your AI Agent’s Memory Is a Database, Not a Prompt](https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef) | Queued; live-body reconciliation required |
-| N07 | [Every AI Agent Action Needs a Receipt](https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5) | Queued; live-body reconciliation required |
+| N05 | [A $2.4M Account Is Escalating. Should the AI Agent Act?](https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b) | Prepared locally; proposed October 12, 14:00 IST; exact approval pending |
+| N06 | [Your AI Agent’s Memory Is a Database, Not a Prompt](https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef) | Prepared locally; proposed October 19, 14:00 IST; exact approval pending |
+| N07 | [Every AI Agent Action Needs a Receipt](https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5) | Prepared locally; proposed October 26, 14:00 IST; exact approval pending |
 | N08 | [Human Approval Is a Queueing System](https://medium.com/@singhaditya21_89007/human-approval-is-a-queueing-system-0c2858baa088) | Queued; live-body reconciliation required |
 | N09 | [Your Multi-Agent System Is a Distributed System](https://medium.com/@singhaditya21_89007/your-multi-agent-system-is-a-distributed-system-0c456a0fe664) | Queued; live-body reconciliation required |
 | N10 | [What an Agent Actually Costs](https://medium.com/@singhaditya21_89007/what-an-agent-actually-costs-7df104a6fae5) | Queued; live-body reconciliation required |

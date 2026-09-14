@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-09-14T08:14:53Z",
+  "mode": "read_only_live_audit",
+  "normalization": "UTF-16 FNV-1a over source text excluding figures and subtitle; join adjacent code fragments; remove heading permalink #; fold curly quotes and dashes, dash spacing, whitespace and bullet glyphs. This is fidelity matching, not a cryptographic authenticity claim.",
+  "sources": {
+    "N05": {
+      "characters": 26886,
+      "fnv": "35869fdd",
+      "blocks": 122,
+      "figures": 30
+    },
+    "N06": {
+      "characters": 49619,
+      "fnv": "b06627ce",
+      "blocks": 227,
+      "figures": 18
+    },
+    "N07": {
+      "characters": 45226,
+      "fnv": "02b7378d",
+      "blocks": 212,
+      "figures": 18
+    }
+  },
+  "linkedIn": {
+    "publishedArticles": 9,
+    "draftArticles": 3,
+    "scheduledNewsletterEditions": 3,
+    "visibleScheduledFeedPosts": 11,
+    "combinedComposerBadge": 14,
+    "exactTitleDuplicatesForN05N06N07": 0,
+    "overlapReviews": [
+      {
+        "url": "https://www.linkedin.com/pulse/3-minute-decision-took-3-weeks-ship-aditya-singh-kmejc/",
+        "finding": "N05 is distinct: this published article concerns policy-change lead time and deterministic routing, not the full $2.4M approval/authority/effect workflow."
+      },
+      {
+        "url": "https://www.linkedin.com/pulse/better-model-wont-fix-badly-designed-agent-loop-aditya-singh-m7qec/",
+        "finding": "N06 and N07 are distinct deep dives. Existing article discusses loops, evidence-action gap and evaluation, not bitemporal governed-memory schemas or the receipt signing/ambiguity protocol."
+      }
+    ],
+    "limitations": [
+      "All published titles and three draft titles reviewed; two closest published bodies reviewed in full. This is not exhaustive semantic comparison of every historical body.",
+      "Ordinary feed shares of these stories are not duplicate newsletter editions.",
+      "Recheck all inventories and context at execution; no current preparation grants authority."
+    ]
+  },
+  "medium": {
+    "published": 13,
+    "scheduled": 1,
+    "standingRole": "still scheduled; retain N14 hold until public release is observed"
+  },
+  "calendar": {
+    "timezone": "Asia/Kolkata",
+    "visibleFeedSlots": [
+      "2026-09-16T08:45:00+05:30",
+      "2026-09-18T08:45:00+05:30",
+      "2026-09-21T14:00:00+05:30",
+      "2026-09-23T08:45:00+05:30",
+      "2026-09-25T14:00:00+05:30",
+      "2026-09-28T08:45:00+05:30",
+      "2026-09-30T14:00:00+05:30",
+      "2026-10-02T08:45:00+05:30",
+      "2026-10-05T14:00:00+05:30",
+      "2026-10-07T08:45:00+05:30",
+      "2026-10-09T14:00:00+05:30"
+    ],
+    "exactCollisions": [
+      {
+        "edition": "N02",
+        "at": "2026-09-21T14:00:00+05:30",
+        "feedOpening": "A 97% approval rate can coexist with a broken approval system.",
+        "proposedFeedOnlyMove": "2026-09-22T08:45:00+05:30",
+        "status": "proposal_only_requires_exact_approval"
+      },
+      {
+        "edition": "N04",
+        "at": "2026-10-05T14:00:00+05:30",
+        "feedOpening": "A memory system can achieve 104 ms p95 retrieval and still be unsafe.",
+        "proposedFeedOnlyMove": "2026-10-06T08:45:00+05:30",
+        "status": "proposal_only_requires_exact_approval"
+      }
+    ],
+    "nextBatchNoObservedCollision": true,
+    "existingSchedulesChanged": false
+  },
+  "localPreviewQA": {
+    "observedChromeViewport": {"width": 407, "height": 685},
+    "figuresLoaded": {"N05": 30, "N06": 18, "N07": 18},
+    "semanticLists": {"N05": 4, "N06": 16, "N07": 13},
+    "emptyCodeBlocks": 0,
+    "pageHorizontalOverflow": false,
+    "fullResolutionFigureLinks": true,
+    "nativeLinkedInRenderingVerified": false,
+    "limitations": "Visual samples and DOM loading/structure checks of reused assets, not a fresh manual inspection of every diagram or rerun of the source simulations."
+  },
+  "publicActionsExecuted": 0
+}

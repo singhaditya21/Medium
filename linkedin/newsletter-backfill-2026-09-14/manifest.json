@@ -1,10 +1,12 @@
 {
   "schemaVersion": 1,
   "createdAt": "2026-09-14T06:04:36Z",
-  "status": "N01_published_N02_N04_scheduled_and_verified_rest_queued",
+  "status": "N01_published_N02_N04_scheduled_N05_N07_prepared_awaiting_exact_approval",
   "latestExecutionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
   "latestCatalogAudit": "linkedin/newsletter-backfill-2026-09-14/catalog-audit-2026-09-14.md",
-  "currentApprovalPackage": "linkedin/newsletter-backfill-2026-09-14/approval-N02-N04.md",
+  "currentApprovalPackage": "linkedin/newsletter-backfill-2026-09-14/approval-N05-N07.md",
+  "nextBatchAudit": "linkedin/newsletter-backfill-2026-09-14/audit-N05-N07.json",
+  "futurePlan": "linkedin/newsletter-backfill-2026-09-14/future-execution-plan.md",
   "request": "Cross-publish each owned Medium article as a separate full-length LinkedIn newsletter edition.",
   "destination": {
     "name": "The Operating AI Ledger",
@@ -155,7 +157,9 @@
       "mediumUrl": "https://medium.com/ai-in-plain-english/a-2-4m-account-is-escalating-should-the-ai-agent-act-aditya-singh-0e20321f6d2b",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/",
       "liveMediumState": "published",
-      "state": "needs_live_body_reconciliation_and_preview",
+      "state": "prepared_awaiting_exact_action_time_approval",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N05-a-2-4m-account-is-escalating.html",
+      "proposedSchedule": "2026-10-12T14:00:00+05:30",
       "linkedInEditionUrl": null
     },
     {
@@ -165,7 +169,9 @@
       "mediumUrl": "https://medium.com/@singhaditya21_89007/your-ai-agents-memory-is-a-database-not-a-prompt-74f5e24f49ef",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/your-ai-agents-memory-is-a-database-not-a-prompt/",
       "liveMediumState": "published",
-      "state": "needs_live_body_reconciliation_and_preview",
+      "state": "prepared_awaiting_exact_action_time_approval",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N06-your-ai-agents-memory-is-a-database-not-a-prompt.html",
+      "proposedSchedule": "2026-10-19T14:00:00+05:30",
       "linkedInEditionUrl": null
     },
     {
@@ -175,7 +181,9 @@
       "mediumUrl": "https://medium.com/@singhaditya21_89007/every-ai-agent-action-needs-a-receipt-906fc2c6ddb5",
       "githubPagesUrl": "https://singhaditya21.github.io/Medium/articles/every-ai-agent-action-needs-a-receipt/",
       "liveMediumState": "published",
-      "state": "needs_live_body_reconciliation_and_preview",
+      "state": "prepared_awaiting_exact_action_time_approval",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N07-every-ai-agent-action-needs-a-receipt.html",
+      "proposedSchedule": "2026-10-26T14:00:00+05:30",
       "linkedInEditionUrl": null
     },
     {

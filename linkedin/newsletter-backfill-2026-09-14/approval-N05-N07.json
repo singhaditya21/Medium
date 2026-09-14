@@ -1,0 +1,122 @@
+{
+  "state": "awaiting_exact_action_time_approval",
+  "destination": "https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/",
+  "publicationType": "newsletter_edition",
+  "settings": {
+    "audience": "Anyone + Subscribers",
+    "comments": "On",
+    "notifications": "Standard LinkedIn newsletter notifications; no inbox-delivery guarantee or separate manual messages",
+    "cover": "Existing first source figure, repeated as figure 1 in the body",
+    "mentions": [],
+    "hashtags": [],
+    "preserveMediumAndExistingLinkedInState": true,
+    "nativeSchedulingVerified": false
+  },
+  "N05": {
+    "scheduleLabel": "12 October 2026, 2:00 PM IST",
+    "scheduleISO": "2026-10-12T14:00:00+05:30",
+    "feedIntroduction": "A 12% discount on a $2.4M renewal changes nominal contract value by $288,000.\n\nThat is not the same action as creating a follow-up task, even if both use the same CRM API.\n\nThis edition follows a synthetic escalation through evidence, action-level risk, human approval, leased authority, independent verification and recovery. Thirty technical figures make the control boundaries explicit; the scenario and numbers are illustrative, not customer results.\n\nWhat can your agent do before approval—and what must remain impossible until the exact business delta is approved?",
+    "append": [
+      {
+        "tag": "p",
+        "text": "Originally published at https://singhaditya21.github.io on August 21, 2026.",
+        "href": "https://singhaditya21.github.io/Medium/articles/a-2-4m-account-is-escalating/"
+      },
+      {
+        "tag": "p",
+        "text": "Continue the production AI-agent series"
+      },
+      {
+        "tag": "p",
+        "text": "How to Build an Agentic CRM: A Reference Architecture",
+        "href": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae"
+      },
+      {
+        "tag": "p",
+        "text": "The Enterprise Agent Control Tower: A Production Architecture",
+        "href": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438"
+      },
+      {
+        "tag": "p",
+        "text": "Which control is hardest to implement in your production environment: evidence, bounded authority, approval, verification, or recovery?"
+      }
+    ],
+    "openingNotes": [],
+    "reviewNotes": [
+      "Full source body retained, with 30 existing figures. Five live-Medium closing paragraphs restored; punctuation and bullet presentation use the archive's equivalent typography.",
+      "The live title appends the author name. The edition uses the original clean title; author attribution remains in LinkedIn's byline.",
+      "Archive captions and alt text are explicit accessibility additions because the live Medium figures have no captions. All AI-assistance and synthetic-scenario disclosures remain.",
+      "No new figures, claims, mentions or Medium edits. The $288,000 figure is nominal arithmetic: $2,400,000 × 12%."
+    ]
+  },
+  "N06": {
+    "scheduleLabel": "19 October 2026, 2:00 PM IST",
+    "scheduleISO": "2026-10-19T14:00:00+05:30",
+    "subtitle": "A production blueprint for provenance, temporal validity, trust zones, poisoning resistance, retention, and deletion.",
+    "feedIntroduction": "A memory can be relevant, fluent and still inadmissible for a pricing decision.\n\nThis edition separates semantic similarity from permission to influence an action. Eighteen figures and fifteen code, schema and formula blocks connect six memory-control responsibilities: ingestion, provenance, trust, retrieval, decision binding and lifecycle management.\n\nThe examples are synthetic. The operational test is concrete: can you reconstruct exactly what an agent knew, correct its sources, and prove that a deleted assertion no longer influences new decisions?\n\nWhich breaks first in your stack: temporal replay, reverse lineage or deletion propagation?",
+    "append": [
+      {
+        "tag": "p",
+        "text": "Continue the production AI-agent series"
+      },
+      {
+        "tag": "p",
+        "text": "How to Build an Agentic CRM: A Reference Architecture",
+        "href": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae"
+      },
+      {
+        "tag": "p",
+        "text": "The Enterprise Agent Control Tower: A Production Architecture",
+        "href": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438"
+      },
+      {
+        "tag": "p",
+        "text": "Which control is hardest to implement in your production environment: evidence, bounded authority, approval, verification, or recovery?"
+      }
+    ],
+    "openingNotes": [
+      "Implementation note for this republication: The examples are architectural sketches, not deployable services. With the stated Figure 11 inputs, the weighted routing score is 0.7865. The later response value of 0.873 is a separate illustrative response, not the result of that calculation. Production deletion workers must authorize each command, atomically reserve its identity and digest, fence concurrent workers, and record deletion only after verification succeeds. The abbreviated worker below assumes these safeguards in its collaborators; its syntax alone does not establish them."
+    ],
+    "reviewNotes": [
+      "Full live body reconciled. Subtitle and four live closing paragraphs retained. Eighteen existing figures and all fifteen original code/schema/formula blocks preserved; adjacent Medium code fragments are rejoined without changing their contents.",
+      "Plaintext lists become semantic lists; archive h3 subsections remain nested beneath h2 sections for navigation.",
+      "One explicit republication note clarifies the arithmetic and incomplete deletion-worker contract. It does not change the Medium story, sample fields or plotted data.",
+      "All claims of synthetic values, AI assistance and architecture limitations remain. Syntax and fidelity checks do not certify production correctness."
+    ]
+  },
+  "N07": {
+    "scheduleLabel": "26 October 2026, 2:00 PM IST",
+    "scheduleISO": "2026-10-26T14:00:00+05:30",
+    "subtitle": "How signed action receipts turn opaque tool use into auditable, replay-safe, recoverable business transactions.",
+    "feedIntroduction": "A timeout is not proof that an action failed.\n\nIn this synthetic renewal scenario, one retry leaves the CRM, billing system and customer message with different evidence of completion.\n\nThis edition defines an action-receipt control plane: prepare intent before execution, preserve one business action ID, reconcile ambiguity, verify the effect independently, and seal a versioned record. Eighteen figures and nine code, protocol and formula blocks show how the pieces fit.\n\nA signature proves neither a correct decision nor a successful business outcome. Could your team distinguish those claims during an incident?",
+    "append": [
+      {
+        "tag": "p",
+        "text": "Continue the production AI-agent series"
+      },
+      {
+        "tag": "p",
+        "text": "How to Build an Agentic CRM: A Reference Architecture",
+        "href": "https://medium.com/@singhaditya21_89007/how-to-build-an-agentic-crm-a-reference-architecture-7485b5da8cae"
+      },
+      {
+        "tag": "p",
+        "text": "The Enterprise Agent Control Tower: A Production Architecture",
+        "href": "https://medium.com/@singhaditya21_89007/the-enterprise-agent-control-tower-a-production-architecture-b964e0538438"
+      },
+      {
+        "tag": "p",
+        "text": "Which control is hardest to implement in your production environment: evidence, bounded authority, approval, verification, or recovery?"
+      }
+    ],
+    "openingNotes": [
+      "Implementation note for this republication: The snippets illustrate contracts, not a complete transaction service. SELECT FOR UPDATE locks retrieved rows; a missing action-ledger row needs atomic unique-key reservation before any side effect, with conflict handling and domain mutation in the intended transaction boundary. The abbreviated HTTP example omits the separate DPoP proof header required by its authorization scheme. The reconciler also assumes a typed, validated postcondition derived from the approved intent. A production implementation must supply these missing pieces, deterministic signed-field projection, failure handling and concurrency tests; do not deploy the snippets unchanged."
+    ],
+    "reviewNotes": [
+      "Full live source reconciled, including subtitle and four closing paragraphs. All eighteen existing figures and nine complete code/protocol/formula blocks retained; Medium's split fragments are rejoined.",
+      "Plaintext lists become semantic lists; subsection hierarchy uses the archive's h3 levels.",
+      "One republication note flags atomic-reservation, missing DPoP proof-header and postcondition-contract gaps. Existing pseudocode and source claims are not silently rewritten.",
+      "Action receipt remains the author's reference architecture, not a standards-track protocol. Cryptographic origin/integrity is not business correctness."
+    ]
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "mode": "local_review_only",
+  "nativeSchedulingVerified": false,
+  "editions": [
+    {
+      "id": "N05",
+      "sourceSha256": "1cc91283485aa09792089cf290ae29bf7c80aed4367249b388f58cf82f52c6ae",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N05-a-2-4m-account-is-escalating.html",
+      "previewSha256": "529429aee4c0e980ed42fb2981c8d576450e0f6533315233487749cc85878d89",
+      "blocks": 122,
+      "figures": [
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-01.png",
+          "sha256": "a34abf0182ec2b0a6245f7f8eba25985779275ad2ca207a330bfc6fbc8570c70"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-02.png",
+          "sha256": "33c391effecdafd66498ee08ac723178bd9c65d8fee89a3cde3ce320fa0365e7"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-03.png",
+          "sha256": "c084a508176e9358a36587dfc1d3a11650fc070698cb55b724c8e101bf737a99"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-04.png",
+          "sha256": "58f63eaa9c7962c05bdd16297a83f8c3a11fcdd8487e90eb7d26338c40622f66"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-05.png",
+          "sha256": "828d41acacf2fba5f27ef2b9571b1fd4b37b61f63059fd48f04c947be912039c"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-06.png",
+          "sha256": "f25c1f7795378be652a63dfe16e2831ac46a5dd96cf05fab077c2cd91719ee4a"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-07.png",
+          "sha256": "fd1e91bb16c6b3a08b5e59c0d49c61ce69e6a8e2997dc765819d7bb655c8256a"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-08.png",
+          "sha256": "c6533dc1142b38703af129c835610a46beeb75373b1171630662aef9350cf824"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-09.png",
+          "sha256": "70e9094ff4e5ef8b976db05afedbc3417f8fa0c108ef9f8ad2ae63741a3d8c3e"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-10.png",
+          "sha256": "72be07deab4665a399452c06df2a936a7ed068aedc676b1eabb6ba97c63ea117"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-11.png",
+          "sha256": "2bafa3cd842844987987a8992770ae560edee80bb0fc37e5ff7ce7e6739468d1"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-12.png",
+          "sha256": "97eb1314de9004c79edc73743a423310dec590e4f9d928cf8cbc02a41f3f0736"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-13.png",
+          "sha256": "144ed0fe822d5d7e96188a42c128c503d15c9492e2d5d325ffc4344b13490a59"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-14.png",
+          "sha256": "11907d2a9c10150cc792b06cbdaf017146487d987eea0a8028622fc2e3fe0574"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-15.png",
+          "sha256": "a732e84a0c2c9377155b3cf45d04bf081f546a1b765744ab9616b88fe3e6b23e"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-16.png",
+          "sha256": "d08c145bc26cffa9c00477696072320c51514e499ffb063c66f4314fcf082bde"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-17.png",
+          "sha256": "ac32399d84b6a6c35cd919df3859381fbe5bc3b95eb9225d26cf39a656e763b2"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-18.png",
+          "sha256": "a28fea5a6729782335fbed69a0ed27951a12cb81f597d20f48d716ce2896aa94"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-19.png",
+          "sha256": "9043208843cc15c3054ce1481cc254ee2094c3b037b83f3c2f3edf556a002da1"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-20.png",
+          "sha256": "96e98e3e5f75e78b05df4f197c76663ce40f9a77deecb7c1ce2dd304958abf4d"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-21.png",
+          "sha256": "7682d91d1e4e2e818e084708a32ad902e0261d2598585f18037782c4de7f9084"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-22.png",
+          "sha256": "8c53675a01fd69321f8e10bcd9cf1fa7bcd438352224ed227ef67929ee8ad9b9"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-23.png",
+          "sha256": "bb8de5bfd8171dd8edcb1d8caa6f0201a2c388d3338c0ac74f0ab10c0d85879d"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-24.png",
+          "sha256": "397fb9aac233309b06ca9328144e916c599fe4e3a82b127a906b948012792f75"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-25.png",
+          "sha256": "12f59f6c57eddfca32ee1c2b4a9ba1d4a78426fb03e01bc0585ca85f03596dcb"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-26.png",
+          "sha256": "7d8fe38b9b0d6d4b337cb82951df0464c4c1ad0c1b3fa703871809634fff85a5"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-27.png",
+          "sha256": "9f8313bae842d77784a4cc3a62077395013677c6a69eaabefe40279826c18c9b"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-28.png",
+          "sha256": "962c7c1d1728293c7460edd72568669e858f3b79b44d9860e80c4807d0ce0a24"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-29.png",
+          "sha256": "261c2b0e0e410298c909f0a4a3f6658c0502cde313151fe6a9a7a196629d13ed"
+        },
+        {
+          "path": "assets/images/a-2-4m-account-is-escalating/figure-30.png",
+          "sha256": "86533c8a95709b313367320a5a940e9f4bd77d1952a2307f1540424365361252"
+        }
+      ],
+      "sourceTextCharacters": 26886,
+      "sourceTextFNV": "35869fdd",
+      "liveSourceTextMatches": true,
+      "nativeVerified": false
+    },
+    {
+      "id": "N06",
+      "sourceSha256": "5054e4d80a8804cc902738ebd5d27a2e6165ce335b218cfa4fa9ce9179e7c562",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N06-your-ai-agents-memory-is-a-database-not-a-prompt.html",
+      "previewSha256": "0a437b3c04c74865fa724b3d45ffc58e5b5768dcbff35749589ea44d1db8ff57",
+      "blocks": 225,
+      "figures": [
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-01.png",
+          "sha256": "83764c2db011574e59145b1f1b8079245dfc07c71c64727a4d4faf6a92620eb1"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-02.png",
+          "sha256": "88f9b8592fba0b74c8a416b76036cd6907ce144367b2e7a1124bff6ff5c3f3fb"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-03.png",
+          "sha256": "4040bf510485b27b52d2a06ee4deeafa6b385084d4ca7b28939312d411d17967"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-04.png",
+          "sha256": "04bd26bfdbe049f2e6280775cf555ae5f090004aec2de8ebb605506508679b54"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-05.png",
+          "sha256": "b1216fdcfd156692c991d332b6201f8e5bea3d8cd1e329122644143bc5bd2173"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-06.png",
+          "sha256": "832438ae49e29c9455805bd2fa5d30d949b25df6cace06806e5b380cd14ce4aa"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-07.png",
+          "sha256": "4ea4435ebdd16b3db29da22e002de071ba4b3f7142f1fc7c890e62ba17c19a12"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-08.png",
+          "sha256": "0032407810bd7b38ba7df477b2c807bb089b5b03c6ebb986b8b86be6e6926daf"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-09.png",
+          "sha256": "add4bfd2d0e237d01dfecf16fa2dfac765ce980ac2689567eea700b9a371cb9f"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-10.png",
+          "sha256": "5718d1539c7848ebda1c74903ebee9a502fb24be66de66ff78d88988201ffb98"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-11.png",
+          "sha256": "30fd6b112c515fde6898f4171d3c0357f1cce5fb2d4c0f9544139c56684bc7b9"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-12.png",
+          "sha256": "48ad54704a12ad7c7c56279edd2ac5871c205b7f84fe3a8e08fb1382f1065695"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-13.png",
+          "sha256": "a8817f8541d00ff21b7f47a8bcb17433b93ab8d218c0cecf7b12c587f937b2b3"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-14.png",
+          "sha256": "71ae29e7b68a55b16916d89e3458bce30e4f0a04ff4109c098bd95df7669e8d7"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-15.png",
+          "sha256": "f48d4b97386e679f142987b93128d78daa90edb47aabd853dd527b3d72c4f5f0"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-16.png",
+          "sha256": "95772a402982817e7146e29842c55a003c8f78db25c94b0108d83bc04c28a32b"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-17.png",
+          "sha256": "09584192cba00a7ff10b8fd284de6f22c89a46c9ae0243b4db395a06791ec0af"
+        },
+        {
+          "path": "assets/images/your-ai-agents-memory-is-a-database-not-a-prompt/figure-18.png",
+          "sha256": "71ea5fb5c2ef1e0cbfe14a87f43afe051e0b6141790ba0a98bb9cd94507febd0"
+        }
+      ],
+      "sourceTextCharacters": 49619,
+      "sourceTextFNV": "b06627ce",
+      "liveSourceTextMatches": true,
+      "nativeVerified": false
+    },
+    {
+      "id": "N07",
+      "sourceSha256": "5c09f8c053101fa8d7056a7930ec0806f99d7e0529ce1d6809c6d1a9cdb0a28f",
+      "preview": "linkedin/newsletter-backfill-2026-09-14/N07-every-ai-agent-action-needs-a-receipt.html",
+      "previewSha256": "71c30d058cd890e2a2c5a9aa1d365bddbae34cb17e6e485524ba0636d4a4a836",
+      "blocks": 209,
+      "figures": [
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-01.png",
+          "sha256": "d952ef1784da4f25d6143d015bc9a4f810b6bb4d4f0ceff1fc265766e3932ee3"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-02.png",
+          "sha256": "7774f79daeddc681f2c2d0502ff692e3afe25a77fb07f6849b056dbdd019a832"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-03.png",
+          "sha256": "a46a310b368d02fbd7bca02f5c5d42c31894f688b9d4c0ac7fbb2798ba7555b0"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-04.png",
+          "sha256": "a89d4eaaf1d8febfd9cfa42f7f3d5f63697c832ffcffb472faaebee781a1239c"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-05.png",
+          "sha256": "960c9f35f1da5fc8016ef04426799cf95a5fbfe8ecffcd0bc98e9e97bbeed9f0"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-06.png",
+          "sha256": "304840e71753781ce7c12fb1b7bf1a4075460e6f3b3164315d729b9333eb971a"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-07.png",
+          "sha256": "ba48ffeb4311f39bb03a83e9b3c1ac4a6c65f33ce0466eb4dfd4846ec2edda25"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-08.png",
+          "sha256": "42e29f73e332487c8a1901461cd99dfaeec3c6c114fb598387cd5a72d4aca615"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-09.png",
+          "sha256": "ffa10dc153c78ceec141d0efc965cca29819598316308c4fa4921fe4ccbd088a"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-10.png",
+          "sha256": "8dfb8ba707315d92165c1f63931d973c8a229b5ff23441ee14f4e4df5a78c14b"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-11.png",
+          "sha256": "247d1431b1f3c6371828e5e8c8dd0b400196eefb3193081cfda3cc70835e890e"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-12.png",
+          "sha256": "ad23da8a96b95c1455f40fcc00bfe80d8c4ebcabf09c3bc81b65ea383ae0561a"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-13.png",
+          "sha256": "95f5ddbc6e439efeb1ed0c1afe3d302c882e8ed2088d09be4852785de6aecbf6"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-14.png",
+          "sha256": "a3175ae91ab43cdd9a506c8d8deab09894b8abeb97207bca2a6c950d60a27a4b"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-15.png",
+          "sha256": "d4d08f2af342445c0d286f81d97e266d99679e28974768acd3371a5d0c7cc9c2"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-16.png",
+          "sha256": "5d92fe03325b5801d402a5e9eb169fefd82b5b6c1d273fda3fd71636cc8f5c11"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-17.png",
+          "sha256": "59b215fd5d110cf4fb00b5d101cb4a9444ce8b996603cc63793f399cfdd78124"
+        },
+        {
+          "path": "assets/images/every-ai-agent-action-needs-a-receipt/figure-18.png",
+          "sha256": "e402d2a7febc2fd54c768cd44f67d1a008e3a55aa65d17c7ec6b395b96d24359"
+        }
+      ],
+      "sourceTextCharacters": 45226,
+      "sourceTextFNV": "02b7378d",
+      "liveSourceTextMatches": true,
+      "nativeVerified": false
+    }
+  ]
+}

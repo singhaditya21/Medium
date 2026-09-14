@@ -1,5 +1,7 @@
 # Newsletter continuation — confirmed first batch, remaining proposals
 
+**Current update:** [N05–N07 exact review package](approval-N05-N07.md) is prepared locally, not scheduled. The [future execution plan](future-execution-plan.md) is authoritative for current priorities and calendar collisions. The optional Thursday/Friday calendar below is a historical unexecuted alternative, **held and not active**. Maintain one weekly edition unless the user separately approves a cadence change.
+
 Updated 14 September 2026. N01 is published. N02–N04 are now scheduled and visibly verified at the dates below. All other dates remain proposed placeholders pending source QA, duplicate/collision checks and exact action-time approval.
 
 Continuation update: the user approved the [exact N02–N04 package](approval-N02-N04.md), and its unchanged dates were executed through signed-in Chrome. See the [verified scheduling receipt](execution-N02-N04.json). N04's comparison with the existing Passport article is complete: related subject, different body/use cases. Ordinary feed-post schedules were not re-audited or changed in this execution.
