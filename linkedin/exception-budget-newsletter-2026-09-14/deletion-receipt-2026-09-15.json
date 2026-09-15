@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "action": "linkedin_unscheduled_newsletter_draft_deleted",
+  "recordedAt": "2026-09-15T08:46:00Z",
+  "timestampMeaning": "Retrospective receipt preparation time, not the exact click timestamp",
+  "executionSurface": "user_initiated_signed_in_chrome",
+  "title": "AI Agents Need an Exception Budget",
+  "newsletterName": "The Operating AI Ledger",
+  "newsletterUrl": "https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/",
+  "confirmation": {
+    "obtained": true,
+    "scope": "Delete this LinkedIn draft only after explicit confirmation of possible irreversibility; retain GitHub backup, both newsletter series and all other editions."
+  },
+  "result": {
+    "status": "deleted_and_visibly_verified",
+    "nativeWarning": "Delete draft? You can’t undo this action.",
+    "nativeSuccess": "Your draft was deleted.",
+    "absentFromDraftsAfterDeletion": true,
+    "absentAfterRevisitingArticleManager": true,
+    "wasScheduled": false,
+    "wasPublished": false,
+    "otherDraftsRemaining": 3,
+    "otherSchedulesUnchanged": true,
+    "newsletterSeriesPreserved": true,
+    "localAndGitHubBackupPreserved": true
+  },
+  "priorSchedulingApprovalSuperseded": true,
+  "recreationRequiresNewExplicitInstruction": true,
+  "privateUrlsStored": false,
+  "secretsStored": false,
+  "browserStateStored": false
+}

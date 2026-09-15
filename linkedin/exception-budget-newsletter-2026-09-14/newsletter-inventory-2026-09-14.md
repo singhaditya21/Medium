@@ -1,5 +1,7 @@
 # LinkedIn newsletter inventory and alternate-day proposal
 
+Historical snapshot. Superseded by `../newsletter-inventory-2026-09-15.md`. The user subsequently confirmed deletion of the Exception Budget LinkedIn draft; that title's scheduling proposal is cancelled. No alternate-day rearrangement has been applied.
+
 Observed through signed-in Chrome on 14 September 2026, approximately 17:28–17:40 IST. This is an inventory/preparation record, **not a scheduling receipt**.
 
 ## Published: The Operating AI Ledger — 2 editions

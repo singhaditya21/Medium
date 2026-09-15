@@ -4,13 +4,13 @@ New technical newsletter review package, prepared 14 September 2026 for The Oper
 
 ## Publication status
 
-**Not published or scheduled.** The complete revised text and 12 exhibit captions are saved in a native draft in **The Operating AI Ledger** and were verified after reload. On 15 September 2026, exhibit 1 was uploaded as the article cover and as the first inline figure. Inline images are **1 of 12**, with exhibit 1's alternative text and position immediately before its matching caption verified after reopening the draft. The Mac locked again during the exhibit 2 upload; the native UI explicitly reported that manual unlock was required. The draft must not be scheduled until all inline media and the complete final preview are verified.
+**LinkedIn draft deleted at the user's confirmed request on 15 September 2026.** LinkedIn displayed “Your draft was deleted.” The title was absent from Drafts immediately afterward and after revisiting the article manager. It was never published or scheduled. The complete local/GitHub manuscript, 12 figures and calculation package remain preserved in this directory.
 
-The user has approved scheduling this edition for **24 September 2026 at 2:00 PM IST**, with the reviewed body, 12 inline figures, exhibit 1 cover, title/card only, Anyone + Subscribers, comments On, no mentions or hashtags, and standard newsletter notifications. This is approval, **not a scheduling receipt**. Existing other schedules remain unchanged. See `progress-2026-09-15.md`.
+The deletion instruction supersedes the earlier September 24 scheduling approval. **Do not recreate, publish or schedule this edition without a new explicit instruction.** All other newsletter editions and schedules remain unchanged. See `deletion-receipt-2026-09-15.json` and `progress-2026-09-15.md`.
 
 The requested “Technical companion and editorial method” section has been removed from the manuscript, generated reading preview and native draft. All other manuscript content remains unchanged. LinkedIn's text transfer uses labeled paragraphs for the three tables; every source table cell was checked. All existing live bodies, media, mentions, settings and schedules remain unchanged. This directory is outside the public GitHub Pages staging inputs.
 
-See `newsletter-inventory-2026-09-14.md` for the live-verified published inventory, current scheduled editions and the proposed alternate-day calendar awaiting exact-date confirmation. No private editor URL or browser state is retained.
+See `../newsletter-inventory-2026-09-15.md` for the current live-verified inventory. The September 14 inventory is historical; its Exception Budget scheduling proposal is cancelled. No private editor URL or browser state is retained.
 
 Open `index.html` for the complete reading preview. Its architecture figures open full-size. The contact sheet is an index; inspect the full-resolution files for technical detail.
 
