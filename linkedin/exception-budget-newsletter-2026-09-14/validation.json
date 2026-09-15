@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "scope": "Static artifact checks only",
+  "manuscript_whitespace_word_count": 3729,
+  "architecture_exhibits": 10,
+  "statistical_exhibits": 2,
+  "image_dimensions": [
+    {
+      "exhibit": 1,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 2,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 3,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 4,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 5,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 6,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 7,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 8,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 9,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 10,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 11,
+      "width": 3840,
+      "height": 2720
+    },
+    {
+      "exhibit": 12,
+      "width": 3840,
+      "height": 2720
+    }
+  ],
+  "local_links_valid": true,
+  "unique_exhibit_ids": true,
+  "all_images_have_alt_text": true,
+  "manifest_hashes_valid": true,
+  "external_sources": "Primary source citations; no live LinkedIn/Medium access needed",
+  "arithmetic_tests": 22,
+  "arithmetic_run": "python3 -m unittest -v test_analytics.py",
+  "production_architecture_validated": false,
+  "public_actions_performed": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260915074758-reply-posted-2026-09-15-linkedin-reply-abhijit-provisional-board-metrics",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-15T07:47:58Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-15T07:47:58Z",
+    "scope": "User approved N1 and C1 exactly as written and then instructed Continue. Scope is this reply only with one native author mention; no reactions, follows, messages or additional posts. Timestamp is retrospective receipt-entry time, not claimed exact click time."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-15-linkedin-reply-abhijit-provisional-board-metrics",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7505493457335988226&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7505493457335988226&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true",
+    "publishedTextSha256": "95a97a9774a6b1caf5bd6dccda70b8799624fddbd24f96aedaafc917011cff6e",
+    "verifiedAt": "2026-09-15T07:47:58Z",
+    "verification": "Read Prukalpa post and all eight prior replies, including Abhijit's latest board-reporting example. No duplicate user reply before execution. Native reply rendered under Aditya Singh with timestamp now and clickable Abhijit mention; composer cleared. Public URL identifies the verified source discussion, not a copied new-comment permalink. Existing engagement tracking issue 36 retained from repository; fresh GitHub lookup returned 503."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

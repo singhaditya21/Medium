@@ -1,0 +1,110 @@
+[
+  {
+    "number": 1,
+    "title": "Make recovery capacity part of the execution path",
+    "file": "01-control-plane",
+    "caption": "The exception-budget control plane adds a capacity gate to the write path while keeping authorization independent.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 9
+  },
+  {
+    "number": 2,
+    "title": "Unknown is a durable state, not a retry instruction",
+    "file": "02-action-state-machine",
+    "caption": "A lost response enters a durable unresolved state. Cancellation, retry and settlement each require a distinct proof.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 6
+  },
+  {
+    "number": 3,
+    "title": "Build the metric denominator before the dashboard",
+    "file": "03-metric-lineage",
+    "caption": "A metric architecture keeps the business-action denominator separate from attempts, source events and deduplicated investigations.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 9
+  },
+  {
+    "number": 4,
+    "title": "Reserve capacity atomically, before granting dispatch",
+    "file": "04-atomic-admission",
+    "caption": "Atomic reservations prevent concurrent overspend; they cannot eliminate forecast error or authorize unsafe work.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 9
+  },
+  {
+    "number": 5,
+    "title": "Keep authority shorter-lived than the workflow",
+    "file": "05-leased-authority",
+    "caption": "Leased authority and recovery ownership have different lifecycles. A compensation needs its own current authorization.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 9
+  },
+  {
+    "number": 6,
+    "title": "Commit the action once; reconcile the missing response",
+    "file": "06-domain-transaction",
+    "caption": "The sequence identifies the local atomic boundary, lost-response branch and separate downstream-effect contracts.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 0
+  },
+  {
+    "number": 7,
+    "title": "Verification needs evidence independent of the agent",
+    "file": "07-independent-verification",
+    "caption": "Verification links an approved postcondition to authoritative evidence without using the agent narrative as its own proof.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 9
+  },
+  {
+    "number": 8,
+    "title": "Design human recovery as a finite service system",
+    "file": "08-human-recovery",
+    "caption": "The recovery architecture exposes staffing, skill constraints and the separate authorization of corrective actions.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 9
+  },
+  {
+    "number": 9,
+    "title": "Throttle the affected capability, preserve recovery",
+    "file": "09-backpressure-state-control",
+    "caption": "Capability-scoped backpressure has explicit hold, recovery and reentry behavior, with hard safety stops outside the capacity budget.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 4
+  },
+  {
+    "number": 10,
+    "title": "Prove the failure paths before increasing autonomy",
+    "file": "10-release-assurance",
+    "caption": "Failure injection and bounded canaries test the real enforcement boundary and recovery burden before raising admission limits.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 9
+  },
+  {
+    "number": 11,
+    "title": "A 1% exception rate can exceed the recovery budget",
+    "file": "11-capacity-and-uncertainty",
+    "caption": "Scenario demand exceeds daily service capacity at 1%. Wilson uncertainty lowers the illustrative planning cap from 6,000 to 4,939 actions/day.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 0
+  },
+  {
+    "number": 12,
+    "title": "Queueing delay accelerates before full utilization",
+    "file": "12-queueing-tail",
+    "caption": "Waiting time grows nonlinearly as utilization approaches one. The model is a continuous-service benchmark, not a forecast of calendar waiting time.",
+    "width": 1920,
+    "height": 1360,
+    "nodes": 0
+  }
+]

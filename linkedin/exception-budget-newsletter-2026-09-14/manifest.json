@@ -1,0 +1,173 @@
+{
+  "status": "draft-not-published",
+  "figure_count": 12,
+  "architecture_count": 10,
+  "statistical_count": 2,
+  "files": [
+    {
+      "name": "newsletter.md",
+      "bytes": 26311,
+      "sha256": "b16443affad159fa3d9f6a2a8b5439355936ac50754cb1dad92b97365a8e9d7f"
+    },
+    {
+      "name": "index.html",
+      "bytes": 41294,
+      "sha256": "c4a91fdd50d83f75f3c8aaa0c0b31099d7ac15b397bafd918f415c4a6a4a08c5"
+    },
+    {
+      "name": "analytics.py",
+      "bytes": 3795,
+      "sha256": "b3313c81782bf9d7dc71c2916a3254fcf7328c6c913c774bc7971916e20cc277"
+    },
+    {
+      "name": "test_analytics.py",
+      "bytes": 3377,
+      "sha256": "e2c3d26970cc772c73a66abc5929e810ba20aeeb4860863587b12b6c586964d4"
+    },
+    {
+      "name": "calculations.json",
+      "bytes": 35481,
+      "sha256": "22c6120c42d52f4330a6306d667059b941d5b432e570cad6e8ef1e812a30f256"
+    },
+    {
+      "name": "draw_figures.py",
+      "bytes": 35317,
+      "sha256": "fbdb085a0d61df708b74d3abf3d296e82e6caf6029ba8a6fbceb08dfb31e588b"
+    },
+    {
+      "name": "build.mjs",
+      "bytes": 7161,
+      "sha256": "2d157bacaf115b77a696cb3382ac208eabb369330bb228cf2afe7fa417a1b7dc"
+    },
+    {
+      "name": "figures.json",
+      "bytes": 3931,
+      "sha256": "77beaa41116522583ff253d1d25c38d8b30f1172d19f72d9a54e7b5248bfba7a"
+    },
+    {
+      "name": "contact-sheet.png",
+      "bytes": 1582161,
+      "sha256": "515dce247fb6878f832e655f3caf0707574bb2e9c65ed02f88352458903a8255"
+    },
+    {
+      "name": "figures/01-control-plane.svg",
+      "bytes": 17577,
+      "sha256": "f5b3ef6f664e455fdc4dc71de5bba25aefe2e67c963bea0194d802a5f36c6322"
+    },
+    {
+      "name": "figures/01-control-plane.png",
+      "bytes": 700630,
+      "sha256": "4eed78e13c569c26bf694d8d7c1e07cd03bbb57c27935084c1c8548d094e3a3a"
+    },
+    {
+      "name": "figures/02-action-state-machine.svg",
+      "bytes": 13346,
+      "sha256": "7ffae72b7ec1e96148717d0de2aa3ba2eab2e01c93cb115049953dc5cf856718"
+    },
+    {
+      "name": "figures/02-action-state-machine.png",
+      "bytes": 626148,
+      "sha256": "d352f83f7c74919bc1fd0321a2e99c462054d843f002df6e6eff380e6ae24eba"
+    },
+    {
+      "name": "figures/03-metric-lineage.svg",
+      "bytes": 17733,
+      "sha256": "1abbfaa99e7d21a11e65e3b361b81506129ad51f6230efbff351b5d67b6a5424"
+    },
+    {
+      "name": "figures/03-metric-lineage.png",
+      "bytes": 698230,
+      "sha256": "9a6d3ab7864f96a431c39a0088f75659d957fa072f7a6a8d518f35265c19cafb"
+    },
+    {
+      "name": "figures/04-atomic-admission.svg",
+      "bytes": 17805,
+      "sha256": "68a6b95fd3856212a75a5f0f980734f47f4603acc979e0253fd2a48552def7ec"
+    },
+    {
+      "name": "figures/04-atomic-admission.png",
+      "bytes": 709051,
+      "sha256": "38032856acb6f3540da41e8b9f9899f2dc64361db3c28098be067662d01435de"
+    },
+    {
+      "name": "figures/05-leased-authority.svg",
+      "bytes": 17394,
+      "sha256": "b37a9bc129621968d76171b9fc490c04e1bdb91c9a06138faea24341099c9bf2"
+    },
+    {
+      "name": "figures/05-leased-authority.png",
+      "bytes": 702621,
+      "sha256": "e722360e202859eb37177db5dda356b2009c3dccb82449730c0e339fe616b500"
+    },
+    {
+      "name": "figures/06-domain-transaction.svg",
+      "bytes": 11093,
+      "sha256": "7d2a912e25d9b45a133630e4446efa800e585ef04de66f1b88b7cfbc928f8052"
+    },
+    {
+      "name": "figures/06-domain-transaction.png",
+      "bytes": 472875,
+      "sha256": "da409e18df59e696674e3b4a2703b188fd44a38a411fb1cf2adfa3231d4419fc"
+    },
+    {
+      "name": "figures/07-independent-verification.svg",
+      "bytes": 17928,
+      "sha256": "2a3ad6537120466c534cd71ed142973770b0e92a364ae8bbfd9acbdacfeed30b"
+    },
+    {
+      "name": "figures/07-independent-verification.png",
+      "bytes": 709448,
+      "sha256": "8384f5cc0ef85d072b04ea79028c1808a6018d3dee8b6205e879ec23bba27cb4"
+    },
+    {
+      "name": "figures/08-human-recovery.svg",
+      "bytes": 17469,
+      "sha256": "eb35f31766ba865f30cf6a7823faf5ab15321f463fb42ae12cb88c6494fd7ad6"
+    },
+    {
+      "name": "figures/08-human-recovery.png",
+      "bytes": 709360,
+      "sha256": "ee3bbdcc6e1251e63640222286cc50759c48093130025d7103ba1097ae626a25"
+    },
+    {
+      "name": "figures/09-backpressure-state-control.svg",
+      "bytes": 12362,
+      "sha256": "776cf12c96d77334cf6351c0f8a6752d3f8375ba9665b505f0eff2becbb24d7b"
+    },
+    {
+      "name": "figures/09-backpressure-state-control.png",
+      "bytes": 589827,
+      "sha256": "8a75424f972d281ddbf18721259d9869e71cc910f6c03315ecc70380a05c670f"
+    },
+    {
+      "name": "figures/10-release-assurance.svg",
+      "bytes": 17668,
+      "sha256": "526fa1402a53911b444d7d7b0c8179cf2ad6c1ab18bc843d3425469de204d218"
+    },
+    {
+      "name": "figures/10-release-assurance.png",
+      "bytes": 732845,
+      "sha256": "9a0b602a93487ac8b5f7e5fce295694dbec8d9812c938f885111bafabdf1021c"
+    },
+    {
+      "name": "figures/11-capacity-and-uncertainty.svg",
+      "bytes": 9717,
+      "sha256": "c2f124ffc9f2b3e2af21afbd6666f9c5815d88e63204112c38733af0814ab80f"
+    },
+    {
+      "name": "figures/11-capacity-and-uncertainty.png",
+      "bytes": 528769,
+      "sha256": "3bddc1088ec0767c68120af90ba80a7ad7bf0e1b6a545ae9464b3ba29c5fa6ed"
+    },
+    {
+      "name": "figures/12-queueing-tail.svg",
+      "bytes": 18784,
+      "sha256": "3949a48668cf9440d490cbc38a974be00a8abfa83eccce5146fa1ba1519f3077"
+    },
+    {
+      "name": "figures/12-queueing-tail.png",
+      "bytes": 432137,
+      "sha256": "c088bd767f4d6d1d2461ee2bb4debbecf427188b03f2fd9c7f67f148da22cd68"
+    }
+  ]
+}

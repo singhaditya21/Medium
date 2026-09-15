@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1360" viewBox="0 0 1920 1360" role="img"><title>Commit the action once; reconcile the missing response</title><desc>Sequence for one internal CRM mutation. Downstream email remains a separate, independently authorized action.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1457c5"/></marker><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12L12 0" stroke="#bfd2ef" stroke-width="2"/></pattern></defs>
+<rect x="0" y="0" width="1920" height="1360" rx="10" fill="white" stroke="none" stroke-width="2" />
+<text x="64" y="46" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#1457c5" font-weight="700" text-anchor="start">THE OPERATING AI LEDGER  /  ENGINEERING SERIES</text>
+<text x="1856" y="46" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#1457c5" font-weight="700" text-anchor="end">EXHIBIT 06  /  REFERENCE ARCHITECTURE</text>
+<text x="64" y="104" font-family="Arial, Helvetica, sans-serif" font-size="43" fill="#101828" font-weight="700" text-anchor="start">Commit the action once; reconcile the missing response</text>
+<text x="64" y="151" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#101828" font-weight="400" text-anchor="start">Sequence for one internal CRM mutation. Downstream email remains a separate, independently authorized action.</text>
+<polyline points="64,181 1856,181" fill="none" stroke="#bfd2ef" stroke-width="2.5"  />
+<rect x="94" y="215" width="275" height="69" rx="10" fill="white" stroke="#1457c5" stroke-width="2" />
+<text x="231" y="256" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#1457c5" font-weight="700" text-anchor="middle">Agent runtime</text>
+<polyline points="231,284 231,1070" fill="none" stroke="#bfd2ef" stroke-width="2.5" stroke-dasharray="10 7" />
+<rect x="407" y="215" width="275" height="69" rx="10" fill="white" stroke="#1457c5" stroke-width="2" />
+<text x="544" y="256" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#1457c5" font-weight="700" text-anchor="middle">Policy gateway</text>
+<polyline points="544,284 544,1070" fill="none" stroke="#bfd2ef" stroke-width="2.5" stroke-dasharray="10 7" />
+<rect x="720" y="215" width="275" height="69" rx="10" fill="white" stroke="#1457c5" stroke-width="2" />
+<text x="857" y="256" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#1457c5" font-weight="700" text-anchor="middle">CRM command API</text>
+<polyline points="857,284 857,1070" fill="none" stroke="#bfd2ef" stroke-width="2.5" stroke-dasharray="10 7" />
+<rect x="1033" y="215" width="275" height="69" rx="10" fill="white" stroke="#1457c5" stroke-width="2" />
+<text x="1170" y="256" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#1457c5" font-weight="700" text-anchor="middle">Local database</text>
+<polyline points="1170,284 1170,1070" fill="none" stroke="#bfd2ef" stroke-width="2.5" stroke-dasharray="10 7" />
+<rect x="1346" y="215" width="275" height="69" rx="10" fill="white" stroke="#1457c5" stroke-width="2" />
+<text x="1483" y="256" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#1457c5" font-weight="700" text-anchor="middle">Verifier / owner</text>
+<polyline points="1483,284 1483,1070" fill="none" stroke="#bfd2ef" stroke-width="2.5" stroke-dasharray="10 7" />
+<polyline points="231,355 544,355" fill="none" stroke="#1457c5" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<text x="242" y="342" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#1457c5" font-weight="400" text-anchor="start">01  same action_id + digest</text>
+<polyline points="544,440 857,440" fill="none" stroke="#1457c5" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<text x="555" y="427" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#1457c5" font-weight="400" text-anchor="start">02  validate grant + permit</text>
+<rect x="1000" y="495" width="340" height="300" rx="10" fill="white" stroke="#1457c5" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1020" y="528" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#1457c5" font-weight="700" text-anchor="start">LOCAL ATOMIC TRANSACTION</text>
+<text x="1020" y="563" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">Resolve idempotency key</text>
+<text x="1020" y="592" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">Reject changed payload</text>
+<text x="1020" y="621" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">Check new-write authority</text>
+<text x="1020" y="650" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">Check current version</text>
+<text x="1020" y="679" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">Apply one state delta</text>
+<text x="1020" y="708" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">Store outcome + outbox</text>
+<text x="1020" y="737" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">Consume local approval</text>
+<polyline points="857,475 1170,475" fill="none" stroke="#1457c5" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<text x="868" y="462" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#1457c5" font-weight="400" text-anchor="start">03  command</text>
+<polyline points="1170,840 857,840" fill="none" stroke="#1457c5" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<text x="868" y="827" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#1457c5" font-weight="400" text-anchor="start">04  committed result</text>
+<polyline points="857,887 231,887" fill="none" stroke="#1457c5" stroke-width="2.5" stroke-dasharray="10 7" />
+<text x="329" y="875" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#1457c5" font-weight="700" text-anchor="start">05  RESPONSE LOST: caller remains UNRESOLVED</text>
+<polyline points="231,958 857,958" fill="none" stroke="#1457c5" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<text x="242" y="945" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#1457c5" font-weight="400" text-anchor="start">06  authenticated result lookup by original action_id</text>
+<polyline points="1170,1025 1483,1025" fill="none" stroke="#1457c5" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<text x="1181" y="1012" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#1457c5" font-weight="400" text-anchor="start">07  trusted outcome / change history</text>
+<rect x="1660" y="214" width="197" height="875" rx="10" fill="white" stroke="#bfd2ef" stroke-width="2" />
+<text x="1680" y="253" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">BOUNDARY</text>
+<text x="1680" y="283" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">The outbox</text>
+<text x="1680" y="313" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">relay may</text>
+<text x="1680" y="343" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">deliver more</text>
+<text x="1680" y="373" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">than once.</text>
+<text x="1680" y="403" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">Each consumer</text>
+<text x="1680" y="433" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">deduplicates</text>
+<text x="1680" y="463" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">its own</text>
+<text x="1680" y="493" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">supported</text>
+<text x="1680" y="523" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">effects.</text>
+<text x="1680" y="553" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">A refund or</text>
+<text x="1680" y="583" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">message is a</text>
+<text x="1680" y="613" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">new domain</text>
+<text x="1680" y="643" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">action.</text>
+<text x="1680" y="673" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">No</text>
+<text x="1680" y="703" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">cross-system</text>
+<text x="1680" y="733" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">exactly-once</text>
+<text x="1680" y="763" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#101828" font-weight="400" text-anchor="start">claim.</text>
+<rect x="64" y="1122" width="1792" height="125" rx="10" fill="white" stroke="#1457c5" stroke-width="2" />
+<text x="87" y="1156" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#1457c5" font-weight="700" text-anchor="start">SYSTEM INVARIANT</text>
+<text x="87" y="1191" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#101828" font-weight="400" text-anchor="start">When the CRM response is lost, resolve the original intent. Use a same-key retry only under a supported domain idempotency</text>
+<text x="87" y="1221" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#101828" font-weight="400" text-anchor="start">contract.</text>
+<text x="64" y="1290" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#101828" font-weight="400" text-anchor="start">OBSERVE  /  intent-key conflicts • duplicate delivery • commit-to-verification lag • unresolved action age</text>
+<text x="64" y="1328" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#1457c5" font-weight="400" text-anchor="start">Sequence notation • Solid arrow = request / evidence • Dashed response = lost delivery • Dashed vertical = participant lifeline</text>
+<text x="1856" y="1328" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#1457c5" font-weight="700" text-anchor="end">06</text>
+</svg>

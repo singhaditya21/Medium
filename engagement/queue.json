@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-14T09:23:18Z",
+  "updatedAt": "2026-09-15T07:47:59Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3743,6 +3743,46 @@
       "responseUrl": "https://www.linkedin.com/pulse/how-kcs-creates-shared-business-vocabulary-semantic-palanisamy-d06be/",
       "receiptOperationId": "20260914092318-comment-posted-2026-09-14-linkedin-comment-karthikeyan-semantic-definition-adjudication",
       "postedAt": "2026-09-14T09:23:18Z"
+    },
+    {
+      "id": "2026-09-15-linkedin-reply-abhijit-provisional-board-metrics",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7505493457335988226&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true",
+      "title": "N1: provisional board metrics in the ontology thread",
+      "author": "Abhijit Ghosh",
+      "reason": "Direct reply challenges deadline abstention and calls for a labelled provisional answer. R=1 D=1 U=.9 T=1; weighted score .98. Proposed metrics, not measured results.",
+      "evidence": "Read Prukalpa post and all eight prior replies, including Abhijit's latest board-reporting example. No duplicate user reply before execution. Native reply rendered under Aditya Singh with timestamp now and clickable Abhijit mention; composer cleared.",
+      "draftResponse": "Abhijit Ghosh, your board-pack example changes the interim rule: a pending ruling needs an explicitly authorised provisional answer. I’d bind the value to its definition version, reporting period, accountable owner and expiry, and carry that status into exports. Renewal should require a recorded decision without resetting the original conflict age. Alongside p95 adjudication time, I’d track overdue provisional values still circulating in reports.",
+      "priorityScore": 0.98,
+      "intendedMentions": [
+        "Abhijit Ghosh"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7505493457335988226&highlightedUpdateType=MENTIONED_YOU_IN_THIS&origin=inapp&showCommentBox=true",
+      "receiptOperationId": "20260915074758-reply-posted-2026-09-15-linkedin-reply-abhijit-provisional-board-metrics",
+      "postedAt": "2026-09-15T07:47:58Z"
+    },
+    {
+      "id": "2026-09-15-linkedin-comment-ajoy-value-proof",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503867051598483456/",
+      "title": "C1: workload attribution versus validated business outcomes",
+      "author": "Ajoy Menon",
+      "reason": "Adds a defined outcome denominator and failure/recovery costs to the author's workload observability argument. R=1 D=.9 U=.9 T=.8; weighted score .915. Proposed measures, not measured performance.",
+      "evidence": "Read Ajoy's original four-page tokenomics post and recent-comment view. Four existing top-level comments visible against displayed total five; none by Aditya. Exact approved comment rendered under Aditya Singh with native Ajoy mention and persisted after page reload.",
+      "draftResponse": "Ajoy Menon, I’d separate workload-cost attribution from value proof. Cost per verified business outcome should include failed attempts, retries and human recovery within a defined observation window. I’d report the percentage of spend mapped to workloads alongside the percentage backed by validated outcomes, so better tagging cannot be mistaken for better economics.",
+      "priorityScore": 0.915,
+      "intendedMentions": [
+        "Ajoy Menon"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503867051598483456/",
+      "receiptOperationId": "20260915074759-comment-posted-2026-09-15-linkedin-comment-ajoy-value-proof",
+      "postedAt": "2026-09-15T07:47:59Z"
     }
   ]
 }

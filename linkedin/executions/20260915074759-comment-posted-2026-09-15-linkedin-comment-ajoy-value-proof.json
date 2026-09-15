@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260915074759-comment-posted-2026-09-15-linkedin-comment-ajoy-value-proof",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-15T07:47:59Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-15T07:47:59Z",
+    "scope": "User approved N1 and C1 exactly as written and then instructed Continue. Scope is this comment only with one native author mention; no reactions, follows, messages or additional posts. Timestamp is retrospective receipt-entry time, not claimed exact click time."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-15-linkedin-comment-ajoy-value-proof",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503867051598483456/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503867051598483456/",
+    "publishedTextSha256": "d5f43593f44b4b58a3b4dfbfaaf8d9999794166e003cbf1f693339c024cf5828",
+    "verifiedAt": "2026-09-15T07:47:59Z",
+    "verification": "Read Ajoy's original four-page tokenomics post and recent-comment view. Four existing top-level comments visible against displayed total five; none by Aditya. Exact approved comment rendered under Aditya Singh with native Ajoy mention and persisted after page reload. Public URL identifies the verified source discussion, not a copied new-comment permalink. Existing engagement tracking issue 36 retained from repository; fresh GitHub lookup returned 503."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
