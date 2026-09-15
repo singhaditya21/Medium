@@ -1,5 +1,7 @@
 # Future plan — preparation completed, publication approval pending
 
+**September 15 superseding schedule update:** N02–N04 are now scheduled for September 21, 23 and 25 at 14:00 IST after exact approval; see the [reschedule receipt](reschedule-N03-N04-2026-09-15.json). N05 is recommended next for September 27, not scheduled. All weekly dates below are historical held proposals requiring a refreshed calendar and exact approval. The old T2/N04 exact collision no longer applies because N04 moved to September 25; T1 and other ordinary feed-post timings were not changed or re-audited. No newsletter metadata or automation was changed.
+
 14 September 2026. No platform publication, scheduling or engagement action was executed in this continuation. Existing schedules and automations are unchanged.
 
 ## Next release batch

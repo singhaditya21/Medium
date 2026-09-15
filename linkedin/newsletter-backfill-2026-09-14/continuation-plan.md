@@ -1,8 +1,8 @@
 # Newsletter continuation — confirmed first batch, remaining proposals
 
-**Current update:** [N05–N07 exact review package](approval-N05-N07.md) is prepared locally, not scheduled. The [future execution plan](future-execution-plan.md) is authoritative for current priorities and calendar collisions. The optional Thursday/Friday calendar below is a historical unexecuted alternative, **held and not active**. Maintain one weekly edition unless the user separately approves a cadence change.
+**September 15 current update:** N02–N04 were approved and visibly verified for September 21, 23 and 25 at 14:00 IST; see the [reschedule receipt](reschedule-N03-N04-2026-09-15.json) and [current inventory](../newsletter-inventory-2026-09-15.md). N05 is recommended for September 27, not approved or scheduled. The [N05–N07 review package](approval-N05-N07.md) remains local preparation. All other weekly and Thursday/Friday dates below are historical held proposals, **not an active schedule**, and need a refreshed exact calendar before approval. Series metadata and automations are unchanged.
 
-Updated 14 September 2026. N01 is published. N02–N04 are now scheduled and visibly verified at the dates below. All other dates remain proposed placeholders pending source QA, duplicate/collision checks and exact action-time approval.
+Updated 15 September 2026. N01 is published. N02–N04 are scheduled and visibly verified at the dates below. All other dates remain proposed placeholders pending source QA, duplicate/collision checks and exact action-time approval.
 
 Continuation update: the user approved the [exact N02–N04 package](approval-N02-N04.md), and its unchanged dates were executed through signed-in Chrome. See the [verified scheduling receipt](execution-N02-N04.json). N04's comparison with the existing Passport article is complete: related subject, different body/use cases. Ordinary feed-post schedules were not re-audited or changed in this execution.
 
@@ -13,7 +13,7 @@ Continuation update: the user approved the [exact N02–N04 package](approval-N0
 - **Announcement post:** the short introduction LinkedIn creates as part of publishing the edition. It is not another full article, and its analytics are separate.
 - **Medium story:** a separate publication of the owned long-form work, with independent state, canonical settings and subscriber notifications.
 
-## Proposed capacity
+## Historical proposed capacity — superseded for N02–N04
 
 Backfill: Mondays at 14:00 IST, beginning 21 September. This alone matches the existing weekly newsletter frequency.
 
@@ -28,9 +28,9 @@ Each row is a full newsletter edition, not a short link post or new newsletter. 
 | ID | Edition | LinkedIn date, 14:00 IST (N02–N04 confirmed; others proposed) |
 | --- | --- | --- |
 | N02 | Why Traditional CRM Will Die Without Agentic AI | 2026-09-21 — scheduled, verified |
-| N03 | The Enterprise Agent Control Tower: A Production Architecture | 2026-09-28 — scheduled, verified |
-| N04 | AI Agent Identity Is Not Enough | 2026-10-05 — scheduled, verified |
-| N05 | A $2.4M Account Is Escalating. Should the AI Agent Act? | 2026-10-12 |
+| N03 | The Enterprise Agent Control Tower: A Production Architecture | 2026-09-23 — scheduled, verified |
+| N04 | AI Agent Identity Is Not Enough | 2026-09-25 — scheduled, verified |
+| N05 | A $2.4M Account Is Escalating. Should the AI Agent Act? | 2026-09-27 — recommendation only |
 | N06 | Your AI Agent’s Memory Is a Database, Not a Prompt | 2026-10-19 |
 | N07 | Every AI Agent Action Needs a Receipt | 2026-10-26 |
 | N08 | Human Approval Is a Queueing System | 2026-11-02 |

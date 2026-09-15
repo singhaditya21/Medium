@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-09-15",
+  "status": "date_only_reschedule_visibly_verified",
+  "destination": "The Operating AI Ledger",
+  "publicSeriesUrl": "https://www.linkedin.com/newsletters/the-operating-ai-ledger-7493977840086904832/",
+  "authorization": "User approved the exact September 21, 23 and 25 alternate-day schedule, all at 14:00 IST, preserving other content and settings.",
+  "priorExecutionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
+  "method": "Signed-in Chrome native article actions menu > Modify post schedule > calendar date selection > Save.",
+  "results": [
+    {
+      "id": "N02",
+      "title": "Why Traditional CRM Will Die Without Agentic AI",
+      "before": "2026-09-21T14:00:00+05:30",
+      "after": "2026-09-21T14:00:00+05:30",
+      "action": "none_unchanged_row_verified"
+    },
+    {
+      "id": "N03",
+      "title": "The Enterprise Agent Control Tower: A Production Architecture",
+      "before": "2026-09-28T14:00:00+05:30",
+      "after": "2026-09-23T14:00:00+05:30",
+      "action": "date_only_reschedule",
+      "visibleSuccess": "Post schedule updated",
+      "verifiedRow": "Posting Wed, Sep 23 at 2:00 PM",
+      "recoveryNote": "An initial typed-date save did not persist. Back and reload confirmed the original date before a calendar-selection retry; the retry succeeded and was visibly verified."
+    },
+    {
+      "id": "N04",
+      "title": "AI Agent Identity Is Not Enough",
+      "before": "2026-10-05T14:00:00+05:30",
+      "after": "2026-09-25T14:00:00+05:30",
+      "action": "date_only_reschedule",
+      "visibleSuccess": "Post schedule updated",
+      "verifiedRow": "Posting Fri, Sep 25 at 2:00 PM"
+    }
+  ],
+  "verification": {
+    "dateDialogsExplicitlyShowedIndiaStandardTime": true,
+    "allThreeRowsPersistedAfterReload": true,
+    "scheduledNotPublished": true,
+    "onlyNativeDateControlsChanged": true,
+    "bodiesMediaSettingsNotEditedOrReaudited": true,
+    "seriesFrequencyMetadataUnchanged": true,
+    "ordinaryFeedPostsAndMediumUnchanged": true,
+    "noAdditionalEditionCreatedOrScheduled": true
+  },
+  "nextEditionRecommendationOnly": {
+    "id": "N05",
+    "title": "A $2.4M Account Is Escalating. Should the AI Agent Act?",
+    "suggestedFor": "2026-09-27T14:00:00+05:30",
+    "status": "recommendation_only_requires_exact_review_approval_and_live_duplicate_check",
+    "reason": "Apply the architecture, control tower and identity sequence to a synthetic high-consequence business decision. Existing local preparation is not a live scheduled newsletter edition."
+  }
+}

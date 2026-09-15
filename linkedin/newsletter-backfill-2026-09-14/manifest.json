@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "createdAt": "2026-09-14T06:04:36Z",
   "status": "N01_published_N02_N04_scheduled_N05_N07_prepared_awaiting_exact_approval",
-  "latestExecutionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
-  "latestCatalogAudit": "linkedin/newsletter-backfill-2026-09-14/catalog-audit-2026-09-14.md",
+  "latestExecutionReceipt": "linkedin/newsletter-backfill-2026-09-14/reschedule-N03-N04-2026-09-15.json",
+  "latestCatalogAudit": "linkedin/newsletter-inventory-2026-09-15.md",
   "currentApprovalPackage": "linkedin/newsletter-backfill-2026-09-14/approval-N05-N07.md",
   "nextBatchAudit": "linkedin/newsletter-backfill-2026-09-14/audit-N05-N07.json",
   "futurePlan": "linkedin/newsletter-backfill-2026-09-14/future-execution-plan.md",
@@ -45,10 +45,10 @@
     "canonical": "Keep Medium/GitHub canonical settings unchanged. Include the public Medium source link in the LinkedIn edition; do not claim a LinkedIn rel=canonical control exists."
   },
   "proposedCadence": {
-    "frequency": "weekly",
-    "status": "N02_N04_exact_dates_approved_and_scheduled_rest_proposal_only",
+    "frequency": "alternate_days_for_N02_N04",
+    "status": "N02_N04_September_21_23_25_approved_and_verified_rest_proposal_only",
     "firstEdition": "N01 published and verified on 14 September 2026",
-    "remainingEditions": "N02-N04 scheduled at their approved weekly dates; N05-N14 dates remain proposals requiring source QA and exact approval."
+    "remainingEditions": "N02-N04 scheduled September 21, 23 and 25 at 14:00 IST. N05 is recommended for September 27, not approved or scheduled. Other historical weekly dates are held proposals requiring a fresh exact calendar and approval. Series frequency metadata is unchanged."
   },
   "gates": [
     "Recheck live Medium publication state.",
@@ -131,8 +131,9 @@
       "liveMediumState": "published",
       "state": "scheduled_and_visibly_verified",
       "preview": "linkedin/newsletter-backfill-2026-09-14/N03-enterprise-agent-control-tower.html",
-      "proposedSchedule": "2026-09-28T14:00:00+05:30",
-      "scheduledFor": "2026-09-28T14:00:00+05:30",
+      "proposedSchedule": "2026-09-23T14:00:00+05:30",
+      "scheduledFor": "2026-09-23T14:00:00+05:30",
+      "rescheduleReceipt": "linkedin/newsletter-backfill-2026-09-14/reschedule-N03-N04-2026-09-15.json",
       "executionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
       "linkedInEditionUrl": null
     },
@@ -145,8 +146,9 @@
       "liveMediumState": "published",
       "state": "scheduled_and_visibly_verified",
       "preview": "linkedin/newsletter-backfill-2026-09-14/N04-ai-agent-identity-is-not-enough.html",
-      "proposedSchedule": "2026-10-05T14:00:00+05:30",
-      "scheduledFor": "2026-10-05T14:00:00+05:30",
+      "proposedSchedule": "2026-09-25T14:00:00+05:30",
+      "scheduledFor": "2026-09-25T14:00:00+05:30",
+      "rescheduleReceipt": "linkedin/newsletter-backfill-2026-09-14/reschedule-N03-N04-2026-09-15.json",
       "executionReceipt": "linkedin/newsletter-backfill-2026-09-14/execution-N02-N04.json",
       "linkedInEditionUrl": null
     },
@@ -159,7 +161,8 @@
       "liveMediumState": "published",
       "state": "prepared_awaiting_exact_action_time_approval",
       "preview": "linkedin/newsletter-backfill-2026-09-14/N05-a-2-4m-account-is-escalating.html",
-      "proposedSchedule": "2026-10-12T14:00:00+05:30",
+      "proposedSchedule": "2026-09-27T14:00:00+05:30",
+      "proposalStatus": "recommendation_only_historical_approval_packet_dates_superseded_for_planning_not_executed",
       "linkedInEditionUrl": null
     },
     {

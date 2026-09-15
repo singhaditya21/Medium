@@ -1,6 +1,6 @@
 # LinkedIn newsletter inventory — 15 September 2026
 
-Live audit through signed-in Chrome, completed approximately 14:16 IST. Public series pages establish newsletter membership and edition counts; the native article manager supplies exact publication dates and the complete scheduled list. These counts are newsletter editions, not ordinary feed posts or Medium stories.
+Live audit through signed-in Chrome, completed approximately 14:16 IST; approved date-only reschedule verified approximately 14:28 IST. Public series pages establish newsletter membership and edition counts; the native article manager supplies exact publication dates and the complete scheduled list. These counts are newsletter editions, not ordinary feed posts or Medium stories.
 
 ## Summary
 
@@ -23,15 +23,15 @@ Focus: metrics, controls and operating models for enterprise AI—cost, risk, ov
 
 ## The Operating AI Ledger — scheduled
 
-All times India Standard Time. The first schedule's date/time dialog explicitly displayed India Standard Time and year 2026; it was exited with Back, without saving any change. All three native scheduled rows match the existing verified scheduling receipt, `newsletter-backfill-2026-09-14/execution-N02-N04.json`, which establishes their Ledger membership and publication type.
+All times India Standard Time. The user approved the exact alternate-day dates below. N02 stayed unchanged; N03 and N04 were changed through Modify post schedule. Both returned “Post schedule updated,” and all three rows persisted after reload. See [date-only reschedule receipt](newsletter-backfill-2026-09-14/reschedule-N03-N04-2026-09-15.json). The original `newsletter-backfill-2026-09-14/execution-N02-N04.json` remains historical evidence of Ledger membership, publication type and original scheduling.
 
 | Scheduled time | Edition |
 |---|---|
 | Monday, 21 September 2026, 2:00 PM IST | Why Traditional CRM Will Die Without Agentic AI |
-| Monday, 28 September 2026, 2:00 PM IST | The Enterprise Agent Control Tower: A Production Architecture |
-| Monday, 5 October 2026, 2:00 PM IST | AI Agent Identity Is Not Enough |
+| Wednesday, 23 September 2026, 2:00 PM IST | The Enterprise Agent Control Tower: A Production Architecture |
+| Friday, 25 September 2026, 2:00 PM IST | AI Agent Identity Is Not Enough |
 
-These are scheduled, not published. No public edition URLs have been verified yet. Current dates remain weekly, not alternate-day.
+These are scheduled, not published. No public edition URLs have been verified yet. All three upcoming editions are now on alternate days. Read. Reflect. Rise. still has no scheduled edition; the newsletters are not alternating with each other.
 
 The September 14 scheduling receipt records Anyone + Subscribers, comments On, no mentions/hashtags, standard newsletter notifications, and 7/10/6 inline figures respectively. Those bodies and settings were not edited or re-audited in this status review; only current schedule rows, dates and published membership were verified live. Subscriber inbox delivery is not guaranteed.
 
@@ -56,8 +56,8 @@ Focus: operating decisions behind enterprise AI—approval bottlenecks, accounta
 - **AI Agents Need an Exception Budget:** LinkedIn draft permanently deleted at the user's exact confirmed request. Native success message and absence after revisiting Drafts verified. GitHub/local manuscript and media remain preserved. The old September 24 scheduling approval is cancelled and must not be reused.
 - **A $2.4M Account Is Escalating. Should the AI Agent Act?:** not in either newsletter's published archive or the native scheduled/draft lists. Local N05 preparation remains; this is not a scheduled LinkedIn edition.
 - Three other account-level article drafts remain unchanged: **Loop Engineering: Simplified** (last modified 1 August 2026), **The 2026 AI Supercycle: Trillion-Dollar Infrastructure, Power Bottlenecks, and the New Global Economy** (5 June 2026), and **The Evolution of CRM: From Manual to AI-Powered Systems** (7 May 2026). Their newsletter assignment was not established in this audit. The Supercycle draft is separate from the existing published edition; do not assume it should be republished.
-- Earlier alternate-day calendar proposals were not applied. No future date beyond the three live scheduled rows is confirmed.
+- The approved alternate-day dates above are now applied. N05 is recommended next for September 27 at 14:00 IST, but is not scheduled or newly approved. No future date beyond the three live scheduled rows is confirmed.
 
 ## Scope and preservation
 
-Only the confirmed Exception Budget draft was deleted. No other edition, series, schedule, ordinary feed post, Medium story, subscriber setting, comment, message, reaction or connection was changed. No private URLs, credentials, cookies or browser state are retained in this inventory.
+The confirmed Exception Budget draft was deleted in the earlier turn. This continuation changed only the approved N03/N04 schedule dates. No body, media, series metadata, ordinary feed post, Medium story, subscriber setting, comment, message, reaction or connection was changed. No private URLs, credentials, cookies or browser state are retained in this inventory.
