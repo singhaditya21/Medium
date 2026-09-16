@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T07:34:30Z",
+  "updatedAt": "2026-09-16T08:44:31Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,33 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Samar Singla",
+      "profileUrl": "https://www.linkedin.com/in/samarsingla/",
+      "themes": ["RevOps capacity", "CRM write-back quality", "verified sales outcomes"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-16",
+      "nextReviewOn": "2026-09-23",
+      "nextActionRule": "Exact approved C1 admin-capacity comment posted September 16, comment 7505907797696417792. Exact wording, native author tag and persistence at the copied public comment link verified. Wait for substantive inbound; no duplicate argument, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
+    {
+      "name": "Barr Moses",
+      "profileUrl": "https://www.linkedin.com/in/barrmoses/",
+      "themes": ["agent trust", "workflow accountability", "cross-layer incident evidence"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-16",
+      "nextReviewOn": "2026-09-23",
+      "nextActionRule": "Exact approved C2 workflow-owner comment posted September 16, comment 7505908437294354432. Exact wording, native author tag and persistence at the copied public comment link verified. Wait for substantive inbound; no duplicate argument, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
+    {
+      "name": "Krishna Gade",
+      "profileUrl": "https://www.linkedin.com/in/krishnagade/",
+      "themes": ["agent economics", "verified completions", "workload-level model routing"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-16",
+      "nextReviewOn": "2026-09-23",
+      "nextActionRule": "Exact approved C3 verified-success cost comment posted September 16, comment 7505909081057153025. Exact wording, native author tag and persistence at the public comment link verified. Wait for substantive inbound; no duplicate argument, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
     {
       "name": "Karthikeyan Palanisamy",
       "profileUrl": "https://www.linkedin.com/in/knowledge-manager-karthik/",

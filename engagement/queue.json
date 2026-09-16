@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-16T07:28:25Z",
+  "updatedAt": "2026-09-16T08:44:31Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3879,7 +3879,10 @@
       "intendedMentions": [
         "Barr Moses"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505732267495976960/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505908437294354432%2Curn%3Ali%3Aactivity%3A7505732267495976960%29",
+      "receiptOperationId": "20260916084140-comment-posted-2026-09-16-linkedin-ceo-barr-moses",
+      "postedAt": "2026-09-16T08:41:40Z"
     },
     {
       "id": "2026-09-16-linkedin-ceo-krishna-gade",
@@ -3896,7 +3899,30 @@
       "intendedMentions": [
         "Krishna Gade"
       ],
-      "state": "proposed"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505738334262996992/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505909081057153025%2Curn%3Ali%3Aactivity%3A7505738334262996992%29",
+      "receiptOperationId": "20260916084431-comment-posted-2026-09-16-linkedin-ceo-krishna-gade",
+      "postedAt": "2026-09-16T08:44:31Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-samar-admin-capacity",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/pulse/50k-rep-tax-why-your-sales-team-acting-human-samar-singla-xtevf/",
+      "title": "C1 — distinguish admin capacity from realised sales value",
+      "author": "Samar Singla",
+      "reason": "Direct CRM and RevOps fit; adds a measurable capacity-to-outcome test and automated write-back quality controls without product endorsement.",
+      "evidence": "Signed-in Chrome review 2026-09-16 around 13:10 IST. Newsletter dated September 16; 11 reactions, one repost, explicit No comments, yet. No existing Aditya comment. Local queue, execution receipts and watchlist searched without matching prior activity. Source $100k and 40% imply $40k, not an independently measured result; comment does not endorse the article's output-doubling claim. Scores: relevance 1, discussionQuality .75, uniqueContribution .95, recency 1; weighted .9275 rounded .928.",
+      "draftResponse": "Samar Singla, your $100k × 40% example gives $40k of capacity tied up in administration before overheads; that is not automatically cash savings. I would test the next link: reclaimed selling hours → sales-accepted opportunities → gross profit, net of software and CRM-error rework. Do you measure whether automatic stage updates reduce administration without increasing stage reversals or forecast corrections?",
+      "priorityScore": 0.928,
+      "intendedMentions": [
+        "Samar Singla"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505868035782701056?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7505868035782701056%2C7505907797696417792%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505907797696417792%2Curn%3Ali%3AugcPost%3A7505868035782701056%29",
+      "receiptOperationId": "20260916083845-comment-posted-2026-09-16-linkedin-samar-admin-capacity",
+      "postedAt": "2026-09-16T08:38:45Z"
     }
   ]
 }

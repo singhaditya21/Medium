@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916083845-comment-posted-2026-09-16-linkedin-samar-admin-capacity",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T08:38:45Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T08:38:45Z",
+    "scope": "User approved C1-C3 with author tags and explicitly held P1. This receipt covers C1 exact wording and one native Samar Singla mention only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-samar-admin-capacity",
+    "targetUrl": "https://www.linkedin.com/pulse/50k-rep-tax-why-your-sales-team-acting-human-samar-singla-xtevf/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505868035782701056?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7505868035782701056%2C7505907797696417792%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505907797696417792%2Curn%3Ali%3AugcPost%3A7505868035782701056%29",
+    "publishedTextSha256": "fe37a8914a41c7fd23a516b2f6118efcc1bea8f1114db8e711eb8b542d06e818",
+    "verifiedAt": "2026-09-16T08:38:45Z",
+    "verification": "Fresh article review showed no comments and unchanged source. C1 submitted once; exact approved wording rendered under Aditya Singh with current timestamp. Copied public comment permalink through LinkedIn menu and opened it: comment persisted with native View Samar Singla profile link resolving to /in/samarsingla/. No reaction added."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

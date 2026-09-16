@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916084140-comment-posted-2026-09-16-linkedin-ceo-barr-moses",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T08:41:40Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T08:41:40Z",
+    "scope": "User approved C1-C3 with author tags and explicitly held P1. This receipt covers C2 exact wording and one native Barr Moses mention only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-ceo-barr-moses",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505732267495976960/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505732267495976960/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505908437294354432%2Curn%3Ali%3Aactivity%3A7505732267495976960%29",
+    "publishedTextSha256": "f9409937d86bea75abcb1efaf02459826b3697fa5368cf1790486134984407f6",
+    "verifiedAt": "2026-09-16T08:41:40Z",
+    "verification": "Fresh source review showed one Justin Kaplan comment and no Aditya duplicate. Exact approved C2 posted once, rendered under Aditya Singh with timestamp now, native Barr Moses profile link /in/barrmoses/, and comment count increased from one to two. Copied public link and reopened it; exact comment persisted. No reaction added."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

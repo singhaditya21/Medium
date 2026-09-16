@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916084431-comment-posted-2026-09-16-linkedin-ceo-krishna-gade",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T08:44:31Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T08:44:31Z",
+    "scope": "User approved C1-C3 with author tags and explicitly held P1. This receipt covers C3 exact wording and one native Krishna Gade mention only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-ceo-krishna-gade",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505738334262996992/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505738334262996992/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505909081057153025%2Curn%3Ali%3Aactivity%3A7505738334262996992%29",
+    "publishedTextSha256": "9dd9c868694485a982ce703bf37d3a9d7a74f6bee2802c16fa4f46ea16148827",
+    "verifiedAt": "2026-09-16T08:44:31Z",
+    "verification": "Fresh source review and opened comment area showed no comments and no Aditya duplicate. Exact approved C3 submitted once, rendered under Aditya Singh with timestamp now and native Krishna Gade profile link /in/krishnagade/. Count became one. Used Copy link to comment and observed View comment confirmation URL; reopened resolved public permalink and verified exact text persisted. No reaction added."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
