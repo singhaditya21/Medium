@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T08:44:31Z",
+  "updatedAt": "2026-09-16T09:25:09Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -15,6 +15,33 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Chris Leone",
+      "profileUrl": "https://www.linkedin.com/in/chrismleone/",
+      "themes": ["durable execution", "human coordination burden", "exception age"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-16",
+      "nextReviewOn": "2026-09-23",
+      "nextActionRule": "O1 exact approved comment posted September 16, comment 7505918200665100288. Exact text, native Chris Leone tag, Aditya identity and persistence at the copied public comment link verified. Wait for substantive inbound; no repeated metric proposal, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
+    {
+      "name": "Ashim Gupta",
+      "profileUrl": "https://www.linkedin.com/in/ashim007/",
+      "themes": ["CRM acting interfaces", "human intervention", "verified workflow outcomes"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-16",
+      "nextReviewOn": "2026-09-23",
+      "nextActionRule": "O2 exact approved comment posted September 16, comment 7505918898785980416. Exact text, native Ashim Gupta tag, Aditya identity and persistence at the copied public comment link verified. Wait for substantive inbound; no duplicate comment, generic follow-up, DM, reaction, follow or connection without new exact approval."
+    },
+    {
+      "name": "The Year of the Graph",
+      "profileUrl": "https://www.linkedin.com/showcase/year-of-the-graph/",
+      "themes": ["retrieval evaluation", "temporal correctness", "update-to-answer freshness"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-16",
+      "nextReviewOn": "2026-09-23",
+      "nextActionRule": "O3 exact approved untagged comment posted September 16, comment 7505919296208850944. Exact text, Aditya identity and persistence at the copied public comment link verified. Wait for substantive inbound; no duplicate benchmark proposal, generic follow-up, reaction, follow or additional comment without new exact approval."
+    },
     {
       "name": "Samar Singla",
       "profileUrl": "https://www.linkedin.com/in/samarsingla/",

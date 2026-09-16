@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-16T08:44:31Z",
+  "updatedAt": "2026-09-16T09:25:08Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3923,6 +3923,96 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505868035782701056?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7505868035782701056%2C7505907797696417792%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505907797696417792%2Curn%3Ali%3AugcPost%3A7505868035782701056%29",
       "receiptOperationId": "20260916083845-comment-posted-2026-09-16-linkedin-samar-admin-capacity",
       "postedAt": "2026-09-16T08:38:45Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-chris-exception-age",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/chrismleone_why-agents-arent-enough-ugcPost-7504556881277849601-H4qE/",
+      "title": "O1 — execution continuity and exception age",
+      "author": "Chris Leone",
+      "reason": "Extends the enterprise execution-gap discussion with durable case state and measurable human coordination burden.",
+      "evidence": "Signed-in Chrome review 2026-09-16 14:42 IST. Post displayed 2d, 250 reactions, nine comments and 18 reposts on final permalink check. All nine comments loaded using Most recent; no Aditya comment found. Existing comments discuss human judgment and coordination but not durable resume state or p95 exception age. Local queue, public receipts and watchlist contain no matching author or post. Public link copied and resolved. Scores relevance 1, discussionQuality .85, uniqueContribution .95, recency .80; weighted .915. Draft responds to the post text; attached nine-page carousel not audited.",
+      "draftResponse": "Chris Leone, I'd measure that gap as human coordination minutes per completed case, split between necessary judgment and avoidable handoffs. The execution layer needs durable case state so a paused approval or failed downstream step can resume without reconstructing the whole job. Pair completion rate with p95 exception age; otherwise fast routine work can hide a growing queue of stranded cases.",
+      "priorityScore": 0.915,
+      "intendedMentions": [
+        "Chris Leone"
+      ],
+      "state": "skipped"
+    },
+    {
+      "id": "2026-09-16-linkedin-ashim-interface-intervention",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/ashim007_dreamforce2026-trailblazer-ai-ugcPost-7505817503021973504-2YTb/",
+      "title": "O2 — measure human intervention in acting interfaces",
+      "author": "Ashim Gupta",
+      "reason": "Timely discussion by a first-degree Salesforce connection; makes the stated human-responsibility theme testable without endorsing unverified product claims.",
+      "evidence": "Signed-in Chrome review 2026-09-16 14:42 IST. Dreamforce post displayed 6h, edited, 22 reactions and no displayed comments. Opened comment view: empty composer, no rendered thread. Profile confirmed first-degree connection and Salesforce affiliation. Local queue, public receipts and watchlist contain no matching author or post. Public link copied and resolved. Scores relevance .90, discussionQuality .70, uniqueContribution .90, recency 1; weighted .87.",
+      "draftResponse": "Ashim Gupta, an interface that can act across CRM needs a useful test of 'people at the centre': can an operator see the affected records, understand the proposed change and stop it before commitment? I'd compare task completion time with intervention success and reversal rates on the same workflow. That would make the responsibility discussion observable beyond the demo.",
+      "priorityScore": 0.87,
+      "intendedMentions": [
+        "Ashim Gupta"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505817503021973504/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505918898785980416%2Curn%3Ali%3AugcPost%3A7505817503021973504%29",
+      "receiptOperationId": "20260916092346-comment-posted-2026-09-16-linkedin-ashim-interface-intervention",
+      "postedAt": "2026-09-16T09:23:46Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-graph-temporal-correctness",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/knowledgegraph-graphdb-analytics-share-7505209526112059392-O3iP/",
+      "title": "O3 — evaluate retrieval freshness after changes",
+      "author": "The Year of the Graph",
+      "reason": "Adds a concrete change-and-retest benchmark to the capability-versus-architecture debate, distinct from the existing graph-complexity question.",
+      "evidence": "Signed-in Chrome review 2026-09-16 14:42 IST. Knowledge, Graphs, RAG, and Agentic AI post displayed 1d, 29 reactions, two comments and one repost. Both comments visible: graph-complexity question and brief acknowledgement; no Aditya comment. Local queue, public receipts and watchlist contain no matching author or post. Public link copied and resolved. No tag proposed; named authors in the source are not tagged for reach. Scores relevance .95, discussionQuality .75, uniqueContribution .90, recency .90; weighted .8775 rounded .878. Linked newsletter and source claims about forgetting were not independently validated and are not endorsed.",
+      "draftResponse": "The capability-first framing suggests a practical benchmark: give vector and graph pipelines the same questions, then change an entity relationship or revoke access and rerun them. Compare answer correctness, provenance coverage and p95 update-to-answer freshness, alongside operating cost. A persistent graph can still serve stale relationships; I'd make temporal correctness an explicit acceptance criterion.",
+      "priorityScore": 0.878,
+      "intendedMentions": [],
+      "state": "skipped"
+    },
+    {
+      "id": "2026-09-16-linkedin-chris-exception-age-v2",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/chrismleone_why-agents-arent-enough-ugcPost-7504556881277849601-H4qE/",
+      "title": "O1 — execution continuity and exception age",
+      "author": "Chris Leone",
+      "reason": "Extends the enterprise execution-gap discussion with durable case state and measurable human coordination burden.",
+      "evidence": "Signed-in Chrome review 2026-09-16 14:42 IST. Post displayed 2d, 250 reactions, nine comments and 18 reposts on final permalink check. All nine comments loaded using Most recent; no Aditya comment found. Existing comments discuss human judgment and coordination but not durable resume state or p95 exception age. Local queue, public receipts and watchlist contain no matching author or post. Public link copied and resolved. Scores relevance 1, discussionQuality .85, uniqueContribution .95, recency .80; weighted .9125 rounded .913. Draft responds to the post text; attached nine-page carousel not audited.",
+      "draftResponse": "Chris Leone, I'd measure that gap as human coordination minutes per completed case, split between necessary judgment and avoidable handoffs. The execution layer needs durable case state so a paused approval or failed downstream step can resume without reconstructing the whole job. Pair completion rate with p95 exception age; otherwise fast routine work can hide a growing queue of stranded cases.",
+      "priorityScore": 0.913,
+      "intendedMentions": [
+        "Chris Leone"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7504556881277849601/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505918200665100288%2Curn%3Ali%3AugcPost%3A7504556881277849601%29",
+      "receiptOperationId": "20260916092212-comment-posted-2026-09-16-linkedin-chris-exception-age-v2",
+      "postedAt": "2026-09-16T09:22:12Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-graph-temporal-correctness-v2",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/posts/knowledgegraph-graphdb-analytics-share-7505209526112059392-O3iP/",
+      "title": "O3 — evaluate retrieval freshness after changes",
+      "author": "The Year of the Graph",
+      "reason": "Adds a concrete change-and-retest benchmark to the capability-versus-architecture debate, distinct from the existing graph-complexity question.",
+      "evidence": "Signed-in Chrome review 2026-09-16 14:42 IST. Knowledge, Graphs, RAG, and Agentic AI post displayed 1d, 29 reactions, two comments and one repost. Both comments visible: graph-complexity question and brief acknowledgement; no Aditya comment. Local queue, public receipts and watchlist contain no matching author or post. Public link copied and resolved. No tag proposed; named authors in the source are not tagged for reach. Scores relevance .95, discussionQuality .75, uniqueContribution .90, recency .90; weighted .88. Linked newsletter and source claims about forgetting were not independently validated and are not endorsed.",
+      "draftResponse": "The capability-first framing suggests a practical benchmark: give vector and graph pipelines the same questions, then change an entity relationship or revoke access and rerun them. Compare answer correctness, provenance coverage and p95 update-to-answer freshness, alongside operating cost. A persistent graph can still serve stale relationships; I'd make temporal correctness an explicit acceptance criterion.",
+      "priorityScore": 0.88,
+      "intendedMentions": [],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505209527428952065/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505919296208850944%2Curn%3Ali%3Aactivity%3A7505209527428952065%29",
+      "receiptOperationId": "20260916092508-comment-posted-2026-09-16-linkedin-graph-temporal-correctness-v2",
+      "postedAt": "2026-09-16T09:25:08Z"
     }
   ]
 }

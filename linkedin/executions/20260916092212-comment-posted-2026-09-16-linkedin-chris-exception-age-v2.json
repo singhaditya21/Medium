@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916092212-comment-posted-2026-09-16-linkedin-chris-exception-age-v2",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T09:22:12Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T09:22:12Z",
+    "scope": "User approved O1-O3 exactly as displayed and requested relevant tags. This receipt covers O1 exact approved text and one native Chris Leone tag only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-chris-exception-age-v2",
+    "targetUrl": "https://www.linkedin.com/posts/chrismleone_why-agents-arent-enough-ugcPost-7504556881277849601-H4qE/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7504556881277849601/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505918200665100288%2Curn%3Ali%3AugcPost%3A7504556881277849601%29",
+    "publishedTextSha256": "7f9f5693c15b0635fe30a83e7de2ce7d3ac1a880acb3a56ee9e685be5f3f6238",
+    "verifiedAt": "2026-09-16T09:22:12Z",
+    "verification": "Immediately rechecked Chris Leone post and existing comments for duplication. Exact approved comment rendered under Aditya Singh with current timestamp and clickable Chris Leone profile link /in/chrismleone/. Copied public comment link resolved to the same target and comment text persisted. No reaction, follow or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

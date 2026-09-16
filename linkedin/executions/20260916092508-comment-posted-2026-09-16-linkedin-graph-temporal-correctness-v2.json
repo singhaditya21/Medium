@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916092508-comment-posted-2026-09-16-linkedin-graph-temporal-correctness-v2",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T09:25:08Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T09:25:08Z",
+    "scope": "User approved O1-O3 as displayed and requested relevant tags. O3 was explicitly proposed without tags and retained that scope; this receipt covers its exact approved top-level comment only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-graph-temporal-correctness-v2",
+    "targetUrl": "https://www.linkedin.com/posts/knowledgegraph-graphdb-analytics-share-7505209526112059392-O3iP/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505209527428952065/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505919296208850944%2Curn%3Ali%3Aactivity%3A7505209527428952065%29",
+    "publishedTextSha256": "fbac3c8f0bafbb88daded0f02691add6e27318965982d5cbf321cb437675e2c3",
+    "verifiedAt": "2026-09-16T09:25:08Z",
+    "verification": "Immediately rechecked source and both existing comments; no existing Aditya comment. Exact approved text rendered under Aditya Singh with current timestamp. Copied comment link resolved to the same target and text persisted. No tags, reaction, follow or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

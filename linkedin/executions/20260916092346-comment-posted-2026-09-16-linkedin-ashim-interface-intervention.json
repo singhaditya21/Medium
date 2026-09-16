@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916092346-comment-posted-2026-09-16-linkedin-ashim-interface-intervention",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T09:23:46Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T09:23:46Z",
+    "scope": "User approved O1-O3 exactly as displayed and requested relevant tags. This receipt covers O2 exact approved text and one native Ashim Gupta tag only."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-ashim-interface-intervention",
+    "targetUrl": "https://www.linkedin.com/posts/ashim007_dreamforce2026-trailblazer-ai-ugcPost-7505817503021973504-2YTb/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7505817503021973504/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505918898785980416%2Curn%3Ali%3AugcPost%3A7505817503021973504%29",
+    "publishedTextSha256": "b39943d1be8deb18942f9a2c42f7face9420bc4e59eea4bd79bca4c3ea041f5d",
+    "verifiedAt": "2026-09-16T09:23:46Z",
+    "verification": "Immediately rechecked Ashim Gupta source; no existing comment by Aditya. Exact approved text rendered under Aditya Singh with current timestamp and clickable author profile /in/ashim007/. Copied comment link resolved to the same target and comment text persisted. No reaction, follow or other action performed."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
