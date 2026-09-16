@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916053109-reply-posted-2026-09-16-linkedin-reply-soren-conference-architecture",
+  "action": "reply_posted",
+  "recordedAt": "2026-09-16T05:31:09Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T05:31:09Z",
+    "scope": "User approved N1 exactly as shown; non-attendance explicitly confirmed."
+  },
+  "result": {
+    "status": "reply_posted",
+    "candidateId": "2026-09-16-linkedin-reply-soren-conference-architecture",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7505544528901197824&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7505544528901197824&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true",
+    "publishedTextSha256": "3c01a0a136e3504289d4327556422a3e404e5136cf722b780c2bfde70fd2ec8c",
+    "verifiedAt": "2026-09-16T05:31:09Z",
+    "verification": "Rendered approved reply beneath the intended parent under Aditya Singh, timestamp now, native mention linkedin.com/in/sorenhl/, comment identifier 7505859772584468480, and composer cleared."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

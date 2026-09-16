@@ -1,0 +1,28 @@
+{
+  "name": "Rowan Trollope",
+  "company": "Redis",
+  "role": "CEO supported by Redis leadership page",
+  "profileUrl": "https://www.linkedin.com/in/rowant/",
+  "roleSource": "https://redis.io/company/team/rowan-trollope/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Authored/commentary cards in visible first 20 inspected. Two relevant sources; most cards are plain reposts. Older source and unread report methodology require review. No fifth post invented.",
+  "posts": [
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490458551476408320/",
+      "displayedAge": "1mo",
+      "summary": "Survey claim about cross-system navigation risk.",
+      "draft": "Rowan Trollope, the 69% perception signal raises a useful measurement question: what failure counts as inability to navigate? Missing a system, using stale state and crossing an unauthorised boundary need different controls. A benchmark that reports those separately would help teams avoid improving connectivity at the expense of access discipline."
+    },
+    {
+      "position": 17,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7462168599000993792/",
+      "displayedAge": "3mo",
+      "summary": "Iris combines context retrieval, memory, integration, caching and search.",
+      "draft": "Rowan Trollope, joining these context components makes invalidation a system-level requirement. A corrected CRM fact may need to expire a retrieved record, a semantic-cache response and a durable memory entry together. Time until all three stop returning the old fact would be a useful control metric alongside retrieval latency and token savings."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

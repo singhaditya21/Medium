@@ -1,0 +1,42 @@
+{
+  "name": "Alex Atallah",
+  "company": "OpenRouter (Stripe acquisition agreement announced)",
+  "role": "Cofounder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/alexatallah/",
+  "roleSource": "https://www.linkedin.com/in/alexatallah/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Authored/commentary cards visible through position 15 inspected. Four usable sources found; older two on hold. Acquisition described as agreement, not assumed complete. Latest-five chronology not certified due virtualised cards.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498753398377168896/",
+      "displayedAge": "2w",
+      "summary": "Portable tooling and evaluations across heterogeneous models.",
+      "draft": "Alex Atallah, portable tooling needs a behavioural contract as well as a common API. Tool-call validation, cancellation, structured-output guarantees and error semantics can differ across models behind the same endpoint. A conformance suite would let developers see which parts of their harness survive a switch and which need a new acceptance test."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495924337904947200/",
+      "displayedAge": "3w",
+      "summary": "Agreement for Stripe to acquire OpenRouter; multi-model mission.",
+      "draft": "Alex Atallah, the multi-model argument becomes operationally strong when routing remains inspectable. Each response should identify the model and provider actually used, the policy constraints applied and any fallback that occurred. That lets a customer verify that flexibility did not silently change residency, retention or the acceptance standard for a consequential task."
+    },
+    {
+      "position": 13,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7423534374421352448/",
+      "displayedAge": "7mo",
+      "summary": "Stripe powers payments and invoicing for the model marketplace.",
+      "draft": "Alex Atallah, multi-provider billing benefits from an execution receipt that reconciles request, provider usage and final charge. Partial failures and retried streams are where customer expectations and metering can diverge. A clear distinction between generated, delivered and billed tokens would make the invoice easier to audit without requiring users to reconstruct every provider's behaviour."
+    },
+    {
+      "position": 14,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7422662525730693120/",
+      "displayedAge": "7mo",
+      "summary": "Dynamic inference costs and usage-based monetisation.",
+      "draft": "Alex Atallah, a price change should be versioned at the request boundary. If routing or model rates change mid-session, developers need to know which quoted rate applied to each call and retry. That creates a reproducible cost ledger while still allowing applications to benefit from falling inference prices."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

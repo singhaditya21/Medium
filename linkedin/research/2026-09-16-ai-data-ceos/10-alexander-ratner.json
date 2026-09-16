@@ -1,0 +1,49 @@
+{
+  "name": "Alexander Ratner",
+  "company": "Snorkel AI",
+  "role": "Co-Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/alexander-ratner-038ba239/",
+  "roleSource": "https://www.linkedin.com/in/alexander-ratner-038ba239/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Five substantive authored/commentary posts from first ten positions; plain reposts and a one-line synthetic-data joke excluded. Embedded summaries read, not underlying podcasts or papers.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503467944375398400/",
+      "displayedAge": "6d",
+      "summary": "Shared podcast summary treats agent datasets as tasks, environments and grading rubrics.",
+      "draft": "Alexander Ratner, separating task, environment and rubric is useful because each can leak the answer. I would test a benchmark with changed interfaces and distractor data while preserving the underlying objective, then check whether the rubric rewards a correct outcome reached through an invalid action. That distinguishes transferable capability from exploiting a particular evaluation setup."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498889712393367552/",
+      "displayedAge": "2w",
+      "summary": "Shares Terminal-Bench-Science announcement: 70 research tasks across scientific domains.",
+      "draft": "Alexander Ratner, with 70 tasks spread across several domains, the domain-level uncertainty matters as much as the aggregate pass rate. I would report repeated-run variability and whether success survives small environment changes. That helps users distinguish a model that reliably solves one workflow from one that occasionally wins a difficult task under a favorable run."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489779474767470593/",
+      "displayedAge": "1mo",
+      "summary": "Math and coding gains may not predict progress in less-verifiable, data-rich domains.",
+      "draft": "Alexander Ratner, the verifier's quality may explain part of that gap. In a domain without a clean pass/fail oracle, teams need to measure expert disagreement and the stability of the rubric before interpreting model progress. Otherwise an apparent capability plateau may be a measurement ceiling, while an apparent gain may just reflect a more permissive judge."
+    },
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487953482910642177/",
+      "displayedAge": "1mo",
+      "summary": "Data transfers subject-matter expertise into systems.",
+      "draft": "Alexander Ratner, the hardest expertise to transfer is often the exception: when two similar-looking cases require different decisions. I would prioritize expert-labelled boundary cases and retain the rationale for the distinction, rather than collecting more easy examples. The test is whether those additions reduce errors on unseen edge cases, not simply increase dataset size."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487207175250128896/",
+      "displayedAge": "1mo",
+      "summary": "A useful data flywheel needs ground truth, rubrics and expert feedback, not just raw interaction traces.",
+      "draft": "Alexander Ratner, that also makes feedback provenance part of the training pipeline. Keep the rubric version, annotator disagreement and adjudication outcome with each label, then exclude unresolved examples from automatic reinforcement. A useful flywheel metric is reduction in repeated failure classes on a held-out set, rather than the volume of traces recycled into training."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

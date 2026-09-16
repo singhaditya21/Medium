@@ -1,0 +1,49 @@
+{
+  "name": "Jordan Tigani",
+  "company": "MotherDuck",
+  "role": "Co-Founder and CEO, confirmed in current Experience section",
+  "profileUrl": "https://www.linkedin.com/in/jordantigani/",
+  "roleSource": "https://www.linkedin.com/in/jordantigani/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First fifteen positions inspected. Selected five posts with explicit technical discussion points; plain reposts, bare announcements and an unviewed interview excluded.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505633744762875904/",
+      "displayedAge": "15h",
+      "summary": "Open Data Infrastructure panel at dbt summit.",
+      "draft": "Jordan Tigani, an open-infrastructure panel could use one concrete exit test: move a workload to another engine with its data, metric definitions, permissions and regression tests intact. File-format portability is necessary, but the operational contract is what determines whether an enterprise can actually switch without rebuilding its controls."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503844272618786816/",
+      "displayedAge": "5d",
+      "summary": "Agents drive smaller, faster, more widespread queries; panel will examine resulting product decisions.",
+      "draft": "Jordan Tigani, agent-generated queries change the workload distribution as well as the query count. A product team needs to distinguish useful iterative exploration from repeated scans caused by a failed plan. I would measure queries per verified answer, burst concurrency and cancellation effectiveness before sizing the platform for the new traffic pattern."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501655365403615233/",
+      "displayedAge": "1w",
+      "summary": "Survey reports stronger demand for better context than better models; deprecated tables and ambiguous revenue definitions cause errors.",
+      "draft": "Jordan Tigani, deprecated-table awareness should be enforced at retrieval time, not left as a footnote in the prompt. I would expose replacement mappings and effective dates, then test whether the agent still selects retired assets under paraphrased questions. That turns the context problem into a measurable error class rather than a request to add more documentation."
+    },
+    {
+      "position": 8,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498485697595625472/",
+      "displayedAge": "2w",
+      "summary": "Agents alter data-query patterns toward smaller and faster work; discusses DuckDB ecosystem implications.",
+      "draft": "Jordan Tigani, smaller queries can still create a large coordination problem when thousands of agents run them independently. Admission control, per-task budgets and reuse of equivalent intermediate results may matter as much as single-query speed. The useful benchmark would include bursty agent traffic and the cost of abandoned plans, not only a stable analyst workload."
+    },
+    {
+      "position": 11,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488611286478389249/",
+      "displayedAge": "1mo",
+      "summary": "AI may increase dashboard creation rather than eliminate dashboards; calls for measuring real usage and production-agent permissions.",
+      "draft": "Jordan Tigani, AI-generated dashboards need a retirement mechanism too. If creation gets cheap, the scarce resource becomes knowing which view is authoritative and still maintained. I would track active consumers, metric-version drift and duplicate views, with the underlying query and source snapshot available for inspection. More dashboards can improve exploration without becoming more conflicting sources of truth."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

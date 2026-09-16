@@ -1,0 +1,49 @@
+{
+  "name": "Soumyadeb Mitra",
+  "company": "RudderStack",
+  "role": "Founder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/soumyadeb-mitra/",
+  "roleSource": "https://www.linkedin.com/in/soumyadeb-mitra/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First nine activity cards read. Five latest substantive nonduplicate authored sources selected; duplicate launch post excluded. All three to four months old.",
+  "posts": [
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470893696079511552/",
+      "displayedAge": "3mo",
+      "summary": "Lookout generates instrumentation PRs, analytics and alerts.",
+      "draft": "Soumyadeb Mitra, opening a tracking PR preserves a useful human boundary, but the review needs the downstream impact too. An event change can alter funnels, audiences and activation rules at once. A generated contract diff showing affected consumers would make the review faster without reducing it to checking whether the instrumentation code compiles."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7468399858673156097/",
+      "displayedAge": "3mo",
+      "summary": "End-to-end context supports automated customer-data diagnosis.",
+      "draft": "Soumyadeb Mitra, tracing a conversion drop across instrumentation, transformation and delivery is valuable when the agent can separate correlation from a confirmed break. A replay against a known event sample would test each proposed cause before a fix is opened. That gives the engineer an evidence-backed diagnosis rather than a plausible narrative spanning many systems."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467654409167187969/",
+      "displayedAge": "3mo",
+      "summary": "Natural-language pipelines, governance and audience activation.",
+      "draft": "Soumyadeb Mitra, removing the ticket queue should not remove the approval boundary for a consequential activation. A marketer can build a segment autonomously while the actual send still checks consent, exclusions and audience size. Previewed membership and an execution-time recheck would make self-service compatible with changing customer permissions."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463691873644085248/",
+      "displayedAge": "3mo",
+      "summary": "Semantic models outlast analytics interfaces.",
+      "draft": "Soumyadeb Mitra, the semantic layer becomes even more important when users cannot see the query being assembled. Returning the metric definition, time basis and applied exclusions alongside the answer gives them something concrete to challenge. An agent should expose ambiguity between competing revenue definitions instead of silently selecting one and sounding certain."
+    },
+    {
+      "position": 8,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7460498718916759552/",
+      "displayedAge": "4mo",
+      "summary": "Distributed source meaning with central policy.",
+      "draft": "Soumyadeb Mitra, source-local meaning and central policy work best with an explicit version handshake. An agent combining four live sources may otherwise assemble definitions that were never valid together. Recording each source version and refusing unresolved conflicts would preserve freshness without pretending that parallel reads create a consistent semantic snapshot."
+    }
+  ],
+  "status": "hold_stale_sources_not_current_engagement",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

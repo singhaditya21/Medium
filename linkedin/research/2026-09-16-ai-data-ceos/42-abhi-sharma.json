@@ -1,0 +1,50 @@
+{
+  "name": "Abhi Sharma",
+  "company": "Relyance AI",
+  "role": "Founder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/abhisharmab/",
+  "roleSource": "https://www.linkedin.com/in/abhisharmab/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Authored/commentary cards through position eight inspected. Five selected, all one to two months old; not current-engagement ready.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7492794808709562368/",
+      "displayedAge": "1mo",
+      "summary": "AI instructions hide assumptions and missing context.",
+      "draft": "Abhi Sharma, the instruction problem is also a specification problem. Adding more prose does not guarantee that the missing assumption becomes testable. An explicit precondition, a small example and a machine-checkable postcondition can remove ambiguity more efficiently than another page of instructions. Token consumption should be measured against accepted task completion, not prompt thoroughness."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490429871794614273/",
+      "displayedAge": "1mo",
+      "summary": "Maps AI and identity paths to sensitive data and enforces controls.",
+      "draft": "Abhi Sharma, a path map needs to show its blind spots as clearly as its discovered edges. Runtime-only observation may miss rarely executed routes, while code analysis may include paths that cannot actually run. Separating observed, inferred and unobserved coverage would make a claim about cutting unsafe paths much easier to assess."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485552783061000192/",
+      "displayedAge": "1mo",
+      "summary": "AI, data and identity determine blast radius.",
+      "draft": "Abhi Sharma, blast radius is time-dependent when identities and tool permissions change during a run. A static entitlement graph can miss a short-lived delegation or a cached credential. Evaluating reachable data and permitted side effects at each consequential action would show what the agent could actually do at that moment, not only what its base role allowed."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485520534475247616/",
+      "displayedAge": "1mo",
+      "summary": "Tracing data journeys matters for AI security.",
+      "draft": "Abhi Sharma, tracing the journey is especially useful when it supports a counterfactual: which enforcement point would have stopped this data path? That turns lineage from an incident diagram into a control test. Replaying a sanitised version against the proposed policy should establish that the unsafe path is blocked without breaking the intended workflow."
+    },
+    {
+      "position": 8,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7475325154596945920/",
+      "displayedAge": "2mo",
+      "summary": "Prioritise vulnerabilities using reachability and data exposure.",
+      "draft": "Abhi Sharma, reachability is a useful prioritisation signal, but not observing a path is different from proving it unreachable. The exposure score should carry the evidence window and confidence, including dynamic loading and identity changes. That keeps teams from converting a visibility gap into a reason to defer a necessary patch."
+    }
+  ],
+  "factBoundary": "No unverified incident claims repeated. Defensive control discussion only.",
+  "status": "hold_stale_sources_thread_review_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

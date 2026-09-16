@@ -1,0 +1,28 @@
+{
+  "name": "Aaron Katz",
+  "company": "ClickHouse",
+  "role": "Co-Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/aaron-katz-5762094/",
+  "roleSource": "https://www.linkedin.com/in/aaron-katz-5762094/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First ten activity positions inspected. Two usable authored/commentary posts; sports sponsorship, generic congratulations, bare article quotations and an unviewed podcast teaser excluded. Both selected posts are two months old.",
+  "posts": [
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7481191766142922752/",
+      "displayedAge": "2mo",
+      "summary": "Supports open-source AI platforms and shares Ollama's reported builder growth.",
+      "draft": "Aaron Katz, the operational test of owning an AI stack is whether a team can update, evaluate and recover it without losing reproducibility. Open models make deployment choice possible; versioned artifacts, compatibility tests and a known rollback path make that choice usable in production. Those are useful milestones to track alongside builder adoption."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7478221533966983168/",
+      "displayedAge": "2mo",
+      "summary": "Reports faster development and growth alongside a larger headcount plan after AI coding-agent adoption.",
+      "draft": "Aaron Katz, that is a useful distinction between labor substitution and expanding the work a company can economically do. I would separate cycle-time gains, defect/rework trends and new product capacity, then compare them with the hiring plan. It would help show where AI removed a constraint without attributing every simultaneous growth change to the tool rollout."
+    }
+  ],
+  "status": "hold_stale_posts_additional_source_and_thread_review_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

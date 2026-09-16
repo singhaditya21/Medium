@@ -1,0 +1,49 @@
+{
+  "name": "Debanjan Saha",
+  "company": "DataRobot",
+  "role": "CEO, native profile and current company source",
+  "profileUrl": "https://www.linkedin.com/in/saha-debanjan/",
+  "roleSource": "https://www.datarobot.com/about-us/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored posts read. Drafts focus on engineering controls; no political, competitor-intent or financial allegations adopted.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504628421226835968/",
+      "displayedAge": "3d",
+      "summary": "Inspectable runtime controls as a response to AI risk.",
+      "draft": "Debanjan Saha, governability becomes testable when the control plane can stop a permitted-looking action whose context has changed. A release should demonstrate blocked boundary crossings, timely revocation and recovery from partial side effects. Those are concrete engineering obligations regardless of whether the underlying model is open or closed."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487975458412802048/",
+      "displayedAge": "1mo",
+      "summary": "Model choice across cloud, on-premise and air-gapped environments.",
+      "draft": "Debanjan Saha, model choice is useful when the deployment policy travels with the workload. A smaller model on-premises should meet the same action constraints and evidence requirements as a frontier endpoint in the cloud. Keeping policy conformance separate from model quality would make the right-model-for-the-job decision easier to audit."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486490106661326848/",
+      "displayedAge": "1mo",
+      "summary": "Open models and auditable governance.",
+      "draft": "Debanjan Saha, auditability provides evidence, but it is not itself proof of safety. A complete action log can still faithfully record an unsafe decision. The stronger test combines inspectable policy, independently enforced boundaries and adversarial exercises showing that those boundaries hold when the agent's reasoning fails."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486069651601526784/",
+      "displayedAge": "1mo",
+      "summary": "Identity, governance and real-time intervention for agents.",
+      "draft": "Debanjan Saha, real-time intervention needs a defined commit boundary. Stopping generation is different from cancelling an accepted tool request or compensating an already completed write. A workflow should state which of those remains possible at each step and measure intervention latency against the irreversible action, not just against the agent process."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7483889981611171841/",
+      "displayedAge": "1mo",
+      "summary": "Operate and govern enterprise agents where data lives.",
+      "draft": "Debanjan Saha, operating where data lives also means working through local outages and constrained update paths. A governed agent platform should retain policy enforcement and audit continuity when its central management service is unavailable. That failure-mode test would make the on-premises and sovereign story more concrete than deployment location alone."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Sendur Sellakumar",
+  "company": "Dremio (now part of SAP, per author's post)",
+  "role": "Chief Executive Officer as displayed on current LinkedIn profile",
+  "profileUrl": "https://www.linkedin.com/in/sendur/",
+  "roleSource": "https://www.linkedin.com/in/sendur/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored/commentary posts read. Post 1 is one week old; remaining posts are two to five months old. Profile-displayed title recorded without assuming independent-company status.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501323821090787328/",
+      "displayedAge": "1w",
+      "summary": "Open lakehouse stack spans storage format, memory interchange, tables, catalog control and semantic meaning.",
+      "draft": "Sendur Sellakumar, the useful integration test spans the layers: can an engine discover a table, obtain only the permitted credentials, interpret the metric correctly and retain lineage for the resulting answer? Independent component conformance is necessary, but cross-layer failures are where an apparently open stack can still produce inconsistent decisions."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479966355799343105/",
+      "displayedAge": "2mo",
+      "summary": "Completed SAP acquisition reinforces agentic-lakehouse direction.",
+      "draft": "Sendur Sellakumar, bringing application data and external data together makes semantic reconciliation important. A customer, order or revenue measure can carry different effective dates and business rules in each source. An agent should expose those differences before acting, with the reconciled definition version retained alongside the result."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7457087004598710272/",
+      "displayedAge": "4mo",
+      "summary": "Acquisition agreement commits to an open governed platform and Iceberg, Polaris and Arrow.",
+      "draft": "Sendur Sellakumar, the practical test of openness is preserving behavior across engines, not just reading the same files. Shared fixtures for row-level policy, schema evolution and snapshot interpretation would make interoperability visible to customers. That would turn the standards commitment into a repeatable upgrade and migration check."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7449909000525213696/",
+      "displayedAge": "5mo",
+      "summary": "CLI and coding agents allow non-SQL experts to construct monitored data pipelines.",
+      "draft": "Sendur Sellakumar, machine-readable CLI output is a strong foundation, but production execution also needs a bounded failure contract. Give each pipeline run a stable ID, explicit partial-success states and a dry-run path that shows the planned writes. Then test retries against the same input so a generated script cannot silently duplicate a completed stage."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7447674094055047168/",
+      "displayedAge": "5mo",
+      "summary": "Iceberg-first architecture is described as central to Dremio's platform.",
+      "draft": "Sendur Sellakumar, an Iceberg-first design can make recovery a first-class workflow. Retain the snapshot used by a consequential analysis, test rollback with concurrent writers and document how schema changes affect old queries. That makes the table format valuable not only for interoperability, but for reconstructing and correcting an agent's decision."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

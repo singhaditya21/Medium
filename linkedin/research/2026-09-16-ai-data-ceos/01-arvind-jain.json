@@ -1,0 +1,57 @@
+{
+  "name": "Arvind Jain",
+  "company": "Glean",
+  "role": "Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/jain-arvind/",
+  "roleSource": "https://www.glean.com/about",
+  "verifiedOn": "2026-09-16",
+  "positioning": "Enterprise context, governed agents and business-workflow outcomes",
+  "contactState": "Awaiting inbound after September 11 comment; no new unprompted contact before watchlist review September 18.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503863140292419584/",
+      "displayedAge": "5d",
+      "summary": "Embedding engineering with domain teams; Glean closed-lost reactivation example and shared business-outcome ownership.",
+      "status": "already_commented_no_additional_comment",
+      "draft": null,
+      "reason": "Exact approved B1 v2 comment already posted September 11; watchlist prohibits repeating the experiment proposal."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500972325614333952/",
+      "displayedAge": "1w",
+      "summary": "AI-assisted work can shift review and rework costs downstream; proposes sender accountability and an AI warranty.",
+      "status": "provisional_hold_for_relationship_review",
+      "threadReview": "Two initially displayed comments inspected, including decision-authority governance. Remaining comments not yet reviewed.",
+      "draft": "Arvind Jain, the AI warranty could become a handoff cost ledger: record preparation time, recipient verification time and later rework against the same deliverable. Then compare end-to-end cost per accepted outcome with the manual baseline. A local time saving should only count after the receiving team accepts the work; otherwise the sender's productivity metric rewards exporting cost."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500307588400467968/",
+      "displayedAge": "2w, edited",
+      "summary": "Glean:GO organizational-design themes: proactive coworkers, workflow redesign, Day 0 security, outcome measurement and clear ownership. Quotes DaVita workday savings.",
+      "status": "provisional_thread_and_relationship_review_required",
+      "draft": "Arvind Jain, converting the reported 75,000 workdays saved into caregiver time needs a second measurement: how much capacity was actually redeployed into patient-facing work? I would separate estimated task-time savings from observed schedule capacity and delivered service time. That would show whether workflow redesign removed the downstream constraint or only accelerated an upstream task."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498772364311179265/",
+      "displayedAge": "2w, edited",
+      "summary": "Glean:GO product and customer recap, including AI Gateway, Glean Protect and a showcase of eight AI-native companies.",
+      "status": "provisional_low_priority_event_recap",
+      "draft": "Arvind Jain, the combination of AI Gateway and Glean Protect raises a useful integration test: can an operator follow one action from model routing through the permission decision to its verified business result? I would measure trace completeness and reconstruction time across the participating products, especially when a workflow crosses vendor boundaries."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498348808691580928/",
+      "displayedAge": "2w",
+      "summary": "Glean Tau, Intelligence and Transform announcements; author reports benchmark token-cost reduction of 81% and preference rate of 78% versus Claude Cowork.",
+      "status": "provisional_thread_and_relationship_review_required",
+      "draft": "Arvind Jain, the reported 81% token-cost reduction and 78% preference rate would be easier to interpret alongside cost per successfully completed workflow. Does the comparison include context preparation, retries, tool calls and human review on the same task set? A breakdown by task complexity would help distinguish gains from model routing from gains due to better enterprise context."
+    }
+  ],
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "scoreState": "Not scored for execution; relationship hold and incomplete thread reviews."
+}

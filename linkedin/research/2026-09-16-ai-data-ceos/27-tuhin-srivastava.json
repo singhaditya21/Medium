@@ -1,0 +1,49 @@
+{
+  "name": "Tuhin Srivastava",
+  "company": "Baseten",
+  "role": "Co-Founder and CEO, company source",
+  "profileUrl": "https://www.linkedin.com/in/tuhin-srivastava/",
+  "roleSource": "https://www.baseten.co/about-us/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored/commentary posts read. Current LinkedIn headline is Baseten; CEO role supported by company source. No videos watched.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503857846124687361/",
+      "displayedAge": "5d",
+      "summary": "Blaxel joins Baseten to combine execution, inference and training infrastructure.",
+      "draft": "Tuhin Srivastava, a unified stack should make the resource boundaries clearer, not disappear. A burst of agent execution or a training job should not starve a latency-sensitive inference path. Separate admission budgets and observable queueing at each stage would let customers see whether the integrated platform improves end-to-end completion under contention."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501732025364697088/",
+      "displayedAge": "1w",
+      "summary": "Notion meeting notes processes high audio volume on Baseten.",
+      "draft": "Tuhin Srivastava, audio workloads make the tail important: long recordings, overlapping speakers and bursts after meetings end can behave very differently from an average clip. Real-time factor and time-to-complete by recording length, alongside transcript quality, would show how the service handles that daily volume without hiding the difficult cases."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501332374253813774/",
+      "displayedAge": "1w, edited",
+      "summary": "Base Labs will share research, RL environments, data and continual post-training work.",
+      "draft": "Tuhin Srivastava, continual learning needs a retained record of what the model stopped doing well. Publishing evaluation snapshots before and after each update, including untouched tasks, would make forgetting and safety regressions visible alongside improvements. Open recipes are much easier to build on when the unsuccessful changes and their failure cases are inspectable too."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487530874213777408/",
+      "displayedAge": "1mo",
+      "summary": "Day-zero open-model availability through Model APIs.",
+      "draft": "Tuhin Srivastava, day-zero availability is most valuable when a team can compare the new model without changing its production traffic immediately. A shadow evaluation route with the same prompts, tools and workload limits would let customers test compatibility and task success before moving the default. That makes fast access compatible with a controlled rollout."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486163810597351424/",
+      "displayedAge": "1mo",
+      "summary": "Fast Model API tier reports two-to-three-times higher tokens per second.",
+      "draft": "Tuhin Srivastava, higher TPS matters differently for a long generation than for an interactive tool loop. I would pair it with time to first token, p95 inter-token latency and completed task time under the same concurrency. That shows whether the Fast tier improves the user's wait or mainly accelerates a portion of the request after queueing has already dominated."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

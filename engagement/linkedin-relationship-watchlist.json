@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-14T09:23:18Z",
+  "updatedAt": "2026-09-16T07:34:30Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -155,9 +155,9 @@
       "profileUrl": "https://www.linkedin.com/in/ACoAABKWz3MBoS8HDeIMfPkLC9mY8MzMukFWsyQ",
       "themes": ["enterprise AI", "production workflows"],
       "state": "awaiting_inbound_reply",
-      "lastMeaningfulTouch": "2026-09-12",
-      "nextReviewOn": "2026-09-19",
-      "nextActionRule": "Latest exact approved evening D2 sent September 12 at 19:49 IST and verified again after inbox refresh; privacy-safe receipt 20260912142229-message-posted-in-acoaabkwz3mbos8hdeimfpklc9my8mzmukfwsyq. Private wording is not retained here. Wait for substantive inbound; no generic chaser or additional communication without new exact approval."
+      "lastMeaningfulTouch": "2026-09-16",
+      "nextReviewOn": "2026-09-23",
+      "nextActionRule": "Exact approved D1 sent September 16 at 11:02 IST and visibly verified; privacy-safe receipt 20260916053422-message-posted-in-acoaabkwz3mbos8hdeimfpklc9my8mzmukfwsyq. Private wording is not retained here. Wait for substantive inbound; no generic chaser or additional communication without new exact approval."
     },
     {
       "name": "Katharina Koerner",
@@ -235,10 +235,10 @@
       "name": "Kumar Gaurav",
       "profileUrl": "https://www.linkedin.com/in/kumargaurav7/",
       "themes": ["AI infrastructure", "cloud", "FinOps"],
-      "state": "inbound_reply_awaiting_confirmation",
-      "lastMeaningfulTouch": "2026-09-12",
-      "nextReviewOn": "2026-09-14",
-      "nextActionRule": "Fresh inbound reviewed September 14; one exact DM proposal is in the chat only and awaits new action-time approval. Private wording and conversation links are not retained here. Recheck current context and duplicates before any approved send; preserve employer infrastructure and procurement confidentiality. No reaction, follow, connection, meeting or other communication is authorized."
+      "state": "inbound_reply_requires_review",
+      "lastMeaningfulTouch": "2026-09-16",
+      "nextReviewOn": "2026-09-16",
+      "nextActionRule": "Exact approved D3 sent September 16 at 11:03 IST and visibly verified; privacy-safe receipt 20260916053422-message-posted-in-acoaadciesub00uee-zz2almkuhak2r08eifraa. A subsequent substantive inbound reply was visibly observed September 16; full conversation review and a new exact draft remain pending. Private wording and conversation links are not retained here. Preserve employer infrastructure and procurement confidentiality. No additional communication without new exact approval."
     },
     {
       "name": "Shabina Abba Noormohamed",

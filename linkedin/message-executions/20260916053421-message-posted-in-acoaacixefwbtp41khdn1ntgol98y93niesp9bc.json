@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916053421-message-posted-in-acoaacixefwbtp41khdn1ntgol98y93niesp9bc",
+  "action": "message_posted",
+  "recordedAt": "2026-09-16T05:34:21Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T05:34:21Z",
+    "scope": "User explicitly approved the exact contact-only reply to this recipient."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/ACoAACiXeFwBTP41kHdN1ntgOL98Y93NieSP9Bc",
+    "messageTextSha256": "46c157856338aafda9dc5a17365fdfb43247c1410457a16471d2b6d5a632ba9d",
+    "verifiedAt": "2026-09-16T05:34:21Z",
+    "verification": "Verified exact outgoing message under Aditya Singh at 11:01 AM; sending state cleared and composer empty."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

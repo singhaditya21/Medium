@@ -1,0 +1,49 @@
+{
+  "name": "Lin Qiao",
+  "company": "Fireworks AI",
+  "role": "CEO and Co-Founder",
+  "profileUrl": "https://www.linkedin.com/in/lin-qiao-22248b4/",
+  "roleSource": "https://www.linkedin.com/in/lin-qiao-22248b4/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First ten activity positions inspected; five authored/commentary technical posts selected. Reposts and leadership-hiring announcement excluded. All selected posts are three weeks to one month old.",
+  "posts": [
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496631286158135296/",
+      "displayedAge": "3w",
+      "summary": "Specialized legal model developed with domain training and data, reported over 1,300 tasks and 24 areas.",
+      "draft": "Lin Qiao, specialization is especially interesting when the evaluation exposes uneven performance across subdomains. Alongside the aggregate result, I would report abstention behavior and severe-error rates on unseen document types. That helps buyers decide where the specialist can operate independently and where expert review remains necessary."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7492784162479710208/",
+      "displayedAge": "1mo",
+      "summary": "Launch partnership and anticipated open-weight model availability.",
+      "draft": "Lin Qiao, open weights expand deployment choice, but enterprise portability also depends on the serving contract. Model version pinning, tokenizer changes, tool-call compatibility and evaluation reproducibility should travel with the deployment. A canary that compares the same workload across serving environments would make that freedom operational rather than just a licensing option."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491222064117313536/",
+      "displayedAge": "1mo",
+      "summary": "GitHub partnership brings a Fireworks-hosted open-weight coding model to Copilot.",
+      "draft": "Lin Qiao, coding-model economics should include the full edit loop: failed builds, retries, review and follow-up corrections. Comparing accepted changes at the same quality bar would show where the open model is genuinely more economical. It also gives teams evidence for routing by task class instead of choosing one model for every repository operation."
+    },
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488659581875752960/",
+      "displayedAge": "1mo, edited",
+      "summary": "Post-trained open model is presented as a strong defensive vulnerability-discovery specialist.",
+      "draft": "Lin Qiao, a security specialist needs evaluation beyond its own benchmark: unseen repositories, independently confirmed findings and the analyst effort required to dismiss false positives. Cost per validated issue and coverage by weakness class would show whether the training improvement translates into a better defensive review workflow."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488251621995417600/",
+      "displayedAge": "1mo, edited",
+      "summary": "Nexus routes tasks across models, manages cache efficiency and enterprise controls; discusses oracle and predictive routing results.",
+      "draft": "Lin Qiao, the crucial gap is between an oracle that knows which model succeeded and a deployable router deciding before the outcome is known. I would report that gap on held-out task families, including fallback cost and latency. That shows how much of the theoretical saving survives imperfect routing and changes in the production workload."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

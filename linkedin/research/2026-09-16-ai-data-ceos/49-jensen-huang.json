@@ -1,0 +1,50 @@
+{
+  "name": "Jensen Huang",
+  "company": "NVIDIA",
+  "role": "Founder and CEO, Executive Top Voice native profile",
+  "profileUrl": "https://www.linkedin.com/in/jenhsunhuang/",
+  "roleSource": "https://investor.nvidia.com/governance/management-team/default.aspx",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First eight posts read; five substantive sources selected. Unread article teasers and plain repost excluded. High-volume threads require substantial duplicate review before approval.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501248006474637312/",
+      "displayedAge": "1w",
+      "summary": "Agreement to acquire Hugging Face while preserving platform choice.",
+      "draft": "Jensen Huang, platform choice becomes durable when users can reproduce the same model artefact and evaluation across independent serving environments. Portable provenance, model-version identifiers and exportable evaluation records would make openness testable beyond the absence of a hardware requirement. That is especially valuable for institutions that need a credible exit or recovery path."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7492950397624414209/",
+      "displayedAge": "1mo",
+      "summary": "Efficient specialist model and routing for long-running agents.",
+      "draft": "Jensen Huang, model routing should be evaluated on the completed workflow, not just the selected model's score. A cheap execution step can become expensive if its error causes retries or invalidates later work. Cost per verified completion, with escalation and fallback included, would show where specialised models genuinely improve long-running agents."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490422037753036800/",
+      "displayedAge": "1mo",
+      "summary": "Open reasoning model for autonomous machines.",
+      "draft": "Jensen Huang, an inspectable reasoning model is useful, but the safety boundary still needs to survive incorrect reasoning. Independent motion constraints, uncertainty-triggered fallback and evidence from closed-loop scenarios matter alongside model evaluations. Separating model capability from system-level operating limits would help teams understand what the release does and does not establish."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487525646252826624/",
+      "displayedAge": "1mo",
+      "summary": "Open and closed model ecosystem for defensive security.",
+      "draft": "Jensen Huang, defenders benefit from models they can inspect and retain during an incident, but they also need reproducible evidence. A finding should preserve the model version, authorised scope and observed result so another team can validate it independently. That makes the ecosystem useful for incident response without relying on any one model's explanation as proof."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486434757006893056/",
+      "displayedAge": "1mo",
+      "summary": "Open and closed models both contribute to the AI ecosystem.",
+      "draft": "Jensen Huang, openness enables independent testing; the next step is making those tests comparable. Shared failure taxonomies, reproducible evaluation inputs and clear deployment assumptions would let teams learn across open and closed systems. That would turn more available models into stronger evidence about which ones are appropriate for a particular operating risk."
+    }
+  ],
+  "factBoundary": "Acquisition described as agreement; incident allegations not repeated. No safety certification or benchmark claim inferred.",
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

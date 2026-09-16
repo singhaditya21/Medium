@@ -1,0 +1,49 @@
+{
+  "name": "Jerry Liu",
+  "company": "LlamaIndex",
+  "role": "Co-Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/jerry-liu-64390071/",
+  "roleSource": "https://www.linkedin.com/in/jerry-liu-64390071/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First ten activity positions inspected; five authored technical posts selected, excluding reposts and hiring congratulations. Videos and underlying benchmark artifacts not reviewed.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505299800473427968/",
+      "displayedAge": "1d",
+      "summary": "Two-pass just-in-time OCR uses cheap initial parsing and selective higher-accuracy page processing.",
+      "draft": "Jerry Liu, the first-pass selector is a potential blind spot: if it misses the page containing the decisive footnote, better OCR on the selected pages cannot recover it. I would measure page-selection recall separately from transcription quality and include a fallback for unresolved cross-page references. That shows whether savings come from safe selectivity or from silently omitting evidence."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504934676038377472/",
+      "displayedAge": "2d, edited",
+      "summary": "FlyOCR experiment reports roughly 87% accuracy on sampled glyphs using a fruit-fly-connectome-inspired circuit.",
+      "draft": "Jerry Liu, glyph accuracy is an interesting first result; the next test could separate character recognition from document structure. A model might read every digit correctly but assign it to the wrong row or period. Reporting cell association and whole-number accuracy alongside glyph accuracy would show which part of the OCR problem the circuit is actually learning."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504243226267103233/",
+      "displayedAge": "4d",
+      "summary": "Calibrated page-level confidence supports human review or fallback for parsing errors.",
+      "draft": "Jerry Liu, calibration should be checked by document class and failure severity, not only across all pages. A high-confidence error in a critical table cell can disappear inside an acceptable page average. I would plot error rate by confidence band and measure severe-error recall at a fixed human-review budget, including new layouts outside the calibration set."
+    },
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503839012701282305/",
+      "displayedAge": "5d",
+      "summary": "Checkbox parsing produces structured JSON for forms.",
+      "draft": "Jerry Liu, checkbox extraction needs at least an explicit uncertain state in addition to checked and unchecked. Faint marks, crossed-out selections and two boxes marked in a mutually exclusive group should not silently collapse to a boolean. Retaining the source box and linking it to the exact question makes those cases reviewable before downstream rules act on them."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503593245906575360/",
+      "displayedAge": "6d",
+      "summary": "Agentic extraction demo reports 54-plus insurance-policy fields with source bounding boxes and confidence review.",
+      "draft": "Jerry Liu, the bounding boxes make the result inspectable. For broader validation, I would score missing fields, wrong values and wrong field associations separately, including endorsements that override the main policy. A perfect result on one document is useful demonstration evidence; held-out policy variants show how much review the workflow will need in production."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

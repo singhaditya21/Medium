@@ -1,0 +1,49 @@
+{
+  "name": "Satyen Sangani",
+  "company": "Alation",
+  "role": "CEO and Co-Founder",
+  "profileUrl": "https://www.linkedin.com/in/ssangani/",
+  "roleSource": "https://www.alation.com/our-story/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First six activity positions read; five authored posts selected, excluding a plain company repost. Drafts respond to visible recaps, not unviewed podcasts.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505264143093006337/",
+      "displayedAge": "1d, edited",
+      "summary": "Customer-specific product forks may sit over a small set of shared primitives.",
+      "draft": "Satyen Sangani, customer-specific forks move complexity from feature delivery into upgrade propagation. The shared primitives need stable contracts and a way to prove that a security fix reaches every fork without breaking its local behavior. I would track patch propagation time and contract-test coverage alongside customization speed."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501295963811024896/",
+      "displayedAge": "1w",
+      "summary": "AI strategy should question whether workflows deserve to exist and enable genuinely new offerings.",
+      "draft": "Satyen Sangani, an effective portfolio review could separate three cases: eliminate the workflow, improve it, or create a new service that was previously uneconomic. Each needs a different success measure. Otherwise a new revenue experiment gets judged on labor savings, while a redundant approval process gets automated instead of removed."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500277123283169280/",
+      "displayedAge": "2w, edited",
+      "summary": "Asks which debate is misread: organizational change, SaaS disruption or data-business evolution.",
+      "draft": "Satyen Sangani, I think the data-business debate often understates the value of decision context. Raw records may become easier to access, while verified definitions, lineage, usage rights and freshness become more consequential when agents act on them. The product is increasingly the assurance that a specific dataset is fit for this decision, not merely that the rows are available."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498812360468385792/",
+      "displayedAge": "2w",
+      "summary": "BBC example emphasizes data ownership, access responsibility and traceability before agent autonomy.",
+      "draft": "Satyen Sangani, tracing the bad call requires the version of the data and policy used at decision time, not just today's lineage graph. I would retain that snapshot reference with the action and test whether the named owner can reproduce the decision after a source changes. Ownership becomes operational when it includes an incident response path and a recovery responsibility."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493323500049502208/",
+      "displayedAge": "1mo, edited",
+      "summary": "Conflicting trusted figures lead teams to build shadow systems; governance must restore shared trust.",
+      "draft": "Satyen Sangani, the shadow spreadsheet often contains the exception handling missing from the official dataset. Before retiring it, I would compare where the figures diverge and capture the business rule behind each adjustment. Track recurring reconciliations and unresolved definition conflicts; forcing everyone onto one dashboard does not resolve the underlying trust problem."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

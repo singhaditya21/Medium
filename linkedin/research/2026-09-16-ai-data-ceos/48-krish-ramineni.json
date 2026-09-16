@@ -1,0 +1,49 @@
+{
+  "name": "Krish Ramineni",
+  "company": "Fireflies.ai",
+  "role": "Co-founder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/krishramineni/",
+  "roleSource": "https://fireflies.ai/about-us",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Authored activity through position 14 inspected. Five relevant sources selected; sports, personal meetings, plain reposts and unread videos excluded. No privacy ranking independently validated.",
+  "posts": [
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500961146305175552/",
+      "displayedAge": "1w",
+      "summary": "Voice agents conduct interviews and other calls.",
+      "draft": "Krish Ramineni, a voice agent taking a meeting needs clear authority boundaries before the first question. Participants should know it is an AI, what is recorded and which decisions remain with a person. For recruiting, a useful quality measure would include transcription corrections and successful human handoffs, rather than treating more completed interviews as evidence of better hiring decisions."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497711369283149825/",
+      "displayedAge": "3w",
+      "summary": "Privacy, private storage and security controls.",
+      "draft": "Krish Ramineni, the no-training commitment is important, and customers also need a testable deletion path. Removing a meeting should have a defined effect on its transcript, summary, embeddings, caches and downstream integrations. A retention map and deletion-completion evidence would make the privacy controls understandable beyond the headline ranking."
+    },
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493719477591924736/",
+      "displayedAge": "1mo",
+      "summary": "Email assistant retains context from meetings and email.",
+      "draft": "Krish Ramineni, cross-channel context needs an audience boundary. A fact from an internal meeting may be relevant to an external email without being authorised for disclosure. Showing which source informed a proposed reply, with explicit send approval for new recipients or sensitive content, would make the assistant's context useful without turning relevance into permission."
+    },
+    {
+      "position": 11,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487911360815763456/",
+      "displayedAge": "1mo",
+      "summary": "Daily briefs surface decisions, action items and blockers.",
+      "draft": "Krish Ramineni, a daily brief should distinguish a new decision from a repeated mention and a superseded one. Linking each item to its latest source, owner and unresolved contradiction would help avoid yesterday's plan returning as today's instruction. Missed-critical-item rate and correction burden would be useful measures alongside time saved."
+    },
+    {
+      "position": 14,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485379896874004480/",
+      "displayedAge": "1mo",
+      "summary": "Sales suite automates preparation, CRM updates and follow-ups.",
+      "draft": "Krish Ramineni, CRM autofill needs to separate what the customer said from what the agent inferred. A proposed field change should carry the supporting transcript span, previous value and confidence, with approval for consequential changes such as deal stage or commitment dates. That makes reduced data entry compatible with a CRM record the sales team can trust."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

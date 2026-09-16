@@ -1,0 +1,22 @@
+{
+  "name": "Bob van Luijt",
+  "company": "Weaviate",
+  "role": "CEO and Co-Founder",
+  "profileUrl": "https://www.linkedin.com/in/bobvanluijt/",
+  "roleSource": "https://www.linkedin.com/in/bobvanluijt/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Inspected activity positions 1–9 and 13–20. Most were plain reposts, excluded rather than attributed to the CEO. Positions 10–12 not rendered in reviewed subset. One relevant authored text verified, not five.",
+  "posts": [
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502660502561492992/",
+      "displayedAge": "1w",
+      "summary": "Weaviate native MCP endpoint removes external middleware and uses API-key bearer authentication.",
+      "draft": "Bob van Luijt, moving MCP into the engine removes a deployment boundary, but the agent's authorization scope still deserves a separate test. Can the same identity be restricted to the required collections and operations, and revoked without disrupting unrelated clients? I would benchmark query latency alongside permission enforcement and revocation propagation, including long-lived sessions.",
+      "factBoundary": "Proposes authorization and operational tests; does not allege a missing product control."
+    }
+  ],
+  "status": "provisional_additional_authored_posts_and_thread_review_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

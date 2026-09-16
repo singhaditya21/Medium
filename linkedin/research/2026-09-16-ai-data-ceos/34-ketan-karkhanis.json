@@ -1,0 +1,49 @@
+{
+  "name": "Ketan Karkhanis",
+  "company": "ThoughtSpot",
+  "role": "CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/ketankarkhanis/",
+  "roleSource": "https://www.linkedin.com/in/ketankarkhanis/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First seven activity cards read; five relevant authored sources selected. Past meetup is discussed for its technical claim, not promoted as upcoming.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505613594638569472/",
+      "displayedAge": "17h",
+      "summary": "Embedded analytics and agentic insight-to-action.",
+      "draft": "Ketan Karkhanis, embedding the answer is different from embedding authority to act. The product should show which metric version and source snapshot supported a recommendation, then recheck permissions when the user commits the change. Decision-to-verified-outcome time would be a useful measure alongside answer latency for these intelligent experiences."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504626798345818112/",
+      "displayedAge": "3d",
+      "summary": "Begin AI initiatives with an operating KPI and accountable owner.",
+      "draft": "Ketan Karkhanis, the KPI owner also needs a denominator and a guardrail. Faster case closure can look successful while reopened cases or missed obligations rise. Defining the eligible workload, accepted outcome and counter-metric before deployment makes the operating KPI a test of business improvement rather than a new target for the agent to optimise around."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503657669493198848/",
+      "displayedAge": "6d",
+      "summary": "Semantic layer as a narrow tool instead of unconstrained text-to-SQL.",
+      "draft": "Ketan Karkhanis, a narrow semantic tool is a useful boundary because it can reject unsupported questions explicitly. The contract should include metric version, allowed dimensions, time basis and access scope, not just a natural-language description. Ambiguity should return a clarification request rather than trigger an escape hatch into unrestricted SQL."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503596887443243008/",
+      "displayedAge": "6d",
+      "summary": "Trusted semantics and context before agent reasoning or action.",
+      "draft": "Ketan Karkhanis, trusted context reduces one source of guessing, but the model can still misapply a valid definition. A useful evaluation separates wrong source selection, wrong metric interpretation and wrong downstream action. That makes it possible to locate the failing layer instead of treating every confident error as either a model problem or a context problem."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499135072554639361/",
+      "displayedAge": "2w",
+      "summary": "Governed spreadsheet writeback into warehouses.",
+      "draft": "Ketan Karkhanis, writeback makes concurrency part of the analytics contract. If two analysts adjust the same forecast from different snapshots, the system needs an explicit conflict rule and a record of the accepted version. A before/after diff, version precondition and reversible adjustment would preserve the governance advantage when the decision becomes a committed write."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

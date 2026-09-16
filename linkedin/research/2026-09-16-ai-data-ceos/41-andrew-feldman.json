@@ -1,0 +1,49 @@
+{
+  "name": "Andrew Feldman",
+  "company": "Cerebras",
+  "role": "Founder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/andrewdfeldman/",
+  "roleSource": "https://www.linkedin.com/in/andrewdfeldman/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First seven posts read; five relevant sources selected. Personal and award posts excluded. Comments do not endorse regulatory exemptions or claim to have watched videos.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505250024562438144/",
+      "displayedAge": "1d",
+      "summary": "AI productivity expands engineering capacity and ambition.",
+      "draft": "Andrew Feldman, the opportunity becomes clearer when throughput is measured as accepted changes rather than generated code. More implementation capacity can expose the next bottleneck in review, integration or customer validation. Tracking lead time and escaped defects together would show where additional engineering effort can safely expand the frontier of what gets built."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504525070829129728/",
+      "displayedAge": "3d",
+      "summary": "Qwen inference speed claim.",
+      "draft": "Andrew Feldman, the speed comparison becomes most useful with prompt length, output length and concurrency fixed. Time to first token and p95 completion latency can move differently from tokens per second. Publishing those distributions alongside the up-to-16x figure would let teams estimate the benefit for their own interactive or batch workload."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501262855523119104/",
+      "displayedAge": "1w",
+      "summary": "Periodic-table generation speed demonstration.",
+      "draft": "Andrew Feldman, a four-second generation is compelling; the next test is whether the output is accepted without repair. For a structured task like the periodic table, schema validity, completeness and factual checks are inexpensive to automate. Reporting time to a verified artefact would connect inference speed directly to usable productivity."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500560502666838017/",
+      "displayedAge": "2w",
+      "summary": "Finland data centre with heat recovery and recirculated cooling.",
+      "draft": "Andrew Feldman, heat reuse is most informative as delivered useful heat over the year, not only recoverable thermal capacity. Seasonal demand and the temperature needed by the receiving network can change the outcome materially. Pairing compute utilisation with useful heat exported and total cooling-water withdrawal would make the design's operating benefits inspectable."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498726162354020352/",
+      "displayedAge": "2w",
+      "summary": "Compute and memory supply needs a complete manufacturing ecosystem.",
+      "draft": "Andrew Feldman, the surrounding ecosystem point matters: wafer capacity alone does not establish delivered accelerator capacity. Packaging, memory, testing and power delivery can each become the binding constraint. A ramp model that shows good units through the entire chain would help distinguish a new fab announcement from capacity an inference operator can actually deploy."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

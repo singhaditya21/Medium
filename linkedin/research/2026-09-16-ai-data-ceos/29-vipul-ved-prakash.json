@@ -1,0 +1,42 @@
+{
+  "name": "Vipul Ved Prakash",
+  "company": "Together AI",
+  "role": "Co-founder and CEO, current native profile",
+  "profileUrl": "https://www.linkedin.com/in/vipulved/",
+  "roleSource": "https://www.linkedin.com/in/vipulved/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Authored/commentary cards among first 20 inspected. Four substantive sources selected. Plain reposts, a bare must-read endorsement and an unread article teaser excluded; no fifth source invented.",
+  "posts": [
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498905179900174336/",
+      "displayedAge": "2w",
+      "summary": "Low-cost open multimodal model availability and solve-cost comparison.",
+      "draft": "Vipul Ved Prakash, lower cost per attempt is only part of the deployment decision. Cost per accepted solution should include retries, tool execution and review, with a fixed correctness threshold across models. The expected-solves comparison is more useful when readers can also see where the cheaper model fails and whether those failures are independently detectable."
+    },
+    {
+      "position": 8,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493803086847660032/",
+      "displayedAge": "1mo",
+      "summary": "India AI infrastructure partnership.",
+      "draft": "Vipul Ved Prakash, local compute capacity creates a useful opportunity to make the entire inference data path explicit. Prompts, caches, logs, model updates and support access may cross different boundaries even when GPUs are local. A published residency map for those paths would help enterprise teams translate the infrastructure investment into a deployable control model."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7492957571805433856/",
+      "displayedAge": "1mo",
+      "summary": "IBM partnership for enterprise open-model inference.",
+      "draft": "Vipul Ved Prakash, enterprise portability needs more than a compatible request schema. Tokenisation, tool-call structure, cancellation and retry behaviour can change during an endpoint migration. A shared conformance suite across the hosted options would give teams evidence that they can move workloads while preserving the operational contract."
+    },
+    {
+      "position": 16,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480560210730774528/",
+      "displayedAge": "2mo",
+      "summary": "Provisioned throughput reserves token capacity with serverless overage fallback.",
+      "draft": "Vipul Ved Prakash, the serverless fallback is an important boundary in this design. Once reserved capacity is exhausted, customers need to know whether the same latency and availability guarantees still apply. Separate reserved and overflow metrics, plus an option to queue or reject rather than spill, would let a critical workflow choose its failure behaviour explicitly."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

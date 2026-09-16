@@ -1,0 +1,49 @@
+{
+  "name": "Bipul Sinha",
+  "company": "Rubrik",
+  "role": "CEO, Chairman and Co-Founder, native profile",
+  "profileUrl": "https://www.linkedin.com/in/bipulsinha/",
+  "roleSource": "https://www.linkedin.com/in/bipulsinha/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First ten authored posts read. Five selected; repeated generic startup post and personal material excluded. Fifth is an operating-model conversation, lower technical relevance than the first four.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505629513586757632/",
+      "displayedAge": "16h",
+      "summary": "Code Guardian validates attack paths in isolated code copies.",
+      "draft": "Bipul Sinha, validating an attack path is the useful boundary between a plausible finding and an engineering priority. The evidence should bind the exploit result, vulnerable revision and proposed fix, then rerun the test after remediation. Precision on confirmed findings and regression-free closure would tell customers more than the number of issues generated."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503452642703187968/",
+      "displayedAge": "6d",
+      "summary": "Machine-speed enterprise response and recovery.",
+      "draft": "Bipul Sinha, machine-speed response needs a separate measure for safe containment. A fast action that disables the wrong service can become a second incident. Tracking time to verified containment, unintended changes and time to restore the accepted business state would make the recovery claim more meaningful than action latency alone."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501431981147246592/",
+      "displayedAge": "1w",
+      "summary": "Assume breach and assume agent overreach; preemptive recovery.",
+      "draft": "Bipul Sinha, assume-agent-overreach adds an interesting recovery requirement: restore the data without restoring the authority that caused the damage. Recovery plans should separate business-state restoration from credentials, leases and agent memory. Otherwise a technically successful restore can immediately replay the same harmful action."
+    },
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498833703029362689/",
+      "displayedAge": "2w",
+      "summary": "Demand for trusted AI deployment and cyber resilience.",
+      "draft": "Bipul Sinha, the most useful evidence of trusted deployment would be repeated recovery exercises against realistic business workflows. The test should establish which accepted transactions survive, which actions need compensation and whether the recovered identity system is clean. That connects resilience investment to an outcome customers can verify independently."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498379062785126400/",
+      "displayedAge": "2w",
+      "summary": "Ownership and organisational resilience without the founder present.",
+      "draft": "Bipul Sinha, absence is a useful test of whether decision rights are explicit. The strongest version is not zero escalations; it is knowing which decisions the team should make, which must pause and who becomes accountable when the usual owner is unavailable. That same distinction matters when operational decisions are delegated to agents."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

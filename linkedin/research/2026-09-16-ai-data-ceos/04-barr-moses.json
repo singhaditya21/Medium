@@ -1,0 +1,61 @@
+{
+  "name": "Barr Moses",
+  "company": "Monte Carlo",
+  "role": "Co-Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/barrmoses/",
+  "roleSource": "https://www.linkedin.com/in/barrmoses/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Five substantive authored posts selected from the first seven activity positions. Past-event logistics and a conference speaker promotion excluded. First post's one visible comment inspected; other threads require review.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505732267495976960/",
+      "displayedAge": "8h",
+      "summary": "Agent trust requires governance, identity, enforcement and data/output trust. Asks who owns all four end to end.",
+      "draft": "Barr Moses, I would make the business workflow owner accountable for the end-to-end outcome, with named platform, security and data owners responsible for each boundary. The practical test is a cross-layer incident drill: can the team connect the identity, policy decision, source snapshot and verified result without reconstructing four separate timelines? Measure trace coverage and time to assign the failure to an owner.",
+      "threadReview": "Public post rechecked September 16: 14 reactions, one visible general-support comment from Justin Kaplan; no Aditya comment and no overlapping ownership/incident-drill argument observed. Local queue, execution receipts and watchlist searched with no matching prior action or hold.",
+      "scoring": {
+        "relevance": 1,
+        "discussionQuality": 0.8,
+        "uniqueContribution": 0.9,
+        "recency": 0.95,
+        "priorityScore": 0.92
+      },
+      "reviewState": "exact_draft_prepared_requires_user_approval_and_action_time_recheck",
+      "intendedMention": "Barr Moses",
+      "checkedOn": "2026-09-16"
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505611574020169729/",
+      "displayedAge": "16h",
+      "summary": "Trust depends on proving what an agent did; describes Detect, Triage, Adapt and Resolve. Survey percentages are author claims, not independently verified.",
+      "draft": "Barr Moses, a particularly damaging failure is an agent reporting completion when the downstream write never committed. The response reads well, but the business state is wrong. I would make Resolve require an authoritative read-back plus a retained action receipt, and report false-completion rate separately from answer quality. That gives the recovery loop something stronger than the agent's own account of success."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505401046173671424/",
+      "displayedAge": "1d",
+      "summary": "Four production failures escaped isolated evaluations: inconsistent totals, claimed tool use without a call, permission-dependent answers and stale results reused across turns.",
+      "draft": "Barr Moses, those examples suggest cross-artifact invariants: the narrative total must reconcile with the table; a claimed query must have a tool receipt; the answer must be replayable under the same permission context; and the source snapshot must still be valid. I would track escaped failures by invariant, not just an aggregate evaluation score. That also tells the team which production checks to promote into regression tests."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505290422932488192/",
+      "displayedAge": "1d",
+      "summary": "Guardian Life case highlights establishing trust before expanding agent deployments.",
+      "draft": "Barr Moses, a useful pre-scale gate would deliberately inject stale data, a mid-workflow permission change and a partially committed write. For each case, can the team prove detection, containment and recovery within its declared window? Passing the happy path should not unlock a broader action scope until those failure paths have named owners and observable outcomes."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503807237761720323/",
+      "displayedAge": "5d",
+      "summary": "Self-improvement loop catches and verifies failures, explains them and drafts a fix while retaining human approval.",
+      "draft": "Barr Moses, my bar would be improvement on a frozen holdout set plus a production canary, with no increase in severe failures. The incident used to propose the fix cannot also be the only evidence that the fix works. Keep the before/after versions and rollback trigger with the approval, then measure verified task success and recurrence of that failure class.",
+      "factBoundary": "Responds to the post text; does not claim to have watched the attached video."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

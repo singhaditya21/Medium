@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916052043-comment-posted-2026-09-16-linkedin-comment-dmitry-metric-release",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T05:20:43Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T05:20:43Z",
+    "scope": "User approved N1, C1-C3 and D1-D3 exactly as written in this turn. This receipt covers C3 only, exact text and one native Dmitry Ustimov mention; no reaction, follow, DM, or extra post."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-comment-dmitry-metric-release",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503870372354711552/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503870372354711552/",
+    "publishedTextSha256": "2d828c1777d640b15cd851ef3aa3cf5878a2bfcd0bb5c81c22c4aee8c7fb441a",
+    "verifiedAt": "2026-09-16T05:20:43Z",
+    "verification": "Fresh reload showed unchanged source and no duplicate. Approved text rendered under Aditya Singh with timestamp now; comment count increased from 19 to 20 and composer cleared. DOM confirms clickable Dmitry Ustimov mention points to /in/dmitryustimov/. URL identifies the verified source discussion, not a copied comment permalink."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Vikram Chatterji",
+  "company": "Galileo (acquired by Cisco)",
+  "role": "Co-Founder/CEO as displayed on current LinkedIn profile",
+  "profileUrl": "https://www.linkedin.com/in/vikram-chatterji/",
+  "roleSource": "https://www.linkedin.com/in/vikram-chatterji/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First fourteen activity positions inspected. Five authored/commentary posts identified after eight recent plain reposts. These posts are three to five months old; hold for fresher signal. CEO title is profile-displayed, not a claim of independent-company status.",
+  "posts": [
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7465070429850775553/",
+      "displayedAge": "3mo, edited",
+      "summary": "Announces completed Cisco acquisition and a mission to govern trustworthy agents.",
+      "draft": "Vikram Chatterji, combining evaluation with infrastructure observability creates a useful test: can a degraded agent outcome be traced back to a model change, a retrieval failure or a downstream service fault in one investigation? I would measure time to isolate the failing layer and the percentage of incidents with an end-to-end trace, rather than the number of dashboards integrated."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7460215765078745088/",
+      "displayedAge": "4mo",
+      "summary": "Shares Galileo release covering A2A tracing, OTel, dataset-based metric tests, pricing and annotator agreement.",
+      "draft": "Vikram Chatterji, A2A traces become particularly valuable when retries cross organizational boundaries. Preserve the original task ID, attempt ID and authoritative completion state so a second agent does not mistake a timeout for permission to repeat a committed action. Trace completeness and duplicate-side-effect rate would make a useful paired release test."
+    },
+    {
+      "position": 12,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7450572553275879424/",
+      "displayedAge": "4mo",
+      "summary": "Specialized Luna evaluation models aim to make continuous evaluation economically practical.",
+      "draft": "Vikram Chatterji, moving from sampled to continuous evaluation improves coverage, but evaluator drift remains a separate risk. Keep a small, independently labelled sentinel set and check severe-error recall as task mix changes. Low per-request cost is most useful when the system can also detect when its evaluator no longer recognizes the failures it was built to catch."
+    },
+    {
+      "position": 13,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7448103114248716288/",
+      "displayedAge": "5mo",
+      "summary": "Acquisition-intent announcement describes combining Galileo with Cisco observability and security.",
+      "draft": "Vikram Chatterji, a customer-facing integration milestone would be preserving existing evaluation semantics through the platform transition. The same traces should produce comparable findings, with explicit version changes when a metric behaves differently. That gives teams a way to adopt the broader security stack without losing the operational baseline they use to judge agent quality."
+    },
+    {
+      "position": 14,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7446713530772447232/",
+      "displayedAge": "5mo",
+      "summary": "Autotune launch uses natural-language context to improve evaluation accuracy; linked video title reports 79% to 95%.",
+      "draft": "Vikram Chatterji, business context can improve an evaluator while also making it easier to fit the examples used during tuning. I would keep the tuning set separate from an untouched test set and report class-level recall, especially for rare consequential failures. Does Autotune expose where the revised evaluator changes its verdict, so a domain owner can inspect those trade-offs?"
+    }
+  ],
+  "status": "hold_stale_posts_thread_review_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

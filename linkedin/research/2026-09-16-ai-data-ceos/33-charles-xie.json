@@ -1,0 +1,35 @@
+{
+  "name": "Charles Xie",
+  "company": "Zilliz",
+  "role": "Founder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/chaoxie/",
+  "roleSource": "https://www.linkedin.com/in/chaoxie/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five activity cards read. Three relevant authored posts found, all displayed one year old. Stopped rather than excavating still older posts for a nominal count of five.",
+  "posts": [
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7344126950900191233/",
+      "displayedAge": "1yr",
+      "summary": "Benchmark vector databases with customer data, filters and streaming writes.",
+      "draft": "Charles Xie, the combination of filters and concurrent writes is where a benchmark starts resembling a production retrieval workload. Recall at a fixed latency budget should be reported by filter selectivity and insertion rate, not just as one aggregate QPS number. Including rebuild and recovery time would also expose costs that disappear from steady-state measurements."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7344124762232672257/",
+      "displayedAge": "1yr",
+      "summary": "Personalised search across meetings and enterprise accounts.",
+      "draft": "Charles Xie, personalised retrieval needs to prove that permission changes propagate as reliably as new records. A revoked meeting or drive document can remain semantically retrievable through a stale index or cached answer. Time-to-revocation across source, index and response cache would be a useful companion to the search-latency figures."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338964720554516480/",
+      "displayedAge": "1yr",
+      "summary": "Milvus compression, tiered storage and operational cost reductions.",
+      "draft": "Charles Xie, lower storage cost is most useful when the quality trade-off is visible. For Int8 compression and tiered storage, a workload-level view of recall, reranking cost and cold-tier p95 latency would show where savings persist through the full retrieval path. Otherwise some infrastructure savings may simply reappear as additional candidates or model calls."
+    }
+  ],
+  "status": "hold_stale_sources_not_current_engagement",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

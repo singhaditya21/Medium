@@ -1,0 +1,49 @@
+{
+  "name": "Michel Tricot",
+  "company": "Airbyte",
+  "role": "CEO and Co-Founder",
+  "profileUrl": "https://www.linkedin.com/in/micheltricot/",
+  "roleSource": "https://www.linkedin.com/in/micheltricot/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First eight positions read; first five relevant authored posts selected, excluding a plain repost.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505657762429812736/",
+      "displayedAge": "14h",
+      "summary": "AI value requires process redesign rather than a lift-and-shift of old work into new tools.",
+      "draft": "Michel Tricot, the transformation horizon can be long while the learning checkpoints stay short. I would measure which workflow constraint changed each quarter: handoff delay, rework, review capacity or cost per accepted output. That avoids demanding a complete six-month payback while still distinguishing a deliberate transition from spending that has no falsifiable operating hypothesis."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503845878965891072/",
+      "displayedAge": "5d",
+      "summary": "Entity resolution, scoped permissions and data discovery underpin useful agents; agents should request missing access.",
+      "draft": "Michel Tricot, an entity match should not automatically merge access rights. Knowing that Andrew in two systems is the same person does not mean an agent authorized for one system may read the other. I would retain match confidence separately from authorization and issue any additional access as a task-bound, expiring grant, with ambiguous identity matches routed for review."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503482417236779008/",
+      "displayedAge": "6d, edited",
+      "summary": "OSS-to-cloud migration preserves configuration, schedules, streams and incremental cursor state.",
+      "draft": "Michel Tricot, preserving cursor state is the critical cutover detail. I would verify it with a boundary-window reconciliation: records inserted, updated and deleted around the handoff should arrive once in the intended final state. A migration can preserve the configuration perfectly yet still miss a change if source progress and destination commit state are not reconciled together."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503127525070524417/",
+      "displayedAge": "1w",
+      "summary": "Connector Builder has enabled over 35,000 custom connectors, with schema detection, incremental sync and error handling.",
+      "draft": "Michel Tricot, connector creation time is only the first part of the lifecycle. I would track schema-change detection, incremental-sync correctness and recovery from expired cursors for the generated connectors. A small replayable contract-test suite per API would make that community scale much easier to maintain when upstream behavior changes."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502032820643696640/",
+      "displayedAge": "1w",
+      "summary": "Long-running business workflows require durable state machines that outlive individual agent processes.",
+      "draft": "Michel Tricot, the durable state also needs a fence against a replaced worker. After a pod restarts, an old process can still complete a tool call while the new process retries it. A monotonically increasing execution epoch plus an idempotent action key lets the downstream system reject stale workers and recognize an already committed transition."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

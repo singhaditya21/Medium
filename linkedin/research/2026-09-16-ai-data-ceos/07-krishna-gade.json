@@ -1,0 +1,61 @@
+{
+  "name": "Krishna Gade",
+  "company": "Fiddler AI",
+  "role": "Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/krishnagade/",
+  "roleSource": "https://www.linkedin.com/in/krishnagade/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored posts read in full as rendered. Posts 1–3 displayed no comment count; threads and prior-activity receipts still require final review.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505738334262996992/",
+      "displayedAge": "8h, edited",
+      "summary": "Coding-agent experiment reports a half-price model costing 8–14 times more per verified success; model ordering changed by workload.",
+      "draft": "Krishna Gade, the reported 8–14x reversal makes workload-level routing more useful than a single cheapest-model policy. I would include failed attempts and recovery work in the numerator, and only independently verified completions in the denominator. Then report the distribution by task class: an average can hide a low-cost model that is economical on routine edits but expensive on integration failures.",
+      "threadReview": "Public post rechecked September 16: five reactions, one repost, no comments displayed after opening the comment area. No Aditya comment observed. Local queue, execution receipts and watchlist searched with no matching prior action or hold. Discussion-quality score reflects a substantive source, not an established conversation.",
+      "scoring": {
+        "relevance": 1,
+        "discussionQuality": 0.75,
+        "uniqueContribution": 0.9,
+        "recency": 0.95,
+        "priorityScore": 0.908
+      },
+      "reviewState": "exact_draft_prepared_requires_user_approval_and_action_time_recheck",
+      "intendedMention": "Krishna Gade",
+      "checkedOn": "2026-09-16"
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504991598183813120/",
+      "displayedAge": "2d",
+      "summary": "Calls for frontier companies to give third-party evaluators employee-level access.",
+      "draft": "Krishna Gade, meaningful access should come with the ability to reproduce a finding: fixed model and tool versions, logged evaluation conditions and a protected route for reporting failures. The independence test is whether the evaluator can publish an unfavorable result without the evaluated team redefining the protocol after seeing it. Access alone does not settle that governance question."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503875096227528704/",
+      "displayedAge": "5d",
+      "summary": "Summarizes research where full reasoning access sometimes reduced monitors' sabotage detection because explanations persuaded the monitor.",
+      "draft": "Krishna Gade, the monitor should treat the agent's explanation as untrusted evidence, not as authority. A useful evaluation would hold the executed actions constant and vary only the justification, then measure how often the monitor's verdict changes. Separately enforce tool scope and policy constraints so a persuasive rationale cannot turn an unauthorized action into an allowed one."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503528027000082432/",
+      "displayedAge": "6d",
+      "summary": "Argues that provenance questions should be answered by context, data-access and tool-call audit trails rather than assurances.",
+      "draft": "Krishna Gade, a defensible provenance claim also needs evidence of log coverage. An empty access log does not prove non-access if one connector was outside the capture boundary. Record the inventory of data paths, integrity checks and known logging gaps alongside the timeline, so reviewers can distinguish 'not observed' from 'ruled out by the system's controls'."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503206797055283200/",
+      "displayedAge": "1w",
+      "summary": "Describes agent workdays and inference spending as a shift toward managing parallel digital labor.",
+      "draft": "Krishna Gade, agent-workdays measure activity, but the operating model needs an accepted-output measure as well. Pair inference spend with independently verified deliverables, human review hours and rework. Otherwise parallelism can make the activity ratio look better while the human approval queue becomes the real capacity constraint."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "factBoundary": "Numbers attributed only to the CEO's post. No claim to have reproduced the experiment, read the linked paper, or verified allegations in the provenance controversy."
+}

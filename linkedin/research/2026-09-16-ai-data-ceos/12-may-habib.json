@@ -1,0 +1,50 @@
+{
+  "name": "May Habib",
+  "company": "WRITER",
+  "role": "CEO",
+  "profileUrl": "https://www.linkedin.com/in/may-habib/",
+  "roleSource": "https://www.linkedin.com/in/may-habib/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Eight recent activity positions read. Five business-focused authored posts selected; personal-family content and a past-event teaser excluded. Underlying videos/articles not reviewed.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503555351074734080/",
+      "displayedAge": "6d",
+      "summary": "Enterprise Brain joins team memory, brand/compliance context, collaboration channels and meeting context across GTM.",
+      "draft": "May Habib, shared memory needs a correction path as much as a capture path. If an account manager records an exception that is later reversed, every downstream agent should know which fact supersedes it and who can see it. I would track stale-context incidents and time to propagate corrections across sales, marketing and service, alongside reuse of the memory layer."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503425885811699713/",
+      "displayedAge": "6d",
+      "summary": "Closed-loop GTM requires marketers, sellers and agents to work from shared context.",
+      "draft": "May Habib, a closed loop should distinguish a recorded interaction from a confirmed change in the customer's situation. Otherwise each agent can interpret the same signal differently and trigger conflicting next steps. A shared account-state transition, with evidence and ownership, would make handoff consistency measurable across the journey."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501336052385845248/",
+      "displayedAge": "1w",
+      "summary": "Fragmented GTM tools optimize individual touchpoints rather than a coherent multi-person customer journey.",
+      "draft": "May Habib, coordinating hundreds of actions also requires a suppression mechanism. A service escalation should be able to pause an unrelated upsell sequence, and a corrected account fact should invalidate queued messages that depend on it. I would measure conflicting-touchpoint rate and time to cancel obsolete actions, not only campaign output or response rate."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499162940072263681/",
+      "displayedAge": "2w",
+      "summary": "Enterprise vendor requirements include context ownership, outcomes, portability, cost control and central kill switches.",
+      "draft": "May Habib, a kill switch needs a defined completion boundary: does it stop new work, cancel queued work, revoke credentials, or contain actions already in flight? Those are different promises. I would include a shutdown drill in vendor evaluation and record the time until no further consequential writes can occur."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495532924214116352/",
+      "displayedAge": "4w",
+      "summary": "Enterprise adoption depends on data retention, compliance, encryption/network controls and interoperability.",
+      "draft": "May Habib, those requirements are strongest as acceptance tests. Can the buyer verify configured retention, revoke the relevant key, restrict the network path and export the workflow context without losing its policy meaning? A contract describes the promise; a repeatable deployment test shows whether this particular configuration meets it."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "factBoundary": "Drafts do not endorse unverified allegations about vendor intentions or current retention terms."
+}

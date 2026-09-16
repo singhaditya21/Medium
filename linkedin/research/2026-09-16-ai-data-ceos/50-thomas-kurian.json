@@ -1,0 +1,49 @@
+{
+  "name": "Thomas Kurian",
+  "company": "Google Cloud",
+  "role": "CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/thomas-kurian-469b6219/",
+  "roleSource": "https://www.linkedin.com/in/thomas-kurian-469b6219/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five and position seven read. Position six was virtualised before inspection; five substantive sources saved, but latest-five chronology is not certified. Unread interview teaser excluded.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498392581815291904/",
+      "displayedAge": "2w",
+      "summary": "Hard spend caps, flexible billing and model routing.",
+      "draft": "Thomas Kurian, a hard budget cap needs workflow-aware stopping semantics. Pausing API calls after an agent has completed part of a multi-step update can leave business state inconsistent. Reserving budget for verification or compensation before the first consequential action would make cost containment compatible with a safe stopping point."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498101396223934464/",
+      "displayedAge": "3w",
+      "summary": "Financial research skills, connectors, snapshots and governed controls.",
+      "draft": "Thomas Kurian, cited answers and data snapshots become especially useful when they are bound to the exact output version. A later source refresh or skill update should not silently change the evidence behind an already approved report. Recording the source snapshot, calculation and approval together would make the research workflow reproducible without treating citations alone as proof of correctness."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498033296681877504/",
+      "displayedAge": "3w",
+      "summary": "Legal workflows use reusable skills and trusted-system connectors.",
+      "draft": "Thomas Kurian, a reusable skill is also a versioned operating procedure. Changing its instructions or connector scope can alter which documents an agent sees and what it produces. Promotion tests, explicit ownership and a rollback target would help enterprise teams govern the skill lifecycle alongside the model lifecycle."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488991424097513474/",
+      "displayedAge": "1mo",
+      "summary": "Security platform scans, prioritises and repairs vulnerabilities.",
+      "draft": "Thomas Kurian, scan coverage and safe remediation are different outcomes. A repair should be tied to a reproducible failing test, the patched revision and regression results before it is promoted. Time to verified closure and the rate of reverted fixes would show whether autonomous repair is reducing exposure without creating new operational risk."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7465414195388366848/",
+      "displayedAge": "3mo",
+      "summary": "Multiple models find and help remediate different vulnerabilities.",
+      "draft": "Thomas Kurian, complementary models can increase finding coverage, but their agreement is not independent validation. The useful aggregation step is to deduplicate findings and verify exploitability in an authorised test environment before proposing a patch. That preserves model diversity while keeping the engineering queue grounded in reproducible evidence."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Justin Borgman",
+  "company": "Starburst",
+  "role": "Chairman and CEO",
+  "profileUrl": "https://www.linkedin.com/in/justinborgman/",
+  "roleSource": "https://www.linkedin.com/in/justinborgman/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First ten positions inspected. Five latest substantive technical originals selected; sports sponsorship and plain reposts excluded. Four selected posts are three months old.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503472470457217026/",
+      "displayedAge": "6d, edited",
+      "summary": "Federation provides distributed enterprise context without forcing continuous centralization.",
+      "draft": "Justin Borgman, federation shifts the challenge from copying data to coordinating guarantees. A query across sources needs an explicit freshness boundary and a defined response when one source is unavailable or changes mid-query. I would measure answer completeness and cross-source consistency alongside latency, so 'universal access' does not become an unqualified answer from partial evidence."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470521177963216897/",
+      "displayedAge": "3mo",
+      "summary": "Universal data access and business context are presented as foundations for production AI.",
+      "draft": "Justin Borgman, access to business context is strongest when the agent can distinguish an authoritative rule from a frequently repeated opinion. Retain the owner, effective date and evidence behind each definition, then make conflicts visible instead of blending them into one answer. That turns a context layer into something the business can correct and govern."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467562350074843138/",
+      "displayedAge": "3mo",
+      "summary": "Fast governed access to data and context is described as the next AI bottleneck.",
+      "draft": "Justin Borgman, speed should be measured against the context's validity window. A fast answer based on a stale account state can be worse than a slower answer that explicitly waits for the required update. Per-workflow freshness targets, together with p95 retrieval latency, would make the trade-off visible before an agent takes a consequential action."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7465834273657257984/",
+      "displayedAge": "3mo",
+      "summary": "NVIDIA partnership accelerates distributed analytics across CPU and GPU execution.",
+      "draft": "Justin Borgman, acceleration is most useful when measured end to end: source scan, transfer, joins, policy evaluation and result delivery. A faster execution kernel may expose a network or source-system bottleneck. A workload-level latency breakdown and cost per completed query would show where CPU/GPU placement changes the customer's actual experience."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7465741241620602881/",
+      "displayedAge": "3mo",
+      "summary": "Enterprise AI transformation requires engineering data foundations and semantic context.",
+      "draft": "Justin Borgman, the engineering artifact I would want is a release contract for each agent workflow: required data products, accepted freshness, semantic definitions, allowed actions and a verified completion condition. That gives data and application teams a shared boundary they can test when either side changes, rather than a general mandate to improve data readiness."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

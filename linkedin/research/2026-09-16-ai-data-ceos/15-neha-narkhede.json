@@ -1,0 +1,44 @@
+{
+  "name": "Neha Narkhede",
+  "company": "Oscilar",
+  "role": "Co-Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/nehanarkhede/",
+  "roleSource": "https://www.linkedin.com/in/nehanarkhede/",
+  "verifiedOn": "2026-09-16",
+  "replaces": "Jay Kreps: live profile describes Confluent CEO tenure ending September 2026 and uses past tense.",
+  "coverage": "Four relevant originals from first five positions; personal award/immigration story excluded. Additional feed loaded but positions 6–12 were not inspected; five-post completeness not claimed. Selected posts are one to five months old.",
+  "posts": [
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487495676969410560/",
+      "displayedAge": "1mo, edited",
+      "summary": "Emphasizes responsible implementation and deployment of powerful AI.",
+      "draft": "Neha Narkhede, an implementation-focused discussion could start with the evidence required to expand an agent's authority. Which outcomes must be verified, which exceptions need human review, and what observation period is enough? A repeatable release gate makes responsible deployment concrete without treating every use case as either fully manual or fully autonomous."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467923185611571200/",
+      "displayedAge": "3mo",
+      "summary": "Shared risk memory and orchestration underpin more than 30 risk agents; post reports improvements in alerts and policy delivery.",
+      "draft": "Neha Narkhede, shared risk memory also needs a way to contain a mistaken signal. If one agent's false finding propagates into onboarding, fraud and credit workflows, coordination can spread the error efficiently. I would retain evidence and confidence by source, test retraction propagation, and measure how quickly dependent decisions are flagged when an upstream signal is corrected."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7450581243244462081/",
+      "displayedAge": "4mo",
+      "summary": "Human judgment and explainability remain central while agents prepare risk cases and reduce mechanical work.",
+      "draft": "Neha Narkhede, the analyst queue is a useful place to test that claim. Measure decision quality and handling time by case difficulty, including overrides and reopened cases. If automation removes the easy alerts, average handling time may rise even as the operation improves. A case-mix-adjusted view would avoid penalizing analysts for spending more time on the judgments that matter."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7447735016563937281/",
+      "displayedAge": "5mo",
+      "summary": "Contrasts batch AML workflows with real-time, connected risk decisioning.",
+      "draft": "Neha Narkhede, real-time decisioning should expose what happens when the evidence is incomplete or arrives out of order. A bounded provisional decision, followed by reconciliation when late events appear, is different from treating the first answer as final. I would report decision latency together with late-evidence reversals and the time required to correct the downstream state."
+    }
+  ],
+  "status": "hold_stale_posts_additional_source_and_thread_review_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "factBoundary": "Technical process proposals only; no regulatory interpretation or endorsement of unverified performance figures."
+}

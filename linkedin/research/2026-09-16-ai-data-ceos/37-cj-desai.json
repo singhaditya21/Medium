@@ -1,0 +1,49 @@
+{
+  "name": "Chirantan \"CJ\" Desai",
+  "company": "MongoDB",
+  "role": "President and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/chirantan-cj-desai-aa346/",
+  "roleSource": "https://www.mongodb.com/company/leadership",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First seven posts read; five substantive sources selected. Financial numbers treated as source claims, not investment analysis; image-dependent teasers excluded.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500702075819839488/",
+      "displayedAge": "2w",
+      "summary": "Quarterly growth, retention and AI data-platform adoption.",
+      "draft": "CJ Desai, the platform adoption story would be especially informative split by workload lifecycle: experimentation, accepted production use and sustained expansion. That would help distinguish temporary agent-generated activity from durable applications with real owners and service objectives. Database growth and successful business deployment are related signals, but they are not interchangeable."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493709801672089601/",
+      "displayedAge": "1mo",
+      "summary": "Devin connects to live Atlas data and provisioning.",
+      "draft": "CJ Desai, live schema access removes stale assumptions but adds an authority question. An agent that can inspect records should not automatically be able to modify them or provision new infrastructure. Separate task-scoped read, write and provisioning capabilities, with a preview of the exact change, would keep the integration useful without making every coding task an administrative session."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7478429962765496320/",
+      "displayedAge": "2mo",
+      "summary": "Contextualised chunk embeddings preserve wider document context.",
+      "draft": "CJ Desai, contextualised embeddings create an update question: when one part of a document changes, which other chunk embeddings are now stale? Re-embedding the smallest affected set while preserving document-version consistency could be as important operationally as retrieval accuracy. A benchmark combining edit propagation, recall and indexing cost would make that trade-off visible."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474816201815412736/",
+      "displayedAge": "2mo",
+      "summary": "Native JSON storage fits structured agent outputs.",
+      "draft": "CJ Desai, valid JSON is only the first acceptance boundary. The document still needs a schema version, business invariants and a check that the agent was authorised to create that state. Keeping those checks outside the model makes flexible document storage compatible with strict execution rules, particularly when multiple agents write concurrently."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7465892223549640705/",
+      "displayedAge": "3mo",
+      "summary": "Production AI data-platform adoption alongside quarterly results.",
+      "draft": "CJ Desai, the prototype-to-production claim is worth measuring at the workload level. Time to an accepted deployment, recovery success and the share of writes with enforceable ownership would reveal whether teams are becoming operationally ready. Those measures would complement customer growth without assuming that a newly connected agent is already a dependable production service."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

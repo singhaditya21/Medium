@@ -1,0 +1,50 @@
+{
+  "name": "Anshu Sharma",
+  "company": "Skyflow",
+  "role": "Co-founder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/toanshu/",
+  "roleSource": "https://www.linkedin.com/in/toanshu/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First ten activity cards inspected; five technical sources selected. Personal and political material excluded. Past event not promoted.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505107781755084800/",
+      "displayedAge": "2d",
+      "summary": "Inline runtime controls for data reads and actions.",
+      "draft": "Anshu Sharma, brakes need a measurable stopping distance. For agents, that includes how quickly revocation reaches cached context, in-flight requests and delegated workers. A runtime control layer should report the last point at which it can prevent the side effect, plus evidence that the stop actually took effect. A deny decision alone does not establish containment."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504588156638375937/",
+      "displayedAge": "3d",
+      "summary": "PII vaults for personal assistants.",
+      "draft": "Anshu Sharma, a vault is most protective when the agent never receives the raw secret. The useful boundary is a purpose-bound token that only the intended destination can resolve, with expiry and an audit record. That lets the assistant complete a booking or reply without turning its prompt, trace or memory into another copy of the sensitive data."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500227886864490496/",
+      "displayedAge": "2w",
+      "summary": "Training-data protection while preserving referential integrity.",
+      "draft": "Anshu Sharma, preserving referential integrity can also preserve identifying structure. A stable pseudonym across datasets may make linkage possible even after direct identifiers disappear. Utility tests should therefore sit beside re-identification and cross-dataset linkage tests, with an explicit scope for where token consistency is allowed."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498043867997360128/",
+      "displayedAge": "3w",
+      "summary": "Glean integration enforces data control at ingest and inference.",
+      "draft": "Anshu Sharma, applying controls at both ingest and inference is important because permissions change after indexing. The test I would add is a customer-specific revocation while an answer is cached and a session remains open. Measuring whether the restricted field can still surface through either path would turn field-level isolation into an end-to-end guarantee."
+    },
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495542266715910144/",
+      "displayedAge": "4w",
+      "summary": "Runtime controls for secure and sovereign AI.",
+      "draft": "Anshu Sharma, sovereignty and runtime authorisation intersect at the processing path. A policy needs to constrain not only who can read a field, but which model endpoint and region may process it, and where derived traces persist. A decision record covering those destinations would make the data-control story inspectable after an agent crosses multiple systems."
+    }
+  ],
+  "factBoundary": "No unverified incident, market-size or competitor allegations repeated.",
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

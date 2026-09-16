@@ -1,0 +1,49 @@
+{
+  "name": "Erik Bernhardsson",
+  "company": "Modal",
+  "role": "CEO, observed native profile",
+  "profileUrl": "https://www.linkedin.com/in/erikbern/",
+  "roleSource": "https://www.linkedin.com/in/erikbern/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First eight activity cards read. Five authored/commentary sources selected; pure hiring announcements and plain repost excluded. Older posts require freshness review.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501346607825694720/",
+      "displayedAge": "1w",
+      "summary": "London expansion supports European AI workloads.",
+      "draft": "Erik Bernhardsson, a local team and a local execution boundary solve different problems. For European customers, a useful deployment checklist would distinguish where inference runs from where prompts, traces, snapshots and support access reside. That makes the regional expansion operationally meaningful without assuming an office location establishes data residency."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493242619670499328/",
+      "displayedAge": "1mo",
+      "summary": "Stockholm team owns filesystem and sandbox work; reports rapid sandbox growth.",
+      "draft": "Erik Bernhardsson, the shared filesystem becomes an interesting fault boundary as sandbox demand grows. Startup latency alone would miss noisy-neighbour effects from metadata operations or snapshot restore. Tracking p95 launch and restore latency under mixed tenants, alongside isolation failures, would show whether the growth preserves the experience of an individual workload."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486064936952045569/",
+      "displayedAge": "1mo",
+      "summary": "Reports fifty thousand sandbox launches per second and large concurrency.",
+      "draft": "Erik Bernhardsson, the 50,000 launches/second figure raises a useful distinction: admission throughput versus time until a sandbox is actually ready for useful work. A distribution covering cold image fetch, filesystem hydration and first successful execution would make the scale claim easier to translate into agent latency budgets. How does that tail behave during a regional capacity loss?"
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7475258624764915715/",
+      "displayedAge": "2mo",
+      "summary": "Auto Endpoints exposes inference container code and open serving engines.",
+      "draft": "Erik Bernhardsson, access to the serving code is valuable only if the deployed version is reproducible. Pinning the model, tokenizer, runtime image and kernel configuration gives teams a rollback target when a performance tweak changes behaviour. For Auto Endpoints, can a customer promote the same signed deployment manifest between test and production rather than reconstructing the environment?"
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463297557792747522/",
+      "displayedAge": "3mo",
+      "summary": "Funding announcement explains vertically built runtime, scheduler, filesystem and orchestration.",
+      "draft": "Erik Bernhardsson, owning the runtime, scheduler and filesystem creates room for end-to-end optimisation, but it also makes correlated failure worth measuring. A useful resilience exercise would remove one shared dependency and track which inference, sandbox and training paths degrade together. That exposes where architectural integration improves recovery and where an independent fallback is still needed."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Gabriel Stengel",
+  "company": "Rogo",
+  "role": "CEO and Founder, native profile",
+  "profileUrl": "https://www.linkedin.com/in/gabestengel/",
+  "roleSource": "https://www.linkedin.com/in/gabestengel/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First eight activity cards read; five substantive Rogo sources selected. External-company congratulations and unread survey slides excluded. Drafts address software controls, not financial or legal advice.",
+  "posts": [
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503824334600368129/",
+      "displayedAge": "5d",
+      "summary": "Institutional adoption and strategic investment in finance AI.",
+      "draft": "Gabriel Stengel, deployment across institutions makes accepted-work quality a useful companion to adoption. For each workflow, tracking first-pass acceptance, correction time and traceability of material claims would show where the platform has moved beyond experimentation. Seats and usage establish reach; independently reviewed outputs establish dependable operating value."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503189767077945344/",
+      "displayedAge": "1w",
+      "summary": "Datasite connector preserves source permissions while generating deal artefacts.",
+      "draft": "Gabriel Stengel, preserving Datasite permissions is crucial, but derived artefacts need an explicit boundary too. A revoked document may already have influenced a deck, model or memo. Binding each material claim to its source version and permitted audience would help identify which outputs must be re-reviewed when access or source content changes."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500690659893260291/",
+      "displayedAge": "2w",
+      "summary": "Customer-controlled storage and zero-retention model deployment.",
+      "draft": "Gabriel Stengel, zero retention at the model provider is one layer of the data path. Customers also need a clear account of prompts, traces, caches and generated artefacts retained elsewhere in the workflow. An end-to-end retention map would make the control understandable without assuming that a provider-level setting covers every component."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500601442383302656/",
+      "displayedAge": "2w",
+      "summary": "Meeting transcripts feed model, diligence tracker, memo and follow-up drafts.",
+      "draft": "Gabriel Stengel, the diligence-call workflow needs to distinguish a management statement from an approved modelling assumption. A transcript-derived change should carry the quote, confidence, affected cells and downstream artefacts before it is accepted. That preserves the speed of the workflow while preventing one transcription or interpretation error from propagating into every deal document."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498568497774403584/",
+      "displayedAge": "2w",
+      "summary": "APAC expansion of financial-institution AI deployments.",
+      "draft": "Gabriel Stengel, regional expansion makes evaluation localisation important alongside staffing. Terminology, document conventions and language can vary even when the workflow looks identical. Maintaining separate acceptance sets for each supported market would show whether a model that performs well on one institution's materials transfers reliably to another."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

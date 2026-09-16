@@ -1,0 +1,49 @@
+{
+  "name": "Spencer Kimball",
+  "company": "Cockroach Labs",
+  "role": "CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/spencerwkimball/",
+  "roleSource": "https://www.linkedin.com/in/spencerwkimball/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored posts read. Linked articles and videos not opened; drafts are limited to claims and descriptions present in the post.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505637683226914816/",
+      "displayedAge": "16h",
+      "summary": "Plenum storage substrate behind elastic database architecture.",
+      "draft": "Spencer Kimball, separating elastic compute from storage makes the recovery path worth examining alongside the scale-up path. After compute loss, how much state must be rehydrated before the first useful transaction, and which storage operations become the bottleneck? That boundary determines whether fast provisioning also means fast recovery for a real workload."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505596748254330881/",
+      "displayedAge": "18h",
+      "summary": "Continuum manages database estates with agentic operations under governance.",
+      "draft": "Spencer Kimball, estate-level management changes the blast radius of an operational agent. Aegis should be able to act on one declared workload without automatically inheriting authority across the estate. Per-action scope, concurrency budgets and independently verified postconditions would make the governance boundary measurable when many virtual clusters need attention together."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497687249317396480/",
+      "displayedAge": "3w",
+      "summary": "One thousand internal applications with reported database spend below $250.",
+      "draft": "Spencer Kimball, the sub-$250 database figure is striking, but the next operating metric is probably the share of those 1,000 applications with a named owner and a tested retirement path. Cheap creation can leave expensive dependencies behind. Tracking active use, data retention and orphaned integrations would show whether the estate stays manageable as the application count grows."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495513181222580224/",
+      "displayedAge": "4w",
+      "summary": "MOLT Sinai uses explicit handoffs, checklists and human intervention.",
+      "draft": "Spencer Kimball, a handoff should transfer evidence rather than just the previous agent's conclusion. For coding and review, that means a specific diff, test results and unresolved assumptions bound to the same revision. A review result should become invalid if the code changes afterwards; otherwise the checklist can be complete while the approved artefact no longer exists."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491197529913487361/",
+      "displayedAge": "1mo",
+      "summary": "Orbital database simulation with moving network topology.",
+      "draft": "Spencer Kimball, the changing topology makes static average latency a weak summary. I would want to see transaction completion and unavailability across the worst connectivity windows, with replica placement held explicit. A simulation that varies contact duration and partition length could distinguish a workable consistency policy from an attractive average TPC-C result."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

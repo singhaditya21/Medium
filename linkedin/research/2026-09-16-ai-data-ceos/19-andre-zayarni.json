@@ -1,0 +1,49 @@
+{
+  "name": "Andre Zayarni",
+  "company": "Qdrant",
+  "role": "Co-Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/zayarni/",
+  "roleSource": "https://www.linkedin.com/in/zayarni/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored posts read. Competitive claims and linked benchmarks not independently verified; drafts avoid repeating allegations.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505539662258823168/",
+      "displayedAge": "22h",
+      "summary": "Reported retrieval study links duplicate chunks to poor answers despite high context relevance; 37-query example improves after deduplication.",
+      "draft": "Andre Zayarni, the 37-query result suggests measuring evidence diversity separately from relevance. I would count distinct source/version pairs in the top-k and test whether deduplication accidentally removes legitimate updates or contradictory evidence. The regression target should remain answer correctness on a held-out query set, not simply a cleaner-looking retrieval list."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504089778682896384/",
+      "displayedAge": "4d",
+      "summary": "Search Week includes demos on vector search and AI memory plus a research stream.",
+      "draft": "Andre Zayarni, a useful memory demo would show correction and deletion, not only successful recall. Change a fact, revoke access to its source and ask the same question again: does the agent retrieve the new state and stop using the old one? That makes the retrieval-to-memory transition much more concrete than a nearest-neighbor showcase."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503742569281974272/",
+      "displayedAge": "5d",
+      "summary": "Qdrant memory tiers distinguish pinned, cached and cold components; working-set/RAM ratio changes performance as collections grow.",
+      "draft": "Andre Zayarni, that ratio should also be tested under a changing query distribution. A hot working set can shift faster than point count, especially with tenant or seasonal skew. I would pair resident-memory measurements with cache-miss rate and p95 latency during the shift, so a configuration that looks stable in steady state is not mistaken for a safe growth envelope."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503067566446297089/",
+      "displayedAge": "1w, edited",
+      "summary": "Discusses API compatibility and migration between vector-database products.",
+      "draft": "Andre Zayarni, API compatibility is a useful starting point, but migration confidence needs behavioral equivalence tests too. Filters, distance ordering, deletes, consistency and error responses should be exercised against the same fixture. A client that compiles unchanged can still produce different retrieval results, so I would publish those contract-test outcomes alongside the interface comparison."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502640437661249536/",
+      "displayedAge": "1w",
+      "summary": "Challenges an embedded-database comparison and distinguishes offline operation, process boundaries and memory accounting.",
+      "draft": "Andre Zayarni, the memory comparison needs a common accounting boundary: vectors, index, metadata, runtime and peak build memory. For an embedded workload I would add startup/recovery time and offline query behavior under the same recall target. That gives buyers a reproducible test matrix without relying on the label 'embedded' to imply the operating characteristics."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

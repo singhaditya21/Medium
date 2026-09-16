@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-15T07:47:59Z",
+  "updatedAt": "2026-09-16T07:28:25Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -3783,6 +3783,120 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503867051598483456/",
       "receiptOperationId": "20260915074759-comment-posted-2026-09-15-linkedin-comment-ajoy-value-proof",
       "postedAt": "2026-09-15T07:47:59Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-reply-soren-conference-architecture",
+      "platform": "linkedin",
+      "action": "reply",
+      "direction": "inbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7505544528901197824&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true",
+      "title": "N1 — conference attendance and recovery architecture",
+      "author": "Søren Heide Larsen",
+      "reason": "Answer the author's direct invitation without inventing attendance; continue the existing recovery-classification conversation.",
+      "evidence": "Live Chrome review on 2026-09-16: post 1w, author reply edited 20h; 33 reactions and 5 comments. Expanded prior replies: Aditya already asked whether the MCP server declares recovery class or an independent policy service attests it. The author then asked whether Aditya is attending. User explicitly confirmed not attending. No subsequent user reply visible. Score components relevance=.95, discussionQuality=.95, uniqueContribution=.90, recency=1.00; weighted=.95.",
+      "draftResponse": "Søren Heide Larsen, I won't be in Copenhagen on September 17, unfortunately. I'd still enjoy comparing notes with your architects on where recovery classification belongs: in the MCP server's declared contract or in an independently enforced policy. If a recording or architecture write-up is available after the session, please share it here.",
+      "priorityScore": 0.95,
+      "intendedMentions": [
+        "Søren Heide Larsen"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7505544528901197824&highlightedUpdateType=REPLIED_TO_YOUR_COMMENT&origin=inapp&showCommentBox=true",
+      "receiptOperationId": "20260916053109-reply-posted-2026-09-16-linkedin-reply-soren-conference-architecture",
+      "postedAt": "2026-09-16T05:31:09Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-comment-apuroop-groundedness-gate",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502938300391972864&highlightedUpdateType=CONTENT_YOU_MAYBE_INTERESTED_IN&origin=inapp&showCommentBox=true",
+      "title": "C1 — groundedness versus answer-level failure",
+      "author": "Apuroop M",
+      "reason": "Add a precise evaluation distinction to an active cost-of-failure discussion without endorsing the author's unverified productivity percentages.",
+      "evidence": "Live Chrome review on 2026-09-16: source marked 1w; 60 reactions, 10 comments and 1 repost. Author equates 92% groundedness with 8 wrong answers per 100. Akanksha asks about gating and the author says cost of failure; Jared repeats the equivalence. Most recent comments and nested author replies reviewed; no Aditya comment visible or matching repository target. Draft adds the measurement-unit distinction rather than repeating the existing cost-baseline comment. Score components relevance=.90, discussionQuality=.85, uniqueContribution=.95, recency=.50; weighted=.8175.",
+      "draftResponse": "Apuroop M, I'd separate the 92% groundedness score from the rate of wrong answers. A claim-level or averaged score does not directly translate into 8 incorrect answers per 100, and a grounded answer can still rely on an outdated source. For the shipping gate, I'd report answer-level task success and severity-weighted failures against the manual baseline, with refunds or disputes evaluated separately from low-cost follow-ups.",
+      "priorityScore": 0.8175,
+      "intendedMentions": [
+        "Apuroop M"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502938300391972864&highlightedUpdateType=CONTENT_YOU_MAYBE_INTERESTED_IN&origin=inapp&showCommentBox=true",
+      "receiptOperationId": "20260916052553-comment-posted-2026-09-16-linkedin-comment-apuroop-groundedness-gate",
+      "postedAt": "2026-09-16T05:25:53Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-comment-jennifer-retrieval-regression",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505384400428269569?trk=public_post_embed_social-actions-comments",
+      "title": "C2 — regression testing for the live Copilot agent",
+      "author": "Jennifer S.",
+      "reason": "Offer a bounded next implementation step tied to the author's retrieval rewrites and avoided colleague lookups.",
+      "evidence": "Live Chrome review on 2026-09-16: source marked 1d edited; 52 reactions and 7 comments including author replies, all visible. Author describes a live Copilot over training documents/manuals and about eleven retrieval rewrites. Existing discussion covers SharePoint search and convenience; no Aditya comment visible or matching repository target. Twenty questions is explicitly a proposed small starting test set, not a benchmark or a measured result. Score components relevance=.85, discussionQuality=.75, uniqueContribution=.85, recency=.95; weighted=.845.",
+      "draftResponse": "Jennifer S., the retrieval rewrites suggest a useful next step: preserve a regression set from the questions people actually ask before adding another agent. A small starting set could include 20 real questions, deliberately covering conflicting manual versions and cases with no documented answer. I'd track time to a verified answer and the share still needing a colleague, while checking that every citation points to the current, accessible source.",
+      "priorityScore": 0.845,
+      "intendedMentions": [
+        "Jennifer S."
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505384400428269569?trk=public_post_embed_social-actions-comments",
+      "receiptOperationId": "20260916052303-comment-posted-2026-09-16-linkedin-comment-jennifer-retrieval-regression",
+      "postedAt": "2026-09-16T05:23:03Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-comment-dmitry-metric-release",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503870372354711552/",
+      "title": "C3 — candidate metrics as versioned releases",
+      "author": "Dmitry Ustimov",
+      "reason": "Extend the candidate-to-governed metric transition with historical reproducibility and review-loop measures relevant to CRM analytics.",
+      "evidence": "Live Chrome review on 2026-09-16: source marked 5d; 66 reactions, 19 comments and 4 reposts. Author distinguishes missing data, candidate definition, and governed definition. Reviewed Most recent comments, loaded older comments and expanded the nine-reply Cheryl thread; discussion concerns operational workflow use, knowledge loops and ownership. No Aditya comment visible or matching repository target. Proposed win-rate example is illustrative, not a customer outcome. Score components relevance=1.00, discussionQuality=.90, uniqueContribution=.95, recency=.65; weighted=.895.",
+      "draftResponse": "Dmitry Ustimov, I'd make the candidate-to-governed transition a versioned release with an effective date and a regression test set. For a CRM win-rate definition, the test should pin the opportunity cohort, treatment of reopened deals and the reporting cutoff; approval must not silently change what last quarter meant. Two measures would expose the health of that review loop: p95 candidate-review age and the proportion of historical answers reproducible under their original definition.",
+      "priorityScore": 0.895,
+      "intendedMentions": [
+        "Dmitry Ustimov"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503870372354711552/",
+      "receiptOperationId": "20260916052043-comment-posted-2026-09-16-linkedin-comment-dmitry-metric-release",
+      "postedAt": "2026-09-16T05:20:43Z"
+    },
+    {
+      "id": "2026-09-16-linkedin-ceo-barr-moses",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505732267495976960/",
+      "title": "Agent trust requires governance, identity, enforcement and data/output trust. Asks who owns all four end to end.",
+      "author": "Barr Moses",
+      "reason": "Strong fit to enterprise AI control-plane, evidence and operating-outcome themes; distinct source-specific contribution. Research only; exact user approval and live recheck required. Browser is currently client-blocked.",
+      "evidence": "Public post rechecked September 16: 14 reactions, one visible general-support comment from Justin Kaplan; no Aditya comment and no overlapping ownership/incident-drill argument observed. Local queue, execution receipts and watchlist searched with no matching prior action or hold.",
+      "draftResponse": "Barr Moses, I would make the business workflow owner accountable for the end-to-end outcome, with named platform, security and data owners responsible for each boundary. The practical test is a cross-layer incident drill: can the team connect the identity, policy decision, source snapshot and verified result without reconstructing four separate timelines? Measure trace coverage and time to assign the failure to an owner.",
+      "priorityScore": 0.92,
+      "intendedMentions": [
+        "Barr Moses"
+      ],
+      "state": "proposed"
+    },
+    {
+      "id": "2026-09-16-linkedin-ceo-krishna-gade",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505738334262996992/",
+      "title": "Coding-agent experiment reports a half-price model costing 8–14 times more per verified success; model ordering changed by workload.",
+      "author": "Krishna Gade",
+      "reason": "Strong fit to enterprise AI control-plane, evidence and operating-outcome themes; distinct source-specific contribution. Research only; exact user approval and live recheck required. Browser is currently client-blocked.",
+      "evidence": "Public post rechecked September 16: five reactions, one repost, no comments displayed after opening the comment area. No Aditya comment observed. Local queue, execution receipts and watchlist searched with no matching prior action or hold. Discussion-quality score reflects a substantive source, not an established conversation.",
+      "draftResponse": "Krishna Gade, the reported 8–14x reversal makes workload-level routing more useful than a single cheapest-model policy. I would include failed attempts and recovery work in the numerator, and only independently verified completions in the denominator. Then report the distribution by task class: an average can hide a low-cost model that is economical on routine edits but expensive on integration failures.",
+      "priorityScore": 0.908,
+      "intendedMentions": [
+        "Krishna Gade"
+      ],
+      "state": "proposed"
     }
   ]
 }

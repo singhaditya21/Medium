@@ -1,0 +1,50 @@
+{
+  "name": "Sridhar Ramaswamy",
+  "company": "Snowflake",
+  "role": "CEO",
+  "profileUrl": "https://www.linkedin.com/in/sridhar-ramaswamy/",
+  "roleSource": "https://www.linkedin.com/in/sridhar-ramaswamy/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First eight activity positions read. Five substantive data-platform and agent posts selected; brief interview reshares and plain repost excluded.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505366402455920640/",
+      "displayedAge": "1d",
+      "summary": "Tokyo visit announces future Google Cloud support in Japan, extending regional cloud choice.",
+      "draft": "Sridhar Ramaswamy, regional cloud choice is most useful when governance behavior remains consistent across the options. A migration rehearsal could compare access-policy results, data-freshness guarantees and recovery behavior on the same workload. That would help customers separate infrastructure availability from the operational effort required to exercise that choice."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503557801756110850/",
+      "displayedAge": "6d",
+      "summary": "Under Armour moves product-margin reporting from monthly manual reports to daily updates and conversational access.",
+      "draft": "Sridhar Ramaswamy, moving margin reporting from monthly to daily changes the reconciliation problem too. I would expose the source cut-off, late-arriving adjustments and metric definition beside each answer, then track how often a prior day's figure is revised. Faster access becomes much more useful when teams can tell whether a change is business movement or a data correction."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502490417024729088/",
+      "displayedAge": "1w",
+      "summary": "Restricted Session Scope limits an agent's effective access to its task.",
+      "draft": "Sridhar Ramaswamy, scope restriction is especially valuable when the test includes delegation and mid-session change. Can a child agent inherit no more than its parent's allowed scope, and does revocation affect work already queued? I would verify those boundaries with denied-action tests and measure revocation propagation, rather than infer safety from the initial grant alone."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501009901876367361/",
+      "displayedAge": "1w, edited",
+      "summary": "Quarterly update connects data-platform modernization, AI-product adoption and platform consumption; mentions a 12-billion-record risk-model migration.",
+      "draft": "Sridhar Ramaswamy, the customer-value counterpart to AI-driven consumption is cost per verified business outcome. For a large risk-data migration, I would pair infrastructure savings with freshness, coverage and time to resolve a risk question. That distinguishes productive consumption growth from additional queries or retries that do not improve the customer's decision."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500270260965720064/",
+      "displayedAge": "2w",
+      "summary": "Intelligence efficiency depends on harness-level context management, on-demand tools, compaction and semantic grounding.",
+      "draft": "Sridhar Ramaswamy, context compaction needs its own regression test: which facts, constraints or source references disappear, and does that change the agent's decision later? I would compare verified task success and evidence traceability at each context budget, including long sessions. Token savings are strongest when the compacted representation preserves the facts needed to justify the result."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "factBoundary": "Source-reported customer results are not independently reproduced; drafts make no investment recommendation or unsupported RSS capability assertion."
+}

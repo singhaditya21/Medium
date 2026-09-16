@@ -1,0 +1,14 @@
+{
+  "name": "Clément Delangue",
+  "selected": false,
+  "company": "Hugging Face",
+  "role": "Historical CEO; current role and LinkedIn identity unresolved in this review",
+  "profileUrl": null,
+  "roleSource": "https://huggingface.co/blog/azure-ai-foundry",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Exact-name LinkedIn people search returned unrelated similarly named people. One refined search with accented name and company returned No results found. No identity guessed and no posts invented.",
+  "posts": [],
+  "status": "blocked_identity_and_current_role_verification",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

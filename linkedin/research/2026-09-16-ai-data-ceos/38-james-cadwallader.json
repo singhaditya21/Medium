@@ -1,0 +1,50 @@
+{
+  "name": "James Cadwallader",
+  "company": "Profound",
+  "role": "Co-Founder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/jsca/",
+  "roleSource": "https://www.linkedin.com/in/jsca/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Authored cards through position 13 inspected. Five relevant sources selected; sponsored and plain reposts excluded. Study statistic attributed to source; methodology not independently verified.",
+  "replaces": "Ash Kulkarni: current CEO confirmed, but LinkedIn identity not verified in available search.",
+  "posts": [
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505662245876723713/",
+      "displayedAge": "15h",
+      "summary": "Shared permissioned marketing context powers autonomous work.",
+      "draft": "James Cadwallader, a shared context manager needs a correction path as strong as its ingestion path. If a product claim changes, the system should identify which briefs, drafts and agents still depend on the old version. Time to propagate that correction would be a useful quality metric alongside content throughput."
+    },
+    {
+      "position": 8,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505314278883643392/",
+      "displayedAge": "1d",
+      "summary": "AI marketing across a global portfolio of brands.",
+      "draft": "James Cadwallader, a global brand portfolio creates a useful test of context isolation. Shared corporate knowledge should not flatten different product claims, markets or brand voices into one answer. Evaluating cross-brand leakage and unsupported claim reuse would show whether scale preserves the distinct, accurate representation described here."
+    },
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504252868506320898/",
+      "displayedAge": "4d",
+      "summary": "Marketing engineering hackathon builds agentic systems.",
+      "draft": "James Cadwallader, the strongest hackathon test would include a changed assumption after the demo starts: an expired claim, revoked source or conflicting campaign instruction. A system that detects the change, pauses the affected action and explains the dependency demonstrates more than a polished happy path. That is a useful bridge from prototype to a workflow a marketing team can own."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504223859533946881/",
+      "displayedAge": "4d",
+      "summary": "AI Marketer executes work rather than offering suggestions.",
+      "draft": "James Cadwallader, giving the agent the tools to do the work makes the acceptance boundary more important. Draft creation, internal revision and public publication should have different permissions and review requirements. Measuring first-pass approval and post-publication correction would reveal whether the reduced manual effort preserves the quality the team is accountable for."
+    },
+    {
+      "position": 13,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503799483592409088/",
+      "displayedAge": "5d",
+      "summary": "Study of 7,600 pricing responses finds first-party pages first-cited 12% of the time.",
+      "draft": "James Cadwallader, the 12% first-citation figure is useful, but citation rank and pricing accuracy may diverge. Splitting results by model, locale and pricing-page freshness, then checking whether the stated price is correct, would help teams choose the right intervention. More first-party citations are valuable only if the answer also reflects the current offer."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Florian Douetteau",
+  "company": "Dataiku",
+  "role": "Co-Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/fdouetteau/",
+  "roleSource": "https://www.linkedin.com/in/fdouetteau/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored posts read. Two concern the September 24 enterprise-AI event; drafts discuss the stated operating questions without implying attendance.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504192142471450624/",
+      "displayedAge": "4d",
+      "summary": "Generated visual representations may become the human interface while text remains the precise underlying representation.",
+      "draft": "Florian Douetteau, the diagram becomes trustworthy only if each node and edge can be traced to the underlying versioned system. I would show the generation timestamp, code/config version and any inferred edges directly in the view. Otherwise AI reduces drawing cost but can still produce a beautifully readable architecture that never actually existed."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503829904615010305/",
+      "displayedAge": "5d",
+      "summary": "Long-run agent management requires independent checks rather than a single manager atop aligned systems.",
+      "draft": "Florian Douetteau, the checks need independent evidence as well as separate roles. If the manager and auditor both rely on the same agent-written summary, the apparent separation offers little protection. I would give the auditor read-only access to authoritative outcomes and a distinct escalation path, then test whether it can stop a failing workflow when the manager disagrees."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497971081522184192/",
+      "displayedAge": "3w",
+      "summary": "Summit agenda asks how enterprises can scale reliable AI while preserving control and business value.",
+      "draft": "Florian Douetteau, a useful customer comparison would hold the workflow constant and show what changed between pilot and production: action scope, exception rate, human review load and recovery time. That would reveal which controls were genuinely necessary for scale and which simply accumulated because nobody had a measurable release criterion."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497623951976722432/",
+      "displayedAge": "3w",
+      "summary": "September 24 event frames durable enterprise AI through people, orchestration and governance.",
+      "draft": "Florian Douetteau, sustained value is where the measurement gets interesting. I would compare the initial business case with outcomes after the task mix and model versions have changed, including maintenance and review effort. A deployment that still meets its service and cost targets after those changes is stronger evidence than a successful launch demonstration."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496506409984049152/",
+      "displayedAge": "3w",
+      "summary": "Frames frontier AI as strategic infrastructure and asks about cooperation at competitive scale.",
+      "draft": "Florian Douetteau, cooperation also has a technical interface problem: shared compute is more useful when participants can carry evaluation suites, security controls and workloads across it. Common interoperability and assurance standards could reduce duplicated integration work without forcing every participant onto one model. That seems a practical complement to the scale question."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

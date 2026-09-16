@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916052553-comment-posted-2026-09-16-linkedin-comment-apuroop-groundedness-gate",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T05:25:53Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T05:25:53Z",
+    "scope": "User approved N1, C1-C3 and D1-D3 exactly as written. This receipt covers C1 only, exact text and one native Apuroop M mention; no reactions, follows or extra communication."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-comment-apuroop-groundedness-gate",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502938300391972864&highlightedUpdateType=CONTENT_YOU_MAYBE_INTERESTED_IN&origin=inapp&showCommentBox=true",
+    "publicUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7502938300391972864&highlightedUpdateType=CONTENT_YOU_MAYBE_INTERESTED_IN&origin=inapp&showCommentBox=true",
+    "publishedTextSha256": "44f8808390527b065fe8d6c505cac6a38e0e316ea5fce6fdcab1f03fe0eef7ac",
+    "verifiedAt": "2026-09-16T05:25:53Z",
+    "verification": "Source unchanged on fresh navigation, count remained 10 before sending. Approved C1 rendered under Aditya Singh with timestamp now and clickable Apuroop M mention; count rose to 11 and composer cleared. Accessibility tree exposed comment 7505859282094100481. Public URL identifies the source discussion."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

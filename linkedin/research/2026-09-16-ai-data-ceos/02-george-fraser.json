@@ -1,0 +1,42 @@
+{
+  "name": "George Fraser",
+  "company": "Fivetran + dbt Labs",
+  "role": "CEO and Co-Founder",
+  "profileUrl": "https://www.linkedin.com/in/george-fraser-a0219230/",
+  "roleSource": "https://www.getdbt.com/blog/fivetran-dbt-labs-complete-merger-to-create-the-data-infrastructure-for-trusted-ai-agents",
+  "verifiedOn": "2026-09-16",
+  "roleCaveat": "June 2026 merger completion release identifies Fraser as CEO and Tristan Handy as President; do not treat the stale dbt About-page CEO label as current.",
+  "coverage": "First 11 activity cards inspected. Three substantive authored/commentary posts selected; plain reposts, jokes and an image-only card excluded. Not five verified relevant posts.",
+  "posts": [
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7476097864449048576/",
+      "displayedAge": "2mo",
+      "summary": "Fraser says Fivetran propagates Iceberg metadata updates to Unity Catalog; embedded post criticizes cross-catalog interoperability.",
+      "status": "provisional_stale_and_thread_review_required",
+      "draft": "George Fraser, metadata propagation introduces a measurable consistency window. I would test the p95 delay from an Iceberg commit to a query observing the same snapshot through Unity, plus behavior during missed updates and schema evolution. That makes interoperability an end-to-end correctness property, rather than only a catalog-format claim.",
+      "factBoundary": "Does not adopt the embedded vendor-criticism claims as verified product limitations."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7475995768936660993/",
+      "displayedAge": "2mo",
+      "summary": "Fraser questions Rippling's data warehouse launch and external data access; embedded launch describes cross-system queries with permissions.",
+      "status": "provisional_stale_and_thread_review_required",
+      "draft": "George Fraser, a practical portability test would measure whether a customer can export complete history, changes and deletion events into its chosen platform, then reconcile record counts and permission mappings. API availability alone does not establish an exit path. I would include tested recovery from a failed incremental sync in the acceptance criteria.",
+      "factBoundary": "No claim about current contractual terms; no unverified allegation repeated."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7475936641245687809/",
+      "displayedAge": "2mo",
+      "summary": "Fraser shares a Nicolas Renkamp talk about migrating Spark jobs to DuckDB at Merck.",
+      "status": "provisional_stale_and_thread_review_required",
+      "draft": "George Fraser, a useful migration boundary is the working set after filtering and projection, rather than the total lake size. I would compare peak memory, spill volume and p95 runtime on the same jobs, then repeat at expected concurrency. A single-node result can be excellent while still needing a separate plan for workload isolation and recovery.",
+      "factBoundary": "Technical evaluation proposal based on the post text; linked talk not watched and no benchmark outcome claimed."
+    }
+  ],
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "scoreState": "Not scored for execution; stale sources and incomplete thread reviews."
+}

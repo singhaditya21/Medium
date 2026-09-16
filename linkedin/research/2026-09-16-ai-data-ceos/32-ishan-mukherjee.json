@@ -1,0 +1,50 @@
+{
+  "name": "Ishan Mukherjee",
+  "company": "Rox",
+  "role": "Co-Founder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/ishanm/",
+  "roleSource": "https://www.linkedin.com/in/ishanm/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Authored cards through position 11 inspected. Five substantive sources selected; plain reposts and event invitation excluded.",
+  "replaces": "Clément Delangue: LinkedIn identity not verified in available search.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505673361797230592/",
+      "displayedAge": "14h",
+      "summary": "Rox Home becomes a control plane for overnight revenue agents.",
+      "draft": "Ishan Mukherjee, mission control needs to distinguish completed work from verified business change. For overnight agents, I would surface the evidence behind each deal update, the exact actions still awaiting approval and any partial failures requiring recovery. A hundred green agent runs can still leave one inconsistent account record; that is the exception the rep needs first."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503178913167224832/",
+      "displayedAge": "1w",
+      "summary": "Skills generate consistent decks, documents and spreadsheets.",
+      "draft": "Ishan Mukherjee, a reusable brand skill can standardise presentation, but customer claims need their own source and approval boundary. A generated deck should identify the approved metric version and flag any unsupported inference. That lets a new rep inherit the team's best material without inheriting an outdated claim or another customer's confidential context."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502402748651601921/",
+      "displayedAge": "1w",
+      "summary": "Outbound agent supplies requested customer metrics and books a meeting.",
+      "draft": "Ishan Mukherjee, the important control in that exchange is which customer metrics the agent was authorised to disclose. A source-backed claim library with audience restrictions and expiry would let it answer follow-up questions without improvising proof points. Meeting conversion is useful, but unsupported-claim and suppression failures should be visible alongside it."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501042971014754304/",
+      "displayedAge": "1w",
+      "summary": "Revenue agents prospect, converse and schedule at scale.",
+      "draft": "Ishan Mukherjee, hundreds of parallel agents make account-level coordination essential. One prospect should not receive conflicting messages from different reps or continue hearing from an agent after opting out. Shared suppression state, account ownership and a single conversation lease would make scale compatible with a coherent customer experience."
+    },
+    {
+      "position": 11,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498080229916315648/",
+      "displayedAge": "3w",
+      "summary": "Goal-directed Agentflows adapt when workflow steps fail.",
+      "draft": "Ishan Mukherjee, a workflow stopping can be the correct behaviour when the missing step is an approval or a source of truth. Goal-directed recovery should distinguish a replaceable tool failure from a control that must not be routed around. Explicit non-bypassable gates and verified postconditions would make adaptive execution more reliable than simply reaching the stated goal."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

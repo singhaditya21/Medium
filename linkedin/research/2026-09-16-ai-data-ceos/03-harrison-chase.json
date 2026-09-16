@@ -1,0 +1,53 @@
+{
+  "name": "Harrison Chase",
+  "company": "LangChain",
+  "role": "Co-Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/harrison-chase-961287118/",
+  "roleSource": "https://www.linkedin.com/in/harrison-chase-961287118/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Five relevant authored posts selected from the first 20 activity positions; plain reposts, hiring and a past-meetup invitation excluded. Position 12 was not rendered in the inspected subset, so latest-five completeness is not yet certified.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500967612630085633/",
+      "displayedAge": "1w",
+      "summary": "Interrupt NYC September 24 panels span OpenRouter model routing, Modal sandboxes and Rogo financial applications.",
+      "draft": "Harrison Chase, that lineup makes an end-to-end failure drill an interesting discussion: a routed model times out, the sandbox retries, and the finance application must determine whether work already committed. Where should the idempotency boundary and authoritative completion record live across those layers? The answer would make a useful operating contract between infrastructure and application teams."
+    },
+    {
+      "position": 11,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495891083449782273/",
+      "displayedAge": "3w",
+      "summary": "Six-video Managed Deep Agents playlist covers instructions/context, skills and tools.",
+      "draft": "Harrison Chase, the separation of instructions, skills and tools suggests a useful deployment test: change one component while pinning the other two, then replay the same evaluation set. I would retain each component version with the run so a quality regression can be attributed and rolled back. That is especially helpful when a skill changes faster than the underlying tool contract.",
+      "factBoundary": "Responds to the listed topics; does not claim to have watched the playlist."
+    },
+    {
+      "position": 13,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495521320781209600/",
+      "displayedAge": "4w",
+      "summary": "Tuned Evaluators launch for production traces; post reports an 82% lower-cost benchmark result.",
+      "draft": "Harrison Chase, the reported 82% cost reduction is compelling if detection quality holds on the failures that matter. I would compare severe-error recall at a fixed false-positive budget, then measure reviewer minutes per confirmed defect. How does Perceived Error stay calibrated when the production task mix moves away from the tuning set?",
+      "factBoundary": "82% is attributed to the author's benchmark; proposed evaluation metrics are not claimed results."
+    },
+    {
+      "position": 17,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493687947674677248/",
+      "displayedAge": "1mo, edited",
+      "summary": "Unify podcast recap discusses GTM agents, caching limits and using a different model family for evaluation.",
+      "draft": "Harrison Chase, using a different model family can reduce shared blind spots, but it does not establish an independent ground truth. I would validate both judges against a held-out, expert-labelled set and compare where they agree on the wrong answer. For GTM actions, downstream CRM state and policy compliance should remain separate checks from the judge's assessment of response quality.",
+      "factBoundary": "Responds to the recap; no claim to have listened to the podcast."
+    },
+    {
+      "position": 18,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493013457810886656/",
+      "displayedAge": "1mo",
+      "summary": "LangSmith Engine campaign describes continuous improvement and an agent watching another agent.",
+      "draft": "Harrison Chase, an agent watching another agent needs an explicit authority boundary. I would distinguish observation, recommending a change and deploying it, with a rollback owner for each release. The operating measure is whether verified task success improves on an untouched holdout set without increasing severe failures, rather than how many automated optimizations run."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "scoreState": "Execution scoring deferred until discussion and duplicate reviews."
+}

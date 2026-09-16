@@ -1,0 +1,50 @@
+{
+  "name": "Aidan Gomez",
+  "company": "Cohere",
+  "role": "CEO supported by company source; native headline Cofounder",
+  "profileUrl": "https://www.linkedin.com/in/aidangomez/",
+  "roleSource": "https://cohere.com/about",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Authored commentary among first 16 activity cards read. Five relevant sources selected; plain reposts and congratulations excluded. Event in older source is not treated as upcoming.",
+  "posts": [
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503495695597932544/",
+      "displayedAge": "6d",
+      "summary": "Agents should remove tedious extraction and search work.",
+      "draft": "Aidan Gomez, time saved is meaningful when the work stays finished. For extraction and search tasks, I would track accepted outputs, subsequent corrections and minutes returned to the user after review. Otherwise an agent can move effort from doing the task to checking it, while the headline completion rate still looks strong."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499095019837022208/",
+      "displayedAge": "2w",
+      "summary": "Build and scale AI capability rather than only purchase it.",
+      "draft": "Aidan Gomez, industrial data becomes an advantage when teams can turn it into repeatable evaluation tasks. A useful capability measure would be how quickly a domain expert can add a failure case, reproduce it and verify the next model release. That links local expertise to an improving system rather than treating the dataset itself as the finished asset."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498029824788033536/",
+      "displayedAge": "3w",
+      "summary": "Resilience through diversified AI supply chains.",
+      "draft": "Aidan Gomez, supplier diversity only reduces risk when the alternatives do not share the same critical dependency. Two endpoints can still depend on one cloud region, identity service or model family. A dependency graph plus a tested failover workload would make the resilience argument concrete, including the quality degradation the organisation accepts during a switch."
+    },
+    {
+      "position": 14,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7472966331143806977/",
+      "displayedAge": "2mo",
+      "summary": "Sovereign AI and resilience against loss of access.",
+      "draft": "Aidan Gomez, a practical sovereignty test is what happens when access to a primary provider stops without notice. Can a team restore its accepted workflows using retained models, data and configuration, and within what recovery time? That exercise measures operational independence without assuming that a second commercial contract is already a working fallback."
+    },
+    {
+      "position": 16,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7472820035397435393/",
+      "displayedAge": "2mo",
+      "summary": "On-premise, private-cloud and air-gapped deployment.",
+      "draft": "Aidan Gomez, air-gapped deployment shifts the lifecycle problem rather than removing it. Model updates, evaluation sets, vulnerability fixes and audit exports still need controlled transfer paths. A signed release bundle with offline verification and a rehearsed rollback would help teams maintain the system without gradually creating an undocumented outbound dependency."
+    }
+  ],
+  "factBoundary": "No competitive-access allegation or political persuasion repeated; comments concern general engineering controls.",
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

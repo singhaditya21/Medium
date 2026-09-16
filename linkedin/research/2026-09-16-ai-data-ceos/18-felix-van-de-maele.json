@@ -1,0 +1,49 @@
+{
+  "name": "Felix Van de Maele",
+  "company": "Collibra",
+  "role": "Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/fvdmaele/",
+  "roleSource": "https://www.linkedin.com/in/fvdmaele/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First ten activity positions inspected. Five latest relevant originals selected; two plain reposts excluded. Event-related drafts address the stated technical questions, without implying attendance.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505234151395155969/",
+      "displayedAge": "1d",
+      "summary": "Context and control must operate together; either alone leaves failure modes.",
+      "draft": "Felix Van de Maele, the join between context and control should be the decision itself. Bind the source snapshot and semantic definition to the policy evaluation and the resulting action, then invalidate that decision if a material input changes before execution. That closes the gap between 'the data was governed' and 'this action was authorized on this data'."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504229382123634688/",
+      "displayedAge": "4d",
+      "summary": "Upcoming AI summit focuses on business context, autonomous-agent control and production readiness.",
+      "draft": "Felix Van de Maele, one useful summit exercise would be the same workflow under three failures: stale context, changed permissions and a failed downstream write. Ask each team to show the evidence that changes its go/no-go decision. That would make production readiness comparable across implementations without reducing it to a generic maturity score."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503123190341099520/",
+      "displayedAge": "1w",
+      "summary": "Governance must follow data from creation through runtime consumption.",
+      "draft": "Felix Van de Maele, a source-approved field can become sensitive when joined with another dataset. Runtime governance therefore needs to evaluate the intended use and the derived result, not just whether each input passed its own checks. I would include join-induced disclosure and purpose changes in the test suite, with a trace back to the policies applied at consumption."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500522900593127438/",
+      "displayedAge": "2w",
+      "summary": "Semantics and guardrails reduce the hidden cost of confidently wrong AI.",
+      "draft": "Felix Van de Maele, semantic ambiguity deserves an explicit stop condition. If 'revenue' could mean booked, recognized or collected revenue, the agent should resolve the definition before choosing a query. Track clarification frequency and downstream corrections together: fewer questions are not an improvement if they produce more confidently wrong answers."
+    },
+    {
+      "position": 7,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498665692737552384/",
+      "displayedAge": "2w",
+      "summary": "Human checking and correction create a hallucination tax beyond model cost.",
+      "draft": "Felix Van de Maele, that tax can be measured as review minutes plus correction and rework per accepted output. I would split it by failure source: missing definition, stale data, access mismatch or reasoning error. Otherwise the team may keep switching models when the largest recoverable cost sits in the context pipeline."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

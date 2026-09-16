@@ -1,0 +1,43 @@
+{
+  "name": "Adam Wenchel",
+  "company": "Arthur AI",
+  "role": "CEO",
+  "profileUrl": "https://www.linkedin.com/in/apwenchel/",
+  "roleSource": "https://www.linkedin.com/in/apwenchel/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First ten activity positions inspected; four substantive enterprise-AI texts found. Event logistics, personal material and an image-only teaser excluded. All four are older than two months and not recommended for immediate outreach.",
+  "posts": [
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477713376593305600/",
+      "displayedAge": "2mo, edited",
+      "summary": "Agent-security buyer guide and concern about inadequate agent coverage.",
+      "draft": "Adam Wenchel, coverage becomes more actionable when the inventory includes effective authority, not just agent count. For each discovered agent, map the tools it can invoke, the data it can reach and the owner who can revoke access. A useful security measure is the share of consequential actions covered by enforceable policy, including agents that appear only briefly."
+    },
+    {
+      "position": 8,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7433206134473338880/",
+      "displayedAge": "6mo",
+      "summary": "Promotes prompt-management practices: external storage, versions, rollback, templating and regression tests.",
+      "draft": "Adam Wenchel, prompt rollback needs a compatibility check with tools and retrieval as well. Restoring yesterday's prompt against today's schema can reproduce neither yesterday's behavior nor its evaluation result. I would version the prompt, tool contract and retrieval configuration together, then retain the exact tested combination as the release unit."
+    },
+    {
+      "position": 9,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7415072417166827520/",
+      "displayedAge": "8mo",
+      "summary": "Arthur–Google Cloud partnership extends Agent Discovery and Governance to GCP.",
+      "draft": "Adam Wenchel, the cross-cloud test is whether an agent keeps the same policy meaning when its model or hosting environment changes. Identity mappings, enforcement points and audit fields can differ even when the business use case is unchanged. A migration scorecard should show policy coverage and verified control behavior before and after the move, not just deployment success."
+    },
+    {
+      "position": 10,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7407472265841385472/",
+      "displayedAge": "8mo",
+      "summary": "Agent Discovery and Governance launch spans inventory, monitoring, evaluations, policies and guardrails.",
+      "draft": "Adam Wenchel, discovery is especially valuable when an inventory entry expires unless activity proves it is still current. Short-lived agents and delegated children can make a static registry misleading. I would track unknown-agent exposure time and the fraction of active agents linked to an accountable owner, with a clear quarantine path for those that cannot be attributed."
+    }
+  ],
+  "status": "hold_stale_posts_thread_review_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "factBoundary": "Drafts do not repeat unverified Gartner projections or claim to have read linked articles."
+}

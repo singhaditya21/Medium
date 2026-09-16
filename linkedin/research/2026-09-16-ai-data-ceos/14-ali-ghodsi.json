@@ -1,0 +1,49 @@
+{
+  "name": "Ali Ghodsi",
+  "company": "Databricks",
+  "role": "CEO and Co-Founder",
+  "profileUrl": "https://www.linkedin.com/in/alighodsi/",
+  "roleSource": "https://www.linkedin.com/in/alighodsi/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored/commentary posts read, including visible embedded examples. External benchmarks and cost calculations not independently reproduced.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502330533008527360/",
+      "displayedAge": "1w",
+      "summary": "Shares a reported billion-row aggregation comparison: 258 milliseconds versus about 2.78 seconds.",
+      "draft": "Ali Ghodsi, the next useful comparison would hold freshness, cache state and concurrency constant. Repeating one aggregation can show excellent steady-state latency while missing cold starts and competing queries. Reporting p50/p95, throughput and cost at the same freshness target would make the 258 ms result easier to translate into a production sizing decision."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501813481231433728/",
+      "displayedAge": "1w",
+      "summary": "Unity Catalog open source adds Metric Views.",
+      "draft": "Ali Ghodsi, a governed metric also needs a change contract. If the definition of active customer changes, consumers should be able to see which reports and agents used the old version and replay them under the new one. Versioned metric definitions plus consumer lineage would make semantic consistency testable rather than assumed."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500734833632034816/",
+      "displayedAge": "2w",
+      "summary": "Claims a large cost-control saving identified with Genie One in one hour.",
+      "draft": "Ali Ghodsi, I would separate the time to identify savings from the period over which they are realized. The follow-through measure is net spend avoided after implementation, with workload demand and service levels held comparable. That makes an impressive discovery reproducible and shows whether the saving persists once the system adapts."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499318857342332928/",
+      "displayedAge": "2w",
+      "summary": "Shares an HP analysis workflow reportedly reduced from hours to minutes, with a reproducible notebook.",
+      "draft": "Ali Ghodsi, the reproducible notebook is the strongest part of that example: it lets the recipient inspect the analysis instead of trusting a summary. I would retain the data snapshot, generated query and rejected hypotheses with it, then include review and correction time in the end-to-end comparison. That keeps the speed gain tied to a decision someone can defend."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499190388398804992/",
+      "displayedAge": "2w",
+      "summary": "Meeting-time analytics and a finance reconciliation example combine fast diagnosis with approval before a repair ticket.",
+      "draft": "Ali Ghodsi, that example usefully separates diagnosis from authorization. I would make the next boundary explicit too: a repair ticket is not yet a verified repair. Track time to diagnosis, time to approved change and time to reconciled dashboard state separately, with the original discrepancy retained as the acceptance test."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

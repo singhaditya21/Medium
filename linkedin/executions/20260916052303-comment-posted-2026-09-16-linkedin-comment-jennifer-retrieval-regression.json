@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916052303-comment-posted-2026-09-16-linkedin-comment-jennifer-retrieval-regression",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-16T05:23:03Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T05:23:03Z",
+    "scope": "User approved N1, C1-C3 and D1-D3 exactly as written. This receipt covers C2 only, exact text and one native Jennifer S. mention; no reactions, follows or extra communication."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-16-linkedin-comment-jennifer-retrieval-regression",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505384400428269569?trk=public_post_embed_social-actions-comments",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505384400428269569?trk=public_post_embed_social-actions-comments",
+    "publishedTextSha256": "4b82c33476de6ac9482e6d0c371f6b67ac3f18c47c4435630fe0c65fed29267a",
+    "verifiedAt": "2026-09-16T05:23:03Z",
+    "verification": "Fresh source and existing comments reviewed; no duplicate. LinkedIn rendered approved C2 under Aditya Singh with timestamp now and a clickable Jennifer S. profile mention. Comment count increased from 7 to 8; composer cleared. Accessibility tree exposed comment 7505858655066624001. Public URL is the source discussion."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

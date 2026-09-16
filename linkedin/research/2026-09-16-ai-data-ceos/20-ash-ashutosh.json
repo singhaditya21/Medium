@@ -1,0 +1,49 @@
+{
+  "name": "Ash Ashutosh",
+  "company": "Pinecone",
+  "role": "CEO",
+  "profileUrl": "https://www.linkedin.com/in/ashashutosh/",
+  "roleSource": "https://www.linkedin.com/in/ashashutosh/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored posts read. Numerical and determinism claims remain author-reported; drafts distinguish reproducible context from deterministic generation.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504856412116647936/",
+      "displayedAge": "2d",
+      "summary": "Versioned, permissioned precomputed context is presented as a route to reproducible enterprise answers.",
+      "draft": "Ash Ashutosh, a versioned context artifact makes the evidence reproducible, but it does not by itself make model generation deterministic. For a revenue question, I would return the governed calculation result directly and let the model explain it without changing the number. Separately test evidence reproducibility, numerical consistency and variation in wording."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503769263405576193/",
+      "displayedAge": "5d",
+      "summary": "Full-text search and text-match filters join vectors to support exact identifiers and semantic retrieval.",
+      "draft": "Ash Ashutosh, identifiers also need a no-match contract. If the requested SKU does not exist, the agent should not silently fall back to its nearest semantic neighbor. I would test exact-match success, explicit no-match behavior and ambiguous identifiers separately, with normalization rules recorded so punctuation or case handling cannot quietly change the intended item."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501594947972714496/",
+      "displayedAge": "1w",
+      "summary": "Task-scoped knowledge and citations are positioned as the remedy for chained-agent errors and token overhead.",
+      "draft": "Ash Ashutosh, multi-step reliability is worth measuring directly because errors are usually dependent: the same missing fact can contaminate several agents, while a later verification step can catch an earlier mistake. I would report end-to-end verified success by workflow length and failure source, rather than infer it from a single-step accuracy figure."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500866426488926208/",
+      "displayedAge": "1w",
+      "summary": "Role-by-role adoption and modular knowledge infrastructure are favored over enterprise-wide transformation first.",
+      "draft": "Ash Ashutosh, role-by-role rollout works best with an explicit boundary for what will be shared later. Establish identity, provenance and metric definitions once, while letting each role prove its own outcome. That preserves local fit without accumulating incompatible knowledge islands that become expensive when the first cross-team workflow arrives."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500547981746581504/",
+      "displayedAge": "2w",
+      "summary": "Support resolution reportedly rises from 24.6% to 55.1% after adding account-specific semantics and query guidance.",
+      "draft": "Ash Ashutosh, the project-level rate-limit example makes the improvement tangible. I would pair the 24.6% to 55.1% resolution measure with reopen rate and a consistent post-closure observation window, stratified by ticket type. That checks whether better context creates durable resolutions rather than simply moving work out of the agent queue sooner."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

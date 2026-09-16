@@ -1,0 +1,49 @@
+{
+  "name": "Kunal Agarwal",
+  "company": "Unravel Data",
+  "role": "CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/kunalkunal/",
+  "roleSource": "https://www.linkedin.com/in/kunalkunal/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five authored/commentary posts read. All two to three months old. Source percentages and training-scale claims not independently validated or repeated as benchmark facts.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480711274784321536/",
+      "displayedAge": "2mo",
+      "summary": "Query rewrites need execution validation and watchdog rollback.",
+      "draft": "Kunal Agarwal, validating a rewrite against one execution is a start, but semantic equivalence can fail on nulls, duplicates, time zones or a changed data distribution. A strong promotion gate would combine representative edge cases with shadow execution, then monitor both result correctness and cost. Rollback is valuable, but it cannot undo every downstream decision made from an incorrect result."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477644766906585088/",
+      "displayedAge": "2mo",
+      "summary": "AI cost visibility creates headroom for further investment.",
+      "draft": "Kunal Agarwal, savings become reusable headroom only when they are net of the optimisation system's own cost and remain stable under demand growth. I would separate avoided spend, actual bill reduction and capacity released. That prevents a lower unit price from being reported as cash savings when total consumption has increased."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7476186987171954688/",
+      "displayedAge": "2mo",
+      "summary": "Query inefficiency and autonomous cost enforcement.",
+      "draft": "Kunal Agarwal, query cost is best attributed to a logical workload across retries and scheduled runs, not only to individual statements. Otherwise a cheap-looking query executed repeatedly can escape the priority list. Pairing cumulative spend with correctness and a workload owner would make the optimisation queue much closer to the real business impact."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7469555457259532289/",
+      "displayedAge": "3mo",
+      "summary": "FinOps should improve ROI, not merely cut cost.",
+      "draft": "Kunal Agarwal, the distinction is useful: a workload can cost more and still create better value. The acceptance condition should therefore hold the required outcome and service level explicit, then optimise cost within that boundary. Cost per accepted business result is a stronger target than the lowest infrastructure bill."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467338985447559168/",
+      "displayedAge": "3mo",
+      "summary": "Autonomous optimisation spans queries, pipelines, compute and storage.",
+      "draft": "Kunal Agarwal, cross-layer optimisation needs a conflict rule when two individually beneficial changes interact. A query rewrite and a compute resize may each pass alone but miss the latency target together. Promoting a bounded change set with one rollback identity would make the autonomous operator's result easier to verify and recover."
+    }
+  ],
+  "status": "hold_stale_sources_not_current_engagement",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

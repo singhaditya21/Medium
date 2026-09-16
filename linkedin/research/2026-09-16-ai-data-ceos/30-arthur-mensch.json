@@ -1,0 +1,50 @@
+{
+  "name": "Arthur Mensch",
+  "company": "Mistral",
+  "role": "Cofounder and CEO, native profile",
+  "profileUrl": "https://www.linkedin.com/in/arthur-mensch/",
+  "roleSource": "https://www.linkedin.com/in/arthur-mensch/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "First five and available authored cards through position 15 inspected. Five sources selected. Excludes hiring and plain reposts. Activity virtualisation means latest-five chronology needs a final check.",
+  "posts": [
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503781746795081728/",
+      "displayedAge": "5d",
+      "summary": "Cloudera hybrid-platform integration.",
+      "draft": "Arthur Mensch, hybrid deployment needs a consistent policy decision across both locations. Moving model execution on-premises does not help if retrieval, telemetry or support tooling still crosses an unintended boundary. An integration map showing where identity is checked and which artefacts leave each environment would make the sovereignty claim testable for enterprise architects."
+    },
+    {
+      "position": 3,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502960387319820288/",
+      "displayedAge": "1w",
+      "summary": "Funding and customer control over AI deployment.",
+      "draft": "Arthur Mensch, customer control is strongest when it survives an exit exercise. Can the organisation export its adapters, evaluation history and deployment configuration, then run an accepted workload on another supported stack? That is a more demanding test than access to weights alone, and a useful way to make independence measurable."
+    },
+    {
+      "position": 11,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479219204563492864/",
+      "displayedAge": "2mo",
+      "summary": "Open systems, user-level access and continuous training.",
+      "draft": "Arthur Mensch, the hard-access versus soft-access distinction is important, but a model's contextual judgment should not widen a deterministic entitlement. I would keep retrieval and tool execution bounded by independently enforced identity and purpose, then use the model to flag ambiguity within that boundary. Otherwise the continuous-learning loop can turn one access mistake into reusable training data."
+    },
+    {
+      "position": 13,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473404245791191040/",
+      "displayedAge": "2mo",
+      "summary": "India AI capacity and local partnerships.",
+      "draft": "Arthur Mensch, the talent component of sovereign AI needs an operational test alongside compute capacity. Local teams should be able to evaluate, deploy, patch and restore the system without depending on a foreign control plane for each change. Measuring those tasks would show which capabilities have actually transferred, beyond where the infrastructure is installed."
+    },
+    {
+      "position": 14,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473290652102053888/",
+      "displayedAge": "2mo",
+      "summary": "Full AI value chain and decentralised capability.",
+      "draft": "Arthur Mensch, a full-stack AI investment case should expose dependencies between its layers. Additional compute has limited value if power, data access or deployment capability remains the binding constraint. A capacity model from energy through accepted application outcomes would help distinguish a complete operating capability from a set of individually impressive assets."
+    }
+  ],
+  "factBoundary": "Do not repeat competitive misconduct or retention allegations from source 11 as verified facts.",
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260916053422-message-posted-in-acoaacn-tacbrl9wn4yg6l1vjhofkui5fibjex4",
+  "action": "message_posted",
+  "recordedAt": "2026-09-16T05:34:22Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-16T05:34:22Z",
+    "scope": "User approved D2 exactly as shown."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/ACoAACN_tAcBrL9Wn4YG6L1VJHOfKuI5FIbjex4",
+    "messageTextSha256": "b56b172b63c8a7eb36cae2d4b0622b720d28831bc642ba1c400bfcb23b08f2f6",
+    "verifiedAt": "2026-09-16T05:34:22Z",
+    "verification": "Verified exact outgoing message under Aditya Singh at 11:03 AM; sending state cleared and composer empty."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Navrina Singh",
+  "company": "Credo AI",
+  "role": "Founder and CEO",
+  "profileUrl": "https://www.linkedin.com/in/navrina/",
+  "roleSource": "https://www.linkedin.com/in/navrina/",
+  "verifiedOn": "2026-09-16",
+  "coverage": "Five relevant authored posts from positions 1–6; award announcement excluded. Source text read; comment threads pending.",
+  "posts": [
+    {
+      "position": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505160118896939008/",
+      "displayedAge": "1d, edited",
+      "summary": "Independent evaluation should let enterprises verify frontier-AI claims rather than rely on vendor assurances.",
+      "draft": "Navrina Singh, the ability to check for yourself also depends on access: independent evaluators need a stable test interface, version identifiers and a record of which safeguards were enabled. A published score without those conditions is hard to reproduce. I would ask procurement teams to require a repeatable evaluation protocol and a change-notification obligation alongside the model card."
+    },
+    {
+      "position": 2,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503683537418723328/",
+      "displayedAge": "6d, edited",
+      "summary": "More powerful AI requires stronger governance, context and control.",
+      "draft": "Navrina Singh, governance can be measured by how quickly a team can make a defensible decision, not simply how many reviews it performs. Track approval lead time alongside the share of decisions with complete evidence and the rate of post-approval control failures. Faster approval is valuable only if the evidence and operating controls survive the move into production."
+    },
+    {
+      "position": 4,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501334505840910336/",
+      "displayedAge": "1w, edited",
+      "summary": "Argues that open model choice supports sovereignty, control and accountability; acquisition assertion not independently verified.",
+      "draft": "Navrina Singh, choice becomes operational when an enterprise can move a workload while preserving its controls. I would test portability of evaluation sets, policy decisions, access boundaries and action logs, not just model weights. A model-switch rehearsal should show which controls still hold, which must be rebuilt and how long the transition takes."
+    },
+    {
+      "position": 5,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498605278708256768/",
+      "displayedAge": "2w, edited",
+      "summary": "Greater AI leverage makes human judgment and team trust more consequential.",
+      "draft": "Navrina Singh, greater individual leverage also makes constructive challenge more valuable. One concrete team practice is to separate proposing a consequential AI action from accepting its evidence: the reviewer should be able to stop the action and explain why, without that being treated as a delivery failure. Track reversals caught before execution, not just throughput per person."
+    },
+    {
+      "position": 6,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493903547810332672/",
+      "displayedAge": "1mo",
+      "summary": "Distinguishes model-output provenance from enterprise context and accountability for consequential actions.",
+      "draft": "Navrina Singh, an action can leave no document to watermark, but it can still leave an evidence record. Bind the action to the use case, policy version, permitted scope, approval and verified downstream state using one correlation ID. The useful test is whether an independent reviewer can reconstruct why that specific action was allowed, without asking the model to explain itself again."
+    }
+  ],
+  "status": "provisional_thread_duplicate_and_freshness_reviews_required",
+  "approvalState": "not_approved",
+  "publicationEligibleNow": false,
+  "factBoundary": "Drafts avoid asserting acquisition news, legal dates or unverified external-essay contents."
+}
