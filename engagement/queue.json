@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-17T07:57:22Z",
+  "updatedAt": "2026-09-17T08:51:55Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -4053,6 +4053,23 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505989487601160192/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287506259437154717696%2Curn%3Ali%3Aactivity%3A7505989487601160192%29",
       "receiptOperationId": "20260917075722-comment-posted-2026-09-17-linkedin-manish-decision-waiting-time",
       "postedAt": "2026-09-17T07:57:22Z"
+    },
+    {
+      "id": "2026-09-17-linkedin-deepak-mail-agent-remediation",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7506120371587186688/",
+      "title": "T1: Email-security verdict changes and mail-reading agents",
+      "author": "Deepak Mishra",
+      "reason": "New technical conversation with an actively replying Gartner analyst. Extend his AI-era email-security discussion with a proposed post-delivery remediation test, without a product pitch, attendance claim or generic congratulations.",
+      "evidence": "Signed-in Chrome review September 17: source 10h old, 33 reactions, six comments including three recent author replies. All six visible comments read; no Aditya comment and no matching queue, receipt or watchlist record found. Current Experience: Senior Director Analyst - Secure Infrastructure, Gartner, May 2023 to Present. No current EXL or BUSINESSNEXT affiliation visible. Public post permalink observed in profile Activity and verified directly after a stale clipboard link was rejected. Score components relevance .90, discussionQuality .60, uniqueContribution 1.00, recency .95: weighted .855, rounded .86. Proposed test and metrics, not observed results. Native mention is intended, not yet selected or verified. No action executed.",
+      "draftResponse": "Deepak Mishra, for your email-security discussion, I'd add a mail-to-agent test: let an assistant ingest a message, then change its verdict to malicious while a related CRM update is queued. Does remediation remove only the email, or also invalidate derived context and prevent the pending write? I'd measure p95 verdict-to-action-block time and malicious task completion, alongside false blocks on legitimate work. Where would you place that enforcement boundary: the mail platform or the agent's tool gateway?",
+      "priorityScore": 0.86,
+      "intendedMentions": [
+        "Deepak Mishra"
+      ],
+      "state": "ready_for_confirmation"
     }
   ]
 }
