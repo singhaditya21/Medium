@@ -6,6 +6,7 @@
 - Prepare research, drafts, scores, and approval packets automatically; never post, comment, reply, message, react, follow, connect, repost, publish, or schedule without exact action-time user approval.
 - Treat each outbound comment, post, and DM as representational communication by the user. Approval of one item never approves another.
 - Read the watchlist before drafting any follow-up. Do not create a generic check-in, repeat a thread that is awaiting an inbound reply, or create a duplicate response.
+- Exclude current EXL and BUSINESSNEXT personnel from conversation-building shortlists and outbound comments, replies, DMs, mentions or connection outreach, per the user's September 17 instruction. Include recognizable EXL Service and CRMNEXT employer variants. Verify current employment and dates in the visible Experience section before proposing or executing outreach; a headline, former employer or mutual connection is not sufficient. If affiliation is unclear, hold the action and ask rather than assuming eligibility. Surface inbound items from excluded people without responding unless the user explicitly makes an exception.
 - Do not tag people merely for reach. A tag must be relevant to the source discussion and render correctly before a live action is reported as complete.
 - Do not retain private conversation text, private LinkedIn URLs, browser state, or credentials in Git. Record only the allowed receipt fields after a verified action.
 
@@ -20,6 +21,7 @@
 ## Quality tests
 
 - A comment adds an operational implication, metric, implementation trade-off, or constructive challenge; it does not restate the source.
+- Technical conversation-building should start from the recipient's actual post or last message and develop one concrete architecture boundary, failure case, acceptance test or measurable trade-off. Use sourced numbers or clearly proposed tests; do not manufacture production experience, repeat previously answered questions, or turn acknowledgements into forced follow-ups.
 - A DM explains the genuine reason for outreach and does not use a generic networking template, a pitch, or an unexplained link.
 - A post has a distinct hook, a specific operating insight, and an optional series/Medium connection only when it adds value.
 - Every proposed action identifies the exact public target, proposed text, intended tags, evidence, and why now.

@@ -1,0 +1,24 @@
+{
+  "$schema": "../message-execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260917075611-message-posted-in-kumargaurav7",
+  "action": "message_posted",
+  "recordedAt": "2026-09-17T07:56:11Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-17T07:56:11Z",
+    "scope": "User approved exact D1, C1 and C2 displayed in chat, adding an exclusion for current EXL and BUSINESSNEXT personnel. Current Experience verified E2E Cloud before execution. Approval preceded sending; receipt timestamps reflect transcription after visible verification."
+  },
+  "result": {
+    "status": "message_posted",
+    "recipientProfileUrl": "https://www.linkedin.com/in/kumargaurav7/",
+    "messageTextSha256": "8bbf3aea4ad8193d9af120eb175590de330db1769aa618d32e8489cf5df11477",
+    "verifiedAt": "2026-09-17T07:56:11Z",
+    "verification": "Exact approved D1 sent once in the existing Kumar Gaurav conversation September 17 at 13:19 IST. Aditya Singh identity and full approved text visibly rendered, then persisted once after refresh with an empty composer. No attachments, private conversation text, conversation URL or employer-confidential information stored in this receipt."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

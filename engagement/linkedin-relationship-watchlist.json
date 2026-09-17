@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T09:25:09Z",
+  "updatedAt": "2026-09-17T07:57:22Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -11,10 +11,29 @@
       "generic check-ins",
       "reciprocal engagement requests",
       "automatic follows",
-      "duplicate comments or replies"
+      "duplicate comments or replies",
+      "conversation-building outreach to current EXL or BUSINESSNEXT personnel, including recognizable EXL Service and CRMNEXT employer variants; verify current Experience and hold unclear affiliations"
     ]
   },
   "relationships": [
+    {
+      "name": "Manas Jain",
+      "profileUrl": "https://www.linkedin.com/in/manasjain/",
+      "themes": ["semantic fault-injection tests", "data meaning", "independent release verification"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-17",
+      "nextReviewOn": "2026-09-24",
+      "nextActionRule": "C1 exact approved comment posted September 17, comment 7506258622411354112. Exact text, native Manas Jain mention and persistence at the public comment permalink verified. Current Experience verified WTW, April 2025 to Present, before execution. Wait for a substantive inbound response; no repeat recovery or semantic-test argument, generic chaser, DM, reaction or connection without new exact approval."
+    },
+    {
+      "name": "Manish Holey",
+      "profileUrl": "https://www.linkedin.com/in/manishholey/",
+      "themes": ["decision waiting time", "bounded delegation", "change-failure rates"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-17",
+      "nextReviewOn": "2026-09-24",
+      "nextActionRule": "C2 exact approved comment posted September 17, comment 7506259437154717696. Exact text, native Manish Holey mention and persistence at the public comment permalink verified. Current Experience verified BNY, May 2024 to Present, before execution. Wait for substantive inbound; no duplicate metric proposal, generic chaser, DM, reaction or connection without new exact approval."
+    },
     {
       "name": "Chris Leone",
       "profileUrl": "https://www.linkedin.com/in/chrismleone/",
@@ -289,10 +308,10 @@
       "name": "Kumar Gaurav",
       "profileUrl": "https://www.linkedin.com/in/kumargaurav7/",
       "themes": ["AI infrastructure", "cloud", "FinOps"],
-      "state": "inbound_reply_requires_review",
-      "lastMeaningfulTouch": "2026-09-16",
-      "nextReviewOn": "2026-09-16",
-      "nextActionRule": "Exact approved D3 sent September 16 at 11:03 IST and visibly verified; privacy-safe receipt 20260916053422-message-posted-in-acoaadciesub00uee-zz2almkuhak2r08eifraa. A subsequent substantive inbound reply was visibly observed September 16; full conversation review and a new exact draft remain pending. Private wording and conversation links are not retained here. Preserve employer infrastructure and procurement confidentiality. No additional communication without new exact approval."
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-17",
+      "nextReviewOn": "2026-09-24",
+      "nextActionRule": "Exact approved D1 sent September 17 at 13:19 IST and visibly verified once after refresh; privacy-safe receipt 20260917075611-message-posted-in-kumargaurav7. Current Experience verified E2E Cloud, September 2025 to Present, before execution. Private wording and conversation URLs are not retained here. Wait for substantive inbound; preserve employer infrastructure and procurement confidentiality, with no generic chaser or additional communication without new exact approval."
     },
     {
       "name": "Shabina Abba Noormohamed",

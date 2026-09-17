@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260917075722-comment-posted-2026-09-17-linkedin-manish-decision-waiting-time",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-17T07:57:22Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-17T07:57:22Z",
+    "scope": "User approved exact D1, C1 and C2 displayed in chat, adding an exclusion for current EXL and BUSINESSNEXT personnel. Current Experience verified BNY before C2 execution. Approval preceded posting; receipt timestamps reflect transcription after visible verification."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-17-linkedin-manish-decision-waiting-time",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7505989487601160192&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505989487601160192/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287506259437154717696%2Curn%3Ali%3Aactivity%3A7505989487601160192%29",
+    "publishedTextSha256": "8de1bc7bdcd99ace69c9768f03b2bd2b76e4a620dc124bfa452ad886d55af07f",
+    "verifiedAt": "2026-09-17T07:57:22Z",
+    "verification": "Rechecked source and existing discussion; no duplicate user comment. C2 exact text visibly posted under Aditya Singh with native Manish Holey link to /in/manishholey/, timestamp now. Copied comment link https://lnkd.in/p/gCBbRQd4 resolved to recorded public URL; exact text persisted there. Comment ID 7506259437154717696. No reaction, follow, connection, DM or additional comment executed on this target."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}

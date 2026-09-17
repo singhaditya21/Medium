@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-16T09:25:08Z",
+  "updatedAt": "2026-09-17T07:57:22Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -4013,6 +4013,46 @@
       "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505209527428952065/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287505919296208850944%2Curn%3Ali%3Aactivity%3A7505209527428952065%29",
       "receiptOperationId": "20260916092508-comment-posted-2026-09-16-linkedin-graph-temporal-correctness-v2",
       "postedAt": "2026-09-16T09:25:08Z"
+    },
+    {
+      "id": "2026-09-17-linkedin-manas-semantic-fault-tests",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7506173391675052033&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+      "title": "C1 — semantic-fault release tests for an AI data assistant",
+      "author": "Manas Jain",
+      "reason": "Directly answers the author's non-negotiable evaluation question with a semantic fault-injection acceptance test, distinct from prior recovery and data-contract discussions.",
+      "evidence": "Signed-in Chrome review 2026-09-17 around 13:08 IST. Post displayed 5h and 6 reactions. Full source read; comment composer opened and no existing comments or Aditya entry were visible. The author asks how to evaluate AI Data Engineering assistants and distinguishes technical execution from data meaning. Local queue, watchlist and execution-receipt checks found prior Manas interactions last verified September 5 on a different article; their recovery-readiness and contract arguments are not repeated here. Scores relevance 1.00, discussionQuality .80, uniqueContribution .95, recency 1.00; weighted .94. Intended native mention only of the source author, profile /in/manasjain/. Example is a proposed test, not a claimed production result. Recheck context and duplicates before any approved execution.",
+      "draftResponse": "Manas Jain, my non-negotiable would be a release test where the job succeeds but the business result is wrong. Seed a join that duplicates invoices or a definition change that alters revenue without breaking schema, then require an independent check to block promotion. I'd report the fraction of these semantic faults caught before release alongside false blocks; a green pipeline alone cannot show whether the assistant preserved data meaning.",
+      "priorityScore": 0.94,
+      "intendedMentions": [
+        "Manas Jain"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7506173391675052033/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287506258622411354112%2Curn%3Ali%3Aactivity%3A7506173391675052033%29",
+      "receiptOperationId": "20260917075611-comment-posted-2026-09-17-linkedin-manas-semantic-fault-tests",
+      "postedAt": "2026-09-17T07:56:11Z"
+    },
+    {
+      "id": "2026-09-17-linkedin-manish-decision-waiting-time",
+      "platform": "linkedin",
+      "action": "comment",
+      "direction": "outbound",
+      "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7505989487601160192&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+      "title": "C2 — measure decision waiting time and bounded delegation",
+      "author": "Manish Holey",
+      "reason": "Adds a measurable operating test for the decision-rights argument without endorsing unverified historical migration claims or suggesting unrestricted unilateral authority.",
+      "evidence": "Signed-in Chrome review 2026-09-17 around 13:11 IST. Full source displayed 17h and Manish Holey plus 7 others reacting. Opened the comment composer; no existing comments or Aditya entry were visible. Source argues that distributed decision rights delay transformation and asks what decisions are being avoided. Queue, public execution receipts and watchlist contain no matching author or source. Scores relevance .95, discussionQuality .75, uniqueContribution .90, recency .90; weighted .88. Intended native mention only of the author, observed profile /in/manishholey/. IKEA migration timing was not independently verified and is neither quoted nor endorsed. The CRM example is a proposal, not claimed experience. Recheck context and duplicates before any approved execution.",
+      "draftResponse": "Manish Holey, I'd separate decision waiting time from implementation time before blaming either the committee or the engineering. For a reversible CRM rule, name one decision owner and bound the change by affected records and a tested recovery route. Track p95 decision age alongside change-failure and reversal rates: that shows whether delegated authority removes delay without simply moving the risk downstream.",
+      "priorityScore": 0.88,
+      "intendedMentions": [
+        "Manish Holey"
+      ],
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505989487601160192/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287506259437154717696%2Curn%3Ali%3Aactivity%3A7505989487601160192%29",
+      "receiptOperationId": "20260917075722-comment-posted-2026-09-17-linkedin-manish-decision-waiting-time",
+      "postedAt": "2026-09-17T07:57:22Z"
     }
   ]
 }

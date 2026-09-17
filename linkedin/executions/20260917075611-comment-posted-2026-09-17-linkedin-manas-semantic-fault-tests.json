@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260917075611-comment-posted-2026-09-17-linkedin-manas-semantic-fault-tests",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-17T07:56:11Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-17T07:56:11Z",
+    "scope": "User approved exact D1, C1 and C2 displayed in chat, adding an exclusion for current EXL and BUSINESSNEXT personnel. Current Experience verified WTW before C1 execution. Approval preceded posting; receipt timestamps reflect transcription after visible verification."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-17-linkedin-manas-semantic-fault-tests",
+    "targetUrl": "https://www.linkedin.com/feed/?highlightedUpdateUrn=urn:li:activity:7506173391675052033&highlightedUpdateType=SHARED_BY_YOUR_NETWORK&origin=inapp&showCommentBox=true",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7506173391675052033/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287506258622411354112%2Curn%3Ali%3Aactivity%3A7506173391675052033%29",
+    "publishedTextSha256": "8bf8cf2a0738ca68a0d1e5fd188c1984b739b7635441a6f597ffd4c2d1cf8ae0",
+    "verifiedAt": "2026-09-17T07:56:11Z",
+    "verification": "Rechecked full source and existing discussion; no duplicate user comment. C1 exact text visibly posted under Aditya Singh with native Manas Jain link to /in/manasjain/, timestamp now. Copied comment link https://lnkd.in/p/gAvkpxkq resolved to the recorded public URL and persisted with the exact text. Comment ID 7506258622411354112. No reaction, follow, connection, DM or additional comment executed on this target."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
