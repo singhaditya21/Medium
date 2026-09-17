@@ -1,7 +1,7 @@
 {
   "$schema": "./queue.schema.json",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-17T08:51:55Z",
+  "updatedAt": "2026-09-17T09:02:01Z",
   "maxBatchSizePerPlatform": 5,
   "policy": {
     "requiresExactActionTimeConfirmation": true,
@@ -4069,7 +4069,10 @@
       "intendedMentions": [
         "Deepak Mishra"
       ],
-      "state": "ready_for_confirmation"
+      "state": "posted",
+      "responseUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7506120371587186688/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287506275707988291585%2Curn%3Ali%3Aactivity%3A7506120371587186688%29",
+      "receiptOperationId": "20260917090201-comment-posted-2026-09-17-linkedin-deepak-mail-agent-remediation",
+      "postedAt": "2026-09-17T09:02:01Z"
     }
   ]
 }

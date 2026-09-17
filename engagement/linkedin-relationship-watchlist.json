@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-17T07:57:22Z",
+  "updatedAt": "2026-09-17T09:02:01Z",
   "purpose": "Maintain deliberate, reciprocal LinkedIn relationships without duplicate or volume-driven outreach.",
   "globalRules": {
     "requireExactActionTimeConfirmation": true,
@@ -16,6 +16,15 @@
     ]
   },
   "relationships": [
+    {
+      "name": "Deepak Mishra",
+      "profileUrl": "https://www.linkedin.com/in/deepakmishra-it/",
+      "themes": ["email-to-agent security", "post-delivery remediation", "queued CRM writes"],
+      "state": "awaiting_inbound_reply",
+      "lastMeaningfulTouch": "2026-09-17",
+      "nextReviewOn": "2026-09-24",
+      "nextActionRule": "T1 exact approved wording posted September 17 as comment 7506275707988291585. User separately directed posting the plain-text-name fallback after the correct native mention was unavailable. Exact text, Aditya identity and persistence at the copied public comment link verified; no native tag claimed. Current Experience verified Gartner, May 2023 to Present. Wait for substantive inbound; no duplicate test proposal, generic chaser, DM, reaction, follow or connection without new exact approval."
+    },
     {
       "name": "Manas Jain",
       "profileUrl": "https://www.linkedin.com/in/manasjain/",

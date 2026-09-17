@@ -1,0 +1,26 @@
+{
+  "$schema": "../execution.schema.json",
+  "schemaVersion": 1,
+  "operationId": "20260917090201-comment-posted-2026-09-17-linkedin-deepak-mail-agent-remediation",
+  "action": "comment_posted",
+  "recordedAt": "2026-09-17T09:02:01Z",
+  "executionSurface": "user_initiated_signed_in_linkedin_ui",
+  "initiatedBy": "user",
+  "githubIssueNumber": 36,
+  "userConfirmation": {
+    "obtained": true,
+    "confirmedAt": "2026-09-17T09:02:01Z",
+    "scope": "User first approved exact T1 wording. After being told the Gartner native mention was unavailable and asked about the plain-text-name fallback, the user instructed post without approval. This was treated as direction to execute this specific presented fallback, not blanket authorization. Same exact wording and target; Deepak Mishra rendered as plain text without a tag. No reaction, DM, follow or connection authorized or executed."
+  },
+  "result": {
+    "status": "comment_posted",
+    "candidateId": "2026-09-17-linkedin-deepak-mail-agent-remediation",
+    "targetUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7506120371587186688/",
+    "publicUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7506120371587186688/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287506275707988291585%2Curn%3Ali%3Aactivity%3A7506120371587186688%29",
+    "publishedTextSha256": "471712b7c8fdb7c745f93c751f8393ed95655a4438065ccb27f57df01c7e351d",
+    "verifiedAt": "2026-09-17T09:02:01Z",
+    "verification": "Signed-in Chrome: current Experience verified Gartner, May 2023 to Present, before execution; source and all six existing comments rechecked, with no Aditya duplicate. Posted via visible native Comment button. Own Aditya Singh identity, exact wording, plain-text name, current timestamp and seven-comment count visibly verified. Copied public comment link https://lnkd.in/p/gGmPkAZr resolved to comment 7506275707988291585 and exact text persisted after navigation. No native mention claimed. Receipt timestamps are recording/transcription time rather than exact user-message or click time."
+  },
+  "secretsStored": false,
+  "githubActionsPerformedLinkedInAction": false
+}
